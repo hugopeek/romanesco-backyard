@@ -19,7 +19,6 @@ module.exports = function(grunt) {
     });
 
     grunt.loadNpmTasks('grunt-merge-json');
-    grunt.loadNpmTasks('grunt-replace');
     grunt.loadNpmTasks('grunt-jsonlint');
     grunt.registerTask('default', ['merge-json', 'jsonlint']);
 };
