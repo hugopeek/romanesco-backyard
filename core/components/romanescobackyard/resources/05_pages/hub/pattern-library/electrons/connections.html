@@ -1,0 +1,304 @@
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[$headingBasicAnchor?
+    &value=`person_id`
+    &level=`h2`
+    &alignment=``
+    &unique_idx=`89`
+]]
+
+[[$accordionOuter?
+    &rows=`[[$accordionRowBasic?
+    &heading=`Purpose`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>This TV can be used to connect a person to a MODX user. By doing this, you are basically extending the MODX user with all the available info inside the connected resource. To fetch an image TV as avatar for example, or the available social media channels.
+</p><p>Only active users will be shown.
+</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &idx=`1`
+]]
+
+[[$accordionRowBasic?
+    &heading=`Specifications`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$patternLibraryLabels? 
+	&chunk_selector=`patternLibraryLabels`
+	&unique_idx=`93`
+	&layout_id=`7`
+	&layout_column=`main`
+	&electron_type=`Template Variable`
+	]]
+
+
+[[jsonToHTML? &json=`{
+    "caption": "Person",
+    "name": "person_id",
+    "description": "Connect a MODX user to this item. Only active users will be shown.",
+    "type": "listbox",
+    "inputOptionValues": "@SELECT '''' AS username, '''' AS id UNION ALL ( SELECT username, id FROM `modx_users` WHERE `active` = 1 ORDER BY username )",
+    "category": "Connections",
+    "sortOrder": "1"
+}`]]</div>
+</div>`
+    &padding=`padded`
+    &idx=`2`
+]]
+
+[[$accordionRowBasic?
+    &heading=`References`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`Assigned to the following templates`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`96`
+]]
+
+[[$assignedTemplates? 
+	&chunk_selector=`assignedTemplates`
+	&unique_idx=`97`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&pattern_name=`person_id`
+	
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`Included in the following patterns`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`98`
+]]
+
+[[$referringChunks? 
+	&chunk_selector=`referringChunks`
+	&unique_idx=`99`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&pattern_name=`person_id`
+	
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=`fluid styled`
+    &unique_idx=`90`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[$headingBasicAnchor?
+    &value=`organization_id`
+    &level=`h2`
+    &alignment=``
+    &unique_idx=`102`
+]]
+
+[[$accordionOuter?
+    &rows=`[[$accordionRowBasic?
+    &heading=`Purpose`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>Provide the ability to connect an Organization to a template. This can be a client, an employer, a partner, etc. Organizations can be maintained from a central Collection and crosslinked through this TV, allowing you to access things like their logo or website for example. </p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &idx=`1`
+]]
+
+[[$accordionRowBasic?
+    &heading=`Specifications`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$patternLibraryLabels? 
+	&chunk_selector=`patternLibraryLabels`
+	&unique_idx=`106`
+	&layout_id=`7`
+	&layout_column=`main`
+	&electron_type=`Template Variable`
+	]]
+
+
+[[jsonToHTML? &json=`{
+    "caption": "Organization",
+    "name": "organization_id",
+    "description": "Connect the related organization(s). If this list is empty, you need to create an Organizations container first and register its ID under System Settings.",
+    "type": "listbox-multiple",
+    "inputOptionValues": "@CHUNK tvSelectClient",
+    "category": "Connections",
+    "sortOrder": "2",
+    "templates": [
+        "@@templates_portfolio"
+    ]
+}`]]</div>
+</div>`
+    &padding=`padded`
+    &idx=`2`
+]]
+
+[[$accordionRowBasic?
+    &heading=`References`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`Assigned to the following templates`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`109`
+]]
+
+[[$assignedTemplates? 
+	&chunk_selector=`assignedTemplates`
+	&unique_idx=`110`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&pattern_name=`organization_id`
+	
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`Included in the following patterns`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`111`
+]]
+
+[[$referringChunks? 
+	&chunk_selector=`referringChunks`
+	&unique_idx=`112`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&pattern_name=`organization_id`
+	
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=`fluid styled`
+    &unique_idx=`103`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[$headingBasicAnchor?
+    &value=`contributors_id`
+    &level=`h2`
+    &alignment=``
+    &unique_idx=`115`
+]]
+
+[[$accordionOuter?
+    &rows=`[[$accordionRowBasic?
+    &heading=`Purpose`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>Contributors are persons that helped create the subject of a certain template. A portfolio project for example. In many scenarios, a Contributor will be a team member, so by default this TV looks for child resources inside your Team page.</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &idx=`1`
+]]
+
+[[$accordionRowBasic?
+    &heading=`Specifications`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$patternLibraryLabels? 
+	&chunk_selector=`patternLibraryLabels`
+	&unique_idx=`119`
+	&layout_id=`7`
+	&layout_column=`main`
+	&electron_type=`Template Variable`
+	]]
+
+
+[[jsonToHTML? &json=`{
+    "caption": "Contributors",
+    "name": "contributors_id",
+    "description": "Link the team members that worked on this item. You can only select persons that are listed on your Team page, so if you want to add an external team member, you should add him or her to your team page first (can be unpublished).",
+    "type": "listbox-multiple",
+    "inputOptionValues": "@CHUNK tvSelectTeam",
+    "category": "Connections",
+    "sortOrder": "3",
+    "templates": [
+        "@@templates_portfolio"
+    ]
+}`]]</div>
+</div>`
+    &padding=`padded`
+    &idx=`2`
+]]
+
+[[$accordionRowBasic?
+    &heading=`References`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`Assigned to the following templates`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`122`
+]]
+
+[[$assignedTemplates? 
+	&chunk_selector=`assignedTemplates`
+	&unique_idx=`123`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&pattern_name=`contributors_id`
+	
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`Included in the following patterns`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`124`
+]]
+
+[[$referringChunks? 
+	&chunk_selector=`referringChunks`
+	&unique_idx=`125`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&pattern_name=`contributors_id`
+	
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=`fluid styled`
+    &unique_idx=`116`
+]]
+    </div>
+</div>
