@@ -35,27 +35,31 @@ $_lang['romanesco.menu.clear_cache_overviews_description'] = 'Remove cache files
 
 $_lang['collections.footers.children'] = 'Footers';
 $_lang['collections.footers.children.create'] = 'Add footer';
-$_lang['collections.footers.children.back_to_collection_label'] = 'All footers';
+$_lang['collections.footers.children.back_to_collection_label'] = 'Back to footers';
 
 $_lang['collections.forms.children'] = 'Forms';
 $_lang['collections.forms.children.create'] = 'Add form';
-$_lang['collections.forms.children.back_to_collection_label'] = 'All forms';
+$_lang['collections.forms.children.back_to_collection_label'] = 'Back to forms';
 
 $_lang['collections.cta.children'] = 'Call To Actions';
 $_lang['collections.cta.children.create'] = 'Add CTA';
-$_lang['collections.cta.children.back_to_collection_label'] = 'All CTAs';
+$_lang['collections.cta.children.back_to_collection_label'] = 'Back to CTAs';
 
 $_lang['collections.publication.children'] = 'Articles';
 $_lang['collections.publication.children.create'] = 'New article';
-$_lang['collections.publication.children.back_to_collection_label'] = 'All articles';
+$_lang['collections.publication.children.back_to_collection_label'] = 'Back to articles';
 
 $_lang['collections.team.children'] = 'Team';
 $_lang['collections.team.children.create'] = 'Add teammember';
 $_lang['collections.team.children.back_to_collection_label'] = 'Back to team';
 
+$_lang['collections.organizations.children'] = 'Organizations';
+$_lang['collections.organizations.children.create'] = 'Add organization';
+$_lang['collections.organizations.children.back_to_collection_label'] = 'Back to organizations';
+
 $_lang['collections.testimonials.children'] = 'Testimonials';
 $_lang['collections.testimonials.children.create'] = 'Add testimonial';
-$_lang['collections.testimonials.children.back_to_collection_label'] = 'All testimonials';
+$_lang['collections.testimonials.children.back_to_collection_label'] = 'Back to testimonials';
 
 $_lang['collections.library.children'] = 'Pattern Library';
 $_lang['collections.library.children.create'] = 'Add component';
