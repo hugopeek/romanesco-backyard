@@ -3,7 +3,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         "merge-json": {
             "default": {
-                src: ['src/*.json','src/*/*.json','src/*/*/*.json'],
+                src: ['src/*.json','src/*/*.json','src/*/*/*.json','src/*/*/*/*.json'],
                 dest: 'config.json'
             }
         },
