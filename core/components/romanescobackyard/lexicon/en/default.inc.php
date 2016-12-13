@@ -6,8 +6,8 @@
 // Common website elements
 // ---------------------------------------------------------------------
 
-$_lang['romanesco.footer.qredits_text'] = 'Site with';
-$_lang['romanesco.footer.qredits_title'] = 'Responsive webdesign with MODX in Utrecht';
+$_lang['romanesco.footer.qredits_text'] = 'Site by';
+$_lang['romanesco.footer.qredits_title'] = 'Responsive webdesign with MODX';
 
 // Navigation
 // ---------------------------------------------------------------------
@@ -82,3 +82,19 @@ $_lang['romanesco.status.table_improvements'] = 'Improvements';
 $_lang['romanesco.status.table_assigned_user'] = 'Editor';
 $_lang['romanesco.status.table_help'] = 'Issues';
 $_lang['romanesco.status.table_notes'] = 'Notes / Explanations';
+
+// Pattern library
+// ---------------------------------------------------------------------
+
+$_lang['romanesco.patterns.button_backyard'] = 'Backyard';
+$_lang['romanesco.patterns.preview_tooltip'] = 'Hide example';
+$_lang['romanesco.patterns.code_tooltip'] = 'View source';
+$_lang['romanesco.patterns.code_label'] = 'Source';
+$_lang['romanesco.patterns.purpose_title'] = 'Purpose';
+$_lang['romanesco.patterns.usage_title'] = 'Guidelines';
+$_lang['romanesco.patterns.caveats_title'] = 'Caveats';
+$_lang['romanesco.patterns.specifications_title'] = 'Specifications';
+$_lang['romanesco.patterns.references_title'] = 'References';
+$_lang['romanesco.patterns.included_patterns'] = 'Contains the following patterns';
+$_lang['romanesco.patterns.referring_patterns'] = 'Included in the following patterns';
+$_lang['romanesco.patterns.assigned_templates'] = 'Assigned to the following templates';
