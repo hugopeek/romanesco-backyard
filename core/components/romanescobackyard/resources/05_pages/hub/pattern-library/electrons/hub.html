@@ -1,0 +1,720 @@
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[$headingBasic?
+    &value=`[[*pagetitle]]`
+    &level=`h1`
+    &alignment=``
+    &unique_idx=`1`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[!$patternLayoutElectronTV?
+            &preview=``
+            &code=``
+            &sidebar_width=`five`
+            &pattern_name=`project_hub_timeline`
+            &pattern_template=`patternLayoutElectronTV`
+            &unique_idx=`13`
+        ]]
+        
+        [[-modifiedIf?
+            &subject=`patternLayoutElectronTV`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`
+            <div class="ui nested stackable doubling equal width grid">
+                <div class="row">
+                    <div id="preview-13" class="five wide column">
+                        
+                    </div>
+                    <div id="code-13" class="column hidden element">
+                        
+                    </div>
+                </div>
+            </div>
+            `
+        ]]
+
+        [[$accordionOuter?
+    &rows=`[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[jsonToHTML? &json=`{
+    "caption": "Project hub timeline",
+    "name": "project_hub_timeline",
+    "description": "In this timeline you can keep track of the projects' progress and see what's coming up next. You can also link to all related project files and resources from here, so you can find them back more easily.",
+    "type": "migx",
+    "category": "Project Hub",
+    "sortOrder": "1",
+    "inputProperties": {
+        "configs": "project_hub_timeline"
+    },
+    "templates": [
+        "ProjectHub"
+    ]
+}`]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_templates]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`8`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`9`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`assignedTemplates`
+	&pattern_name=`project_hub_timeline`
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`10`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`11`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_name=`project_hub_timeline`
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=`fluid styled`
+    &tab_type=`regular`
+    &unique_idx=`3`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[!$patternLayoutElectronTV?
+            &preview=``
+            &code=``
+            &sidebar_width=`five`
+            &pattern_name=`status_indicator`
+            &pattern_template=`patternLayoutElectronTV`
+            &unique_idx=`24`
+        ]]
+        
+        [[-modifiedIf?
+            &subject=`patternLayoutElectronTV`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`
+            <div class="ui nested stackable doubling equal width grid">
+                <div class="row">
+                    <div id="preview-24" class="five wide column">
+                        
+                    </div>
+                    <div id="code-24" class="column hidden element">
+                        
+                    </div>
+                </div>
+            </div>
+            `
+        ]]
+
+        [[$accordionOuter?
+    &rows=`[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[jsonToHTML? &json=`{
+    "caption": "Status indicator",
+    "name": "status_indicator",
+    "description": "Is this page ready for prime time at this point?",
+    "type": "option",
+    "category": "Status",
+    "sortOrder": "1",
+    "defaultValue": "not-done",
+    "inputOptionValues": "Yes, it's finished==done||No, but it's almost there==almost-done||No, it needs (way) more work==not-done||Yes, but the content is outdated==expired",
+    "templates": [
+        "@@templates_all"
+    ]
+}`]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_templates]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`19`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`20`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`assignedTemplates`
+	&pattern_name=`status_indicator`
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`21`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`22`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_name=`status_indicator`
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=`fluid styled`
+    &tab_type=`regular`
+    &unique_idx=`14`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[!$patternLayoutElectronTV?
+            &preview=``
+            &code=``
+            &sidebar_width=`five`
+            &pattern_name=`status_improvements`
+            &pattern_template=`patternLayoutElectronTV`
+            &unique_idx=`35`
+        ]]
+        
+        [[-modifiedIf?
+            &subject=`patternLayoutElectronTV`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`
+            <div class="ui nested stackable doubling equal width grid">
+                <div class="row">
+                    <div id="preview-35" class="five wide column">
+                        
+                    </div>
+                    <div id="code-35" class="column hidden element">
+                        
+                    </div>
+                </div>
+            </div>
+            `
+        ]]
+
+        [[$accordionOuter?
+    &rows=`[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[jsonToHTML? &json=`{
+    "caption": "Improvements",
+    "name": "status_improvements",
+    "description": "How can the content of this page be improved? You can elaborate on this in the Notes section below, if needed.",
+    "type": "checkbox",
+    "category": "Status",
+    "sortOrder": "2",
+    "inputOptionValues": "[Text] The text is not quite there yet==text||[Graphics] It lacks visual balance or needs more supportive imagery==graphics||[Information] The right message is not conveyed yet==information||[Interaction] The usability could be better==interaction||[Layout] The elements are not optimally positioned yet==layout||[Overviews] Content loaded from other places still needs some tweaking==overviews||[SEO] The content needs to be optimised for search engines||[Crosscheck] It needs a final check by a fresh pair of eyes==crosscheck||[Other] Something else==other",
+    "outputProperties": {
+        "delimiter": ","
+    },
+    "templates": [
+        "@@templates_all"
+    ]
+}`]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_templates]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`30`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`31`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`assignedTemplates`
+	&pattern_name=`status_improvements`
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`32`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`33`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_name=`status_improvements`
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=`fluid styled`
+    &tab_type=`regular`
+    &unique_idx=`25`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[!$patternLayoutElectronTV?
+            &preview=``
+            &code=``
+            &sidebar_width=`five`
+            &pattern_name=`status_assigned_user`
+            &pattern_template=`patternLayoutElectronTV`
+            &unique_idx=`46`
+        ]]
+        
+        [[-modifiedIf?
+            &subject=`patternLayoutElectronTV`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`
+            <div class="ui nested stackable doubling equal width grid">
+                <div class="row">
+                    <div id="preview-46" class="five wide column">
+                        
+                    </div>
+                    <div id="code-46" class="column hidden element">
+                        
+                    </div>
+                </div>
+            </div>
+            `
+        ]]
+
+        [[$accordionOuter?
+    &rows=`[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[jsonToHTML? &json=`{
+    "caption": "Assigned editor",
+    "name": "status_assigned_user",
+    "description": "Who is best suited to take a look at these improvements?",
+    "type": "listbox",
+    "category": "Status",
+    "sortOrder": "3",
+    "inputOptionValues": "@SELECT '' AS name, '' AS username UNION ALL ( SELECT `username` AS `name`,`username` FROM `modx_users` WHERE `active` = 1 )",
+    "templates": [
+        "@@templates_all"
+    ]
+}`]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_templates]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`41`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`42`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`assignedTemplates`
+	&pattern_name=`status_assigned_user`
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`43`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`44`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_name=`status_assigned_user`
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=`fluid styled`
+    &tab_type=`regular`
+    &unique_idx=`36`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[!$patternLayoutElectronTV?
+            &preview=``
+            &code=``
+            &sidebar_width=`five`
+            &pattern_name=`status_help`
+            &pattern_template=`patternLayoutElectronTV`
+            &unique_idx=`57`
+        ]]
+        
+        [[-modifiedIf?
+            &subject=`patternLayoutElectronTV`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`
+            <div class="ui nested stackable doubling equal width grid">
+                <div class="row">
+                    <div id="preview-57" class="five wide column">
+                        
+                    </div>
+                    <div id="code-57" class="column hidden element">
+                        
+                    </div>
+                </div>
+            </div>
+            `
+        ]]
+
+        [[$accordionOuter?
+    &rows=`[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[jsonToHTML? &json=`{
+    "caption": "Help!",
+    "name": "status_help",
+    "description": "What seems to be the problem? You can explain it in more detail in the Notes section below. If you are getting an error message, please include the exact phrase in your note, together with the step(s) you performed prior to the error.",
+    "type": "checkbox",
+    "category": "Status",
+    "sortOrder": "4",
+    "inputOptionValues": "[Manager] I'm having issues (or lost the way) while navigating MODX==manager||[Content] I'm having a problem when adding or editing content==content||[Styling] Things don't look as they should on the website==styling||[Technical] The output is incorrect on the site, or there's no output at all==technical||[Functional] I hit a limitation or inconsistency in one of the components==functional||[Concept] I'm stuck with something and could really use your advice or opinion==concept||[Other] Something else==other",
+    "templates": [
+        "@@templates_all"
+    ]
+}`]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_templates]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`52`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`53`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`assignedTemplates`
+	&pattern_name=`status_help`
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`54`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`55`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_name=`status_help`
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=`fluid styled`
+    &tab_type=`regular`
+    &unique_idx=`47`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[!$patternLayoutElectronTV?
+            &preview=``
+            &code=``
+            &sidebar_width=`five`
+            &pattern_name=`status_notes`
+            &pattern_template=`patternLayoutElectronTV`
+            &unique_idx=`68`
+        ]]
+        
+        [[-modifiedIf?
+            &subject=`patternLayoutElectronTV`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`
+            <div class="ui nested stackable doubling equal width grid">
+                <div class="row">
+                    <div id="preview-68" class="five wide column">
+                        
+                    </div>
+                    <div id="code-68" class="column hidden element">
+                        
+                    </div>
+                </div>
+            </div>
+            `
+        ]]
+
+        [[$accordionOuter?
+    &rows=`[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[jsonToHTML? &json=`{
+    "caption": "Notes / Explanations",
+    "name": "status_notes",
+    "description": "You can add multiple notes here, effectively creating a little journal of this page. The latest notes are shown on top, and author + date are automatically added to each entry. NB: notes are not saved until you save the page itself!",
+    "type": "migx",
+    "category": "Status",
+    "sortOrder": "99",
+    "inputProperties": {
+        "configs": "status_notes"
+    },
+    "templates": [
+        "@@templates_all"
+    ]
+}`]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_templates]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`63`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`64`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`assignedTemplates`
+	&pattern_name=`status_notes`
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`65`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`66`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_name=`status_notes`
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=`fluid styled`
+    &tab_type=`regular`
+    &unique_idx=`58`
+]]
+    </div>
+</div>

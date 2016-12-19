@@ -1,40 +1,54 @@
 <div class="ui vertical stripe segment white">
     <div class="ui   container">
-        [[$headingBasicAnchor?
-    &value=`cta_availability`
-    &level=`h2`
-    &alignment=``
-    &unique_idx=`63`
-]]
+        [[!$patternLayoutElectronTV?
+            &preview=``
+            &code=``
+            &sidebar_width=`five`
+            &pattern_name=`cta_availability`
+            &pattern_template=`patternLayoutElectronTV`
+            &unique_idx=`11`
+        ]]
+        
+        [[-modifiedIf?
+            &subject=`patternLayoutElectronTV`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`
+            <div class="ui nested stackable doubling equal width grid">
+                <div class="row">
+                    <div id="preview-11" class="five wide column">
+                        
+                    </div>
+                    <div id="code-11" class="column hidden element">
+                        
+                    </div>
+                </div>
+            </div>
+            `
+        ]]
 
-[[$accordionOuter?
+        [[$accordionOuter?
     &rows=`[[$accordionRowBasic?
-    &heading=`Purpose`
+    &heading=`[[%romanesco.patterns.purpose_title]]`
     &content=`<div class="ui nested one column stackable doubling relaxed  grid">
     <div class="column">[[$richTextSegment?
-    &content=`<p>This setting was created to increase the reusability of each CTA, while preventing it from being (un)intentionally added in the wrong places.</p><p>By selecting a given checkbox, the CTA will show up as an option somewhere in the configuration of that area (Header, Content, Sidebar or Footer).<br></p>`
+    &content=`<p>This setting was created to increase the reusability of each CTA, while preventing it from being (un)intentionally added in the wrong places.
+</p><p>By selecting a given checkbox, the CTA will show up as an option somewhere in the configuration of that area (Header, Content, Sidebar or Footer).<br>
+</p>`
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
 </div>`
     &padding=`padded`
+    &tab_type=`regular`
     &idx=`1`
 ]]
 
 [[$accordionRowBasic?
-    &heading=`Specifications`
+    &heading=`[[%romanesco.patterns.specifications_title]]`
     &content=`<div class="ui nested one column stackable doubling relaxed  grid">
-    <div class="column">[[$patternLibraryLabels? 
-	&chunk_selector=`patternLibraryLabels`
-	&unique_idx=`67`
-	&layout_id=`7`
-	&layout_column=`main`
-	&electron_type=`Template Variable`
-	]]
-
-
-[[jsonToHTML? &json=`{
+    <div class="column">[[jsonToHTML? &json=`{
     "caption": "Availability",
     "name": "cta_availability",
     "description": "Where would you like to be able to place this CTA?",
@@ -48,95 +62,110 @@
 }`]]</div>
 </div>`
     &padding=`padded`
+    &tab_type=`regular`
     &idx=`2`
 ]]
 
 [[$accordionRowBasic?
-    &heading=`References`
+    &heading=`[[%romanesco.patterns.references_title]]`
     &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
     <div class="row">
         <div class="column">[[$headingBasic?
-    &value=`Assigned to the following templates`
+    &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`70`
+    &unique_idx=`6`
 ]]
 
-[[$assignedTemplates? 
-	&chunk_selector=`assignedTemplates`
-	&unique_idx=`71`
+[[$referringPatternsOuter? 
+	&unique_idx=`7`
 	&layout_id=`12`
 	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`assignedTemplates`
 	&pattern_name=`cta_availability`
-	
 	]]
 </div>
         <div class="column">[[$headingBasic?
-    &value=`Included in the following patterns`
+    &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`72`
+    &unique_idx=`8`
 ]]
 
-[[$referringChunks? 
-	&chunk_selector=`referringChunks`
-	&unique_idx=`73`
+[[$referringPatternsOuter? 
+	&unique_idx=`9`
 	&layout_id=`12`
 	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
 	&pattern_name=`cta_availability`
-	
 	]]
 </div>
     </div>
 </div>`
     &padding=`padded`
+    &tab_type=`regular`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=`fluid styled`
-    &unique_idx=`64`
+    &tab_type=`regular`
+    &unique_idx=`1`
 ]]
     </div>
 </div>
 
 <div class="ui vertical stripe segment white">
     <div class="ui   container">
-        [[$headingBasicAnchor?
-    &value=`header_cta`
-    &level=`h2`
-    &alignment=``
-    &unique_idx=`76`
-]]
+        [[!$patternLayoutElectronTV?
+            &preview=``
+            &code=``
+            &sidebar_width=`five`
+            &pattern_name=`header_cta`
+            &pattern_template=`patternLayoutElectronTV`
+            &unique_idx=`22`
+        ]]
+        
+        [[-modifiedIf?
+            &subject=`patternLayoutElectronTV`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`
+            <div class="ui nested stackable doubling equal width grid">
+                <div class="row">
+                    <div id="preview-22" class="five wide column">
+                        
+                    </div>
+                    <div id="code-22" class="column hidden element">
+                        
+                    </div>
+                </div>
+            </div>
+            `
+        ]]
 
-[[$accordionOuter?
+        [[$accordionOuter?
     &rows=`[[$accordionRowBasic?
-    &heading=`Purpose`
+    &heading=`[[%romanesco.patterns.purpose_title]]`
     &content=`<div class="ui nested one column stackable doubling relaxed  grid">
     <div class="column">[[$richTextSegment?
-    &content=`<p>Generates a list of available CTAs inside the header and allows you to select one.<br></p>`
+    &content=`<p>Generates a list of available CTAs inside the header and allows you to select one.</p>`
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
 </div>`
     &padding=`padded`
+    &tab_type=`regular`
     &idx=`1`
 ]]
 
 [[$accordionRowBasic?
-    &heading=`Specifications`
+    &heading=`[[%romanesco.patterns.specifications_title]]`
     &content=`<div class="ui nested one column stackable doubling relaxed  grid">
-    <div class="column">[[$patternLibraryLabels? 
-	&chunk_selector=`patternLibraryLabels`
-	&unique_idx=`80`
-	&layout_id=`7`
-	&layout_column=`main`
-	&electron_type=`Template Variable`
-	]]
-
-
-[[jsonToHTML? &json=`{
+    <div class="column">[[jsonToHTML? &json=`{
     "caption": "Call to action (CTA)",
     "name": "header_cta",
     "description": "Select a CTA for display in header. CTAs can be created under Global Content. This will replace the Title values, but Background settings still apply. Please note that possibly inherited CTAs might not be visible on page because of Inheritance setting.",
@@ -151,54 +180,57 @@
 }`]]</div>
 </div>`
     &padding=`padded`
+    &tab_type=`regular`
     &idx=`2`
 ]]
 
 [[$accordionRowBasic?
-    &heading=`References`
+    &heading=`[[%romanesco.patterns.references_title]]`
     &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
     <div class="row">
         <div class="column">[[$headingBasic?
-    &value=`Assigned to the following templates`
+    &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`83`
+    &unique_idx=`17`
 ]]
 
-[[$assignedTemplates? 
-	&chunk_selector=`assignedTemplates`
-	&unique_idx=`84`
+[[$referringPatternsOuter? 
+	&unique_idx=`18`
 	&layout_id=`12`
 	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`assignedTemplates`
 	&pattern_name=`header_cta`
-	
 	]]
 </div>
         <div class="column">[[$headingBasic?
-    &value=`Included in the following patterns`
+    &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`85`
+    &unique_idx=`19`
 ]]
 
-[[$referringChunks? 
-	&chunk_selector=`referringChunks`
-	&unique_idx=`86`
+[[$referringPatternsOuter? 
+	&unique_idx=`20`
 	&layout_id=`12`
 	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
 	&pattern_name=`header_cta`
-	
 	]]
 </div>
     </div>
 </div>`
     &padding=`padded`
+    &tab_type=`regular`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=`fluid styled`
-    &unique_idx=`77`
+    &tab_type=`regular`
+    &unique_idx=`12`
 ]]
     </div>
 </div>

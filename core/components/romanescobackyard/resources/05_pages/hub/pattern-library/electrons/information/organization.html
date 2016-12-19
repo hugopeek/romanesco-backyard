@@ -1,0 +1,716 @@
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[$headingBasic?
+    &value=`[[*pagetitle]]`
+    &level=`h1`
+    &alignment=``
+    &unique_idx=`1`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[!$patternLayoutElectronTV?
+            &preview=``
+            &code=``
+            &sidebar_width=`five`
+            &pattern_name=`organization_logo_svg`
+            &pattern_template=`patternLayoutElectronTV`
+            &unique_idx=`13`
+        ]]
+        
+        [[-modifiedIf?
+            &subject=`patternLayoutElectronTV`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`
+            <div class="ui nested stackable doubling equal width grid">
+                <div class="row">
+                    <div id="preview-13" class="five wide column">
+                        
+                    </div>
+                    <div id="code-13" class="column hidden element">
+                        
+                    </div>
+                </div>
+            </div>
+            `
+        ]]
+
+        [[$accordionOuter?
+    &rows=`[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[jsonToHTML? &json=`{
+    "caption": "Organization logo (SVG)",
+    "name": "organization_logo_svg",
+    "description": "You'll likely get the best (sharpest) results when uploading an SVG. Try to keep the aspect ratio around 16:9 for best results.",
+    "type": "file",
+    "category": "Org. - Presentation",
+    "sortOrder": "1",
+    "templates": [
+        "@@templates_client"
+    ]
+}`]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_templates]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`8`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`9`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`assignedTemplates`
+	&pattern_name=`organization_logo_svg`
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`10`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`11`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_name=`organization_logo_svg`
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=`fluid styled`
+    &tab_type=`regular`
+    &unique_idx=`3`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[!$patternLayoutElectronTV?
+            &preview=``
+            &code=``
+            &sidebar_width=`five`
+            &pattern_name=`organization_logo_img`
+            &pattern_template=`patternLayoutElectronTV`
+            &unique_idx=`24`
+        ]]
+        
+        [[-modifiedIf?
+            &subject=`patternLayoutElectronTV`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`
+            <div class="ui nested stackable doubling equal width grid">
+                <div class="row">
+                    <div id="preview-24" class="five wide column">
+                        
+                    </div>
+                    <div id="code-24" class="column hidden element">
+                        
+                    </div>
+                </div>
+            </div>
+            `
+        ]]
+
+        [[$accordionOuter?
+    &rows=`[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[jsonToHTML? &json=`{
+    "caption": "Organization logo (Image)",
+    "name": "organization_logo_img",
+    "description": "If you can't supply an SVG, don't worry. You can upload an image here instead. The minimum width of their logo is 600px, but to keep your website pretty, aim for at least 900px.",
+    "type": "imageplus",
+    "category": "Org. - Presentation",
+    "sortOrder": "2",
+    "inputProperties": {
+        "targetWidth": "600",
+        "targetRatio": "1.77",
+        "allowAltTag": "true"
+    },
+    "outputProperties": {
+        "phpThumbParams": "w=[[++max_thumb_width:empty=`600`]]&zc=1",
+        "outputChunk": "cbOverviewRowImg"
+    },
+    "templates": [
+        "@@templates_client"
+    ]
+}`]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_templates]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`19`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`20`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`assignedTemplates`
+	&pattern_name=`organization_logo_img`
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`21`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`22`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_name=`organization_logo_img`
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=`fluid styled`
+    &tab_type=`regular`
+    &unique_idx=`14`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[!$patternLayoutElectronTV?
+            &preview=``
+            &code=``
+            &sidebar_width=`five`
+            &pattern_name=`organization_sector`
+            &pattern_template=`patternLayoutElectronTV`
+            &unique_idx=`35`
+        ]]
+        
+        [[-modifiedIf?
+            &subject=`patternLayoutElectronTV`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`
+            <div class="ui nested stackable doubling equal width grid">
+                <div class="row">
+                    <div id="preview-35" class="five wide column">
+                        
+                    </div>
+                    <div id="code-35" class="column hidden element">
+                        
+                    </div>
+                </div>
+            </div>
+            `
+        ]]
+
+        [[$accordionOuter?
+    &rows=`[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[jsonToHTML? &json=`{
+    "caption": "Organization sector",
+    "name": "organization_sector",
+    "description": "What type of organization is this?",
+    "type": "listbox",
+    "category": "Org. - Information",
+    "sortOrder": "5",
+    "inputOptionValues": "Public (government)==public||Private business==private||Non-profit organization==community",
+    "templates": [
+        "@@templates_client"
+    ]
+}`]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_templates]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`30`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`31`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`assignedTemplates`
+	&pattern_name=`organization_sector`
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`32`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`33`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_name=`organization_sector`
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=`fluid styled`
+    &tab_type=`regular`
+    &unique_idx=`25`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[!$patternLayoutElectronTV?
+            &preview=``
+            &code=``
+            &sidebar_width=`five`
+            &pattern_name=`organization_industry`
+            &pattern_template=`patternLayoutElectronTV`
+            &unique_idx=`46`
+        ]]
+        
+        [[-modifiedIf?
+            &subject=`patternLayoutElectronTV`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`
+            <div class="ui nested stackable doubling equal width grid">
+                <div class="row">
+                    <div id="preview-46" class="five wide column">
+                        
+                    </div>
+                    <div id="code-46" class="column hidden element">
+                        
+                    </div>
+                </div>
+            </div>
+            `
+        ]]
+
+        [[$accordionOuter?
+    &rows=`[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[jsonToHTML? &json=`{
+    "caption": "Organization industry",
+    "name": "organization_industry",
+    "description": "In what field is this organization active?",
+    "type": "text",
+    "category": "Org. - Information",
+    "sortOrder": "6",
+    "templates": [
+        "@@templates_client"
+    ]
+}`]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_templates]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`41`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`42`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`assignedTemplates`
+	&pattern_name=`organization_industry`
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`43`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`44`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_name=`organization_industry`
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=`fluid styled`
+    &tab_type=`regular`
+    &unique_idx=`36`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[!$patternLayoutElectronTV?
+            &preview=``
+            &code=``
+            &sidebar_width=`five`
+            &pattern_name=`organization_size`
+            &pattern_template=`patternLayoutElectronTV`
+            &unique_idx=`57`
+        ]]
+        
+        [[-modifiedIf?
+            &subject=`patternLayoutElectronTV`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`
+            <div class="ui nested stackable doubling equal width grid">
+                <div class="row">
+                    <div id="preview-57" class="five wide column">
+                        
+                    </div>
+                    <div id="code-57" class="column hidden element">
+                        
+                    </div>
+                </div>
+            </div>
+            `
+        ]]
+
+        [[$accordionOuter?
+    &rows=`[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[jsonToHTML? &json=`{
+    "caption": "Organization size",
+    "name": "organization_size",
+    "description": "How many employees does this organization have?",
+    "type": "number",
+    "category": "Org. - Information",
+    "sortOrder": "10",
+    "templates": [
+        "@@templates_client"
+    ]
+}`]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_templates]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`52`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`53`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`assignedTemplates`
+	&pattern_name=`organization_size`
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`54`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`55`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_name=`organization_size`
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=`fluid styled`
+    &tab_type=`regular`
+    &unique_idx=`47`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[!$patternLayoutElectronTV?
+            &preview=``
+            &code=``
+            &sidebar_width=`five`
+            &pattern_name=`organization_url`
+            &pattern_template=`patternLayoutElectronTV`
+            &unique_idx=`68`
+        ]]
+        
+        [[-modifiedIf?
+            &subject=`patternLayoutElectronTV`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`
+            <div class="ui nested stackable doubling equal width grid">
+                <div class="row">
+                    <div id="preview-68" class="five wide column">
+                        
+                    </div>
+                    <div id="code-68" class="column hidden element">
+                        
+                    </div>
+                </div>
+            </div>
+            `
+        ]]
+
+        [[$accordionOuter?
+    &rows=`[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[jsonToHTML? &json=`{
+    "caption": "Organization website",
+    "name": "organization_url",
+    "description": "",
+    "type": "text",
+    "category": "Org. - Information",
+    "sortOrder": "20",
+    "templates": [
+        "@@templates_client"
+    ]
+}`]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_templates]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`63`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`64`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`assignedTemplates`
+	&pattern_name=`organization_url`
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`65`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`66`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_name=`organization_url`
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=`fluid styled`
+    &tab_type=`regular`
+    &unique_idx=`58`
+]]
+    </div>
+</div>

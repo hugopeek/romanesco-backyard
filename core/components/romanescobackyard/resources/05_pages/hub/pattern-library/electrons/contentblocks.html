@@ -1,40 +1,53 @@
 <div class="ui vertical stripe segment white">
     <div class="ui   container">
-        [[$headingBasicAnchor?
-    &value=`cb_field_code_id`
-    &level=`h2`
-    &alignment=``
-    &unique_idx=`52`
-]]
+        [[!$patternLayoutElectronSystemSetting?
+            &preview=``
+            &code=``
+            &sidebar_width=`five`
+            &pattern_name=`cb_field_code_id`
+            &pattern_template=`patternLayoutElectronSystemSetting`
+            &unique_idx=`9`
+        ]]
+        
+        [[-modifiedIf?
+            &subject=`patternLayoutElectronSystemSetting`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`
+            <div class="ui nested stackable doubling equal width grid">
+                <div class="row">
+                    <div id="preview-9" class="five wide column">
+                        
+                    </div>
+                    <div id="code-9" class="column hidden element">
+                        
+                    </div>
+                </div>
+            </div>
+            `
+        ]]
 
-[[$accordionOuter?
+        [[$accordionOuter?
     &rows=`[[$accordionRowBasic?
-    &heading=`Purpose`
+    &heading=`[[%romanesco.patterns.purpose_title]]`
     &content=`<div class="ui nested one column stackable doubling relaxed  grid">
     <div class="column">[[$richTextSegment?
-    &content=`<p>System setting to indicate which ID the 'Code' ContentBlock has inside this installation. This is used to only load the assets for code highlighting if a code block is present on the page.<br></p>`
+    &content=`<p>System setting to indicate which ID the 'Code' ContentBlock has inside this installation. This is used to only load the assets for code highlighting if a code block is present on the page.<br>
+</p>`
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
 </div>`
     &padding=`padded`
+    &tab_type=`regular`
     &idx=`1`
 ]]
 
 [[$accordionRowBasic?
-    &heading=`Specifications`
+    &heading=`[[%romanesco.patterns.specifications_title]]`
     &content=`<div class="ui nested one column stackable doubling relaxed  grid">
-    <div class="column">[[$patternLibraryLabels? 
-	&chunk_selector=`patternLibraryLabels`
-	&unique_idx=`56`
-	&layout_id=`7`
-	&layout_column=`main`
-	&electron_type=`System Setting`
-	]]
-
-
-[[jsonToHTML? &json=`{
+    <div class="column">[[jsonToHTML? &json=`{
     "key": "cb_field_code_id",
     "type": "numberfield",
     "area": "ContentBlocks - Settings",
@@ -42,39 +55,42 @@
 }`]]</div>
 </div>`
     &padding=`padded`
+    &tab_type=`regular`
     &idx=`2`
 ]]
 
 [[$accordionRowBasic?
-    &heading=`References`
+    &heading=`[[%romanesco.patterns.references_title]]`
     &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
     <div class="row">
         <div class="column">[[$headingBasic?
-    &value=`Included in the following patterns`
+    &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`59`
+    &unique_idx=`6`
 ]]
 
-[[$referringChunks? 
-	&chunk_selector=`referringChunks`
-	&unique_idx=`60`
+[[$referringPatternsOuter? 
+	&unique_idx=`7`
 	&layout_id=`12`
 	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
 	&pattern_name=`cb_field_code_id`
-	
 	]]
 </div>
         <div class="column"></div>
     </div>
 </div>`
     &padding=`padded`
+    &tab_type=`regular`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=`fluid styled`
-    &unique_idx=`53`
+    &tab_type=`regular`
+    &unique_idx=`1`
 ]]
     </div>
 </div>
