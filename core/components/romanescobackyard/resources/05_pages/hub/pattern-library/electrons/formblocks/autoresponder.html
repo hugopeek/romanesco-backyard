@@ -1,0 +1,698 @@
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[$headingBasic?
+    &value=`[[*pagetitle]]`
+    &level=`h1`
+    &alignment=``
+    &unique_idx=`1`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[!$patternLayoutElectronTV?
+            &preview=``
+            &code=``
+            &sidebar_width=`five`
+            &pattern_name=`fb_autoresponder_toggle`
+            &pattern_template=`patternLayoutElectronTV`
+            &unique_idx=`13`
+        ]]
+        
+        [[-modifiedIf?
+            &subject=`patternLayoutElectronTV`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`
+            <div class="ui nested stackable doubling equal width grid">
+                <div class="row">
+                    <div id="preview-13" class="five wide column">
+                        
+                    </div>
+                    <div id="code-13" class="column hidden element">
+                        
+                    </div>
+                </div>
+            </div>
+            `
+        ]]
+
+        [[$accordionOuter?
+    &rows=`[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>Allows you to enable an automatic response message being sent to the person who submitted the form.</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[jsonToHTML? &json=`{
+    "caption": "Autoresponder",
+    "name": "fb_autoresponder_toggle",
+    "description": "IMPORTANT! For the autoresponder to know which email address to use, the Input (Email) field needs to be present in the form.",
+    "category": "Autoresponder",
+    "sortOrder": "1",
+    "type": "option",
+    "inputOptionValues": "On==1||Off==0",
+    "defaultValue": "0",
+    "templates": ["fbForm"]
+}`]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_templates]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`8`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`9`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`assignedTemplates`
+	&pattern_name=`fb_autoresponder_toggle`
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`10`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`11`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_name=`fb_autoresponder_toggle`
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=`fluid styled`
+    &tab_type=`regular`
+    &unique_idx=`3`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[!$patternLayoutElectronTV?
+            &preview=``
+            &code=``
+            &sidebar_width=`five`
+            &pattern_name=`fb_autoresponder_from`
+            &pattern_template=`patternLayoutElectronTV`
+            &unique_idx=`24`
+        ]]
+        
+        [[-modifiedIf?
+            &subject=`patternLayoutElectronTV`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`
+            <div class="ui nested stackable doubling equal width grid">
+                <div class="row">
+                    <div id="preview-24" class="five wide column">
+                        
+                    </div>
+                    <div id="code-24" class="column hidden element">
+                        
+                    </div>
+                </div>
+            </div>
+            `
+        ]]
+
+        [[$accordionOuter?
+    &rows=`[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>It will appear as if the autoresponder was sent from this email address.</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[jsonToHTML? &json=`{
+    "caption": "Autoresponder FROM address",
+    "name": "fb_autoresponder_from",
+    "description": "Optional. This is the address where the messages appear to be sent from. Can be a non-existing address, like noreply@yourdomain.com. Defaults to emailsender system setting.",
+    "category": "Autoresponder",
+    "sortOrder": "2",
+    "type": "email",
+    "templates": ["fbForm"]
+}`]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_templates]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`19`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`20`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`assignedTemplates`
+	&pattern_name=`fb_autoresponder_from`
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`21`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`22`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_name=`fb_autoresponder_from`
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=`fluid styled`
+    &tab_type=`regular`
+    &unique_idx=`14`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[!$patternLayoutElectronTV?
+            &preview=``
+            &code=``
+            &sidebar_width=`five`
+            &pattern_name=`fb_autoresponder_from_name`
+            &pattern_template=`patternLayoutElectronTV`
+            &unique_idx=`35`
+        ]]
+        
+        [[-modifiedIf?
+            &subject=`patternLayoutElectronTV`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`
+            <div class="ui nested stackable doubling equal width grid">
+                <div class="row">
+                    <div id="preview-35" class="five wide column">
+                        
+                    </div>
+                    <div id="code-35" class="column hidden element">
+                        
+                    </div>
+                </div>
+            </div>
+            `
+        ]]
+
+        [[$accordionOuter?
+    &rows=`[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>It will appear as if the autoresponder was sent by this person or organization.</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[jsonToHTML? &json=`{
+    "caption": "Autoresponder FROM name",
+    "name": "fb_autoresponder_from_name",
+    "description": "Optional. This is the name that will (probably) be visible in the recipients' inbox. Defaults to site_name system setting.",
+    "category": "Autoresponder",
+    "sortOrder": "3",
+    "type": "text",
+    "templates": ["fbForm"]
+}`]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_templates]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`30`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`31`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`assignedTemplates`
+	&pattern_name=`fb_autoresponder_from_name`
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`32`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`33`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_name=`fb_autoresponder_from_name`
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=`fluid styled`
+    &tab_type=`regular`
+    &unique_idx=`25`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[!$patternLayoutElectronTV?
+            &preview=``
+            &code=``
+            &sidebar_width=`five`
+            &pattern_name=`fb_autoresponder_reply_to`
+            &pattern_template=`patternLayoutElectronTV`
+            &unique_idx=`46`
+        ]]
+        
+        [[-modifiedIf?
+            &subject=`patternLayoutElectronTV`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`
+            <div class="ui nested stackable doubling equal width grid">
+                <div class="row">
+                    <div id="preview-46" class="five wide column">
+                        
+                    </div>
+                    <div id="code-46" class="column hidden element">
+                        
+                    </div>
+                </div>
+            </div>
+            `
+        ]]
+
+        [[$accordionOuter?
+    &rows=`[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>Control to which email address a direct response from the form submitter will be sent. In other words: if the form submitter uses the "reply" button in his or her email client, that message will go to this email address.<br>
+</p><p>This is for cases where you might want to use a different address than the one in <a href="[[~[[*id]]]]#fb_autoresponder_from">fb_autoresponder_from</a>. For example: use website@example.com as from address, but receive replies on support@example.com.<br>
+</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[jsonToHTML? &json=`{
+    "caption": "Autoresponder REPLY TO address",
+    "name": "fb_autoresponder_reply_to",
+    "description": "Optional. This address will be used when recipient replies to this message directly. Defaults to respectively the client_email and emailsender system setting.",
+    "category": "Autoresponder",
+    "sortOrder": "4",
+    "type": "email",
+    "templates": ["fbForm"]
+}`]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_templates]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`41`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`42`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`assignedTemplates`
+	&pattern_name=`fb_autoresponder_reply_to`
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`43`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`44`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_name=`fb_autoresponder_reply_to`
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=`fluid styled`
+    &tab_type=`regular`
+    &unique_idx=`36`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[!$patternLayoutElectronTV?
+            &preview=``
+            &code=``
+            &sidebar_width=`five`
+            &pattern_name=`fb_autoresponder_subject`
+            &pattern_template=`patternLayoutElectronTV`
+            &unique_idx=`57`
+        ]]
+        
+        [[-modifiedIf?
+            &subject=`patternLayoutElectronTV`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`
+            <div class="ui nested stackable doubling equal width grid">
+                <div class="row">
+                    <div id="preview-57" class="five wide column">
+                        
+                    </div>
+                    <div id="code-57" class="column hidden element">
+                        
+                    </div>
+                </div>
+            </div>
+            `
+        ]]
+
+        [[$accordionOuter?
+    &rows=`[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>Provide a subject line for your autoresponse message.</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[jsonToHTML? &json=`{
+    "caption": "Autoresponse subject",
+    "name": "fb_autoresponder_subject",
+    "description": "",
+    "category": "Autoresponder",
+    "sortOrder": "10",
+    "type": "text",
+    "templates": ["fbForm"]
+}`]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_templates]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`52`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`53`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`assignedTemplates`
+	&pattern_name=`fb_autoresponder_subject`
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`54`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`55`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_name=`fb_autoresponder_subject`
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=`fluid styled`
+    &tab_type=`regular`
+    &unique_idx=`47`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[!$patternLayoutElectronTV?
+            &preview=``
+            &code=``
+            &sidebar_width=`five`
+            &pattern_name=`fb_autoresponder_message`
+            &pattern_template=`patternLayoutElectronTV`
+            &unique_idx=`68`
+        ]]
+        
+        [[-modifiedIf?
+            &subject=`patternLayoutElectronTV`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`
+            <div class="ui nested stackable doubling equal width grid">
+                <div class="row">
+                    <div id="preview-68" class="five wide column">
+                        
+                    </div>
+                    <div id="code-68" class="column hidden element">
+                        
+                    </div>
+                </div>
+            </div>
+            `
+        ]]
+
+        [[$accordionOuter?
+    &rows=`[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>Lets you write the autoresponse message in a text editor. You can personalize the message with placeholders from the form fields.</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[jsonToHTML? &json=`{
+    "caption": "Autoresponse subject",
+    "name": "fb_autoresponder_subject",
+    "description": "",
+    "category": "Autoresponder",
+    "sortOrder": "10",
+    "type": "text",
+    "templates": ["fbForm"]
+}`]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_templates]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`63`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`64`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`assignedTemplates`
+	&pattern_name=`fb_autoresponder_message`
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`65`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`66`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_name=`fb_autoresponder_message`
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=`fluid styled`
+    &tab_type=`regular`
+    &unique_idx=`58`
+]]
+    </div>
+</div>
