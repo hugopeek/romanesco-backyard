@@ -1,30 +1,31 @@
 <div class="ui vertical stripe segment white">
     <div class="ui   container">
-        [[!$patternLayoutAtom?
-            &preview=`[[$overviewOuter? 
-	&unique_idx=`1`
-	&layout_id=`17`
-	&layout_column=`preview`
-	&layout_idx=`0`
-	&row_tpl=`overviewRowBasic`
-	&cols=`two`
-	&parent=`15`
-	&title_field=`menutitle`
-	&title_hierarchy=`h2`
-	&depth=`0`
-	&limit=`99`
-	&show_hidden=`0`
-	&sortby=`menuindex`
-	&pagination=`0`
-	&show_subtitle=`0`
-	&show_introtext=`0`
-	&link_text=`overviewOuter`
-	&img_type=`[[$cbSettingImageType]]`
-	&icon_type=`svg`
-	&padding=`regular`
-	&de_emphasize=`0`
-	]]
-`
+        [[[[If?
+            &subject=`patternLayoutOrganism`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonField`
+            &then=`setPatternPlaceholders? &cbField=`overviewOuter` &prefix=`cf_1_2339``
+        ]]]]
+        [[[[If?
+            &subject=`patternLayoutOrganism`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonLayout`
+            &then=`setPatternPlaceholders? &cbLayout=`overviewOuter` &prefix=`cl_1_2339``
+        ]]]]
+
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_2339`?
+            &preview=`<pre><code class="language-html">&#91;&#91;$overviewOuter?
+    &amp;row_tpl=&#96;overviewRowBasicCard&#96;
+    &amp;parent=&#96;&#91;&#91;*parent&#93;&#93;&#96;
+    &amp;depth=&#96;0&#96;
+    &amp;limit=&#96;3&#96;
+    &amp;sortby=&#96;&#96;
+    &amp;cols=&#96;one&#96;
+    &amp;column_type=&#96;column&#96;
+    &amp;title_field=&#96;pagetitle&#96;
+    &amp;title_hierarchy=&#96;h4&#96;
+    &amp;show_introtext=&#96;0&#96;
+&#93;&#93;</code><div class="ui top right attached label">MODX<i class="copy link icon with popup" data-content="[[%romanesco.patterns.copy_tooltip]]"></i></div></pre>`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -33,153 +34,53 @@
 ]]`
     &lang=`html`
     &label=`[[%romanesco.patterns.code_label]]`
-]]
-
-[[$tabsOuter?
-    &rows=`[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
-    <div class="column">[[$richTextSegment?
-    &content=``
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`
-    &padding=`padded`
-    &tab_type=`regular`
-    &idx=`1`
-]]
-
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.usage_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
-    <div class="column">[[$richTextSegment?
-    &content=``
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`
-    &padding=`padded`
-    &tab_type=`regular`
-    &idx=`2`
-]]
-
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.included_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`8`
-]]
-
-[[$includedPatternsOuter? 
-	&unique_idx=`9`
-	&layout_id=`12`
-	&layout_column=`col_1`
-	&layout_idx=`0`
-	&pattern_list=`includedChunks,includedSnippets,includedTVs`
-	&pattern_name=`overviewOuter`
-	]]
-</div>
-        <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.referring_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`10`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`11`
-	&layout_id=`12`
-	&layout_column=`col_2`
-	&layout_idx=`0`
-	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
-	&pattern_name=`overviewOuter`
-	]]
-</div>
-    </div>
-</div>`
-    &padding=`padded`
-    &tab_type=`regular`
-    &idx=`3`
-]]
-
-[[$tabsRowBasic?
-    &heading=`ContentBlocks`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
-    <div class="column"></div>
-</div>`
-    &padding=`padded`
-    &tab_type=`regular`
-    &idx=`4`
-]]`
-    &total=`4`
-    &padding=`padded`
-    &accordion_type=``
-    &tab_type=`regular`
-    &unique_idx=`3`
 ]]`
             &sidebar_width=`six`
             &pattern_name=`overviewOuter`
-            &pattern_template=`patternLayoutAtom`
-            &unique_idx=`14`
+            &pattern_template=`patternLayoutOrganism`
+            &idx=`1`
+            &unique_idx=`2339`
         ]]
         
-        [[-modifiedIf?
-            &subject=`patternLayoutAtom`
+        [[$toolbarPattern?
+            &pattern_name=`overviewOuter`
+            &pattern_template=`patternLayoutOrganism`
+            &idx=`1`
+            &unique_idx=`2339`
+        ]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutOrganism`
+            &operator=`contains`
+            &operand=`Electron`
+            &then=`$dividerBasic? &divider_hidden=`1``
+            &else=`$dividerBasic`
+        ]]]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutOrganism`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`
-            <div class="ui nested stackable doubling equal width grid">
-                <div class="row">
-                    <div id="preview-14" class="six wide column">
-                        [[$overviewOuter? 
-	&unique_idx=`1`
-	&layout_id=`17`
-	&layout_column=`preview`
-	&layout_idx=`0`
-	&row_tpl=`overviewRowBasic`
-	&cols=`two`
-	&parent=`15`
-	&title_field=`menutitle`
-	&title_hierarchy=`h2`
-	&depth=`0`
-	&limit=`99`
-	&show_hidden=`0`
-	&sortby=`menuindex`
-	&pagination=`0`
-	&show_subtitle=`0`
-	&show_introtext=`0`
-	&link_text=`overviewOuter`
-	&img_type=`[[$cbSettingImageType]]`
-	&icon_type=`svg`
-	&padding=`regular`
-	&de_emphasize=`0`
-	]]
+            &then=`+preview_1_2339`
+        ]]]]
 
-                    </div>
-                    <div id="code-14" class="column hidden element">
-                        [[$codeSnippet?
-    &value=`[[Rowboat?
-    &table=`modx_site_htmlsnippets`
-    &tpl=`displayRawElement`
-    &where=`{"name":"overviewOuter"}`
-]]`
-    &lang=`html`
-    &label=`[[%romanesco.patterns.code_label]]`
-]]
-
-[[$tabsOuter?
+        [[$tabsOuter?
     &rows=`[[$tabsRowBasic?
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &content=`<div class="ui nested one column stackable doubling relaxed  grid">
     <div class="column">[[$richTextSegment?
-    &content=``
+    &content=`<p>[[getElementDescription? &name=`overviewOuter` &type=`patternLayoutOrganism`]]
+</p>
+<p>[[getElementDescription? &name=`Form` &type=`bosonField`]]
+</p>
+<p>[[getElementDescription? &name=`Single Column` &type=`bosonLayout`]]
+</p>
+<p>[[getElementDescription? &name=`header_cta` &type=`electrontv`]]
+</p>
+<p>[[getElementDescription? &name=`BasicOverview` &type=`template`]]<br>
+</p>
+<p>[[getElementDescription? &name=`03 - Overviews` &type=`page`]]
+</p>`
     &segment_type=``
 	&padding=`regular`
     &alignment=``
@@ -213,15 +114,16 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`8`
+    &unique_idx=`2333`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`9`
+	&unique_idx=`2334`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
 	&pattern_list=`includedChunks,includedSnippets,includedTVs`
+	&pattern_template=`patternLayoutOrganism`
 	&pattern_name=`overviewOuter`
 	]]
 </div>
@@ -229,15 +131,16 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`10`
+    &unique_idx=`2335`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`11`
+	&unique_idx=`2336`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
-	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
+	&pattern_list=`referringChunks,referringSnippets,referringTemplates,referringPages`
+	&pattern_template=`patternLayoutOrganism`
 	&pattern_name=`overviewOuter`
 	]]
 </div>
@@ -249,7 +152,7 @@
 ]]
 
 [[$tabsRowBasic?
-    &heading=`ContentBlocks`
+    &heading=`Settings`
     &content=`<div class="ui nested one column stackable doubling relaxed  grid">
     <div class="column"></div>
 </div>`
@@ -261,40 +164,39 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`3`
+    &unique_idx=`2328`
 ]]
-                    </div>
-                </div>
-            </div>
-            `
-        ]]
-
-        
     </div>
 </div>
 
 <div class="ui vertical stripe segment white">
     <div class="ui   container">
-        [[!$patternLayoutAtom?
-            &preview=`[[$overviewOuterSpecific? 
-	&unique_idx=`15`
-	&layout_id=`17`
-	&layout_column=`preview`
-	&layout_idx=`1`
-	&resources=`144`
-	&row_tpl=`overviewRowBasic`
-	&cols=`2`
-	&title_field=`menutitle`
-	&title_hierarchy=`h2`
-	&show_subtitle=`0`
-	&show_introtext=`0`
-	&link_text=`overviewOuter`
-	&img_type=`landscape`
-	&icon_type=`svg`
-	&padding=``
-	&de_emphasize=`0`
-	]]
-`
+        [[[[If?
+            &subject=`patternLayoutOrganism`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonField`
+            &then=`setPatternPlaceholders? &cbField=`overviewRowBasic` &prefix=`cf_2_2352``
+        ]]]]
+        [[[[If?
+            &subject=`patternLayoutOrganism`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonLayout`
+            &then=`setPatternPlaceholders? &cbLayout=`overviewRowBasic` &prefix=`cl_2_2352``
+        ]]]]
+
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_2352`?
+            &preview=`<pre><code class="language-html">&#91;&#91;$overviewOuter?
+    &amp;row_tpl=&#96;overviewRowBasic&#96;
+    &amp;parent=&#96;&#91;&#91;*parent&#93;&#93;&#96;
+    &amp;depth=&#96;0&#96;
+    &amp;limit=&#96;3&#96;
+    &amp;sortby=&#96;&#96;
+    &amp;cols=&#96;one&#96;
+    &amp;column_type=&#96;column&#96;
+    &amp;title_field=&#96;pagetitle&#96;
+    &amp;title_hierarchy=&#96;h4&#96;
+    &amp;show_introtext=&#96;0&#96;
+&#93;&#93;</code><div class="ui top right attached label">MODX<i class="copy link icon with popup" data-content="[[%romanesco.patterns.copy_tooltip]]"></i></div></pre>`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -304,55 +206,34 @@
     &lang=`html`
     &label=`[[%romanesco.patterns.code_label]]`
 ]]`
-            &sidebar_width=`five`
+            &sidebar_width=`six`
             &pattern_name=`overviewRowBasic`
-            &pattern_template=`patternLayoutAtom`
-            &unique_idx=`27`
+            &pattern_template=`patternLayoutOrganism`
+            &idx=`2`
+            &unique_idx=`2352`
         ]]
         
-        [[-modifiedIf?
-            &subject=`patternLayoutAtom`
+        [[$toolbarPattern?
+            &pattern_name=`overviewRowBasic`
+            &pattern_template=`patternLayoutOrganism`
+            &idx=`2`
+            &unique_idx=`2352`
+        ]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutOrganism`
+            &operator=`contains`
+            &operand=`Electron`
+            &then=`$dividerBasic? &divider_hidden=`1``
+            &else=`$dividerBasic`
+        ]]]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutOrganism`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`
-            <div class="ui nested stackable doubling equal width grid">
-                <div class="row">
-                    <div id="preview-27" class="five wide column">
-                        [[$overviewOuterSpecific? 
-	&unique_idx=`15`
-	&layout_id=`17`
-	&layout_column=`preview`
-	&layout_idx=`1`
-	&resources=`144`
-	&row_tpl=`overviewRowBasic`
-	&cols=`2`
-	&title_field=`menutitle`
-	&title_hierarchy=`h2`
-	&show_subtitle=`0`
-	&show_introtext=`0`
-	&link_text=`overviewOuter`
-	&img_type=`landscape`
-	&icon_type=`svg`
-	&padding=``
-	&de_emphasize=`0`
-	]]
-
-                    </div>
-                    <div id="code-27" class="column hidden element">
-                        [[$codeSnippet?
-    &value=`[[Rowboat?
-    &table=`modx_site_htmlsnippets`
-    &tpl=`displayRawElement`
-    &where=`{"name":"overviewRowBasic"}`
-]]`
-    &lang=`html`
-    &label=`[[%romanesco.patterns.code_label]]`
-]]
-                    </div>
-                </div>
-            </div>
-            `
-        ]]
+            &then=`+preview_2_2352`
+        ]]]]
 
         [[$tabsOuter?
     &rows=`[[$tabsRowBasic?
@@ -393,15 +274,16 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`22`
+    &unique_idx=`2347`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`23`
+	&unique_idx=`2348`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
 	&pattern_list=`includedChunks,includedSnippets,includedTVs`
+	&pattern_template=`patternLayoutOrganism`
 	&pattern_name=`overviewRowBasic`
 	]]
 </div>
@@ -409,15 +291,16 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`24`
+    &unique_idx=`2349`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`25`
+	&unique_idx=`2350`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
-	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
+	&pattern_list=`referringPatterns`
+	&pattern_template=`patternLayoutOrganism`
 	&pattern_name=`overviewRowBasic`
 	]]
 </div>
@@ -431,7 +314,7 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`17`
+    &unique_idx=`2342`
 ]]
     </div>
 </div>

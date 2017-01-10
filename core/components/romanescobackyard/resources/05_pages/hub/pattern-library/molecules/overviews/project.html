@@ -1,6 +1,19 @@
 <div class="ui vertical stripe segment white">
     <div class="ui   container">
-        [[!$patternLayoutMolecule?
+        [[[[If?
+            &subject=`patternLayoutMolecule`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonField`
+            &then=`setPatternPlaceholders? &cbField=`overviewRowProjectBasic` &prefix=`cf_1_4054``
+        ]]]]
+        [[[[If?
+            &subject=`patternLayoutMolecule`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonLayout`
+            &then=`setPatternPlaceholders? &cbLayout=`overviewRowProjectBasic` &prefix=`cl_1_4054``
+        ]]]]
+
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_4054`?
             &preview=`{{PLACE EXAMPLE HERE}}`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
@@ -14,34 +27,31 @@
             &sidebar_width=`five`
             &pattern_name=`overviewRowProjectBasic`
             &pattern_template=`patternLayoutMolecule`
-            &unique_idx=`13`
+            &idx=`1`
+            &unique_idx=`4054`
         ]]
         
-        [[-modifiedIf?
+        [[$toolbarPattern?
+            &pattern_name=`overviewRowProjectBasic`
+            &pattern_template=`patternLayoutMolecule`
+            &idx=`1`
+            &unique_idx=`4054`
+        ]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutMolecule`
+            &operator=`contains`
+            &operand=`Electron`
+            &then=`$dividerBasic? &divider_hidden=`1``
+            &else=`$dividerBasic`
+        ]]]]
+
+        [[[[modifiedIf?
             &subject=`patternLayoutMolecule`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`
-            <div class="ui nested stackable doubling equal width grid">
-                <div class="row">
-                    <div id="preview-13" class="five wide column">
-                        {{PLACE EXAMPLE HERE}}
-                    </div>
-                    <div id="code-13" class="column hidden element">
-                        [[$codeSnippet?
-    &value=`[[Rowboat?
-    &table=`modx_site_htmlsnippets`
-    &tpl=`displayRawElement`
-    &where=`{"name":"overviewRowProjectBasic"}`
-]]`
-    &lang=`html`
-    &label=`[[%romanesco.patterns.code_label]]`
-]]
-                    </div>
-                </div>
-            </div>
-            `
-        ]]
+            &then=`+preview_1_4054`
+        ]]]]
 
         [[$tabsOuter?
     &rows=`[[$tabsRowBasic?
@@ -82,15 +92,16 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`8`
+    &unique_idx=`4049`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`9`
+	&unique_idx=`4050`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
 	&pattern_list=`includedChunks,includedSnippets,includedTVs`
+	&pattern_template=`patternLayoutMolecule`
 	&pattern_name=`overviewRowProjectBasic`
 	]]
 </div>
@@ -98,15 +109,16 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`10`
+    &unique_idx=`4051`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`11`
+	&unique_idx=`4052`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
 	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
+	&pattern_template=`patternLayoutMolecule`
 	&pattern_name=`overviewRowProjectBasic`
 	]]
 </div>
@@ -120,14 +132,27 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`3`
+    &unique_idx=`4044`
 ]]
     </div>
 </div>
 
 <div class="ui vertical stripe segment white">
     <div class="ui   container">
-        [[!$patternLayoutMolecule?
+        [[[[If?
+            &subject=`patternLayoutMolecule`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonField`
+            &then=`setPatternPlaceholders? &cbField=`overviewRowProjectTile` &prefix=`cf_2_4067``
+        ]]]]
+        [[[[If?
+            &subject=`patternLayoutMolecule`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonLayout`
+            &then=`setPatternPlaceholders? &cbLayout=`overviewRowProjectTile` &prefix=`cl_2_4067``
+        ]]]]
+
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_4067`?
             &preview=`{{PLACE EXAMPLE HERE}}`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
@@ -141,34 +166,31 @@
             &sidebar_width=`five`
             &pattern_name=`overviewRowProjectTile`
             &pattern_template=`patternLayoutMolecule`
-            &unique_idx=`26`
+            &idx=`2`
+            &unique_idx=`4067`
         ]]
         
-        [[-modifiedIf?
+        [[$toolbarPattern?
+            &pattern_name=`overviewRowProjectTile`
+            &pattern_template=`patternLayoutMolecule`
+            &idx=`2`
+            &unique_idx=`4067`
+        ]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutMolecule`
+            &operator=`contains`
+            &operand=`Electron`
+            &then=`$dividerBasic? &divider_hidden=`1``
+            &else=`$dividerBasic`
+        ]]]]
+
+        [[[[modifiedIf?
             &subject=`patternLayoutMolecule`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`
-            <div class="ui nested stackable doubling equal width grid">
-                <div class="row">
-                    <div id="preview-26" class="five wide column">
-                        {{PLACE EXAMPLE HERE}}
-                    </div>
-                    <div id="code-26" class="column hidden element">
-                        [[$codeSnippet?
-    &value=`[[Rowboat?
-    &table=`modx_site_htmlsnippets`
-    &tpl=`displayRawElement`
-    &where=`{"name":"overviewRowProjectTile"}`
-]]`
-    &lang=`html`
-    &label=`[[%romanesco.patterns.code_label]]`
-]]
-                    </div>
-                </div>
-            </div>
-            `
-        ]]
+            &then=`+preview_2_4067`
+        ]]]]
 
         [[$tabsOuter?
     &rows=`[[$tabsRowBasic?
@@ -209,15 +231,16 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`21`
+    &unique_idx=`4062`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`22`
+	&unique_idx=`4063`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
 	&pattern_list=`includedChunks,includedSnippets,includedTVs`
+	&pattern_template=`patternLayoutMolecule`
 	&pattern_name=`overviewRowProjectTile`
 	]]
 </div>
@@ -225,15 +248,16 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`23`
+    &unique_idx=`4064`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`24`
+	&unique_idx=`4065`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
 	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
+	&pattern_template=`patternLayoutMolecule`
 	&pattern_name=`overviewRowProjectTile`
 	]]
 </div>
@@ -247,14 +271,27 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`16`
+    &unique_idx=`4057`
 ]]
     </div>
 </div>
 
 <div class="ui vertical stripe segment white">
     <div class="ui   container">
-        [[!$patternLayoutMolecule?
+        [[[[If?
+            &subject=`patternLayoutMolecule`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonField`
+            &then=`setPatternPlaceholders? &cbField=`overviewRowProjectFluid` &prefix=`cf_3_4080``
+        ]]]]
+        [[[[If?
+            &subject=`patternLayoutMolecule`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonLayout`
+            &then=`setPatternPlaceholders? &cbLayout=`overviewRowProjectFluid` &prefix=`cl_3_4080``
+        ]]]]
+
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_4080`?
             &preview=`{{PLACE EXAMPLE HERE}}`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
@@ -268,34 +305,31 @@
             &sidebar_width=`five`
             &pattern_name=`overviewRowProjectFluid`
             &pattern_template=`patternLayoutMolecule`
-            &unique_idx=`39`
+            &idx=`3`
+            &unique_idx=`4080`
         ]]
         
-        [[-modifiedIf?
+        [[$toolbarPattern?
+            &pattern_name=`overviewRowProjectFluid`
+            &pattern_template=`patternLayoutMolecule`
+            &idx=`3`
+            &unique_idx=`4080`
+        ]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutMolecule`
+            &operator=`contains`
+            &operand=`Electron`
+            &then=`$dividerBasic? &divider_hidden=`1``
+            &else=`$dividerBasic`
+        ]]]]
+
+        [[[[modifiedIf?
             &subject=`patternLayoutMolecule`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`
-            <div class="ui nested stackable doubling equal width grid">
-                <div class="row">
-                    <div id="preview-39" class="five wide column">
-                        {{PLACE EXAMPLE HERE}}
-                    </div>
-                    <div id="code-39" class="column hidden element">
-                        [[$codeSnippet?
-    &value=`[[Rowboat?
-    &table=`modx_site_htmlsnippets`
-    &tpl=`displayRawElement`
-    &where=`{"name":"overviewRowProjectFluid"}`
-]]`
-    &lang=`html`
-    &label=`[[%romanesco.patterns.code_label]]`
-]]
-                    </div>
-                </div>
-            </div>
-            `
-        ]]
+            &then=`+preview_3_4080`
+        ]]]]
 
         [[$tabsOuter?
     &rows=`[[$tabsRowBasic?
@@ -336,15 +370,16 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`34`
+    &unique_idx=`4075`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`35`
+	&unique_idx=`4076`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
 	&pattern_list=`includedChunks,includedSnippets,includedTVs`
+	&pattern_template=`patternLayoutMolecule`
 	&pattern_name=`overviewRowProjectFluid`
 	]]
 </div>
@@ -352,15 +387,16 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`36`
+    &unique_idx=`4077`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`37`
+	&unique_idx=`4078`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
 	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
+	&pattern_template=`patternLayoutMolecule`
 	&pattern_name=`overviewRowProjectFluid`
 	]]
 </div>
@@ -374,7 +410,7 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`29`
+    &unique_idx=`4070`
 ]]
     </div>
 </div>

@@ -1,0 +1,149 @@
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[[[If?
+            &subject=`patternLayoutAtom`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonField`
+            &then=`setPatternPlaceholders? &cbField=`Select Dropdown` &prefix=`cf_1_4187``
+        ]]]]
+        [[[[If?
+            &subject=`patternLayoutAtom`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonLayout`
+            &then=`setPatternPlaceholders? &cbLayout=`Select Dropdown` &prefix=`cl_1_4187``
+        ]]]]
+
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_4187`?
+            &preview=``
+            &code=`[[$codeSnippet?
+    &value=`[[Rowboat?
+    &table=`modx_site_htmlsnippets`
+    &tpl=`displayRawElement`
+    &where=`{"name":"Select Dropdown"}`
+]]`
+    &lang=`html`
+    &label=`[[%romanesco.patterns.code_label]]`
+]]`
+            &sidebar_width=`five`
+            &pattern_name=`Select Dropdown`
+            &pattern_template=`patternLayoutAtom`
+            &idx=`1`
+            &unique_idx=`4187`
+        ]]
+        
+        [[$toolbarPattern?
+            &pattern_name=`Select Dropdown`
+            &pattern_template=`patternLayoutAtom`
+            &idx=`1`
+            &unique_idx=`4187`
+        ]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutAtom`
+            &operator=`contains`
+            &operand=`Electron`
+            &then=`$dividerBasic? &divider_hidden=`1``
+            &else=`$dividerBasic`
+        ]]]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutAtom`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`+preview_1_4187`
+        ]]]]
+
+        [[+prefix]]
+
+[[-setPatternPlaceholders? &cbField=`Select Dropdown` &prefix=`test_1_4176`]]
+
+
+[[$tabsOuter?
+    &rows=`[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`4182`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`4183`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`includedChunks,includedSnippets,includedTVs`
+	&pattern_template=`patternLayoutAtom`
+	&pattern_name=`Select Dropdown`
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`4184`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`4185`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
+	&pattern_template=`patternLayoutAtom`
+	&pattern_name=`Select Dropdown`
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=``
+    &tab_type=`regular`
+    &unique_idx=`4177`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        
+    </div>
+</div>

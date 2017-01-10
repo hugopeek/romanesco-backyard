@@ -1,31 +1,49 @@
 <div class="ui vertical stripe segment white">
     <div class="ui   container">
-        [[!$patternLayoutElectronTV?
+        [[[[If?
+            &subject=`patternLayoutElectronTV`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonField`
+            &then=`setPatternPlaceholders? &cbField=`author_id` &prefix=`cf_1_2639``
+        ]]]]
+        [[[[If?
+            &subject=`patternLayoutElectronTV`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonLayout`
+            &then=`setPatternPlaceholders? &cbLayout=`author_id` &prefix=`cl_1_2639``
+        ]]]]
+
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_2639`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`author_id`
             &pattern_template=`patternLayoutElectronTV`
-            &unique_idx=`11`
+            &idx=`1`
+            &unique_idx=`2639`
         ]]
         
-        [[-modifiedIf?
+        [[$toolbarPattern?
+            &pattern_name=`author_id`
+            &pattern_template=`patternLayoutElectronTV`
+            &idx=`1`
+            &unique_idx=`2639`
+        ]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutElectronTV`
+            &operator=`contains`
+            &operand=`Electron`
+            &then=`$dividerBasic? &divider_hidden=`1``
+            &else=`$dividerBasic`
+        ]]]]
+
+        [[[[modifiedIf?
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`
-            <div class="ui nested stackable doubling equal width grid">
-                <div class="row">
-                    <div id="preview-11" class="five wide column">
-                        
-                    </div>
-                    <div id="code-11" class="column hidden element">
-                        
-                    </div>
-                </div>
-            </div>
-            `
-        ]]
+            &then=`+preview_1_2639`
+        ]]]]
 
         [[$accordionOuter?
     &rows=`[[$accordionRowBasic?
@@ -77,15 +95,16 @@
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`6`
+    &unique_idx=`2634`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`7`
+	&unique_idx=`2635`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
 	&pattern_list=`assignedTemplates`
+	&pattern_template=`patternLayoutElectronTV`
 	&pattern_name=`author_id`
 	]]
 </div>
@@ -93,15 +112,16 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`8`
+    &unique_idx=`2636`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`9`
+	&unique_idx=`2637`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
 	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_template=`patternLayoutElectronTV`
 	&pattern_name=`author_id`
 	]]
 </div>
@@ -115,39 +135,57 @@
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`1`
+    &unique_idx=`2629`
 ]]
     </div>
 </div>
 
 <div class="ui vertical stripe segment white">
     <div class="ui   container">
-        [[!$patternLayoutElectronTV?
+        [[[[If?
+            &subject=`patternLayoutElectronTV`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonField`
+            &then=`setPatternPlaceholders? &cbField=`comments_toggle` &prefix=`cf_2_2650``
+        ]]]]
+        [[[[If?
+            &subject=`patternLayoutElectronTV`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonLayout`
+            &then=`setPatternPlaceholders? &cbLayout=`comments_toggle` &prefix=`cl_2_2650``
+        ]]]]
+
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_2650`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`comments_toggle`
             &pattern_template=`patternLayoutElectronTV`
-            &unique_idx=`22`
+            &idx=`2`
+            &unique_idx=`2650`
         ]]
         
-        [[-modifiedIf?
+        [[$toolbarPattern?
+            &pattern_name=`comments_toggle`
+            &pattern_template=`patternLayoutElectronTV`
+            &idx=`2`
+            &unique_idx=`2650`
+        ]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutElectronTV`
+            &operator=`contains`
+            &operand=`Electron`
+            &then=`$dividerBasic? &divider_hidden=`1``
+            &else=`$dividerBasic`
+        ]]]]
+
+        [[[[modifiedIf?
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`
-            <div class="ui nested stackable doubling equal width grid">
-                <div class="row">
-                    <div id="preview-22" class="five wide column">
-                        
-                    </div>
-                    <div id="code-22" class="column hidden element">
-                        
-                    </div>
-                </div>
-            </div>
-            `
-        ]]
+            &then=`+preview_2_2650`
+        ]]]]
 
         [[$accordionOuter?
     &rows=`[[$accordionRowBasic?
@@ -199,15 +237,16 @@
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`17`
+    &unique_idx=`2645`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`18`
+	&unique_idx=`2646`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
 	&pattern_list=`assignedTemplates`
+	&pattern_template=`patternLayoutElectronTV`
 	&pattern_name=`comments_toggle`
 	]]
 </div>
@@ -215,15 +254,16 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`19`
+    &unique_idx=`2647`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`20`
+	&unique_idx=`2648`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
 	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_template=`patternLayoutElectronTV`
 	&pattern_name=`comments_toggle`
 	]]
 </div>
@@ -237,7 +277,7 @@
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`12`
+    &unique_idx=`2640`
 ]]
     </div>
 </div>

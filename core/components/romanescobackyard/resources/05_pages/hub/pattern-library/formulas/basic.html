@@ -1,0 +1,147 @@
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[[[If?
+            &subject=`patternLayoutFormula`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonField`
+            &then=`setPatternPlaceholders? &cbField=`includedChunks` &prefix=`cf_1_2460``
+        ]]]]
+        [[[[If?
+            &subject=`patternLayoutFormula`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonLayout`
+            &then=`setPatternPlaceholders? &cbLayout=`includedChunks` &prefix=`cl_1_2460``
+        ]]]]
+
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_2460`?
+            &preview=`{{NO EXAMPLE NEEDED}}`
+            &code=`[[$codeSnippet?
+    &value=`[[Rowboat?
+    &table=`modx_site_snippets`
+    &tpl=`displayRawElement`
+    &where=`{"name":"includedChunks"}`
+]]`
+    &lang=`php`
+    &label=`[[%romanesco.patterns.code_label]]`
+]]`
+            &sidebar_width=`five`
+            &pattern_name=`includedChunks`
+            &pattern_template=`patternLayoutFormula`
+            &idx=`1`
+            &unique_idx=`2460`
+        ]]
+        
+        [[$toolbarPattern?
+            &pattern_name=`includedChunks`
+            &pattern_template=`patternLayoutFormula`
+            &idx=`1`
+            &unique_idx=`2460`
+        ]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutFormula`
+            &operator=`contains`
+            &operand=`Electron`
+            &then=`$dividerBasic? &divider_hidden=`1``
+            &else=`$dividerBasic`
+        ]]]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutFormula`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`+preview_1_2460`
+        ]]]]
+
+        [[$tabsOuter?
+    &rows=`[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]
+
+[[$headingBasic?
+    &value=`Example snippet call<br>`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`2452`
+]]
+
+<pre><code class="language-html">{{EXAMPLE SNIPPET CALL HERE}}</code><div class="ui top right attached label">MODX<i class="copy link icon with popup" data-content="[[%romanesco.patterns.copy_tooltip]]"></i></div></pre></div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`2455`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`2456`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`includedChunks,includedSnippets,includedTVs`
+	&pattern_template=`patternLayoutFormula`
+	&pattern_name=`includedChunks`
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`2457`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`2458`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
+	&pattern_template=`patternLayoutFormula`
+	&pattern_name=`includedChunks`
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=``
+    &tab_type=`regular`
+    &unique_idx=`2448`
+]]
+    </div>
+</div>

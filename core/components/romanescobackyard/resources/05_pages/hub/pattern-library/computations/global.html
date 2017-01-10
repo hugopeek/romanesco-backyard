@@ -1,0 +1,93 @@
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[[[If?
+            &subject=`patternLayoutComputation`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonField`
+            &then=`setPatternPlaceholders? &cbField=`hideEmptyTVCategories` &prefix=`cf_1_2468``
+        ]]]]
+        [[[[If?
+            &subject=`patternLayoutComputation`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonLayout`
+            &then=`setPatternPlaceholders? &cbLayout=`hideEmptyTVCategories` &prefix=`cl_1_2468``
+        ]]]]
+
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_2468`?
+            &preview=`{{NO EXAMPLE NEEDED}}`
+            &code=`[[$codeSnippet?
+    &value=`[[Rowboat?
+    &table=`modx_site_plugins`
+    &tpl=`displayRawPlugin`
+    &where=`{"name":"hideEmptyTVCategories"}`
+]]`
+    &lang=`php`
+    &label=`[[%romanesco.patterns.code_label]]`
+]]`
+            &sidebar_width=`five`
+            &pattern_name=`hideEmptyTVCategories`
+            &pattern_template=`patternLayoutComputation`
+            &idx=`1`
+            &unique_idx=`2468`
+        ]]
+        
+        [[$toolbarPattern?
+            &pattern_name=`hideEmptyTVCategories`
+            &pattern_template=`patternLayoutComputation`
+            &idx=`1`
+            &unique_idx=`2468`
+        ]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutComputation`
+            &operator=`contains`
+            &operand=`Electron`
+            &then=`$dividerBasic? &divider_hidden=`1``
+            &else=`$dividerBasic`
+        ]]]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutComputation`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`+preview_1_2468`
+        ]]]]
+
+        [[$tabsOuter?
+    &rows=`[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]`
+    &total=`2`
+    &padding=`padded`
+    &accordion_type=``
+    &tab_type=`regular`
+    &unique_idx=`2463`
+]]
+    </div>
+</div>

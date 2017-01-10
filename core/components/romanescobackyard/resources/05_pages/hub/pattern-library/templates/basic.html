@@ -1,0 +1,468 @@
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[[[If?
+            &subject=`patternLayoutTemplate`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonField`
+            &then=`setPatternPlaceholders? &cbField=`BasicOverview` &prefix=`cf_1_2417``
+        ]]]]
+        [[[[If?
+            &subject=`patternLayoutTemplate`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonLayout`
+            &then=`setPatternPlaceholders? &cbLayout=`BasicOverview` &prefix=`cl_1_2417``
+        ]]]]
+
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_2417`?
+            &preview=`<div class="ui segment">
+    <div class="ui one column center aligned grid wireframe">
+        <div class="column">
+            <p class="ui secondary segment">Header</p>
+        </div>
+        <div class="column">
+            <p class="ui secondary segment" style="line-height: 0 !important;">Toolbar</p>
+        </div>
+        <div class="column">
+            <p class="ui secondary segment" style="line-height: 5em !important;">Content</p>
+        </div>
+        <div class="column">
+            <p class="ui secondary segment" style="line-height: 2em !important;">Footer</p>
+        </div>
+    </div>
+</div>`
+            &code=`[[$codeSnippet?
+    &value=`[[Rowboat?
+    &table=`modx_site_templates`
+    &tpl=`displayRawTemplate`
+    &where=`{"templatename":"BasicOverview"}`
+]]`
+    &lang=`html`
+    &label=`[[%romanesco.patterns.code_label]]`
+]]`
+            &sidebar_width=`five`
+            &pattern_name=`BasicOverview`
+            &pattern_template=`patternLayoutTemplate`
+            &idx=`1`
+            &unique_idx=`2417`
+        ]]
+        
+        [[$toolbarPattern?
+            &pattern_name=`BasicOverview`
+            &pattern_template=`patternLayoutTemplate`
+            &idx=`1`
+            &unique_idx=`2417`
+        ]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutTemplate`
+            &operator=`contains`
+            &operand=`Electron`
+            &then=`$dividerBasic? &divider_hidden=`1``
+            &else=`$dividerBasic`
+        ]]]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutTemplate`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`+preview_1_2417`
+        ]]]]
+
+        [[$tabsOuter?
+    &rows=`[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`2412`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`2413`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`includedChunks,includedSnippets,includedTVs`
+	&pattern_template=`patternLayoutTemplate`
+	&pattern_name=`BasicOverview`
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_tvs]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`2414`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`2415`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`assignedTVs`
+	&pattern_template=`patternLayoutTemplate`
+	&pattern_name=`BasicOverview`
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=``
+    &tab_type=`regular`
+    &unique_idx=`2407`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[[[If?
+            &subject=`patternLayoutTemplate`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonField`
+            &then=`setPatternPlaceholders? &cbField=`BasicDetail` &prefix=`cf_2_2430``
+        ]]]]
+        [[[[If?
+            &subject=`patternLayoutTemplate`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonLayout`
+            &then=`setPatternPlaceholders? &cbLayout=`BasicDetail` &prefix=`cl_2_2430``
+        ]]]]
+
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_2430`?
+            &preview=`<div class="ui segment">
+    <div class="ui one column center aligned grid wireframe">
+        <div class="column">
+            <p class="ui secondary segment">Header</p>
+        </div>
+        <div class="column">
+            <p class="ui secondary segment" style="line-height: 0 !important;">Toolbar</p>
+        </div>
+        <div class="column">
+            <div class="ui two column equal width nested grid">
+                <div class="column">
+                    <p class="ui secondary segment" style="line-height: 5em !important;">Content</p>
+                </div>
+                <div class="seven wide column">
+                    <p class="ui secondary segment" style="line-height: 5em !important;">Sub</p>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <p class="ui secondary segment" style="line-height: 2em !important;">Footer</p>
+        </div>
+    </div>
+</div>`
+            &code=`[[$codeSnippet?
+    &value=`[[Rowboat?
+    &table=`modx_site_templates`
+    &tpl=`displayRawTemplate`
+    &where=`{"templatename":"BasicDetail"}`
+]]`
+    &lang=`html`
+    &label=`[[%romanesco.patterns.code_label]]`
+]]`
+            &sidebar_width=`five`
+            &pattern_name=`BasicDetail`
+            &pattern_template=`patternLayoutTemplate`
+            &idx=`2`
+            &unique_idx=`2430`
+        ]]
+        
+        [[$toolbarPattern?
+            &pattern_name=`BasicDetail`
+            &pattern_template=`patternLayoutTemplate`
+            &idx=`2`
+            &unique_idx=`2430`
+        ]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutTemplate`
+            &operator=`contains`
+            &operand=`Electron`
+            &then=`$dividerBasic? &divider_hidden=`1``
+            &else=`$dividerBasic`
+        ]]]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutTemplate`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`+preview_2_2430`
+        ]]]]
+
+        [[$tabsOuter?
+    &rows=`[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`2425`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`2426`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`includedChunks,includedSnippets,includedTVs`
+	&pattern_template=`patternLayoutTemplate`
+	&pattern_name=`BasicDetail`
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_tvs]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`2427`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`2428`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`assignedTVs`
+	&pattern_template=`patternLayoutTemplate`
+	&pattern_name=`BasicDetail`
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=``
+    &tab_type=`regular`
+    &unique_idx=`2420`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[[[If?
+            &subject=`patternLayoutTemplate`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonField`
+            &then=`setPatternPlaceholders? &cbField=`Home` &prefix=`cf_3_2443``
+        ]]]]
+        [[[[If?
+            &subject=`patternLayoutTemplate`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonLayout`
+            &then=`setPatternPlaceholders? &cbLayout=`Home` &prefix=`cl_3_2443``
+        ]]]]
+
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_2443`?
+            &preview=`<div class="ui segment">
+    <div class="ui one column center aligned grid wireframe">
+        <div class="column">
+            <p class="ui secondary segment">Header</p>
+        </div>
+        <div class="column">
+            <p class="ui secondary segment" style="line-height: 0 !important;">Toolbar</p>
+        </div>
+        <div class="column">
+            <p class="ui secondary segment" style="line-height: 5em !important;">Content</p>
+        </div>
+        <div class="column">
+            <p class="ui secondary segment" style="line-height: 2em !important;">Footer</p>
+        </div>
+    </div>
+</div>`
+            &code=`[[$codeSnippet?
+    &value=`[[Rowboat?
+    &table=`modx_site_templates`
+    &tpl=`displayRawTemplate`
+    &where=`{"templatename":"Home"}`
+]]`
+    &lang=`html`
+    &label=`[[%romanesco.patterns.code_label]]`
+]]`
+            &sidebar_width=`five`
+            &pattern_name=`Home`
+            &pattern_template=`patternLayoutTemplate`
+            &idx=`3`
+            &unique_idx=`2443`
+        ]]
+        
+        [[$toolbarPattern?
+            &pattern_name=`Home`
+            &pattern_template=`patternLayoutTemplate`
+            &idx=`3`
+            &unique_idx=`2443`
+        ]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutTemplate`
+            &operator=`contains`
+            &operand=`Electron`
+            &then=`$dividerBasic? &divider_hidden=`1``
+            &else=`$dividerBasic`
+        ]]]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutTemplate`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`+preview_3_2443`
+        ]]]]
+
+        [[$tabsOuter?
+    &rows=`[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`2438`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`2439`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`includedChunks,includedSnippets,includedTVs`
+	&pattern_template=`patternLayoutTemplate`
+	&pattern_name=`Home`
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_tvs]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`2440`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`2441`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`assignedTVs`
+	&pattern_template=`patternLayoutTemplate`
+	&pattern_name=`Home`
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=``
+    &tab_type=`regular`
+    &unique_idx=`2433`
+]]
+    </div>
+</div>
