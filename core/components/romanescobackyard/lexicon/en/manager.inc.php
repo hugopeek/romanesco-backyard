@@ -68,3 +68,15 @@ $_lang['collections.library.children.back_to_collection_label'] = 'Back to libra
 $_lang['collections.portfolio.children'] = 'Portfolio';
 $_lang['collections.portfolio.children.create'] = 'Add project';
 $_lang['collections.portfolio.children.back_to_collection_label'] = 'Back to portfolio';
+
+// Pattern library
+// ---------------------------------------------------------------------
+
+$_lang['romanesco.patterns.status_green'] = 'Solid (safe to use as instructed)';
+$_lang['romanesco.patterns.status_yellow'] = 'Incoherent (works without issues, but might be refactored at some point)';
+$_lang['romanesco.patterns.status_orange'] = 'Conflicting (there are open issues related to this pattern)';
+$_lang['romanesco.patterns.status_red'] = 'Unstable (severely flawed, do not use)';
+$_lang['romanesco.patterns.status_pink'] = 'Experimental (just fiddling with some ideas here)';
+$_lang['romanesco.patterns.status_purple'] = 'Untested (use at your own risk)';
+$_lang['romanesco.patterns.status_blue'] = 'In review (under evaluation if this belongs in the library or not)';
+$_lang['romanesco.patterns.status_brown'] = 'Deprecated (will be deleted in the next major release)';
