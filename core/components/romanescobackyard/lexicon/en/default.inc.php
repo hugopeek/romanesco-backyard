@@ -88,6 +88,7 @@ $_lang['romanesco.status.table_notes'] = 'Notes / Explanations';
 
 $_lang['romanesco.patterns.button_backyard'] = 'Backyard';
 $_lang['romanesco.patterns.preview_tooltip'] = 'Hide example';
+$_lang['romanesco.patterns.preview_not_available'] = 'No preview available';
 $_lang['romanesco.patterns.code_tooltip'] = 'View source';
 $_lang['romanesco.patterns.copy_tooltip'] = 'Copy code';
 $_lang['romanesco.patterns.comment_tooltip'] = 'Ask a question, suggest an edit or report a bug';
