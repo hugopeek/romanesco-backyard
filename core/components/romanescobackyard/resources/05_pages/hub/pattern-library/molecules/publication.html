@@ -1,20 +1,24 @@
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutMolecule`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`articleAuthorBio` &prefix=`cf_1_2182``
+            &then=`setPatternPlaceholders? &cbField=`articleAuthorBio` &prefix=`cf_1_5612``
         ]]]]
         [[[[If?
             &subject=`patternLayoutMolecule`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`articleAuthorBio` &prefix=`cl_1_2182``
+            &then=`setPatternPlaceholders? &cbLayout=`articleAuthorBio` &prefix=`cl_1_5612``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_2182`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_5612`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -27,30 +31,36 @@
             &sidebar_width=`five`
             &pattern_name=`articleAuthorBio`
             &pattern_template=`patternLayoutMolecule`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`1`
-            &unique_idx=`2182`
+            &unique_idx=`5612`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`articleAuthorBio`
-            &pattern_template=`patternLayoutMolecule`
-            &idx=`1`
-            &unique_idx=`2182`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutMolecule`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`articleAuthorBio`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`articleAuthorBio`
+                    &pattern_template=`patternLayoutMolecule`
+                    &pattern_status=`green`
+                    &idx=`1`
+                    &unique_idx=`5612`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutMolecule`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_1_2182`
+            &then=`+preview_1_5612`
         ]]]]
 
         [[$tabsOuter?
@@ -92,11 +102,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`2177`
+    &unique_idx=`5607`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`2178`
+	&unique_idx=`5608`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -109,11 +119,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`2179`
+    &unique_idx=`5609`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`2180`
+	&unique_idx=`5610`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -132,28 +142,32 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`2172`
+    &unique_idx=`5602`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutMolecule`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`articleCommentsDisqus` &prefix=`cf_2_2195``
+            &then=`setPatternPlaceholders? &cbField=`articleCommentsDisqus` &prefix=`cf_2_5625``
         ]]]]
         [[[[If?
             &subject=`patternLayoutMolecule`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`articleCommentsDisqus` &prefix=`cl_2_2195``
+            &then=`setPatternPlaceholders? &cbLayout=`articleCommentsDisqus` &prefix=`cl_2_5625``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_2195`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_5625`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -166,30 +180,36 @@
             &sidebar_width=`five`
             &pattern_name=`articleCommentsDisqus`
             &pattern_template=`patternLayoutMolecule`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`2`
-            &unique_idx=`2195`
+            &unique_idx=`5625`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`articleCommentsDisqus`
-            &pattern_template=`patternLayoutMolecule`
-            &idx=`2`
-            &unique_idx=`2195`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutMolecule`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`articleCommentsDisqus`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`articleCommentsDisqus`
+                    &pattern_template=`patternLayoutMolecule`
+                    &pattern_status=`green`
+                    &idx=`2`
+                    &unique_idx=`5625`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutMolecule`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_2_2195`
+            &then=`+preview_2_5625`
         ]]]]
 
         [[$tabsOuter?
@@ -231,11 +251,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`2190`
+    &unique_idx=`5620`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`2191`
+	&unique_idx=`5621`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -248,11 +268,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`2192`
+    &unique_idx=`5622`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`2193`
+	&unique_idx=`5623`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -271,7 +291,7 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`2185`
+    &unique_idx=`5615`
 ]]
     </div>
 </div>

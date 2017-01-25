@@ -1,20 +1,24 @@
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutMolecule`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fbEmailRow` &prefix=`cf_1_3599``
+            &then=`setPatternPlaceholders? &cbField=`fbEmailRow` &prefix=`cf_1_6210``
         ]]]]
         [[[[If?
             &subject=`patternLayoutMolecule`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fbEmailRow` &prefix=`cl_1_3599``
+            &then=`setPatternPlaceholders? &cbLayout=`fbEmailRow` &prefix=`cl_1_6210``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_3599`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_6210`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -27,30 +31,36 @@
             &sidebar_width=`five`
             &pattern_name=`fbEmailRow`
             &pattern_template=`patternLayoutMolecule`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`1`
-            &unique_idx=`3599`
+            &unique_idx=`6210`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`fbEmailRow`
-            &pattern_template=`patternLayoutMolecule`
-            &idx=`1`
-            &unique_idx=`3599`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutMolecule`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`fbEmailRow`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`fbEmailRow`
+                    &pattern_template=`patternLayoutMolecule`
+                    &pattern_status=`green`
+                    &idx=`1`
+                    &unique_idx=`6210`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutMolecule`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_1_3599`
+            &then=`+preview_1_6210`
         ]]]]
 
         [[$tabsOuter?
@@ -92,11 +102,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3594`
+    &unique_idx=`6205`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`3595`
+	&unique_idx=`6206`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -109,11 +119,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3596`
+    &unique_idx=`6207`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3597`
+	&unique_idx=`6208`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -132,28 +142,32 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`3589`
+    &unique_idx=`6200`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutMolecule`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fbEmailRow_settings` &prefix=`cf_2_3612``
+            &then=`setPatternPlaceholders? &cbField=`fbEmailRow_settings` &prefix=`cf_2_6223``
         ]]]]
         [[[[If?
             &subject=`patternLayoutMolecule`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fbEmailRow_settings` &prefix=`cl_2_3612``
+            &then=`setPatternPlaceholders? &cbLayout=`fbEmailRow_settings` &prefix=`cl_2_6223``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_3612`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_6223`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -166,30 +180,36 @@
             &sidebar_width=`five`
             &pattern_name=`fbEmailRow_settings`
             &pattern_template=`patternLayoutMolecule`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`2`
-            &unique_idx=`3612`
+            &unique_idx=`6223`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`fbEmailRow_settings`
-            &pattern_template=`patternLayoutMolecule`
-            &idx=`2`
-            &unique_idx=`3612`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutMolecule`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`fbEmailRow_settings`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`fbEmailRow_settings`
+                    &pattern_template=`patternLayoutMolecule`
+                    &pattern_status=`green`
+                    &idx=`2`
+                    &unique_idx=`6223`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutMolecule`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_2_3612`
+            &then=`+preview_2_6223`
         ]]]]
 
         [[$tabsOuter?
@@ -231,11 +251,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3607`
+    &unique_idx=`6218`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`3608`
+	&unique_idx=`6219`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -248,11 +268,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3609`
+    &unique_idx=`6220`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3610`
+	&unique_idx=`6221`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -271,28 +291,32 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`3602`
+    &unique_idx=`6213`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutMolecule`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fbEmailRow_xx` &prefix=`cf_3_3625``
+            &then=`setPatternPlaceholders? &cbField=`fbEmailRow_xx` &prefix=`cf_3_6236``
         ]]]]
         [[[[If?
             &subject=`patternLayoutMolecule`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fbEmailRow_xx` &prefix=`cl_3_3625``
+            &then=`setPatternPlaceholders? &cbLayout=`fbEmailRow_xx` &prefix=`cl_3_6236``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_3625`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_6236`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -305,30 +329,36 @@
             &sidebar_width=`five`
             &pattern_name=`fbEmailRow_xx`
             &pattern_template=`patternLayoutMolecule`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`3`
-            &unique_idx=`3625`
+            &unique_idx=`6236`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`fbEmailRow_xx`
-            &pattern_template=`patternLayoutMolecule`
-            &idx=`3`
-            &unique_idx=`3625`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutMolecule`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`fbEmailRow_xx`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`fbEmailRow_xx`
+                    &pattern_template=`patternLayoutMolecule`
+                    &pattern_status=`green`
+                    &idx=`3`
+                    &unique_idx=`6236`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutMolecule`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_3_3625`
+            &then=`+preview_3_6236`
         ]]]]
 
         [[$tabsOuter?
@@ -370,11 +400,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3620`
+    &unique_idx=`6231`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`3621`
+	&unique_idx=`6232`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -387,11 +417,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3622`
+    &unique_idx=`6233`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3623`
+	&unique_idx=`6234`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -410,28 +440,32 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`3615`
+    &unique_idx=`6226`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutMolecule`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fbEmailRow_xx_terms` &prefix=`cf_4_3638``
+            &then=`setPatternPlaceholders? &cbField=`fbEmailRow_xx_terms` &prefix=`cf_4_6249``
         ]]]]
         [[[[If?
             &subject=`patternLayoutMolecule`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fbEmailRow_xx_terms` &prefix=`cl_4_3638``
+            &then=`setPatternPlaceholders? &cbLayout=`fbEmailRow_xx_terms` &prefix=`cl_4_6249``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_4_3638`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_4_6249`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -444,30 +478,36 @@
             &sidebar_width=`five`
             &pattern_name=`fbEmailRow_xx_terms`
             &pattern_template=`patternLayoutMolecule`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`4`
-            &unique_idx=`3638`
+            &unique_idx=`6249`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`fbEmailRow_xx_terms`
-            &pattern_template=`patternLayoutMolecule`
-            &idx=`4`
-            &unique_idx=`3638`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutMolecule`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`fbEmailRow_xx_terms`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`fbEmailRow_xx_terms`
+                    &pattern_template=`patternLayoutMolecule`
+                    &pattern_status=`green`
+                    &idx=`4`
+                    &unique_idx=`6249`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutMolecule`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_4_3638`
+            &then=`+preview_4_6249`
         ]]]]
 
         [[$tabsOuter?
@@ -509,11 +549,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3633`
+    &unique_idx=`6244`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`3634`
+	&unique_idx=`6245`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -526,11 +566,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3635`
+    &unique_idx=`6246`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3636`
+	&unique_idx=`6247`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -549,28 +589,32 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`3628`
+    &unique_idx=`6239`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutMolecule`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fbEmailRow_xx_email` &prefix=`cf_5_3651``
+            &then=`setPatternPlaceholders? &cbField=`fbEmailRow_xx_email` &prefix=`cf_5_6262``
         ]]]]
         [[[[If?
             &subject=`patternLayoutMolecule`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fbEmailRow_xx_email` &prefix=`cl_5_3651``
+            &then=`setPatternPlaceholders? &cbLayout=`fbEmailRow_xx_email` &prefix=`cl_5_6262``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_5_3651`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_5_6262`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -583,30 +627,36 @@
             &sidebar_width=`five`
             &pattern_name=`fbEmailRow_xx_email`
             &pattern_template=`patternLayoutMolecule`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`5`
-            &unique_idx=`3651`
+            &unique_idx=`6262`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`fbEmailRow_xx_email`
-            &pattern_template=`patternLayoutMolecule`
-            &idx=`5`
-            &unique_idx=`3651`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutMolecule`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`fbEmailRow_xx_email`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`fbEmailRow_xx_email`
+                    &pattern_template=`patternLayoutMolecule`
+                    &pattern_status=`green`
+                    &idx=`5`
+                    &unique_idx=`6262`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutMolecule`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_5_3651`
+            &then=`+preview_5_6262`
         ]]]]
 
         [[$tabsOuter?
@@ -648,11 +698,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3646`
+    &unique_idx=`6257`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`3647`
+	&unique_idx=`6258`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -665,11 +715,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3648`
+    &unique_idx=`6259`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3649`
+	&unique_idx=`6260`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -688,7 +738,7 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`3641`
+    &unique_idx=`6252`
 ]]
     </div>
 </div>

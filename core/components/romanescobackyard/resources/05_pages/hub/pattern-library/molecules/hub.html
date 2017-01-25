@@ -1,20 +1,24 @@
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutMolecule`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`projectHubRow` &prefix=`cf_1_1738``
+            &then=`setPatternPlaceholders? &cbField=`projectHubRow` &prefix=`cf_1_5192``
         ]]]]
         [[[[If?
             &subject=`patternLayoutMolecule`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`projectHubRow` &prefix=`cl_1_1738``
+            &then=`setPatternPlaceholders? &cbLayout=`projectHubRow` &prefix=`cl_1_5192``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_1738`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_5192`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -27,30 +31,36 @@
             &sidebar_width=`five`
             &pattern_name=`projectHubRow`
             &pattern_template=`patternLayoutMolecule`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`1`
-            &unique_idx=`1738`
+            &unique_idx=`5192`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`projectHubRow`
-            &pattern_template=`patternLayoutMolecule`
-            &idx=`1`
-            &unique_idx=`1738`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutMolecule`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`projectHubRow`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`projectHubRow`
+                    &pattern_template=`patternLayoutMolecule`
+                    &pattern_status=`green`
+                    &idx=`1`
+                    &unique_idx=`5192`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutMolecule`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_1_1738`
+            &then=`+preview_1_5192`
         ]]]]
 
         [[$tabsOuter?
@@ -92,11 +102,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`1733`
+    &unique_idx=`5187`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`1734`
+	&unique_idx=`5188`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -109,11 +119,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`1735`
+    &unique_idx=`5189`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`1736`
+	&unique_idx=`5190`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -132,28 +142,32 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`1728`
+    &unique_idx=`5182`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutMolecule`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`statusGridRow` &prefix=`cf_2_1751``
+            &then=`setPatternPlaceholders? &cbField=`statusGridRow` &prefix=`cf_2_5205``
         ]]]]
         [[[[If?
             &subject=`patternLayoutMolecule`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`statusGridRow` &prefix=`cl_2_1751``
+            &then=`setPatternPlaceholders? &cbLayout=`statusGridRow` &prefix=`cl_2_5205``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_1751`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_5205`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -166,30 +180,36 @@
             &sidebar_width=`five`
             &pattern_name=`statusGridRow`
             &pattern_template=`patternLayoutMolecule`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`2`
-            &unique_idx=`1751`
+            &unique_idx=`5205`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`statusGridRow`
-            &pattern_template=`patternLayoutMolecule`
-            &idx=`2`
-            &unique_idx=`1751`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutMolecule`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`statusGridRow`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`statusGridRow`
+                    &pattern_template=`patternLayoutMolecule`
+                    &pattern_status=`green`
+                    &idx=`2`
+                    &unique_idx=`5205`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutMolecule`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_2_1751`
+            &then=`+preview_2_5205`
         ]]]]
 
         [[$tabsOuter?
@@ -231,11 +251,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`1746`
+    &unique_idx=`5200`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`1747`
+	&unique_idx=`5201`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -248,11 +268,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`1748`
+    &unique_idx=`5202`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`1749`
+	&unique_idx=`5203`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -271,28 +291,32 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`1741`
+    &unique_idx=`5195`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutMolecule`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`includedPatternsRow` &prefix=`cf_3_1764``
+            &then=`setPatternPlaceholders? &cbField=`includedPatternsRow` &prefix=`cf_3_5218``
         ]]]]
         [[[[If?
             &subject=`patternLayoutMolecule`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`includedPatternsRow` &prefix=`cl_3_1764``
+            &then=`setPatternPlaceholders? &cbLayout=`includedPatternsRow` &prefix=`cl_3_5218``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_1764`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_5218`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -305,30 +329,36 @@
             &sidebar_width=`five`
             &pattern_name=`includedPatternsRow`
             &pattern_template=`patternLayoutMolecule`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`3`
-            &unique_idx=`1764`
+            &unique_idx=`5218`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`includedPatternsRow`
-            &pattern_template=`patternLayoutMolecule`
-            &idx=`3`
-            &unique_idx=`1764`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutMolecule`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`includedPatternsRow`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`includedPatternsRow`
+                    &pattern_template=`patternLayoutMolecule`
+                    &pattern_status=`green`
+                    &idx=`3`
+                    &unique_idx=`5218`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutMolecule`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_3_1764`
+            &then=`+preview_3_5218`
         ]]]]
 
         [[$tabsOuter?
@@ -370,11 +400,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`1759`
+    &unique_idx=`5213`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`1760`
+	&unique_idx=`5214`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -387,11 +417,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`1761`
+    &unique_idx=`5215`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`1762`
+	&unique_idx=`5216`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -410,64 +440,74 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`1754`
+    &unique_idx=`5208`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutMolecule`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`patternLibraryActionButtons` &prefix=`cf_4_1777``
+            &then=`setPatternPlaceholders? &cbField=`includedPagesRow` &prefix=`cf_4_5231``
         ]]]]
         [[[[If?
             &subject=`patternLayoutMolecule`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`patternLibraryActionButtons` &prefix=`cl_4_1777``
+            &then=`setPatternPlaceholders? &cbLayout=`includedPagesRow` &prefix=`cl_4_5231``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_4_1777`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_4_5231`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
     &tpl=`displayRawElement`
-    &where=`{"name":"patternLibraryActionButtons"}`
+    &where=`{"name":"includedPagesRow"}`
 ]]`
     &lang=`html`
     &label=`[[%romanesco.patterns.code_label]]`
 ]]`
             &sidebar_width=`five`
-            &pattern_name=`patternLibraryActionButtons`
+            &pattern_name=`includedPagesRow`
             &pattern_template=`patternLayoutMolecule`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`4`
-            &unique_idx=`1777`
+            &unique_idx=`5231`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`patternLibraryActionButtons`
-            &pattern_template=`patternLayoutMolecule`
-            &idx=`4`
-            &unique_idx=`1777`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutMolecule`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`includedPagesRow`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`includedPagesRow`
+                    &pattern_template=`patternLayoutMolecule`
+                    &pattern_status=`green`
+                    &idx=`4`
+                    &unique_idx=`5231`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutMolecule`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_4_1777`
+            &then=`+preview_4_5231`
         ]]]]
 
         [[$tabsOuter?
@@ -509,34 +549,34 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`1772`
+    &unique_idx=`5226`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`1773`
+	&unique_idx=`5227`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
 	&pattern_list=`includedChunks,includedSnippets,includedTVs`
 	&pattern_template=`patternLayoutMolecule`
-	&pattern_name=`patternLibraryActionButtons`
+	&pattern_name=`includedPagesRow`
 	]]
 </div>
         <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`1774`
+    &unique_idx=`5228`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`1775`
+	&unique_idx=`5229`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
 	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
 	&pattern_template=`patternLayoutMolecule`
-	&pattern_name=`patternLibraryActionButtons`
+	&pattern_name=`includedPagesRow`
 	]]
 </div>
     </div>
@@ -549,64 +589,74 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`1767`
+    &unique_idx=`5221`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutMolecule`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`patternLibraryLabels` &prefix=`cf_5_1790``
+            &then=`setPatternPlaceholders? &cbField=`includedContentBlocksRow` &prefix=`cf_5_5244``
         ]]]]
         [[[[If?
             &subject=`patternLayoutMolecule`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`patternLibraryLabels` &prefix=`cl_5_1790``
+            &then=`setPatternPlaceholders? &cbLayout=`includedContentBlocksRow` &prefix=`cl_5_5244``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_5_1790`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_5_5244`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
     &tpl=`displayRawElement`
-    &where=`{"name":"patternLibraryLabels"}`
+    &where=`{"name":"includedContentBlocksRow"}`
 ]]`
     &lang=`html`
     &label=`[[%romanesco.patterns.code_label]]`
 ]]`
             &sidebar_width=`five`
-            &pattern_name=`patternLibraryLabels`
+            &pattern_name=`includedContentBlocksRow`
             &pattern_template=`patternLayoutMolecule`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`5`
-            &unique_idx=`1790`
+            &unique_idx=`5244`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`patternLibraryLabels`
-            &pattern_template=`patternLayoutMolecule`
-            &idx=`5`
-            &unique_idx=`1790`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutMolecule`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`includedContentBlocksRow`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`includedContentBlocksRow`
+                    &pattern_template=`patternLayoutMolecule`
+                    &pattern_status=`green`
+                    &idx=`5`
+                    &unique_idx=`5244`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutMolecule`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_5_1790`
+            &then=`+preview_5_5244`
         ]]]]
 
         [[$tabsOuter?
@@ -648,34 +698,34 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`1785`
+    &unique_idx=`5239`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`1786`
+	&unique_idx=`5240`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
 	&pattern_list=`includedChunks,includedSnippets,includedTVs`
 	&pattern_template=`patternLayoutMolecule`
-	&pattern_name=`patternLibraryLabels`
+	&pattern_name=`includedContentBlocksRow`
 	]]
 </div>
         <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`1787`
+    &unique_idx=`5241`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`1788`
+	&unique_idx=`5242`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
 	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
 	&pattern_template=`patternLayoutMolecule`
-	&pattern_name=`patternLibraryLabels`
+	&pattern_name=`includedContentBlocksRow`
 	]]
 </div>
     </div>
@@ -688,7 +738,7 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`1780`
+    &unique_idx=`5234`
 ]]
     </div>
 </div>

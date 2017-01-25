@@ -1,48 +1,54 @@
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`formblocks.container_id` &prefix=`cf_1_2545``
+            &then=`setPatternPlaceholders? &cbField=`formblocks.container_id` &prefix=`cf_1_4353``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`formblocks.container_id` &prefix=`cl_1_2545``
+            &then=`setPatternPlaceholders? &cbLayout=`formblocks.container_id` &prefix=`cl_1_4353``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_2545`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_4353`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`formblocks.container_id`
             &pattern_template=`patternLayoutElectronSystemSetting`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`1`
-            &unique_idx=`2545`
+            &unique_idx=`4353`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`formblocks.container_id`
-            &pattern_template=`patternLayoutElectronSystemSetting`
-            &idx=`1`
-            &unique_idx=`2545`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`formblocks.container_id`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`formblocks.container_id`
+                    &pattern_template=`patternLayoutElectronSystemSetting`
+                    &pattern_status=`green`
+                    &idx=`1`
+                    &unique_idx=`4353`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_1_2545`
+            &then=`+preview_1_4353`
         ]]]]
 
         [[$accordionOuter?
@@ -84,11 +90,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`2542`
+    &unique_idx=`4350`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`2543`
+	&unique_idx=`4351`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -108,56 +114,62 @@
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`2537`
+    &unique_idx=`4345`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`formblocks.save_form` &prefix=`cf_2_2554``
+            &then=`setPatternPlaceholders? &cbField=`formblocks.save_form` &prefix=`cf_2_4362``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`formblocks.save_form` &prefix=`cl_2_2554``
+            &then=`setPatternPlaceholders? &cbLayout=`formblocks.save_form` &prefix=`cl_2_4362``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_2554`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_4362`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`formblocks.save_form`
             &pattern_template=`patternLayoutElectronSystemSetting`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`2`
-            &unique_idx=`2554`
+            &unique_idx=`4362`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`formblocks.save_form`
-            &pattern_template=`patternLayoutElectronSystemSetting`
-            &idx=`2`
-            &unique_idx=`2554`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`formblocks.save_form`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`formblocks.save_form`
+                    &pattern_template=`patternLayoutElectronSystemSetting`
+                    &pattern_status=`green`
+                    &idx=`2`
+                    &unique_idx=`4362`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_2_2554`
+            &then=`+preview_2_4362`
         ]]]]
 
         [[$accordionOuter?
@@ -200,11 +212,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`2551`
+    &unique_idx=`4359`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`2552`
+	&unique_idx=`4360`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -224,7 +236,7 @@
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`2546`
+    &unique_idx=`4354`
 ]]
     </div>
 </div>
@@ -245,51 +257,57 @@
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_input_textfield_id` &prefix=`cf_4_2565``
+            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_input_textfield_id` &prefix=`cf_4_4373``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_input_textfield_id` &prefix=`cl_4_2565``
+            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_input_textfield_id` &prefix=`cl_4_4373``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_4_2565`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_4_4373`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`formblocks.cb_input_textfield_id`
             &pattern_template=`patternLayoutElectronSystemSetting`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`4`
-            &unique_idx=`2565`
+            &unique_idx=`4373`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`formblocks.cb_input_textfield_id`
-            &pattern_template=`patternLayoutElectronSystemSetting`
-            &idx=`4`
-            &unique_idx=`2565`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`formblocks.cb_input_textfield_id`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`formblocks.cb_input_textfield_id`
+                    &pattern_template=`patternLayoutElectronSystemSetting`
+                    &pattern_status=`green`
+                    &idx=`4`
+                    &unique_idx=`4373`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_4_2565`
+            &then=`+preview_4_4373`
         ]]]]
 
         [[$accordionOuter?
@@ -331,11 +349,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`2562`
+    &unique_idx=`4370`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`2563`
+	&unique_idx=`4371`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -355,56 +373,62 @@
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`2557`
+    &unique_idx=`4365`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_input_textarea_id` &prefix=`cf_5_2574``
+            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_input_textarea_id` &prefix=`cf_5_4382``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_input_textarea_id` &prefix=`cl_5_2574``
+            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_input_textarea_id` &prefix=`cl_5_4382``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_5_2574`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_5_4382`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`formblocks.cb_input_textarea_id`
             &pattern_template=`patternLayoutElectronSystemSetting`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`5`
-            &unique_idx=`2574`
+            &unique_idx=`4382`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`formblocks.cb_input_textarea_id`
-            &pattern_template=`patternLayoutElectronSystemSetting`
-            &idx=`5`
-            &unique_idx=`2574`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`formblocks.cb_input_textarea_id`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`formblocks.cb_input_textarea_id`
+                    &pattern_template=`patternLayoutElectronSystemSetting`
+                    &pattern_status=`green`
+                    &idx=`5`
+                    &unique_idx=`4382`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_5_2574`
+            &then=`+preview_5_4382`
         ]]]]
 
         [[$accordionOuter?
@@ -446,11 +470,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`2571`
+    &unique_idx=`4379`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`2572`
+	&unique_idx=`4380`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -470,56 +494,62 @@
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`2566`
+    &unique_idx=`4374`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_input_email_id` &prefix=`cf_6_2583``
+            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_input_email_id` &prefix=`cf_6_4391``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_input_email_id` &prefix=`cl_6_2583``
+            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_input_email_id` &prefix=`cl_6_4391``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_6_2583`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_6_4391`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`formblocks.cb_input_email_id`
             &pattern_template=`patternLayoutElectronSystemSetting`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`6`
-            &unique_idx=`2583`
+            &unique_idx=`4391`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`formblocks.cb_input_email_id`
-            &pattern_template=`patternLayoutElectronSystemSetting`
-            &idx=`6`
-            &unique_idx=`2583`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`formblocks.cb_input_email_id`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`formblocks.cb_input_email_id`
+                    &pattern_template=`patternLayoutElectronSystemSetting`
+                    &pattern_status=`green`
+                    &idx=`6`
+                    &unique_idx=`4391`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_6_2583`
+            &then=`+preview_6_4391`
         ]]]]
 
         [[$accordionOuter?
@@ -561,11 +591,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`2580`
+    &unique_idx=`4388`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`2581`
+	&unique_idx=`4389`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -585,56 +615,62 @@
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`2575`
+    &unique_idx=`4383`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_select_option_id` &prefix=`cf_7_2592``
+            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_select_option_id` &prefix=`cf_7_4400``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_select_option_id` &prefix=`cl_7_2592``
+            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_select_option_id` &prefix=`cl_7_4400``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_7_2592`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_7_4400`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`formblocks.cb_select_option_id`
             &pattern_template=`patternLayoutElectronSystemSetting`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`7`
-            &unique_idx=`2592`
+            &unique_idx=`4400`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`formblocks.cb_select_option_id`
-            &pattern_template=`patternLayoutElectronSystemSetting`
-            &idx=`7`
-            &unique_idx=`2592`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`formblocks.cb_select_option_id`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`formblocks.cb_select_option_id`
+                    &pattern_template=`patternLayoutElectronSystemSetting`
+                    &pattern_status=`green`
+                    &idx=`7`
+                    &unique_idx=`4400`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_7_2592`
+            &then=`+preview_7_4400`
         ]]]]
 
         [[$accordionOuter?
@@ -676,11 +712,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`2589`
+    &unique_idx=`4397`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`2590`
+	&unique_idx=`4398`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -700,56 +736,62 @@
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`2584`
+    &unique_idx=`4392`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_select_option_collapse_id` &prefix=`cf_8_2601``
+            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_select_option_collapse_id` &prefix=`cf_8_4409``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_select_option_collapse_id` &prefix=`cl_8_2601``
+            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_select_option_collapse_id` &prefix=`cl_8_4409``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_8_2601`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_8_4409`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`formblocks.cb_select_option_collapse_id`
             &pattern_template=`patternLayoutElectronSystemSetting`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`8`
-            &unique_idx=`2601`
+            &unique_idx=`4409`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`formblocks.cb_select_option_collapse_id`
-            &pattern_template=`patternLayoutElectronSystemSetting`
-            &idx=`8`
-            &unique_idx=`2601`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`formblocks.cb_select_option_collapse_id`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`formblocks.cb_select_option_collapse_id`
+                    &pattern_template=`patternLayoutElectronSystemSetting`
+                    &pattern_status=`green`
+                    &idx=`8`
+                    &unique_idx=`4409`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_8_2601`
+            &then=`+preview_8_4409`
         ]]]]
 
         [[$accordionOuter?
@@ -791,11 +833,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`2598`
+    &unique_idx=`4406`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`2599`
+	&unique_idx=`4407`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -815,56 +857,62 @@
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`2593`
+    &unique_idx=`4401`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_select_dropdown_id` &prefix=`cf_9_2610``
+            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_select_dropdown_id` &prefix=`cf_9_4418``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_select_dropdown_id` &prefix=`cl_9_2610``
+            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_select_dropdown_id` &prefix=`cl_9_4418``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_9_2610`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_9_4418`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`formblocks.cb_select_dropdown_id`
             &pattern_template=`patternLayoutElectronSystemSetting`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`9`
-            &unique_idx=`2610`
+            &unique_idx=`4418`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`formblocks.cb_select_dropdown_id`
-            &pattern_template=`patternLayoutElectronSystemSetting`
-            &idx=`9`
-            &unique_idx=`2610`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`formblocks.cb_select_dropdown_id`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`formblocks.cb_select_dropdown_id`
+                    &pattern_template=`patternLayoutElectronSystemSetting`
+                    &pattern_status=`green`
+                    &idx=`9`
+                    &unique_idx=`4418`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_9_2610`
+            &then=`+preview_9_4418`
         ]]]]
 
         [[$accordionOuter?
@@ -906,11 +954,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`2607`
+    &unique_idx=`4415`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`2608`
+	&unique_idx=`4416`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -930,56 +978,62 @@
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`2602`
+    &unique_idx=`4410`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_select_dropdown_auto_id` &prefix=`cf_10_2619``
+            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_select_dropdown_auto_id` &prefix=`cf_10_4427``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_select_dropdown_auto_id` &prefix=`cl_10_2619``
+            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_select_dropdown_auto_id` &prefix=`cl_10_4427``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_10_2619`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_10_4427`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`formblocks.cb_select_dropdown_auto_id`
             &pattern_template=`patternLayoutElectronSystemSetting`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`10`
-            &unique_idx=`2619`
+            &unique_idx=`4427`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`formblocks.cb_select_dropdown_auto_id`
-            &pattern_template=`patternLayoutElectronSystemSetting`
-            &idx=`10`
-            &unique_idx=`2619`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`formblocks.cb_select_dropdown_auto_id`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`formblocks.cb_select_dropdown_auto_id`
+                    &pattern_template=`patternLayoutElectronSystemSetting`
+                    &pattern_status=`green`
+                    &idx=`10`
+                    &unique_idx=`4427`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_10_2619`
+            &then=`+preview_10_4427`
         ]]]]
 
         [[$accordionOuter?
@@ -1021,11 +1075,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`2616`
+    &unique_idx=`4424`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`2617`
+	&unique_idx=`4425`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -1045,56 +1099,62 @@
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`2611`
+    &unique_idx=`4419`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_accept_terms_id` &prefix=`cf_11_2628``
+            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_accept_terms_id` &prefix=`cf_11_4436``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_accept_terms_id` &prefix=`cl_11_2628``
+            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_accept_terms_id` &prefix=`cl_11_4436``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_11_2628`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_11_4436`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`formblocks.cb_accept_terms_id`
             &pattern_template=`patternLayoutElectronSystemSetting`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`11`
-            &unique_idx=`2628`
+            &unique_idx=`4436`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`formblocks.cb_accept_terms_id`
-            &pattern_template=`patternLayoutElectronSystemSetting`
-            &idx=`11`
-            &unique_idx=`2628`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`formblocks.cb_accept_terms_id`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`formblocks.cb_accept_terms_id`
+                    &pattern_template=`patternLayoutElectronSystemSetting`
+                    &pattern_status=`green`
+                    &idx=`11`
+                    &unique_idx=`4436`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_11_2628`
+            &then=`+preview_11_4436`
         ]]]]
 
         [[$accordionOuter?
@@ -1136,11 +1196,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`2625`
+    &unique_idx=`4433`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`2626`
+	&unique_idx=`4434`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -1160,7 +1220,7 @@
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`2620`
+    &unique_idx=`4428`
 ]]
     </div>
 </div>

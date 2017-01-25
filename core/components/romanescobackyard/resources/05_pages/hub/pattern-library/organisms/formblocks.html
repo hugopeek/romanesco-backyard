@@ -1,20 +1,30 @@
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutOrganism`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fbLayoutFieldset` &prefix=`cf_1_2325``
+            &then=`setPatternPlaceholders? &cbField=`fbLayoutFieldset` &prefix=`cf_1_4646``
         ]]]]
         [[[[If?
             &subject=`patternLayoutOrganism`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fbLayoutFieldset` &prefix=`cl_1_2325``
+            &then=`setPatternPlaceholders? &cbLayout=`fbLayoutFieldset` &prefix=`cl_1_4646``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_2325`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_4646`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`[[$fbLayoutFieldset?
+    &legend=`Heading`
+    &main=`<p>Your form fields will be loaded here.</p>`
+]]`
+    &valueRaw=`[[$fbLayoutFieldset:tag?
+    &legend=`Heading`
+    &main=`<p>Your form fields will be loaded here.</p>`
+]]`
+    &renderTag=`render`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -27,30 +37,36 @@
             &sidebar_width=`five`
             &pattern_name=`fbLayoutFieldset`
             &pattern_template=`patternLayoutOrganism`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`1`
-            &unique_idx=`2325`
+            &unique_idx=`4646`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`fbLayoutFieldset`
-            &pattern_template=`patternLayoutOrganism`
-            &idx=`1`
-            &unique_idx=`2325`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutOrganism`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`fbLayoutFieldset`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`fbLayoutFieldset`
+                    &pattern_template=`patternLayoutOrganism`
+                    &pattern_status=`green`
+                    &idx=`1`
+                    &unique_idx=`4646`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutOrganism`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_1_2325`
+            &then=`+preview_1_4646`
         ]]]]
 
         [[$tabsOuter?
@@ -58,7 +74,165 @@
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &content=`<div class="ui nested one column stackable doubling relaxed  grid">
     <div class="column">[[$richTextSegment?
-    &content=``
+    &content=`<p>[[getElementDescription? &name=`fbLayoutFieldset` &type=`patternLayoutOrganism`]]
+</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column"></div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`4640`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`4641`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`includedChunks,includedSnippets,includedTVs`
+	&pattern_template=`patternLayoutOrganism`
+	&pattern_name=`fbLayoutFieldset`
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`4642`
+]]
+
+[[$richTextMessage?
+    &heading=`Be advised`
+    &content=`<p>This chunk is not used in the actual ContentBlocks layout because of caching issues when forwarding the placeholders from there. So for now, it is only included in the library for reference.</p>`
+    &message_type=`warning`
+	&size=`small`
+	&close=`0`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`4644`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
+	&pattern_template=`patternLayoutOrganism`
+	&pattern_name=`fbLayoutFieldset`
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=``
+    &tab_type=`regular`
+    &unique_idx=`4636`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe pattern segment white">
+    <div class="ui   container">
+        [[[[If?
+            &subject=`patternLayoutOrganism`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonField`
+            &then=`setPatternPlaceholders? &cbField=`fbContentBlock` &prefix=`cf_2_4659``
+        ]]]]
+        [[[[If?
+            &subject=`patternLayoutOrganism`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonLayout`
+            &then=`setPatternPlaceholders? &cbLayout=`fbContentBlock` &prefix=`cl_2_4659``
+        ]]]]
+
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_4659`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`[[$fbContentBlock?
+    &property=`value`
+]]`
+    &valueRaw=`[[$fbContentBlock:tag?
+    &property=`value`
+]]`
+    &renderTag=`render`
+]]`
+            &code=`[[$codeSnippet?
+    &value=`[[Rowboat?
+    &table=`modx_site_htmlsnippets`
+    &tpl=`displayRawElement`
+    &where=`{"name":"fbContentBlock"}`
+]]`
+    &lang=`html`
+    &label=`[[%romanesco.patterns.code_label]]`
+]]`
+            &sidebar_width=`five`
+            &pattern_name=`fbContentBlock`
+            &pattern_template=`patternLayoutOrganism`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
+            &idx=`2`
+            &unique_idx=`4659`
+        ]]
+        
+        [[[[modifiedIf?
+            &subject=`patternLayoutOrganism`
+            &operator=`contains`
+            &operand=`Electron`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`fbContentBlock`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`fbContentBlock`
+                    &pattern_template=`patternLayoutOrganism`
+                    &pattern_status=`green`
+                    &idx=`2`
+                    &unique_idx=`4659`
+                `
+        ]]]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutOrganism`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`+preview_2_4659`
+        ]]]]
+
+        [[$tabsOuter?
+    &rows=`[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[getElementDescription? &name=`fbContentBlock` &type=`patternLayoutOrganism`]]
+</p>`
     &segment_type=``
 	&padding=`regular`
     &alignment=``
@@ -92,34 +266,34 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`2320`
+    &unique_idx=`4654`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`2321`
+	&unique_idx=`4655`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
 	&pattern_list=`includedChunks,includedSnippets,includedTVs`
 	&pattern_template=`patternLayoutOrganism`
-	&pattern_name=`fbLayoutFieldset`
+	&pattern_name=`fbContentBlock`
 	]]
 </div>
         <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`2322`
+    &unique_idx=`4656`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`2323`
+	&unique_idx=`4657`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
 	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
 	&pattern_template=`patternLayoutOrganism`
-	&pattern_name=`fbLayoutFieldset`
+	&pattern_name=`fbContentBlock`
 	]]
 </div>
     </div>
@@ -132,7 +306,161 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`2315`
+    &unique_idx=`4649`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe pattern segment white">
+    <div class="ui   container">
+        [[[[If?
+            &subject=`patternLayoutOrganism`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonField`
+            &then=`setPatternPlaceholders? &cbField=`fbEmail` &prefix=`cf_3_4672``
+        ]]]]
+        [[[[If?
+            &subject=`patternLayoutOrganism`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonLayout`
+            &then=`setPatternPlaceholders? &cbLayout=`fbEmail` &prefix=`cl_3_4672``
+        ]]]]
+
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_4672`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`[[$fbEmail?
+    &property=`value`
+]]`
+    &valueRaw=`[[$fbEmail:tag?
+    &property=`value`
+]]`
+    &renderTag=`render`
+]]`
+            &code=`[[$codeSnippet?
+    &value=`[[Rowboat?
+    &table=`modx_site_htmlsnippets`
+    &tpl=`displayRawElement`
+    &where=`{"name":"fbEmail"}`
+]]`
+    &lang=`html`
+    &label=`[[%romanesco.patterns.code_label]]`
+]]`
+            &sidebar_width=`five`
+            &pattern_name=`fbEmail`
+            &pattern_template=`patternLayoutOrganism`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
+            &idx=`3`
+            &unique_idx=`4672`
+        ]]
+        
+        [[[[modifiedIf?
+            &subject=`patternLayoutOrganism`
+            &operator=`contains`
+            &operand=`Electron`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`fbEmail`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`fbEmail`
+                    &pattern_template=`patternLayoutOrganism`
+                    &pattern_status=`green`
+                    &idx=`3`
+                    &unique_idx=`4672`
+                `
+        ]]]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutOrganism`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`+preview_3_4672`
+        ]]]]
+
+        [[$tabsOuter?
+    &rows=`[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[getElementDescription? &name=`fbEmail` &type=`patternLayoutOrganism`]]
+</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`4667`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`4668`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`includedChunks,includedSnippets,includedTVs`
+	&pattern_template=`patternLayoutOrganism`
+	&pattern_name=`fbEmail`
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`4669`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`4670`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
+	&pattern_template=`patternLayoutOrganism`
+	&pattern_name=`fbEmail`
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=``
+    &tab_type=`regular`
+    &unique_idx=`4662`
 ]]
     </div>
 </div>

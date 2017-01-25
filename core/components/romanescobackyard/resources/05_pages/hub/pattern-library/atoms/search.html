@@ -1,20 +1,24 @@
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`searchButton` &prefix=`cf_1_1331``
+            &then=`setPatternPlaceholders? &cbField=`searchButton` &prefix=`cf_1_1989``
         ]]]]
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`searchButton` &prefix=`cl_1_1331``
+            &then=`setPatternPlaceholders? &cbLayout=`searchButton` &prefix=`cl_1_1989``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_1331`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_1989`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -27,30 +31,36 @@
             &sidebar_width=`five`
             &pattern_name=`searchButton`
             &pattern_template=`patternLayoutAtom`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`1`
-            &unique_idx=`1331`
+            &unique_idx=`1989`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`searchButton`
-            &pattern_template=`patternLayoutAtom`
-            &idx=`1`
-            &unique_idx=`1331`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`searchButton`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`searchButton`
+                    &pattern_template=`patternLayoutAtom`
+                    &pattern_status=`green`
+                    &idx=`1`
+                    &unique_idx=`1989`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_1_1331`
+            &then=`+preview_1_1989`
         ]]]]
 
         [[$tabsOuter?
@@ -92,11 +102,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`1326`
+    &unique_idx=`1984`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`1327`
+	&unique_idx=`1985`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -109,11 +119,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`1328`
+    &unique_idx=`1986`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`1329`
+	&unique_idx=`1987`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -132,28 +142,32 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`1321`
+    &unique_idx=`1979`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`searchButtonPaging` &prefix=`cf_2_1344``
+            &then=`setPatternPlaceholders? &cbField=`searchButtonPaging` &prefix=`cf_2_2002``
         ]]]]
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`searchButtonPaging` &prefix=`cl_2_1344``
+            &then=`setPatternPlaceholders? &cbLayout=`searchButtonPaging` &prefix=`cl_2_2002``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_1344`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_2002`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -166,30 +180,36 @@
             &sidebar_width=`five`
             &pattern_name=`searchButtonPaging`
             &pattern_template=`patternLayoutAtom`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`2`
-            &unique_idx=`1344`
+            &unique_idx=`2002`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`searchButtonPaging`
-            &pattern_template=`patternLayoutAtom`
-            &idx=`2`
-            &unique_idx=`1344`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`searchButtonPaging`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`searchButtonPaging`
+                    &pattern_template=`patternLayoutAtom`
+                    &pattern_status=`green`
+                    &idx=`2`
+                    &unique_idx=`2002`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_2_1344`
+            &then=`+preview_2_2002`
         ]]]]
 
         [[$tabsOuter?
@@ -231,11 +251,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`1339`
+    &unique_idx=`1997`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`1340`
+	&unique_idx=`1998`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -248,11 +268,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`1341`
+    &unique_idx=`1999`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`1342`
+	&unique_idx=`2000`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -271,28 +291,32 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`1334`
+    &unique_idx=`1992`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`searchButtonPagingActive` &prefix=`cf_3_1357``
+            &then=`setPatternPlaceholders? &cbField=`searchButtonPagingActive` &prefix=`cf_3_2015``
         ]]]]
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`searchButtonPagingActive` &prefix=`cl_3_1357``
+            &then=`setPatternPlaceholders? &cbLayout=`searchButtonPagingActive` &prefix=`cl_3_2015``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_1357`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_2015`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -305,30 +329,36 @@
             &sidebar_width=`five`
             &pattern_name=`searchButtonPagingActive`
             &pattern_template=`patternLayoutAtom`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`3`
-            &unique_idx=`1357`
+            &unique_idx=`2015`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`searchButtonPagingActive`
-            &pattern_template=`patternLayoutAtom`
-            &idx=`3`
-            &unique_idx=`1357`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`searchButtonPagingActive`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`searchButtonPagingActive`
+                    &pattern_template=`patternLayoutAtom`
+                    &pattern_status=`green`
+                    &idx=`3`
+                    &unique_idx=`2015`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_3_1357`
+            &then=`+preview_3_2015`
         ]]]]
 
         [[$tabsOuter?
@@ -370,11 +400,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`1352`
+    &unique_idx=`2010`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`1353`
+	&unique_idx=`2011`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -387,11 +417,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`1354`
+    &unique_idx=`2012`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`1355`
+	&unique_idx=`2013`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -410,28 +440,32 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`1347`
+    &unique_idx=`2005`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`searchResultTag` &prefix=`cf_4_1370``
+            &then=`setPatternPlaceholders? &cbField=`searchResultTag` &prefix=`cf_4_2028``
         ]]]]
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`searchResultTag` &prefix=`cl_4_1370``
+            &then=`setPatternPlaceholders? &cbLayout=`searchResultTag` &prefix=`cl_4_2028``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_4_1370`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_4_2028`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -444,30 +478,36 @@
             &sidebar_width=`five`
             &pattern_name=`searchResultTag`
             &pattern_template=`patternLayoutAtom`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`4`
-            &unique_idx=`1370`
+            &unique_idx=`2028`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`searchResultTag`
-            &pattern_template=`patternLayoutAtom`
-            &idx=`4`
-            &unique_idx=`1370`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`searchResultTag`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`searchResultTag`
+                    &pattern_template=`patternLayoutAtom`
+                    &pattern_status=`green`
+                    &idx=`4`
+                    &unique_idx=`2028`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_4_1370`
+            &then=`+preview_4_2028`
         ]]]]
 
         [[$tabsOuter?
@@ -509,11 +549,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`1365`
+    &unique_idx=`2023`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`1366`
+	&unique_idx=`2024`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -526,11 +566,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`1367`
+    &unique_idx=`2025`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`1368`
+	&unique_idx=`2026`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -549,7 +589,7 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`1360`
+    &unique_idx=`2018`
 ]]
     </div>
 </div>

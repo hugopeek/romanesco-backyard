@@ -1,20 +1,24 @@
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fbRenderFormWrapper` &prefix=`cf_1_848``
+            &then=`setPatternPlaceholders? &cbField=`fbRenderFormWrapper` &prefix=`cf_1_2225``
         ]]]]
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fbRenderFormWrapper` &prefix=`cl_1_848``
+            &then=`setPatternPlaceholders? &cbLayout=`fbRenderFormWrapper` &prefix=`cl_1_2225``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_848`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_2225`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -27,30 +31,36 @@
             &sidebar_width=`five`
             &pattern_name=`fbRenderFormWrapper`
             &pattern_template=`patternLayoutAtom`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`1`
-            &unique_idx=`848`
+            &unique_idx=`2225`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`fbRenderFormWrapper`
-            &pattern_template=`patternLayoutAtom`
-            &idx=`1`
-            &unique_idx=`848`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`fbRenderFormWrapper`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`fbRenderFormWrapper`
+                    &pattern_template=`patternLayoutAtom`
+                    &pattern_status=`green`
+                    &idx=`1`
+                    &unique_idx=`2225`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_1_848`
+            &then=`+preview_1_2225`
         ]]]]
 
         [[$tabsOuter?
@@ -92,11 +102,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`843`
+    &unique_idx=`2220`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`844`
+	&unique_idx=`2221`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -109,11 +119,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`845`
+    &unique_idx=`2222`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`846`
+	&unique_idx=`2223`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -132,28 +142,32 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`838`
+    &unique_idx=`2215`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fbAutoresponder` &prefix=`cf_2_861``
+            &then=`setPatternPlaceholders? &cbField=`fbAutoresponder` &prefix=`cf_2_2238``
         ]]]]
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fbAutoresponder` &prefix=`cl_2_861``
+            &then=`setPatternPlaceholders? &cbLayout=`fbAutoresponder` &prefix=`cl_2_2238``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_861`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_2238`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -166,30 +180,36 @@
             &sidebar_width=`five`
             &pattern_name=`fbAutoresponder`
             &pattern_template=`patternLayoutAtom`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`2`
-            &unique_idx=`861`
+            &unique_idx=`2238`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`fbAutoresponder`
-            &pattern_template=`patternLayoutAtom`
-            &idx=`2`
-            &unique_idx=`861`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`fbAutoresponder`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`fbAutoresponder`
+                    &pattern_template=`patternLayoutAtom`
+                    &pattern_status=`green`
+                    &idx=`2`
+                    &unique_idx=`2238`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_2_861`
+            &then=`+preview_2_2238`
         ]]]]
 
         [[$tabsOuter?
@@ -231,11 +251,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`856`
+    &unique_idx=`2233`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`857`
+	&unique_idx=`2234`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -248,11 +268,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`858`
+    &unique_idx=`2235`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`859`
+	&unique_idx=`2236`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -271,28 +291,32 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`851`
+    &unique_idx=`2228`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fbSelectDropdownRow` &prefix=`cf_3_874``
+            &then=`setPatternPlaceholders? &cbField=`fbSelectDropdownRow` &prefix=`cf_3_2251``
         ]]]]
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fbSelectDropdownRow` &prefix=`cl_3_874``
+            &then=`setPatternPlaceholders? &cbLayout=`fbSelectDropdownRow` &prefix=`cl_3_2251``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_874`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_2251`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -305,30 +329,36 @@
             &sidebar_width=`five`
             &pattern_name=`fbSelectDropdownRow`
             &pattern_template=`patternLayoutAtom`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`3`
-            &unique_idx=`874`
+            &unique_idx=`2251`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`fbSelectDropdownRow`
-            &pattern_template=`patternLayoutAtom`
-            &idx=`3`
-            &unique_idx=`874`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`fbSelectDropdownRow`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`fbSelectDropdownRow`
+                    &pattern_template=`patternLayoutAtom`
+                    &pattern_status=`green`
+                    &idx=`3`
+                    &unique_idx=`2251`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_3_874`
+            &then=`+preview_3_2251`
         ]]]]
 
         [[$tabsOuter?
@@ -370,11 +400,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`869`
+    &unique_idx=`2246`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`870`
+	&unique_idx=`2247`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -387,11 +417,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`871`
+    &unique_idx=`2248`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`872`
+	&unique_idx=`2249`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -410,28 +440,32 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`864`
+    &unique_idx=`2241`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fbSelectOptionRow` &prefix=`cf_4_887``
+            &then=`setPatternPlaceholders? &cbField=`fbSelectOptionRow` &prefix=`cf_4_2264``
         ]]]]
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fbSelectOptionRow` &prefix=`cl_4_887``
+            &then=`setPatternPlaceholders? &cbLayout=`fbSelectOptionRow` &prefix=`cl_4_2264``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_4_887`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_4_2264`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -444,30 +478,36 @@
             &sidebar_width=`five`
             &pattern_name=`fbSelectOptionRow`
             &pattern_template=`patternLayoutAtom`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`4`
-            &unique_idx=`887`
+            &unique_idx=`2264`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`fbSelectOptionRow`
-            &pattern_template=`patternLayoutAtom`
-            &idx=`4`
-            &unique_idx=`887`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`fbSelectOptionRow`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`fbSelectOptionRow`
+                    &pattern_template=`patternLayoutAtom`
+                    &pattern_status=`green`
+                    &idx=`4`
+                    &unique_idx=`2264`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_4_887`
+            &then=`+preview_4_2264`
         ]]]]
 
         [[$tabsOuter?
@@ -509,11 +549,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`882`
+    &unique_idx=`2259`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`883`
+	&unique_idx=`2260`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -526,11 +566,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`884`
+    &unique_idx=`2261`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`885`
+	&unique_idx=`2262`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -549,28 +589,32 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`877`
+    &unique_idx=`2254`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fbStripWordsLabel` &prefix=`cf_5_900``
+            &then=`setPatternPlaceholders? &cbField=`fbStripWordsLabel` &prefix=`cf_5_2277``
         ]]]]
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fbStripWordsLabel` &prefix=`cl_5_900``
+            &then=`setPatternPlaceholders? &cbLayout=`fbStripWordsLabel` &prefix=`cl_5_2277``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_5_900`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_5_2277`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -583,30 +627,36 @@
             &sidebar_width=`five`
             &pattern_name=`fbStripWordsLabel`
             &pattern_template=`patternLayoutAtom`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`5`
-            &unique_idx=`900`
+            &unique_idx=`2277`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`fbStripWordsLabel`
-            &pattern_template=`patternLayoutAtom`
-            &idx=`5`
-            &unique_idx=`900`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`fbStripWordsLabel`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`fbStripWordsLabel`
+                    &pattern_template=`patternLayoutAtom`
+                    &pattern_status=`green`
+                    &idx=`5`
+                    &unique_idx=`2277`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_5_900`
+            &then=`+preview_5_2277`
         ]]]]
 
         [[$tabsOuter?
@@ -648,11 +698,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`895`
+    &unique_idx=`2272`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`896`
+	&unique_idx=`2273`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -665,11 +715,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`897`
+    &unique_idx=`2274`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`898`
+	&unique_idx=`2275`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -688,7 +738,7 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`890`
+    &unique_idx=`2267`
 ]]
     </div>
 </div>

@@ -1,20 +1,24 @@
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`cbSettingButtonSize` &prefix=`cf_1_3365``
+            &then=`setPatternPlaceholders? &cbField=`cbSettingButtonSize` &prefix=`cf_1_3046``
         ]]]]
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`cbSettingButtonSize` &prefix=`cl_1_3365``
+            &then=`setPatternPlaceholders? &cbLayout=`cbSettingButtonSize` &prefix=`cl_1_3046``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_3365`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_3046`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -27,30 +31,36 @@
             &sidebar_width=`five`
             &pattern_name=`cbSettingButtonSize`
             &pattern_template=`patternLayoutAtom`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`1`
-            &unique_idx=`3365`
+            &unique_idx=`3046`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`cbSettingButtonSize`
-            &pattern_template=`patternLayoutAtom`
-            &idx=`1`
-            &unique_idx=`3365`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`cbSettingButtonSize`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`cbSettingButtonSize`
+                    &pattern_template=`patternLayoutAtom`
+                    &pattern_status=`green`
+                    &idx=`1`
+                    &unique_idx=`3046`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_1_3365`
+            &then=`+preview_1_3046`
         ]]]]
 
         [[$tabsOuter?
@@ -92,11 +102,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3360`
+    &unique_idx=`3041`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`3361`
+	&unique_idx=`3042`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -109,11 +119,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3362`
+    &unique_idx=`3043`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3363`
+	&unique_idx=`3044`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -132,28 +142,32 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`3355`
+    &unique_idx=`3036`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`cbSettingButtonType` &prefix=`cf_2_3378``
+            &then=`setPatternPlaceholders? &cbField=`cbSettingButtonType` &prefix=`cf_2_3059``
         ]]]]
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`cbSettingButtonType` &prefix=`cl_2_3378``
+            &then=`setPatternPlaceholders? &cbLayout=`cbSettingButtonType` &prefix=`cl_2_3059``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_3378`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_3059`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -166,30 +180,36 @@
             &sidebar_width=`five`
             &pattern_name=`cbSettingButtonType`
             &pattern_template=`patternLayoutAtom`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`2`
-            &unique_idx=`3378`
+            &unique_idx=`3059`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`cbSettingButtonType`
-            &pattern_template=`patternLayoutAtom`
-            &idx=`2`
-            &unique_idx=`3378`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`cbSettingButtonType`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`cbSettingButtonType`
+                    &pattern_template=`patternLayoutAtom`
+                    &pattern_status=`green`
+                    &idx=`2`
+                    &unique_idx=`3059`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_2_3378`
+            &then=`+preview_2_3059`
         ]]]]
 
         [[$tabsOuter?
@@ -231,11 +251,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3373`
+    &unique_idx=`3054`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`3374`
+	&unique_idx=`3055`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -248,11 +268,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3375`
+    &unique_idx=`3056`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3376`
+	&unique_idx=`3057`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -271,28 +291,32 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`3368`
+    &unique_idx=`3049`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`cbSettingColumns` &prefix=`cf_3_3391``
+            &then=`setPatternPlaceholders? &cbField=`cbSettingColumns` &prefix=`cf_3_3072``
         ]]]]
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`cbSettingColumns` &prefix=`cl_3_3391``
+            &then=`setPatternPlaceholders? &cbLayout=`cbSettingColumns` &prefix=`cl_3_3072``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_3391`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_3072`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -305,30 +329,36 @@
             &sidebar_width=`five`
             &pattern_name=`cbSettingColumns`
             &pattern_template=`patternLayoutAtom`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`3`
-            &unique_idx=`3391`
+            &unique_idx=`3072`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`cbSettingColumns`
-            &pattern_template=`patternLayoutAtom`
-            &idx=`3`
-            &unique_idx=`3391`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`cbSettingColumns`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`cbSettingColumns`
+                    &pattern_template=`patternLayoutAtom`
+                    &pattern_status=`green`
+                    &idx=`3`
+                    &unique_idx=`3072`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_3_3391`
+            &then=`+preview_3_3072`
         ]]]]
 
         [[$tabsOuter?
@@ -370,11 +400,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3386`
+    &unique_idx=`3067`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`3387`
+	&unique_idx=`3068`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -387,11 +417,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3388`
+    &unique_idx=`3069`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3389`
+	&unique_idx=`3070`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -410,28 +440,32 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`3381`
+    &unique_idx=`3062`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`cbSettingColumnsExtra` &prefix=`cf_4_3404``
+            &then=`setPatternPlaceholders? &cbField=`cbSettingColumnsExtra` &prefix=`cf_4_3085``
         ]]]]
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`cbSettingColumnsExtra` &prefix=`cl_4_3404``
+            &then=`setPatternPlaceholders? &cbLayout=`cbSettingColumnsExtra` &prefix=`cl_4_3085``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_4_3404`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_4_3085`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -444,30 +478,36 @@
             &sidebar_width=`five`
             &pattern_name=`cbSettingColumnsExtra`
             &pattern_template=`patternLayoutAtom`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`4`
-            &unique_idx=`3404`
+            &unique_idx=`3085`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`cbSettingColumnsExtra`
-            &pattern_template=`patternLayoutAtom`
-            &idx=`4`
-            &unique_idx=`3404`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`cbSettingColumnsExtra`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`cbSettingColumnsExtra`
+                    &pattern_template=`patternLayoutAtom`
+                    &pattern_status=`green`
+                    &idx=`4`
+                    &unique_idx=`3085`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_4_3404`
+            &then=`+preview_4_3085`
         ]]]]
 
         [[$tabsOuter?
@@ -509,11 +549,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3399`
+    &unique_idx=`3080`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`3400`
+	&unique_idx=`3081`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -526,11 +566,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3401`
+    &unique_idx=`3082`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3402`
+	&unique_idx=`3083`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -549,28 +589,32 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`3394`
+    &unique_idx=`3075`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`cbSettingIconClass` &prefix=`cf_5_3417``
+            &then=`setPatternPlaceholders? &cbField=`cbSettingIconClass` &prefix=`cf_5_3098``
         ]]]]
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`cbSettingIconClass` &prefix=`cl_5_3417``
+            &then=`setPatternPlaceholders? &cbLayout=`cbSettingIconClass` &prefix=`cl_5_3098``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_5_3417`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_5_3098`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -583,30 +627,36 @@
             &sidebar_width=`five`
             &pattern_name=`cbSettingIconClass`
             &pattern_template=`patternLayoutAtom`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`5`
-            &unique_idx=`3417`
+            &unique_idx=`3098`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`cbSettingIconClass`
-            &pattern_template=`patternLayoutAtom`
-            &idx=`5`
-            &unique_idx=`3417`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`cbSettingIconClass`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`cbSettingIconClass`
+                    &pattern_template=`patternLayoutAtom`
+                    &pattern_status=`green`
+                    &idx=`5`
+                    &unique_idx=`3098`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_5_3417`
+            &then=`+preview_5_3098`
         ]]]]
 
         [[$tabsOuter?
@@ -648,11 +698,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3412`
+    &unique_idx=`3093`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`3413`
+	&unique_idx=`3094`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -665,11 +715,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3414`
+    &unique_idx=`3095`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3415`
+	&unique_idx=`3096`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -688,28 +738,32 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`3407`
+    &unique_idx=`3088`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`cbSettingIconType` &prefix=`cf_6_3430``
+            &then=`setPatternPlaceholders? &cbField=`cbSettingIconType` &prefix=`cf_6_3111``
         ]]]]
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`cbSettingIconType` &prefix=`cl_6_3430``
+            &then=`setPatternPlaceholders? &cbLayout=`cbSettingIconType` &prefix=`cl_6_3111``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_6_3430`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_6_3111`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -722,30 +776,36 @@
             &sidebar_width=`five`
             &pattern_name=`cbSettingIconType`
             &pattern_template=`patternLayoutAtom`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`6`
-            &unique_idx=`3430`
+            &unique_idx=`3111`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`cbSettingIconType`
-            &pattern_template=`patternLayoutAtom`
-            &idx=`6`
-            &unique_idx=`3430`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`cbSettingIconType`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`cbSettingIconType`
+                    &pattern_template=`patternLayoutAtom`
+                    &pattern_status=`green`
+                    &idx=`6`
+                    &unique_idx=`3111`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_6_3430`
+            &then=`+preview_6_3111`
         ]]]]
 
         [[$tabsOuter?
@@ -787,11 +847,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3425`
+    &unique_idx=`3106`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`3426`
+	&unique_idx=`3107`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -804,11 +864,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3427`
+    &unique_idx=`3108`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3428`
+	&unique_idx=`3109`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -827,28 +887,32 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`3420`
+    &unique_idx=`3101`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`cbSettingImageType` &prefix=`cf_7_3443``
+            &then=`setPatternPlaceholders? &cbField=`cbSettingImageType` &prefix=`cf_7_3124``
         ]]]]
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`cbSettingImageType` &prefix=`cl_7_3443``
+            &then=`setPatternPlaceholders? &cbLayout=`cbSettingImageType` &prefix=`cl_7_3124``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_7_3443`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_7_3124`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -861,30 +925,36 @@
             &sidebar_width=`five`
             &pattern_name=`cbSettingImageType`
             &pattern_template=`patternLayoutAtom`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`7`
-            &unique_idx=`3443`
+            &unique_idx=`3124`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`cbSettingImageType`
-            &pattern_template=`patternLayoutAtom`
-            &idx=`7`
-            &unique_idx=`3443`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`cbSettingImageType`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`cbSettingImageType`
+                    &pattern_template=`patternLayoutAtom`
+                    &pattern_status=`green`
+                    &idx=`7`
+                    &unique_idx=`3124`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_7_3443`
+            &then=`+preview_7_3124`
         ]]]]
 
         [[$tabsOuter?
@@ -926,11 +996,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3438`
+    &unique_idx=`3119`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`3439`
+	&unique_idx=`3120`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -943,11 +1013,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3440`
+    &unique_idx=`3121`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3441`
+	&unique_idx=`3122`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -966,28 +1036,32 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`3433`
+    &unique_idx=`3114`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`cbSettingPadding` &prefix=`cf_8_3456``
+            &then=`setPatternPlaceholders? &cbField=`cbSettingPadding` &prefix=`cf_8_3137``
         ]]]]
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`cbSettingPadding` &prefix=`cl_8_3456``
+            &then=`setPatternPlaceholders? &cbLayout=`cbSettingPadding` &prefix=`cl_8_3137``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_8_3456`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_8_3137`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -1000,30 +1074,36 @@
             &sidebar_width=`five`
             &pattern_name=`cbSettingPadding`
             &pattern_template=`patternLayoutAtom`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`8`
-            &unique_idx=`3456`
+            &unique_idx=`3137`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`cbSettingPadding`
-            &pattern_template=`patternLayoutAtom`
-            &idx=`8`
-            &unique_idx=`3456`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`cbSettingPadding`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`cbSettingPadding`
+                    &pattern_template=`patternLayoutAtom`
+                    &pattern_status=`green`
+                    &idx=`8`
+                    &unique_idx=`3137`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_8_3456`
+            &then=`+preview_8_3137`
         ]]]]
 
         [[$tabsOuter?
@@ -1065,11 +1145,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3451`
+    &unique_idx=`3132`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`3452`
+	&unique_idx=`3133`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -1082,11 +1162,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3453`
+    &unique_idx=`3134`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3454`
+	&unique_idx=`3135`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -1105,28 +1185,32 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`3446`
+    &unique_idx=`3127`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`cbSettingSortBy` &prefix=`cf_9_3469``
+            &then=`setPatternPlaceholders? &cbField=`cbSettingSortBy` &prefix=`cf_9_3150``
         ]]]]
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`cbSettingSortBy` &prefix=`cl_9_3469``
+            &then=`setPatternPlaceholders? &cbLayout=`cbSettingSortBy` &prefix=`cl_9_3150``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_9_3469`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_9_3150`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -1139,30 +1223,36 @@
             &sidebar_width=`five`
             &pattern_name=`cbSettingSortBy`
             &pattern_template=`patternLayoutAtom`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`9`
-            &unique_idx=`3469`
+            &unique_idx=`3150`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`cbSettingSortBy`
-            &pattern_template=`patternLayoutAtom`
-            &idx=`9`
-            &unique_idx=`3469`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`cbSettingSortBy`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`cbSettingSortBy`
+                    &pattern_template=`patternLayoutAtom`
+                    &pattern_status=`green`
+                    &idx=`9`
+                    &unique_idx=`3150`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_9_3469`
+            &then=`+preview_9_3150`
         ]]]]
 
         [[$tabsOuter?
@@ -1204,11 +1294,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3464`
+    &unique_idx=`3145`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`3465`
+	&unique_idx=`3146`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -1221,11 +1311,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3466`
+    &unique_idx=`3147`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3467`
+	&unique_idx=`3148`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -1244,28 +1334,32 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`3459`
+    &unique_idx=`3140`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`cbSettingContainerType` &prefix=`cf_10_3482``
+            &then=`setPatternPlaceholders? &cbField=`cbSettingContainerType` &prefix=`cf_10_3163``
         ]]]]
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`cbSettingContainerType` &prefix=`cl_10_3482``
+            &then=`setPatternPlaceholders? &cbLayout=`cbSettingContainerType` &prefix=`cl_10_3163``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_10_3482`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_10_3163`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -1278,30 +1372,36 @@
             &sidebar_width=`five`
             &pattern_name=`cbSettingContainerType`
             &pattern_template=`patternLayoutAtom`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`10`
-            &unique_idx=`3482`
+            &unique_idx=`3163`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`cbSettingContainerType`
-            &pattern_template=`patternLayoutAtom`
-            &idx=`10`
-            &unique_idx=`3482`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`cbSettingContainerType`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`cbSettingContainerType`
+                    &pattern_template=`patternLayoutAtom`
+                    &pattern_status=`green`
+                    &idx=`10`
+                    &unique_idx=`3163`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_10_3482`
+            &then=`+preview_10_3163`
         ]]]]
 
         [[$tabsOuter?
@@ -1343,11 +1443,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3477`
+    &unique_idx=`3158`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`3478`
+	&unique_idx=`3159`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -1360,11 +1460,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3479`
+    &unique_idx=`3160`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3480`
+	&unique_idx=`3161`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -1383,7 +1483,7 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`3472`
+    &unique_idx=`3153`
 ]]
     </div>
 </div>

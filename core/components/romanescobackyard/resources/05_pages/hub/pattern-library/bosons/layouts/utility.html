@@ -1,0 +1,962 @@
+<div class="ui vertical stripe pattern segment white">
+    <div class="ui   container">
+        [[[[If?
+            &subject=`patternLayoutBosonLayout`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonField`
+            &then=`setPatternPlaceholders? &cbField=`Call To Action` &prefix=`cf_1_634``
+        ]]]]
+        [[[[If?
+            &subject=`patternLayoutBosonLayout`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonLayout`
+            &then=`setPatternPlaceholders? &cbLayout=`Call To Action` &prefix=`cl_1_634``
+        ]]]]
+
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_634`?
+            &preview=``
+            &code=`[[$codeSnippet?
+    &value=`[[Rowboat?
+    &table=`modx_contentblocks_layout`
+    &tpl=`displayRawTemplate`
+    &where=`{"name":"Call To Action"}`
+]]`
+    &lang=`html`
+    &label=`[[%romanesco.patterns.template_label]]`
+]]`
+            &sidebar_width=`six`
+            &pattern_name=`Call To Action`
+            &pattern_template=`patternLayoutBosonLayout`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
+            &idx=`1`
+            &unique_idx=`634`
+        ]]
+        
+        [[[[modifiedIf?
+            &subject=`patternLayoutBosonLayout`
+            &operator=`contains`
+            &operand=`Electron`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`Call To Action`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`Call To Action`
+                    &pattern_template=`patternLayoutBosonLayout`
+                    &pattern_status=`green`
+                    &idx=`1`
+                    &unique_idx=`634`
+                `
+        ]]]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutBosonLayout`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`+preview_1_634`
+        ]]]]
+
+        [[$tabsOuter?
+    &rows=`[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[+[[+cl]].description]]</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.settings_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[jsonToHTML? &json=`[[+[[+cl]].settings_json]]`]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`3`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`629`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`630`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`includedPatterns`
+	&pattern_template=`patternLayoutBosonLayout`
+	&pattern_name=`Call To Action`
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_pages]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`631`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`632`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringPatterns`
+	&pattern_template=`patternLayoutBosonLayout`
+	&pattern_name=`Call To Action`
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`4`
+]]`
+    &total=`4`
+    &padding=`padded`
+    &accordion_type=``
+    &tab_type=`regular`
+    &unique_idx=`622`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe pattern segment white">
+    <div class="ui   container">
+        [[[[If?
+            &subject=`patternLayoutBosonLayout`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonField`
+            &then=`setPatternPlaceholders? &cbField=`Fieldset` &prefix=`cf_2_653``
+        ]]]]
+        [[[[If?
+            &subject=`patternLayoutBosonLayout`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonLayout`
+            &then=`setPatternPlaceholders? &cbLayout=`Fieldset` &prefix=`cl_2_653``
+        ]]]]
+
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_653`?
+            &preview=`<div id="Contact us" class="ui [[+padding]] [[+segment_type:ne=`none`:then=`segment`:else=`fieldset`]]" [[!cbGetFieldContent:contains=`"Contact us"`:then=`class="collapse"`? &field=`[[++formblocks.cb_field_select_option_collapse_id]]` &returnAsJSON=`1`]]>
+    <h3 class="ui header">Contact us</h3>
+    [[$fbInputTextarea? 
+	&unique_idx=`636`
+	&layout_id=`14`
+	&layout_column=`main`
+	&layout_idx=`0`
+	&field_name=`What's on your mind?`
+	&field_layout=`vertical`
+	&field_rows=`4`
+	&field_placeholder=``
+	&field_helptext=``
+	&field_required=`0`
+	]]
+
+
+[[$fbInputTextfield? 
+	&unique_idx=`637`
+	&layout_id=`14`
+	&layout_column=`main`
+	&layout_idx=`0`
+	&field_name=`Your name`
+	&field_layout=`vertical`
+	&field_type=`text`
+	&field_placeholder=``
+	&field_helptext=``
+	&field_required=`1`
+	]]
+
+
+[[$fbInputEmail? 
+	&unique_idx=`638`
+	&layout_id=`14`
+	&layout_column=`main`
+	&layout_idx=`0`
+	&field_name=`Email address`
+	&field_layout=`vertical`
+	&field_placeholder=``
+	&field_helptext=``
+	]]
+
+</div>`
+            &code=`[[$codeSnippet?
+    &value=`[[Rowboat?
+    &table=`modx_contentblocks_layout`
+    &tpl=`displayRawTemplate`
+    &where=`{"name":"Fieldset"}`
+]]`
+    &lang=`html`
+    &label=`[[%romanesco.patterns.template_label]]`
+]]`
+            &sidebar_width=`six`
+            &pattern_name=`Fieldset`
+            &pattern_template=`patternLayoutBosonLayout`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
+            &idx=`2`
+            &unique_idx=`653`
+        ]]
+        
+        [[[[modifiedIf?
+            &subject=`patternLayoutBosonLayout`
+            &operator=`contains`
+            &operand=`Electron`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`Fieldset`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`Fieldset`
+                    &pattern_template=`patternLayoutBosonLayout`
+                    &pattern_status=`green`
+                    &idx=`2`
+                    &unique_idx=`653`
+                `
+        ]]]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutBosonLayout`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`+preview_2_653`
+        ]]]]
+
+        [[$tabsOuter?
+    &rows=`[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[+[[+cl]].description]]</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.settings_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[jsonToHTML? &json=`[[+[[+cl]].settings_json]]`]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`3`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`648`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`649`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`includedPatterns`
+	&pattern_template=`patternLayoutBosonLayout`
+	&pattern_name=`Fieldset`
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_pages]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`650`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`651`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringPatterns`
+	&pattern_template=`patternLayoutBosonLayout`
+	&pattern_name=`Fieldset`
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`4`
+]]`
+    &total=`4`
+    &padding=`padded`
+    &accordion_type=``
+    &tab_type=`regular`
+    &unique_idx=`641`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe pattern segment white">
+    <div class="ui   container">
+        [[[[If?
+            &subject=`patternLayoutBosonLayout`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonField`
+            &then=`setPatternPlaceholders? &cbField=`Overview (2 Columns)` &prefix=`cf_3_669``
+        ]]]]
+        [[[[If?
+            &subject=`patternLayoutBosonLayout`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonLayout`
+            &then=`setPatternPlaceholders? &cbLayout=`Overview (2 Columns)` &prefix=`cl_3_669``
+        ]]]]
+
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_669`?
+            &preview=`[[![[If? &subject=`0` &operator=`EQ` &operand=`1` &then=`getPage@SemanticUI` &else=`getCache`]]?
+    &element=`getResources`
+    &cacheKey=`overviews`
+    [[++custom_cache:eq=`0`:then=`&cacheExpires=`1``]]
+
+    &parents=`127`
+    &depth=`0`
+    &limit=`99`
+    &tpl=`overviewRowFluid`
+    &includeTVs=`1`
+    &processTVs=`1`
+    &tvPrefix=``
+    &showHidden=`0`
+    &sortby=`menuindex`
+    &sortdir=`ASC`
+
+    &row_tpl=`overviewRowFluidBasic`
+    &background_even=`white`
+    &background_odd=`secondary`
+    &cols=`eight`
+    &cols_interchange=`1`
+
+    &title_field=`menutitle`
+    &link_text=`Read more`
+    &img_snap=`0`
+    &img_inflate=`0`
+]]
+
+[[[[+pagination:eq=`1`:then=`$paginationFluid`]]]]`
+            &code=`[[$codeSnippet?
+    &value=`[[Rowboat?
+    &table=`modx_contentblocks_layout`
+    &tpl=`displayRawTemplate`
+    &where=`{"name":"Overview (2 Columns)"}`
+]]`
+    &lang=`html`
+    &label=`[[%romanesco.patterns.template_label]]`
+]]`
+            &sidebar_width=`six`
+            &pattern_name=`Overview (2 Columns)`
+            &pattern_template=`patternLayoutBosonLayout`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
+            &idx=`3`
+            &unique_idx=`669`
+        ]]
+        
+        [[[[modifiedIf?
+            &subject=`patternLayoutBosonLayout`
+            &operator=`contains`
+            &operand=`Electron`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`Overview (2 Columns)`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`Overview (2 Columns)`
+                    &pattern_template=`patternLayoutBosonLayout`
+                    &pattern_status=`green`
+                    &idx=`3`
+                    &unique_idx=`669`
+                `
+        ]]]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutBosonLayout`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`+preview_3_669`
+        ]]]]
+
+        [[$tabsOuter?
+    &rows=`[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[+[[+cl]].description]]</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.settings_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[jsonToHTML? &json=`[[+[[+cl]].settings_json]]`]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`3`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`664`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`665`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`includedPatterns`
+	&pattern_template=`patternLayoutBosonLayout`
+	&pattern_name=`Overview (2 Columns)`
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_pages]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`666`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`667`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringPatterns`
+	&pattern_template=`patternLayoutBosonLayout`
+	&pattern_name=`Overview (2 Columns)`
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`4`
+]]`
+    &total=`4`
+    &padding=`padded`
+    &accordion_type=``
+    &tab_type=`regular`
+    &unique_idx=`657`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe pattern segment white">
+    <div class="ui   container">
+        [[[[If?
+            &subject=`patternLayoutBosonLayout`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonField`
+            &then=`setPatternPlaceholders? &cbField=`Pattern` &prefix=`cf_4_687``
+        ]]]]
+        [[[[If?
+            &subject=`patternLayoutBosonLayout`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonLayout`
+            &then=`setPatternPlaceholders? &cbLayout=`Pattern` &prefix=`cl_4_687``
+        ]]]]
+
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_4_687`?
+            &preview=`<div class="ui vertical stripe pattern segment secondary">
+    <div class="ui   container">
+        [[[[If?
+            &subject=`patternLayoutAtom`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonField`
+            &then=`setPatternPlaceholders? &cbField=`overviewOuter` &prefix=`cf_1_673``
+        ]]]]
+        [[[[If?
+            &subject=`patternLayoutAtom`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonLayout`
+            &then=`setPatternPlaceholders? &cbLayout=`overviewOuter` &prefix=`cl_1_673``
+        ]]]]
+
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_673`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`Preview goes here?`
+    &valueRaw=`Preview goes here?`
+    &renderTag=`ignore`
+]]`
+            &code=`[[$codeSnippet?
+    &value=`Code example goes here?`
+    &lang=`html`
+    &label=``
+]]`
+            &sidebar_width=`five`
+            &pattern_name=`overviewOuter`
+            &pattern_template=`patternLayoutAtom`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
+            &idx=`1`
+            &unique_idx=`673`
+        ]]
+        
+        [[[[modifiedIf?
+            &subject=`patternLayoutAtom`
+            &operator=`contains`
+            &operand=`Electron`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`overviewOuter`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`overviewOuter`
+                    &pattern_template=`patternLayoutAtom`
+                    &pattern_status=`green`
+                    &idx=`1`
+                    &unique_idx=`673`
+                `
+        ]]]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutAtom`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`+preview_1_673`
+        ]]]]
+
+        
+    </div>
+</div>`
+            &code=`[[$codeSnippet?
+    &value=`[[Rowboat?
+    &table=`modx_contentblocks_layout`
+    &tpl=`displayRawTemplate`
+    &where=`{"name":"Pattern"}`
+]]`
+    &lang=`html`
+    &label=`[[%romanesco.patterns.template_label]]`
+]]`
+            &sidebar_width=`sixteen`
+            &pattern_name=`Pattern`
+            &pattern_template=`patternLayoutBosonLayout`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
+            &idx=`4`
+            &unique_idx=`687`
+        ]]
+        
+        [[[[modifiedIf?
+            &subject=`patternLayoutBosonLayout`
+            &operator=`contains`
+            &operand=`Electron`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`Pattern`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`Pattern`
+                    &pattern_template=`patternLayoutBosonLayout`
+                    &pattern_status=`green`
+                    &idx=`4`
+                    &unique_idx=`687`
+                `
+        ]]]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutBosonLayout`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`+preview_4_687`
+        ]]]]
+
+        [[$tabsOuter?
+    &rows=`[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[+[[+cl]].description]]</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.settings_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[jsonToHTML? &json=`[[+[[+cl]].settings_json]]`]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`3`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`682`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`683`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`includedPatterns`
+	&pattern_template=`patternLayoutBosonLayout`
+	&pattern_name=`Pattern`
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_pages]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`684`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`685`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringPatterns`
+	&pattern_template=`patternLayoutBosonLayout`
+	&pattern_name=`Pattern`
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`4`
+]]`
+    &total=`4`
+    &padding=`padded`
+    &accordion_type=``
+    &tab_type=`regular`
+    &unique_idx=`675`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe pattern segment white">
+    <div class="ui   container">
+        [[[[If?
+            &subject=`patternLayoutBosonLayout`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonField`
+            &then=`setPatternPlaceholders? &cbField=`Backyard` &prefix=`cf_5_706``
+        ]]]]
+        [[[[If?
+            &subject=`patternLayoutBosonLayout`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonLayout`
+            &then=`setPatternPlaceholders? &cbLayout=`Backyard` &prefix=`cl_5_706``
+        ]]]]
+
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_5_706`?
+            &preview=`[[$richTextSegment?
+    &content=`<p>This is the playground area<br></p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=`center aligned`
+]]
+
+<div class="ui vertical content segment secondary">
+    <div class="ui accordion">
+        <div class="ui container title">
+            <button class="ui tiny top attached button" tabindex="1">
+                <i class="large info circle icon"></i>
+            </button>
+        </div>
+        <div class="ui container content">
+            <div class="ui two column stackable relaxed equal width grid">
+                <section class="column">
+                    <h2></h2>
+                    [[!cbRenderCodeField?
+    &valueRendered=`Description and instructables can be found here`
+    &valueRaw=`Description and instructables can be found here`
+    &renderTag=`ignore`
+]]
+                </section>
+                <aside class="five wide column">
+                    <div class="ui middle aligned equal width grid">
+                        <div class="nine wide column">
+                            <a href="[[++site_url]]manager/?a=resource/update&id=127" class="ui tiny basic button">
+                                Edit in MODX
+                            </a>
+                        </div>
+                        <div class="right aligned column">
+                            <i class="disabled heart outline link icon with popup"
+                               data-content="[[%romanesco.patterns.comment_tooltip]]"
+                               data-position="top center"></i>
+                            <i class="disabled comment outline link icon with popup"
+                               data-content="[[%romanesco.patterns.comment_tooltip]]"
+                               data-position="top center"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="ui divider"></div>
+                    
+                    <h5 class="ui disabled header">ContentBlocks used</h5>
+
+                    <div class="ui list">
+                        [[!cbRenderCodeField?
+    &valueRendered=`List of included bosons`
+    &valueRaw=`List of included bosons`
+    &renderTag=`ignore`
+]]
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</div>`
+            &code=`[[$codeSnippet?
+    &value=`[[Rowboat?
+    &table=`modx_contentblocks_layout`
+    &tpl=`displayRawTemplate`
+    &where=`{"name":"Backyard"}`
+]]`
+    &lang=`html`
+    &label=`[[%romanesco.patterns.template_label]]`
+]]`
+            &sidebar_width=`sixteen`
+            &pattern_name=`Backyard`
+            &pattern_template=`patternLayoutBosonLayout`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
+            &idx=`5`
+            &unique_idx=`706`
+        ]]
+        
+        [[[[modifiedIf?
+            &subject=`patternLayoutBosonLayout`
+            &operator=`contains`
+            &operand=`Electron`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`Backyard`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`Backyard`
+                    &pattern_template=`patternLayoutBosonLayout`
+                    &pattern_status=`green`
+                    &idx=`5`
+                    &unique_idx=`706`
+                `
+        ]]]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutBosonLayout`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`+preview_5_706`
+        ]]]]
+
+        [[$tabsOuter?
+    &rows=`[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[+[[+cl]].description]]</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.settings_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[jsonToHTML? &json=`[[+[[+cl]].settings_json]]`]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`3`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`701`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`702`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`includedPatterns`
+	&pattern_template=`patternLayoutBosonLayout`
+	&pattern_name=`Backyard`
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_pages]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`703`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`704`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringPatterns`
+	&pattern_template=`patternLayoutBosonLayout`
+	&pattern_name=`Backyard`
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`4`
+]]`
+    &total=`4`
+    &padding=`padded`
+    &accordion_type=``
+    &tab_type=`regular`
+    &unique_idx=`694`
+]]
+    </div>
+</div>

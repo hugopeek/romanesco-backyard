@@ -1,0 +1,172 @@
+<div class="ui vertical stripe pattern segment white">
+    <div class="ui   container">
+        [[[[If?
+            &subject=`patternLayoutTemplate`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonField`
+            &then=`setPatternPlaceholders? &cbField=`ProjectDashboard` &prefix=`cf_1_3176``
+        ]]]]
+        [[[[If?
+            &subject=`patternLayoutTemplate`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonLayout`
+            &then=`setPatternPlaceholders? &cbLayout=`ProjectDashboard` &prefix=`cl_1_3176``
+        ]]]]
+
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_3176`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`<div class="ui segment">
+    <div class="ui one column center aligned grid wireframe">
+        <div class="column">
+            <p class="ui secondary segment">Header</p>
+        </div>
+        <div class="column">
+            <p class="ui secondary segment" style="line-height: 5em !important;">Content</p>
+        </div>
+        <div class="column">
+            <p class="ui secondary segment" style="line-height: 2em !important;">Footer</p>
+        </div>
+    </div>
+</div>`
+    &valueRaw=`<div class="ui segment">
+    <div class="ui one column center aligned grid wireframe">
+        <div class="column">
+            <p class="ui secondary segment">Header</p>
+        </div>
+        <div class="column">
+            <p class="ui secondary segment" style="line-height: 5em !important;">Content</p>
+        </div>
+        <div class="column">
+            <p class="ui secondary segment" style="line-height: 2em !important;">Footer</p>
+        </div>
+    </div>
+</div>`
+    &renderTag=`ignore`
+]]`
+            &code=`[[$codeSnippet?
+    &value=`[[Rowboat?
+    &table=`modx_site_templates`
+    &tpl=`displayRawTemplate`
+    &where=`{"templatename":"ProjectDashboard"}`
+]]`
+    &lang=`html`
+    &label=`[[%romanesco.patterns.code_label]]`
+]]`
+            &sidebar_width=`five`
+            &pattern_name=`ProjectDashboard`
+            &pattern_template=`patternLayoutTemplate`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
+            &idx=`1`
+            &unique_idx=`3176`
+        ]]
+        
+        [[[[modifiedIf?
+            &subject=`patternLayoutTemplate`
+            &operator=`contains`
+            &operand=`Electron`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`ProjectDashboard`
+                    &pattern_status=`blue`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`ProjectDashboard`
+                    &pattern_template=`patternLayoutTemplate`
+                    &pattern_status=`blue`
+                    &idx=`1`
+                    &unique_idx=`3176`
+                `
+        ]]]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutTemplate`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`+preview_1_3176`
+        ]]]]
+
+        [[$tabsOuter?
+    &rows=`[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[getElementDescription? &name=`ProjectDashboard` &type=`patternLayoutTemplate`]]</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>This template is only being used right now to display the <a href="timeline">project timeline</a>, but I'm not sure if that pattern should be included like it is now (using MIGX). If not, I don't immediately see the need for a separate Dashboard template.</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
+    <div class="row">
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`3171`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`3172`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`includedChunks,includedSnippets,includedTVs`
+	&pattern_template=`patternLayoutTemplate`
+	&pattern_name=`ProjectDashboard`
+	]]
+</div>
+        <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_tvs]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`3173`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`3174`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`assignedTVs`
+	&pattern_template=`patternLayoutTemplate`
+	&pattern_name=`ProjectDashboard`
+	]]
+</div>
+    </div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=``
+    &tab_type=`regular`
+    &unique_idx=`3166`
+]]
+    </div>
+</div>

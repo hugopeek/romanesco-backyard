@@ -1,20 +1,56 @@
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutOrganism`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`sliderOuter` &prefix=`cf_1_2365``
+            &then=`setPatternPlaceholders? &cbField=`sliderOuter` &prefix=`cf_1_4685``
         ]]]]
         [[[[If?
             &subject=`patternLayoutOrganism`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`sliderOuter` &prefix=`cl_1_2365``
+            &then=`setPatternPlaceholders? &cbLayout=`sliderOuter` &prefix=`cl_1_4685``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_2365`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_4685`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`[[$sliderOuter?
+    &display_type=`slider-minimal`
+    &rows=`
+        <div class="ui segment">
+            <p>Mathematical science is in my opinion an indivisible whole, an organism whose vitality is conditioned upon the connection of its parts.</p>
+            <small>David Hilbert</small>
+        </div>
+        <div class="ui segment">
+            <p>Every living organism is fulfilled when it follows the right path for its own nature.</p>
+            <small>Marcus Aurelius, Meditations</small>
+        </div>
+        <div class="ui segment">
+            <p>There is a deep interconnectedness of all life on earth, from the tiniest organisms to the largest ecosystems, and absolutely between each person.</p>
+            <small>Bryant McGill, Voice of Reason</small>
+        </div>
+    `
+]]`
+    &valueRaw=`[[$sliderOuter:tag?
+    &display_type=`slider-minimal`
+    &rows=`
+        <div class="ui segment">
+            <p>Mathematical science is in my opinion an indivisible whole, an organism whose vitality is conditioned upon the connection of its parts.</p>
+            <small>David Hilbert</small>
+        </div>
+        <div class="ui segment">
+            <p>Every living organism is fulfilled when it follows the right path for its own nature.</p>
+            <small>Marcus Aurelius, Meditations</small>
+        </div>
+        <div class="ui segment">
+            <p>There is a deep interconnectedness of all life on earth, from the tiniest organisms to the largest ecosystems, and absolutely between each person.</p>
+            <small>Bryant McGill, Voice of Reason</small>
+        </div>
+    `
+]]`
+    &renderTag=`render`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -27,30 +63,36 @@
             &sidebar_width=`five`
             &pattern_name=`sliderOuter`
             &pattern_template=`patternLayoutOrganism`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`1`
-            &unique_idx=`2365`
+            &unique_idx=`4685`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`sliderOuter`
-            &pattern_template=`patternLayoutOrganism`
-            &idx=`1`
-            &unique_idx=`2365`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutOrganism`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`sliderOuter`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`sliderOuter`
+                    &pattern_template=`patternLayoutOrganism`
+                    &pattern_status=`green`
+                    &idx=`1`
+                    &unique_idx=`4685`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutOrganism`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_1_2365`
+            &then=`+preview_1_4685`
         ]]]]
 
         [[$tabsOuter?
@@ -58,7 +100,7 @@
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &content=`<div class="ui nested one column stackable doubling relaxed  grid">
     <div class="column">[[$richTextSegment?
-    &content=``
+    &content=`<p>[[getElementDescription? &name=`sliderOuter` &type=`patternLayoutOrganism`]]</p>`
     &segment_type=``
 	&padding=`regular`
     &alignment=``
@@ -92,11 +134,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`2360`
+    &unique_idx=`4680`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`2361`
+	&unique_idx=`4681`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -109,11 +151,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`2362`
+    &unique_idx=`4682`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`2363`
+	&unique_idx=`4683`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -132,28 +174,32 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`2355`
+    &unique_idx=`4675`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutOrganism`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`galleryOuter` &prefix=`cf_2_2378``
+            &then=`setPatternPlaceholders? &cbField=`galleryOuter` &prefix=`cf_2_4698``
         ]]]]
         [[[[If?
             &subject=`patternLayoutOrganism`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`galleryOuter` &prefix=`cl_2_2378``
+            &then=`setPatternPlaceholders? &cbLayout=`galleryOuter` &prefix=`cl_2_4698``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_2378`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_4698`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`render`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -166,30 +212,36 @@
             &sidebar_width=`five`
             &pattern_name=`galleryOuter`
             &pattern_template=`patternLayoutOrganism`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`2`
-            &unique_idx=`2378`
+            &unique_idx=`4698`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`galleryOuter`
-            &pattern_template=`patternLayoutOrganism`
-            &idx=`2`
-            &unique_idx=`2378`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutOrganism`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`galleryOuter`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`galleryOuter`
+                    &pattern_template=`patternLayoutOrganism`
+                    &pattern_status=`green`
+                    &idx=`2`
+                    &unique_idx=`4698`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutOrganism`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_2_2378`
+            &then=`+preview_2_4698`
         ]]]]
 
         [[$tabsOuter?
@@ -197,7 +249,7 @@
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &content=`<div class="ui nested one column stackable doubling relaxed  grid">
     <div class="column">[[$richTextSegment?
-    &content=``
+    &content=`<p>[[getElementDescription? &name=`galleryOuter` &type=`patternLayoutOrganism`]]</p>`
     &segment_type=``
 	&padding=`regular`
     &alignment=``
@@ -231,11 +283,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`2373`
+    &unique_idx=`4693`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`2374`
+	&unique_idx=`4694`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -248,11 +300,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`2375`
+    &unique_idx=`4695`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`2376`
+	&unique_idx=`4696`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -271,28 +323,32 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`2368`
+    &unique_idx=`4688`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutOrganism`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`accordionOuter` &prefix=`cf_3_2391``
+            &then=`setPatternPlaceholders? &cbField=`accordionOuter` &prefix=`cf_3_4711``
         ]]]]
         [[[[If?
             &subject=`patternLayoutOrganism`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`accordionOuter` &prefix=`cl_3_2391``
+            &then=`setPatternPlaceholders? &cbLayout=`accordionOuter` &prefix=`cl_3_4711``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_2391`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_4711`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`render`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -305,30 +361,36 @@
             &sidebar_width=`five`
             &pattern_name=`accordionOuter`
             &pattern_template=`patternLayoutOrganism`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`3`
-            &unique_idx=`2391`
+            &unique_idx=`4711`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`accordionOuter`
-            &pattern_template=`patternLayoutOrganism`
-            &idx=`3`
-            &unique_idx=`2391`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutOrganism`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`accordionOuter`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`accordionOuter`
+                    &pattern_template=`patternLayoutOrganism`
+                    &pattern_status=`green`
+                    &idx=`3`
+                    &unique_idx=`4711`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutOrganism`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_3_2391`
+            &then=`+preview_3_4711`
         ]]]]
 
         [[$tabsOuter?
@@ -336,7 +398,7 @@
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &content=`<div class="ui nested one column stackable doubling relaxed  grid">
     <div class="column">[[$richTextSegment?
-    &content=``
+    &content=`<p>[[getElementDescription? &name=`accordionOuter` &type=`patternLayoutOrganism`]]</p>`
     &segment_type=``
 	&padding=`regular`
     &alignment=``
@@ -370,11 +432,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`2386`
+    &unique_idx=`4706`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`2387`
+	&unique_idx=`4707`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -387,11 +449,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`2388`
+    &unique_idx=`4708`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`2389`
+	&unique_idx=`4709`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -410,28 +472,32 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`2381`
+    &unique_idx=`4701`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutOrganism`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`tabsOuter` &prefix=`cf_4_2404``
+            &then=`setPatternPlaceholders? &cbField=`tabsOuter` &prefix=`cf_4_4724``
         ]]]]
         [[[[If?
             &subject=`patternLayoutOrganism`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`tabsOuter` &prefix=`cl_4_2404``
+            &then=`setPatternPlaceholders? &cbLayout=`tabsOuter` &prefix=`cl_4_4724``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_4_2404`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_4_4724`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{PLACE EXAMPLE HERE}}`
+    &valueRaw=`{{PLACE EXAMPLE HERE}}`
+    &renderTag=`render`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -444,30 +510,36 @@
             &sidebar_width=`five`
             &pattern_name=`tabsOuter`
             &pattern_template=`patternLayoutOrganism`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`4`
-            &unique_idx=`2404`
+            &unique_idx=`4724`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`tabsOuter`
-            &pattern_template=`patternLayoutOrganism`
-            &idx=`4`
-            &unique_idx=`2404`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutOrganism`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`tabsOuter`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`tabsOuter`
+                    &pattern_template=`patternLayoutOrganism`
+                    &pattern_status=`green`
+                    &idx=`4`
+                    &unique_idx=`4724`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutOrganism`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_4_2404`
+            &then=`+preview_4_4724`
         ]]]]
 
         [[$tabsOuter?
@@ -475,7 +547,7 @@
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &content=`<div class="ui nested one column stackable doubling relaxed  grid">
     <div class="column">[[$richTextSegment?
-    &content=``
+    &content=`<p>[[getElementDescription? &name=`tabsOuter` &type=`patternLayoutOrganism`]]</p>`
     &segment_type=``
 	&padding=`regular`
     &alignment=``
@@ -509,11 +581,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`2399`
+    &unique_idx=`4719`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`2400`
+	&unique_idx=`4720`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -526,11 +598,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`2401`
+    &unique_idx=`4721`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`2402`
+	&unique_idx=`4722`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -549,7 +621,7 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`2394`
+    &unique_idx=`4714`
 ]]
     </div>
 </div>

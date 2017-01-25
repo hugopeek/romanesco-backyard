@@ -1,56 +1,66 @@
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutComputation`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`hideEmptyTVCategories` &prefix=`cf_1_2468``
+            &then=`setPatternPlaceholders? &cbField=`plLexiconMgr` &prefix=`cf_1_65``
         ]]]]
         [[[[If?
             &subject=`patternLayoutComputation`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`hideEmptyTVCategories` &prefix=`cl_1_2468``
+            &then=`setPatternPlaceholders? &cbLayout=`plLexiconMgr` &prefix=`cl_1_65``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_2468`?
-            &preview=`{{NO EXAMPLE NEEDED}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_65`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{NO EXAMPLE NEEDED}}`
+    &valueRaw=`{{NO EXAMPLE NEEDED}}`
+    &renderTag=`ignore`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_plugins`
     &tpl=`displayRawPlugin`
-    &where=`{"name":"hideEmptyTVCategories"}`
+    &where=`{"name":"plLexiconMgr"}`
 ]]`
     &lang=`php`
     &label=`[[%romanesco.patterns.code_label]]`
 ]]`
             &sidebar_width=`five`
-            &pattern_name=`hideEmptyTVCategories`
+            &pattern_name=`plLexiconMgr`
             &pattern_template=`patternLayoutComputation`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`1`
-            &unique_idx=`2468`
+            &unique_idx=`65`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`hideEmptyTVCategories`
-            &pattern_template=`patternLayoutComputation`
-            &idx=`1`
-            &unique_idx=`2468`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutComputation`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`plLexiconMgr`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`plLexiconMgr`
+                    &pattern_template=`patternLayoutComputation`
+                    &pattern_status=`green`
+                    &idx=`1`
+                    &unique_idx=`65`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutComputation`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_1_2468`
+            &then=`+preview_1_65`
         ]]]]
 
         [[$tabsOuter?
@@ -58,7 +68,7 @@
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &content=`<div class="ui nested one column stackable doubling relaxed  grid">
     <div class="column">[[$richTextSegment?
-    &content=``
+    &content=`<p>[[getElementDescription? &name=`plLexiconMgr` &type=`patternLayoutComputation`]]</p>`
     &segment_type=``
 	&padding=`regular`
     &alignment=``
@@ -70,7 +80,7 @@
 ]]
 
 [[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.usage_title]]`
+    &heading=`[[%romanesco.patterns.caveats_title]]`
     &content=`<div class="ui nested one column stackable doubling relaxed  grid">
     <div class="column">[[$richTextSegment?
     &content=``
@@ -87,7 +97,215 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`2463`
+    &unique_idx=`60`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe pattern segment white">
+    <div class="ui   container">
+        [[[[If?
+            &subject=`patternLayoutComputation`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonField`
+            &then=`setPatternPlaceholders? &cbField=`plLexiconWeb` &prefix=`cf_2_73``
+        ]]]]
+        [[[[If?
+            &subject=`patternLayoutComputation`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonLayout`
+            &then=`setPatternPlaceholders? &cbLayout=`plLexiconWeb` &prefix=`cl_2_73``
+        ]]]]
+
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_73`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{NO EXAMPLE NEEDED}}`
+    &valueRaw=`{{NO EXAMPLE NEEDED}}`
+    &renderTag=`ignore`
+]]`
+            &code=`[[$codeSnippet?
+    &value=`[[Rowboat?
+    &table=`modx_site_plugins`
+    &tpl=`displayRawPlugin`
+    &where=`{"name":"plLexiconWeb"}`
+]]`
+    &lang=`php`
+    &label=`[[%romanesco.patterns.code_label]]`
+]]`
+            &sidebar_width=`five`
+            &pattern_name=`plLexiconWeb`
+            &pattern_template=`patternLayoutComputation`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
+            &idx=`2`
+            &unique_idx=`73`
+        ]]
+        
+        [[[[modifiedIf?
+            &subject=`patternLayoutComputation`
+            &operator=`contains`
+            &operand=`Electron`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`plLexiconWeb`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`plLexiconWeb`
+                    &pattern_template=`patternLayoutComputation`
+                    &pattern_status=`green`
+                    &idx=`2`
+                    &unique_idx=`73`
+                `
+        ]]]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutComputation`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`+preview_2_73`
+        ]]]]
+
+        [[$tabsOuter?
+    &rows=`[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[getElementDescription? &name=`plLexiconWeb` &type=`patternLayoutComputation`]]</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.caveats_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]`
+    &total=`2`
+    &padding=`padded`
+    &accordion_type=``
+    &tab_type=`regular`
+    &unique_idx=`68`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe pattern segment white">
+    <div class="ui   container">
+        [[[[If?
+            &subject=`patternLayoutComputation`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonField`
+            &then=`setPatternPlaceholders? &cbField=`hideEmptyTVCategories` &prefix=`cf_3_81``
+        ]]]]
+        [[[[If?
+            &subject=`patternLayoutComputation`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonLayout`
+            &then=`setPatternPlaceholders? &cbLayout=`hideEmptyTVCategories` &prefix=`cl_3_81``
+        ]]]]
+
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_81`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`{{NO EXAMPLE NEEDED}}`
+    &valueRaw=`{{NO EXAMPLE NEEDED}}`
+    &renderTag=`ignore`
+]]`
+            &code=`[[$codeSnippet?
+    &value=`[[Rowboat?
+    &table=`modx_site_plugins`
+    &tpl=`displayRawPlugin`
+    &where=`{"name":"hideEmptyTVCategories"}`
+]]`
+    &lang=`php`
+    &label=`[[%romanesco.patterns.code_label]]`
+]]`
+            &sidebar_width=`five`
+            &pattern_name=`hideEmptyTVCategories`
+            &pattern_template=`patternLayoutComputation`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
+            &idx=`3`
+            &unique_idx=`81`
+        ]]
+        
+        [[[[modifiedIf?
+            &subject=`patternLayoutComputation`
+            &operator=`contains`
+            &operand=`Electron`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`hideEmptyTVCategories`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`hideEmptyTVCategories`
+                    &pattern_template=`patternLayoutComputation`
+                    &pattern_status=`green`
+                    &idx=`3`
+                    &unique_idx=`81`
+                `
+        ]]]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutComputation`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`+preview_3_81`
+        ]]]]
+
+        [[$tabsOuter?
+    &rows=`[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[getElementDescription? &name=`hideEmptyTVCategories` &type=`patternLayoutComputation`]]</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`1`
+]]
+
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.caveats_title]]`
+    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &idx=`2`
+]]`
+    &total=`2`
+    &padding=`padded`
+    &accordion_type=``
+    &tab_type=`regular`
+    &unique_idx=`76`
 ]]
     </div>
 </div>

@@ -1,20 +1,28 @@
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`hitCount` &prefix=`cf_1_833``
+            &then=`setPatternPlaceholders? &cbField=`hitCount` &prefix=`cf_1_1816``
         ]]]]
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`hitCount` &prefix=`cl_1_833``
+            &then=`setPatternPlaceholders? &cbLayout=`hitCount` &prefix=`cl_1_1816``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_833`?
-            &preview=`{{PLACE EXAMPLE HERE}}`
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_1816`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`[[$hitCount?
+    &hit_count=`123`
+]]`
+    &valueRaw=`[[$hitCount:tag?
+    &hit_count=`123`
+]]`
+    &renderTag=`render`
+]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
     &table=`modx_site_htmlsnippets`
@@ -27,30 +35,36 @@
             &sidebar_width=`five`
             &pattern_name=`hitCount`
             &pattern_template=`patternLayoutAtom`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`1`
-            &unique_idx=`833`
+            &unique_idx=`1816`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`hitCount`
-            &pattern_template=`patternLayoutAtom`
-            &idx=`1`
-            &unique_idx=`833`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`hitCount`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`hitCount`
+                    &pattern_template=`patternLayoutAtom`
+                    &pattern_status=`green`
+                    &idx=`1`
+                    &unique_idx=`1816`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_1_833`
+            &then=`+preview_1_1816`
         ]]]]
 
         [[$tabsOuter?
@@ -92,11 +106,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`828`
+    &unique_idx=`1811`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`829`
+	&unique_idx=`1812`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -109,11 +123,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`830`
+    &unique_idx=`1813`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`831`
+	&unique_idx=`1814`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -132,7 +146,7 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`823`
+    &unique_idx=`1806`
 ]]
     </div>
 </div>

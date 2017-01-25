@@ -1,48 +1,54 @@
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`cta_availability` &prefix=`cf_1_90``
+            &then=`setPatternPlaceholders? &cbField=`cta_availability` &prefix=`cf_1_3511``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`cta_availability` &prefix=`cl_1_90``
+            &then=`setPatternPlaceholders? &cbLayout=`cta_availability` &prefix=`cl_1_3511``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_90`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_3511`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`cta_availability`
             &pattern_template=`patternLayoutElectronTV`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`1`
-            &unique_idx=`90`
+            &unique_idx=`3511`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`cta_availability`
-            &pattern_template=`patternLayoutElectronTV`
-            &idx=`1`
-            &unique_idx=`90`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutElectronTV`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`cta_availability`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`cta_availability`
+                    &pattern_template=`patternLayoutElectronTV`
+                    &pattern_status=`green`
+                    &idx=`1`
+                    &unique_idx=`3511`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_1_90`
+            &then=`+preview_1_3511`
         ]]]]
 
         [[$accordionOuter?
@@ -92,11 +98,11 @@
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`85`
+    &unique_idx=`3506`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`86`
+	&unique_idx=`3507`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -109,11 +115,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`87`
+    &unique_idx=`3508`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`88`
+	&unique_idx=`3509`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -132,56 +138,62 @@
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`80`
+    &unique_idx=`3501`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`header_cta` &prefix=`cf_2_101``
+            &then=`setPatternPlaceholders? &cbField=`header_cta` &prefix=`cf_2_3522``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`header_cta` &prefix=`cl_2_101``
+            &then=`setPatternPlaceholders? &cbLayout=`header_cta` &prefix=`cl_2_3522``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_101`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_3522`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`header_cta`
             &pattern_template=`patternLayoutElectronTV`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`2`
-            &unique_idx=`101`
+            &unique_idx=`3522`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`header_cta`
-            &pattern_template=`patternLayoutElectronTV`
-            &idx=`2`
-            &unique_idx=`101`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutElectronTV`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`header_cta`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`header_cta`
+                    &pattern_template=`patternLayoutElectronTV`
+                    &pattern_status=`green`
+                    &idx=`2`
+                    &unique_idx=`3522`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_2_101`
+            &then=`+preview_2_3522`
         ]]]]
 
         [[$accordionOuter?
@@ -230,11 +242,11 @@
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`96`
+    &unique_idx=`3517`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`97`
+	&unique_idx=`3518`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -247,11 +259,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`98`
+    &unique_idx=`3519`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`99`
+	&unique_idx=`3520`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -270,7 +282,7 @@
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`91`
+    &unique_idx=`3512`
 ]]
     </div>
 </div>

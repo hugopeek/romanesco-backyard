@@ -1,5 +1,38 @@
 <div class="ui vertical stripe segment white">
-    <div class="ui   container">
-        [[$projectHubOuter]]
+    <div class="ui  container">
+        <div class="ui two column stackable doubling relaxed   grid">
+            <div class="row">
+                <div class="column">[[!cbRenderCodeField?
+    &valueRendered=`[[$projectHubOuter]]`
+    &valueRaw=`[[$projectHubOuter]]`
+    &renderTag=`ignore`
+]]</div>
+                <div class="column">[[$headingBasic?
+    &value=`Latest pattern additions<br>`
+    &level=`h3`
+    &alignment=``
+    &unique_idx=`15`
+]]
+
+[[!cbRenderCodeField?
+    &valueRendered=`<p>
+[[filterLine?
+    &input=`@FILE [[++romanesco.core_path]]docs/changelog.txt`
+    &searchString=`Add `
+]]
+</p>
+<p><em>(doesn't work yet)</em></p>`
+    &valueRaw=`<p>
+[[filterLine:tag?
+    &input=`@FILE [[++romanesco.core_path]]docs/changelog.txt`
+    &searchString=`Add `
+]]
+</p>
+<p><em>(doesn't work yet)</em></p>
+`
+    &renderTag=`ignore`
+]]</div>
+            </div>
+        </div>
     </div>
 </div>

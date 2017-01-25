@@ -1,22 +1,29 @@
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`buttonHrefBasic` &prefix=`cf_1_647``
+            &then=`setPatternPlaceholders? &cbField=`buttonHrefBasic` &prefix=`cf_1_2290``
         ]]]]
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`buttonHrefBasic` &prefix=`cl_1_647``
+            &then=`setPatternPlaceholders? &cbLayout=`buttonHrefBasic` &prefix=`cl_1_2290``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_647`?
-            &preview=`[[$buttonHrefBasic?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_2290`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`[[$buttonHrefBasic?
     &button_text=`Call me a button`
     &link=`[[~[[*id]]]]#buttonHrefBasic`
+]]`
+    &valueRaw=`[[$buttonHrefBasic:tag?
+    &button_text=`Call me a button`
+    &link=`[[~[[*id]]]]#buttonHrefBasic`
+]]`
+    &renderTag=`render`
 ]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
@@ -30,30 +37,36 @@
             &sidebar_width=`five`
             &pattern_name=`buttonHrefBasic`
             &pattern_template=`patternLayoutAtom`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`1`
-            &unique_idx=`647`
+            &unique_idx=`2290`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`buttonHrefBasic`
-            &pattern_template=`patternLayoutAtom`
-            &idx=`1`
-            &unique_idx=`647`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`buttonHrefBasic`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`buttonHrefBasic`
+                    &pattern_template=`patternLayoutAtom`
+                    &pattern_status=`green`
+                    &idx=`1`
+                    &unique_idx=`2290`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_1_647`
+            &then=`+preview_1_2290`
         ]]]]
 
         [[$tabsOuter?
@@ -61,7 +74,7 @@
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &content=`<div class="ui nested one column stackable doubling relaxed  grid">
     <div class="column">[[$richTextSegment?
-    &content=``
+    &content=`<p>[[getElementDescription? &name=`buttonHrefBasic` &type=`patternLayoutAtom`]]</p>`
     &segment_type=``
 	&padding=`regular`
     &alignment=``
@@ -95,11 +108,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`642`
+    &unique_idx=`2285`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`643`
+	&unique_idx=`2286`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -112,11 +125,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`644`
+    &unique_idx=`2287`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`645`
+	&unique_idx=`2288`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -135,31 +148,39 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`637`
+    &unique_idx=`2280`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`buttonHrefIcon` &prefix=`cf_2_660``
+            &then=`setPatternPlaceholders? &cbField=`buttonHrefIcon` &prefix=`cf_2_2303``
         ]]]]
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`buttonHrefIcon` &prefix=`cl_2_660``
+            &then=`setPatternPlaceholders? &cbLayout=`buttonHrefIcon` &prefix=`cl_2_2303``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_660`?
-            &preview=`[[$buttonHrefIcon?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_2303`?
+            &preview=`[[!cbRenderCodeField?
+    &valueRendered=`[[$buttonHrefIcon?
     &button_text=`I am still a button`
     &link=`[[~[[*id]]]]#buttonHrefIcon`
     &icon_class=`check`
+]]`
+    &valueRaw=`[[$buttonHrefIcon:tag?
+    &button_text=`I am still a button`
+    &link=`[[~[[*id]]]]#buttonHrefIcon`
+    &icon_class=`check`
+]]`
+    &renderTag=`render`
 ]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
@@ -173,30 +194,36 @@
             &sidebar_width=`five`
             &pattern_name=`buttonHrefIcon`
             &pattern_template=`patternLayoutAtom`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`2`
-            &unique_idx=`660`
+            &unique_idx=`2303`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`buttonHrefIcon`
-            &pattern_template=`patternLayoutAtom`
-            &idx=`2`
-            &unique_idx=`660`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`buttonHrefIcon`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`buttonHrefIcon`
+                    &pattern_template=`patternLayoutAtom`
+                    &pattern_status=`green`
+                    &idx=`2`
+                    &unique_idx=`2303`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_2_660`
+            &then=`+preview_2_2303`
         ]]]]
 
         [[$tabsOuter?
@@ -204,7 +231,7 @@
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &content=`<div class="ui nested one column stackable doubling relaxed  grid">
     <div class="column">[[$richTextSegment?
-    &content=``
+    &content=`<p>[[getElementDescription? &name=`buttonHrefIcon` &type=`patternLayoutAtom`]]</p>`
     &segment_type=``
 	&padding=`regular`
     &alignment=``
@@ -238,11 +265,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`655`
+    &unique_idx=`2298`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`656`
+	&unique_idx=`2299`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -255,11 +282,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`657`
+    &unique_idx=`2300`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`658`
+	&unique_idx=`2301`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -278,29 +305,29 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`650`
+    &unique_idx=`2293`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`buttonHrefOverview` &prefix=`cf_3_673``
+            &then=`setPatternPlaceholders? &cbField=`buttonHrefOverview` &prefix=`cf_3_2316``
         ]]]]
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`buttonHrefOverview` &prefix=`cl_3_673``
+            &then=`setPatternPlaceholders? &cbLayout=`buttonHrefOverview` &prefix=`cl_3_2316``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_673`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_2316`?
             &preview=`[[$overviewOuterSpecific? 
-	&unique_idx=`661`
+	&unique_idx=`2304`
 	&layout_id=`17`
 	&layout_column=`preview`
 	&layout_idx=`2`
@@ -330,30 +357,36 @@
             &sidebar_width=`five`
             &pattern_name=`buttonHrefOverview`
             &pattern_template=`patternLayoutAtom`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`3`
-            &unique_idx=`673`
+            &unique_idx=`2316`
         ]]
         
-        [[$toolbarPattern?
-            &pattern_name=`buttonHrefOverview`
-            &pattern_template=`patternLayoutAtom`
-            &idx=`3`
-            &unique_idx=`673`
-        ]]
-
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`contains`
             &operand=`Electron`
-            &then=`$dividerBasic? &divider_hidden=`1``
-            &else=`$dividerBasic`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`buttonHrefOverview`
+                    &pattern_status=`yellow`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`buttonHrefOverview`
+                    &pattern_template=`patternLayoutAtom`
+                    &pattern_status=`yellow`
+                    &idx=`3`
+                    &unique_idx=`2316`
+                `
         ]]]]
 
         [[[[modifiedIf?
             &subject=`patternLayoutAtom`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_3_673`
+            &then=`+preview_3_2316`
         ]]]]
 
         [[$tabsOuter?
@@ -361,7 +394,7 @@
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &content=`<div class="ui nested one column stackable doubling relaxed  grid">
     <div class="column">[[$richTextSegment?
-    &content=``
+    &content=`<p>[[getElementDescription? &name=`buttonHrefOverview` &type=`patternLayoutAtom`]]</p>`
     &segment_type=``
 	&padding=`regular`
     &alignment=``
@@ -395,11 +428,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`668`
+    &unique_idx=`2311`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`669`
+	&unique_idx=`2312`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -412,11 +445,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`670`
+    &unique_idx=`2313`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`671`
+	&unique_idx=`2314`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -435,36 +468,7 @@
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`663`
+    &unique_idx=`2306`
 ]]
-    </div>
-</div>
-
-<div class="ui vertical stripe segment white">
-    <div class="ui   container">
-        [[$overviewOuter? 
-	&unique_idx=`674`
-	&layout_id=`1`
-	&layout_column=`main`
-	&layout_idx=`3`
-	&row_tpl=`overviewRowBasicLinkCard`
-	&cols=`five`
-	&parent=`[[*id]]`
-	&title_field=`menutitle`
-	&title_hierarchy=`h2`
-	&depth=`0`
-	&limit=`99`
-	&show_hidden=`0`
-	&sortby=`menuindex`
-	&pagination=`0`
-	&show_subtitle=`0`
-	&show_introtext=`0`
-	&link_text=`Learn more`
-	&img_type=`landscape`
-	&icon_type=`svg`
-	&padding=``
-	&de_emphasize=`0`
-	]]
-
     </div>
 </div>
