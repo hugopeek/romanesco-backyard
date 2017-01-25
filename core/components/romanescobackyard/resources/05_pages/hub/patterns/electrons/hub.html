@@ -4,16 +4,16 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`project_hub_timeline` &prefix=`cf_1_3604``
+            &then=`setPatternPlaceholders? &cbField=`project_hub_timeline` &prefix=`cf_1_11``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`project_hub_timeline` &prefix=`cl_1_3604``
+            &then=`setPatternPlaceholders? &cbLayout=`project_hub_timeline` &prefix=`cl_1_11``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_3604`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_11`?
             &preview=``
             &code=``
             &sidebar_width=`five`
@@ -22,7 +22,7 @@
             &raw_tags=`[[+raw_tags]]`
             &rendered_tags=`[[+rendered_tags]]`
             &idx=`1`
-            &unique_idx=`3604`
+            &unique_idx=`11`
         ]]
         
         [[[[modifiedIf?
@@ -40,7 +40,7 @@
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
                     &idx=`1`
-                    &unique_idx=`3604`
+                    &unique_idx=`11`
                 `
         ]]]]
 
@@ -48,7 +48,7 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_1_3604`
+            &then=`+preview_1_11`
         ]]]]
 
         [[$accordionOuter?
@@ -70,20 +70,7 @@
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.specifications_title]]`
     &content=`<div class="ui nested one column stackable doubling relaxed  grid">
-    <div class="column">[[jsonToHTML? &json=`{
-    "caption": "Project hub timeline",
-    "name": "project_hub_timeline",
-    "description": "In this timeline you can keep track of the projects' progress and see what's coming up next. You can also link to all related project files and resources from here, so you can find them back more easily.",
-    "type": "migx",
-    "category": "Project Hub",
-    "sortOrder": "1",
-    "inputProperties": {
-        "configs": "project_hub_timeline"
-    },
-    "templates": [
-        "ProjectHub"
-    ]
-}`]]</div>
+    <div class="column">[[jsonToHTML? &json=`[[tvToJSON? &tv=`project_hub_timeline`]]`]]</div>
 </div>`
     &padding=`padded`
     &tab_type=`regular`
@@ -98,11 +85,11 @@
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3599`
+    &unique_idx=`6`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3600`
+	&unique_idx=`7`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -115,11 +102,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3601`
+    &unique_idx=`8`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3602`
+	&unique_idx=`9`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -138,7 +125,7 @@
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`3594`
+    &unique_idx=`1`
 ]]
     </div>
 </div>
@@ -149,16 +136,16 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`status_indicator` &prefix=`cf_2_3615``
+            &then=`setPatternPlaceholders? &cbField=`status_indicator` &prefix=`cf_2_22``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`status_indicator` &prefix=`cl_2_3615``
+            &then=`setPatternPlaceholders? &cbLayout=`status_indicator` &prefix=`cl_2_22``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_3615`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_22`?
             &preview=``
             &code=``
             &sidebar_width=`five`
@@ -167,7 +154,7 @@
             &raw_tags=`[[+raw_tags]]`
             &rendered_tags=`[[+rendered_tags]]`
             &idx=`2`
-            &unique_idx=`3615`
+            &unique_idx=`22`
         ]]
         
         [[[[modifiedIf?
@@ -185,7 +172,7 @@
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
                     &idx=`2`
-                    &unique_idx=`3615`
+                    &unique_idx=`22`
                 `
         ]]]]
 
@@ -193,7 +180,7 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_2_3615`
+            &then=`+preview_2_22`
         ]]]]
 
         [[$accordionOuter?
@@ -215,19 +202,7 @@
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.specifications_title]]`
     &content=`<div class="ui nested one column stackable doubling relaxed  grid">
-    <div class="column">[[jsonToHTML? &json=`{
-    "caption": "Status indicator",
-    "name": "status_indicator",
-    "description": "Is this page ready for prime time at this point?",
-    "type": "option",
-    "category": "Status",
-    "sortOrder": "1",
-    "defaultValue": "not-done",
-    "inputOptionValues": "Yes, it's finished==done||No, but it's almost there==almost-done||No, it needs (way) more work==not-done||Yes, but the content is outdated==expired",
-    "templates": [
-        "@@templates_all"
-    ]
-}`]]</div>
+    <div class="column">[[jsonToHTML? &json=`[[tvToJSON? &tv=`status_indicator`]]`]]</div>
 </div>`
     &padding=`padded`
     &tab_type=`regular`
@@ -242,11 +217,11 @@
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3610`
+    &unique_idx=`17`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3611`
+	&unique_idx=`18`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -259,11 +234,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3612`
+    &unique_idx=`19`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3613`
+	&unique_idx=`20`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -282,7 +257,7 @@
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`3605`
+    &unique_idx=`12`
 ]]
     </div>
 </div>
@@ -293,16 +268,16 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`status_improvements` &prefix=`cf_3_3626``
+            &then=`setPatternPlaceholders? &cbField=`status_improvements` &prefix=`cf_3_33``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`status_improvements` &prefix=`cl_3_3626``
+            &then=`setPatternPlaceholders? &cbLayout=`status_improvements` &prefix=`cl_3_33``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_3626`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_33`?
             &preview=``
             &code=``
             &sidebar_width=`five`
@@ -311,7 +286,7 @@
             &raw_tags=`[[+raw_tags]]`
             &rendered_tags=`[[+rendered_tags]]`
             &idx=`3`
-            &unique_idx=`3626`
+            &unique_idx=`33`
         ]]
         
         [[[[modifiedIf?
@@ -329,7 +304,7 @@
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
                     &idx=`3`
-                    &unique_idx=`3626`
+                    &unique_idx=`33`
                 `
         ]]]]
 
@@ -337,7 +312,7 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_3_3626`
+            &then=`+preview_3_33`
         ]]]]
 
         [[$accordionOuter?
@@ -359,21 +334,7 @@
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.specifications_title]]`
     &content=`<div class="ui nested one column stackable doubling relaxed  grid">
-    <div class="column">[[jsonToHTML? &json=`{
-    "caption": "Improvements",
-    "name": "status_improvements",
-    "description": "How can the content of this page be improved? You can elaborate on this in the Notes section below, if needed.",
-    "type": "checkbox",
-    "category": "Status",
-    "sortOrder": "2",
-    "inputOptionValues": "[Text] The text is not quite there yet==text||[Graphics] It lacks visual balance or needs more supportive imagery==graphics||[Information] The right message is not conveyed yet==information||[Interaction] The usability could be better==interaction||[Layout] The elements are not optimally positioned yet==layout||[Overviews] Content loaded from other places still needs some tweaking==overviews||[SEO] The content needs to be optimised for search engines||[Crosscheck] It needs a final check by a fresh pair of eyes==crosscheck||[Other] Something else==other",
-    "outputProperties": {
-        "delimiter": ","
-    },
-    "templates": [
-        "@@templates_all"
-    ]
-}`]]</div>
+    <div class="column">[[jsonToHTML? &json=`[[tvToJSON? &tv=`status_improvements`]]`]]</div>
 </div>`
     &padding=`padded`
     &tab_type=`regular`
@@ -388,11 +349,11 @@
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3621`
+    &unique_idx=`28`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3622`
+	&unique_idx=`29`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -405,11 +366,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3623`
+    &unique_idx=`30`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3624`
+	&unique_idx=`31`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -428,7 +389,7 @@
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`3616`
+    &unique_idx=`23`
 ]]
     </div>
 </div>
@@ -439,16 +400,16 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`status_assigned_user` &prefix=`cf_4_3637``
+            &then=`setPatternPlaceholders? &cbField=`status_assigned_user` &prefix=`cf_4_44``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`status_assigned_user` &prefix=`cl_4_3637``
+            &then=`setPatternPlaceholders? &cbLayout=`status_assigned_user` &prefix=`cl_4_44``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_4_3637`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_4_44`?
             &preview=``
             &code=``
             &sidebar_width=`five`
@@ -457,7 +418,7 @@
             &raw_tags=`[[+raw_tags]]`
             &rendered_tags=`[[+rendered_tags]]`
             &idx=`4`
-            &unique_idx=`3637`
+            &unique_idx=`44`
         ]]
         
         [[[[modifiedIf?
@@ -475,7 +436,7 @@
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
                     &idx=`4`
-                    &unique_idx=`3637`
+                    &unique_idx=`44`
                 `
         ]]]]
 
@@ -483,7 +444,7 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_4_3637`
+            &then=`+preview_4_44`
         ]]]]
 
         [[$accordionOuter?
@@ -505,18 +466,7 @@
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.specifications_title]]`
     &content=`<div class="ui nested one column stackable doubling relaxed  grid">
-    <div class="column">[[jsonToHTML? &json=`{
-    "caption": "Assigned editor",
-    "name": "status_assigned_user",
-    "description": "Who is best suited to take a look at these improvements?",
-    "type": "listbox",
-    "category": "Status",
-    "sortOrder": "3",
-    "inputOptionValues": "@SELECT '' AS name, '' AS username UNION ALL ( SELECT `username` AS `name`,`username` FROM `modx_users` WHERE `active` = 1 )",
-    "templates": [
-        "@@templates_all"
-    ]
-}`]]</div>
+    <div class="column">[[jsonToHTML? &json=`[[tvToJSON? &tv=`status_assigned_user`]]`]]</div>
 </div>`
     &padding=`padded`
     &tab_type=`regular`
@@ -531,11 +481,11 @@
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3632`
+    &unique_idx=`39`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3633`
+	&unique_idx=`40`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -548,11 +498,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3634`
+    &unique_idx=`41`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3635`
+	&unique_idx=`42`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -571,7 +521,7 @@
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`3627`
+    &unique_idx=`34`
 ]]
     </div>
 </div>
@@ -582,16 +532,16 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`status_help` &prefix=`cf_5_3648``
+            &then=`setPatternPlaceholders? &cbField=`status_help` &prefix=`cf_5_55``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`status_help` &prefix=`cl_5_3648``
+            &then=`setPatternPlaceholders? &cbLayout=`status_help` &prefix=`cl_5_55``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_5_3648`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_5_55`?
             &preview=``
             &code=``
             &sidebar_width=`five`
@@ -600,7 +550,7 @@
             &raw_tags=`[[+raw_tags]]`
             &rendered_tags=`[[+rendered_tags]]`
             &idx=`5`
-            &unique_idx=`3648`
+            &unique_idx=`55`
         ]]
         
         [[[[modifiedIf?
@@ -618,7 +568,7 @@
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
                     &idx=`5`
-                    &unique_idx=`3648`
+                    &unique_idx=`55`
                 `
         ]]]]
 
@@ -626,7 +576,7 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_5_3648`
+            &then=`+preview_5_55`
         ]]]]
 
         [[$accordionOuter?
@@ -648,18 +598,7 @@
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.specifications_title]]`
     &content=`<div class="ui nested one column stackable doubling relaxed  grid">
-    <div class="column">[[jsonToHTML? &json=`{
-    "caption": "Help!",
-    "name": "status_help",
-    "description": "What seems to be the problem? You can explain it in more detail in the Notes section below. If you are getting an error message, please include the exact phrase in your note, together with the step(s) you performed prior to the error.",
-    "type": "checkbox",
-    "category": "Status",
-    "sortOrder": "4",
-    "inputOptionValues": "[Manager] I'm having issues (or lost the way) while navigating MODX==manager||[Content] I'm having a problem when adding or editing content==content||[Styling] Things don't look as they should on the website==styling||[Technical] The output is incorrect on the site, or there's no output at all==technical||[Functional] I hit a limitation or inconsistency in one of the components==functional||[Concept] I'm stuck with something and could really use your advice or opinion==concept||[Other] Something else==other",
-    "templates": [
-        "@@templates_all"
-    ]
-}`]]</div>
+    <div class="column">[[jsonToHTML? &json=`[[tvToJSON? &tv=`status_help`]]`]]</div>
 </div>`
     &padding=`padded`
     &tab_type=`regular`
@@ -674,11 +613,11 @@
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3643`
+    &unique_idx=`50`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3644`
+	&unique_idx=`51`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -691,11 +630,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3645`
+    &unique_idx=`52`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3646`
+	&unique_idx=`53`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -714,7 +653,7 @@
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`3638`
+    &unique_idx=`45`
 ]]
     </div>
 </div>
@@ -725,16 +664,16 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`status_notes` &prefix=`cf_6_3659``
+            &then=`setPatternPlaceholders? &cbField=`status_notes` &prefix=`cf_6_66``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`status_notes` &prefix=`cl_6_3659``
+            &then=`setPatternPlaceholders? &cbLayout=`status_notes` &prefix=`cl_6_66``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_6_3659`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_6_66`?
             &preview=``
             &code=``
             &sidebar_width=`five`
@@ -743,7 +682,7 @@
             &raw_tags=`[[+raw_tags]]`
             &rendered_tags=`[[+rendered_tags]]`
             &idx=`6`
-            &unique_idx=`3659`
+            &unique_idx=`66`
         ]]
         
         [[[[modifiedIf?
@@ -761,7 +700,7 @@
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
                     &idx=`6`
-                    &unique_idx=`3659`
+                    &unique_idx=`66`
                 `
         ]]]]
 
@@ -769,7 +708,7 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_6_3659`
+            &then=`+preview_6_66`
         ]]]]
 
         [[$accordionOuter?
@@ -791,20 +730,7 @@
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.specifications_title]]`
     &content=`<div class="ui nested one column stackable doubling relaxed  grid">
-    <div class="column">[[jsonToHTML? &json=`{
-    "caption": "Notes / Explanations",
-    "name": "status_notes",
-    "description": "You can add multiple notes here, effectively creating a little journal of this page. The latest notes are shown on top, and author + date are automatically added to each entry. NB: notes are not saved until you save the page itself!",
-    "type": "migx",
-    "category": "Status",
-    "sortOrder": "99",
-    "inputProperties": {
-        "configs": "status_notes"
-    },
-    "templates": [
-        "@@templates_all"
-    ]
-}`]]</div>
+    <div class="column">[[jsonToHTML? &json=`[[tvToJSON? &tv=`status_notes`]]`]]</div>
 </div>`
     &padding=`padded`
     &tab_type=`regular`
@@ -819,11 +745,11 @@
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3654`
+    &unique_idx=`61`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3655`
+	&unique_idx=`62`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -836,11 +762,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3656`
+    &unique_idx=`63`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3657`
+	&unique_idx=`64`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -859,7 +785,7 @@
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`3649`
+    &unique_idx=`56`
 ]]
     </div>
 </div>
