@@ -20,13 +20,13 @@ $_lang['romanesco.menu.close_title'] = 'Close';
 // Social
 // ---------------------------------------------------------------------
 
-$_lang['romanesco.social.connect_facebook_company'] = 'Visit our Facebook page';
-$_lang['romanesco.social.connect_googleplus_company'] = 'Find us on Google+';
-$_lang['romanesco.social.connect_linkedin_company'] = 'Connect with us on LinkedIn';
-$_lang['romanesco.social.connect_instagram_company'] = 'Follow us on Instagram';
-$_lang['romanesco.social.connect_pinterest_company'] = 'View our Pinterest board';
-$_lang['romanesco.social.connect_twitter_company'] = 'Follow us on Twitter';
-$_lang['romanesco.social.connect_youtube_company'] = 'View our Youtube channel';
+$_lang['romanesco.social.connect_facebook_organization'] = 'Visit our Facebook page';
+$_lang['romanesco.social.connect_googleplus_organization'] = 'Find us on Google+';
+$_lang['romanesco.social.connect_linkedin_organization'] = 'Connect with us on LinkedIn';
+$_lang['romanesco.social.connect_instagram_organization'] = 'Follow us on Instagram';
+$_lang['romanesco.social.connect_pinterest_organization'] = 'View our Pinterest board';
+$_lang['romanesco.social.connect_twitter_organization'] = 'Follow us on Twitter';
+$_lang['romanesco.social.connect_youtube_organization'] = 'View our Youtube channel';
 
 $_lang['romanesco.social.connect_facebook_person'] = 'Visit my Facebook page';
 $_lang['romanesco.social.connect_googleplus_person'] = 'Find me on Google+';
