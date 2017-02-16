@@ -1,55 +1,97 @@
-[[$headingBasic?
-    &value=`headingBasic<br>`
-    &level=`h2`
-    &alignment=``
-    &unique_idx=`6390`
-]]
+<div class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[$overviewOuter? 
+	&unique_idx=`2`
+	&layout_id=`1`
+	&layout_column=`main`
+	&layout_idx=`0`
+	&row_tpl=`overviewRowBasic`
+	&cols=`four`
+	&parent=`[[++romanesco.pattern_container_id]]`
+	&title_field=`menutitle`
+	&title_hierarchy=`h2`
+	&depth=`0`
+	&limit=`4`
+	&show_hidden=`0`
+	&sortby=`menuindex`
+	&pagination=`0`
+	&show_subtitle=`1`
+	&show_introtext=`0`
+	&link_text=`Learn more`
+	&img_type=`landscape`
+	&icon_type=`svg`
+	&padding=`regular`
+	&de_emphasize=`0`
+	]]
 
-[[$richTextSegment?
-    &content=`<p>Rich text<br></p>`
+    </div>
+</div>
+
+<div class="ui vertical backyard segment secondary">
+    <div class="ui container">
+        <div class="ui accordion">
+            <div class="title">
+                <button class="ui small primary circular icon button" tabindex="1">
+                    <i class="plus icon"></i>
+                </button>
+            </div>
+            <div class="content">
+                <div class="ui stackable relaxed equal width grid">
+                    <section class="column">
+                        <h2>Creating overviews of child pages</h2>
+                        <div class="ui nested two column stackable doubling relaxed  celled grid">
+    <div class="row">
+        <div class="column">[[$richTextSegment?
+    &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
-]]
-
-<div class="ui vertical content segment secondary">
-    <div class="ui accordion">
-        <div class="ui container title">
-            <button class="ui tiny top attached button" tabindex="1">
-                <i class="large info circle icon"></i>
-            </button>
-        </div>
-        <div class="ui container content">
-            <div class="ui two column stackable relaxed equal width grid">
-                <section class="column">
-                    <h2>Basic test</h2>
-                    
-                </section>
-                <aside class="four wide column">
-                    <div class="ui middle aligned equal width grid">
-                        <div class="nine wide column">
-                            <a href="[[++site_url]]manager/?a=resource/update&id=131" class="ui tiny basic button">
-                                Edit in MODX
-                            </a>
+]]</div>
+        <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+    </div>
+</div>
+                    </section>
+                    <aside class="four wide column">
+                        <div class="ui nested middle aligned equal width toolbar grid">
+                            <div class="nine wide column">
+                                <a href="[[++site_url]]manager/?a=resource/update&id=4" class="ui tiny basic button">
+                                    Edit in MODX
+                                </a>
+                            </div>
+                            <div class="right aligned column">
+                                <i class="disabled heart outline link icon with popup"
+                                   data-content="[[%romanesco.patterns.comment_tooltip]]"
+                                   data-position="top center"></i>
+                                <i class="disabled comment outline link icon with popup"
+                                   data-content="[[%romanesco.patterns.comment_tooltip]]"
+                                   data-position="top center"></i>
+                            </div>
                         </div>
-                        <div class="right aligned column">
-                            <i class="disabled heart outline link icon with popup"
-                               data-content="[[%romanesco.patterns.comment_tooltip]]"
-                               data-position="top center"></i>
-                            <i class="disabled comment outline link icon with popup"
-                               data-content="[[%romanesco.patterns.comment_tooltip]]"
-                               data-position="top center"></i>
-                        </div>
-                    </div>
-                    
-                    <div class="ui divider"></div>
-                    
-                    <h5 class="ui disabled header">ContentBlocks used</h5>
-
-                    <div class="ui list">
                         
-                    </div>
-                </aside>
+                        <div class="ui divider"></div>
+                        
+                        <h5 class="ui disabled header">ContentBlocks used</h5>
+    
+                        <div class="ui list">
+                            [[!cbRenderCodeField?
+    &valueRendered=`[[includedBosons?
+    &layout=`[[+layout_idx]]`
+    &filterFields=`6,14,17,87`
+]]`
+    &valueRaw=`[[includedBosons?
+    &layout=`0`
+    &filterFields=`6,14,17,87`
+]]`
+    &renderTag=`ignore`
+]]
+                        </div>
+                    </aside>
+                </div>
             </div>
         </div>
     </div>
