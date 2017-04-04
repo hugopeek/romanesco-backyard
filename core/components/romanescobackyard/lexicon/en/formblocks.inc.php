@@ -51,3 +51,4 @@ $_lang['formblocks.form.submit_button'] = 'Send';
 
 $_lang['formblocks.email.subject'] = 'Contact form response';
 $_lang['formblocks.email.introtext'] = 'This is what the visitor submitted:';
+$_lang['formblocks.email.other_namely'] = 'namely:';
