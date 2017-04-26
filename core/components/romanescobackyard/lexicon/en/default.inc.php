@@ -116,3 +116,35 @@ $_lang['romanesco.patterns.status_pink'] = 'Experimental (just fiddling with som
 $_lang['romanesco.patterns.status_purple'] = 'Untested (use at your own risk)';
 $_lang['romanesco.patterns.status_blue'] = 'In review (under evaluation if this belongs in the library or not)';
 $_lang['romanesco.patterns.status_brown'] = 'Deprecated (will be deleted in the next major release)';
+
+
+// MANAGER CONTEXT
+// =====================================================================
+
+// Top menu
+// ---------------------------------------------------------------------
+
+// Global content
+$_lang['romanesco.menu.global_content_title'] = 'Global Content';
+$_lang['romanesco.menu.global_content_description'] = 'Change content that\'s available site-wide';
+
+$_lang['romanesco.menu.edit_footer_title'] = 'Edit footer';
+$_lang['romanesco.menu.edit_footer_description'] = 'Change footer content for all pages';
+
+$_lang['romanesco.menu.edit_forms_title'] = 'FormBlocks';
+$_lang['romanesco.menu.edit_forms_description'] = 'Build and edit your own forms';
+
+$_lang['romanesco.menu.edit_cta_title'] = 'Call To Actions';
+$_lang['romanesco.menu.edit_cta_description'] = 'Build and edit your own CTA\'s';
+
+// Custom caching
+$_lang['romanesco.menu.clear_cache_all_title'] = 'Clear Custom Cache';
+$_lang['romanesco.menu.clear_cache_all_description'] = 'Delete files inside all custom cache partitions';
+$_lang['romanesco.menu.clear_cache_overviews_title'] = 'Overviews';
+$_lang['romanesco.menu.clear_cache_overviews_description'] = 'Only clear cache of standard Overview grids';
+$_lang['romanesco.menu.clear_cache_clients_title'] = 'Clients';
+$_lang['romanesco.menu.clear_cache_gallery_title'] = 'Gallery';
+$_lang['romanesco.menu.clear_cache_portfolio_title'] = 'Portfolio';
+$_lang['romanesco.menu.clear_cache_publication_title'] = 'Publication';
+$_lang['romanesco.menu.clear_cache_team_title'] = 'Team';
+$_lang['romanesco.menu.clear_cache_testimonials_title'] = 'Testimonials';
