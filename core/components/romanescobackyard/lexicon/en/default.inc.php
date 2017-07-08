@@ -6,8 +6,8 @@
 // Common website elements
 // ---------------------------------------------------------------------
 
-$_lang['romanesco.footer.qredits_text'] = 'Site by';
-$_lang['romanesco.footer.qredits_title'] = 'Responsive webdesign with MODX';
+$_lang['romanesco.footer.qredits_text'] = 'A Fractal Farming effort';
+$_lang['romanesco.footer.qredits_title'] = 'Naturally growing web projects based on pattern libraries';
 
 // Navigation
 // ---------------------------------------------------------------------
@@ -82,6 +82,14 @@ $_lang['romanesco.status.table_improvements'] = 'Improvements';
 $_lang['romanesco.status.table_assigned_user'] = 'Editor';
 $_lang['romanesco.status.table_help'] = 'Issues';
 $_lang['romanesco.status.table_notes'] = 'Notes / Explanations';
+
+$_lang['romanesco.status.not_done'] = 'The idea is ready to take root, but this resource is still empty';
+$_lang['romanesco.status.in_progress'] = 'Work has begun and leaves are starting to appear';
+$_lang['romanesco.status.almost_done'] = 'Almost ready to be transplanted to its live container';
+$_lang['romanesco.status.done'] = 'Watered, fertilized and growing steadily';
+$_lang['romanesco.status.successful'] = 'This particular resource is performing really well';
+$_lang['romanesco.status.problematic'] = 'Somehow, this resource is attracting more bugs than visitors';
+$_lang['romanesco.status.expired'] = 'The content is outdated or has outlived its purpose entirely';
 
 // Pattern library
 // ---------------------------------------------------------------------
