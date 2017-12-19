@@ -13,9 +13,9 @@ if ($object->xpdo) {
             //$assetsPath = $modx->getOption('assets_path');
 
             if (!function_exists('setResourceID')) {
-                function setResourceID($systemSetting, $contextKey, $alias)
+                function setResourceID($systemSetting, $contextKey, $alias, $modx)
                 {
-                    global $modx;
+                    //global $modx;
 
                     // Get the resource
                     $query = $modx->newQuery('modResource');
@@ -46,12 +46,12 @@ if ($object->xpdo) {
             }
 
             // Find resources and set correct IDs
-            setResourceID('romanesco.cta_container_id', 'global','call-to-actions');
-            setResourceID('romanesco.global_backgrounds_id', 'global','backgrounds');
-            setResourceID('formblocks.container_id', 'global','forms');
-            setResourceID('romanesco.dashboard_id', 'hub','dashboard');
-            setResourceID('romanesco.pattern_container_id', 'hub','patterns');
-            setResourceID('romanesco.backyard_container_id', 'hub','backyard');
+            setResourceID('romanesco.cta_container_id', 'global','call-to-actions', $modx);
+            setResourceID('romanesco.global_backgrounds_id', 'global','backgrounds', $modx);
+            setResourceID('formblocks.container_id', 'global','forms', $modx);
+            setResourceID('romanesco.dashboard_id', 'hub','dashboard', $modx);
+            setResourceID('romanesco.pattern_container_id', 'hub','patterns', $modx);
+            setResourceID('romanesco.backyard_container_id', 'hub','backyard', $modx);
 
             break;
     }
