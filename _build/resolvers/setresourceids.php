@@ -45,6 +45,42 @@ if ($object->xpdo) {
                 }
             }
 
+            if (!function_exists('setContextSetting')) {
+                function setContextSetting($contextSetting, $contextKey, $alias, $modx)
+                {
+                    //global $modx;
+
+                    // Get the resource
+                    $query = $modx->newQuery('modResource');
+                    $query->where(array(
+                        'context_key' => $contextKey,
+                        'alias' => $alias,
+                    ));
+                    $query->select('id');
+                    $resourceID = $modx->getValue($query->prepare());
+
+                    if (!$resourceID) {
+                        $modx->log(modX::LOG_LEVEL_ERROR, 'Could not find resource ID for: ' . $alias);
+                        return;
+                    }
+
+                    // Update context setting
+                    $setting = $modx->getObject('modContextSetting', array(
+                        'context_key' => $contextKey,
+                        'key' => $contextSetting
+                    ));
+
+                    if ($setting) {
+                        $setting->set('value', $resourceID);
+                        $setting->save();
+                    } else {
+                        $modx->log(modX::LOG_LEVEL_ERROR, 'Could not find context setting with key: ' . $contextSetting);
+                    }
+
+                    return;
+                }
+            }
+
             // Find resources and set correct IDs
             setResourceID('romanesco.cta_container_id', 'global','call-to-actions', $modx);
             setResourceID('romanesco.global_backgrounds_id', 'global','backgrounds', $modx);
@@ -53,8 +89,13 @@ if ($object->xpdo) {
             setResourceID('romanesco.pattern_container_id', 'hub','patterns', $modx);
             setResourceID('romanesco.backyard_container_id', 'hub','backyard', $modx);
 
+            // Set site_start for Project Hub context
+            setContextSetting('site_start', 'hub','dashboard', $modx);
+
+            $modx->log(xPDO::LOG_LEVEL_INFO, 'Resource IDs successfully set.');
+
             break;
     }
 }
-$modx->log(xPDO::LOG_LEVEL_INFO, 'Resource IDs successfully set.');
+
 return true;
