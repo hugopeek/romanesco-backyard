@@ -47,6 +47,7 @@ $_lang['romanesco.social.share_twitter_title'] = 'Tweet about this';
 
 $_lang['romanesco.article.written_by'] = 'Written by';
 $_lang['romanesco.article.written_on'] = 'on';
+$_lang['romanesco.article.about_author'] = 'About the author,';
 $_lang['romanesco.article.comments'] = 'Comments';
 $_lang['romanesco.article.share_this'] = 'Share this article';
 $_lang['romanesco.article.back_to_overview'] = 'All articles';
