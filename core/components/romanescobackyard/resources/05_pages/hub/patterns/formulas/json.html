@@ -4,16 +4,16 @@
             &subject=`patternLayoutFormula`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`jsonGetValue` &prefix=`cf_1_589``
+            &then=`setPatternPlaceholders? &cbField=`jsonGetValue` &prefix=`cf_1_605``
         ]]]]
         [[[[If?
             &subject=`patternLayoutFormula`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`jsonGetValue` &prefix=`cl_1_589``
+            &then=`setPatternPlaceholders? &cbLayout=`jsonGetValue` &prefix=`cl_1_605``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_589`?
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_1_605`?
             &preview=`<pre><code class="language-html">&#91;&#91;jsonGetValue?
     &amp;input=&#96;&#91;&#91;+json&#93;&#93;&#96;
     &amp;key=&#96;key_name&#96;
@@ -30,10 +30,8 @@
             &sidebar_width=`six`
             &pattern_name=`jsonGetValue`
             &pattern_template=`patternLayoutFormula`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`1`
-            &unique_idx=`589`
+            &unique_idx=`605`
         ]]
         
         [[[[modifiedIf?
@@ -51,7 +49,7 @@
                     &pattern_template=`patternLayoutFormula`
                     &pattern_status=`green`
                     &idx=`1`
-                    &unique_idx=`589`
+                    &unique_idx=`605`
                 `
         ]]]]
 
@@ -59,13 +57,11 @@
             &subject=`patternLayoutFormula`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_1_589`
+            &then=`+preview_1_605`
         ]]]]
 
         [[$tabsOuter?
-    &rows=`[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=`<p>[[getElementDescription? &name=`jsonGetValue` &type=`patternLayoutFormula`]]
 </p>`
@@ -73,40 +69,66 @@
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[getElementDescription? &name=`jsonGetValue` &type=`patternLayoutFormula`]]
+</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.usage_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`584`
+    &unique_idx=`600`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`585`
+	&unique_idx=`601`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -115,15 +137,15 @@
 	&pattern_name=`jsonGetValue`
 	]]
 </div>
-        <div class="column">[[$headingBasic?
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`586`
+    &unique_idx=`602`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`587`
+	&unique_idx=`603`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -132,17 +154,64 @@
 	&pattern_name=`jsonGetValue`
 	]]
 </div>
-    </div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`600`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`601`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`includedChunks,includedSnippets,includedTVs`
+	&pattern_template=`patternLayoutFormula`
+	&pattern_name=`jsonGetValue`
+	]]
+</div>
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`602`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`603`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
+	&pattern_template=`patternLayoutFormula`
+	&pattern_name=`jsonGetValue`
+	]]
+</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`579`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`595`
+    &layout_idx=`0`
 ]]
     </div>
 </div>
@@ -153,16 +222,16 @@
             &subject=`patternLayoutFormula`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`jsonToHTML` &prefix=`cf_2_602``
+            &then=`setPatternPlaceholders? &cbField=`jsonToHTML` &prefix=`cf_2_618``
         ]]]]
         [[[[If?
             &subject=`patternLayoutFormula`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`jsonToHTML` &prefix=`cl_2_602``
+            &then=`setPatternPlaceholders? &cbLayout=`jsonToHTML` &prefix=`cl_2_618``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_602`?
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_2_618`?
             &preview=`<pre><code class="language-html">&#91;&#91;jsonToHTML?
     &amp;json=&#96;&#91;&#91;+json&#93;&#93;&#96;
 &#93;&#93;</code><div class="ui small top right attached label">[[%romanesco.patterns.example_label]]<i class="copy link icon with popup" data-content="[[%romanesco.patterns.copy_tooltip]]"></i></div></pre>`
@@ -178,10 +247,8 @@
             &sidebar_width=`six`
             &pattern_name=`jsonToHTML`
             &pattern_template=`patternLayoutFormula`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`2`
-            &unique_idx=`602`
+            &unique_idx=`618`
         ]]
         
         [[[[modifiedIf?
@@ -199,7 +266,7 @@
                     &pattern_template=`patternLayoutFormula`
                     &pattern_status=`green`
                     &idx=`2`
-                    &unique_idx=`602`
+                    &unique_idx=`618`
                 `
         ]]]]
 
@@ -207,13 +274,11 @@
             &subject=`patternLayoutFormula`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_2_602`
+            &then=`+preview_2_618`
         ]]]]
 
         [[$tabsOuter?
-    &rows=`[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=`<p>[[getElementDescription? &name=`jsonToHTML` &type=`patternLayoutFormula`]]
 </p>`
@@ -221,40 +286,66 @@
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[getElementDescription? &name=`jsonToHTML` &type=`patternLayoutFormula`]]
+</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.usage_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`597`
+    &unique_idx=`613`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`598`
+	&unique_idx=`614`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -263,15 +354,15 @@
 	&pattern_name=`jsonToHTML`
 	]]
 </div>
-        <div class="column">[[$headingBasic?
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`599`
+    &unique_idx=`615`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`600`
+	&unique_idx=`616`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -280,17 +371,64 @@
 	&pattern_name=`jsonToHTML`
 	]]
 </div>
-    </div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`613`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`614`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`includedChunks,includedSnippets,includedTVs`
+	&pattern_template=`patternLayoutFormula`
+	&pattern_name=`jsonToHTML`
+	]]
+</div>
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`615`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`616`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
+	&pattern_template=`patternLayoutFormula`
+	&pattern_name=`jsonToHTML`
+	]]
+</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`592`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`608`
+    &layout_idx=`1`
 ]]
     </div>
 </div>
@@ -301,16 +439,16 @@
             &subject=`patternLayoutFormula`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`tvToJSON` &prefix=`cf_3_615``
+            &then=`setPatternPlaceholders? &cbField=`tvToJSON` &prefix=`cf_3_631``
         ]]]]
         [[[[If?
             &subject=`patternLayoutFormula`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`tvToJSON` &prefix=`cl_3_615``
+            &then=`setPatternPlaceholders? &cbLayout=`tvToJSON` &prefix=`cl_3_631``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_615`?
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_3_631`?
             &preview=`<pre><code class="language-html">&#91;&#91;tvToJSON?
     &amp;tv=&#96;&#91;&#91;+pattern_name&#93;&#93;&#96;
 &#93;&#93;</code><div class="ui small top right attached label">[[%romanesco.patterns.example_label]]<i class="copy link icon with popup" data-content="[[%romanesco.patterns.copy_tooltip]]"></i></div></pre>`
@@ -326,10 +464,8 @@
             &sidebar_width=`six`
             &pattern_name=`tvToJSON`
             &pattern_template=`patternLayoutFormula`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`3`
-            &unique_idx=`615`
+            &unique_idx=`631`
         ]]
         
         [[[[modifiedIf?
@@ -347,7 +483,7 @@
                     &pattern_template=`patternLayoutFormula`
                     &pattern_status=`green`
                     &idx=`3`
-                    &unique_idx=`615`
+                    &unique_idx=`631`
                 `
         ]]]]
 
@@ -355,13 +491,11 @@
             &subject=`patternLayoutFormula`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_3_615`
+            &then=`+preview_3_631`
         ]]]]
 
         [[$tabsOuter?
-    &rows=`[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=`<p>[[getElementDescription? &name=`tvToJSON` &type=`patternLayoutFormula`]]
 </p>`
@@ -369,40 +503,66 @@
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[getElementDescription? &name=`tvToJSON` &type=`patternLayoutFormula`]]
+</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.usage_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`610`
+    &unique_idx=`626`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`611`
+	&unique_idx=`627`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -411,15 +571,15 @@
 	&pattern_name=`tvToJSON`
 	]]
 </div>
-        <div class="column">[[$headingBasic?
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`612`
+    &unique_idx=`628`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`613`
+	&unique_idx=`629`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -428,17 +588,64 @@
 	&pattern_name=`tvToJSON`
 	]]
 </div>
-    </div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`626`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`627`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`includedChunks,includedSnippets,includedTVs`
+	&pattern_template=`patternLayoutFormula`
+	&pattern_name=`tvToJSON`
+	]]
+</div>
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`628`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`629`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
+	&pattern_template=`patternLayoutFormula`
+	&pattern_name=`tvToJSON`
+	]]
+</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`605`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`621`
+    &layout_idx=`2`
 ]]
     </div>
 </div>

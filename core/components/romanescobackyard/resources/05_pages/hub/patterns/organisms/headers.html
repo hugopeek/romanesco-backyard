@@ -4,18 +4,17 @@
             &subject=`patternLayoutOrganism`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`headerBasic` &prefix=`cf_1_4546``
+            &then=`setPatternPlaceholders? &cbField=`headerBasic` &prefix=`cf_1_4562``
         ]]]]
         [[[[If?
             &subject=`patternLayoutOrganism`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`headerBasic` &prefix=`cl_1_4546``
+            &then=`setPatternPlaceholders? &cbLayout=`headerBasic` &prefix=`cl_1_4562``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_4546`?
-            &preview=`[[!cbRenderCodeField?
-    &valueRendered=`<style>
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_1_4562`?
+            &preview=`<style>
     .preview.column .masthead {
         position: relative;
     }
@@ -27,35 +26,12 @@
     .preview.column #hero {
         padding-top: 6rem !important;
     }
-</style>`
-    &valueRaw=`<style>
-    .preview.column .masthead {
-        position: relative;
-    }
-    .preview.column #menu {
-        position: absolute;
-        height: 5rem;
-        padding: 0 1em;
-    }
-    .preview.column #hero {
-        padding-top: 6rem !important;
-    }
-</style>`
-    &renderTag=`ignore`
-]]
+</style>
 
-[[!cbRenderCodeField?
-    &valueRendered=`[[$headerBasic?
+[[$headerBasic?
     &masthead=`0`
     &hero=`1`
     &search=`0`
-]]`
-    &valueRaw=`[[$headerBasic:tag?
-    &masthead=`0`
-    &hero=`1`
-    &search=`0`
-]]`
-    &renderTag=`render`
 ]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
@@ -69,10 +45,8 @@
             &sidebar_width=`sixteen`
             &pattern_name=`headerBasic`
             &pattern_template=`patternLayoutOrganism`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`1`
-            &unique_idx=`4546`
+            &unique_idx=`4562`
         ]]
         
         [[[[modifiedIf?
@@ -90,7 +64,7 @@
                     &pattern_template=`patternLayoutOrganism`
                     &pattern_status=`green`
                     &idx=`1`
-                    &unique_idx=`4546`
+                    &unique_idx=`4562`
                 `
         ]]]]
 
@@ -98,13 +72,11 @@
             &subject=`patternLayoutOrganism`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_1_4546`
+            &then=`+preview_1_4562`
         ]]]]
 
         [[$tabsOuter?
-    &rows=`[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=`<p>[[getElementDescription? &name=`headerBasic` &type=`patternLayoutOrganism`]]
 </p>`
@@ -112,40 +84,66 @@
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[getElementDescription? &name=`headerBasic` &type=`patternLayoutOrganism`]]
+</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.usage_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4541`
+    &unique_idx=`4557`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`4542`
+	&unique_idx=`4558`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -154,15 +152,15 @@
 	&pattern_name=`headerBasic`
 	]]
 </div>
-        <div class="column">[[$headingBasic?
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4543`
+    &unique_idx=`4559`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`4544`
+	&unique_idx=`4560`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -171,17 +169,64 @@
 	&pattern_name=`headerBasic`
 	]]
 </div>
-    </div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`4557`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`4558`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`includedChunks,includedSnippets,includedTVs`
+	&pattern_template=`patternLayoutOrganism`
+	&pattern_name=`headerBasic`
+	]]
+</div>
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`4559`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`4560`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
+	&pattern_template=`patternLayoutOrganism`
+	&pattern_name=`headerBasic`
+	]]
+</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`4536`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`4552`
+    &layout_idx=`0`
 ]]
     </div>
 </div>
@@ -192,24 +237,18 @@
             &subject=`patternLayoutOrganism`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`headerVertical` &prefix=`cf_2_4559``
+            &then=`setPatternPlaceholders? &cbField=`headerVertical` &prefix=`cf_2_4575``
         ]]]]
         [[[[If?
             &subject=`patternLayoutOrganism`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`headerVertical` &prefix=`cl_2_4559``
+            &then=`setPatternPlaceholders? &cbLayout=`headerVertical` &prefix=`cl_2_4575``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_4559`?
-            &preview=`[[!cbRenderCodeField?
-    &valueRendered=`[[$headerVertical?
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_2_4575`?
+            &preview=`[[$headerVertical?
     &property=`value`
-]]`
-    &valueRaw=`[[$headerVertical:tag?
-    &property=`value`
-]]`
-    &renderTag=`render`
 ]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
@@ -223,10 +262,8 @@
             &sidebar_width=`five`
             &pattern_name=`headerVertical`
             &pattern_template=`patternLayoutOrganism`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`2`
-            &unique_idx=`4559`
+            &unique_idx=`4575`
         ]]
         
         [[[[modifiedIf?
@@ -244,7 +281,7 @@
                     &pattern_template=`patternLayoutOrganism`
                     &pattern_status=`green`
                     &idx=`2`
-                    &unique_idx=`4559`
+                    &unique_idx=`4575`
                 `
         ]]]]
 
@@ -252,13 +289,11 @@
             &subject=`patternLayoutOrganism`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_2_4559`
+            &then=`+preview_2_4575`
         ]]]]
 
         [[$tabsOuter?
-    &rows=`[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=`<p>[[getElementDescription? &name=`headerVertical` &type=`patternLayoutOrganism`]]
 </p>`
@@ -266,40 +301,66 @@
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[getElementDescription? &name=`headerVertical` &type=`patternLayoutOrganism`]]
+</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.usage_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4554`
+    &unique_idx=`4570`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`4555`
+	&unique_idx=`4571`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -308,15 +369,15 @@
 	&pattern_name=`headerVertical`
 	]]
 </div>
-        <div class="column">[[$headingBasic?
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4556`
+    &unique_idx=`4572`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`4557`
+	&unique_idx=`4573`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -325,17 +386,64 @@
 	&pattern_name=`headerVertical`
 	]]
 </div>
-    </div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`4570`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`4571`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`includedChunks,includedSnippets,includedTVs`
+	&pattern_template=`patternLayoutOrganism`
+	&pattern_name=`headerVertical`
+	]]
+</div>
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`4572`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`4573`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
+	&pattern_template=`patternLayoutOrganism`
+	&pattern_name=`headerVertical`
+	]]
+</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`4549`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`4565`
+    &layout_idx=`1`
 ]]
     </div>
 </div>

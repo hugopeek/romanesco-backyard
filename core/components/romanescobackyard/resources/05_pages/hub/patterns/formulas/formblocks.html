@@ -4,16 +4,16 @@
             &subject=`patternLayoutFormula`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fbEmailGetJSON` &prefix=`cf_1_277``
+            &then=`setPatternPlaceholders? &cbField=`fbEmailGetJSON` &prefix=`cf_1_293``
         ]]]]
         [[[[If?
             &subject=`patternLayoutFormula`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fbEmailGetJSON` &prefix=`cl_1_277``
+            &then=`setPatternPlaceholders? &cbLayout=`fbEmailGetJSON` &prefix=`cl_1_293``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_277`?
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_1_293`?
             &preview=`<pre><code class="language-html">&#91;&#91;!fbEmailGetJSON?
     &amp;formID=&#96;&#91;&#91;*id&#93;&#93;&#96;
 &#93;&#93;</code><div class="ui small top right attached label">[[%romanesco.patterns.example_label]]<i class="copy link icon with popup" data-content="[[%romanesco.patterns.copy_tooltip]]"></i></div></pre>`
@@ -29,10 +29,8 @@
             &sidebar_width=`six`
             &pattern_name=`fbEmailGetJSON`
             &pattern_template=`patternLayoutFormula`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`1`
-            &unique_idx=`277`
+            &unique_idx=`293`
         ]]
         
         [[[[modifiedIf?
@@ -50,7 +48,7 @@
                     &pattern_template=`patternLayoutFormula`
                     &pattern_status=`green`
                     &idx=`1`
-                    &unique_idx=`277`
+                    &unique_idx=`293`
                 `
         ]]]]
 
@@ -58,13 +56,11 @@
             &subject=`patternLayoutFormula`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_1_277`
+            &then=`+preview_1_293`
         ]]]]
 
         [[$tabsOuter?
-    &rows=`[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=`<p>[[getElementDescription? &name=`fbEmailGetJSON` &type=`patternLayoutFormula`]]
 </p>`
@@ -72,40 +68,66 @@
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[getElementDescription? &name=`fbEmailGetJSON` &type=`patternLayoutFormula`]]
+</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.usage_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`272`
+    &unique_idx=`288`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`273`
+	&unique_idx=`289`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -114,15 +136,15 @@
 	&pattern_name=`fbEmailGetJSON`
 	]]
 </div>
-        <div class="column">[[$headingBasic?
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`274`
+    &unique_idx=`290`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`275`
+	&unique_idx=`291`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -131,17 +153,64 @@
 	&pattern_name=`fbEmailGetJSON`
 	]]
 </div>
-    </div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`288`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`289`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`includedChunks,includedSnippets,includedTVs`
+	&pattern_template=`patternLayoutFormula`
+	&pattern_name=`fbEmailGetJSON`
+	]]
+</div>
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`290`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`291`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
+	&pattern_template=`patternLayoutFormula`
+	&pattern_name=`fbEmailGetJSON`
+	]]
+</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`267`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`283`
+    &layout_idx=`0`
 ]]
     </div>
 </div>
@@ -152,16 +221,16 @@
             &subject=`patternLayoutFormula`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fbGetForms` &prefix=`cf_2_290``
+            &then=`setPatternPlaceholders? &cbField=`fbGetForms` &prefix=`cf_2_306``
         ]]]]
         [[[[If?
             &subject=`patternLayoutFormula`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fbGetForms` &prefix=`cl_2_290``
+            &then=`setPatternPlaceholders? &cbLayout=`fbGetForms` &prefix=`cl_2_306``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_290`?
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_2_306`?
             &preview=`<pre><code class="language-html">--- Select a form ---=
 &#91;&#91;fbGetForms&#93;&#93;</code><div class="ui small top right attached label">[[%romanesco.patterns.example_label]]<i class="copy link icon with popup" data-content="[[%romanesco.patterns.copy_tooltip]]"></i></div></pre>`
             &code=`[[$codeSnippet?
@@ -176,10 +245,8 @@
             &sidebar_width=`six`
             &pattern_name=`fbGetForms`
             &pattern_template=`patternLayoutFormula`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`2`
-            &unique_idx=`290`
+            &unique_idx=`306`
         ]]
         
         [[[[modifiedIf?
@@ -197,7 +264,7 @@
                     &pattern_template=`patternLayoutFormula`
                     &pattern_status=`green`
                     &idx=`2`
-                    &unique_idx=`290`
+                    &unique_idx=`306`
                 `
         ]]]]
 
@@ -205,13 +272,11 @@
             &subject=`patternLayoutFormula`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_2_290`
+            &then=`+preview_2_306`
         ]]]]
 
         [[$tabsOuter?
-    &rows=`[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=`<p>[[getElementDescription? &name=`fbGetForms` &type=`patternLayoutFormula`]]
 </p>`
@@ -219,40 +284,66 @@
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[getElementDescription? &name=`fbGetForms` &type=`patternLayoutFormula`]]
+</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.usage_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`285`
+    &unique_idx=`301`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`286`
+	&unique_idx=`302`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -261,15 +352,15 @@
 	&pattern_name=`fbGetForms`
 	]]
 </div>
-        <div class="column">[[$headingBasic?
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`287`
+    &unique_idx=`303`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`288`
+	&unique_idx=`304`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -278,17 +369,64 @@
 	&pattern_name=`fbGetForms`
 	]]
 </div>
-    </div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`301`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`302`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`includedChunks,includedSnippets,includedTVs`
+	&pattern_template=`patternLayoutFormula`
+	&pattern_name=`fbGetForms`
+	]]
+</div>
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`303`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`304`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
+	&pattern_template=`patternLayoutFormula`
+	&pattern_name=`fbGetForms`
+	]]
+</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`280`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`296`
+    &layout_idx=`1`
 ]]
     </div>
 </div>
@@ -299,16 +437,16 @@
             &subject=`patternLayoutFormula`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fbLoadAssets` &prefix=`cf_3_303``
+            &then=`setPatternPlaceholders? &cbField=`fbLoadAssets` &prefix=`cf_3_319``
         ]]]]
         [[[[If?
             &subject=`patternLayoutFormula`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fbLoadAssets` &prefix=`cl_3_303``
+            &then=`setPatternPlaceholders? &cbLayout=`fbLoadAssets` &prefix=`cl_3_319``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_303`?
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_3_319`?
             &preview=`<pre><code class="language-html">&#91;&#91;fbLoadAssets&#93;&#93;</code><div class="ui small top right attached label">[[%romanesco.patterns.example_label]]<i class="copy link icon with popup" data-content="[[%romanesco.patterns.copy_tooltip]]"></i></div></pre>`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
@@ -322,10 +460,8 @@
             &sidebar_width=`six`
             &pattern_name=`fbLoadAssets`
             &pattern_template=`patternLayoutFormula`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`3`
-            &unique_idx=`303`
+            &unique_idx=`319`
         ]]
         
         [[[[modifiedIf?
@@ -343,7 +479,7 @@
                     &pattern_template=`patternLayoutFormula`
                     &pattern_status=`green`
                     &idx=`3`
-                    &unique_idx=`303`
+                    &unique_idx=`319`
                 `
         ]]]]
 
@@ -351,13 +487,11 @@
             &subject=`patternLayoutFormula`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_3_303`
+            &then=`+preview_3_319`
         ]]]]
 
         [[$tabsOuter?
-    &rows=`[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=`<p>[[getElementDescription? &name=`fbLoadAssets` &type=`patternLayoutFormula`]]
 </p>`
@@ -365,40 +499,66 @@
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[getElementDescription? &name=`fbLoadAssets` &type=`patternLayoutFormula`]]
+</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.usage_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`298`
+    &unique_idx=`314`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`299`
+	&unique_idx=`315`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -407,15 +567,15 @@
 	&pattern_name=`fbLoadAssets`
 	]]
 </div>
-        <div class="column">[[$headingBasic?
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`300`
+    &unique_idx=`316`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`301`
+	&unique_idx=`317`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -424,17 +584,64 @@
 	&pattern_name=`fbLoadAssets`
 	]]
 </div>
-    </div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`314`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`315`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`includedChunks,includedSnippets,includedTVs`
+	&pattern_template=`patternLayoutFormula`
+	&pattern_name=`fbLoadAssets`
+	]]
+</div>
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`316`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`317`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
+	&pattern_template=`patternLayoutFormula`
+	&pattern_name=`fbLoadAssets`
+	]]
+</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`293`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`309`
+    &layout_idx=`2`
 ]]
     </div>
 </div>
@@ -445,16 +652,16 @@
             &subject=`patternLayoutFormula`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fbSimplxWidgeteer` &prefix=`cf_4_316``
+            &then=`setPatternPlaceholders? &cbField=`fbSimplxWidgeteer` &prefix=`cf_4_332``
         ]]]]
         [[[[If?
             &subject=`patternLayoutFormula`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fbSimplxWidgeteer` &prefix=`cl_4_316``
+            &then=`setPatternPlaceholders? &cbLayout=`fbSimplxWidgeteer` &prefix=`cl_4_332``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_4_316`?
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_4_332`?
             &preview=`<pre><code class="language-html">&#91;&#91;!fbSimplxWidgeteer?
     &amp;dataSet=&#96;&#91;&#91;+data&#93;&#93;&#96;
     &amp;useChunkMatching=&#96;true&#96;
@@ -474,10 +681,8 @@
             &sidebar_width=`six`
             &pattern_name=`fbSimplxWidgeteer`
             &pattern_template=`patternLayoutFormula`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`4`
-            &unique_idx=`316`
+            &unique_idx=`332`
         ]]
         
         [[[[modifiedIf?
@@ -495,7 +700,7 @@
                     &pattern_template=`patternLayoutFormula`
                     &pattern_status=`green`
                     &idx=`4`
-                    &unique_idx=`316`
+                    &unique_idx=`332`
                 `
         ]]]]
 
@@ -503,13 +708,11 @@
             &subject=`patternLayoutFormula`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_4_316`
+            &then=`+preview_4_332`
         ]]]]
 
         [[$tabsOuter?
-    &rows=`[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=`<p>[[getElementDescription? &name=`fbSimplxWidgeteer` &type=`patternLayoutFormula`]]
 </p>`
@@ -517,40 +720,66 @@
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[getElementDescription? &name=`fbSimplxWidgeteer` &type=`patternLayoutFormula`]]
+</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.usage_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`311`
+    &unique_idx=`327`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`312`
+	&unique_idx=`328`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -559,15 +788,15 @@
 	&pattern_name=`fbSimplxWidgeteer`
 	]]
 </div>
-        <div class="column">[[$headingBasic?
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`313`
+    &unique_idx=`329`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`314`
+	&unique_idx=`330`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -576,17 +805,64 @@
 	&pattern_name=`fbSimplxWidgeteer`
 	]]
 </div>
-    </div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`327`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`328`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`includedChunks,includedSnippets,includedTVs`
+	&pattern_template=`patternLayoutFormula`
+	&pattern_name=`fbSimplxWidgeteer`
+	]]
+</div>
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`329`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`330`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
+	&pattern_template=`patternLayoutFormula`
+	&pattern_name=`fbSimplxWidgeteer`
+	]]
+</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`306`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`322`
+    &layout_idx=`3`
 ]]
     </div>
 </div>
@@ -597,16 +873,16 @@
             &subject=`patternLayoutFormula`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fbValidateProcessJSON` &prefix=`cf_5_329``
+            &then=`setPatternPlaceholders? &cbField=`fbValidateProcessJSON` &prefix=`cf_5_345``
         ]]]]
         [[[[If?
             &subject=`patternLayoutFormula`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fbValidateProcessJSON` &prefix=`cl_5_329``
+            &then=`setPatternPlaceholders? &cbLayout=`fbValidateProcessJSON` &prefix=`cl_5_345``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_5_329`?
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_5_345`?
             &preview=`<pre><code class="language-html">&#91;&#91;!fbValidateProcessJSON?
     &amp;json=&#96;&#91;&#91;+json_input&#93;&#93;&#96;
 &#93;&#93;</code><div class="ui small top right attached label">[[%romanesco.patterns.example_label]]<i class="copy link icon with popup" data-content="[[%romanesco.patterns.copy_tooltip]]"></i></div></pre>`
@@ -622,10 +898,8 @@
             &sidebar_width=`six`
             &pattern_name=`fbValidateProcessJSON`
             &pattern_template=`patternLayoutFormula`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`5`
-            &unique_idx=`329`
+            &unique_idx=`345`
         ]]
         
         [[[[modifiedIf?
@@ -643,7 +917,7 @@
                     &pattern_template=`patternLayoutFormula`
                     &pattern_status=`green`
                     &idx=`5`
-                    &unique_idx=`329`
+                    &unique_idx=`345`
                 `
         ]]]]
 
@@ -651,13 +925,11 @@
             &subject=`patternLayoutFormula`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_5_329`
+            &then=`+preview_5_345`
         ]]]]
 
         [[$tabsOuter?
-    &rows=`[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=`<p>[[getElementDescription? &name=`fbValidateProcessJSON` &type=`patternLayoutFormula`]]
 </p>`
@@ -665,40 +937,66 @@
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[getElementDescription? &name=`fbValidateProcessJSON` &type=`patternLayoutFormula`]]
+</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.usage_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`324`
+    &unique_idx=`340`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`325`
+	&unique_idx=`341`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -707,15 +1005,15 @@
 	&pattern_name=`fbValidateProcessJSON`
 	]]
 </div>
-        <div class="column">[[$headingBasic?
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`326`
+    &unique_idx=`342`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`327`
+	&unique_idx=`343`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -724,17 +1022,64 @@
 	&pattern_name=`fbValidateProcessJSON`
 	]]
 </div>
-    </div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`340`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`341`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`includedChunks,includedSnippets,includedTVs`
+	&pattern_template=`patternLayoutFormula`
+	&pattern_name=`fbValidateProcessJSON`
+	]]
+</div>
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`342`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`343`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
+	&pattern_template=`patternLayoutFormula`
+	&pattern_name=`fbValidateProcessJSON`
+	]]
+</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`319`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`335`
+    &layout_idx=`4`
 ]]
     </div>
 </div>
@@ -745,16 +1090,16 @@
             &subject=`patternLayoutFormula`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fbPrefixOutput` &prefix=`cf_6_342``
+            &then=`setPatternPlaceholders? &cbField=`fbPrefixOutput` &prefix=`cf_6_358``
         ]]]]
         [[[[If?
             &subject=`patternLayoutFormula`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fbPrefixOutput` &prefix=`cl_6_342``
+            &then=`setPatternPlaceholders? &cbLayout=`fbPrefixOutput` &prefix=`cl_6_358``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_6_342`?
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_6_358`?
             &preview=`<pre><code class="language-html">{{EXAMPLE SNIPPET CALL}}</code><div class="ui small top right attached label">[[%romanesco.patterns.example_label]]<i class="copy link icon with popup" data-content="[[%romanesco.patterns.copy_tooltip]]"></i></div></pre>`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
@@ -768,10 +1113,8 @@
             &sidebar_width=`six`
             &pattern_name=`fbPrefixOutput`
             &pattern_template=`patternLayoutFormula`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`6`
-            &unique_idx=`342`
+            &unique_idx=`358`
         ]]
         
         [[[[modifiedIf?
@@ -789,7 +1132,7 @@
                     &pattern_template=`patternLayoutFormula`
                     &pattern_status=`green`
                     &idx=`6`
-                    &unique_idx=`342`
+                    &unique_idx=`358`
                 `
         ]]]]
 
@@ -797,13 +1140,11 @@
             &subject=`patternLayoutFormula`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_6_342`
+            &then=`+preview_6_358`
         ]]]]
 
         [[$tabsOuter?
-    &rows=`[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=`<p>[[getElementDescription? &name=`fbPrefixOutput` &type=`patternLayoutFormula`]]
 </p>`
@@ -811,40 +1152,66 @@
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[getElementDescription? &name=`fbPrefixOutput` &type=`patternLayoutFormula`]]
+</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.usage_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`337`
+    &unique_idx=`353`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`338`
+	&unique_idx=`354`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -853,15 +1220,15 @@
 	&pattern_name=`fbPrefixOutput`
 	]]
 </div>
-        <div class="column">[[$headingBasic?
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`339`
+    &unique_idx=`355`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`340`
+	&unique_idx=`356`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -870,17 +1237,64 @@
 	&pattern_name=`fbPrefixOutput`
 	]]
 </div>
-    </div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`353`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`354`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`includedChunks,includedSnippets,includedTVs`
+	&pattern_template=`patternLayoutFormula`
+	&pattern_name=`fbPrefixOutput`
+	]]
+</div>
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`355`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`356`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
+	&pattern_template=`patternLayoutFormula`
+	&pattern_name=`fbPrefixOutput`
+	]]
+</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`332`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`348`
+    &layout_idx=`5`
 ]]
     </div>
 </div>
@@ -891,16 +1305,16 @@
             &subject=`patternLayoutFormula`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fbResetNonAlpha` &prefix=`cf_7_355``
+            &then=`setPatternPlaceholders? &cbField=`fbResetNonAlpha` &prefix=`cf_7_371``
         ]]]]
         [[[[If?
             &subject=`patternLayoutFormula`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fbResetNonAlpha` &prefix=`cl_7_355``
+            &then=`setPatternPlaceholders? &cbLayout=`fbResetNonAlpha` &prefix=`cl_7_371``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_7_355`?
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_7_371`?
             &preview=`<pre><code class="language-html">{{EXAMPLE SNIPPET CALL}}</code><div class="ui small top right attached label">[[%romanesco.patterns.example_label]]<i class="copy link icon with popup" data-content="[[%romanesco.patterns.copy_tooltip]]"></i></div></pre>`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
@@ -914,10 +1328,8 @@
             &sidebar_width=`six`
             &pattern_name=`fbResetNonAlpha`
             &pattern_template=`patternLayoutFormula`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`7`
-            &unique_idx=`355`
+            &unique_idx=`371`
         ]]
         
         [[[[modifiedIf?
@@ -935,7 +1347,7 @@
                     &pattern_template=`patternLayoutFormula`
                     &pattern_status=`green`
                     &idx=`7`
-                    &unique_idx=`355`
+                    &unique_idx=`371`
                 `
         ]]]]
 
@@ -943,13 +1355,11 @@
             &subject=`patternLayoutFormula`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_7_355`
+            &then=`+preview_7_371`
         ]]]]
 
         [[$tabsOuter?
-    &rows=`[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=`<p>[[getElementDescription? &name=`fbResetNonAlpha` &type=`patternLayoutFormula`]]
 </p>`
@@ -957,40 +1367,66 @@
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[getElementDescription? &name=`fbResetNonAlpha` &type=`patternLayoutFormula`]]
+</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.usage_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`350`
+    &unique_idx=`366`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`351`
+	&unique_idx=`367`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -999,15 +1435,15 @@
 	&pattern_name=`fbResetNonAlpha`
 	]]
 </div>
-        <div class="column">[[$headingBasic?
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`352`
+    &unique_idx=`368`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`353`
+	&unique_idx=`369`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -1016,17 +1452,64 @@
 	&pattern_name=`fbResetNonAlpha`
 	]]
 </div>
-    </div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`366`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`367`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`includedChunks,includedSnippets,includedTVs`
+	&pattern_template=`patternLayoutFormula`
+	&pattern_name=`fbResetNonAlpha`
+	]]
+</div>
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`368`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`369`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
+	&pattern_template=`patternLayoutFormula`
+	&pattern_name=`fbResetNonAlpha`
+	]]
+</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`345`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`361`
+    &layout_idx=`6`
 ]]
     </div>
 </div>
@@ -1037,16 +1520,16 @@
             &subject=`patternLayoutFormula`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fbStripAsAlias` &prefix=`cf_8_368``
+            &then=`setPatternPlaceholders? &cbField=`fbStripAsAlias` &prefix=`cf_8_384``
         ]]]]
         [[[[If?
             &subject=`patternLayoutFormula`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fbStripAsAlias` &prefix=`cl_8_368``
+            &then=`setPatternPlaceholders? &cbLayout=`fbStripAsAlias` &prefix=`cl_8_384``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_8_368`?
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_8_384`?
             &preview=`<pre><code class="language-html">{{EXAMPLE SNIPPET CALL}}</code><div class="ui small top right attached label">[[%romanesco.patterns.example_label]]<i class="copy link icon with popup" data-content="[[%romanesco.patterns.copy_tooltip]]"></i></div></pre>`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
@@ -1060,10 +1543,8 @@
             &sidebar_width=`six`
             &pattern_name=`fbStripAsAlias`
             &pattern_template=`patternLayoutFormula`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`8`
-            &unique_idx=`368`
+            &unique_idx=`384`
         ]]
         
         [[[[modifiedIf?
@@ -1081,7 +1562,7 @@
                     &pattern_template=`patternLayoutFormula`
                     &pattern_status=`green`
                     &idx=`8`
-                    &unique_idx=`368`
+                    &unique_idx=`384`
                 `
         ]]]]
 
@@ -1089,13 +1570,11 @@
             &subject=`patternLayoutFormula`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_8_368`
+            &then=`+preview_8_384`
         ]]]]
 
         [[$tabsOuter?
-    &rows=`[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=`<p>[[getElementDescription? &name=`fbStripAsAlias` &type=`patternLayoutFormula`]]
 </p>`
@@ -1103,40 +1582,66 @@
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[getElementDescription? &name=`fbStripAsAlias` &type=`patternLayoutFormula`]]
+</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.usage_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`363`
+    &unique_idx=`379`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`364`
+	&unique_idx=`380`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -1145,15 +1650,15 @@
 	&pattern_name=`fbStripAsAlias`
 	]]
 </div>
-        <div class="column">[[$headingBasic?
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`365`
+    &unique_idx=`381`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`366`
+	&unique_idx=`382`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -1162,17 +1667,64 @@
 	&pattern_name=`fbStripAsAlias`
 	]]
 </div>
-    </div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`379`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`380`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`includedChunks,includedSnippets,includedTVs`
+	&pattern_template=`patternLayoutFormula`
+	&pattern_name=`fbStripAsAlias`
+	]]
+</div>
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`381`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`382`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
+	&pattern_template=`patternLayoutFormula`
+	&pattern_name=`fbStripAsAlias`
+	]]
+</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`358`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`374`
+    &layout_idx=`7`
 ]]
     </div>
 </div>
@@ -1183,16 +1735,16 @@
             &subject=`patternLayoutFormula`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fbStripNonAlpha` &prefix=`cf_9_381``
+            &then=`setPatternPlaceholders? &cbField=`fbStripNonAlpha` &prefix=`cf_9_397``
         ]]]]
         [[[[If?
             &subject=`patternLayoutFormula`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fbStripNonAlpha` &prefix=`cl_9_381``
+            &then=`setPatternPlaceholders? &cbLayout=`fbStripNonAlpha` &prefix=`cl_9_397``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_9_381`?
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_9_397`?
             &preview=`<pre><code class="language-html">{{EXAMPLE SNIPPET CALL}}</code><div class="ui small top right attached label">[[%romanesco.patterns.example_label]]<i class="copy link icon with popup" data-content="[[%romanesco.patterns.copy_tooltip]]"></i></div></pre>`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
@@ -1206,10 +1758,8 @@
             &sidebar_width=`six`
             &pattern_name=`fbStripNonAlpha`
             &pattern_template=`patternLayoutFormula`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`9`
-            &unique_idx=`381`
+            &unique_idx=`397`
         ]]
         
         [[[[modifiedIf?
@@ -1227,7 +1777,7 @@
                     &pattern_template=`patternLayoutFormula`
                     &pattern_status=`green`
                     &idx=`9`
-                    &unique_idx=`381`
+                    &unique_idx=`397`
                 `
         ]]]]
 
@@ -1235,13 +1785,11 @@
             &subject=`patternLayoutFormula`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_9_381`
+            &then=`+preview_9_397`
         ]]]]
 
         [[$tabsOuter?
-    &rows=`[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=`<p>[[getElementDescription? &name=`fbStripNonAlpha` &type=`patternLayoutFormula`]]
 </p>`
@@ -1249,40 +1797,66 @@
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[getElementDescription? &name=`fbStripNonAlpha` &type=`patternLayoutFormula`]]
+</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.usage_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`376`
+    &unique_idx=`392`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`377`
+	&unique_idx=`393`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -1291,15 +1865,15 @@
 	&pattern_name=`fbStripNonAlpha`
 	]]
 </div>
-        <div class="column">[[$headingBasic?
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`378`
+    &unique_idx=`394`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`379`
+	&unique_idx=`395`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -1308,17 +1882,64 @@
 	&pattern_name=`fbStripNonAlpha`
 	]]
 </div>
-    </div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`392`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`393`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`includedChunks,includedSnippets,includedTVs`
+	&pattern_template=`patternLayoutFormula`
+	&pattern_name=`fbStripNonAlpha`
+	]]
+</div>
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`394`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`395`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
+	&pattern_template=`patternLayoutFormula`
+	&pattern_name=`fbStripNonAlpha`
+	]]
+</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`371`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`387`
+    &layout_idx=`8`
 ]]
     </div>
 </div>

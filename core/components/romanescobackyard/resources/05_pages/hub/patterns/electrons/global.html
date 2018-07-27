@@ -4,25 +4,23 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`global_background_img` &prefix=`cf_1_4029``
+            &then=`setPatternPlaceholders? &cbField=`global_background_img` &prefix=`cf_1_4045``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`global_background_img` &prefix=`cl_1_4029``
+            &then=`setPatternPlaceholders? &cbLayout=`global_background_img` &prefix=`cl_1_4045``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_4029`?
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_1_4045`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`global_background_img`
             &pattern_template=`patternLayoutElectronTV`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`1`
-            &unique_idx=`4029`
+            &unique_idx=`4045`
         ]]
         
         [[[[modifiedIf?
@@ -40,7 +38,7 @@
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
                     &idx=`1`
-                    &unique_idx=`4029`
+                    &unique_idx=`4045`
                 `
         ]]]]
 
@@ -48,28 +46,39 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_1_4029`
+            &then=`+preview_1_4045`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=`<p>Enables you to maintain a list of backgrounds, for use in various places inside your project. It lets you upload a background image and gives you some control over how the image will appear on the website. Will it look better with white or black text on top of it? And maybe you want to tone it down a little by applying a color mask?</p>`
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>Enables you to maintain a list of backgrounds, for use in various places inside your project. It lets you upload a background image and gives you some control over how the image will appear on the website. Will it look better with white or black text on top of it? And maybe you want to tone it down a little by applying a color mask?</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.specifications_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "caption": "Global background images",
     "name": "global_background_img",
@@ -84,25 +93,45 @@
         "GlobalBackgrounds"
     ]
 }`]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[jsonToHTML? &json=`{
+    "caption": "Global background images",
+    "name": "global_background_img",
+    "description": "These backgrounds can be applied to CB layouts (under their Settings wheel) and possibly to other elements too.",
+    "type": "migx",
+    "category": "Global - Images",
+    "sortOrder": "1",
+    "inputProperties": {
+        "configs": "global_background_images"
+    },
+    "templates": [
+        "GlobalBackgrounds"
+    ]
+}`]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4024`
+    &unique_idx=`4040`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`4025`
+	&unique_idx=`4041`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -111,15 +140,15 @@
 	&pattern_name=`global_background_img`
 	]]
 </div>
-        <div class="column">[[$headingBasic?
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4026`
+    &unique_idx=`4042`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`4027`
+	&unique_idx=`4043`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -128,17 +157,64 @@
 	&pattern_name=`global_background_img`
 	]]
 </div>
-    </div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_templates]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`4040`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`4041`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`assignedTemplates`
+	&pattern_template=`patternLayoutElectronTV`
+	&pattern_name=`global_background_img`
+	]]
+</div>
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`4042`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`4043`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_template=`patternLayoutElectronTV`
+	&pattern_name=`global_background_img`
+	]]
+</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`4019`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`4035`
+    &layout_idx=`0`
 ]]
     </div>
 </div>
@@ -149,25 +225,23 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`header_background` &prefix=`cf_2_4042``
+            &then=`setPatternPlaceholders? &cbField=`header_background` &prefix=`cf_2_4058``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`header_background` &prefix=`cl_2_4042``
+            &then=`setPatternPlaceholders? &cbLayout=`header_background` &prefix=`cl_2_4058``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_4042`?
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_2_4058`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`header_background`
             &pattern_template=`patternLayoutElectronTV`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`2`
-            &unique_idx=`4042`
+            &unique_idx=`4058`
         ]]
         
         [[[[modifiedIf?
@@ -185,7 +259,7 @@
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
                     &idx=`2`
-                    &unique_idx=`4042`
+                    &unique_idx=`4058`
                 `
         ]]]]
 
@@ -193,13 +267,11 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_2_4042`
+            &then=`+preview_2_4058`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=`<p>Lets you select a background from the <a href="[[~[[*id]]]]#global_background_img">global_background_img</a> grid, for use in the header of a page. The background will be stretched out over the full width of the browser window.
 </p><p>The background you select will also be inherited by all child pages by default, meaning you can instantly apply a header background to an entire group of pages. Ideal for quickly adding some design to your project. You can <a href="pattern-library/electrons/headers#header_inheritance">change the inheritance settings</a> too by the way, or override a header background for an individual page. This ensures you always end up with the header you want. <br>
@@ -208,15 +280,30 @@
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>Lets you select a background from the <a href="[[~[[*id]]]]#global_background_img">global_background_img</a> grid, for use in the header of a page. The background will be stretched out over the full width of the browser window.
+</p><p>The background you select will also be inherited by all child pages by default, meaning you can instantly apply a header background to an entire group of pages. Ideal for quickly adding some design to your project. You can <a href="pattern-library/electrons/headers#header_inheritance">change the inheritance settings</a> too by the way, or override a header background for an individual page. This ensures you always end up with the header you want. <br>
+</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.specifications_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "caption": "Background",
     "name": "header_background",
@@ -230,25 +317,44 @@
         "@@templates_all"
     ]
 }`]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[jsonToHTML? &json=`{
+    "caption": "Background",
+    "name": "header_background",
+    "description": "Select a background for this header. You can define these backgrounds under Content > Global Content > Backgrounds. Will also be inherited by default.",
+    "type": "listbox",
+    "category": "Header",
+    "sortOrder": "10",
+    "inputOptionValues": "@CHUNK globalBackgroundImgTVOptions",
+    "defaultValue": "@INHERIT",
+    "templates": [
+        "@@templates_all"
+    ]
+}`]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4035`
+    &unique_idx=`4051`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`4036`
+	&unique_idx=`4052`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -257,38 +363,29 @@
 	&pattern_name=`header_background`
 	]]
 </div>
-        <div class="column">[[$headingBasic?
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4037`
+    &unique_idx=`4053`
 ]]
 
-[[!cbRenderCodeField?
-    &valueRendered=`<div class="ui list">
+<div class="ui list">
     [[$includedPatternsRow?
         &name=`globalBackgroundImgTVOptions`
         &category=`50`
     ]]
-</div>`
-    &valueRaw=`<div class="ui list">
-    [[$includedPatternsRow?
-        &name=`globalBackgroundImgTVOptions`
-        &category=`50`
-    ]]
-</div>`
-    &renderTag=`ignore`
-]]
+</div>
 
 [[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4039`
+    &unique_idx=`4055`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`4040`
+	&unique_idx=`4056`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -297,17 +394,78 @@
 	&pattern_name=`header_background`
 	]]
 </div>
-    </div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_templates]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`4051`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`4052`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`assignedTemplates`
+	&pattern_template=`patternLayoutElectronTV`
+	&pattern_name=`header_background`
+	]]
+</div>
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`4053`
+]]
+
+<div class="ui list">
+    [[$includedPatternsRow?
+        &name=`globalBackgroundImgTVOptions`
+        &category=`50`
+    ]]
+</div>
+
+[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`4055`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`4056`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_template=`patternLayoutElectronTV`
+	&pattern_name=`header_background`
+	]]
+</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`4030`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`4046`
+    &layout_idx=`1`
 ]]
     </div>
 </div>

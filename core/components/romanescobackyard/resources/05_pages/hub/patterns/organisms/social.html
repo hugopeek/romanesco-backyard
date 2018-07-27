@@ -4,24 +4,18 @@
             &subject=`patternLayoutOrganism`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`twitterFeedOuter` &prefix=`cf_1_4532``
+            &then=`setPatternPlaceholders? &cbField=`twitterFeedOuter` &prefix=`cf_1_4548``
         ]]]]
         [[[[If?
             &subject=`patternLayoutOrganism`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`twitterFeedOuter` &prefix=`cl_1_4532``
+            &then=`setPatternPlaceholders? &cbLayout=`twitterFeedOuter` &prefix=`cl_1_4548``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_4532`?
-            &preview=`[[!cbRenderCodeField?
-    &valueRendered=`[[$twitterFeedOuter?
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_1_4548`?
+            &preview=`[[$twitterFeedOuter?
     &cols=`1`
-]]`
-    &valueRaw=`[[$twitterFeedOuter:tag?
-    &cols=`1`
-]]`
-    &renderTag=`render`
 ]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
@@ -35,10 +29,8 @@
             &sidebar_width=`five`
             &pattern_name=`twitterFeedOuter`
             &pattern_template=`patternLayoutOrganism`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`1`
-            &unique_idx=`4532`
+            &unique_idx=`4548`
         ]]
         
         [[[[modifiedIf?
@@ -56,7 +48,7 @@
                     &pattern_template=`patternLayoutOrganism`
                     &pattern_status=`green`
                     &idx=`1`
-                    &unique_idx=`4532`
+                    &unique_idx=`4548`
                 `
         ]]]]
 
@@ -64,13 +56,11 @@
             &subject=`patternLayoutOrganism`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_1_4532`
+            &then=`+preview_1_4548`
         ]]]]
 
         [[$tabsOuter?
-    &rows=`[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=`<p>[[getElementDescription? &name=`twitterFeedOuter` &type=`patternLayoutOrganism`]]
 </p>`
@@ -78,40 +68,66 @@
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[getElementDescription? &name=`twitterFeedOuter` &type=`patternLayoutOrganism`]]
+</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.usage_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4527`
+    &unique_idx=`4543`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`4528`
+	&unique_idx=`4544`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -120,15 +136,15 @@
 	&pattern_name=`twitterFeedOuter`
 	]]
 </div>
-        <div class="column">[[$headingBasic?
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4529`
+    &unique_idx=`4545`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`4530`
+	&unique_idx=`4546`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -137,17 +153,64 @@
 	&pattern_name=`twitterFeedOuter`
 	]]
 </div>
-    </div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`4543`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`4544`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`includedChunks,includedSnippets,includedTVs`
+	&pattern_template=`patternLayoutOrganism`
+	&pattern_name=`twitterFeedOuter`
+	]]
+</div>
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`4545`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`4546`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
+	&pattern_template=`patternLayoutOrganism`
+	&pattern_name=`twitterFeedOuter`
+	]]
+</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`4522`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`4538`
+    &layout_idx=`0`
 ]]
     </div>
 </div>

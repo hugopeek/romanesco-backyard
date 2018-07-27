@@ -4,25 +4,23 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`cb_field_code_id` &prefix=`cf_1_3583``
+            &then=`setPatternPlaceholders? &cbField=`cb_field_code_id` &prefix=`cf_1_3599``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`cb_field_code_id` &prefix=`cl_1_3583``
+            &then=`setPatternPlaceholders? &cbLayout=`cb_field_code_id` &prefix=`cl_1_3599``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_3583`?
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_1_3599`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`cb_field_code_id`
             &pattern_template=`patternLayoutElectronSystemSetting`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`1`
-            &unique_idx=`3583`
+            &unique_idx=`3599`
         ]]
         
         [[[[modifiedIf?
@@ -40,7 +38,7 @@
                     &pattern_template=`patternLayoutElectronSystemSetting`
                     &pattern_status=`green`
                     &idx=`1`
-                    &unique_idx=`3583`
+                    &unique_idx=`3599`
                 `
         ]]]]
 
@@ -48,13 +46,11 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_1_3583`
+            &then=`+preview_1_3599`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=`<p>System setting to indicate which ID the 'Code' ContentBlock has inside this installation. This is used to only load the assets for code highlighting if a code block is present on the page.<br>
 </p>`
@@ -62,40 +58,66 @@
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>System setting to indicate which ID the 'Code' ContentBlock has inside this installation. This is used to only load the assets for code highlighting if a code block is present on the page.<br>
+</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.specifications_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "key": "cb_field_code_id",
     "type": "numberfield",
     "area": "ContentBlocks - Settings",
     "value": ""
 }`]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[jsonToHTML? &json=`{
+    "key": "cb_field_code_id",
+    "type": "numberfield",
+    "area": "ContentBlocks - Settings",
+    "value": ""
+}`]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3580`
+    &unique_idx=`3596`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3581`
+	&unique_idx=`3597`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -104,18 +126,49 @@
 	&pattern_name=`cb_field_code_id`
 	]]
 </div>
-        <div class="column"></div>
-    </div>
-</div>`
+    <div class="column"></div>
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`3596`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`3597`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_template=`patternLayoutElectronSystemSetting`
+	&pattern_name=`cb_field_code_id`
+	]]
+</div>
+    <div class="column"></div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`3575`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`3591`
+    &layout_idx=`0`
 ]]
     </div>
 </div>

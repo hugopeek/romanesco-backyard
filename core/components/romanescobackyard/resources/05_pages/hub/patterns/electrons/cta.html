@@ -4,25 +4,23 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`cta_availability` &prefix=`cf_1_3594``
+            &then=`setPatternPlaceholders? &cbField=`cta_availability` &prefix=`cf_1_3610``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`cta_availability` &prefix=`cl_1_3594``
+            &then=`setPatternPlaceholders? &cbLayout=`cta_availability` &prefix=`cl_1_3610``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_3594`?
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_1_3610`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`cta_availability`
             &pattern_template=`patternLayoutElectronTV`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`1`
-            &unique_idx=`3594`
+            &unique_idx=`3610`
         ]]
         
         [[[[modifiedIf?
@@ -40,7 +38,7 @@
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
                     &idx=`1`
-                    &unique_idx=`3594`
+                    &unique_idx=`3610`
                 `
         ]]]]
 
@@ -48,13 +46,11 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_1_3594`
+            &then=`+preview_1_3610`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=`<p>This setting was created to increase the reusability of each CTA, while preventing it from being (un)intentionally added in the wrong places.
 </p><p>By selecting a given checkbox, the CTA will show up as an option somewhere in the configuration of that area (Header, Content, Sidebar or Footer).<br>
@@ -63,15 +59,30 @@
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>This setting was created to increase the reusability of each CTA, while preventing it from being (un)intentionally added in the wrong places.
+</p><p>By selecting a given checkbox, the CTA will show up as an option somewhere in the configuration of that area (Header, Content, Sidebar or Footer).<br>
+</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.specifications_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "caption": "Availability",
     "name": "cta_availability",
@@ -84,25 +95,43 @@
         "GlobalCTA"
     ]
 }`]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[jsonToHTML? &json=`{
+    "caption": "Availability",
+    "name": "cta_availability",
+    "description": "Where would you like to be able to place this CTA?",
+    "type": "checkbox",
+    "category": "CTA - Settings",
+    "sortOrder": "1",
+    "inputOptionValues": "In page header==header||In sidebar (on detail pages)==sidebar||In the content (through CB)==content||Below the content==footer",
+    "templates": [
+        "GlobalCTA"
+    ]
+}`]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3589`
+    &unique_idx=`3605`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3590`
+	&unique_idx=`3606`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -111,15 +140,15 @@
 	&pattern_name=`cta_availability`
 	]]
 </div>
-        <div class="column">[[$headingBasic?
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3591`
+    &unique_idx=`3607`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3592`
+	&unique_idx=`3608`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -128,17 +157,64 @@
 	&pattern_name=`cta_availability`
 	]]
 </div>
-    </div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_templates]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`3605`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`3606`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`assignedTemplates`
+	&pattern_template=`patternLayoutElectronTV`
+	&pattern_name=`cta_availability`
+	]]
+</div>
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`3607`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`3608`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_template=`patternLayoutElectronTV`
+	&pattern_name=`cta_availability`
+	]]
+</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`3584`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`3600`
+    &layout_idx=`0`
 ]]
     </div>
 </div>
@@ -149,25 +225,23 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`header_cta` &prefix=`cf_2_3605``
+            &then=`setPatternPlaceholders? &cbField=`header_cta` &prefix=`cf_2_3621``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`header_cta` &prefix=`cl_2_3605``
+            &then=`setPatternPlaceholders? &cbLayout=`header_cta` &prefix=`cl_2_3621``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_3605`?
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_2_3621`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`header_cta`
             &pattern_template=`patternLayoutElectronTV`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`2`
-            &unique_idx=`3605`
+            &unique_idx=`3621`
         ]]
         
         [[[[modifiedIf?
@@ -185,7 +259,7 @@
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
                     &idx=`2`
-                    &unique_idx=`3605`
+                    &unique_idx=`3621`
                 `
         ]]]]
 
@@ -193,28 +267,39 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_2_3605`
+            &then=`+preview_2_3621`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=`<p>Generates a list of available CTAs inside the header and allows you to select one.</p>`
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>Generates a list of available CTAs inside the header and allows you to select one.</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.specifications_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "caption": "Call to action (CTA)",
     "name": "header_cta",
@@ -228,25 +313,44 @@
         "@@templates_all"
     ]
 }`]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[jsonToHTML? &json=`{
+    "caption": "Call to action (CTA)",
+    "name": "header_cta",
+    "description": "Select a CTA for display in header. CTAs can be created under Global Content. This will replace the Title values, but Background settings still apply. Please note that possibly inherited CTAs might not be visible on page because of Inheritance setting.",
+    "type": "listbox",
+    "category": "Header",
+    "sortOrder": "20",
+    "defaultValue": "@INHERIT",
+    "inputOptionValues": "@CHUNK tvSelectCTA",
+    "templates": [
+        "@@templates_all"
+    ]
+}`]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3600`
+    &unique_idx=`3616`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3601`
+	&unique_idx=`3617`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -255,15 +359,15 @@
 	&pattern_name=`header_cta`
 	]]
 </div>
-        <div class="column">[[$headingBasic?
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3602`
+    &unique_idx=`3618`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3603`
+	&unique_idx=`3619`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -272,17 +376,64 @@
 	&pattern_name=`header_cta`
 	]]
 </div>
-    </div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_templates]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`3616`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`3617`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`assignedTemplates`
+	&pattern_template=`patternLayoutElectronTV`
+	&pattern_name=`header_cta`
+	]]
+</div>
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`3618`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`3619`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_template=`patternLayoutElectronTV`
+	&pattern_name=`header_cta`
+	]]
+</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`3595`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`3611`
+    &layout_idx=`1`
 ]]
     </div>
 </div>

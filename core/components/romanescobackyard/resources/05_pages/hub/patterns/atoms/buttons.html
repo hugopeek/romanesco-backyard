@@ -4,26 +4,19 @@
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`buttonHrefBasic` &prefix=`cf_1_2163``
+            &then=`setPatternPlaceholders? &cbField=`buttonHrefBasic` &prefix=`cf_1_13``
         ]]]]
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`buttonHrefBasic` &prefix=`cl_1_2163``
+            &then=`setPatternPlaceholders? &cbLayout=`buttonHrefBasic` &prefix=`cl_1_13``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_2163`?
-            &preview=`[[!cbRenderCodeField?
-    &valueRendered=`[[$buttonHrefBasic?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_13`?
+            &preview=`[[$buttonHrefBasic?
     &button_text=`Call me a button`
     &link=`[[~[[*id]]]]#buttonHrefBasic`
-]]`
-    &valueRaw=`[[$buttonHrefBasic:tag?
-    &button_text=`Call me a button`
-    &link=`[[~[[*id]]]]#buttonHrefBasic`
-]]`
-    &renderTag=`render`
 ]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
@@ -40,7 +33,7 @@
             &raw_tags=`[[+raw_tags]]`
             &rendered_tags=`[[+rendered_tags]]`
             &idx=`1`
-            &unique_idx=`2163`
+            &unique_idx=`13`
         ]]
         
         [[[[modifiedIf?
@@ -58,7 +51,7 @@
                     &pattern_template=`patternLayoutAtom`
                     &pattern_status=`green`
                     &idx=`1`
-                    &unique_idx=`2163`
+                    &unique_idx=`13`
                 `
         ]]]]
 
@@ -66,53 +59,76 @@
             &subject=`patternLayoutAtom`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_1_2163`
+            &then=`+preview_1_13`
         ]]]]
 
         [[$tabsOuter?
-    &rows=`[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=`<p>[[getElementDescription? &name=`buttonHrefBasic` &type=`patternLayoutAtom`]]</p>`
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=``
+    &heading_icon=``
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[getElementDescription? &name=`buttonHrefBasic` &type=`patternLayoutAtom`]]</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.usage_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=``
+    &heading_icon=``
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`References`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`2158`
+    &unique_idx=`8`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`2159`
+	&unique_idx=`9`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -121,15 +137,15 @@
 	&pattern_name=`buttonHrefBasic`
 	]]
 </div>
-        <div class="column">[[$headingBasic?
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`2160`
+    &unique_idx=`10`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`2161`
+	&unique_idx=`11`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -138,17 +154,64 @@
 	&pattern_name=`buttonHrefBasic`
 	]]
 </div>
-    </div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`References`
+    &heading_level=`h4`
+    &heading_subtitle=``
+    &heading_icon=``
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`8`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`9`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`includedChunks,includedSnippets,includedTVs`
+	&pattern_template=`patternLayoutAtom`
+	&pattern_name=`buttonHrefBasic`
+	]]
+</div>
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`10`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`11`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
+	&pattern_template=`patternLayoutAtom`
+	&pattern_name=`buttonHrefBasic`
+	]]
+</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`2153`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`3`
+    &layout_idx=`0`
 ]]
     </div>
 </div>
@@ -159,28 +222,20 @@
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`buttonHrefIcon` &prefix=`cf_2_2176``
+            &then=`setPatternPlaceholders? &cbField=`buttonHrefIcon` &prefix=`cf_2_26``
         ]]]]
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`buttonHrefIcon` &prefix=`cl_2_2176``
+            &then=`setPatternPlaceholders? &cbLayout=`buttonHrefIcon` &prefix=`cl_2_26``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_2176`?
-            &preview=`[[!cbRenderCodeField?
-    &valueRendered=`[[$buttonHrefIcon?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_26`?
+            &preview=`[[$buttonHrefIcon?
     &button_text=`I am still a button`
     &link=`[[~[[*id]]]]#buttonHrefIcon`
     &icon_class=`check`
-]]`
-    &valueRaw=`[[$buttonHrefIcon:tag?
-    &button_text=`I am still a button`
-    &link=`[[~[[*id]]]]#buttonHrefIcon`
-    &icon_class=`check`
-]]`
-    &renderTag=`render`
 ]]`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
@@ -197,7 +252,7 @@
             &raw_tags=`[[+raw_tags]]`
             &rendered_tags=`[[+rendered_tags]]`
             &idx=`2`
-            &unique_idx=`2176`
+            &unique_idx=`26`
         ]]
         
         [[[[modifiedIf?
@@ -215,7 +270,7 @@
                     &pattern_template=`patternLayoutAtom`
                     &pattern_status=`green`
                     &idx=`2`
-                    &unique_idx=`2176`
+                    &unique_idx=`26`
                 `
         ]]]]
 
@@ -223,53 +278,76 @@
             &subject=`patternLayoutAtom`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_2_2176`
+            &then=`+preview_2_26`
         ]]]]
 
         [[$tabsOuter?
-    &rows=`[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=`<p>[[getElementDescription? &name=`buttonHrefIcon` &type=`patternLayoutAtom`]]</p>`
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=``
+    &heading_icon=``
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[getElementDescription? &name=`buttonHrefIcon` &type=`patternLayoutAtom`]]</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.usage_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=``
+    &heading_icon=``
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`2171`
+    &unique_idx=`21`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`2172`
+	&unique_idx=`22`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -278,15 +356,15 @@
 	&pattern_name=`buttonHrefIcon`
 	]]
 </div>
-        <div class="column">[[$headingBasic?
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`2173`
+    &unique_idx=`23`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`2174`
+	&unique_idx=`24`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -295,17 +373,64 @@
 	&pattern_name=`buttonHrefIcon`
 	]]
 </div>
-    </div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=``
+    &heading_icon=``
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`21`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`22`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`includedChunks,includedSnippets,includedTVs`
+	&pattern_template=`patternLayoutAtom`
+	&pattern_name=`buttonHrefIcon`
+	]]
+</div>
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`23`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`24`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
+	&pattern_template=`patternLayoutAtom`
+	&pattern_name=`buttonHrefIcon`
+	]]
+</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`2166`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`16`
+    &layout_idx=`1`
 ]]
     </div>
 </div>
@@ -316,18 +441,18 @@
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`buttonHrefOverview` &prefix=`cf_3_2189``
+            &then=`setPatternPlaceholders? &cbField=`buttonHrefOverview` &prefix=`cf_3_39``
         ]]]]
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`buttonHrefOverview` &prefix=`cl_3_2189``
+            &then=`setPatternPlaceholders? &cbLayout=`buttonHrefOverview` &prefix=`cl_3_39``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_2189`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_39`?
             &preview=`[[$overviewOuterSpecific? 
-	&unique_idx=`2177`
+	&unique_idx=`27`
 	&layout_id=`17`
 	&layout_column=`preview`
 	&layout_idx=`2`
@@ -360,7 +485,7 @@
             &raw_tags=`[[+raw_tags]]`
             &rendered_tags=`[[+rendered_tags]]`
             &idx=`3`
-            &unique_idx=`2189`
+            &unique_idx=`39`
         ]]
         
         [[[[modifiedIf?
@@ -378,7 +503,7 @@
                     &pattern_template=`patternLayoutAtom`
                     &pattern_status=`yellow`
                     &idx=`3`
-                    &unique_idx=`2189`
+                    &unique_idx=`39`
                 `
         ]]]]
 
@@ -386,53 +511,76 @@
             &subject=`patternLayoutAtom`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_3_2189`
+            &then=`+preview_3_39`
         ]]]]
 
         [[$tabsOuter?
-    &rows=`[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=`<p>[[getElementDescription? &name=`buttonHrefOverview` &type=`patternLayoutAtom`]]</p>`
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=``
+    &heading_icon=``
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[getElementDescription? &name=`buttonHrefOverview` &type=`patternLayoutAtom`]]</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.usage_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.usage_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=``
+    &heading_icon=``
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$tabsRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`2184`
+    &unique_idx=`34`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`2185`
+	&unique_idx=`35`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -441,15 +589,15 @@
 	&pattern_name=`buttonHrefOverview`
 	]]
 </div>
-        <div class="column">[[$headingBasic?
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`2186`
+    &unique_idx=`36`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`2187`
+	&unique_idx=`37`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -458,17 +606,64 @@
 	&pattern_name=`buttonHrefOverview`
 	]]
 </div>
-    </div>
-</div>`
+</div>`]]
+[[$tabsRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=``
+    &heading_icon=``
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.included_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`34`
+]]
+
+[[$includedPatternsOuter? 
+	&unique_idx=`35`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`includedChunks,includedSnippets,includedTVs`
+	&pattern_template=`patternLayoutAtom`
+	&pattern_name=`buttonHrefOverview`
+	]]
+</div>
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`36`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`37`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
+	&pattern_template=`patternLayoutAtom`
+	&pattern_name=`buttonHrefOverview`
+	]]
+</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=``
     &tab_type=`regular`
-    &unique_idx=`2179`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`29`
+    &layout_idx=`2`
 ]]
     </div>
 </div>

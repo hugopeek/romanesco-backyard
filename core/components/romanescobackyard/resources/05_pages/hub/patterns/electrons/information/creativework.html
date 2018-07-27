@@ -4,25 +4,23 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`author_id` &prefix=`cf_1_4207``
+            &then=`setPatternPlaceholders? &cbField=`author_id` &prefix=`cf_1_4223``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`author_id` &prefix=`cl_1_4207``
+            &then=`setPatternPlaceholders? &cbLayout=`author_id` &prefix=`cl_1_4223``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_4207`?
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_1_4223`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`author_id`
             &pattern_template=`patternLayoutElectronTV`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`1`
-            &unique_idx=`4207`
+            &unique_idx=`4223`
         ]]
         
         [[[[modifiedIf?
@@ -40,7 +38,7 @@
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
                     &idx=`1`
-                    &unique_idx=`4207`
+                    &unique_idx=`4223`
                 `
         ]]]]
 
@@ -48,28 +46,39 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_1_4207`
+            &then=`+preview_1_4223`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.specifications_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "caption": "Author",
     "name": "author_id",
@@ -87,25 +96,48 @@
         "Article - Sidenotes"
     ]
 }`]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[jsonToHTML? &json=`{
+    "caption": "Author",
+    "name": "author_id",
+    "description": "Select the author of this article. He or she must be a MODX user.",
+    "type": "listbox",
+    "inputOptionValues": "@SELECT '' AS username, '' AS id UNION ALL ( SELECT username, id FROM `modx_users` ORDER BY username )",
+    "category": "About",
+    "sortOrder": "1",
+    "templates": [
+        "ArticleTraditional",
+        "ArticleReadability",
+        "ArticleSidenotes",
+        "Article - Traditional",
+        "Article - Readability",
+        "Article - Sidenotes"
+    ]
+}`]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4202`
+    &unique_idx=`4218`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`4203`
+	&unique_idx=`4219`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -114,15 +146,15 @@
 	&pattern_name=`author_id`
 	]]
 </div>
-        <div class="column">[[$headingBasic?
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4204`
+    &unique_idx=`4220`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`4205`
+	&unique_idx=`4221`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -131,17 +163,64 @@
 	&pattern_name=`author_id`
 	]]
 </div>
-    </div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_templates]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`4218`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`4219`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`assignedTemplates`
+	&pattern_template=`patternLayoutElectronTV`
+	&pattern_name=`author_id`
+	]]
+</div>
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`4220`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`4221`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_template=`patternLayoutElectronTV`
+	&pattern_name=`author_id`
+	]]
+</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`4197`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`4213`
+    &layout_idx=`0`
 ]]
     </div>
 </div>
@@ -152,25 +231,23 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`comments_toggle` &prefix=`cf_2_4218``
+            &then=`setPatternPlaceholders? &cbField=`comments_toggle` &prefix=`cf_2_4234``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`comments_toggle` &prefix=`cl_2_4218``
+            &then=`setPatternPlaceholders? &cbLayout=`comments_toggle` &prefix=`cl_2_4234``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_4218`?
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_2_4234`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`comments_toggle`
             &pattern_template=`patternLayoutElectronTV`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`2`
-            &unique_idx=`4218`
+            &unique_idx=`4234`
         ]]
         
         [[[[modifiedIf?
@@ -188,7 +265,7 @@
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
                     &idx=`2`
-                    &unique_idx=`4218`
+                    &unique_idx=`4234`
                 `
         ]]]]
 
@@ -196,28 +273,39 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_2_4218`
+            &then=`+preview_2_4234`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.specifications_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "caption": "Comments",
     "name": "comments_toggle",
@@ -235,25 +323,48 @@
         "Article - Sidenotes"
     ]
 }`]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[jsonToHTML? &json=`{
+    "caption": "Comments",
+    "name": "comments_toggle",
+    "description": "Enable or disable comments.",
+    "type": "option",
+    "inputOptionValues": "Active==1||Disabled==0",
+    "category": "Comments",
+    "sortOrder": "1",
+    "templates": [
+        "ArticleTraditional",
+        "ArticleReadability",
+        "ArticleSidenotes",
+        "Article - Traditional",
+        "Article - Readability",
+        "Article - Sidenotes"
+    ]
+}`]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4213`
+    &unique_idx=`4229`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`4214`
+	&unique_idx=`4230`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -262,15 +373,15 @@
 	&pattern_name=`comments_toggle`
 	]]
 </div>
-        <div class="column">[[$headingBasic?
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4215`
+    &unique_idx=`4231`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`4216`
+	&unique_idx=`4232`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -279,17 +390,64 @@
 	&pattern_name=`comments_toggle`
 	]]
 </div>
-    </div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_templates]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`4229`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`4230`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`assignedTemplates`
+	&pattern_template=`patternLayoutElectronTV`
+	&pattern_name=`comments_toggle`
+	]]
+</div>
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`4231`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`4232`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_template=`patternLayoutElectronTV`
+	&pattern_name=`comments_toggle`
+	]]
+</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`4208`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`4224`
+    &layout_idx=`1`
 ]]
     </div>
 </div>

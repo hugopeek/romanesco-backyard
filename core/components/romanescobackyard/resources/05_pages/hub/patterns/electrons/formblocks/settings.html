@@ -4,25 +4,23 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`formblocks.container_id` &prefix=`cf_1_4436``
+            &then=`setPatternPlaceholders? &cbField=`formblocks.container_id` &prefix=`cf_1_4452``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`formblocks.container_id` &prefix=`cl_1_4436``
+            &then=`setPatternPlaceholders? &cbLayout=`formblocks.container_id` &prefix=`cl_1_4452``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_4436`?
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_1_4452`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`formblocks.container_id`
             &pattern_template=`patternLayoutElectronSystemSetting`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`1`
-            &unique_idx=`4436`
+            &unique_idx=`4452`
         ]]
         
         [[[[modifiedIf?
@@ -40,7 +38,7 @@
                     &pattern_template=`patternLayoutElectronSystemSetting`
                     &pattern_status=`green`
                     &idx=`1`
-                    &unique_idx=`4436`
+                    &unique_idx=`4452`
                 `
         ]]]]
 
@@ -48,53 +46,76 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_1_4436`
+            &then=`+preview_1_4452`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=`<p>Specify which resource contains all the forms built with FormBlocks.</p>`
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>Specify which resource contains all the forms built with FormBlocks.</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.specifications_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "key": "container_id",
     "namespace": "formblocks",
     "type": "textfield",
     "area": "FormBlocks - Pages"
 }`]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[jsonToHTML? &json=`{
+    "key": "container_id",
+    "namespace": "formblocks",
+    "type": "textfield",
+    "area": "FormBlocks - Pages"
+}`]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4433`
+    &unique_idx=`4449`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`4434`
+	&unique_idx=`4450`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -103,18 +124,49 @@
 	&pattern_name=`formblocks.container_id`
 	]]
 </div>
-        <div class="column"></div>
-    </div>
-</div>`
+    <div class="column"></div>
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`4449`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`4450`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`referringSnippets,referringTemplates`
+	&pattern_template=`patternLayoutElectronSystemSetting`
+	&pattern_name=`formblocks.container_id`
+	]]
+</div>
+    <div class="column"></div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`4428`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`4444`
+    &layout_idx=`0`
 ]]
     </div>
 </div>
@@ -125,25 +177,23 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`formblocks.save_form` &prefix=`cf_2_4445``
+            &then=`setPatternPlaceholders? &cbField=`formblocks.save_form` &prefix=`cf_2_4461``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`formblocks.save_form` &prefix=`cl_2_4445``
+            &then=`setPatternPlaceholders? &cbLayout=`formblocks.save_form` &prefix=`cl_2_4461``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_4445`?
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_2_4461`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`formblocks.save_form`
             &pattern_template=`patternLayoutElectronSystemSetting`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`2`
-            &unique_idx=`4445`
+            &unique_idx=`4461`
         ]]
         
         [[[[modifiedIf?
@@ -161,7 +211,7 @@
                     &pattern_template=`patternLayoutElectronSystemSetting`
                     &pattern_status=`green`
                     &idx=`2`
-                    &unique_idx=`4445`
+                    &unique_idx=`4461`
                 `
         ]]]]
 
@@ -169,28 +219,39 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_2_4445`
+            &then=`+preview_2_4461`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=`<p>Enable or disable the option to save each form submission in the database. The saved forms can be accessed from the top menu through Extras &gt; FormIt.</p>`
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>Enable or disable the option to save each form submission in the database. The saved forms can be accessed from the top menu through Extras &gt; FormIt.</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.specifications_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "key": "save_form",
     "namespace": "formblocks",
@@ -198,25 +259,38 @@
     "area": "FormBlocks - Settings",
     "value": "1"
 }`]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[jsonToHTML? &json=`{
+    "key": "save_form",
+    "namespace": "formblocks",
+    "type": "combo-boolean",
+    "area": "FormBlocks - Settings",
+    "value": "1"
+}`]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4442`
+    &unique_idx=`4458`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`4443`
+	&unique_idx=`4459`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -225,23 +299,54 @@
 	&pattern_name=`formblocks.save_form`
 	]]
 </div>
-        <div class="column"></div>
-    </div>
-</div>`
+    <div class="column"></div>
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`4458`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`4459`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_template=`patternLayoutElectronSystemSetting`
+	&pattern_name=`formblocks.save_form`
+	]]
+</div>
+    <div class="column"></div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`4437`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`4453`
+    &layout_idx=`1`
 ]]
     </div>
 </div>
 
-<div class="ui vertical stripe segment white">
+<div  class="ui vertical stripe segment white">
     <div class="ui   container">
         [[$richTextMessage?
     &heading=`Good to know`
@@ -263,25 +368,23 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_input_textfield_id` &prefix=`cf_4_4456``
+            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_input_textfield_id` &prefix=`cf_4_4472``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_input_textfield_id` &prefix=`cl_4_4456``
+            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_input_textfield_id` &prefix=`cl_4_4472``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_4_4456`?
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_4_4472`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`formblocks.cb_input_textfield_id`
             &pattern_template=`patternLayoutElectronSystemSetting`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`4`
-            &unique_idx=`4456`
+            &unique_idx=`4472`
         ]]
         
         [[[[modifiedIf?
@@ -299,7 +402,7 @@
                     &pattern_template=`patternLayoutElectronSystemSetting`
                     &pattern_status=`green`
                     &idx=`4`
-                    &unique_idx=`4456`
+                    &unique_idx=`4472`
                 `
         ]]]]
 
@@ -307,53 +410,76 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_4_4456`
+            &then=`+preview_4_4472`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.specifications_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "key": "cb_input_textfield_id",
     "namespace": "formblocks",
     "type": "textfield",
     "area": "FormBlocks - CB fields"
 }`]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[jsonToHTML? &json=`{
+    "key": "cb_input_textfield_id",
+    "namespace": "formblocks",
+    "type": "textfield",
+    "area": "FormBlocks - CB fields"
+}`]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4453`
+    &unique_idx=`4469`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`4454`
+	&unique_idx=`4470`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -362,18 +488,49 @@
 	&pattern_name=`formblocks.cb_input_textfield_id`
 	]]
 </div>
-        <div class="column"></div>
-    </div>
-</div>`
+    <div class="column"></div>
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`4469`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`4470`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_template=`patternLayoutElectronSystemSetting`
+	&pattern_name=`formblocks.cb_input_textfield_id`
+	]]
+</div>
+    <div class="column"></div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`4448`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`4464`
+    &layout_idx=`3`
 ]]
     </div>
 </div>
@@ -384,25 +541,23 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_input_textarea_id` &prefix=`cf_5_4465``
+            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_input_textarea_id` &prefix=`cf_5_4481``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_input_textarea_id` &prefix=`cl_5_4465``
+            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_input_textarea_id` &prefix=`cl_5_4481``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_5_4465`?
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_5_4481`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`formblocks.cb_input_textarea_id`
             &pattern_template=`patternLayoutElectronSystemSetting`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`5`
-            &unique_idx=`4465`
+            &unique_idx=`4481`
         ]]
         
         [[[[modifiedIf?
@@ -420,7 +575,7 @@
                     &pattern_template=`patternLayoutElectronSystemSetting`
                     &pattern_status=`green`
                     &idx=`5`
-                    &unique_idx=`4465`
+                    &unique_idx=`4481`
                 `
         ]]]]
 
@@ -428,53 +583,76 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_5_4465`
+            &then=`+preview_5_4481`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.specifications_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "key": "cb_input_textarea_id",
     "namespace": "formblocks",
     "type": "textfield",
     "area": "FormBlocks - CB fields"
 }`]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[jsonToHTML? &json=`{
+    "key": "cb_input_textarea_id",
+    "namespace": "formblocks",
+    "type": "textfield",
+    "area": "FormBlocks - CB fields"
+}`]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4462`
+    &unique_idx=`4478`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`4463`
+	&unique_idx=`4479`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -483,18 +661,49 @@
 	&pattern_name=`formblocks.cb_input_textarea_id`
 	]]
 </div>
-        <div class="column"></div>
-    </div>
-</div>`
+    <div class="column"></div>
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`4478`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`4479`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_template=`patternLayoutElectronSystemSetting`
+	&pattern_name=`formblocks.cb_input_textarea_id`
+	]]
+</div>
+    <div class="column"></div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`4457`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`4473`
+    &layout_idx=`4`
 ]]
     </div>
 </div>
@@ -505,25 +714,23 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_input_email_id` &prefix=`cf_6_4474``
+            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_input_email_id` &prefix=`cf_6_4490``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_input_email_id` &prefix=`cl_6_4474``
+            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_input_email_id` &prefix=`cl_6_4490``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_6_4474`?
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_6_4490`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`formblocks.cb_input_email_id`
             &pattern_template=`patternLayoutElectronSystemSetting`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`6`
-            &unique_idx=`4474`
+            &unique_idx=`4490`
         ]]
         
         [[[[modifiedIf?
@@ -541,7 +748,7 @@
                     &pattern_template=`patternLayoutElectronSystemSetting`
                     &pattern_status=`green`
                     &idx=`6`
-                    &unique_idx=`4474`
+                    &unique_idx=`4490`
                 `
         ]]]]
 
@@ -549,53 +756,76 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_6_4474`
+            &then=`+preview_6_4490`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.specifications_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "key": "cb_input_email_id",
     "namespace": "formblocks",
     "type": "textfield",
     "area": "FormBlocks - CB fields"
 }`]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[jsonToHTML? &json=`{
+    "key": "cb_input_email_id",
+    "namespace": "formblocks",
+    "type": "textfield",
+    "area": "FormBlocks - CB fields"
+}`]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4471`
+    &unique_idx=`4487`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`4472`
+	&unique_idx=`4488`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -604,18 +834,49 @@
 	&pattern_name=`formblocks.cb_input_email_id`
 	]]
 </div>
-        <div class="column"></div>
-    </div>
-</div>`
+    <div class="column"></div>
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`4487`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`4488`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_template=`patternLayoutElectronSystemSetting`
+	&pattern_name=`formblocks.cb_input_email_id`
+	]]
+</div>
+    <div class="column"></div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`4466`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`4482`
+    &layout_idx=`5`
 ]]
     </div>
 </div>
@@ -626,25 +887,23 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_select_option_id` &prefix=`cf_7_4483``
+            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_select_option_id` &prefix=`cf_7_4499``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_select_option_id` &prefix=`cl_7_4483``
+            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_select_option_id` &prefix=`cl_7_4499``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_7_4483`?
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_7_4499`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`formblocks.cb_select_option_id`
             &pattern_template=`patternLayoutElectronSystemSetting`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`7`
-            &unique_idx=`4483`
+            &unique_idx=`4499`
         ]]
         
         [[[[modifiedIf?
@@ -662,7 +921,7 @@
                     &pattern_template=`patternLayoutElectronSystemSetting`
                     &pattern_status=`green`
                     &idx=`7`
-                    &unique_idx=`4483`
+                    &unique_idx=`4499`
                 `
         ]]]]
 
@@ -670,53 +929,76 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_7_4483`
+            &then=`+preview_7_4499`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.specifications_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "key": "cb_select_option_id",
     "namespace": "formblocks",
     "type": "textfield",
     "area": "FormBlocks - CB fields"
 }`]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[jsonToHTML? &json=`{
+    "key": "cb_select_option_id",
+    "namespace": "formblocks",
+    "type": "textfield",
+    "area": "FormBlocks - CB fields"
+}`]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4480`
+    &unique_idx=`4496`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`4481`
+	&unique_idx=`4497`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -725,18 +1007,49 @@
 	&pattern_name=`formblocks.cb_select_option_id`
 	]]
 </div>
-        <div class="column"></div>
-    </div>
-</div>`
+    <div class="column"></div>
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`4496`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`4497`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_template=`patternLayoutElectronSystemSetting`
+	&pattern_name=`formblocks.cb_select_option_id`
+	]]
+</div>
+    <div class="column"></div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`4475`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`4491`
+    &layout_idx=`6`
 ]]
     </div>
 </div>
@@ -747,25 +1060,23 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_select_option_collapse_id` &prefix=`cf_8_4492``
+            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_select_option_collapse_id` &prefix=`cf_8_4508``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_select_option_collapse_id` &prefix=`cl_8_4492``
+            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_select_option_collapse_id` &prefix=`cl_8_4508``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_8_4492`?
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_8_4508`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`formblocks.cb_select_option_collapse_id`
             &pattern_template=`patternLayoutElectronSystemSetting`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`8`
-            &unique_idx=`4492`
+            &unique_idx=`4508`
         ]]
         
         [[[[modifiedIf?
@@ -783,7 +1094,7 @@
                     &pattern_template=`patternLayoutElectronSystemSetting`
                     &pattern_status=`green`
                     &idx=`8`
-                    &unique_idx=`4492`
+                    &unique_idx=`4508`
                 `
         ]]]]
 
@@ -791,53 +1102,76 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_8_4492`
+            &then=`+preview_8_4508`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.specifications_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "key": "cb_select_option_collapse_id",
     "namespace": "formblocks",
     "type": "textfield",
     "area": "FormBlocks - CB fields"
 }`]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[jsonToHTML? &json=`{
+    "key": "cb_select_option_collapse_id",
+    "namespace": "formblocks",
+    "type": "textfield",
+    "area": "FormBlocks - CB fields"
+}`]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4489`
+    &unique_idx=`4505`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`4490`
+	&unique_idx=`4506`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -846,18 +1180,49 @@
 	&pattern_name=`formblocks.cb_select_option_collapse_id`
 	]]
 </div>
-        <div class="column"></div>
-    </div>
-</div>`
+    <div class="column"></div>
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`4505`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`4506`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_template=`patternLayoutElectronSystemSetting`
+	&pattern_name=`formblocks.cb_select_option_collapse_id`
+	]]
+</div>
+    <div class="column"></div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`4484`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`4500`
+    &layout_idx=`7`
 ]]
     </div>
 </div>
@@ -868,25 +1233,23 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_select_dropdown_id` &prefix=`cf_9_4501``
+            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_select_dropdown_id` &prefix=`cf_9_4517``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_select_dropdown_id` &prefix=`cl_9_4501``
+            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_select_dropdown_id` &prefix=`cl_9_4517``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_9_4501`?
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_9_4517`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`formblocks.cb_select_dropdown_id`
             &pattern_template=`patternLayoutElectronSystemSetting`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`9`
-            &unique_idx=`4501`
+            &unique_idx=`4517`
         ]]
         
         [[[[modifiedIf?
@@ -904,7 +1267,7 @@
                     &pattern_template=`patternLayoutElectronSystemSetting`
                     &pattern_status=`green`
                     &idx=`9`
-                    &unique_idx=`4501`
+                    &unique_idx=`4517`
                 `
         ]]]]
 
@@ -912,53 +1275,76 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_9_4501`
+            &then=`+preview_9_4517`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.specifications_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "key": "cb_select_dropdown_id",
     "namespace": "formblocks",
     "type": "textfield",
     "area": "FormBlocks - CB fields"
 }`]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[jsonToHTML? &json=`{
+    "key": "cb_select_dropdown_id",
+    "namespace": "formblocks",
+    "type": "textfield",
+    "area": "FormBlocks - CB fields"
+}`]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4498`
+    &unique_idx=`4514`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`4499`
+	&unique_idx=`4515`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -967,18 +1353,49 @@
 	&pattern_name=`formblocks.cb_select_dropdown_id`
 	]]
 </div>
-        <div class="column"></div>
-    </div>
-</div>`
+    <div class="column"></div>
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`4514`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`4515`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_template=`patternLayoutElectronSystemSetting`
+	&pattern_name=`formblocks.cb_select_dropdown_id`
+	]]
+</div>
+    <div class="column"></div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`4493`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`4509`
+    &layout_idx=`8`
 ]]
     </div>
 </div>
@@ -989,25 +1406,23 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_select_dropdown_auto_id` &prefix=`cf_10_4510``
+            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_select_dropdown_auto_id` &prefix=`cf_10_4526``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_select_dropdown_auto_id` &prefix=`cl_10_4510``
+            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_select_dropdown_auto_id` &prefix=`cl_10_4526``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_10_4510`?
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_10_4526`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`formblocks.cb_select_dropdown_auto_id`
             &pattern_template=`patternLayoutElectronSystemSetting`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`10`
-            &unique_idx=`4510`
+            &unique_idx=`4526`
         ]]
         
         [[[[modifiedIf?
@@ -1025,7 +1440,7 @@
                     &pattern_template=`patternLayoutElectronSystemSetting`
                     &pattern_status=`green`
                     &idx=`10`
-                    &unique_idx=`4510`
+                    &unique_idx=`4526`
                 `
         ]]]]
 
@@ -1033,53 +1448,76 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_10_4510`
+            &then=`+preview_10_4526`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.specifications_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "key": "cb_select_dropdown_auto_id",
     "namespace": "formblocks",
     "type": "textfield",
     "area": "FormBlocks - CB fields"
 }`]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[jsonToHTML? &json=`{
+    "key": "cb_select_dropdown_auto_id",
+    "namespace": "formblocks",
+    "type": "textfield",
+    "area": "FormBlocks - CB fields"
+}`]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4507`
+    &unique_idx=`4523`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`4508`
+	&unique_idx=`4524`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -1088,18 +1526,49 @@
 	&pattern_name=`formblocks.cb_select_dropdown_auto_id`
 	]]
 </div>
-        <div class="column"></div>
-    </div>
-</div>`
+    <div class="column"></div>
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`4523`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`4524`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_template=`patternLayoutElectronSystemSetting`
+	&pattern_name=`formblocks.cb_select_dropdown_auto_id`
+	]]
+</div>
+    <div class="column"></div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`4502`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`4518`
+    &layout_idx=`9`
 ]]
     </div>
 </div>
@@ -1110,25 +1579,23 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_accept_terms_id` &prefix=`cf_11_4519``
+            &then=`setPatternPlaceholders? &cbField=`formblocks.cb_accept_terms_id` &prefix=`cf_11_4535``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_accept_terms_id` &prefix=`cl_11_4519``
+            &then=`setPatternPlaceholders? &cbLayout=`formblocks.cb_accept_terms_id` &prefix=`cl_11_4535``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_11_4519`?
+        [[$cbLayoutPatternPreview:toPlaceholder=`preview_11_4535`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`formblocks.cb_accept_terms_id`
             &pattern_template=`patternLayoutElectronSystemSetting`
-            &raw_tags=`[[+raw_tags]]`
-            &rendered_tags=`[[+rendered_tags]]`
             &idx=`11`
-            &unique_idx=`4519`
+            &unique_idx=`4535`
         ]]
         
         [[[[modifiedIf?
@@ -1146,7 +1613,7 @@
                     &pattern_template=`patternLayoutElectronSystemSetting`
                     &pattern_status=`green`
                     &idx=`11`
-                    &unique_idx=`4519`
+                    &unique_idx=`4535`
                 `
         ]]]]
 
@@ -1154,53 +1621,76 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_11_4519`
+            &then=`+preview_11_4535`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.purpose_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`1`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.specifications_title]]`
-    &content=`<div class="ui nested one column stackable doubling relaxed  grid">
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "key": "cb_accept_terms_id",
     "namespace": "formblocks",
     "type": "textfield",
     "area": "FormBlocks - CB fields"
 }`]]</div>
-</div>`
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[jsonToHTML? &json=`{
+    "key": "cb_accept_terms_id",
+    "namespace": "formblocks",
+    "type": "textfield",
+    "area": "FormBlocks - CB fields"
+}`]]</div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`2`
 ]]
 
-[[$accordionRowBasic?
-    &heading=`[[%romanesco.patterns.references_title]]`
-    &content=`<div class="ui nested two column stackable doubling relaxed  divided grid">
-    <div class="row">
-        <div class="column">[[$headingBasic?
+[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4516`
+    &unique_idx=`4532`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`4517`
+	&unique_idx=`4533`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -1209,18 +1699,49 @@
 	&pattern_name=`formblocks.cb_accept_terms_id`
 	]]
 </div>
-        <div class="column"></div>
-    </div>
-</div>`
+    <div class="column"></div>
+</div>`]]
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`4532`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`4533`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_template=`patternLayoutElectronSystemSetting`
+	&pattern_name=`formblocks.cb_accept_terms_id`
+	]]
+</div>
+    <div class="column"></div>
+</div>`]]`
     &padding=`padded`
     &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
     &idx=`3`
 ]]`
     &total=`3`
     &padding=`padded`
     &accordion_type=`fluid styled`
     &tab_type=`regular`
-    &unique_idx=`4511`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`4527`
+    &layout_idx=`10`
 ]]
     </div>
 </div>
