@@ -27,6 +27,7 @@ $_lang['romanesco.social.connect_instagram_organization'] = 'Follow us on Instag
 $_lang['romanesco.social.connect_pinterest_organization'] = 'View our Pinterest board';
 $_lang['romanesco.social.connect_twitter_organization'] = 'Follow us on Twitter';
 $_lang['romanesco.social.connect_youtube_organization'] = 'View our Youtube channel';
+$_lang['romanesco.social.connect_github_organization'] = 'View our Github profile';
 
 $_lang['romanesco.social.connect_facebook_person'] = 'Visit my Facebook page';
 $_lang['romanesco.social.connect_googleplus_person'] = 'Find me on Google+';
@@ -35,6 +36,7 @@ $_lang['romanesco.social.connect_instagram_person'] = 'Follow me on Instagram';
 $_lang['romanesco.social.connect_pinterest_person'] = 'View my Pinterest board';
 $_lang['romanesco.social.connect_twitter_person'] = 'Follow me on Twitter';
 $_lang['romanesco.social.connect_youtube_person'] = 'View my Youtube channel';
+$_lang['romanesco.social.connect_github_person'] = 'View my Github profile';
 
 $_lang['romanesco.social.share_facebook_title'] = 'Share on Facebook';
 $_lang['romanesco.social.share_googleplus_title'] = 'Give this a +1';

@@ -52,3 +52,24 @@ $_lang['formblocks.form.submit_button'] = 'Send';
 $_lang['formblocks.email.subject'] = 'Contact form response';
 $_lang['formblocks.email.introtext'] = 'This is what the visitor submitted:';
 $_lang['formblocks.email.other_namely'] = 'namely:';
+
+// Registration
+// ---------------------------------------------------------------------
+
+$_lang['formblocks.registration.email_subject'] = 'Confirm your registration';
+$_lang['formblocks.registration.email_content'] = '
+<p>Dear [[+username]],</p>
+
+<p>Thanks for registering! To activate your new account, please click on the following link:</p>
+
+<p><a href="[[+confirmUrl]]">[[+confirmUrl]]</a></p>
+
+<p>
+    Thanks,<br />
+    <em>[[++site_name]]</em>
+</p>
+';
+
+$_lang['formblocks.registration.success_message'] = 'Thanks for signing up! Please check your email and click the confirmation link to activate your account.';
+$_lang['formblocks.registration.validation_error_heading'] = 'Uh oh, something went wrong!';
+$_lang['formblocks.registration.validation_error_message'] = 'The form could not be sent, because of the following error:<br>[[+validation_error_message]]';
