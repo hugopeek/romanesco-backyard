@@ -9,15 +9,16 @@ $xpdo_meta_map['rmOption']= array (
   'extends' => 'xPDOSimpleObject',
   'tableMeta' => 
   array (
-    'engine' => 'MyISAM',
+    'engine' => 'InnoDB',
   ),
   'fields' => 
   array (
     'name' => '',
+    'title' => '',
     'description' => NULL,
     'alias' => '',
     'group' => NULL,
-    'menuindex' => 0,
+    'sortorder' => 0,
   ),
   'fieldMeta' => 
   array (
@@ -27,6 +28,14 @@ $xpdo_meta_map['rmOption']= array (
       'precision' => '190',
       'phptype' => 'string',
       'null' => false,
+      'default' => '',
+    ),
+    'title' => 
+    array (
+      'dbtype' => 'varchar',
+      'precision' => '255',
+      'phptype' => 'string',
+      'null' => true,
       'default' => '',
     ),
     'description' => 
@@ -46,19 +55,18 @@ $xpdo_meta_map['rmOption']= array (
     'group' => 
     array (
       'dbtype' => 'int',
-      'precision' => '11',
+      'precision' => '10',
       'attributes' => 'unsigned',
       'phptype' => 'integer',
       'null' => false,
     ),
-    'menuindex' => 
+    'sortorder' => 
     array (
       'dbtype' => 'int',
       'precision' => '10',
       'phptype' => 'integer',
       'null' => false,
       'default' => 0,
-      'index' => 'index',
     ),
   ),
   'indexes' => 
@@ -81,13 +89,13 @@ $xpdo_meta_map['rmOption']= array (
     ),
     'sortorder' => 
     array (
-      'alias' => 'menuindex',
+      'alias' => 'sortorder',
       'primary' => false,
       'unique' => false,
       'type' => 'BTREE',
       'columns' => 
       array (
-        'menuindex' => 
+        'sortorder' => 
         array (
           'length' => '',
           'collation' => 'A',

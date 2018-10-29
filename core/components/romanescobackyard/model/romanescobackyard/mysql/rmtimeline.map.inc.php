@@ -9,34 +9,24 @@ $xpdo_meta_map['rmTimeline']= array (
   'extends' => 'xPDOSimpleObject',
   'tableMeta' => 
   array (
-    'engine' => 'MyISAM',
+    'engine' => 'InnoDB',
   ),
   'fields' => 
   array (
-    'id' => NULL,
     'resource_id' => NULL,
     'name' => '',
     'description' => NULL,
+    'content' => NULL,
+    'createdon' => 0,
     'createdby' => 0,
     'date_due' => NULL,
     'date_completed' => NULL,
-    'user' => 0,
     'icon' => '',
     'attachments' => '',
-    'external' => '',
+    'links' => '',
   ),
   'fieldMeta' => 
   array (
-    'id' => 
-    array (
-      'dbtype' => 'int',
-      'precision' => '11',
-      'attributes' => 'unsigned',
-      'phptype' => 'integer',
-      'null' => false,
-      'index' => 'pk',
-      'generated' => 'native',
-    ),
     'resource_id' => 
     array (
       'dbtype' => 'int',
@@ -57,7 +47,21 @@ $xpdo_meta_map['rmTimeline']= array (
     array (
       'dbtype' => 'text',
       'phptype' => 'string',
-      'index' => 'fulltext',
+      'null' => true,
+    ),
+    'content' => 
+    array (
+      'dbtype' => 'text',
+      'phptype' => 'string',
+      'null' => true,
+    ),
+    'createdon' => 
+    array (
+      'dbtype' => 'int',
+      'precision' => '20',
+      'phptype' => 'timestamp',
+      'null' => false,
+      'default' => 0,
     ),
     'createdby' => 
     array (
@@ -79,35 +83,46 @@ $xpdo_meta_map['rmTimeline']= array (
       'phptype' => 'datetime',
       'null' => true,
     ),
-    'user' => 
-    array (
-      'dbtype' => 'int',
-      'precision' => '10',
-      'phptype' => 'integer',
-      'null' => false,
-      'default' => 0,
-    ),
     'icon' => 
     array (
       'dbtype' => 'varchar',
       'precision' => '255',
       'phptype' => 'string',
-      'null' => false,
+      'null' => true,
       'default' => '',
     ),
     'attachments' => 
     array (
       'dbtype' => 'text',
       'phptype' => 'string',
-      'null' => false,
+      'null' => true,
       'default' => '',
     ),
-    'external' => 
+    'links' => 
     array (
       'dbtype' => 'text',
       'phptype' => 'string',
-      'null' => false,
+      'null' => true,
       'default' => '',
+    ),
+  ),
+  'indexes' => 
+  array (
+    'name' => 
+    array (
+      'alias' => 'name',
+      'primary' => false,
+      'unique' => false,
+      'type' => 'BTREE',
+      'columns' => 
+      array (
+        'name' => 
+        array (
+          'length' => '',
+          'collation' => 'A',
+          'null' => false,
+        ),
+      ),
     ),
   ),
   'aggregates' => 

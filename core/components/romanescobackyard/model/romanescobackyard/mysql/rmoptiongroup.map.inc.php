@@ -9,13 +9,13 @@ $xpdo_meta_map['rmOptionGroup']= array (
   'extends' => 'xPDOSimpleObject',
   'tableMeta' => 
   array (
-    'engine' => 'MyISAM',
+    'engine' => 'InnoDB',
   ),
   'fields' => 
   array (
     'name' => NULL,
     'description' => NULL,
-    'menuindex' => 0,
+    'sortorder' => 0,
   ),
   'fieldMeta' => 
   array (
@@ -32,10 +32,10 @@ $xpdo_meta_map['rmOptionGroup']= array (
       'phptype' => 'string',
       'null' => true,
     ),
-    'menuindex' => 
+    'sortorder' => 
     array (
       'dbtype' => 'int',
-      'precision' => '5',
+      'precision' => '10',
       'phptype' => 'integer',
       'null' => false,
       'default' => 0,
@@ -61,13 +61,13 @@ $xpdo_meta_map['rmOptionGroup']= array (
     ),
     'sortorder' => 
     array (
-      'alias' => 'menuindex',
+      'alias' => 'sortorder',
       'primary' => false,
       'unique' => false,
       'type' => 'BTREE',
       'columns' => 
       array (
-        'menuindex' => 
+        'sortorder' => 
         array (
           'length' => '',
           'collation' => 'A',
@@ -78,12 +78,12 @@ $xpdo_meta_map['rmOptionGroup']= array (
   ),
   'aggregates' => 
   array (
-    'Group' => 
+    'Options' => 
     array (
       'class' => 'rmOption',
       'local' => 'id',
       'foreign' => 'group',
-      'cardinality' => 'one',
+      'cardinality' => 'many',
       'owner' => 'local',
     ),
   ),

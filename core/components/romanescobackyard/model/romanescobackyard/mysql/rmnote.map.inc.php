@@ -9,11 +9,10 @@ $xpdo_meta_map['rmNote']= array (
   'extends' => 'xPDOSimpleObject',
   'tableMeta' => 
   array (
-    'engine' => 'MyISAM',
+    'engine' => 'InnoDB',
   ),
   'fields' => 
   array (
-    'id' => NULL,
     'resource_id' => NULL,
     'name' => '',
     'content' => NULL,
@@ -27,16 +26,6 @@ $xpdo_meta_map['rmNote']= array (
   ),
   'fieldMeta' => 
   array (
-    'id' => 
-    array (
-      'dbtype' => 'int',
-      'precision' => '11',
-      'attributes' => 'unsigned',
-      'phptype' => 'integer',
-      'null' => false,
-      'index' => 'pk',
-      'generated' => 'native',
-    ),
     'resource_id' => 
     array (
       'dbtype' => 'int',
@@ -57,7 +46,7 @@ $xpdo_meta_map['rmNote']= array (
     array (
       'dbtype' => 'text',
       'phptype' => 'string',
-      'index' => 'fulltext',
+      'null' => true,
     ),
     'createdon' => 
     array (
@@ -117,7 +106,27 @@ $xpdo_meta_map['rmNote']= array (
   ),
   'fieldAliases' => 
   array (
-    'author' => 'user',
+    'author' => 'createdby',
+    'assigned_to' => 'user',
+  ),
+  'indexes' => 
+  array (
+    'name' => 
+    array (
+      'alias' => 'name',
+      'primary' => false,
+      'unique' => false,
+      'type' => 'BTREE',
+      'columns' => 
+      array (
+        'name' => 
+        array (
+          'length' => '',
+          'collation' => 'A',
+          'null' => false,
+        ),
+      ),
+    ),
   ),
   'aggregates' => 
   array (
