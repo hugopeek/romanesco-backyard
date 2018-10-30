@@ -19,12 +19,13 @@ $xpdo_meta_map['rmTimeline']= array (
     'content' => NULL,
     'createdon' => 0,
     'createdby' => 0,
-    'type' => 0,
-    'date_due' => NULL,
-    'date_completed' => NULL,
+    'deleted' => 0,
+    'type' => '',
+    'date' => NULL,
+    'icon' => '',
+    'complexity' => 0,
     'attachments' => '',
     'links' => '',
-    'icon' => '',
   ),
   'fieldMeta' => 
   array (
@@ -73,25 +74,44 @@ $xpdo_meta_map['rmTimeline']= array (
       'null' => false,
       'default' => 0,
     ),
+    'deleted' => 
+    array (
+      'dbtype' => 'tinyint',
+      'precision' => '1',
+      'attributes' => 'unsigned',
+      'phptype' => 'boolean',
+      'null' => false,
+      'default' => 0,
+    ),
     'type' => 
+    array (
+      'dbtype' => 'varchar',
+      'precision' => '190',
+      'phptype' => 'string',
+      'null' => false,
+      'default' => '',
+    ),
+    'date' => 
+    array (
+      'dbtype' => 'datetime',
+      'phptype' => 'datetime',
+      'null' => true,
+    ),
+    'icon' => 
+    array (
+      'dbtype' => 'varchar',
+      'precision' => '255',
+      'phptype' => 'string',
+      'null' => true,
+      'default' => '',
+    ),
+    'complexity' => 
     array (
       'dbtype' => 'int',
       'precision' => '10',
       'phptype' => 'integer',
-      'null' => false,
+      'null' => true,
       'default' => 0,
-    ),
-    'date_due' => 
-    array (
-      'dbtype' => 'datetime',
-      'phptype' => 'datetime',
-      'null' => true,
-    ),
-    'date_completed' => 
-    array (
-      'dbtype' => 'datetime',
-      'phptype' => 'datetime',
-      'null' => true,
     ),
     'attachments' => 
     array (
@@ -103,14 +123,6 @@ $xpdo_meta_map['rmTimeline']= array (
     'links' => 
     array (
       'dbtype' => 'text',
-      'phptype' => 'string',
-      'null' => true,
-      'default' => '',
-    ),
-    'icon' => 
-    array (
-      'dbtype' => 'varchar',
-      'precision' => '255',
       'phptype' => 'string',
       'null' => true,
       'default' => '',

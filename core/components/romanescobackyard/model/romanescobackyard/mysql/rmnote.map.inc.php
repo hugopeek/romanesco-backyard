@@ -18,6 +18,7 @@ $xpdo_meta_map['rmNote']= array (
     'content' => NULL,
     'createdon' => 0,
     'createdby' => 0,
+    'deleted' => 0,
     'type' => 0,
     'tags' => '',
     'user' => 0,
@@ -64,6 +65,15 @@ $xpdo_meta_map['rmNote']= array (
       'null' => false,
       'default' => 0,
     ),
+    'deleted' => 
+    array (
+      'dbtype' => 'tinyint',
+      'precision' => '1',
+      'attributes' => 'unsigned',
+      'phptype' => 'boolean',
+      'null' => false,
+      'default' => 0,
+    ),
     'type' => 
     array (
       'dbtype' => 'int',
@@ -84,7 +94,7 @@ $xpdo_meta_map['rmNote']= array (
       'dbtype' => 'int',
       'precision' => '10',
       'phptype' => 'integer',
-      'null' => false,
+      'null' => true,
       'default' => 0,
     ),
     'status' => 
@@ -92,7 +102,7 @@ $xpdo_meta_map['rmNote']= array (
       'dbtype' => 'int',
       'precision' => '10',
       'phptype' => 'integer',
-      'null' => false,
+      'null' => true,
       'default' => 0,
     ),
     'priority' => 
@@ -100,7 +110,7 @@ $xpdo_meta_map['rmNote']= array (
       'dbtype' => 'int',
       'precision' => '10',
       'phptype' => 'integer',
-      'null' => false,
+      'null' => true,
       'default' => 0,
     ),
   ),

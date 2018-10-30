@@ -8,18 +8,17 @@
         <field key="content" dbtype="text" phptype="string" null="true" />
         <field key="createdon" dbtype="int" precision="20" phptype="timestamp" null="false" default="" />
         <field key="createdby" dbtype="int" precision="10" phptype="integer" null="false" default="" />
+        <field key="deleted" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="0" />
 
         <!-- Type defines the kind of timeline: project-hub, roadmap, history, log -->
-        <field key="type" dbtype="int" precision="10" phptype="integer" null="false" default="" />
-
-        <!-- Due date and completion date can be combined to indicate status -->
-        <field key="date_due" dbtype="datetime" phptype="datetime" null="true" />
-        <field key="date_completed" dbtype="datetime" phptype="datetime" null="true" />
+        <field key="type" dbtype="varchar" precision="190" phptype="string" null="false" default="" />
+        <field key="date" dbtype="datetime" phptype="datetime" null="true" />
+        <field key="icon" dbtype="varchar" precision="255" phptype="string" null="true" default="" />
+        <field key="complexity" dbtype="int" precision="10" phptype="integer" null="true" default="" />
 
         <!-- Attachments and links are IDs of static resources and weblinks -->
         <field key="attachments" dbtype="text" phptype="string" null="true" default="" />
         <field key="links" dbtype="text" phptype="string" null="true" default="" />
-        <field key="icon" dbtype="varchar" precision="255" phptype="string" null="true" default="" />
 
         <index alias="title" name="title" primary="false" unique="false" type="BTREE">
             <column key="title" length="" collation="A" null="false" />
@@ -32,11 +31,12 @@
     </object>
     <!-- Notes table -->
     <object class="rmNote" table="romanesco_notes" extends="xPDOSimpleObject">
-        <field key="resource_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" />
+        <field key="resource_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="" />
         <field key="title" dbtype="varchar" precision="190" phptype="string" null="false" default="" />
         <field key="content" dbtype="text" phptype="string" null="true" />
         <field key="createdon" dbtype="int" precision="20" phptype="timestamp" null="false" default="" />
         <field key="createdby" dbtype="int" precision="10" phptype="integer" null="false" default="" />
+        <field key="deleted" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="0" />
 
         <!-- Type defines the kind of note: issue, comment, improvement, log -->
         <field key="type" dbtype="int" precision="10" phptype="integer" null="false" default="" />
@@ -45,9 +45,9 @@
         <field key="tags" dbtype="text" phptype="string" null="false" default="" />
 
         <!-- User indicates who this note is assigned to -->
-        <field key="user" dbtype="int" precision="10" phptype="integer" null="false" default="" />
-        <field key="status" dbtype="int" precision="10" phptype="integer" null="false" default="" />
-        <field key="priority" dbtype="int" precision="10" phptype="integer" null="false" default="" />
+        <field key="user" dbtype="int" precision="10" phptype="integer" null="true" default="" />
+        <field key="status" dbtype="int" precision="10" phptype="integer" null="true" default="" />
+        <field key="priority" dbtype="int" precision="10" phptype="integer" null="true" default="" />
 
         <alias key="author" field="createdby" />
         <alias key="assigned_to" field="user" />
@@ -68,6 +68,7 @@
         <field key="alias" dbtype="varchar" precision="190" phptype="string" null="false" default="" />
         <field key="group" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" />
         <field key="sortorder" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+        <field key="deleted" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="0" />
 
         <index alias="name" name="name" primary="false" unique="false" type="BTREE">
             <column key="name" length="" collation="A" null="false" />
@@ -83,6 +84,7 @@
         <field key="name" dbtype="varchar" precision="190" phptype="string" null="false" />
         <field key="description" dbtype="text" phptype="string" null="true" />
         <field key="sortorder" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+        <field key="deleted" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="0" />
 
         <index alias="name" name="name" primary="false" unique="false" type="BTREE">
             <column key="name" length="" collation="A" null="false" />

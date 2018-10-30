@@ -18,6 +18,7 @@ $xpdo_meta_map['rmOption']= array (
     'alias' => '',
     'group' => NULL,
     'sortorder' => 0,
+    'deleted' => 0,
   ),
   'fieldMeta' => 
   array (
@@ -58,6 +59,15 @@ $xpdo_meta_map['rmOption']= array (
       'dbtype' => 'int',
       'precision' => '10',
       'phptype' => 'integer',
+      'null' => false,
+      'default' => 0,
+    ),
+    'deleted' => 
+    array (
+      'dbtype' => 'tinyint',
+      'precision' => '1',
+      'attributes' => 'unsigned',
+      'phptype' => 'boolean',
       'null' => false,
       'default' => 0,
     ),
