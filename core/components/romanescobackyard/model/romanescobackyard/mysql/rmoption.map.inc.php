@@ -14,8 +14,7 @@ $xpdo_meta_map['rmOption']= array (
   'fields' => 
   array (
     'name' => '',
-    'title' => '',
-    'description' => NULL,
+    'description' => '',
     'alias' => '',
     'group' => NULL,
     'sortorder' => 0,
@@ -30,19 +29,13 @@ $xpdo_meta_map['rmOption']= array (
       'null' => false,
       'default' => '',
     ),
-    'title' => 
+    'description' => 
     array (
       'dbtype' => 'varchar',
       'precision' => '255',
       'phptype' => 'string',
       'null' => true,
       'default' => '',
-    ),
-    'description' => 
-    array (
-      'dbtype' => 'text',
-      'phptype' => 'string',
-      'null' => true,
     ),
     'alias' => 
     array (

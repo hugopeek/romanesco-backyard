@@ -13,17 +13,18 @@ $xpdo_meta_map['rmTimeline']= array (
   ),
   'fields' => 
   array (
-    'resource_id' => NULL,
-    'name' => '',
+    'resource_id' => 0,
+    'title' => '',
     'description' => NULL,
     'content' => NULL,
     'createdon' => 0,
     'createdby' => 0,
+    'type' => 0,
     'date_due' => NULL,
     'date_completed' => NULL,
-    'icon' => '',
     'attachments' => '',
     'links' => '',
+    'icon' => '',
   ),
   'fieldMeta' => 
   array (
@@ -34,8 +35,9 @@ $xpdo_meta_map['rmTimeline']= array (
       'attributes' => 'unsigned',
       'phptype' => 'integer',
       'null' => false,
+      'default' => 0,
     ),
-    'name' => 
+    'title' => 
     array (
       'dbtype' => 'varchar',
       'precision' => '190',
@@ -71,6 +73,14 @@ $xpdo_meta_map['rmTimeline']= array (
       'null' => false,
       'default' => 0,
     ),
+    'type' => 
+    array (
+      'dbtype' => 'int',
+      'precision' => '10',
+      'phptype' => 'integer',
+      'null' => false,
+      'default' => 0,
+    ),
     'date_due' => 
     array (
       'dbtype' => 'datetime',
@@ -82,14 +92,6 @@ $xpdo_meta_map['rmTimeline']= array (
       'dbtype' => 'datetime',
       'phptype' => 'datetime',
       'null' => true,
-    ),
-    'icon' => 
-    array (
-      'dbtype' => 'varchar',
-      'precision' => '255',
-      'phptype' => 'string',
-      'null' => true,
-      'default' => '',
     ),
     'attachments' => 
     array (
@@ -105,18 +107,42 @@ $xpdo_meta_map['rmTimeline']= array (
       'null' => true,
       'default' => '',
     ),
+    'icon' => 
+    array (
+      'dbtype' => 'varchar',
+      'precision' => '255',
+      'phptype' => 'string',
+      'null' => true,
+      'default' => '',
+    ),
   ),
   'indexes' => 
   array (
-    'name' => 
+    'title' => 
     array (
-      'alias' => 'name',
+      'alias' => 'title',
       'primary' => false,
       'unique' => false,
       'type' => 'BTREE',
       'columns' => 
       array (
-        'name' => 
+        'title' => 
+        array (
+          'length' => '',
+          'collation' => 'A',
+          'null' => false,
+        ),
+      ),
+    ),
+    'type' => 
+    array (
+      'alias' => 'type',
+      'primary' => false,
+      'unique' => false,
+      'type' => 'BTREE',
+      'columns' => 
+      array (
+        'type' => 
         array (
           'length' => '',
           'collation' => 'A',
