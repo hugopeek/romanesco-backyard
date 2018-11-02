@@ -63,7 +63,26 @@
                     "pos": 3
                 },
                 {
-                    "MIGX_id": 4,
+                    "MIGX_id": 97,
+                    "field": "key",
+                    "caption": "Key",
+                    "description": "",
+                    "description_is_code": "0",
+                    "inputTV": "",
+                    "inputTVtype": "text",
+                    "validation": "",
+                    "configs": "",
+                    "restrictive_condition": "",
+                    "display": "none",
+                    "sourceFrom": "config",
+                    "sources": "",
+                    "inputOptionValues": "",
+                    "default": "0",
+                    "useDefaultIfEmpty": "0",
+                    "pos": 97
+                },
+                {
+                    "MIGX_id": 98,
                     "field": "group",
                     "caption": "Group",
                     "description": "",
@@ -79,10 +98,10 @@
                     "inputOptionValues": "",
                     "default": "0",
                     "useDefaultIfEmpty": "0",
-                    "pos": 4
+                    "pos": 98
                 },
                 {
-                    "MIGX_id": 5,
+                    "MIGX_id": 99,
                     "field": "id",
                     "caption": "ID",
                     "description": "",
@@ -98,7 +117,7 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 5
+                    "pos": 99
                 }
             ],
             "pos": 1
@@ -148,7 +167,7 @@
             }
         ],
         "hooksnippets": {
-            "aftersave": "SetOptionGroup"
+            "aftersave": "migxSaveOption"
         },
         "cmpmaincaption": "Backyard tool shed",
         "cmptabcaption": "Input options",
@@ -205,7 +224,7 @@
             "editor": "this.textEditor"
         },
         {
-            "MIGX_id": 98,
+            "MIGX_id": 97,
             "header": "ID",
             "dataIndex": "id",
             "width": 10,

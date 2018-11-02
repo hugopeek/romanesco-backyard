@@ -14,10 +14,11 @@ $xpdo_meta_map['rmOption']= array (
   'fields' => 
   array (
     'name' => '',
+    'key' => '0',
     'description' => '',
     'alias' => '',
     'group' => NULL,
-    'sortorder' => 0,
+    'position' => 0,
     'deleted' => 0,
   ),
   'fieldMeta' => 
@@ -29,6 +30,14 @@ $xpdo_meta_map['rmOption']= array (
       'phptype' => 'string',
       'null' => false,
       'default' => '',
+    ),
+    'key' => 
+    array (
+      'dbtype' => 'varchar',
+      'precision' => '190',
+      'phptype' => 'string',
+      'null' => false,
+      'default' => '0',
     ),
     'description' => 
     array (
@@ -54,7 +63,7 @@ $xpdo_meta_map['rmOption']= array (
       'phptype' => 'integer',
       'null' => false,
     ),
-    'sortorder' => 
+    'position' => 
     array (
       'dbtype' => 'int',
       'precision' => '10',
@@ -72,17 +81,21 @@ $xpdo_meta_map['rmOption']= array (
       'default' => 0,
     ),
   ),
+  'fieldAliases' => 
+  array (
+    'parent' => 'group',
+  ),
   'indexes' => 
   array (
-    'name' => 
+    'key' => 
     array (
-      'alias' => 'name',
+      'alias' => 'key',
       'primary' => false,
       'unique' => false,
       'type' => 'BTREE',
       'columns' => 
       array (
-        'name' => 
+        'key' => 
         array (
           'length' => '',
           'collation' => 'A',
@@ -90,15 +103,15 @@ $xpdo_meta_map['rmOption']= array (
         ),
       ),
     ),
-    'sortorder' => 
+    'position' => 
     array (
-      'alias' => 'sortorder',
+      'alias' => 'position',
       'primary' => false,
       'unique' => false,
       'type' => 'BTREE',
       'columns' => 
       array (
-        'sortorder' => 
+        'position' => 
         array (
           'length' => '',
           'collation' => 'A',
@@ -112,8 +125,8 @@ $xpdo_meta_map['rmOption']= array (
     'Group' => 
     array (
       'class' => 'rmOptionGroup',
-      'local' => 'group',
-      'foreign' => 'id',
+      'local' => 'key',
+      'foreign' => 'key',
       'cardinality' => 'one',
       'owner' => 'foreign',
     ),

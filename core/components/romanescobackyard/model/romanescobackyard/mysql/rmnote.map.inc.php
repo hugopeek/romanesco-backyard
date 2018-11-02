@@ -13,13 +13,13 @@ $xpdo_meta_map['rmNote']= array (
   ),
   'fields' => 
   array (
-    'resource_id' => NULL,
+    'resource_id' => 0,
     'title' => '',
     'content' => NULL,
     'createdon' => 0,
     'createdby' => 0,
     'deleted' => 0,
-    'type' => 0,
+    'type' => '',
     'tags' => '',
     'user' => 0,
     'status' => 0,
@@ -34,6 +34,7 @@ $xpdo_meta_map['rmNote']= array (
       'attributes' => 'unsigned',
       'phptype' => 'integer',
       'null' => false,
+      'default' => 0,
     ),
     'title' => 
     array (
@@ -76,11 +77,11 @@ $xpdo_meta_map['rmNote']= array (
     ),
     'type' => 
     array (
-      'dbtype' => 'int',
-      'precision' => '10',
-      'phptype' => 'integer',
+      'dbtype' => 'varchar',
+      'precision' => '190',
+      'phptype' => 'string',
       'null' => false,
-      'default' => 0,
+      'default' => '',
     ),
     'tags' => 
     array (
@@ -116,6 +117,7 @@ $xpdo_meta_map['rmNote']= array (
   ),
   'fieldAliases' => 
   array (
+    'date' => 'createdon',
     'author' => 'createdby',
     'assigned_to' => 'user',
   ),

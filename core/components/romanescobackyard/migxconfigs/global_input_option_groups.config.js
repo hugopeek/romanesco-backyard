@@ -53,6 +53,25 @@
                 },
                 {
                     "MIGX_id": 3,
+                    "field": "key",
+                    "caption": "Key",
+                    "description": "This identifier will be used by the TV to fetch the options. Don't use spaces.",
+                    "description_is_code": "0",
+                    "inputTV": "",
+                    "inputTVtype": "text",
+                    "validation": "",
+                    "configs": "",
+                    "restrictive_condition": "",
+                    "display": "",
+                    "sourceFrom": "config",
+                    "sources": "",
+                    "inputOptionValues": "",
+                    "default": "",
+                    "useDefaultIfEmpty": "0",
+                    "pos": 2
+                },
+                {
+                    "MIGX_id": 4,
                     "field": "description",
                     "caption": "Description",
                     "description": "",
@@ -68,10 +87,10 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 2
+                    "pos": 3
                 },
                 {
-                    "MIGX_id": 4,
+                    "MIGX_id": 99,
                     "field": "id",
                     "caption": "ID",
                     "description": "",
@@ -87,7 +106,7 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 3
+                    "pos": 99
                 }
             ],
             "pos": 2
@@ -136,7 +155,9 @@
                 "alias": "Options"
             }
         ],
-        "hooksnippets": "",
+        "hooksnippets": {
+            "aftersave": "migxSaveOptionGroup"
+        },
         "cmpmaincaption": "Backyard tool shed",
         "cmptabcaption": "Input options",
         "cmptabdescription": "",
@@ -163,6 +184,21 @@
         },
         {
             "MIGX_id": 2,
+            "header": "Key",
+            "dataIndex": "key",
+            "width": 50,
+            "sortable": true,
+            "show_in_grid": 1,
+            "customrenderer": "",
+            "renderer": "",
+            "clickaction": "",
+            "selectorconfig": "",
+            "renderchunktpl": "",
+            "renderoptions": "",
+            "editor": "this.textEditor"
+        },
+        {
+            "MIGX_id": 3,
             "header": "Description",
             "dataIndex": "description",
             "width": 130,
@@ -177,7 +213,7 @@
             "editor": "this.textEditor"
         },
         {
-            "MIGX_id": 3,
+            "MIGX_id": 4,
             "header": "Options",
             "dataIndex": "options",
             "width": 210,
@@ -192,7 +228,7 @@
             "editor": ""
         },
         {
-            "MIGX_id": 4,
+            "MIGX_id": 98,
             "header": "ID",
             "dataIndex": "id",
             "width": 10,
@@ -207,7 +243,7 @@
             "editor": ""
         },
         {
-            "MIGX_id": 5,
+            "MIGX_id": 99,
             "header": "deleted",
             "dataIndex": "deleted",
             "width": 10,
