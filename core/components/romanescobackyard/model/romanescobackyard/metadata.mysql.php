@@ -5,7 +5,8 @@ $xpdo_meta_map = array (
   array (
     0 => 'rmTimeline',
     1 => 'rmNote',
-    2 => 'rmOption',
-    3 => 'rmOptionGroup',
+    2 => 'rmRepurpose',
+    3 => 'rmOption',
+    4 => 'rmOptionGroup',
   ),
 );

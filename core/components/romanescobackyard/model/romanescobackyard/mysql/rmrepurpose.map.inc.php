@@ -2,10 +2,10 @@
 /**
  * @package romanescobackyard
  */
-$xpdo_meta_map['rmTimeline']= array (
+$xpdo_meta_map['rmRepurpose']= array (
   'package' => 'romanescobackyard',
   'version' => '1.1',
-  'table' => 'romanesco_timelines',
+  'table' => 'romanesco_repurpose',
   'extends' => 'xPDOSimpleObject',
   'tableMeta' => 
   array (
@@ -13,29 +13,35 @@ $xpdo_meta_map['rmTimeline']= array (
   ),
   'fields' => 
   array (
-    'resource_id' => 0,
+    'source' => 0,
+    'destination' => 0,
     'title' => '',
     'description' => NULL,
-    'content' => NULL,
     'createdon' => 0,
     'createdby' => 0,
     'deleted' => 0,
-    'type' => '',
-    'date' => NULL,
-    'icon' => '',
-    'complexity' => 0,
-    'attachments' => '',
-    'links' => '',
+    'purpose' => '',
+    'theme' => '',
+    'topics' => '',
   ),
   'fieldMeta' => 
   array (
-    'resource_id' => 
+    'source' => 
     array (
       'dbtype' => 'int',
       'precision' => '11',
       'attributes' => 'unsigned',
       'phptype' => 'integer',
-      'null' => false,
+      'null' => true,
+      'default' => 0,
+    ),
+    'destination' => 
+    array (
+      'dbtype' => 'int',
+      'precision' => '11',
+      'attributes' => 'unsigned',
+      'phptype' => 'integer',
+      'null' => true,
       'default' => 0,
     ),
     'title' => 
@@ -50,13 +56,7 @@ $xpdo_meta_map['rmTimeline']= array (
     array (
       'dbtype' => 'text',
       'phptype' => 'string',
-      'null' => true,
-    ),
-    'content' => 
-    array (
-      'dbtype' => 'text',
-      'phptype' => 'string',
-      'null' => true,
+      'null' => false,
     ),
     'createdon' => 
     array (
@@ -83,79 +83,29 @@ $xpdo_meta_map['rmTimeline']= array (
       'null' => false,
       'default' => 0,
     ),
-    'type' => 
-    array (
-      'dbtype' => 'varchar',
-      'precision' => '190',
-      'phptype' => 'string',
-      'null' => false,
-      'default' => '',
-    ),
-    'date' => 
-    array (
-      'dbtype' => 'datetime',
-      'phptype' => 'datetime',
-      'null' => true,
-    ),
-    'icon' => 
+    'purpose' => 
     array (
       'dbtype' => 'varchar',
       'precision' => '255',
       'phptype' => 'string',
-      'null' => true,
+      'null' => false,
       'default' => '',
     ),
-    'complexity' => 
+    'theme' => 
     array (
-      'dbtype' => 'int',
-      'precision' => '10',
-      'phptype' => 'integer',
-      'null' => true,
-      'default' => 0,
-    ),
-    'attachments' => 
-    array (
-      'dbtype' => 'text',
+      'dbtype' => 'varchar',
+      'precision' => '255',
       'phptype' => 'string',
-      'null' => true,
+      'null' => false,
       'default' => '',
     ),
-    'links' => 
+    'topics' => 
     array (
-      'dbtype' => 'text',
+      'dbtype' => 'varchar',
+      'precision' => '255',
       'phptype' => 'string',
-      'null' => true,
+      'null' => false,
       'default' => '',
-    ),
-  ),
-  'indexes' => 
-  array (
-    'type' => 
-    array (
-      'alias' => 'type',
-      'primary' => false,
-      'unique' => false,
-      'type' => 'BTREE',
-      'columns' => 
-      array (
-        'type' => 
-        array (
-          'length' => '',
-          'collation' => 'A',
-          'null' => false,
-        ),
-      ),
-    ),
-  ),
-  'aggregates' => 
-  array (
-    'Resource' => 
-    array (
-      'class' => 'modResource',
-      'local' => 'resource_id',
-      'foreign' => 'id',
-      'cardinality' => 'one',
-      'owner' => 'foreign',
     ),
   ),
 );

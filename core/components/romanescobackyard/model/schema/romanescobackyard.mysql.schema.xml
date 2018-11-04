@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model package="romanescobackyard" baseClass="xPDOObject" platform="mysql" defaultEngine="InnoDB" phpdoc-package="romanescobackyard" version="1.1">
-    <!-- Timeline table -->
+    <!-- Timeline -->
     <object class="rmTimeline" table="romanesco_timelines" extends="xPDOSimpleObject">
         <field key="resource_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="" />
         <field key="title" dbtype="varchar" precision="190" phptype="string" null="false" default="" />
@@ -10,7 +10,7 @@
         <field key="createdby" dbtype="int" precision="10" phptype="integer" null="false" default="" />
         <field key="deleted" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="0" />
 
-        <!-- Type defines the kind of timeline: project-hub, roadmap, history, log -->
+        <!-- Type is based on alias and defines the kind of timeline: project-hub, roadmap, history, log... -->
         <field key="type" dbtype="varchar" precision="190" phptype="string" null="false" default="" />
         <field key="date" dbtype="datetime" phptype="datetime" null="true" />
         <field key="icon" dbtype="varchar" precision="255" phptype="string" null="true" default="" />
@@ -20,16 +20,13 @@
         <field key="attachments" dbtype="text" phptype="string" null="true" default="" />
         <field key="links" dbtype="text" phptype="string" null="true" default="" />
 
-        <index alias="title" name="title" primary="false" unique="false" type="BTREE">
-            <column key="title" length="" collation="A" null="false" />
-        </index>
         <index alias="type" name="type" primary="false" unique="false" type="BTREE">
             <column key="type" length="" collation="A" null="false" />
         </index>
 
         <aggregate alias="Resource" class="modResource" local="resource_id" foreign="id" cardinality="one" owner="foreign" />
     </object>
-    <!-- Notes table -->
+    <!-- Notes -->
     <object class="rmNote" table="romanesco_notes" extends="xPDOSimpleObject">
         <field key="resource_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="" />
         <field key="title" dbtype="varchar" precision="190" phptype="string" null="false" default="" />
@@ -38,7 +35,7 @@
         <field key="createdby" dbtype="int" precision="10" phptype="integer" null="false" default="" />
         <field key="deleted" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="0" />
 
-        <!-- Type defines the kind of note: issue, comment, improvement, log -->
+        <!-- Type is based on alias and defines the kind of timeline: project-hub, roadmap, history, log... -->
         <field key="type" dbtype="varchar" precision="190" phptype="string" null="false" default="" />
 
         <!-- Tags are used for segmenting each note type a bit further -->
@@ -53,22 +50,33 @@
         <alias key="author" field="createdby" />
         <alias key="assigned_to" field="user" />
 
-        <index alias="title" name="title" primary="false" unique="false" type="BTREE">
-            <column key="title" length="" collation="A" null="false" />
-        </index>
         <index alias="type" name="type" primary="false" unique="false" type="BTREE">
             <column key="type" length="" collation="A" null="false" />
         </index>
 
         <aggregate alias="Resource" class="modResource" local="resource_id" foreign="id" cardinality="one" owner="foreign" />
     </object>
-    <!-- Options table -->
+    <!-- Repurpose -->
+    <object class="rmRepurpose" table="romanesco_repurpose" extends="xPDOSimpleObject">
+        <field key="source" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="true" default="" />
+        <field key="destination" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="true" default="" />
+        <field key="title" dbtype="varchar" precision="190" phptype="string" null="false" default="" />
+        <field key="description" dbtype="text" phptype="string" null="false" />
+        <field key="createdon" dbtype="int" precision="20" phptype="timestamp" null="false" default="" />
+        <field key="createdby" dbtype="int" precision="10" phptype="integer" null="false" default="" />
+        <field key="deleted" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="0" />
+
+        <field key="purpose" dbtype="varchar" precision="255" phptype="string" null="false" default="" />
+        <field key="theme" dbtype="varchar" precision="255" phptype="string" null="false" default="" />
+        <field key="topics" dbtype="text" phptype="string" null="false" default="" />
+    </object>
+    <!-- Options -->
     <object class="rmOption" table="romanesco_options" extends="xPDOSimpleObject">
         <field key="name" dbtype="varchar" precision="190" phptype="string" null="false" default="" />
-        <field key="key" dbtype="varchar" precision="190" phptype="string" null="false" default="" />
-        <field key="description" dbtype="varchar" precision="255" phptype="string" null="true" default="" />
+        <field key="description" dbtype="text" phptype="string" null="false" default="" />
         <field key="alias" dbtype="varchar" precision="190" phptype="string" null="false" default="" />
         <field key="group" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" />
+        <field key="key" dbtype="varchar" precision="190" phptype="string" null="true" default="" />
         <field key="position" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
         <field key="deleted" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="0" />
 
@@ -83,11 +91,11 @@
 
         <aggregate alias="Group" class="rmOptionGroup" local="key" foreign="key" cardinality="one" owner="foreign" />
     </object>
-    <!-- Option groups table -->
+    <!-- Option groups -->
     <object class="rmOptionGroup" table="romanesco_option_groups" extends="xPDOSimpleObject">
         <field key="name" dbtype="varchar" precision="190" phptype="string" null="false" />
-        <field key="key" dbtype="varchar" precision="190" phptype="string" null="true" />
-        <field key="description" dbtype="text" phptype="string" null="true" />
+        <field key="description" dbtype="text" phptype="string" null="false" />
+        <field key="key" dbtype="varchar" precision="190" phptype="string" null="true" default="" />
         <field key="position" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
         <field key="deleted" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="0" />
 
@@ -95,6 +103,6 @@
             <column key="position" length="" collation="A" null="false" />
         </index>
 
-        <aggregate alias="Options" class="rmOption" local="key" foreign="key" cardinality="many" owner="local" />
+        <composite alias="Options" class="rmOption" local="key" foreign="key" cardinality="many" owner="local" />
     </object>
 </model>

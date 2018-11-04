@@ -123,22 +123,6 @@ $xpdo_meta_map['rmNote']= array (
   ),
   'indexes' => 
   array (
-    'title' => 
-    array (
-      'alias' => 'title',
-      'primary' => false,
-      'unique' => false,
-      'type' => 'BTREE',
-      'columns' => 
-      array (
-        'title' => 
-        array (
-          'length' => '',
-          'collation' => 'A',
-          'null' => false,
-        ),
-      ),
-    ),
     'type' => 
     array (
       'alias' => 'type',

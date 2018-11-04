@@ -14,10 +14,10 @@ $xpdo_meta_map['rmOption']= array (
   'fields' => 
   array (
     'name' => '',
-    'key' => '0',
     'description' => '',
     'alias' => '',
     'group' => NULL,
+    'key' => '',
     'position' => 0,
     'deleted' => 0,
   ),
@@ -31,20 +31,11 @@ $xpdo_meta_map['rmOption']= array (
       'null' => false,
       'default' => '',
     ),
-    'key' => 
-    array (
-      'dbtype' => 'varchar',
-      'precision' => '190',
-      'phptype' => 'string',
-      'null' => false,
-      'default' => '0',
-    ),
     'description' => 
     array (
-      'dbtype' => 'varchar',
-      'precision' => '255',
+      'dbtype' => 'text',
       'phptype' => 'string',
-      'null' => true,
+      'null' => false,
       'default' => '',
     ),
     'alias' => 
@@ -62,6 +53,14 @@ $xpdo_meta_map['rmOption']= array (
       'attributes' => 'unsigned',
       'phptype' => 'integer',
       'null' => false,
+    ),
+    'key' => 
+    array (
+      'dbtype' => 'varchar',
+      'precision' => '190',
+      'phptype' => 'string',
+      'null' => true,
+      'default' => '',
     ),
     'position' => 
     array (
