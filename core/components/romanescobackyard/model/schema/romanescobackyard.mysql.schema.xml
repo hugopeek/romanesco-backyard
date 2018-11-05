@@ -1,24 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model package="romanescobackyard" baseClass="xPDOObject" platform="mysql" defaultEngine="InnoDB" phpdoc-package="romanescobackyard" version="1.1">
     <!-- Timeline -->
-    <object class="rmTimeline" table="romanesco_timelines" extends="xPDOSimpleObject">
+    <object class="rmTimeline" table="romanesco_timeline" extends="xPDOSimpleObject">
         <field key="resource_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="" />
         <field key="title" dbtype="varchar" precision="190" phptype="string" null="false" default="" />
-        <field key="description" dbtype="text" phptype="string" null="true" />
-        <field key="content" dbtype="text" phptype="string" null="true" />
+        <field key="description" dbtype="text" phptype="string" null="false" />
+        <field key="content" dbtype="text" phptype="string" null="false" />
         <field key="createdon" dbtype="int" precision="20" phptype="timestamp" null="false" default="" />
         <field key="createdby" dbtype="int" precision="10" phptype="integer" null="false" default="" />
         <field key="deleted" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="0" />
 
-        <!-- Type is based on alias and defines the kind of timeline: project-hub, roadmap, history, log... -->
-        <field key="type" dbtype="varchar" precision="190" phptype="string" null="false" default="" />
+        <field key="type" dbtype="varchar" precision="190" phptype="string" null="true" default="" />
         <field key="date" dbtype="datetime" phptype="datetime" null="true" />
-        <field key="icon" dbtype="varchar" precision="255" phptype="string" null="true" default="" />
-        <field key="complexity" dbtype="int" precision="10" phptype="integer" null="true" default="" />
-
-        <!-- Attachments and links are IDs of static resources and weblinks -->
-        <field key="attachments" dbtype="text" phptype="string" null="true" default="" />
-        <field key="links" dbtype="text" phptype="string" null="true" default="" />
+        <field key="icon" dbtype="varchar" precision="255" phptype="string" null="false" default="" />
 
         <index alias="type" name="type" primary="false" unique="false" type="BTREE">
             <column key="type" length="" collation="A" null="false" />
@@ -35,20 +29,11 @@
         <field key="createdby" dbtype="int" precision="10" phptype="integer" null="false" default="" />
         <field key="deleted" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="0" />
 
-        <!-- Type is based on alias and defines the kind of timeline: project-hub, roadmap, history, log... -->
-        <field key="type" dbtype="varchar" precision="190" phptype="string" null="false" default="" />
-
-        <!-- Tags are used for segmenting each note type a bit further -->
+        <field key="type" dbtype="varchar" precision="190" phptype="string" null="true" default="" />
         <field key="tags" dbtype="text" phptype="string" null="false" default="" />
-
-        <!-- User indicates who this note is assigned to -->
-        <field key="user" dbtype="int" precision="10" phptype="integer" null="true" default="" />
-        <field key="status" dbtype="int" precision="10" phptype="integer" null="true" default="" />
-        <field key="priority" dbtype="int" precision="10" phptype="integer" null="true" default="" />
 
         <alias key="date" field="createdon" />
         <alias key="author" field="createdby" />
-        <alias key="assigned_to" field="user" />
 
         <index alias="type" name="type" primary="false" unique="false" type="BTREE">
             <column key="type" length="" collation="A" null="false" />
@@ -56,8 +41,8 @@
 
         <aggregate alias="Resource" class="modResource" local="resource_id" foreign="id" cardinality="one" owner="foreign" />
     </object>
-    <!-- Repurpose -->
-    <object class="rmRepurpose" table="romanesco_repurpose" extends="xPDOSimpleObject">
+    <!-- Crosslinks -->
+    <object class="rmCrosslink" table="romanesco_crosslinks" extends="xPDOSimpleObject">
         <field key="source" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="true" default="" />
         <field key="destination" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="true" default="" />
         <field key="title" dbtype="varchar" precision="190" phptype="string" null="false" default="" />
@@ -65,10 +50,6 @@
         <field key="createdon" dbtype="int" precision="20" phptype="timestamp" null="false" default="" />
         <field key="createdby" dbtype="int" precision="10" phptype="integer" null="false" default="" />
         <field key="deleted" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="0" />
-
-        <field key="purpose" dbtype="varchar" precision="255" phptype="string" null="false" default="" />
-        <field key="theme" dbtype="varchar" precision="255" phptype="string" null="false" default="" />
-        <field key="topics" dbtype="text" phptype="string" null="false" default="" />
     </object>
     <!-- Options -->
     <object class="rmOption" table="romanesco_options" extends="xPDOSimpleObject">
@@ -104,5 +85,55 @@
         </index>
 
         <composite alias="Options" class="rmOption" local="key" foreign="key" cardinality="many" owner="local" />
+    </object>
+    <!-- Extended classes, based on the classes above -->
+    <object class="rmTimelineProject" table="romanesco_timeline_project" extends="rmTimeline">
+        <field key="type" dbtype="varchar" precision="190" phptype="string" null="true" default="project-hub" />
+        <field key="user" dbtype="int" precision="10" phptype="integer" null="true" default="" />
+        <field key="complexity" dbtype="int" precision="10" phptype="integer" null="true" default="" />
+        <field key="attachments" dbtype="text" phptype="string" null="false" default="" />
+        <field key="links" dbtype="text" phptype="string" null="false" default="" />
+        <alias key="assigned_to" field="user" />
+    </object>
+    <object class="rmNoteImprovement" table="romanesco_notes_improvement" extends="rmNote">
+        <field key="type" dbtype="varchar" precision="190" phptype="string" null="true" default="improvement" />
+        <field key="status" dbtype="int" precision="10" phptype="integer" null="true" default="" />
+        <field key="priority" dbtype="int" precision="10" phptype="integer" null="true" default="" />
+        <field key="complexity" dbtype="int" precision="10" phptype="integer" null="true" default="" />
+        <field key="attachments" dbtype="text" phptype="string" null="false" default="" />
+        <field key="links" dbtype="text" phptype="string" null="false" default="" />
+        <alias key="improvements" field="tags" />
+    </object>
+    <object class="rmNoteIssue" table="romanesco_notes_issue" extends="rmNote">
+        <field key="type" dbtype="varchar" precision="190" phptype="string" null="true" default="issue" />
+        <field key="status" dbtype="int" precision="10" phptype="integer" null="true" default="" />
+        <field key="priority" dbtype="int" precision="10" phptype="integer" null="true" default="" />
+        <field key="complexity" dbtype="int" precision="10" phptype="integer" null="true" default="" />
+        <field key="attachments" dbtype="text" phptype="string" null="false" default="" />
+        <field key="links" dbtype="text" phptype="string" null="false" default="" />
+        <alias key="issues" field="tags" />
+    </object>
+    <object class="rmCrosslinkRepurpose" table="romanesco_crosslinks_repurpose" extends="rmCrosslink">
+        <field key="purpose" dbtype="varchar" precision="255" phptype="string" null="false" default="" />
+        <field key="theme" dbtype="varchar" precision="255" phptype="string" null="false" default="" />
+        <field key="topics" dbtype="text" phptype="string" null="false" default="" />
+    </object>
+    <object class="rmOptionProgress" table="romanesco_options_progress" extends="rmOption">
+        <field key="key" dbtype="varchar" precision="190" phptype="string" null="true" default="status_progress" />
+    </object>
+    <object class="rmOptionHealth" table="romanesco_options_health" extends="rmOption">
+        <field key="key" dbtype="varchar" precision="190" phptype="string" null="true" default="status_health" />
+    </object>
+    <object class="rmOptionImprovement" table="romanesco_options_improvement" extends="rmOption">
+        <field key="key" dbtype="varchar" precision="190" phptype="string" null="true" default="status_improvement" />
+    </object>
+    <object class="rmOptionIssue" table="romanesco_options_issue" extends="rmOption">
+        <field key="key" dbtype="varchar" precision="190" phptype="string" null="true" default="status_issue" />
+    </object>
+    <object class="rmOptionPurpose" table="romanesco_options_purpose" extends="rmOption">
+        <field key="key" dbtype="varchar" precision="190" phptype="string" null="true" default="content_purpose" />
+    </object>
+    <object class="rmOptionPurpose" table="romanesco_options_priority" extends="rmOption">
+        <field key="key" dbtype="varchar" precision="190" phptype="string" null="true" default="content_priority" />
     </object>
 </model>

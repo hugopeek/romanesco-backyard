@@ -2,10 +2,10 @@
 /**
  * @package romanescobackyard
  */
-$xpdo_meta_map['rmNote']= array (
+$xpdo_meta_map['rmCrosslink']= array (
   'package' => 'romanescobackyard',
   'version' => '1.1',
-  'table' => 'romanesco_notes',
+  'table' => 'romanesco_crosslinks',
   'extends' => 'xPDOSimpleObject',
   'tableMeta' => 
   array (
@@ -13,24 +13,32 @@ $xpdo_meta_map['rmNote']= array (
   ),
   'fields' => 
   array (
-    'resource_id' => 0,
+    'source' => 0,
+    'destination' => 0,
     'title' => '',
-    'content' => NULL,
+    'description' => NULL,
     'createdon' => 0,
     'createdby' => 0,
     'deleted' => 0,
-    'type' => '',
-    'tags' => '',
   ),
   'fieldMeta' => 
   array (
-    'resource_id' => 
+    'source' => 
     array (
       'dbtype' => 'int',
       'precision' => '11',
       'attributes' => 'unsigned',
       'phptype' => 'integer',
-      'null' => false,
+      'null' => true,
+      'default' => 0,
+    ),
+    'destination' => 
+    array (
+      'dbtype' => 'int',
+      'precision' => '11',
+      'attributes' => 'unsigned',
+      'phptype' => 'integer',
+      'null' => true,
       'default' => 0,
     ),
     'title' => 
@@ -41,11 +49,11 @@ $xpdo_meta_map['rmNote']= array (
       'null' => false,
       'default' => '',
     ),
-    'content' => 
+    'description' => 
     array (
       'dbtype' => 'text',
       'phptype' => 'string',
-      'null' => true,
+      'null' => false,
     ),
     'createdon' => 
     array (
@@ -71,56 +79,6 @@ $xpdo_meta_map['rmNote']= array (
       'phptype' => 'boolean',
       'null' => false,
       'default' => 0,
-    ),
-    'type' => 
-    array (
-      'dbtype' => 'varchar',
-      'precision' => '190',
-      'phptype' => 'string',
-      'null' => true,
-      'default' => '',
-    ),
-    'tags' => 
-    array (
-      'dbtype' => 'text',
-      'phptype' => 'string',
-      'null' => false,
-      'default' => '',
-    ),
-  ),
-  'fieldAliases' => 
-  array (
-    'date' => 'createdon',
-    'author' => 'createdby',
-  ),
-  'indexes' => 
-  array (
-    'type' => 
-    array (
-      'alias' => 'type',
-      'primary' => false,
-      'unique' => false,
-      'type' => 'BTREE',
-      'columns' => 
-      array (
-        'type' => 
-        array (
-          'length' => '',
-          'collation' => 'A',
-          'null' => false,
-        ),
-      ),
-    ),
-  ),
-  'aggregates' => 
-  array (
-    'Resource' => 
-    array (
-      'class' => 'modResource',
-      'local' => 'resource_id',
-      'foreign' => 'id',
-      'cardinality' => 'one',
-      'owner' => 'foreign',
     ),
   ),
 );

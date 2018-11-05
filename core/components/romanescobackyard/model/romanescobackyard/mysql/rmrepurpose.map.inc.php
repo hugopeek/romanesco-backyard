@@ -101,8 +101,7 @@ $xpdo_meta_map['rmRepurpose']= array (
     ),
     'topics' => 
     array (
-      'dbtype' => 'varchar',
-      'precision' => '255',
+      'dbtype' => 'text',
       'phptype' => 'string',
       'null' => false,
       'default' => '',

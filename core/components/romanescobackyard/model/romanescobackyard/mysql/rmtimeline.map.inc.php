@@ -5,7 +5,7 @@
 $xpdo_meta_map['rmTimeline']= array (
   'package' => 'romanescobackyard',
   'version' => '1.1',
-  'table' => 'romanesco_timelines',
+  'table' => 'romanesco_timeline',
   'extends' => 'xPDOSimpleObject',
   'tableMeta' => 
   array (
@@ -23,9 +23,6 @@ $xpdo_meta_map['rmTimeline']= array (
     'type' => '',
     'date' => NULL,
     'icon' => '',
-    'complexity' => 0,
-    'attachments' => '',
-    'links' => '',
   ),
   'fieldMeta' => 
   array (
@@ -50,13 +47,13 @@ $xpdo_meta_map['rmTimeline']= array (
     array (
       'dbtype' => 'text',
       'phptype' => 'string',
-      'null' => true,
+      'null' => false,
     ),
     'content' => 
     array (
       'dbtype' => 'text',
       'phptype' => 'string',
-      'null' => true,
+      'null' => false,
     ),
     'createdon' => 
     array (
@@ -88,7 +85,7 @@ $xpdo_meta_map['rmTimeline']= array (
       'dbtype' => 'varchar',
       'precision' => '190',
       'phptype' => 'string',
-      'null' => false,
+      'null' => true,
       'default' => '',
     ),
     'date' => 
@@ -102,29 +99,7 @@ $xpdo_meta_map['rmTimeline']= array (
       'dbtype' => 'varchar',
       'precision' => '255',
       'phptype' => 'string',
-      'null' => true,
-      'default' => '',
-    ),
-    'complexity' => 
-    array (
-      'dbtype' => 'int',
-      'precision' => '10',
-      'phptype' => 'integer',
-      'null' => true,
-      'default' => 0,
-    ),
-    'attachments' => 
-    array (
-      'dbtype' => 'text',
-      'phptype' => 'string',
-      'null' => true,
-      'default' => '',
-    ),
-    'links' => 
-    array (
-      'dbtype' => 'text',
-      'phptype' => 'string',
-      'null' => true,
+      'null' => false,
       'default' => '',
     ),
   ),
