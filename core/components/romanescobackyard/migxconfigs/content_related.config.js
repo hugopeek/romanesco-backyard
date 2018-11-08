@@ -168,7 +168,7 @@
         "add_items_directly": "",
         "formcaption": "",
         "update_win_title": "Edit relation",
-        "win_id": 11,
+        "win_id": 10,
         "maxRecords": "",
         "addNewItemAt": "top",
         "multiple_formtabs": "",
