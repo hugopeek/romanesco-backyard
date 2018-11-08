@@ -2,10 +2,10 @@
 /**
  * @package romanescobackyard
  */
-$xpdo_meta_map['rmRepurpose']= array (
+$xpdo_meta_map['rmCrosslinkRelated']= array (
   'package' => 'romanescobackyard',
   'version' => '1.1',
-  'table' => 'romanesco_repurpose',
+  'table' => 'romanesco_crosslinks_related',
   'extends' => 'xPDOSimpleObject',
   'tableMeta' => 
   array (
@@ -16,13 +16,12 @@ $xpdo_meta_map['rmRepurpose']= array (
     'source' => 0,
     'destination' => 0,
     'title' => '',
-    'description' => NULL,
+    'description' => '',
     'createdon' => 0,
     'createdby' => 0,
     'deleted' => 0,
-    'purpose' => '',
-    'theme' => '',
-    'topics' => '',
+    'crosslink_id' => 0,
+    'weight' => 0,
   ),
   'fieldMeta' => 
   array (
@@ -57,6 +56,7 @@ $xpdo_meta_map['rmRepurpose']= array (
       'dbtype' => 'text',
       'phptype' => 'string',
       'null' => false,
+      'default' => '',
     ),
     'createdon' => 
     array (
@@ -83,28 +83,81 @@ $xpdo_meta_map['rmRepurpose']= array (
       'null' => false,
       'default' => 0,
     ),
-    'purpose' => 
+    'crosslink_id' => 
     array (
-      'dbtype' => 'varchar',
-      'precision' => '255',
-      'phptype' => 'string',
-      'null' => false,
-      'default' => '',
+      'dbtype' => 'int',
+      'precision' => '11',
+      'attributes' => 'unsigned',
+      'phptype' => 'integer',
+      'null' => true,
+      'default' => 0,
     ),
-    'theme' => 
+    'weight' => 
     array (
-      'dbtype' => 'varchar',
-      'precision' => '255',
-      'phptype' => 'string',
+      'dbtype' => 'int',
+      'precision' => '10',
+      'phptype' => 'integer',
       'null' => false,
-      'default' => '',
+      'default' => 0,
     ),
-    'topics' => 
+  ),
+  'fieldAliases' => 
+  array (
+    'resource_id' => 'source',
+  ),
+  'indexes' => 
+  array (
+    'crosslink' => 
     array (
-      'dbtype' => 'text',
-      'phptype' => 'string',
-      'null' => false,
-      'default' => '',
+      'alias' => 'crosslink',
+      'primary' => false,
+      'unique' => true,
+      'type' => 'BTREE',
+      'columns' => 
+      array (
+        'source' => 
+        array (
+          'length' => '',
+          'collation' => 'A',
+          'null' => false,
+        ),
+        'destination' => 
+        array (
+          'length' => '',
+          'collation' => 'A',
+          'null' => false,
+        ),
+      ),
+    ),
+  ),
+  'composites' => 
+  array (
+    'Crosslink' => 
+    array (
+      'class' => 'rmCrosslinkRelated',
+      'local' => 'crosslink_id',
+      'foreign' => 'id',
+      'cardinality' => 'one',
+      'owner' => 'local',
+    ),
+  ),
+  'aggregates' => 
+  array (
+    'Source' => 
+    array (
+      'class' => 'modResource',
+      'local' => 'source',
+      'foreign' => 'id',
+      'cardinality' => 'one',
+      'owner' => 'foreign',
+    ),
+    'Destination' => 
+    array (
+      'class' => 'modResource',
+      'local' => 'destination',
+      'foreign' => 'id',
+      'cardinality' => 'one',
+      'owner' => 'foreign',
     ),
   ),
 );

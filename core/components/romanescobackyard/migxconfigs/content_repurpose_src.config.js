@@ -135,7 +135,7 @@
         "extrahandlers": "",
         "filtersperrow": 4,
         "packageName": "romanescobackyard",
-        "classname": "rmRepurpose",
+        "classname": "rmCrosslinkRepurpose",
         "task": "",
         "getlistsort": "",
         "getlistsortdir": "",
@@ -154,8 +154,8 @@
         "hooksnippets": {
             "aftersave": "migxSaveRepurposeSrc"
         },
-        "cmpmaincaption": "Backyard tool shed",
-        "cmptabcaption": "Input options",
+        "cmpmaincaption": "Tool shed",
+        "cmptabcaption": "Repurpose content",
         "cmptabdescription": "",
         "cmptabcontroller": "",
         "winbuttons": "",

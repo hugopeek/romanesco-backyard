@@ -7,9 +7,9 @@
             "fields": [
                 {
                     "MIGX_id": 11,
-                    "field": "type",
-                    "caption": "Type",
-                    "description": "What kind of improvement do you envision here?",
+                    "field": "improvements",
+                    "caption": "Nature",
+                    "description": "What kind of improvement do you think / feel is needed?",
                     "description_is_code": "0",
                     "inputTV": "",
                     "inputTVtype": "listbox",
@@ -127,7 +127,7 @@
         "extrahandlers": "",
         "filtersperrow": 4,
         "packageName": "romanescobackyard",
-        "classname": "rmNote",
+        "classname": "rmNoteImprovement",
         "task": "",
         "getlistsort": "",
         "getlistsortdir": "",
@@ -156,7 +156,7 @@
         {
             "MIGX_id": 1,
             "header": "Note",
-            "dataIndex": "note",
+            "dataIndex": "content",
             "width": 100,
             "sortable": "false",
             "show_in_grid": 1,

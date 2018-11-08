@@ -8,26 +8,10 @@ $xpdo_meta_map = array (
     2 => 'rmCrosslink',
     3 => 'rmOption',
     4 => 'rmOptionGroup',
-  ),
-  'rmTimeline' => 
-  array (
-    0 => 'rmTimelineProject',
-  ),
-  'rmNote' => 
-  array (
-    0 => 'rmNoteImprovement',
-    1 => 'rmNoteIssue',
-  ),
-  'rmCrosslink' => 
-  array (
-    0 => 'rmCrosslinkRepurpose',
-  ),
-  'rmOption' => 
-  array (
-    0 => 'rmOptionProgress',
-    1 => 'rmOptionHealth',
-    2 => 'rmOptionImprovement',
-    3 => 'rmOptionIssue',
-    4 => 'rmOptionPurpose',
+    5 => 'rmTimelineProject',
+    6 => 'rmNoteImprovement',
+    7 => 'rmNoteIssue',
+    8 => 'rmCrosslinkRepurpose',
+    9 => 'rmCrosslinkRelated',
   ),
 );

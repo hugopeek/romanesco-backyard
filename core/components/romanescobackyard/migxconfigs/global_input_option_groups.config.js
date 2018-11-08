@@ -158,7 +158,7 @@
         "hooksnippets": {
             "aftersave": "migxSaveOptionGroup"
         },
-        "cmpmaincaption": "Backyard tool shed",
+        "cmpmaincaption": "Tool shed",
         "cmptabcaption": "Input options",
         "cmptabdescription": "",
         "cmptabcontroller": "",

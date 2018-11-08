@@ -2,5 +2,5 @@
 /**
  * @package romanescobackyard
  */
-class rmCrosslinkRepurpose extends rmCrosslink {}
+class rmCrosslinkRepurpose extends xPDOSimpleObject {}
 ?>

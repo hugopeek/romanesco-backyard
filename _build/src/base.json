@@ -11,7 +11,20 @@
                     "name": "05_pages"
                 }
             ]
-        }
+        },
+        "menus": [
+            {
+                "text": "Tool Shed",
+                "description": "Manage and customize your Romanesco project",
+                "action": "index",
+                "namespace": "migx",
+                "parent": "Manage",
+                "icon": "",
+                "menuIndex": 1,
+                "params": "&configs=global_input_option_groups:romanescobackyard||status_improvements:romanescobackyard||status_issues:romanescobackyard||content_repurpose:romanescobackyard||content_related:romanescobackyard",
+                "handler": ""
+            }
+        ]
     },
     "database": {
         "tables": [
@@ -21,15 +34,10 @@
             "rmNoteImprovement",
             "rmNoteIssue",
             "rmCrosslink",
+            "rmCrosslinkRelated",
             "rmCrosslinkRepurpose",
             "rmOption",
-            "rmOptionGroup",
-            "rmOptionProgress",
-            "rmOptionHealth",
-            "rmOptionImprovement",
-            "rmOptionIssue",
-            "rmOptionPurpose",
-            "rmOptionPriority"
+            "rmOptionGroup"
         ]
     },
     "build": {

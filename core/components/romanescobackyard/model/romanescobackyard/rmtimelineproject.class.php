@@ -2,5 +2,5 @@
 /**
  * @package romanescobackyard
  */
-class rmTimelineProject extends rmTimeline {}
+class rmTimelineProject extends xPDOSimpleObject {}
 ?>

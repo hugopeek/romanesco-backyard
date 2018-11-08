@@ -16,7 +16,7 @@ $xpdo_meta_map['rmCrosslink']= array (
     'source' => 0,
     'destination' => 0,
     'title' => '',
-    'description' => NULL,
+    'description' => '',
     'createdon' => 0,
     'createdby' => 0,
     'deleted' => 0,
@@ -54,6 +54,7 @@ $xpdo_meta_map['rmCrosslink']= array (
       'dbtype' => 'text',
       'phptype' => 'string',
       'null' => false,
+      'default' => '',
     ),
     'createdon' => 
     array (
