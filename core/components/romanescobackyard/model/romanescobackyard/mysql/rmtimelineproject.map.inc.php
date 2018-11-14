@@ -15,15 +15,15 @@ $xpdo_meta_map['rmTimelineProject']= array (
   array (
     'resource_id' => 0,
     'title' => '',
-    'description' => NULL,
-    'content' => NULL,
+    'description' => '',
+    'content' => '',
     'createdon' => 0,
     'createdby' => 0,
     'deleted' => 0,
     'type' => 'project-hub',
     'date' => NULL,
     'icon' => '',
-    'user' => 0,
+    'user_id' => 0,
     'complexity' => 0,
     'attachments' => '',
     'links' => '',
@@ -52,12 +52,14 @@ $xpdo_meta_map['rmTimelineProject']= array (
       'dbtype' => 'text',
       'phptype' => 'string',
       'null' => false,
+      'default' => '',
     ),
     'content' => 
     array (
       'dbtype' => 'text',
       'phptype' => 'string',
       'null' => false,
+      'default' => '',
     ),
     'createdon' => 
     array (
@@ -106,7 +108,7 @@ $xpdo_meta_map['rmTimelineProject']= array (
       'null' => false,
       'default' => '',
     ),
-    'user' => 
+    'user_id' => 
     array (
       'dbtype' => 'int',
       'precision' => '10',
@@ -139,7 +141,8 @@ $xpdo_meta_map['rmTimelineProject']= array (
   ),
   'fieldAliases' => 
   array (
-    'assigned_to' => 'user',
+    'author_id' => 'createdby',
+    'assigned_to' => 'user_id',
   ),
   'indexes' => 
   array (

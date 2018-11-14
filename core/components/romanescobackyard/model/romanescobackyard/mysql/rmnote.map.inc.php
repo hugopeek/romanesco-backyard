@@ -90,8 +90,7 @@ $xpdo_meta_map['rmNote']= array (
   ),
   'fieldAliases' => 
   array (
-    'date' => 'createdon',
-    'author' => 'createdby',
+    'author_id' => 'createdby',
   ),
   'indexes' => 
   array (
@@ -118,6 +117,14 @@ $xpdo_meta_map['rmNote']= array (
     array (
       'class' => 'modResource',
       'local' => 'resource_id',
+      'foreign' => 'id',
+      'cardinality' => 'one',
+      'owner' => 'foreign',
+    ),
+    'Author' => 
+    array (
+      'class' => 'modUser',
+      'local' => 'author_id',
       'foreign' => 'id',
       'cardinality' => 'one',
       'owner' => 'foreign',

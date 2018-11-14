@@ -82,4 +82,19 @@ $xpdo_meta_map['rmCrosslink']= array (
       'default' => 0,
     ),
   ),
+  'fieldAliases' => 
+  array (
+    'author_id' => 'createdby',
+  ),
+  'aggregates' => 
+  array (
+    'Author' => 
+    array (
+      'class' => 'modUser',
+      'local' => 'author_id',
+      'foreign' => 'id',
+      'cardinality' => 'one',
+      'owner' => 'foreign',
+    ),
+  ),
 );

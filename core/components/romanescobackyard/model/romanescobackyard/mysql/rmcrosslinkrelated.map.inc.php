@@ -103,6 +103,7 @@ $xpdo_meta_map['rmCrosslinkRelated']= array (
   ),
   'fieldAliases' => 
   array (
+    'author_id' => 'createdby',
     'resource_id' => 'source',
   ),
   'indexes' => 
@@ -155,6 +156,14 @@ $xpdo_meta_map['rmCrosslinkRelated']= array (
     array (
       'class' => 'modResource',
       'local' => 'destination',
+      'foreign' => 'id',
+      'cardinality' => 'one',
+      'owner' => 'foreign',
+    ),
+    'Author' => 
+    array (
+      'class' => 'modUser',
+      'local' => 'author_id',
       'foreign' => 'id',
       'cardinality' => 'one',
       'owner' => 'foreign',

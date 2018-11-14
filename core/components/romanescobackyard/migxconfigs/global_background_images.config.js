@@ -201,7 +201,7 @@
         "add_items_directly": "",
         "formcaption": "",
         "update_win_title": "Manage global background images",
-        "win_id": "",
+        "win_id": 2,
         "maxRecords": "",
         "addNewItemAt": "bottom",
         "multiple_formtabs": "",

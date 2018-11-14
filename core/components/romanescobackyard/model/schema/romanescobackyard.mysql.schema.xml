@@ -4,8 +4,8 @@
     <object class="rmTimeline" table="romanesco_timeline" extends="xPDOSimpleObject">
         <field key="resource_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="" />
         <field key="title" dbtype="varchar" precision="190" phptype="string" null="false" default="" />
-        <field key="description" dbtype="text" phptype="string" null="false" />
-        <field key="content" dbtype="text" phptype="string" null="false" />
+        <field key="description" dbtype="text" phptype="string" null="false" default="" />
+        <field key="content" dbtype="text" phptype="string" null="false" default="" />
         <field key="createdon" dbtype="int" precision="20" phptype="timestamp" null="false" default="" />
         <field key="createdby" dbtype="int" precision="10" phptype="integer" null="false" default="" />
         <field key="deleted" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="0" />
@@ -14,11 +14,14 @@
         <field key="date" dbtype="datetime" phptype="datetime" null="true" />
         <field key="icon" dbtype="varchar" precision="255" phptype="string" null="false" default="" />
 
+        <alias key="author_id" field="createdby" />
+        
         <index alias="type" name="type" primary="false" unique="false" type="BTREE">
             <column key="type" length="" collation="A" null="false" />
         </index>
 
         <aggregate alias="Resource" class="modResource" local="resource_id" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Author" class="modUser" local="author_id" foreign="id" cardinality="one" owner="foreign" />
     </object>
     <!-- Notes -->
     <object class="rmNote" table="romanesco_notes" extends="xPDOSimpleObject">
@@ -32,14 +35,14 @@
         <field key="type" dbtype="varchar" precision="190" phptype="string" null="true" default="" />
         <field key="tags" dbtype="text" phptype="string" null="false" default="" />
 
-        <alias key="date" field="createdon" />
-        <alias key="author" field="createdby" />
+        <alias key="author_id" field="createdby" />
 
         <index alias="type" name="type" primary="false" unique="false" type="BTREE">
             <column key="type" length="" collation="A" null="false" />
         </index>
 
         <aggregate alias="Resource" class="modResource" local="resource_id" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Author" class="modUser" local="author_id" foreign="id" cardinality="one" owner="foreign" />
     </object>
     <!-- Crosslinks -->
     <object class="rmCrosslink" table="romanesco_crosslinks" extends="xPDOSimpleObject">
@@ -50,6 +53,10 @@
         <field key="createdon" dbtype="int" precision="20" phptype="timestamp" null="false" default="" />
         <field key="createdby" dbtype="int" precision="10" phptype="integer" null="false" default="" />
         <field key="deleted" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="0" />
+
+        <alias key="author_id" field="createdby" />
+
+        <aggregate alias="Author" class="modUser" local="author_id" foreign="id" cardinality="one" owner="foreign" />
     </object>
     <!-- Options -->
     <object class="rmOption" table="romanesco_options" extends="xPDOSimpleObject">
@@ -92,8 +99,8 @@
     <object class="rmTimelineProject" table="romanesco_timeline_project" extends="xPDOSimpleObject">
         <field key="resource_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="" />
         <field key="title" dbtype="varchar" precision="190" phptype="string" null="false" default="" />
-        <field key="description" dbtype="text" phptype="string" null="false" />
-        <field key="content" dbtype="text" phptype="string" null="false" />
+        <field key="description" dbtype="text" phptype="string" null="false"  default="" />
+        <field key="content" dbtype="text" phptype="string" null="false" default="" />
         <field key="createdon" dbtype="int" precision="20" phptype="timestamp" null="false" default="" />
         <field key="createdby" dbtype="int" precision="10" phptype="integer" null="false" default="" />
         <field key="deleted" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="0" />
@@ -103,19 +110,22 @@
         <field key="icon" dbtype="varchar" precision="255" phptype="string" null="false" default="" />
 
         <!-- Additional fields -->
-        <field key="user" dbtype="int" precision="10" phptype="integer" null="true" default="" />
+        <field key="user_id" dbtype="int" precision="10" phptype="integer" null="true" default="" />
         <field key="complexity" dbtype="int" precision="10" phptype="integer" null="true" default="" />
         <field key="attachments" dbtype="text" phptype="string" null="false" default="" />
         <field key="links" dbtype="text" phptype="string" null="false" default="" />
 
         <!-- Aliases and indices -->
-        <alias key="assigned_to" field="user" />
+        <alias key="author_id" field="createdby" />
+        <alias key="assigned_to" field="user_id" />
 
         <index alias="type" name="type" primary="false" unique="false" type="BTREE">
             <column key="type" length="" collation="A" null="false" />
         </index>
 
         <aggregate alias="Resource" class="modResource" local="resource_id" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Author" class="modUser" local="author_id" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="User" class="modUser" local="user_id" foreign="id" cardinality="one" owner="foreign" />
     </object>
     <object class="rmNoteImprovement" table="romanesco_notes_improvement" extends="xPDOSimpleObject">
         <field key="resource_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="" />
@@ -129,6 +139,7 @@
         <field key="tags" dbtype="text" phptype="string" null="false" default="" />
 
         <!-- Additional fields -->
+        <field key="user_id" dbtype="int" precision="10" phptype="integer" null="true" default="" />
         <field key="status" dbtype="int" precision="10" phptype="integer" null="true" default="" />
         <field key="priority" dbtype="int" precision="10" phptype="integer" null="true" default="" />
         <field key="complexity" dbtype="int" precision="10" phptype="integer" null="true" default="" />
@@ -136,11 +147,13 @@
         <field key="links" dbtype="text" phptype="string" null="false" default="" />
 
         <!-- Aliases and indices -->
-        <alias key="date" field="createdon" />
-        <alias key="author" field="createdby" />
+        <alias key="author_id" field="createdby" />
         <alias key="improvements" field="tags" />
+        <alias key="assigned_to" field="user_id" />
 
         <aggregate alias="Resource" class="modResource" local="resource_id" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Author" class="modUser" local="author_id" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="User" class="modUser" local="user_id" foreign="id" cardinality="one" owner="foreign" />
     </object>
     <object class="rmNoteIssue" table="romanesco_notes_issue" extends="xPDOSimpleObject">
         <field key="resource_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="" />
@@ -154,6 +167,7 @@
         <field key="tags" dbtype="text" phptype="string" null="false" default="" />
 
         <!-- Additional fields -->
+        <field key="user_id" dbtype="int" precision="10" phptype="integer" null="true" default="" />
         <field key="status" dbtype="int" precision="10" phptype="integer" null="true" default="" />
         <field key="priority" dbtype="int" precision="10" phptype="integer" null="true" default="" />
         <field key="complexity" dbtype="int" precision="10" phptype="integer" null="true" default="" />
@@ -161,11 +175,13 @@
         <field key="links" dbtype="text" phptype="string" null="false" default="" />
 
         <!-- Aliases and indices -->
-        <alias key="date" field="createdon" />
-        <alias key="author" field="createdby" />
+        <alias key="author_id" field="createdby" />
         <alias key="issues" field="tags" />
+        <alias key="assigned_to" field="user_id" />
 
         <aggregate alias="Resource" class="modResource" local="resource_id" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Author" class="modUser" local="author_id" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="User" class="modUser" local="user_id" foreign="id" cardinality="one" owner="foreign" />
     </object>
     <object class="rmCrosslinkRepurpose" table="romanesco_crosslinks_repurpose" extends="xPDOSimpleObject">
         <field key="source" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="true" default="" />
@@ -180,6 +196,13 @@
         <field key="purpose" dbtype="varchar" precision="255" phptype="string" null="false" default="" />
         <field key="theme" dbtype="varchar" precision="255" phptype="string" null="false" default="" />
         <field key="topics" dbtype="text" phptype="string" null="false" default="" />
+
+        <!-- Aliases and indices -->
+        <alias key="author_id" field="createdby" />
+
+        <aggregate alias="Source" class="modResource" local="source" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Destination" class="modResource" local="destination" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Author" class="modUser" local="author_id" foreign="id" cardinality="one" owner="foreign" />
     </object>
     <object class="rmCrosslinkRelated" table="romanesco_crosslinks_related" extends="xPDOSimpleObject">
         <field key="source" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="true" default="" />
@@ -195,6 +218,7 @@
         <field key="weight" dbtype="int" precision="10" phptype="integer" null="false" default="" />
 
         <!-- Aliases and indices -->
+        <alias key="author_id" field="createdby" />
         <alias key="resource_id" field="source" />
 
         <index alias="crosslink" name="crosslink" primary="false" unique="true" type="BTREE">
@@ -206,17 +230,18 @@
         <aggregate alias="Destination" class="modResource" local="destination" foreign="id" cardinality="one" owner="foreign" />
         <composite alias="Crosslink" class="rmCrosslinkRelated" local="id" foreign="crosslink_id" cardinality="one" owner="local" />
         <composite alias="Crosslink" class="rmCrosslinkRelated" local="crosslink_id" foreign="id" cardinality="one" owner="local" />
+        <aggregate alias="Author" class="modUser" local="author_id" foreign="id" cardinality="one" owner="foreign" />
     </object>
 
     <!-- Extended classes, based on the classes above -->
     <!-- Doesn't fully work yet, so shelved for future attempts
     <object class="rmTimelineProject" table="romanesco_timeline_project" extends="rmTimeline">
         <field key="type" dbtype="varchar" precision="190" phptype="string" null="true" default="project-hub" />
-        <field key="user" dbtype="int" precision="10" phptype="integer" null="true" default="" />
+        <field key="user_id" dbtype="int" precision="10" phptype="integer" null="true" default="" />
         <field key="complexity" dbtype="int" precision="10" phptype="integer" null="true" default="" />
         <field key="attachments" dbtype="text" phptype="string" null="false" default="" />
         <field key="links" dbtype="text" phptype="string" null="false" default="" />
-        <alias key="assigned_to" field="user" />
+        <alias key="assigned_to" field="user_id" />
     </object>
     <object class="rmNoteImprovement" table="romanesco_notes_improvement" extends="rmNote">
         <field key="type" dbtype="varchar" precision="190" phptype="string" null="true" default="improvement" />

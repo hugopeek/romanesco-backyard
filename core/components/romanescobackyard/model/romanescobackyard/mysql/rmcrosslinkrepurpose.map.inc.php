@@ -108,4 +108,35 @@ $xpdo_meta_map['rmCrosslinkRepurpose']= array (
       'default' => '',
     ),
   ),
+  'fieldAliases' => 
+  array (
+    'author_id' => 'createdby',
+  ),
+  'aggregates' => 
+  array (
+    'Source' => 
+    array (
+      'class' => 'modResource',
+      'local' => 'source',
+      'foreign' => 'id',
+      'cardinality' => 'one',
+      'owner' => 'foreign',
+    ),
+    'Destination' => 
+    array (
+      'class' => 'modResource',
+      'local' => 'destination',
+      'foreign' => 'id',
+      'cardinality' => 'one',
+      'owner' => 'foreign',
+    ),
+    'Author' => 
+    array (
+      'class' => 'modUser',
+      'local' => 'author_id',
+      'foreign' => 'id',
+      'cardinality' => 'one',
+      'owner' => 'foreign',
+    ),
+  ),
 );

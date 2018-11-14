@@ -15,8 +15,8 @@ $xpdo_meta_map['rmTimeline']= array (
   array (
     'resource_id' => 0,
     'title' => '',
-    'description' => NULL,
-    'content' => NULL,
+    'description' => '',
+    'content' => '',
     'createdon' => 0,
     'createdby' => 0,
     'deleted' => 0,
@@ -48,12 +48,14 @@ $xpdo_meta_map['rmTimeline']= array (
       'dbtype' => 'text',
       'phptype' => 'string',
       'null' => false,
+      'default' => '',
     ),
     'content' => 
     array (
       'dbtype' => 'text',
       'phptype' => 'string',
       'null' => false,
+      'default' => '',
     ),
     'createdon' => 
     array (
@@ -103,6 +105,10 @@ $xpdo_meta_map['rmTimeline']= array (
       'default' => '',
     ),
   ),
+  'fieldAliases' => 
+  array (
+    'author_id' => 'createdby',
+  ),
   'indexes' => 
   array (
     'type' => 
@@ -128,6 +134,14 @@ $xpdo_meta_map['rmTimeline']= array (
     array (
       'class' => 'modResource',
       'local' => 'resource_id',
+      'foreign' => 'id',
+      'cardinality' => 'one',
+      'owner' => 'foreign',
+    ),
+    'Author' => 
+    array (
+      'class' => 'modUser',
+      'local' => 'author_id',
       'foreign' => 'id',
       'cardinality' => 'one',
       'owner' => 'foreign',

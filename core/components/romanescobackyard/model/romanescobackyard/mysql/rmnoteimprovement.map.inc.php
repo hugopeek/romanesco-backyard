@@ -21,6 +21,7 @@ $xpdo_meta_map['rmNoteImprovement']= array (
     'deleted' => 0,
     'type' => 'improvement',
     'tags' => '',
+    'user_id' => 0,
     'status' => 0,
     'priority' => 0,
     'complexity' => 0,
@@ -92,6 +93,14 @@ $xpdo_meta_map['rmNoteImprovement']= array (
       'null' => false,
       'default' => '',
     ),
+    'user_id' => 
+    array (
+      'dbtype' => 'int',
+      'precision' => '10',
+      'phptype' => 'integer',
+      'null' => true,
+      'default' => 0,
+    ),
     'status' => 
     array (
       'dbtype' => 'int',
@@ -133,9 +142,9 @@ $xpdo_meta_map['rmNoteImprovement']= array (
   ),
   'fieldAliases' => 
   array (
-    'date' => 'createdon',
-    'author' => 'createdby',
+    'author_id' => 'createdby',
     'improvements' => 'tags',
+    'assigned_to' => 'user_id',
   ),
   'aggregates' => 
   array (
@@ -143,6 +152,22 @@ $xpdo_meta_map['rmNoteImprovement']= array (
     array (
       'class' => 'modResource',
       'local' => 'resource_id',
+      'foreign' => 'id',
+      'cardinality' => 'one',
+      'owner' => 'foreign',
+    ),
+    'Author' => 
+    array (
+      'class' => 'modUser',
+      'local' => 'author_id',
+      'foreign' => 'id',
+      'cardinality' => 'one',
+      'owner' => 'foreign',
+    ),
+    'User' => 
+    array (
+      'class' => 'modUser',
+      'local' => 'user_id',
       'foreign' => 'id',
       'cardinality' => 'one',
       'owner' => 'foreign',
