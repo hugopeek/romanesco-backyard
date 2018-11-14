@@ -2,12 +2,12 @@
     "formtabs": [
         {
             "MIGX_id": 5,
-            "caption": "Improvement",
+            "caption": "Issue",
             "print_before_tabs": "0",
             "fields": [
                 {
                     "MIGX_id": 11,
-                    "field": "improvements",
+                    "field": "issues",
                     "caption": "Nature",
                     "description": "",
                     "description_is_code": "0",
@@ -23,7 +23,7 @@
                     "display": "",
                     "sourceFrom": "config",
                     "sources": "",
-                    "inputOptionValues": "@CHUNK tvSelectInputOption@StatusImprovement",
+                    "inputOptionValues": "@CHUNK tvSelectInputOption@StatusIssue",
                     "default": "",
                     "useDefaultIfEmpty": "0",
                     "pos": 1
@@ -109,7 +109,7 @@
                     "display": "",
                     "sourceFrom": "config",
                     "sources": "",
-                    "inputOptionValues": "@CHUNK tvSelectInputOption@ImprovementPriority",
+                    "inputOptionValues": "@CHUNK tvSelectInputOption@IssuePriority",
                     "default": "2",
                     "useDefaultIfEmpty": "true",
                     "pos": 15
@@ -118,7 +118,7 @@
                     "MIGX_id": 16,
                     "field": "user_id",
                     "caption": "Assigned to",
-                    "description": "Who is best suited to look at this improvement?",
+                    "description": "Who is best suited to look at this issue?",
                     "description_is_code": "0",
                     "inputTV": "",
                     "inputTVtype": "superboxselect",
@@ -155,7 +155,7 @@
                     "sourceFrom": "config",
                     "sources": "",
                     "inputOptionValues": "",
-                    "default": "improvement",
+                    "default": "issue",
                     "useDefaultIfEmpty": "0",
                     "pos": 96
                 },
@@ -225,12 +225,12 @@
     "columnbuttons": "",
     "filters": "",
     "extended": {
-        "migx_add": "Add improvement",
+        "migx_add": "New issue",
         "disable_add_item": "",
         "add_items_directly": "",
         "formcaption": "",
-        "update_win_title": "Edit improvement",
-        "win_id": 30,
+        "update_win_title": "Edit issue",
+        "win_id": 31,
         "maxRecords": "",
         "addNewItemAt": "top",
         "multiple_formtabs": "",
@@ -243,7 +243,7 @@
         "extrahandlers": "",
         "filtersperrow": 4,
         "packageName": "romanescobackyard",
-        "classname": "rmNoteImprovement",
+        "classname": "rmNoteIssue",
         "task": "",
         "getlistsort": "createdon",
         "getlistsortdir": "DESC",
@@ -261,7 +261,7 @@
         "joins": "",
         "hooksnippets": "",
         "cmpmaincaption": "Backyard tool shed",
-        "cmptabcaption": "Content improvements",
+        "cmptabcaption": "Content issues",
         "cmptabdescription": "",
         "cmptabcontroller": "",
         "winbuttons": "",
@@ -272,7 +272,7 @@
         {
             "MIGX_id": 1,
             "header": "Area",
-            "dataIndex": "improvements",
+            "dataIndex": "issues",
             "width": 30,
             "sortable": true,
             "show_in_grid": 1,
@@ -280,7 +280,7 @@
             "renderer": "this.renderChunk",
             "clickaction": "",
             "selectorconfig": "",
-            "renderchunktpl": "[[Rowboat? &table=`modx_romanesco_options` &tpl=`rawName` &where=`{\"id:=\":\"[[+improvements]]\"}`]]",
+            "renderchunktpl": "[[Rowboat? &table=`modx_romanesco_options` &tpl=`rawName` &where=`{\"id:=\":\"[[+issues]]\"}`]]",
             "renderoptions": "",
             "editor": ""
         },
