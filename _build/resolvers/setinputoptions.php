@@ -9,10 +9,10 @@ if ($object->xpdo) {
             /** @var modX $modx */
             $modx =& $object->xpdo;
 
-            $options = file_get_contents('../data/options.json');
+            $corePath = $modx->getOption('romanescobackyard.core_path', null, $modx->getOption('core_path') . 'components/romanescobackyard/');
 
             $modx->runSnippet('jsonImportInputOptions', array(
-                $file => $options,
+                'file' => $corePath . 'data/options.json',
             ));
 
             break;

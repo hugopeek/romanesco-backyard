@@ -159,7 +159,7 @@
         }
     ],
     "contextmenus": "update||duplicate||recall_remove_delete",
-    "actionbuttons": "addItem||toggletrash",
+    "actionbuttons": "addItem||bulk||toggletrash||emptyTrash",
     "columnbuttons": "",
     "filters": "",
     "extended": {
@@ -199,8 +199,8 @@
         "joins": "",
         "hooksnippets": "",
         "cmpmaincaption": "Tool shed",
-        "cmptabcaption": "Repurpose content",
-        "cmptabdescription": "",
+        "cmptabcaption": "Re-purpose content",
+        "cmptabdescription": "Reuse content in different scenarios and media. This maximizes the effect of your efforts and creates cohesion throughout your publications.",
         "cmptabcontroller": "",
         "winbuttons": "",
         "onsubmitsuccess": "",

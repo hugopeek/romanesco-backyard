@@ -197,7 +197,7 @@
         }
     ],
     "contextmenus": "update||duplicate||recall_remove_delete",
-    "actionbuttons": "addItem||toggletrash",
+    "actionbuttons": "addItem||bulk||toggletrash||emptyTrash",
     "columnbuttons": "",
     "filters": "",
     "extended": {
@@ -240,7 +240,7 @@
         },
         "cmpmaincaption": "Tool shed",
         "cmptabcaption": "Content relations",
-        "cmptabdescription": "",
+        "cmptabdescription": "Create links between areas of your project that complement each other. You can use these links to display related content on a page, for example.",
         "cmptabcontroller": "",
         "winbuttons": "",
         "onsubmitsuccess": "",

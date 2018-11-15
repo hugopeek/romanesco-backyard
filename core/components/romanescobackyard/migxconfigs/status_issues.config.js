@@ -221,7 +221,7 @@
         }
     ],
     "contextmenus": "update||duplicate||recall_remove_delete",
-    "actionbuttons": "addItem||toggletrash",
+    "actionbuttons": "addItem||bulk||toggletrash||emptyTrash",
     "columnbuttons": "",
     "filters": "",
     "extended": {
@@ -261,8 +261,8 @@
         "joins": "",
         "hooksnippets": "",
         "cmpmaincaption": "Backyard tool shed",
-        "cmptabcaption": "Content issues",
-        "cmptabdescription": "",
+        "cmptabcaption": "Issues",
+        "cmptabdescription": "The issues in this list are collected from the Status tab on each page, but you can also add generic issues here. Technical problems inside the manager for example, or not being able to find certain content or settings.",
         "cmptabcontroller": "",
         "winbuttons": "",
         "onsubmitsuccess": "",

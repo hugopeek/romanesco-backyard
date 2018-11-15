@@ -221,7 +221,7 @@
         }
     ],
     "contextmenus": "update||duplicate||recall_remove_delete",
-    "actionbuttons": "addItem||toggletrash",
+    "actionbuttons": "addItem||bulk||toggletrash||emptyTrash",
     "columnbuttons": "",
     "filters": "",
     "extended": {
@@ -262,7 +262,7 @@
         "hooksnippets": "",
         "cmpmaincaption": "Backyard tool shed",
         "cmptabcaption": "Content improvements",
-        "cmptabdescription": "",
+        "cmptabdescription": "The items in this list are collected from the Status tab on each page. It is recommended that you add improvements on the page itself and use this list for convenience only. You can sort improvements on priority for example, or filter the ones assigned to you.",
         "cmptabcontroller": "",
         "winbuttons": "",
         "onsubmitsuccess": "",

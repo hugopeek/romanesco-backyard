@@ -189,7 +189,7 @@
         }
     ],
     "contextmenus": "update||duplicate||recall_remove_delete",
-    "actionbuttons": "addItem||toggletrash",
+    "actionbuttons": "addItem||bulk||toggletrash||emptyTrash",
     "columnbuttons": "",
     "filters": "",
     "extended": {

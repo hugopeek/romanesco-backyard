@@ -8,8 +8,6 @@ if ($object->xpdo) {
             /** @var modX $modx */
             $modx =& $object->xpdo;
 
-            $modx->log(xPDO::LOG_LEVEL_ERROR, 'checking in..');
-
             // Fix getPage property set by assigning its new ID
             $query = $modx->newQuery('modSnippet');
             $query->where(array(
@@ -36,10 +34,10 @@ if ($object->xpdo) {
             $update = $modx->prepare("UPDATE " . $table . " SET `element`='" . $getPageID . "' WHERE `element`=" . 11);
 
             $update->execute();
-            $modx->log(xPDO::LOG_LEVEL_INFO, '[Romanesco] Corrections successfully applied.');
 
             break;
     }
 }
+$modx->log(xPDO::LOG_LEVEL_INFO, '[Romanesco] Corrections successfully applied.');
 
 return true;
