@@ -173,5 +173,21 @@ $xpdo_meta_map['rmTimelineProject']= array (
       'cardinality' => 'one',
       'owner' => 'foreign',
     ),
+    'Author' => 
+    array (
+      'class' => 'modUser',
+      'local' => 'author_id',
+      'foreign' => 'id',
+      'cardinality' => 'one',
+      'owner' => 'foreign',
+    ),
+    'User' => 
+    array (
+      'class' => 'modUser',
+      'local' => 'user_id',
+      'foreign' => 'id',
+      'cardinality' => 'one',
+      'owner' => 'foreign',
+    ),
   ),
 );
