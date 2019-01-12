@@ -6,8 +6,8 @@
 // Common website elements
 // ---------------------------------------------------------------------
 
-$_lang['romanesco.footer.qredits_text'] = 'A Fractal Farming effort';
-$_lang['romanesco.footer.qredits_title'] = 'Naturally growing web projects based on pattern libraries';
+$_lang['romanesco.footer.qredits_text'] = 'A Romanesco project';
+$_lang['romanesco.footer.qredits_title'] = 'Modular websites built with MODX';
 
 // Navigation
 // ---------------------------------------------------------------------
@@ -78,21 +78,19 @@ $_lang['romanesco.search.result_button_text'] = 'Go to this page';
 // Status grid
 // ---------------------------------------------------------------------
 
-$_lang['romanesco.status.table_status_indicator'] = 'Status';
+$_lang['romanesco.status.table_indicator'] = 'Status';
 $_lang['romanesco.status.table_id'] = 'ID';
-$_lang['romanesco.status.table_resource'] = 'Resource';
+$_lang['romanesco.status.table_resource'] = 'Page';
 $_lang['romanesco.status.table_improvements'] = 'Improvements';
-$_lang['romanesco.status.table_assigned_user'] = 'Editor';
-$_lang['romanesco.status.table_help'] = 'Issues';
-$_lang['romanesco.status.table_notes'] = 'Notes / Explanations';
+$_lang['romanesco.status.table_issues'] = 'Issues';
+$_lang['romanesco.status.table_indexation'] = 'Indexation';
+$_lang['romanesco.status.table_owner'] = 'Owner';
+$_lang['romanesco.status.table_date_due'] = 'Due date';
 
-$_lang['romanesco.status.not_done'] = 'The idea is ready to take root, but this resource is still empty';
-$_lang['romanesco.status.in_progress'] = 'Work has begun and leaves are starting to appear';
-$_lang['romanesco.status.almost_done'] = 'Almost ready to be transplanted to its live container';
-$_lang['romanesco.status.done'] = 'Watered, fertilized and growing steadily';
-$_lang['romanesco.status.successful'] = 'This particular resource is performing really well';
-$_lang['romanesco.status.problematic'] = 'Somehow, this resource is attracting more bugs than visitors';
-$_lang['romanesco.status.expired'] = 'The content is outdated or has outlived its purpose entirely';
+$_lang['romanesco.status.legend'] = 'Legend';
+$_lang['romanesco.status.legend_progress'] = 'Progress indicators';
+$_lang['romanesco.status.legend_health'] = 'Health indicators';
+
 
 // Pattern library
 // ---------------------------------------------------------------------
@@ -135,27 +133,27 @@ $_lang['romanesco.patterns.status_brown'] = 'Deprecated (will be deleted in the 
 // Top menu
 // ---------------------------------------------------------------------
 
-// Global content
-$_lang['romanesco.menu.global_content_title'] = 'Global Content';
-$_lang['romanesco.menu.global_content_description'] = 'Change content that\'s available site-wide';
-
-$_lang['romanesco.menu.edit_footer_title'] = 'Edit footer';
-$_lang['romanesco.menu.edit_footer_description'] = 'Change footer content for all pages';
-
-$_lang['romanesco.menu.edit_forms_title'] = 'FormBlocks';
-$_lang['romanesco.menu.edit_forms_description'] = 'Build and edit your own forms';
-
-$_lang['romanesco.menu.edit_cta_title'] = 'Call To Actions';
-$_lang['romanesco.menu.edit_cta_description'] = 'Build and edit your own CTA\'s';
-
-// Custom caching
-$_lang['romanesco.menu.clear_cache_all_title'] = 'Clear Custom Cache';
-$_lang['romanesco.menu.clear_cache_all_description'] = 'Delete files inside all custom cache partitions';
-$_lang['romanesco.menu.clear_cache_overviews_title'] = 'Overviews';
-$_lang['romanesco.menu.clear_cache_overviews_description'] = 'Only clear cache of standard Overview grids';
-$_lang['romanesco.menu.clear_cache_clients_title'] = 'Clients';
-$_lang['romanesco.menu.clear_cache_gallery_title'] = 'Gallery';
-$_lang['romanesco.menu.clear_cache_portfolio_title'] = 'Portfolio';
-$_lang['romanesco.menu.clear_cache_publication_title'] = 'Publication';
-$_lang['romanesco.menu.clear_cache_team_title'] = 'Team';
-$_lang['romanesco.menu.clear_cache_testimonials_title'] = 'Testimonials';
+//// Global content
+//$_lang['romanesco.menu.global_content_title'] = 'Global Content';
+//$_lang['romanesco.menu.global_content_description'] = 'Change content that\'s available site-wide';
+//
+//$_lang['romanesco.menu.edit_footer_title'] = 'Edit footer';
+//$_lang['romanesco.menu.edit_footer_description'] = 'Change footer content for all pages';
+//
+//$_lang['romanesco.menu.edit_forms_title'] = 'FormBlocks';
+//$_lang['romanesco.menu.edit_forms_description'] = 'Build and edit your own forms';
+//
+//$_lang['romanesco.menu.edit_cta_title'] = 'Call To Actions';
+//$_lang['romanesco.menu.edit_cta_description'] = 'Build and edit your own CTA\'s';
+//
+//// Custom caching
+//$_lang['romanesco.menu.clear_cache_all_title'] = 'Clear Custom Cache';
+//$_lang['romanesco.menu.clear_cache_all_description'] = 'Delete files inside all custom cache partitions';
+//$_lang['romanesco.menu.clear_cache_overviews_title'] = 'Overviews';
+//$_lang['romanesco.menu.clear_cache_overviews_description'] = 'Only clear cache of standard Overview grids';
+//$_lang['romanesco.menu.clear_cache_clients_title'] = 'Clients';
+//$_lang['romanesco.menu.clear_cache_gallery_title'] = 'Gallery';
+//$_lang['romanesco.menu.clear_cache_portfolio_title'] = 'Portfolio';
+//$_lang['romanesco.menu.clear_cache_publication_title'] = 'Publication';
+//$_lang['romanesco.menu.clear_cache_team_title'] = 'Team';
+//$_lang['romanesco.menu.clear_cache_testimonials_title'] = 'Testimonials';

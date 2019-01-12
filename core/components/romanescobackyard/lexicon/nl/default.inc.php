@@ -3,8 +3,8 @@
 // Common website elements
 // ---------------------------------------------------------------------
 
-$_lang['romanesco.footer.qredits_text'] = 'Site met';
-$_lang['romanesco.footer.qredits_title'] = 'Responsive webdesign met MODX CMS in Utrecht';
+$_lang['romanesco.footer.qredits_text'] = 'Een Romanesco site';
+$_lang['romanesco.footer.qredits_title'] = 'Modulaire web projecten met MODX CMS';
 
 // Navigation
 // ---------------------------------------------------------------------
@@ -80,3 +80,16 @@ $_lang['romanesco.status.table_improvements'] = 'Verbeteringen';
 $_lang['romanesco.status.table_assigned_user'] = 'Beheerder';
 $_lang['romanesco.status.table_help'] = 'Problemen';
 $_lang['romanesco.status.table_notes'] = 'Notities / Toelichting';
+
+$_lang['romanesco.status.table_indicator'] = 'Status';
+$_lang['romanesco.status.table_id'] = 'ID';
+$_lang['romanesco.status.table_resource'] = 'Pagina';
+$_lang['romanesco.status.table_improvements'] = 'Verbeteringen';
+$_lang['romanesco.status.table_issues'] = 'Problemen';
+$_lang['romanesco.status.table_indexation'] = 'Indexatie';
+$_lang['romanesco.status.table_owner'] = 'Beheerder';
+$_lang['romanesco.status.table_date_due'] = 'Vervaldatum';
+
+$_lang['romanesco.status.legend'] = 'Legenda';
+$_lang['romanesco.status.legend_progress'] = 'Voortgang';
+$_lang['romanesco.status.legend_health'] = 'Conditie';
