@@ -4,16 +4,16 @@
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`searchButton` &prefix=`cf_1_1878``
+            &then=`setPatternPlaceholders? &cbField=`searchButton` &prefix=`cf_1_1881``
         ]]]]
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`searchButton` &prefix=`cl_1_1878``
+            &then=`setPatternPlaceholders? &cbLayout=`searchButton` &prefix=`cl_1_1881``
         ]]]]
 
-        [[$cbLayoutPatternPreview:toPlaceholder=`preview_1_1878`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_1881`?
             &preview=`{{PLACE EXAMPLE HERE}}`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
@@ -27,8 +27,10 @@
             &sidebar_width=`five`
             &pattern_name=`searchButton`
             &pattern_template=`patternLayoutAtom`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`1`
-            &unique_idx=`1878`
+            &unique_idx=`1881`
         ]]
         
         [[[[modifiedIf?
@@ -46,7 +48,7 @@
                     &pattern_template=`patternLayoutAtom`
                     &pattern_status=`green`
                     &idx=`1`
-                    &unique_idx=`1878`
+                    &unique_idx=`1881`
                 `
         ]]]]
 
@@ -54,31 +56,26 @@
             &subject=`patternLayoutAtom`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_1_1878`
+            &then=`+preview_1_1881`
         ]]]]
 
         [[$tabsOuter?
-    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$richTextSegment?
-    &content=``
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`]]
-[[$tabsRowBasic?
+    &rows=`[[$tabsRowBasic?
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -86,27 +83,22 @@
     &idx=`1`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$richTextSegment?
-    &content=``
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`]]
 [[$tabsRowBasic?
     &heading=`[[%romanesco.patterns.usage_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -114,57 +106,23 @@
     &idx=`2`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.included_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`1873`
-]]
-
-[[$includedPatternsOuter? 
-	&unique_idx=`1874`
-	&layout_id=`12`
-	&layout_column=`col_1`
-	&layout_idx=`0`
-	&pattern_list=`includedChunks,includedSnippets,includedTVs`
-	&pattern_template=`patternLayoutAtom`
-	&pattern_name=`searchButton`
-	]]
-</div>
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.referring_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`1875`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`1876`
-	&layout_id=`12`
-	&layout_column=`col_2`
-	&layout_idx=`0`
-	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
-	&pattern_template=`patternLayoutAtom`
-	&pattern_name=`searchButton`
-	]]
-</div>
-</div>`]]
 [[$tabsRowBasic?
     &heading=`[[%romanesco.patterns.references_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`1873`
+    &unique_idx=`1876`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`1874`
+	&unique_idx=`1877`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -177,11 +135,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`1875`
+    &unique_idx=`1878`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`1876`
+	&unique_idx=`1879`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -190,7 +148,8 @@
 	&pattern_name=`searchButton`
 	]]
 </div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -205,7 +164,7 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`1868`
+    &unique_idx=`1871`
     &layout_idx=`0`
 ]]
     </div>
@@ -217,16 +176,16 @@
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`searchButtonPaging` &prefix=`cf_2_1891``
+            &then=`setPatternPlaceholders? &cbField=`searchButtonPaging` &prefix=`cf_2_1894``
         ]]]]
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`searchButtonPaging` &prefix=`cl_2_1891``
+            &then=`setPatternPlaceholders? &cbLayout=`searchButtonPaging` &prefix=`cl_2_1894``
         ]]]]
 
-        [[$cbLayoutPatternPreview:toPlaceholder=`preview_2_1891`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_1894`?
             &preview=`{{PLACE EXAMPLE HERE}}`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
@@ -240,8 +199,10 @@
             &sidebar_width=`five`
             &pattern_name=`searchButtonPaging`
             &pattern_template=`patternLayoutAtom`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`2`
-            &unique_idx=`1891`
+            &unique_idx=`1894`
         ]]
         
         [[[[modifiedIf?
@@ -259,7 +220,7 @@
                     &pattern_template=`patternLayoutAtom`
                     &pattern_status=`green`
                     &idx=`2`
-                    &unique_idx=`1891`
+                    &unique_idx=`1894`
                 `
         ]]]]
 
@@ -267,31 +228,26 @@
             &subject=`patternLayoutAtom`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_2_1891`
+            &then=`+preview_2_1894`
         ]]]]
 
         [[$tabsOuter?
-    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$richTextSegment?
-    &content=``
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`]]
-[[$tabsRowBasic?
+    &rows=`[[$tabsRowBasic?
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -299,27 +255,22 @@
     &idx=`1`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$richTextSegment?
-    &content=``
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`]]
 [[$tabsRowBasic?
     &heading=`[[%romanesco.patterns.usage_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -327,57 +278,23 @@
     &idx=`2`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.included_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`1886`
-]]
-
-[[$includedPatternsOuter? 
-	&unique_idx=`1887`
-	&layout_id=`12`
-	&layout_column=`col_1`
-	&layout_idx=`0`
-	&pattern_list=`includedChunks,includedSnippets,includedTVs`
-	&pattern_template=`patternLayoutAtom`
-	&pattern_name=`searchButtonPaging`
-	]]
-</div>
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.referring_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`1888`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`1889`
-	&layout_id=`12`
-	&layout_column=`col_2`
-	&layout_idx=`0`
-	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
-	&pattern_template=`patternLayoutAtom`
-	&pattern_name=`searchButtonPaging`
-	]]
-</div>
-</div>`]]
 [[$tabsRowBasic?
     &heading=`[[%romanesco.patterns.references_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`1886`
+    &unique_idx=`1889`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`1887`
+	&unique_idx=`1890`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -390,11 +307,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`1888`
+    &unique_idx=`1891`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`1889`
+	&unique_idx=`1892`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -403,7 +320,8 @@
 	&pattern_name=`searchButtonPaging`
 	]]
 </div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -418,7 +336,7 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`1881`
+    &unique_idx=`1884`
     &layout_idx=`1`
 ]]
     </div>
@@ -430,16 +348,16 @@
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`searchButtonPagingActive` &prefix=`cf_3_1904``
+            &then=`setPatternPlaceholders? &cbField=`searchButtonPagingActive` &prefix=`cf_3_1907``
         ]]]]
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`searchButtonPagingActive` &prefix=`cl_3_1904``
+            &then=`setPatternPlaceholders? &cbLayout=`searchButtonPagingActive` &prefix=`cl_3_1907``
         ]]]]
 
-        [[$cbLayoutPatternPreview:toPlaceholder=`preview_3_1904`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_1907`?
             &preview=`{{PLACE EXAMPLE HERE}}`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
@@ -453,8 +371,10 @@
             &sidebar_width=`five`
             &pattern_name=`searchButtonPagingActive`
             &pattern_template=`patternLayoutAtom`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`3`
-            &unique_idx=`1904`
+            &unique_idx=`1907`
         ]]
         
         [[[[modifiedIf?
@@ -472,7 +392,7 @@
                     &pattern_template=`patternLayoutAtom`
                     &pattern_status=`green`
                     &idx=`3`
-                    &unique_idx=`1904`
+                    &unique_idx=`1907`
                 `
         ]]]]
 
@@ -480,31 +400,26 @@
             &subject=`patternLayoutAtom`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_3_1904`
+            &then=`+preview_3_1907`
         ]]]]
 
         [[$tabsOuter?
-    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$richTextSegment?
-    &content=``
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`]]
-[[$tabsRowBasic?
+    &rows=`[[$tabsRowBasic?
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -512,27 +427,22 @@
     &idx=`1`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$richTextSegment?
-    &content=``
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`]]
 [[$tabsRowBasic?
     &heading=`[[%romanesco.patterns.usage_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -540,57 +450,23 @@
     &idx=`2`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.included_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`1899`
-]]
-
-[[$includedPatternsOuter? 
-	&unique_idx=`1900`
-	&layout_id=`12`
-	&layout_column=`col_1`
-	&layout_idx=`0`
-	&pattern_list=`includedChunks,includedSnippets,includedTVs`
-	&pattern_template=`patternLayoutAtom`
-	&pattern_name=`searchButtonPagingActive`
-	]]
-</div>
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.referring_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`1901`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`1902`
-	&layout_id=`12`
-	&layout_column=`col_2`
-	&layout_idx=`0`
-	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
-	&pattern_template=`patternLayoutAtom`
-	&pattern_name=`searchButtonPagingActive`
-	]]
-</div>
-</div>`]]
 [[$tabsRowBasic?
     &heading=`[[%romanesco.patterns.references_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`1899`
+    &unique_idx=`1902`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`1900`
+	&unique_idx=`1903`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -603,11 +479,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`1901`
+    &unique_idx=`1904`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`1902`
+	&unique_idx=`1905`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -616,7 +492,8 @@
 	&pattern_name=`searchButtonPagingActive`
 	]]
 </div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -631,7 +508,7 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`1894`
+    &unique_idx=`1897`
     &layout_idx=`2`
 ]]
     </div>
@@ -643,16 +520,16 @@
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`searchResultTag` &prefix=`cf_4_1917``
+            &then=`setPatternPlaceholders? &cbField=`searchResultTag` &prefix=`cf_4_1920``
         ]]]]
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`searchResultTag` &prefix=`cl_4_1917``
+            &then=`setPatternPlaceholders? &cbLayout=`searchResultTag` &prefix=`cl_4_1920``
         ]]]]
 
-        [[$cbLayoutPatternPreview:toPlaceholder=`preview_4_1917`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_4_1920`?
             &preview=`{{PLACE EXAMPLE HERE}}`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
@@ -666,8 +543,10 @@
             &sidebar_width=`five`
             &pattern_name=`searchResultTag`
             &pattern_template=`patternLayoutAtom`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`4`
-            &unique_idx=`1917`
+            &unique_idx=`1920`
         ]]
         
         [[[[modifiedIf?
@@ -685,7 +564,7 @@
                     &pattern_template=`patternLayoutAtom`
                     &pattern_status=`green`
                     &idx=`4`
-                    &unique_idx=`1917`
+                    &unique_idx=`1920`
                 `
         ]]]]
 
@@ -693,31 +572,26 @@
             &subject=`patternLayoutAtom`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_4_1917`
+            &then=`+preview_4_1920`
         ]]]]
 
         [[$tabsOuter?
-    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$richTextSegment?
-    &content=``
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`]]
-[[$tabsRowBasic?
+    &rows=`[[$tabsRowBasic?
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -725,27 +599,22 @@
     &idx=`1`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$richTextSegment?
-    &content=``
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`]]
 [[$tabsRowBasic?
     &heading=`[[%romanesco.patterns.usage_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -753,57 +622,23 @@
     &idx=`2`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.included_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`1912`
-]]
-
-[[$includedPatternsOuter? 
-	&unique_idx=`1913`
-	&layout_id=`12`
-	&layout_column=`col_1`
-	&layout_idx=`0`
-	&pattern_list=`includedChunks,includedSnippets,includedTVs`
-	&pattern_template=`patternLayoutAtom`
-	&pattern_name=`searchResultTag`
-	]]
-</div>
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.referring_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`1914`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`1915`
-	&layout_id=`12`
-	&layout_column=`col_2`
-	&layout_idx=`0`
-	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
-	&pattern_template=`patternLayoutAtom`
-	&pattern_name=`searchResultTag`
-	]]
-</div>
-</div>`]]
 [[$tabsRowBasic?
     &heading=`[[%romanesco.patterns.references_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`1912`
+    &unique_idx=`1915`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`1913`
+	&unique_idx=`1916`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -816,11 +651,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`1914`
+    &unique_idx=`1917`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`1915`
+	&unique_idx=`1918`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -829,7 +664,8 @@
 	&pattern_name=`searchResultTag`
 	]]
 </div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -844,7 +680,7 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`1907`
+    &unique_idx=`1910`
     &layout_idx=`3`
 ]]
     </div>

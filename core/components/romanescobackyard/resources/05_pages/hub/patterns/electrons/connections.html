@@ -4,23 +4,25 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`person_id` &prefix=`cf_1_3870``
+            &then=`setPatternPlaceholders? &cbField=`person_id` &prefix=`cf_1_11``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`person_id` &prefix=`cl_1_3870``
+            &then=`setPatternPlaceholders? &cbLayout=`person_id` &prefix=`cl_1_11``
         ]]]]
 
-        [[$cbLayoutPatternPreview:toPlaceholder=`preview_1_3870`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_11`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`person_id`
             &pattern_template=`patternLayoutElectronTV`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`1`
-            &unique_idx=`3870`
+            &unique_idx=`11`
         ]]
         
         [[[[modifiedIf?
@@ -38,7 +40,7 @@
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
                     &idx=`1`
-                    &unique_idx=`3870`
+                    &unique_idx=`11`
                 `
         ]]]]
 
@@ -46,26 +48,18 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_1_3870`
+            &then=`+preview_1_11`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$richTextSegment?
-    &content=`<p>This TV can be used to connect a person to a MODX user. By doing this, you are basically extending the MODX user with all the available info inside the connected resource. To fetch an image TV as avatar for example, or the available social media channels.
-</p><p>Only active users will be shown.
-</p>`
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`]]
-[[$accordionRowBasic?
+    &rows=`[[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &heading_level=`h4`
     &heading_subtitle=``
     &heading_icon=``
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=`<p>This TV can be used to connect a person to a MODX user. By doing this, you are basically extending the MODX user with all the available info inside the connected resource. To fetch an image TV as avatar for example, or the available social media channels.
 </p><p>Only active users will be shown.
@@ -74,7 +68,8 @@
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -82,23 +77,14 @@
     &idx=`1`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[jsonToHTML? &json=`{
-    "caption": "Person",
-    "name": "person_id",
-    "description": "Connect a MODX user to this item. Only active users will be shown.",
-    "type": "listbox",
-    "inputOptionValues": "@SELECT '''' AS username, '''' AS id UNION ALL ( SELECT username, id FROM `modx_users` WHERE `active` = 1 ORDER BY username )",
-    "category": "Connections",
-    "sortOrder": "1"
-}`]]</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.specifications_title]]`
     &heading_level=`h4`
     &heading_subtitle=``
     &heading_icon=``
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "caption": "Person",
     "name": "person_id",
@@ -108,7 +94,8 @@
     "category": "Connections",
     "sortOrder": "1"
 }`]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -116,57 +103,23 @@
     &idx=`2`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.assigned_templates]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3865`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3866`
-	&layout_id=`12`
-	&layout_column=`col_1`
-	&layout_idx=`0`
-	&pattern_list=`assignedTemplates`
-	&pattern_template=`patternLayoutElectronTV`
-	&pattern_name=`person_id`
-	]]
-</div>
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.referring_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3867`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3868`
-	&layout_id=`12`
-	&layout_column=`col_2`
-	&layout_idx=`0`
-	&pattern_list=`referringChunks,referringTemplates`
-	&pattern_template=`patternLayoutElectronTV`
-	&pattern_name=`person_id`
-	]]
-</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.references_title]]`
     &heading_level=`h4`
     &heading_subtitle=``
     &heading_icon=``
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3865`
+    &unique_idx=`6`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3866`
+	&unique_idx=`7`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -179,11 +132,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3867`
+    &unique_idx=`8`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3868`
+	&unique_idx=`9`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -192,7 +145,8 @@
 	&pattern_name=`person_id`
 	]]
 </div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -207,7 +161,7 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`3860`
+    &unique_idx=`1`
     &layout_idx=`0`
 ]]
     </div>
@@ -219,23 +173,25 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`organization_id` &prefix=`cf_2_3883``
+            &then=`setPatternPlaceholders? &cbField=`organization_id` &prefix=`cf_2_24``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`organization_id` &prefix=`cl_2_3883``
+            &then=`setPatternPlaceholders? &cbLayout=`organization_id` &prefix=`cl_2_24``
         ]]]]
 
-        [[$cbLayoutPatternPreview:toPlaceholder=`preview_2_3883`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_24`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`organization_id`
             &pattern_template=`patternLayoutElectronTV`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`2`
-            &unique_idx=`3883`
+            &unique_idx=`24`
         ]]
         
         [[[[modifiedIf?
@@ -253,7 +209,7 @@
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
                     &idx=`2`
-                    &unique_idx=`3883`
+                    &unique_idx=`24`
                 `
         ]]]]
 
@@ -261,25 +217,18 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_2_3883`
+            &then=`+preview_2_24`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$richTextSegment?
-    &content=`<p>Provide the ability to connect an Organization to a template. This can be a client, an employer, a partner, etc. Organizations can be maintained from a central Collection and crosslinked through this TV, allowing you to access things like their logo or website for example.
-</p>`
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`]]
-[[$accordionRowBasic?
+    &rows=`[[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &heading_level=`h4`
     &heading_subtitle=``
     &heading_icon=``
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=`<p>Provide the ability to connect an Organization to a template. This can be a client, an employer, a partner, etc. Organizations can be maintained from a central Collection and crosslinked through this TV, allowing you to access things like their logo or website for example.
 </p>`
@@ -287,7 +236,8 @@
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -295,26 +245,14 @@
     &idx=`1`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[jsonToHTML? &json=`{
-    "caption": "Organization",
-    "name": "organization_id",
-    "description": "Connect the related organization(s). If this list is empty, you need to create an Organizations container first and register its ID under System Settings.",
-    "type": "listbox-multiple",
-    "inputOptionValues": "@CHUNK tvSelectClient",
-    "category": "Connections",
-    "sortOrder": "2",
-    "templates": [
-        "@@templates_portfolio"
-    ]
-}`]]</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.specifications_title]]`
     &heading_level=`h4`
     &heading_subtitle=``
     &heading_icon=``
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "caption": "Organization",
     "name": "organization_id",
@@ -327,7 +265,8 @@
         "@@templates_portfolio"
     ]
 }`]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -335,71 +274,23 @@
     &idx=`2`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.assigned_templates]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3876`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3877`
-	&layout_id=`12`
-	&layout_column=`col_1`
-	&layout_idx=`0`
-	&pattern_list=`assignedTemplates`
-	&pattern_template=`patternLayoutElectronTV`
-	&pattern_name=`organization_id`
-	]]
-</div>
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.included_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3878`
-]]
-
-<div class="ui list">
-    [[$includedPatternsRow?
-        &name=`tvSelectClient`
-        &category=`174`
-    ]]
-</div>
-
-[[$headingBasic?
-    &value=`[[%romanesco.patterns.referring_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3880`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3881`
-	&layout_id=`12`
-	&layout_column=`col_2`
-	&layout_idx=`0`
-	&pattern_list=`referringChunks,referringTemplates`
-	&pattern_template=`patternLayoutElectronTV`
-	&pattern_name=`organization_id`
-	]]
-</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.references_title]]`
     &heading_level=`h4`
     &heading_subtitle=``
     &heading_icon=``
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3876`
+    &unique_idx=`17`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3877`
+	&unique_idx=`18`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -412,7 +303,7 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3878`
+    &unique_idx=`19`
 ]]
 
 <div class="ui list">
@@ -426,11 +317,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3880`
+    &unique_idx=`21`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3881`
+	&unique_idx=`22`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -439,7 +330,8 @@
 	&pattern_name=`organization_id`
 	]]
 </div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -454,7 +346,7 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`3871`
+    &unique_idx=`12`
     &layout_idx=`1`
 ]]
     </div>
@@ -466,23 +358,25 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`contributors_id` &prefix=`cf_3_3896``
+            &then=`setPatternPlaceholders? &cbField=`contributors_id` &prefix=`cf_3_37``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`contributors_id` &prefix=`cl_3_3896``
+            &then=`setPatternPlaceholders? &cbLayout=`contributors_id` &prefix=`cl_3_37``
         ]]]]
 
-        [[$cbLayoutPatternPreview:toPlaceholder=`preview_3_3896`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_37`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`contributors_id`
             &pattern_template=`patternLayoutElectronTV`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`3`
-            &unique_idx=`3896`
+            &unique_idx=`37`
         ]]
         
         [[[[modifiedIf?
@@ -500,7 +394,7 @@
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
                     &idx=`3`
-                    &unique_idx=`3896`
+                    &unique_idx=`37`
                 `
         ]]]]
 
@@ -508,31 +402,26 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_3_3896`
+            &then=`+preview_3_37`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$richTextSegment?
-    &content=`<p>Contributors are persons that helped create the subject of a certain template. A portfolio project for example. In many scenarios, a Contributor will be a team member, so by default this TV looks for child resources inside your Team page.</p>`
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`]]
-[[$accordionRowBasic?
+    &rows=`[[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &heading_level=`h4`
     &heading_subtitle=``
     &heading_icon=``
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=`<p>Contributors are persons that helped create the subject of a certain template. A portfolio project for example. In many scenarios, a Contributor will be a team member, so by default this TV looks for child resources inside your Team page.</p>`
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -540,26 +429,14 @@
     &idx=`1`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[jsonToHTML? &json=`{
-    "caption": "Contributors",
-    "name": "contributors_id",
-    "description": "Link the team members that worked on this item. You can only select persons that are listed on your Team page, so if you want to add an external team member, you should add him or her to your team page first (can be unpublished).",
-    "type": "listbox-multiple",
-    "inputOptionValues": "@CHUNK tvSelectTeam",
-    "category": "Connections",
-    "sortOrder": "3",
-    "templates": [
-        "@@templates_portfolio"
-    ]
-}`]]</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.specifications_title]]`
     &heading_level=`h4`
     &heading_subtitle=``
     &heading_icon=``
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "caption": "Contributors",
     "name": "contributors_id",
@@ -572,7 +449,8 @@
         "@@templates_portfolio"
     ]
 }`]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -580,71 +458,23 @@
     &idx=`2`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.assigned_templates]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3889`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3890`
-	&layout_id=`12`
-	&layout_column=`col_1`
-	&layout_idx=`0`
-	&pattern_list=`assignedTemplates`
-	&pattern_template=`patternLayoutElectronTV`
-	&pattern_name=`contributors_id`
-	]]
-</div>
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.included_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3891`
-]]
-
-<div class="ui list">
-    [[$includedPatternsRow?
-        &name=`tvSelectTeam`
-        &category=`174`
-    ]]
-</div>
-
-[[$headingBasic?
-    &value=`[[%romanesco.patterns.referring_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3893`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3894`
-	&layout_id=`12`
-	&layout_column=`col_2`
-	&layout_idx=`0`
-	&pattern_list=`referringChunks,referringTemplates`
-	&pattern_template=`patternLayoutElectronTV`
-	&pattern_name=`contributors_id`
-	]]
-</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.references_title]]`
     &heading_level=`h4`
     &heading_subtitle=``
     &heading_icon=``
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3889`
+    &unique_idx=`30`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3890`
+	&unique_idx=`31`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -657,7 +487,7 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3891`
+    &unique_idx=`32`
 ]]
 
 <div class="ui list">
@@ -671,11 +501,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3893`
+    &unique_idx=`34`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3894`
+	&unique_idx=`35`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -684,7 +514,8 @@
 	&pattern_name=`contributors_id`
 	]]
 </div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -699,8 +530,173 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`3884`
+    &unique_idx=`25`
     &layout_idx=`2`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe pattern segment white">
+    <div class="ui   container">
+        [[[[If?
+            &subject=`patternLayoutElectronTV`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonField`
+            &then=`setPatternPlaceholders? &cbField=`user_id` &prefix=`cf_4_48``
+        ]]]]
+        [[[[If?
+            &subject=`patternLayoutElectronTV`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonLayout`
+            &then=`setPatternPlaceholders? &cbLayout=`user_id` &prefix=`cl_4_48``
+        ]]]]
+
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_4_48`?
+            &preview=``
+            &code=``
+            &sidebar_width=`five`
+            &pattern_name=`user_id`
+            &pattern_template=`patternLayoutElectronTV`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
+            &idx=`4`
+            &unique_idx=`48`
+        ]]
+        
+        [[[[modifiedIf?
+            &subject=`patternLayoutElectronTV`
+            &operator=`contains`
+            &operand=`Electron`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`user_id`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`user_id`
+                    &pattern_template=`patternLayoutElectronTV`
+                    &pattern_status=`green`
+                    &idx=`4`
+                    &unique_idx=`48`
+                `
+        ]]]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutElectronTV`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`+preview_4_48`
+        ]]]]
+
+        [[$accordionOuter?
+    &rows=`[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=``
+    &heading_icon=``
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[getElementDescription? &name=`user_id` &type=`patternLayoutElectronTV`]]
+</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>
+    </div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
+    &idx=`1`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=``
+    &heading_icon=``
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
+    <div class="column">[[jsonToHTML? &json=`[[tvToJSON?
+    &tv=`user_id`
+    &showName=`1`
+    &showSource=`0`
+    &optionsDelimiter=`0`
+]]`]]</div>
+</div>
+    </div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
+    &idx=`2`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=``
+    &heading_icon=``
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_templates]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`43`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`44`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`assignedTemplates`
+	&pattern_template=`patternLayoutElectronTV`
+	&pattern_name=`user_id`
+	]]
+</div>
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`45`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`46`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_template=`patternLayoutElectronTV`
+	&pattern_name=`user_id`
+	]]
+</div>
+</div>
+    </div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=`fluid styled`
+    &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`38`
+    &layout_idx=`3`
 ]]
     </div>
 </div>

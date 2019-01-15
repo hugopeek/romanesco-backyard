@@ -1,10 +1,18 @@
-[[+segment_type:ne=`none`:then=`segment`:else=`fieldset`:toPlaceholder=`segment_parent`]]
+[[modifiedIf?
+    &subject=`[[+segment_type]]`
+    &operator=`isnot`
+    &operand=`none`
+    &then=`segment`
+    &else=`[[*fb_form_layout:isnot=`inline`:then=`fieldset`]]`
+    &toPlaceholder=`segment_parent`
+]]
 
 
-<fieldset id="Contact" class="ui [[+padding]] [[+segment_parent]] transparent">
-    <legend class="ui large header">Contact</legend>
+<fieldset  class="ui [[+padding]] [[+segment_parent]] transparent">
+    <legend class="ui [[+form_size]] header">Contact</legend>
+    
     [[$fbInputTextarea? 
-	&unique_idx=`6674`
+	&unique_idx=`6711`
 	&layout_id=`14`
 	&layout_column=`main`
 	&layout_idx=`0`
@@ -19,7 +27,7 @@
 
 
 [[$fbInputTextfield? 
-	&unique_idx=`6675`
+	&unique_idx=`6712`
 	&layout_id=`14`
 	&layout_column=`main`
 	&layout_idx=`0`
@@ -34,7 +42,7 @@
 
 
 [[$fbInputEmail? 
-	&unique_idx=`6676`
+	&unique_idx=`6713`
 	&layout_id=`14`
 	&layout_column=`main`
 	&layout_idx=`0`
@@ -47,7 +55,7 @@
 
 
 [[$fbInputTextfield? 
-	&unique_idx=`6677`
+	&unique_idx=`6714`
 	&layout_id=`14`
 	&layout_column=`main`
 	&layout_idx=`0`
@@ -60,4 +68,5 @@
 	&field_required=`0`
 	]]
 
+    
 </fieldset>

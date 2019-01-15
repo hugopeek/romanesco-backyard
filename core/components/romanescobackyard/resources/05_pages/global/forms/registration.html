@@ -1,7 +1,16 @@
-[[+segment_type:ne=`none`:then=`segment`:else=`fieldset`:toPlaceholder=`segment_parent`]]
+[[modifiedIf?
+    &subject=`[[+segment_type]]`
+    &operator=`isnot`
+    &operand=`none`
+    &then=`segment`
+    &else=`[[*fb_form_layout:isnot=`inline`:then=`fieldset`]]`
+    &toPlaceholder=`segment_parent`
+]]
 
 
-<fieldset id="" class="ui [[+padding]] [[+segment_parent]] transparent">
+<fieldset  class="ui [[+padding]] [[+segment_parent]] transparent">
+    
+    
     
     
 </fieldset>

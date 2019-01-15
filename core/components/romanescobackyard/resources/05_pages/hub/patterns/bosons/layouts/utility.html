@@ -4,16 +4,16 @@
             &subject=`patternLayoutBosonLayout`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`Call To Action` &prefix=`cf_1_677``
+            &then=`setPatternPlaceholders? &cbField=`Call To Action` &prefix=`cf_1_680``
         ]]]]
         [[[[If?
             &subject=`patternLayoutBosonLayout`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`Call To Action` &prefix=`cl_1_677``
+            &then=`setPatternPlaceholders? &cbLayout=`Call To Action` &prefix=`cl_1_680``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_677`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_680`?
             &preview=`[[If?
     &subject=``
     &operator=`notempty`
@@ -41,7 +41,7 @@
             &raw_tags=`[[+raw_tags]]`
             &rendered_tags=`[[+rendered_tags]]`
             &idx=`1`
-            &unique_idx=`677`
+            &unique_idx=`680`
         ]]
         
         [[[[modifiedIf?
@@ -59,7 +59,7 @@
                     &pattern_template=`patternLayoutBosonLayout`
                     &pattern_status=`green`
                     &idx=`1`
-                    &unique_idx=`677`
+                    &unique_idx=`680`
                 `
         ]]]]
 
@@ -67,7 +67,7 @@
             &subject=`patternLayoutBosonLayout`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_1_677`
+            &then=`+preview_1_680`
         ]]]]
 
         [[$tabsOuter?
@@ -147,11 +147,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`672`
+    &unique_idx=`675`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`673`
+	&unique_idx=`676`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -164,11 +164,11 @@
     &value=`[[%romanesco.patterns.referring_pages]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`674`
+    &unique_idx=`677`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`675`
+	&unique_idx=`678`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -193,7 +193,7 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`665`
+    &unique_idx=`668`
     &layout_idx=`0`
 ]]
     </div>
@@ -205,23 +205,31 @@
             &subject=`patternLayoutBosonLayout`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`Fieldset` &prefix=`cf_2_696``
+            &then=`setPatternPlaceholders? &cbField=`Fieldset` &prefix=`cf_2_699``
         ]]]]
         [[[[If?
             &subject=`patternLayoutBosonLayout`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`Fieldset` &prefix=`cl_2_696``
+            &then=`setPatternPlaceholders? &cbLayout=`Fieldset` &prefix=`cl_2_699``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_696`?
-            &preview=`[[+segment_type:ne=`none`:then=`segment`:else=`fieldset`:toPlaceholder=`segment_parent`]]
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_699`?
+            &preview=`[[modifiedIf?
+    &subject=`[[+segment_type]]`
+    &operator=`isnot`
+    &operand=`none`
+    &then=`segment`
+    &else=`[[*fb_form_layout:isnot=`inline`:then=`fieldset`]]`
+    &toPlaceholder=`segment_parent`
+]]
 
 
-<fieldset id="Contact us" class="ui [[+padding]] [[+segment_parent]] transparent">
-    <legend class="ui large header">Contact us</legend>
+<fieldset  class="ui [[+padding]] [[+segment_parent]] transparent">
+    <legend class="ui [[+form_size]] header">Contact us</legend>
+    
     [[$fbInputTextarea? 
-	&unique_idx=`679`
+	&unique_idx=`682`
 	&layout_id=`14`
 	&layout_column=`main`
 	&layout_idx=`0`
@@ -236,7 +244,7 @@
 
 
 [[$fbInputTextfield? 
-	&unique_idx=`680`
+	&unique_idx=`683`
 	&layout_id=`14`
 	&layout_column=`main`
 	&layout_idx=`0`
@@ -251,7 +259,7 @@
 
 
 [[$fbInputEmail? 
-	&unique_idx=`681`
+	&unique_idx=`684`
 	&layout_id=`14`
 	&layout_column=`main`
 	&layout_idx=`0`
@@ -262,6 +270,7 @@
 	&field_placeholder=``
 	]]
 
+    
 </fieldset>`
             &code=`[[$codeSnippet?
     &value=`[[Rowboat?
@@ -278,7 +287,7 @@
             &raw_tags=`[[+raw_tags]]`
             &rendered_tags=`[[+rendered_tags]]`
             &idx=`2`
-            &unique_idx=`696`
+            &unique_idx=`699`
         ]]
         
         [[[[modifiedIf?
@@ -296,7 +305,7 @@
                     &pattern_template=`patternLayoutBosonLayout`
                     &pattern_status=`green`
                     &idx=`2`
-                    &unique_idx=`696`
+                    &unique_idx=`699`
                 `
         ]]]]
 
@@ -304,7 +313,7 @@
             &subject=`patternLayoutBosonLayout`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_2_696`
+            &then=`+preview_2_699`
         ]]]]
 
         [[$tabsOuter?
@@ -384,11 +393,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`691`
+    &unique_idx=`694`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`692`
+	&unique_idx=`695`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -401,11 +410,11 @@
     &value=`[[%romanesco.patterns.referring_pages]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`693`
+    &unique_idx=`696`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`694`
+	&unique_idx=`697`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -430,7 +439,7 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`684`
+    &unique_idx=`687`
     &layout_idx=`1`
 ]]
     </div>
@@ -442,20 +451,20 @@
             &subject=`patternLayoutBosonLayout`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`Overview (2 Columns)` &prefix=`cf_3_712``
+            &then=`setPatternPlaceholders? &cbField=`Overview (2 Columns)` &prefix=`cf_3_715``
         ]]]]
         [[[[If?
             &subject=`patternLayoutBosonLayout`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`Overview (2 Columns)` &prefix=`cl_3_712``
+            &then=`setPatternPlaceholders? &cbLayout=`Overview (2 Columns)` &prefix=`cl_3_715``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_712`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_715`?
             &preview=`[[![[If? &subject=`0` &operator=`EQ` &operand=`1` &then=`getPage@SemanticUI` &else=`getCache`]]?
     &element=`getResources`
     &cacheKey=`overviews`
-    [[++custom_cache:eq=`0`:then=`&cacheExpires=`1``]]
+    
 
     &parents=`143`
     &depth=`0`
@@ -496,7 +505,7 @@
             &raw_tags=`[[+raw_tags]]`
             &rendered_tags=`[[+rendered_tags]]`
             &idx=`3`
-            &unique_idx=`712`
+            &unique_idx=`715`
         ]]
         
         [[[[modifiedIf?
@@ -514,7 +523,7 @@
                     &pattern_template=`patternLayoutBosonLayout`
                     &pattern_status=`green`
                     &idx=`3`
-                    &unique_idx=`712`
+                    &unique_idx=`715`
                 `
         ]]]]
 
@@ -522,7 +531,7 @@
             &subject=`patternLayoutBosonLayout`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_3_712`
+            &then=`+preview_3_715`
         ]]]]
 
         [[$tabsOuter?
@@ -602,11 +611,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`707`
+    &unique_idx=`710`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`708`
+	&unique_idx=`711`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -619,11 +628,11 @@
     &value=`[[%romanesco.patterns.referring_pages]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`709`
+    &unique_idx=`712`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`710`
+	&unique_idx=`713`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -648,7 +657,7 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`700`
+    &unique_idx=`703`
     &layout_idx=`2`
 ]]
     </div>
@@ -660,32 +669,32 @@
             &subject=`patternLayoutBosonLayout`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`Pattern` &prefix=`cf_4_730``
+            &then=`setPatternPlaceholders? &cbField=`Pattern` &prefix=`cf_4_733``
         ]]]]
         [[[[If?
             &subject=`patternLayoutBosonLayout`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`Pattern` &prefix=`cl_4_730``
+            &then=`setPatternPlaceholders? &cbLayout=`Pattern` &prefix=`cl_4_733``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_4_730`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_4_733`?
             &preview=`<div class="ui vertical stripe pattern segment secondary">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`overviewOuter` &prefix=`cf_1_716``
+            &then=`setPatternPlaceholders? &cbField=`overviewOuter` &prefix=`cf_1_719``
         ]]]]
         [[[[If?
             &subject=`patternLayoutAtom`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`overviewOuter` &prefix=`cl_1_716``
+            &then=`setPatternPlaceholders? &cbLayout=`overviewOuter` &prefix=`cl_1_719``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_716`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_719`?
             &preview=`Preview goes here`
             &code=`[[$codeSnippet?
     &value=`Code example goes here`
@@ -698,7 +707,7 @@
             &raw_tags=`[[+raw_tags]]`
             &rendered_tags=`[[+rendered_tags]]`
             &idx=`1`
-            &unique_idx=`716`
+            &unique_idx=`719`
         ]]
         
         [[[[modifiedIf?
@@ -716,7 +725,7 @@
                     &pattern_template=`patternLayoutAtom`
                     &pattern_status=`green`
                     &idx=`1`
-                    &unique_idx=`716`
+                    &unique_idx=`719`
                 `
         ]]]]
 
@@ -724,7 +733,7 @@
             &subject=`patternLayoutAtom`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_1_716`
+            &then=`+preview_1_719`
         ]]]]
 
         
@@ -745,7 +754,7 @@
             &raw_tags=`[[+raw_tags]]`
             &rendered_tags=`[[+rendered_tags]]`
             &idx=`4`
-            &unique_idx=`730`
+            &unique_idx=`733`
         ]]
         
         [[[[modifiedIf?
@@ -763,7 +772,7 @@
                     &pattern_template=`patternLayoutBosonLayout`
                     &pattern_status=`green`
                     &idx=`4`
-                    &unique_idx=`730`
+                    &unique_idx=`733`
                 `
         ]]]]
 
@@ -771,7 +780,7 @@
             &subject=`patternLayoutBosonLayout`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_4_730`
+            &then=`+preview_4_733`
         ]]]]
 
         [[$tabsOuter?
@@ -851,11 +860,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`725`
+    &unique_idx=`728`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`726`
+	&unique_idx=`729`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -868,11 +877,11 @@
     &value=`[[%romanesco.patterns.referring_pages]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`727`
+    &unique_idx=`730`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`728`
+	&unique_idx=`731`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -897,7 +906,7 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`718`
+    &unique_idx=`721`
     &layout_idx=`3`
 ]]
     </div>
@@ -909,16 +918,16 @@
             &subject=`patternLayoutBosonLayout`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`Backyard` &prefix=`cf_5_749``
+            &then=`setPatternPlaceholders? &cbField=`Backyard` &prefix=`cf_5_752``
         ]]]]
         [[[[If?
             &subject=`patternLayoutBosonLayout`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`Backyard` &prefix=`cl_5_749``
+            &then=`setPatternPlaceholders? &cbLayout=`Backyard` &prefix=`cl_5_752``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_5_749`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_5_752`?
             &preview=`[[$richTextSegment?
     &content=`<p>This is the playground area<br></p>`
     &segment_type=``
@@ -985,7 +994,7 @@
             &raw_tags=`[[+raw_tags]]`
             &rendered_tags=`[[+rendered_tags]]`
             &idx=`5`
-            &unique_idx=`749`
+            &unique_idx=`752`
         ]]
         
         [[[[modifiedIf?
@@ -1003,7 +1012,7 @@
                     &pattern_template=`patternLayoutBosonLayout`
                     &pattern_status=`green`
                     &idx=`5`
-                    &unique_idx=`749`
+                    &unique_idx=`752`
                 `
         ]]]]
 
@@ -1011,7 +1020,7 @@
             &subject=`patternLayoutBosonLayout`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_5_749`
+            &then=`+preview_5_752`
         ]]]]
 
         [[$tabsOuter?
@@ -1091,11 +1100,11 @@
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`744`
+    &unique_idx=`747`
 ]]
 
 [[$includedPatternsOuter? 
-	&unique_idx=`745`
+	&unique_idx=`748`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -1108,11 +1117,11 @@
     &value=`[[%romanesco.patterns.referring_pages]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`746`
+    &unique_idx=`749`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`747`
+	&unique_idx=`750`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -1137,7 +1146,7 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`737`
+    &unique_idx=`740`
     &layout_idx=`4`
 ]]
     </div>

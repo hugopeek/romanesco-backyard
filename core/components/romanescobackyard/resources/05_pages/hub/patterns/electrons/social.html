@@ -4,23 +4,25 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`social_twitter` &prefix=`cf_1_3468``
+            &then=`setPatternPlaceholders? &cbField=`social_twitter` &prefix=`cf_1_3477``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`social_twitter` &prefix=`cl_1_3468``
+            &then=`setPatternPlaceholders? &cbLayout=`social_twitter` &prefix=`cl_1_3477``
         ]]]]
 
-        [[$cbLayoutPatternPreview:toPlaceholder=`preview_1_3468`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_3477`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`social_twitter`
             &pattern_template=`patternLayoutElectronTV`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`1`
-            &unique_idx=`3468`
+            &unique_idx=`3477`
         ]]
         
         [[[[modifiedIf?
@@ -38,7 +40,7 @@
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
                     &idx=`1`
-                    &unique_idx=`3468`
+                    &unique_idx=`3477`
                 `
         ]]]]
 
@@ -46,31 +48,26 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_1_3468`
+            &then=`+preview_1_3477`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$richTextSegment?
-    &content=``
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`]]
-[[$accordionRowBasic?
+    &rows=`[[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -78,25 +75,14 @@
     &idx=`1`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[jsonToHTML? &json=`{
-    "caption": "Twitter account",
-    "name": "social_twitter",
-    "description": "Only fill in the account name (the part after https://twitter.com/). This way, this setting can be used by other Twitter functionality throughout the site.",
-    "type": "text",
-    "category": "Social",
-    "sortOrder": "1",
-    "templates": [
-        "@@templates_team"
-    ]
-}`]]</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.specifications_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "caption": "Twitter account",
     "name": "social_twitter",
@@ -108,7 +94,8 @@
         "@@templates_team"
     ]
 }`]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -116,57 +103,23 @@
     &idx=`2`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.assigned_templates]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3463`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3464`
-	&layout_id=`12`
-	&layout_column=`col_1`
-	&layout_idx=`0`
-	&pattern_list=`assignedTemplates`
-	&pattern_template=`patternLayoutElectronTV`
-	&pattern_name=`social_twitter`
-	]]
-</div>
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.referring_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3465`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3466`
-	&layout_id=`12`
-	&layout_column=`col_2`
-	&layout_idx=`0`
-	&pattern_list=`referringChunks,referringTemplates`
-	&pattern_template=`patternLayoutElectronTV`
-	&pattern_name=`social_twitter`
-	]]
-</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.references_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3463`
+    &unique_idx=`3472`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3464`
+	&unique_idx=`3473`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -179,11 +132,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3465`
+    &unique_idx=`3474`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3466`
+	&unique_idx=`3475`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -192,7 +145,8 @@
 	&pattern_name=`social_twitter`
 	]]
 </div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -207,7 +161,7 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`3458`
+    &unique_idx=`3467`
     &layout_idx=`0`
 ]]
     </div>
@@ -219,23 +173,25 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`social_linkedin` &prefix=`cf_2_3479``
+            &then=`setPatternPlaceholders? &cbField=`social_linkedin` &prefix=`cf_2_3488``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`social_linkedin` &prefix=`cl_2_3479``
+            &then=`setPatternPlaceholders? &cbLayout=`social_linkedin` &prefix=`cl_2_3488``
         ]]]]
 
-        [[$cbLayoutPatternPreview:toPlaceholder=`preview_2_3479`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_3488`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`social_linkedin`
             &pattern_template=`patternLayoutElectronTV`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`2`
-            &unique_idx=`3479`
+            &unique_idx=`3488`
         ]]
         
         [[[[modifiedIf?
@@ -253,7 +209,7 @@
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
                     &idx=`2`
-                    &unique_idx=`3479`
+                    &unique_idx=`3488`
                 `
         ]]]]
 
@@ -261,31 +217,26 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_2_3479`
+            &then=`+preview_2_3488`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$richTextSegment?
-    &content=``
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`]]
-[[$accordionRowBasic?
+    &rows=`[[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -293,25 +244,14 @@
     &idx=`1`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[jsonToHTML? &json=`{
-    "caption": "LinkedIn profile",
-    "name": "social_linkedin",
-    "description": "",
-    "type": "url",
-    "category": "Social",
-    "sortOrder": "2",
-    "templates": [
-        "@@templates_team"
-    ]
-}`]]</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.specifications_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "caption": "LinkedIn profile",
     "name": "social_linkedin",
@@ -323,7 +263,8 @@
         "@@templates_team"
     ]
 }`]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -331,57 +272,23 @@
     &idx=`2`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.assigned_templates]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3474`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3475`
-	&layout_id=`12`
-	&layout_column=`col_1`
-	&layout_idx=`0`
-	&pattern_list=`assignedTemplates`
-	&pattern_template=`patternLayoutElectronTV`
-	&pattern_name=`social_linkedin`
-	]]
-</div>
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.referring_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3476`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3477`
-	&layout_id=`12`
-	&layout_column=`col_2`
-	&layout_idx=`0`
-	&pattern_list=`referringChunks,referringTemplates`
-	&pattern_template=`patternLayoutElectronTV`
-	&pattern_name=`social_linkedin`
-	]]
-</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.references_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3474`
+    &unique_idx=`3483`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3475`
+	&unique_idx=`3484`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -394,11 +301,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3476`
+    &unique_idx=`3485`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3477`
+	&unique_idx=`3486`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -407,7 +314,8 @@
 	&pattern_name=`social_linkedin`
 	]]
 </div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -422,7 +330,7 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`3469`
+    &unique_idx=`3478`
     &layout_idx=`1`
 ]]
     </div>
@@ -434,23 +342,25 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`social_facebook` &prefix=`cf_3_3490``
+            &then=`setPatternPlaceholders? &cbField=`social_facebook` &prefix=`cf_3_3499``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`social_facebook` &prefix=`cl_3_3490``
+            &then=`setPatternPlaceholders? &cbLayout=`social_facebook` &prefix=`cl_3_3499``
         ]]]]
 
-        [[$cbLayoutPatternPreview:toPlaceholder=`preview_3_3490`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_3499`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`social_facebook`
             &pattern_template=`patternLayoutElectronTV`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`3`
-            &unique_idx=`3490`
+            &unique_idx=`3499`
         ]]
         
         [[[[modifiedIf?
@@ -468,7 +378,7 @@
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
                     &idx=`3`
-                    &unique_idx=`3490`
+                    &unique_idx=`3499`
                 `
         ]]]]
 
@@ -476,31 +386,26 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_3_3490`
+            &then=`+preview_3_3499`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$richTextSegment?
-    &content=``
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`]]
-[[$accordionRowBasic?
+    &rows=`[[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -508,25 +413,14 @@
     &idx=`1`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[jsonToHTML? &json=`{
-    "caption": "Facebook page",
-    "name": "social_facebook",
-    "description": "",
-    "type": "url",
-    "category": "Social",
-    "sortOrder": "3",
-    "templates": [
-        "@@templates_team"
-    ]
-}`]]</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.specifications_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "caption": "Facebook page",
     "name": "social_facebook",
@@ -538,7 +432,8 @@
         "@@templates_team"
     ]
 }`]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -546,57 +441,23 @@
     &idx=`2`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.assigned_templates]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3485`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3486`
-	&layout_id=`12`
-	&layout_column=`col_1`
-	&layout_idx=`0`
-	&pattern_list=`assignedTemplates`
-	&pattern_template=`patternLayoutElectronTV`
-	&pattern_name=`social_facebook`
-	]]
-</div>
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.referring_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3487`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3488`
-	&layout_id=`12`
-	&layout_column=`col_2`
-	&layout_idx=`0`
-	&pattern_list=`referringChunks,referringTemplates`
-	&pattern_template=`patternLayoutElectronTV`
-	&pattern_name=`social_facebook`
-	]]
-</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.references_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3485`
+    &unique_idx=`3494`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3486`
+	&unique_idx=`3495`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -609,11 +470,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3487`
+    &unique_idx=`3496`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3488`
+	&unique_idx=`3497`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -622,7 +483,8 @@
 	&pattern_name=`social_facebook`
 	]]
 </div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -637,7 +499,7 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`3480`
+    &unique_idx=`3489`
     &layout_idx=`2`
 ]]
     </div>
@@ -649,23 +511,25 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`social_instagram` &prefix=`cf_4_3501``
+            &then=`setPatternPlaceholders? &cbField=`social_instagram` &prefix=`cf_4_3510``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`social_instagram` &prefix=`cl_4_3501``
+            &then=`setPatternPlaceholders? &cbLayout=`social_instagram` &prefix=`cl_4_3510``
         ]]]]
 
-        [[$cbLayoutPatternPreview:toPlaceholder=`preview_4_3501`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_4_3510`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`social_instagram`
             &pattern_template=`patternLayoutElectronTV`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`4`
-            &unique_idx=`3501`
+            &unique_idx=`3510`
         ]]
         
         [[[[modifiedIf?
@@ -683,7 +547,7 @@
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
                     &idx=`4`
-                    &unique_idx=`3501`
+                    &unique_idx=`3510`
                 `
         ]]]]
 
@@ -691,31 +555,26 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_4_3501`
+            &then=`+preview_4_3510`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$richTextSegment?
-    &content=``
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`]]
-[[$accordionRowBasic?
+    &rows=`[[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -723,25 +582,14 @@
     &idx=`1`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[jsonToHTML? &json=`{
-    "caption": "Instagram profile",
-    "name": "social_instagram",
-    "description": "",
-    "type": "url",
-    "category": "Social",
-    "sortOrder": "4",
-    "templates": [
-        "@@templates_team"
-    ]
-}`]]</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.specifications_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "caption": "Instagram profile",
     "name": "social_instagram",
@@ -753,7 +601,8 @@
         "@@templates_team"
     ]
 }`]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -761,57 +610,23 @@
     &idx=`2`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.assigned_templates]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3496`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3497`
-	&layout_id=`12`
-	&layout_column=`col_1`
-	&layout_idx=`0`
-	&pattern_list=`assignedTemplates`
-	&pattern_template=`patternLayoutElectronTV`
-	&pattern_name=`social_instagram`
-	]]
-</div>
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.referring_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3498`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3499`
-	&layout_id=`12`
-	&layout_column=`col_2`
-	&layout_idx=`0`
-	&pattern_list=`referringChunks,referringTemplates`
-	&pattern_template=`patternLayoutElectronTV`
-	&pattern_name=`social_instagram`
-	]]
-</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.references_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3496`
+    &unique_idx=`3505`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3497`
+	&unique_idx=`3506`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -824,11 +639,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3498`
+    &unique_idx=`3507`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3499`
+	&unique_idx=`3508`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -837,7 +652,8 @@
 	&pattern_name=`social_instagram`
 	]]
 </div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -852,7 +668,7 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`3491`
+    &unique_idx=`3500`
     &layout_idx=`3`
 ]]
     </div>
@@ -864,23 +680,25 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`social_pinterest` &prefix=`cf_5_3512``
+            &then=`setPatternPlaceholders? &cbField=`social_pinterest` &prefix=`cf_5_3521``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`social_pinterest` &prefix=`cl_5_3512``
+            &then=`setPatternPlaceholders? &cbLayout=`social_pinterest` &prefix=`cl_5_3521``
         ]]]]
 
-        [[$cbLayoutPatternPreview:toPlaceholder=`preview_5_3512`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_5_3521`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`social_pinterest`
             &pattern_template=`patternLayoutElectronTV`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`5`
-            &unique_idx=`3512`
+            &unique_idx=`3521`
         ]]
         
         [[[[modifiedIf?
@@ -898,7 +716,7 @@
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
                     &idx=`5`
-                    &unique_idx=`3512`
+                    &unique_idx=`3521`
                 `
         ]]]]
 
@@ -906,31 +724,26 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_5_3512`
+            &then=`+preview_5_3521`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$richTextSegment?
-    &content=``
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`]]
-[[$accordionRowBasic?
+    &rows=`[[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -938,25 +751,14 @@
     &idx=`1`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[jsonToHTML? &json=`{
-    "caption": "Pinterest board",
-    "name": "social_pinterest",
-    "description": "",
-    "type": "url",
-    "category": "Social",
-    "sortOrder": "5",
-    "templates": [
-        "@@templates_team"
-    ]
-}`]]</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.specifications_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "caption": "Pinterest board",
     "name": "social_pinterest",
@@ -968,7 +770,8 @@
         "@@templates_team"
     ]
 }`]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -976,57 +779,23 @@
     &idx=`2`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.assigned_templates]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3507`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3508`
-	&layout_id=`12`
-	&layout_column=`col_1`
-	&layout_idx=`0`
-	&pattern_list=`assignedTemplates`
-	&pattern_template=`patternLayoutElectronTV`
-	&pattern_name=`social_pinterest`
-	]]
-</div>
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.referring_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3509`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3510`
-	&layout_id=`12`
-	&layout_column=`col_2`
-	&layout_idx=`0`
-	&pattern_list=`referringChunks,referringTemplates`
-	&pattern_template=`patternLayoutElectronTV`
-	&pattern_name=`social_pinterest`
-	]]
-</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.references_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3507`
+    &unique_idx=`3516`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3508`
+	&unique_idx=`3517`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -1039,11 +808,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3509`
+    &unique_idx=`3518`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3510`
+	&unique_idx=`3519`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -1052,7 +821,8 @@
 	&pattern_name=`social_pinterest`
 	]]
 </div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -1067,7 +837,7 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`3502`
+    &unique_idx=`3511`
     &layout_idx=`4`
 ]]
     </div>
@@ -1079,23 +849,25 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`social_youtube` &prefix=`cf_6_3523``
+            &then=`setPatternPlaceholders? &cbField=`social_youtube` &prefix=`cf_6_3532``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`social_youtube` &prefix=`cl_6_3523``
+            &then=`setPatternPlaceholders? &cbLayout=`social_youtube` &prefix=`cl_6_3532``
         ]]]]
 
-        [[$cbLayoutPatternPreview:toPlaceholder=`preview_6_3523`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_6_3532`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`social_youtube`
             &pattern_template=`patternLayoutElectronTV`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`6`
-            &unique_idx=`3523`
+            &unique_idx=`3532`
         ]]
         
         [[[[modifiedIf?
@@ -1113,7 +885,7 @@
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
                     &idx=`6`
-                    &unique_idx=`3523`
+                    &unique_idx=`3532`
                 `
         ]]]]
 
@@ -1121,31 +893,26 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_6_3523`
+            &then=`+preview_6_3532`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$richTextSegment?
-    &content=``
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`]]
-[[$accordionRowBasic?
+    &rows=`[[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -1153,25 +920,14 @@
     &idx=`1`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[jsonToHTML? &json=`{
-    "caption": "Youtube channel",
-    "name": "social_youtube",
-    "description": "",
-    "type": "url",
-    "category": "Social",
-    "sortOrder": "10",
-    "templates": [
-        "@@templates_team"
-    ]
-}`]]</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.specifications_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "caption": "Youtube channel",
     "name": "social_youtube",
@@ -1183,7 +939,8 @@
         "@@templates_team"
     ]
 }`]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -1191,57 +948,23 @@
     &idx=`2`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.assigned_templates]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3518`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3519`
-	&layout_id=`12`
-	&layout_column=`col_1`
-	&layout_idx=`0`
-	&pattern_list=`assignedTemplates`
-	&pattern_template=`patternLayoutElectronTV`
-	&pattern_name=`social_youtube`
-	]]
-</div>
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.referring_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3520`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3521`
-	&layout_id=`12`
-	&layout_column=`col_2`
-	&layout_idx=`0`
-	&pattern_list=`referringChunks,referringTemplates`
-	&pattern_template=`patternLayoutElectronTV`
-	&pattern_name=`social_youtube`
-	]]
-</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.references_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3518`
+    &unique_idx=`3527`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3519`
+	&unique_idx=`3528`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -1254,11 +977,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3520`
+    &unique_idx=`3529`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3521`
+	&unique_idx=`3530`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -1267,7 +990,8 @@
 	&pattern_name=`social_youtube`
 	]]
 </div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -1282,7 +1006,7 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`3513`
+    &unique_idx=`3522`
     &layout_idx=`5`
 ]]
     </div>
@@ -1294,23 +1018,25 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`social_googleplus` &prefix=`cf_7_3534``
+            &then=`setPatternPlaceholders? &cbField=`social_googleplus` &prefix=`cf_7_3543``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`social_googleplus` &prefix=`cl_7_3534``
+            &then=`setPatternPlaceholders? &cbLayout=`social_googleplus` &prefix=`cl_7_3543``
         ]]]]
 
-        [[$cbLayoutPatternPreview:toPlaceholder=`preview_7_3534`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_7_3543`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`social_googleplus`
             &pattern_template=`patternLayoutElectronTV`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`7`
-            &unique_idx=`3534`
+            &unique_idx=`3543`
         ]]
         
         [[[[modifiedIf?
@@ -1328,7 +1054,7 @@
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
                     &idx=`7`
-                    &unique_idx=`3534`
+                    &unique_idx=`3543`
                 `
         ]]]]
 
@@ -1336,31 +1062,26 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_7_3534`
+            &then=`+preview_7_3543`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$richTextSegment?
-    &content=``
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`]]
-[[$accordionRowBasic?
+    &rows=`[[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -1368,25 +1089,14 @@
     &idx=`1`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[jsonToHTML? &json=`{
-    "caption": "Google+ profile",
-    "name": "social_googleplus",
-    "description": "",
-    "type": "url",
-    "category": "Social",
-    "sortOrder": "11",
-    "templates": [
-        "@@templates_team"
-    ]
-}`]]</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.specifications_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "caption": "Google+ profile",
     "name": "social_googleplus",
@@ -1398,7 +1108,8 @@
         "@@templates_team"
     ]
 }`]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -1406,57 +1117,23 @@
     &idx=`2`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.assigned_templates]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3529`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3530`
-	&layout_id=`12`
-	&layout_column=`col_1`
-	&layout_idx=`0`
-	&pattern_list=`assignedTemplates`
-	&pattern_template=`patternLayoutElectronTV`
-	&pattern_name=`social_googleplus`
-	]]
-</div>
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.referring_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3531`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3532`
-	&layout_id=`12`
-	&layout_column=`col_2`
-	&layout_idx=`0`
-	&pattern_list=`referringChunks,referringTemplates`
-	&pattern_template=`patternLayoutElectronTV`
-	&pattern_name=`social_googleplus`
-	]]
-</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.references_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3529`
+    &unique_idx=`3538`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3530`
+	&unique_idx=`3539`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -1469,11 +1146,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3531`
+    &unique_idx=`3540`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3532`
+	&unique_idx=`3541`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -1482,7 +1159,8 @@
 	&pattern_name=`social_googleplus`
 	]]
 </div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -1497,7 +1175,7 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`3524`
+    &unique_idx=`3533`
     &layout_idx=`6`
 ]]
     </div>
@@ -1509,23 +1187,25 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`social_github` &prefix=`cf_8_3545``
+            &then=`setPatternPlaceholders? &cbField=`social_github` &prefix=`cf_8_3554``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`social_github` &prefix=`cl_8_3545``
+            &then=`setPatternPlaceholders? &cbLayout=`social_github` &prefix=`cl_8_3554``
         ]]]]
 
-        [[$cbLayoutPatternPreview:toPlaceholder=`preview_8_3545`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_8_3554`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`social_github`
             &pattern_template=`patternLayoutElectronTV`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`8`
-            &unique_idx=`3545`
+            &unique_idx=`3554`
         ]]
         
         [[[[modifiedIf?
@@ -1543,7 +1223,7 @@
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
                     &idx=`8`
-                    &unique_idx=`3545`
+                    &unique_idx=`3554`
                 `
         ]]]]
 
@@ -1551,31 +1231,26 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_8_3545`
+            &then=`+preview_8_3554`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$richTextSegment?
-    &content=``
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`]]
-[[$accordionRowBasic?
+    &rows=`[[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -1583,25 +1258,14 @@
     &idx=`1`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[jsonToHTML? &json=`{
-    "caption": "Github account",
-    "name": "social_github",
-    "description": "",
-    "type": "text",
-    "category": "Social",
-    "sortOrder": "20",
-    "templates": [
-        "@@templates_team"
-    ]
-}`]]</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.specifications_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "caption": "Github account",
     "name": "social_github",
@@ -1613,7 +1277,8 @@
         "@@templates_team"
     ]
 }`]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -1621,57 +1286,23 @@
     &idx=`2`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.assigned_templates]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3540`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3541`
-	&layout_id=`12`
-	&layout_column=`col_1`
-	&layout_idx=`0`
-	&pattern_list=`assignedTemplates`
-	&pattern_template=`patternLayoutElectronTV`
-	&pattern_name=`social_github`
-	]]
-</div>
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.referring_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3542`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3543`
-	&layout_id=`12`
-	&layout_column=`col_2`
-	&layout_idx=`0`
-	&pattern_list=`referringChunks,referringTemplates`
-	&pattern_template=`patternLayoutElectronTV`
-	&pattern_name=`social_github`
-	]]
-</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.references_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3540`
+    &unique_idx=`3549`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3541`
+	&unique_idx=`3550`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -1684,11 +1315,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3542`
+    &unique_idx=`3551`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3543`
+	&unique_idx=`3552`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -1697,7 +1328,8 @@
 	&pattern_name=`social_github`
 	]]
 </div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -1712,7 +1344,7 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`3535`
+    &unique_idx=`3544`
     &layout_idx=`7`
 ]]
     </div>
@@ -1724,23 +1356,25 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`romanesco.social_twitter` &prefix=`cf_9_3554``
+            &then=`setPatternPlaceholders? &cbField=`romanesco.social_twitter` &prefix=`cf_9_3563``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`romanesco.social_twitter` &prefix=`cl_9_3554``
+            &then=`setPatternPlaceholders? &cbLayout=`romanesco.social_twitter` &prefix=`cl_9_3563``
         ]]]]
 
-        [[$cbLayoutPatternPreview:toPlaceholder=`preview_9_3554`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_9_3563`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`romanesco.social_twitter`
             &pattern_template=`patternLayoutElectronSystemSetting`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`9`
-            &unique_idx=`3554`
+            &unique_idx=`3563`
         ]]
         
         [[[[modifiedIf?
@@ -1758,7 +1392,7 @@
                     &pattern_template=`patternLayoutElectronSystemSetting`
                     &pattern_status=`green`
                     &idx=`9`
-                    &unique_idx=`3554`
+                    &unique_idx=`3563`
                 `
         ]]]]
 
@@ -1766,31 +1400,26 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_9_3554`
+            &then=`+preview_9_3563`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$richTextSegment?
-    &content=``
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`]]
-[[$accordionRowBasic?
+    &rows=`[[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -1798,27 +1427,22 @@
     &idx=`1`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[jsonToHTML? &json=`{
-    "key": "social_twitter",
-    "type": "textfield",
-    "area": "Social",
-    "value": ""
-}`]]</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.specifications_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "key": "social_twitter",
     "type": "textfield",
     "area": "Social",
     "value": ""
 }`]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -1826,41 +1450,23 @@
     &idx=`2`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.referring_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3551`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3552`
-	&layout_id=`12`
-	&layout_column=`col_1`
-	&layout_idx=`0`
-	&pattern_list=`referringChunks,referringTemplates`
-	&pattern_template=`patternLayoutElectronSystemSetting`
-	&pattern_name=`romanesco.social_twitter`
-	]]
-</div>
-    <div class="column"></div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.references_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3551`
+    &unique_idx=`3560`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3552`
+	&unique_idx=`3561`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -1870,7 +1476,8 @@
 	]]
 </div>
     <div class="column"></div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -1885,7 +1492,7 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`3546`
+    &unique_idx=`3555`
     &layout_idx=`8`
 ]]
     </div>
@@ -1897,23 +1504,25 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`romanesco.twitter_consumer_key` &prefix=`cf_10_3563``
+            &then=`setPatternPlaceholders? &cbField=`romanesco.twitter_consumer_key` &prefix=`cf_10_3572``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`romanesco.twitter_consumer_key` &prefix=`cl_10_3563``
+            &then=`setPatternPlaceholders? &cbLayout=`romanesco.twitter_consumer_key` &prefix=`cl_10_3572``
         ]]]]
 
-        [[$cbLayoutPatternPreview:toPlaceholder=`preview_10_3563`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_10_3572`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`romanesco.twitter_consumer_key`
             &pattern_template=`patternLayoutElectronSystemSetting`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`10`
-            &unique_idx=`3563`
+            &unique_idx=`3572`
         ]]
         
         [[[[modifiedIf?
@@ -1931,7 +1540,7 @@
                     &pattern_template=`patternLayoutElectronSystemSetting`
                     &pattern_status=`green`
                     &idx=`10`
-                    &unique_idx=`3563`
+                    &unique_idx=`3572`
                 `
         ]]]]
 
@@ -1939,31 +1548,26 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_10_3563`
+            &then=`+preview_10_3572`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$richTextSegment?
-    &content=``
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`]]
-[[$accordionRowBasic?
+    &rows=`[[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -1971,27 +1575,22 @@
     &idx=`1`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[jsonToHTML? &json=`{
-    "key": "twitter_consumer_key",
-    "type": "textfield",
-    "area": "Social",
-    "value": ""
-}`]]</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.specifications_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "key": "twitter_consumer_key",
     "type": "textfield",
     "area": "Social",
     "value": ""
 }`]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -1999,41 +1598,23 @@
     &idx=`2`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.referring_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3560`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3561`
-	&layout_id=`12`
-	&layout_column=`col_1`
-	&layout_idx=`0`
-	&pattern_list=`referringChunks,referringTemplates`
-	&pattern_template=`patternLayoutElectronSystemSetting`
-	&pattern_name=`romanesco.twitter_consumer_key`
-	]]
-</div>
-    <div class="column"></div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.references_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3560`
+    &unique_idx=`3569`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3561`
+	&unique_idx=`3570`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -2043,7 +1624,8 @@
 	]]
 </div>
     <div class="column"></div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -2058,7 +1640,7 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`3555`
+    &unique_idx=`3564`
     &layout_idx=`9`
 ]]
     </div>
@@ -2070,23 +1652,25 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`romanesco.twitter_consumer_secret` &prefix=`cf_11_3572``
+            &then=`setPatternPlaceholders? &cbField=`romanesco.twitter_consumer_secret` &prefix=`cf_11_3581``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`romanesco.twitter_consumer_secret` &prefix=`cl_11_3572``
+            &then=`setPatternPlaceholders? &cbLayout=`romanesco.twitter_consumer_secret` &prefix=`cl_11_3581``
         ]]]]
 
-        [[$cbLayoutPatternPreview:toPlaceholder=`preview_11_3572`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_11_3581`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`romanesco.twitter_consumer_secret`
             &pattern_template=`patternLayoutElectronSystemSetting`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`11`
-            &unique_idx=`3572`
+            &unique_idx=`3581`
         ]]
         
         [[[[modifiedIf?
@@ -2104,7 +1688,7 @@
                     &pattern_template=`patternLayoutElectronSystemSetting`
                     &pattern_status=`green`
                     &idx=`11`
-                    &unique_idx=`3572`
+                    &unique_idx=`3581`
                 `
         ]]]]
 
@@ -2112,31 +1696,26 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_11_3572`
+            &then=`+preview_11_3581`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$richTextSegment?
-    &content=``
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`]]
-[[$accordionRowBasic?
+    &rows=`[[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -2144,27 +1723,22 @@
     &idx=`1`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[jsonToHTML? &json=`{
-    "key": "twitter_consumer_secret",
-    "type": "textfield",
-    "area": "Social",
-    "value": ""
-}`]]</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.specifications_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "key": "twitter_consumer_secret",
     "type": "textfield",
     "area": "Social",
     "value": ""
 }`]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -2172,41 +1746,23 @@
     &idx=`2`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.referring_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3569`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3570`
-	&layout_id=`12`
-	&layout_column=`col_1`
-	&layout_idx=`0`
-	&pattern_list=`referringChunks,referringTemplates`
-	&pattern_template=`patternLayoutElectronSystemSetting`
-	&pattern_name=`romanesco.twitter_consumer_secret`
-	]]
-</div>
-    <div class="column"></div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.references_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3569`
+    &unique_idx=`3578`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3570`
+	&unique_idx=`3579`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -2216,7 +1772,8 @@
 	]]
 </div>
     <div class="column"></div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -2231,7 +1788,7 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`3564`
+    &unique_idx=`3573`
     &layout_idx=`10`
 ]]
     </div>
@@ -2243,23 +1800,25 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`romanesco.twitter_access_token` &prefix=`cf_12_3581``
+            &then=`setPatternPlaceholders? &cbField=`romanesco.twitter_access_token` &prefix=`cf_12_3590``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`romanesco.twitter_access_token` &prefix=`cl_12_3581``
+            &then=`setPatternPlaceholders? &cbLayout=`romanesco.twitter_access_token` &prefix=`cl_12_3590``
         ]]]]
 
-        [[$cbLayoutPatternPreview:toPlaceholder=`preview_12_3581`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_12_3590`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`romanesco.twitter_access_token`
             &pattern_template=`patternLayoutElectronSystemSetting`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`12`
-            &unique_idx=`3581`
+            &unique_idx=`3590`
         ]]
         
         [[[[modifiedIf?
@@ -2277,7 +1836,7 @@
                     &pattern_template=`patternLayoutElectronSystemSetting`
                     &pattern_status=`green`
                     &idx=`12`
-                    &unique_idx=`3581`
+                    &unique_idx=`3590`
                 `
         ]]]]
 
@@ -2285,31 +1844,26 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_12_3581`
+            &then=`+preview_12_3590`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$richTextSegment?
-    &content=``
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`]]
-[[$accordionRowBasic?
+    &rows=`[[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -2317,27 +1871,22 @@
     &idx=`1`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[jsonToHTML? &json=`{
-    "key": "twitter_access_token",
-    "type": "textfield",
-    "area": "Social",
-    "value": ""
-}`]]</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.specifications_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "key": "twitter_access_token",
     "type": "textfield",
     "area": "Social",
     "value": ""
 }`]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -2345,41 +1894,23 @@
     &idx=`2`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.referring_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3578`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3579`
-	&layout_id=`12`
-	&layout_column=`col_1`
-	&layout_idx=`0`
-	&pattern_list=`referringChunks,referringTemplates`
-	&pattern_template=`patternLayoutElectronSystemSetting`
-	&pattern_name=`romanesco.twitter_access_token`
-	]]
-</div>
-    <div class="column"></div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.references_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3578`
+    &unique_idx=`3587`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3579`
+	&unique_idx=`3588`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -2389,7 +1920,8 @@
 	]]
 </div>
     <div class="column"></div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -2404,7 +1936,7 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`3573`
+    &unique_idx=`3582`
     &layout_idx=`11`
 ]]
     </div>
@@ -2416,23 +1948,25 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`romanesco.twitter_access_token_secret` &prefix=`cf_13_3590``
+            &then=`setPatternPlaceholders? &cbField=`romanesco.twitter_access_token_secret` &prefix=`cf_13_3599``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`romanesco.twitter_access_token_secret` &prefix=`cl_13_3590``
+            &then=`setPatternPlaceholders? &cbLayout=`romanesco.twitter_access_token_secret` &prefix=`cl_13_3599``
         ]]]]
 
-        [[$cbLayoutPatternPreview:toPlaceholder=`preview_13_3590`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_13_3599`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`romanesco.twitter_access_token_secret`
             &pattern_template=`patternLayoutElectronSystemSetting`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`13`
-            &unique_idx=`3590`
+            &unique_idx=`3599`
         ]]
         
         [[[[modifiedIf?
@@ -2450,7 +1984,7 @@
                     &pattern_template=`patternLayoutElectronSystemSetting`
                     &pattern_status=`green`
                     &idx=`13`
-                    &unique_idx=`3590`
+                    &unique_idx=`3599`
                 `
         ]]]]
 
@@ -2458,31 +1992,26 @@
             &subject=`patternLayoutElectronSystemSetting`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_13_3590`
+            &then=`+preview_13_3599`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$richTextSegment?
-    &content=``
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`]]
-[[$accordionRowBasic?
+    &rows=`[[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -2490,27 +2019,22 @@
     &idx=`1`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[jsonToHTML? &json=`{
-    "key": "twitter_access_token_secret",
-    "type": "textfield",
-    "area": "Social",
-    "value": ""
-}`]]</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.specifications_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "key": "twitter_access_token_secret",
     "type": "textfield",
     "area": "Social",
     "value": ""
 }`]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -2518,41 +2042,23 @@
     &idx=`2`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.referring_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3587`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3588`
-	&layout_id=`12`
-	&layout_column=`col_1`
-	&layout_idx=`0`
-	&pattern_list=`referringChunks,referringTemplates`
-	&pattern_template=`patternLayoutElectronSystemSetting`
-	&pattern_name=`romanesco.twitter_access_token_secret`
-	]]
-</div>
-    <div class="column"></div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.references_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3587`
+    &unique_idx=`3596`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3588`
+	&unique_idx=`3597`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -2562,7 +2068,8 @@
 	]]
 </div>
     <div class="column"></div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -2577,7 +2084,7 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`3582`
+    &unique_idx=`3591`
     &layout_idx=`12`
 ]]
     </div>

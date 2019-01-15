@@ -4,23 +4,25 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`header_title` &prefix=`cf_1_3632``
+            &then=`setPatternPlaceholders? &cbField=`header_title` &prefix=`cf_1_3641``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`header_title` &prefix=`cl_1_3632``
+            &then=`setPatternPlaceholders? &cbLayout=`header_title` &prefix=`cl_1_3641``
         ]]]]
 
-        [[$cbLayoutPatternPreview:toPlaceholder=`preview_1_3632`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_3641`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`header_title`
             &pattern_template=`patternLayoutElectronTV`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`1`
-            &unique_idx=`3632`
+            &unique_idx=`3641`
         ]]
         
         [[[[modifiedIf?
@@ -38,7 +40,7 @@
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
                     &idx=`1`
-                    &unique_idx=`3632`
+                    &unique_idx=`3641`
                 `
         ]]]]
 
@@ -46,31 +48,26 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_1_3632`
+            &then=`+preview_1_3641`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$richTextSegment?
-    &content=``
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`]]
-[[$accordionRowBasic?
+    &rows=`[[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -78,26 +75,14 @@
     &idx=`1`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[jsonToHTML? &json=`{
-    "caption": "Main title",
-    "name": "header_title",
-    "description": "This will be displayed in the header section below the main menu. The text will automatically be inherited on child pages, but can easily be overwritten by entering something new, or deleted.",
-    "type": "text",
-    "category": "Header",
-    "sortOrder": "1",
-    "defaultValue": "@INHERIT",
-    "templates": [
-        "@@templates_all"
-    ]
-}`]]</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.specifications_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "caption": "Main title",
     "name": "header_title",
@@ -110,7 +95,8 @@
         "@@templates_all"
     ]
 }`]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -118,57 +104,23 @@
     &idx=`2`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.assigned_templates]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3627`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3628`
-	&layout_id=`12`
-	&layout_column=`col_1`
-	&layout_idx=`0`
-	&pattern_list=`assignedTemplates`
-	&pattern_template=`patternLayoutElectronTV`
-	&pattern_name=`header_title`
-	]]
-</div>
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.referring_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3629`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3630`
-	&layout_id=`12`
-	&layout_column=`col_2`
-	&layout_idx=`0`
-	&pattern_list=`referringChunks,referringTemplates`
-	&pattern_template=`patternLayoutElectronTV`
-	&pattern_name=`header_title`
-	]]
-</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.references_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3627`
+    &unique_idx=`3636`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3628`
+	&unique_idx=`3637`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -181,11 +133,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3629`
+    &unique_idx=`3638`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3630`
+	&unique_idx=`3639`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -194,7 +146,8 @@
 	&pattern_name=`header_title`
 	]]
 </div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -209,7 +162,7 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`3622`
+    &unique_idx=`3631`
     &layout_idx=`0`
 ]]
     </div>
@@ -221,23 +174,25 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`header_subtitle` &prefix=`cf_2_3643``
+            &then=`setPatternPlaceholders? &cbField=`header_subtitle` &prefix=`cf_2_3652``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`header_subtitle` &prefix=`cl_2_3643``
+            &then=`setPatternPlaceholders? &cbLayout=`header_subtitle` &prefix=`cl_2_3652``
         ]]]]
 
-        [[$cbLayoutPatternPreview:toPlaceholder=`preview_2_3643`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_3652`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`header_subtitle`
             &pattern_template=`patternLayoutElectronTV`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`2`
-            &unique_idx=`3643`
+            &unique_idx=`3652`
         ]]
         
         [[[[modifiedIf?
@@ -255,7 +210,7 @@
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
                     &idx=`2`
-                    &unique_idx=`3643`
+                    &unique_idx=`3652`
                 `
         ]]]]
 
@@ -263,31 +218,26 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_2_3643`
+            &then=`+preview_2_3652`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$richTextSegment?
-    &content=``
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`]]
-[[$accordionRowBasic?
+    &rows=`[[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -295,26 +245,14 @@
     &idx=`1`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[jsonToHTML? &json=`{
-    "caption": "Subtitle",
-    "name": "header_subtitle",
-    "description": "This will be displayed under the main title. Will also be inherited on child pages by default.",
-    "type": "textarea",
-    "category": "Header",
-    "sortOrder": "2",
-    "defaultValue": "@INHERIT",
-    "templates": [
-        "@@templates_all"
-    ]
-}`]]</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.specifications_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "caption": "Subtitle",
     "name": "header_subtitle",
@@ -327,7 +265,8 @@
         "@@templates_all"
     ]
 }`]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -335,57 +274,23 @@
     &idx=`2`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.assigned_templates]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3638`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3639`
-	&layout_id=`12`
-	&layout_column=`col_1`
-	&layout_idx=`0`
-	&pattern_list=`assignedTemplates`
-	&pattern_template=`patternLayoutElectronTV`
-	&pattern_name=`header_subtitle`
-	]]
-</div>
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.referring_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3640`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3641`
-	&layout_id=`12`
-	&layout_column=`col_2`
-	&layout_idx=`0`
-	&pattern_list=`referringChunks,referringTemplates`
-	&pattern_template=`patternLayoutElectronTV`
-	&pattern_name=`header_subtitle`
-	]]
-</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.references_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3638`
+    &unique_idx=`3647`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3639`
+	&unique_idx=`3648`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -398,11 +303,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3640`
+    &unique_idx=`3649`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3641`
+	&unique_idx=`3650`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -411,7 +316,8 @@
 	&pattern_name=`header_subtitle`
 	]]
 </div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -426,7 +332,7 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`3633`
+    &unique_idx=`3642`
     &layout_idx=`1`
 ]]
     </div>
@@ -438,23 +344,25 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`header_background_img` &prefix=`cf_3_3654``
+            &then=`setPatternPlaceholders? &cbField=`header_background_img` &prefix=`cf_3_3663``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`header_background_img` &prefix=`cl_3_3654``
+            &then=`setPatternPlaceholders? &cbLayout=`header_background_img` &prefix=`cl_3_3663``
         ]]]]
 
-        [[$cbLayoutPatternPreview:toPlaceholder=`preview_3_3654`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_3663`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`header_background_img`
             &pattern_template=`patternLayoutElectronTV`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`3`
-            &unique_idx=`3654`
+            &unique_idx=`3663`
         ]]
         
         [[[[modifiedIf?
@@ -472,7 +380,7 @@
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
                     &idx=`3`
-                    &unique_idx=`3654`
+                    &unique_idx=`3663`
                 `
         ]]]]
 
@@ -480,31 +388,26 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_3_3654`
+            &then=`+preview_3_3663`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$richTextSegment?
-    &content=``
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`]]
-[[$accordionRowBasic?
+    &rows=`[[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -512,26 +415,14 @@
     &idx=`1`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[jsonToHTML? &json=`{
-    "caption": "Background image",
-    "name": "header_background_img",
-    "description": "Use an overview image of this resource as background. This will override the Background setting above, and will NOT be inherited on child pages.",
-    "type": "option",
-    "category": "Header",
-    "sortOrder": "11",
-    "inputOptionValues": "Use the Panorama image==background_img_pano||Use the Wide image==background_img_wide",
-    "templates": [
-        "@@templates_all"
-    ]
-}`]]</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.specifications_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "caption": "Background image",
     "name": "header_background_img",
@@ -544,7 +435,8 @@
         "@@templates_all"
     ]
 }`]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -552,57 +444,23 @@
     &idx=`2`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.assigned_templates]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3649`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3650`
-	&layout_id=`12`
-	&layout_column=`col_1`
-	&layout_idx=`0`
-	&pattern_list=`assignedTemplates`
-	&pattern_template=`patternLayoutElectronTV`
-	&pattern_name=`header_background_img`
-	]]
-</div>
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.referring_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3651`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3652`
-	&layout_id=`12`
-	&layout_column=`col_2`
-	&layout_idx=`0`
-	&pattern_list=`referringChunks,referringTemplates`
-	&pattern_template=`patternLayoutElectronTV`
-	&pattern_name=`header_background_img`
-	]]
-</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.references_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3649`
+    &unique_idx=`3658`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3650`
+	&unique_idx=`3659`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -615,11 +473,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3651`
+    &unique_idx=`3660`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3652`
+	&unique_idx=`3661`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -628,7 +486,8 @@
 	&pattern_name=`header_background_img`
 	]]
 </div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -643,7 +502,7 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`3644`
+    &unique_idx=`3653`
     &layout_idx=`2`
 ]]
     </div>
@@ -655,23 +514,25 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`header_inheritance` &prefix=`cf_4_3665``
+            &then=`setPatternPlaceholders? &cbField=`header_inheritance` &prefix=`cf_4_3674``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`header_inheritance` &prefix=`cl_4_3665``
+            &then=`setPatternPlaceholders? &cbLayout=`header_inheritance` &prefix=`cl_4_3674``
         ]]]]
 
-        [[$cbLayoutPatternPreview:toPlaceholder=`preview_4_3665`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_4_3674`?
             &preview=``
             &code=``
             &sidebar_width=`five`
             &pattern_name=`header_inheritance`
             &pattern_template=`patternLayoutElectronTV`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`4`
-            &unique_idx=`3665`
+            &unique_idx=`3674`
         ]]
         
         [[[[modifiedIf?
@@ -689,7 +550,7 @@
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
                     &idx=`4`
-                    &unique_idx=`3665`
+                    &unique_idx=`3674`
                 `
         ]]]]
 
@@ -697,31 +558,26 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_4_3665`
+            &then=`+preview_4_3674`
         ]]]]
 
         [[$accordionOuter?
-    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$richTextSegment?
-    &content=``
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`]]
-[[$accordionRowBasic?
+    &rows=`[[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -729,27 +585,14 @@
     &idx=`1`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[jsonToHTML? &json=`{
-    "caption": "Inheritance",
-    "name": "header_inheritance",
-    "description": "This setting controls whether values are inherited or not on all child pages of this resource.",
-    "type": "checkbox",
-    "category": "Header",
-    "sortOrder": "99",
-    "defaultValue": "@INHERIT inherit_titles||inherit_background",
-    "inputOptionValues": "Inherit titles==inherit_titles||Inherit background==inherit_background||Inherit CTA==inherit_cta",
-    "templates": [
-        "@@templates_all"
-    ]
-}`]]</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.specifications_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[jsonToHTML? &json=`{
     "caption": "Inheritance",
     "name": "header_inheritance",
@@ -763,7 +606,8 @@
         "@@templates_all"
     ]
 }`]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -771,57 +615,23 @@
     &idx=`2`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.assigned_templates]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3660`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3661`
-	&layout_id=`12`
-	&layout_column=`col_1`
-	&layout_idx=`0`
-	&pattern_list=`assignedTemplates`
-	&pattern_template=`patternLayoutElectronTV`
-	&pattern_name=`header_inheritance`
-	]]
-</div>
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.referring_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`3662`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`3663`
-	&layout_id=`12`
-	&layout_column=`col_2`
-	&layout_idx=`0`
-	&pattern_list=`referringChunks,referringTemplates`
-	&pattern_template=`patternLayoutElectronTV`
-	&pattern_name=`header_inheritance`
-	]]
-</div>
-</div>`]]
 [[$accordionRowBasic?
     &heading=`[[%romanesco.patterns.references_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3660`
+    &unique_idx=`3669`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3661`
+	&unique_idx=`3670`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -834,11 +644,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3662`
+    &unique_idx=`3671`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3663`
+	&unique_idx=`3672`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -847,7 +657,8 @@
 	&pattern_name=`header_inheritance`
 	]]
 </div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -862,7 +673,7 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`3655`
+    &unique_idx=`3664`
     &layout_idx=`3`
 ]]
     </div>
