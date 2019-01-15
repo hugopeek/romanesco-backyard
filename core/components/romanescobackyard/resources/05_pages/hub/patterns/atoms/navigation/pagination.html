@@ -13,7 +13,7 @@
             &then=`setPatternPlaceholders? &cbLayout=`paginationFluid` &prefix=`cl_1_2530``
         ]]]]
 
-        [[$cbLayoutPatternPreview:toPlaceholder=`preview_1_2530`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_2530`?
             &preview=`[[$chunkName?
     &property=`value`
 ]]`
@@ -29,6 +29,8 @@
             &sidebar_width=`five`
             &pattern_name=`paginationFluid`
             &pattern_template=`patternLayoutAtom`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
             &idx=`1`
             &unique_idx=`2530`
         ]]
@@ -60,21 +62,14 @@
         ]]]]
 
         [[$tabsOuter?
-    &rows=`[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$richTextSegment?
-    &content=`<p>[[getElementDescription? &name=`paginationFluid` &type=`patternLayoutAtom`]]
-</p>`
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`]]
-[[$tabsRowBasic?
+    &rows=`[[$tabsRowBasic?
     &heading=`[[%romanesco.patterns.purpose_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=`<p>[[getElementDescription? &name=`paginationFluid` &type=`patternLayoutAtom`]]
 </p>`
@@ -82,7 +77,8 @@
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -90,27 +86,22 @@
     &idx=`1`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$richTextSegment?
-    &content=``
-    &segment_type=``
-	&padding=`regular`
-    &alignment=``
-]]</div>
-</div>`]]
 [[$tabsRowBasic?
     &heading=`[[%romanesco.patterns.usage_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`
@@ -118,48 +109,14 @@
     &idx=`2`
 ]]
 
-[[-$flexibleRowInnerWrapper:toPlaceholder=`content_wrapped`? &content=`<div class=" row">
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.included_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`2525`
-]]
-
-[[$includedPatternsOuter? 
-	&unique_idx=`2526`
-	&layout_id=`12`
-	&layout_column=`col_1`
-	&layout_idx=`0`
-	&pattern_list=`includedChunks,includedSnippets,includedTVs`
-	&pattern_template=`patternLayoutAtom`
-	&pattern_name=`paginationFluid`
-	]]
-</div>
-    <div class="column">[[$headingBasic?
-    &value=`[[%romanesco.patterns.referring_patterns]]`
-    &level=`h5`
-    &alignment=``
-    &unique_idx=`2527`
-]]
-
-[[$referringPatternsOuter? 
-	&unique_idx=`2528`
-	&layout_id=`12`
-	&layout_column=`col_2`
-	&layout_idx=`0`
-	&pattern_list=`referringChunks,referringSnippets,referringTemplates`
-	&pattern_template=`patternLayoutAtom`
-	&pattern_name=`paginationFluid`
-	]]
-</div>
-</div>`]]
 [[$tabsRowBasic?
     &heading=`[[%romanesco.patterns.references_title]]`
     &heading_level=`h4`
     &heading_subtitle=`[[+heading_subtitle]]`
     &heading_icon=`[[+heading_icon]]`
-    &content=`[[$flexibleRowInnerWrapper? &content=`<div class=" row">
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
     <div class="column">[[$headingBasic?
     &value=`[[%romanesco.patterns.included_patterns]]`
     &level=`h5`
@@ -194,7 +151,8 @@
 	&pattern_name=`paginationFluid`
 	]]
 </div>
-</div>`]]`
+</div>
+    </div>`
     &padding=`padded`
     &tab_type=`regular`
     &icon_position=`left`

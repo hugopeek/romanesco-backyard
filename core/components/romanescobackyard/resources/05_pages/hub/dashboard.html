@@ -2,25 +2,28 @@
     <div class="ui  container">
         <div class="ui two column stackable doubling relaxed   grid">
             <div class="row">
-                <div class="column"><p>
-    Logged in as: [[!+modx.user.id:userinfo=`username`]] (code [[!+modx.user.id:isloggedin]])
-</p>
-[[!generateStaticFile? &file=`[[++base_path]]tests/backstop_hub.json` &id=`184`]]
+                <div class="column">[[$headingBasic?
+    &value=`Project timeline<br>`
+    &level=`h3`
+    &alignment=``
+    &unique_idx=`1`
+]]
+
 [[$projectHubOuter]]</div>
                 <div class="column">[[$headingBasic?
     &value=`Latest pattern library additions<br>`
     &level=`h3`
     &alignment=``
-    &unique_idx=`20`
+    &unique_idx=`3`
 ]]
 
 <p>
 [[filterLine?
-    &file=`[[++romanesco.core_path]]docs/changelog.txt`
+    &file=`[[++core_path]]components/romanescobackyard/docs/changelog.txt`
     &searchString=`Add `
 ]]
 </p>
-<p><a href="[[++romanesco.core_path]]docs/changelog.txt">See full changelog</a></p>
+<p><a href="https://github.com/hugopeek/romanesco-patterns/blob/master/core/components/romanesco/docs/changelog.txt" target="_blank">See full changelog</a></p>
 </div>
             </div>
         </div>

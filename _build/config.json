@@ -3,7 +3,7 @@
     "lowCaseName": "romanescobackyard",
     "description": "The Backyard is a place inside a Romanesco installation where multiple things come to life for the first time. It is a curated, centrally maintained collection of resources and translations. It functions as documentation, as living example, as front-end pattern library / style guide and as a playground for trying out new things.",
     "author": "Hugo Peek",
-    "version": "0.7.0",
+    "version": "0.7.1",
     "package": {
         "elements": {
             "categories": [
@@ -15,12 +15,12 @@
         "menus": [
             {
                 "text": "Tool Shed",
-                "description": "Manage and customize your Romanesco project",
+                "description": "Settings and information to help you manager your project",
                 "action": "index",
                 "namespace": "migx",
                 "parent": "Manage",
                 "icon": "",
-                "menuIndex": 1,
+                "menuIndex": 2,
                 "params": "&configs=global_input_option_groups:romanescobackyard||status_issues:romanescobackyard||status_improvements:romanescobackyard||content_related:romanescobackyard||content_repurpose:romanescobackyard",
                 "handler": ""
             }
@@ -38,6 +38,7 @@
                 "properties": "05_pages/hub/backyard/examples.json",
                 "context_key": "hub",
                 "content_type": "html",
+                "link_attributes": "rel=\"category\"",
                 "template": "BasicOverview",
                 "menuindex": "1",
                 "published": "1",
@@ -64,6 +65,7 @@
                 "properties": "05_pages/hub/backyard/tutorials.json",
                 "context_key": "hub",
                 "content_type": "html",
+                "link_attributes": "rel=\"category\"",
                 "template": "BasicOverview",
                 "menuindex": "1",
                 "published": "1",
@@ -90,6 +92,7 @@
                 "properties": "05_pages/hub/backyard/test-cases.json",
                 "context_key": "hub",
                 "content_type": "html",
+                "link_attributes": "rel=\"category\"",
                 "template": "BasicOverview",
                 "menuindex": "1",
                 "published": "1",
@@ -199,6 +202,7 @@
             },
             {
                 "pagetitle": "Status Grid",
+                "longtitle": "Keep an eye on the condition of all your pages",
                 "alias": "status",
                 "menutitle": "Status",
                 "file": "05_pages/hub/status.html",
@@ -221,6 +225,7 @@
                 "properties": "05_pages/hub/patterns/electrons.json",
                 "context_key": "hub",
                 "content_type": "html",
+                "link_attributes": "rel=\"category\"",
                 "template": "BasicOverview",
                 "menuindex": "0",
                 "published": "1",
@@ -257,6 +262,7 @@
                 "properties": "05_pages/hub/patterns/atoms.json",
                 "context_key": "hub",
                 "content_type": "html",
+                "link_attributes": "rel=\"category\"",
                 "template": "BasicOverview",
                 "menuindex": "1",
                 "published": "1",
@@ -293,6 +299,7 @@
                 "properties": "05_pages/hub/patterns/molecules.json",
                 "context_key": "hub",
                 "content_type": "html",
+                "link_attributes": "rel=\"category\"",
                 "template": "BasicOverview",
                 "menuindex": "2",
                 "published": "1",
@@ -329,6 +336,7 @@
                 "properties": "05_pages/hub/patterns/organisms.json",
                 "context_key": "hub",
                 "content_type": "html",
+                "link_attributes": "rel=\"category\"",
                 "template": "BasicOverview",
                 "menuindex": "3",
                 "published": "1",
@@ -365,6 +373,7 @@
                 "properties": "05_pages/hub/patterns/templates.json",
                 "context_key": "hub",
                 "content_type": "html",
+                "link_attributes": "rel=\"category\"",
                 "template": "BasicOverview",
                 "menuindex": "4",
                 "published": "1",
@@ -401,6 +410,7 @@
                 "properties": "05_pages/hub/patterns/pages.json",
                 "context_key": "hub",
                 "content_type": "html",
+                "link_attributes": "rel=\"category\"",
                 "template": "BasicOverview",
                 "menuindex": "5",
                 "published": "1",
@@ -437,6 +447,7 @@
                 "properties": "05_pages/hub/patterns/formulas.json",
                 "context_key": "hub",
                 "content_type": "html",
+                "link_attributes": "rel=\"category\"",
                 "template": "BasicOverview",
                 "menuindex": "6",
                 "published": "1",
@@ -473,6 +484,7 @@
                 "properties": "05_pages/hub/patterns/computations.json",
                 "context_key": "hub",
                 "content_type": "html",
+                "link_attributes": "rel=\"category\"",
                 "template": "BasicOverview",
                 "menuindex": "7",
                 "published": "1",
@@ -509,6 +521,7 @@
                 "properties": "05_pages/hub/patterns/bosons.json",
                 "context_key": "hub",
                 "content_type": "html",
+                "link_attributes": "rel=\"category\"",
                 "template": "BasicOverview",
                 "menuindex": "8",
                 "published": "1",
@@ -560,6 +573,32 @@
                 "searchable": "0"
             },
             {
+                "pagetitle": "Foundation",
+                "longtitle": "All visuals rely on these elementary styling rules",
+                "description": "Focus on: the theming variables, and how they apply to elements like backgrounds, buttons, fonts, etc.",
+                "introtext": "",
+                "alias": "foundation",
+                "menutitle": "",
+                "parent": "Examples",
+                "file": "05_pages/hub/backyard/examples/foundation.html",
+                "properties": "05_pages/hub/backyard/examples/foundation.json",
+                "context_key": "hub",
+                "content_type": "html",
+                "template": "BasicOverview",
+                "menuindex": 1,
+                "published": "1",
+                "tvs": [
+                    {
+                        "name": "overview_icon_svg",
+                        "value": "romanesco/foundation.svg"
+                    },
+                    {
+                        "name": "overview_icon_font",
+                        "value": "paint brush icon"
+                    }
+                ]
+            },
+            {
                 "pagetitle": "Information",
                 "longtitle": "Convey your message deliberately and with character",
                 "description": "Focus on: content hierarchy, structuring large amounts of information, tone of voice, connecting to other sources, etc.",
@@ -572,7 +611,7 @@
                 "context_key": "hub",
                 "content_type": "html",
                 "template": "BasicOverview",
-                "menuindex": "1",
+                "menuindex": 2,
                 "published": "1",
                 "tvs": [
                     {
@@ -598,7 +637,7 @@
                 "context_key": "hub",
                 "content_type": "html",
                 "template": "BasicOverview",
-                "menuindex": "2",
+                "menuindex": 3,
                 "published": "1",
                 "tvs": [
                     {
@@ -624,7 +663,7 @@
                 "context_key": "hub",
                 "content_type": "html",
                 "template": "BasicOverview",
-                "menuindex": "3",
+                "menuindex": 4,
                 "published": "1",
                 "tvs": [
                     {
@@ -650,7 +689,7 @@
                 "context_key": "hub",
                 "content_type": "html",
                 "template": "BasicOverview",
-                "menuindex": "4",
+                "menuindex": 5,
                 "published": "1",
                 "tvs": [
                     {
@@ -676,7 +715,7 @@
                 "context_key": "hub",
                 "content_type": "html",
                 "template": "BasicOverview",
-                "menuindex": "5",
+                "menuindex": 6,
                 "published": "1",
                 "tvs": [
                     {
@@ -702,7 +741,7 @@
                 "context_key": "hub",
                 "content_type": "html",
                 "template": "BasicOverview",
-                "menuindex": "6",
+                "menuindex": 7,
                 "published": "1",
                 "tvs": [
                     {
@@ -711,7 +750,7 @@
                     },
                     {
                         "name": "overview_icon_font",
-                        "value": "paint brush icon"
+                        "value": "camera icon"
                     }
                 ]
             },
@@ -728,7 +767,7 @@
                 "context_key": "hub",
                 "content_type": "html",
                 "template": "BasicOverview",
-                "menuindex": "7",
+                "menuindex": 8,
                 "published": "1",
                 "tvs": [
                     {
@@ -754,7 +793,7 @@
                 "context_key": "hub",
                 "content_type": "html",
                 "template": "BasicOverview",
-                "menuindex": "8",
+                "menuindex": 9,
                 "published": "1",
                 "tvs": [
                     {
@@ -780,7 +819,7 @@
                 "context_key": "hub",
                 "content_type": "html",
                 "template": "BasicOverview",
-                "menuindex": "9",
+                "menuindex": 10,
                 "published": "1",
                 "tvs": [
                     {
@@ -806,7 +845,7 @@
                 "context_key": "hub",
                 "content_type": "html",
                 "template": "BasicOverview",
-                "menuindex": "10",
+                "menuindex": 11,
                 "published": "1",
                 "tvs": [
                     {
@@ -815,7 +854,7 @@
                     },
                     {
                         "name": "overview_icon_font",
-                        "value": "maximize icon"
+                        "value": "expand arrows alternate icon"
                     }
                 ]
             },
@@ -832,7 +871,7 @@
                 "context_key": "hub",
                 "content_type": "html",
                 "template": "BasicOverview",
-                "menuindex": "11",
+                "menuindex": 12,
                 "published": "1",
                 "tvs": [
                     {
@@ -848,7 +887,7 @@
             {
                 "pagetitle": "Contact*",
                 "longtitle": "Basic contact form",
-                "description": "NB: Do not edit this form directly! It will be overwritten on the next pattern library update. Duplicate instead.",
+                "description": "NB: Do not edit this form directly! It will be overwritten on the next Backyard update. Duplicate instead.",
                 "introtext": "",
                 "alias": "contact*",
                 "parent": "Forms",
@@ -857,6 +896,21 @@
                 "context_key": "global",
                 "content_type": "html",
                 "template": "fbForm",
+                "published": "0",
+                "searchable": "0"
+            },
+            {
+                "pagetitle": "Registration*",
+                "longtitle": "Basic registration form",
+                "description": "NB: Do not edit this form directly! It will be overwritten on the next Backyard update. Duplicate instead.",
+                "introtext": "",
+                "alias": "registration*",
+                "parent": "Forms",
+                "file": "05_pages/global/forms/registration.html",
+                "properties": "05_pages/global/forms/registration.json",
+                "context_key": "global",
+                "content_type": "html",
+                "template": "fbRegister",
                 "published": "0",
                 "searchable": "0"
             },
@@ -1955,6 +2009,21 @@
                 "content_type": "html",
                 "template": "BasicDetail",
                 "published": "1"
+            },
+            {
+                "pagetitle": "Kanban board",
+                "longtitle": "Keep track of how your pages are progressing",
+                "description": "",
+                "introtext": "",
+                "alias": "kanban",
+                "parent": "Status Grid",
+                "file": "05_pages/hub/status/kanban.html",
+                "properties": "05_pages/hub/status/kanban.json",
+                "context_key": "hub",
+                "content_type": "html",
+                "template": "BasicOverview",
+                "published": "1",
+                "searchable": "0"
             }
         ]
     },
