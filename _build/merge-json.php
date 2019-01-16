@@ -9,7 +9,7 @@ use Seld\JsonLint\JsonParser;
 $parser = new JsonParser();
 
 // Get all JSON files from src folder
-$sources = glob("{src/*.json,src/*/*.json,src/*/*/*.json}", GLOB_BRACE);
+$sources = glob("{src/*.json,src/*/*.json,src/*/*/*.json,src/*/*/*/*.json}", GLOB_BRACE);
 
 // Get template lists for linking TV assignments in bulk
 $templateList = glob("{src_snippets/*}", GLOB_BRACE);
