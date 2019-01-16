@@ -85,15 +85,12 @@
     &content=`
     <div class="ui stackable doubling  [[+divider]] equal width grid">
         <div class=" row">
-    <div class="column">[[jsonToHTML? &json=`{
-    "caption": "Person",
-    "name": "person_id",
-    "description": "Connect a MODX user to this item. Only active users will be shown.",
-    "type": "listbox",
-    "inputOptionValues": "@SELECT '''' AS username, '''' AS id UNION ALL ( SELECT username, id FROM `modx_users` WHERE `active` = 1 ORDER BY username )",
-    "category": "Connections",
-    "sortOrder": "1"
-}`]]</div>
+    <div class="column">[[jsonToHTML? &json=`[[tvToJSON?
+    &tv=`person_id`
+    &showName=`1`
+    &showSource=`0`
+    &optionsDelimiter=`0`
+]]`]]</div>
 </div>
     </div>`
     &padding=`padded`
@@ -253,18 +250,12 @@
     &content=`
     <div class="ui stackable doubling  [[+divider]] equal width grid">
         <div class=" row">
-    <div class="column">[[jsonToHTML? &json=`{
-    "caption": "Organization",
-    "name": "organization_id",
-    "description": "Connect the related organization(s). If this list is empty, you need to create an Organizations container first and register its ID under System Settings.",
-    "type": "listbox-multiple",
-    "inputOptionValues": "@CHUNK tvSelectClient",
-    "category": "Connections",
-    "sortOrder": "2",
-    "templates": [
-        "@@templates_portfolio"
-    ]
-}`]]</div>
+    <div class="column">[[jsonToHTML? &json=`[[tvToJSON?
+    &tv=`organization_id`
+    &showName=`1`
+    &showSource=`0`
+    &optionsDelimiter=`0`
+]]`]]</div>
 </div>
     </div>`
     &padding=`padded`
@@ -437,18 +428,12 @@
     &content=`
     <div class="ui stackable doubling  [[+divider]] equal width grid">
         <div class=" row">
-    <div class="column">[[jsonToHTML? &json=`{
-    "caption": "Contributors",
-    "name": "contributors_id",
-    "description": "Link the team members that worked on this item. You can only select persons that are listed on your Team page, so if you want to add an external team member, you should add him or her to your team page first (can be unpublished).",
-    "type": "listbox-multiple",
-    "inputOptionValues": "@CHUNK tvSelectTeam",
-    "category": "Connections",
-    "sortOrder": "3",
-    "templates": [
-        "@@templates_portfolio"
-    ]
-}`]]</div>
+    <div class="column">[[jsonToHTML? &json=`[[tvToJSON?
+    &tv=`contributors_id`
+    &showName=`1`
+    &showSource=`0`
+    &optionsDelimiter=`0`
+]]`]]</div>
 </div>
     </div>`
     &padding=`padded`

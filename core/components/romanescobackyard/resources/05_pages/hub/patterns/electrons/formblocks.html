@@ -1,12 +1,12 @@
 <div  class="ui vertical stripe segment white">
     <div class="ui   container">
         [[$overviewOuter? 
-	&unique_idx=`3906`
+	&unique_idx=`1`
 	&layout_id=`1`
 	&layout_column=`main`
 	&layout_idx=`0`
-	&row_tpl=`overviewRowBasicCard`
-	&cols=`two`
+	&row_tpl=`overviewRowBasicLinkCard`
+	&cols=`three`
 	&parent=`[[*id]]`
 	&title_field=`menutitle`
 	&title_hierarchy=`h3`
@@ -15,8 +15,8 @@
 	&show_hidden=`0`
 	&sortby=`menuindex`
 	&pagination=`0`
-	&show_subtitle=`0`
-	&show_introtext=`1`
+	&show_subtitle=`1`
+	&show_introtext=`0`
 	&link_text=`Learn more`
 	&img_type=`[[$cbSettingImageType]]`
 	&icon_type=`svg`
@@ -27,22 +27,39 @@
     </div>
 </div>
 
+<div  class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[$headingBasicAnchor?
+    &value=`Settings - Email<br>`
+    &level=`h2`
+    &alignment=``
+    &unique_idx=`3`
+]]
+
+[[$dividerBasic?
+    &divider_text=``
+    &divider_section=`0`
+    &divider_hidden=`0`
+]]
+    </div>
+</div>
+
 <div class="ui vertical stripe pattern segment white">
     <div class="ui   container">
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fb_email_to` &prefix=`cf_2_3918``
+            &then=`setPatternPlaceholders? &cbField=`fb_email_to` &prefix=`cf_3_16``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fb_email_to` &prefix=`cl_2_3918``
+            &then=`setPatternPlaceholders? &cbLayout=`fb_email_to` &prefix=`cl_3_16``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_2_3918`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_16`?
             &preview=``
             &code=``
             &sidebar_width=`five`
@@ -50,8 +67,8 @@
             &pattern_template=`patternLayoutElectronTV`
             &raw_tags=`[[+raw_tags]]`
             &rendered_tags=`[[+rendered_tags]]`
-            &idx=`2`
-            &unique_idx=`3918`
+            &idx=`3`
+            &unique_idx=`16`
         ]]
         
         [[[[modifiedIf?
@@ -68,8 +85,8 @@
                     &pattern_name=`fb_email_to`
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
-                    &idx=`2`
-                    &unique_idx=`3918`
+                    &idx=`3`
+                    &unique_idx=`16`
                 `
         ]]]]
 
@@ -77,7 +94,7 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_2_3918`
+            &then=`+preview_3_16`
         ]]]]
 
         [[$accordionOuter?
@@ -143,11 +160,11 @@
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3913`
+    &unique_idx=`11`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3914`
+	&unique_idx=`12`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -160,11 +177,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3915`
+    &unique_idx=`13`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3916`
+	&unique_idx=`14`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -189,8 +206,8 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`3908`
-    &layout_idx=`1`
+    &unique_idx=`6`
+    &layout_idx=`2`
 ]]
     </div>
 </div>
@@ -201,16 +218,16 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fb_email_cc` &prefix=`cf_3_3929``
+            &then=`setPatternPlaceholders? &cbField=`fb_email_cc` &prefix=`cf_4_27``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fb_email_cc` &prefix=`cl_3_3929``
+            &then=`setPatternPlaceholders? &cbLayout=`fb_email_cc` &prefix=`cl_4_27``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_3_3929`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_4_27`?
             &preview=``
             &code=``
             &sidebar_width=`five`
@@ -218,8 +235,8 @@
             &pattern_template=`patternLayoutElectronTV`
             &raw_tags=`[[+raw_tags]]`
             &rendered_tags=`[[+rendered_tags]]`
-            &idx=`3`
-            &unique_idx=`3929`
+            &idx=`4`
+            &unique_idx=`27`
         ]]
         
         [[[[modifiedIf?
@@ -236,8 +253,8 @@
                     &pattern_name=`fb_email_cc`
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
-                    &idx=`3`
-                    &unique_idx=`3929`
+                    &idx=`4`
+                    &unique_idx=`27`
                 `
         ]]]]
 
@@ -245,7 +262,7 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_3_3929`
+            &then=`+preview_4_27`
         ]]]]
 
         [[$accordionOuter?
@@ -310,11 +327,11 @@
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3924`
+    &unique_idx=`22`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3925`
+	&unique_idx=`23`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -327,11 +344,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3926`
+    &unique_idx=`24`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3927`
+	&unique_idx=`25`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -356,8 +373,8 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`3919`
-    &layout_idx=`2`
+    &unique_idx=`17`
+    &layout_idx=`3`
 ]]
     </div>
 </div>
@@ -368,16 +385,16 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fb_email_bcc` &prefix=`cf_4_3940``
+            &then=`setPatternPlaceholders? &cbField=`fb_email_bcc` &prefix=`cf_5_38``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fb_email_bcc` &prefix=`cl_4_3940``
+            &then=`setPatternPlaceholders? &cbLayout=`fb_email_bcc` &prefix=`cl_5_38``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_4_3940`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_5_38`?
             &preview=``
             &code=``
             &sidebar_width=`five`
@@ -385,8 +402,8 @@
             &pattern_template=`patternLayoutElectronTV`
             &raw_tags=`[[+raw_tags]]`
             &rendered_tags=`[[+rendered_tags]]`
-            &idx=`4`
-            &unique_idx=`3940`
+            &idx=`5`
+            &unique_idx=`38`
         ]]
         
         [[[[modifiedIf?
@@ -403,8 +420,8 @@
                     &pattern_name=`fb_email_bcc`
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
-                    &idx=`4`
-                    &unique_idx=`3940`
+                    &idx=`5`
+                    &unique_idx=`38`
                 `
         ]]]]
 
@@ -412,7 +429,7 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_4_3940`
+            &then=`+preview_5_38`
         ]]]]
 
         [[$accordionOuter?
@@ -479,11 +496,11 @@
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3935`
+    &unique_idx=`33`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3936`
+	&unique_idx=`34`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -496,11 +513,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3937`
+    &unique_idx=`35`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3938`
+	&unique_idx=`36`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -525,8 +542,8 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`3930`
-    &layout_idx=`3`
+    &unique_idx=`28`
+    &layout_idx=`4`
 ]]
     </div>
 </div>
@@ -537,16 +554,16 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fb_email_from` &prefix=`cf_5_3951``
+            &then=`setPatternPlaceholders? &cbField=`fb_email_from` &prefix=`cf_6_49``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fb_email_from` &prefix=`cl_5_3951``
+            &then=`setPatternPlaceholders? &cbLayout=`fb_email_from` &prefix=`cl_6_49``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_5_3951`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_6_49`?
             &preview=``
             &code=``
             &sidebar_width=`five`
@@ -554,8 +571,8 @@
             &pattern_template=`patternLayoutElectronTV`
             &raw_tags=`[[+raw_tags]]`
             &rendered_tags=`[[+rendered_tags]]`
-            &idx=`5`
-            &unique_idx=`3951`
+            &idx=`6`
+            &unique_idx=`49`
         ]]
         
         [[[[modifiedIf?
@@ -572,8 +589,8 @@
                     &pattern_name=`fb_email_from`
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
-                    &idx=`5`
-                    &unique_idx=`3951`
+                    &idx=`6`
+                    &unique_idx=`49`
                 `
         ]]]]
 
@@ -581,7 +598,7 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_5_3951`
+            &then=`+preview_6_49`
         ]]]]
 
         [[$accordionOuter?
@@ -646,11 +663,11 @@
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3946`
+    &unique_idx=`44`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3947`
+	&unique_idx=`45`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -663,11 +680,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3948`
+    &unique_idx=`46`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3949`
+	&unique_idx=`47`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -692,8 +709,8 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`3941`
-    &layout_idx=`4`
+    &unique_idx=`39`
+    &layout_idx=`5`
 ]]
     </div>
 </div>
@@ -704,16 +721,16 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fb_email_from_name` &prefix=`cf_6_3962``
+            &then=`setPatternPlaceholders? &cbField=`fb_email_from_name` &prefix=`cf_7_60``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fb_email_from_name` &prefix=`cl_6_3962``
+            &then=`setPatternPlaceholders? &cbLayout=`fb_email_from_name` &prefix=`cl_7_60``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_6_3962`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_7_60`?
             &preview=``
             &code=``
             &sidebar_width=`five`
@@ -721,8 +738,8 @@
             &pattern_template=`patternLayoutElectronTV`
             &raw_tags=`[[+raw_tags]]`
             &rendered_tags=`[[+rendered_tags]]`
-            &idx=`6`
-            &unique_idx=`3962`
+            &idx=`7`
+            &unique_idx=`60`
         ]]
         
         [[[[modifiedIf?
@@ -739,8 +756,8 @@
                     &pattern_name=`fb_email_from_name`
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
-                    &idx=`6`
-                    &unique_idx=`3962`
+                    &idx=`7`
+                    &unique_idx=`60`
                 `
         ]]]]
 
@@ -748,7 +765,7 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_6_3962`
+            &then=`+preview_7_60`
         ]]]]
 
         [[$accordionOuter?
@@ -814,11 +831,11 @@
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3957`
+    &unique_idx=`55`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3958`
+	&unique_idx=`56`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -831,11 +848,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3959`
+    &unique_idx=`57`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3960`
+	&unique_idx=`58`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -860,8 +877,8 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`3952`
-    &layout_idx=`5`
+    &unique_idx=`50`
+    &layout_idx=`6`
 ]]
     </div>
 </div>
@@ -872,16 +889,16 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fb_email_subject` &prefix=`cf_7_3973``
+            &then=`setPatternPlaceholders? &cbField=`fb_email_subject` &prefix=`cf_8_71``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fb_email_subject` &prefix=`cl_7_3973``
+            &then=`setPatternPlaceholders? &cbLayout=`fb_email_subject` &prefix=`cl_8_71``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_7_3973`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_8_71`?
             &preview=``
             &code=``
             &sidebar_width=`five`
@@ -889,8 +906,8 @@
             &pattern_template=`patternLayoutElectronTV`
             &raw_tags=`[[+raw_tags]]`
             &rendered_tags=`[[+rendered_tags]]`
-            &idx=`7`
-            &unique_idx=`3973`
+            &idx=`8`
+            &unique_idx=`71`
         ]]
         
         [[[[modifiedIf?
@@ -907,8 +924,8 @@
                     &pattern_name=`fb_email_subject`
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
-                    &idx=`7`
-                    &unique_idx=`3973`
+                    &idx=`8`
+                    &unique_idx=`71`
                 `
         ]]]]
 
@@ -916,7 +933,7 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_7_3973`
+            &then=`+preview_8_71`
         ]]]]
 
         [[$accordionOuter?
@@ -980,11 +997,11 @@
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3968`
+    &unique_idx=`66`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3969`
+	&unique_idx=`67`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -997,11 +1014,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3970`
+    &unique_idx=`68`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3971`
+	&unique_idx=`69`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -1026,8 +1043,8 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`3963`
-    &layout_idx=`6`
+    &unique_idx=`61`
+    &layout_idx=`7`
 ]]
     </div>
 </div>
@@ -1038,16 +1055,16 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fb_redirect_id` &prefix=`cf_8_3984``
+            &then=`setPatternPlaceholders? &cbField=`fb_redirect_id` &prefix=`cf_9_82``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fb_redirect_id` &prefix=`cl_8_3984``
+            &then=`setPatternPlaceholders? &cbLayout=`fb_redirect_id` &prefix=`cl_9_82``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_8_3984`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_9_82`?
             &preview=``
             &code=``
             &sidebar_width=`five`
@@ -1055,8 +1072,8 @@
             &pattern_template=`patternLayoutElectronTV`
             &raw_tags=`[[+raw_tags]]`
             &rendered_tags=`[[+rendered_tags]]`
-            &idx=`8`
-            &unique_idx=`3984`
+            &idx=`9`
+            &unique_idx=`82`
         ]]
         
         [[[[modifiedIf?
@@ -1073,8 +1090,8 @@
                     &pattern_name=`fb_redirect_id`
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
-                    &idx=`8`
-                    &unique_idx=`3984`
+                    &idx=`9`
+                    &unique_idx=`82`
                 `
         ]]]]
 
@@ -1082,7 +1099,7 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_8_3984`
+            &then=`+preview_9_82`
         ]]]]
 
         [[$accordionOuter?
@@ -1147,11 +1164,11 @@
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3979`
+    &unique_idx=`77`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3980`
+	&unique_idx=`78`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -1164,11 +1181,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3981`
+    &unique_idx=`79`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3982`
+	&unique_idx=`80`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -1193,8 +1210,8 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`3974`
-    &layout_idx=`7`
+    &unique_idx=`72`
+    &layout_idx=`8`
 ]]
     </div>
 </div>
@@ -1205,16 +1222,16 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fb_submit_button` &prefix=`cf_9_3995``
+            &then=`setPatternPlaceholders? &cbField=`fb_submit_button` &prefix=`cf_10_93``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fb_submit_button` &prefix=`cl_9_3995``
+            &then=`setPatternPlaceholders? &cbLayout=`fb_submit_button` &prefix=`cl_10_93``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_9_3995`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_10_93`?
             &preview=``
             &code=``
             &sidebar_width=`five`
@@ -1222,8 +1239,8 @@
             &pattern_template=`patternLayoutElectronTV`
             &raw_tags=`[[+raw_tags]]`
             &rendered_tags=`[[+rendered_tags]]`
-            &idx=`9`
-            &unique_idx=`3995`
+            &idx=`10`
+            &unique_idx=`93`
         ]]
         
         [[[[modifiedIf?
@@ -1240,8 +1257,8 @@
                     &pattern_name=`fb_submit_button`
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
-                    &idx=`9`
-                    &unique_idx=`3995`
+                    &idx=`10`
+                    &unique_idx=`93`
                 `
         ]]]]
 
@@ -1249,7 +1266,7 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_9_3995`
+            &then=`+preview_10_93`
         ]]]]
 
         [[$accordionOuter?
@@ -1314,11 +1331,11 @@
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3990`
+    &unique_idx=`88`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3991`
+	&unique_idx=`89`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -1331,11 +1348,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`3992`
+    &unique_idx=`90`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`3993`
+	&unique_idx=`91`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -1360,8 +1377,8 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`3985`
-    &layout_idx=`8`
+    &unique_idx=`83`
+    &layout_idx=`9`
 ]]
     </div>
 </div>
@@ -1372,16 +1389,16 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fb_form_layout` &prefix=`cf_10_4006``
+            &then=`setPatternPlaceholders? &cbField=`fb_form_layout` &prefix=`cf_11_104``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fb_form_layout` &prefix=`cl_10_4006``
+            &then=`setPatternPlaceholders? &cbLayout=`fb_form_layout` &prefix=`cl_11_104``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_10_4006`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_11_104`?
             &preview=``
             &code=``
             &sidebar_width=`five`
@@ -1389,8 +1406,8 @@
             &pattern_template=`patternLayoutElectronTV`
             &raw_tags=`[[+raw_tags]]`
             &rendered_tags=`[[+rendered_tags]]`
-            &idx=`10`
-            &unique_idx=`4006`
+            &idx=`11`
+            &unique_idx=`104`
         ]]
         
         [[[[modifiedIf?
@@ -1407,8 +1424,8 @@
                     &pattern_name=`fb_form_layout`
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
-                    &idx=`10`
-                    &unique_idx=`4006`
+                    &idx=`11`
+                    &unique_idx=`104`
                 `
         ]]]]
 
@@ -1416,7 +1433,7 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_10_4006`
+            &then=`+preview_11_104`
         ]]]]
 
         [[$accordionOuter?
@@ -1483,11 +1500,11 @@
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4001`
+    &unique_idx=`99`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`4002`
+	&unique_idx=`100`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -1500,11 +1517,11 @@
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4003`
+    &unique_idx=`101`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`4004`
+	&unique_idx=`102`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -1529,8 +1546,25 @@
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`3996`
-    &layout_idx=`9`
+    &unique_idx=`94`
+    &layout_idx=`10`
+]]
+    </div>
+</div>
+
+<div  class="ui vertical stripe segment white">
+    <div class="ui   container">
+        [[$headingBasicAnchor?
+    &value=`Settings - Advanced<br>`
+    &level=`h2`
+    &alignment=``
+    &unique_idx=`105`
+]]
+
+[[$dividerBasic?
+    &divider_text=``
+    &divider_section=`0`
+    &divider_hidden=`0`
 ]]
     </div>
 </div>
@@ -1541,16 +1575,346 @@
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fb_email_to_dynamic` &prefix=`cf_11_4021``
+            &then=`setPatternPlaceholders? &cbField=`fb_prehooks` &prefix=`cf_13_118``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fb_email_to_dynamic` &prefix=`cl_11_4021``
+            &then=`setPatternPlaceholders? &cbLayout=`fb_prehooks` &prefix=`cl_13_118``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_11_4021`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_13_118`?
+            &preview=``
+            &code=``
+            &sidebar_width=`five`
+            &pattern_name=`fb_prehooks`
+            &pattern_template=`patternLayoutElectronTV`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
+            &idx=`13`
+            &unique_idx=`118`
+        ]]
+        
+        [[[[modifiedIf?
+            &subject=`patternLayoutElectronTV`
+            &operator=`contains`
+            &operand=`Electron`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`fb_prehooks`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`fb_prehooks`
+                    &pattern_template=`patternLayoutElectronTV`
+                    &pattern_status=`green`
+                    &idx=`13`
+                    &unique_idx=`118`
+                `
+        ]]]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutElectronTV`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`+preview_13_118`
+        ]]]]
+
+        [[$accordionOuter?
+    &rows=`[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=``
+    &heading_icon=``
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[getElementDescription? &name=`fb_prehooks` &type=`patternLayoutElectronTV`]]
+</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>
+    </div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
+    &idx=`1`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=``
+    &heading_icon=``
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
+    <div class="column">[[jsonToHTML? &json=`[[tvToJSON?
+    &tv=`fb_prehooks`
+    &showName=`1`
+    &showSource=`0`
+    &optionsDelimiter=`0`
+]]`]]</div>
+</div>
+    </div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
+    &idx=`2`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=``
+    &heading_icon=``
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_templates]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`113`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`114`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`assignedTemplates`
+	&pattern_template=`patternLayoutElectronTV`
+	&pattern_name=`fb_prehooks`
+	]]
+</div>
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`115`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`116`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_template=`patternLayoutElectronTV`
+	&pattern_name=`fb_prehooks`
+	]]
+</div>
+</div>
+    </div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=`fluid styled`
+    &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`108`
+    &layout_idx=`12`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe pattern segment white">
+    <div class="ui   container">
+        [[[[If?
+            &subject=`patternLayoutElectronTV`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonField`
+            &then=`setPatternPlaceholders? &cbField=`fb_hooks` &prefix=`cf_14_129``
+        ]]]]
+        [[[[If?
+            &subject=`patternLayoutElectronTV`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonLayout`
+            &then=`setPatternPlaceholders? &cbLayout=`fb_hooks` &prefix=`cl_14_129``
+        ]]]]
+
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_14_129`?
+            &preview=``
+            &code=``
+            &sidebar_width=`five`
+            &pattern_name=`fb_hooks`
+            &pattern_template=`patternLayoutElectronTV`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
+            &idx=`14`
+            &unique_idx=`129`
+        ]]
+        
+        [[[[modifiedIf?
+            &subject=`patternLayoutElectronTV`
+            &operator=`contains`
+            &operand=`Electron`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`fb_hooks`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`fb_hooks`
+                    &pattern_template=`patternLayoutElectronTV`
+                    &pattern_status=`green`
+                    &idx=`14`
+                    &unique_idx=`129`
+                `
+        ]]]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutElectronTV`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`+preview_14_129`
+        ]]]]
+
+        [[$accordionOuter?
+    &rows=`[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=``
+    &heading_icon=``
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[getElementDescription? &name=`fb_hooks` &type=`patternLayoutElectronTV`]]
+</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>
+    </div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
+    &idx=`1`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=``
+    &heading_icon=``
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
+    <div class="column">[[jsonToHTML? &json=`[[tvToJSON?
+    &tv=`fb_hooks`
+    &showName=`1`
+    &showSource=`0`
+    &optionsDelimiter=`0`
+]]`]]</div>
+</div>
+    </div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
+    &idx=`2`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=``
+    &heading_icon=``
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_templates]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`124`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`125`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`assignedTemplates`
+	&pattern_template=`patternLayoutElectronTV`
+	&pattern_name=`fb_hooks`
+	]]
+</div>
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`126`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`127`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_template=`patternLayoutElectronTV`
+	&pattern_name=`fb_hooks`
+	]]
+</div>
+</div>
+    </div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=`fluid styled`
+    &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`119`
+    &layout_idx=`13`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe pattern segment white">
+    <div class="ui   container">
+        [[[[If?
+            &subject=`patternLayoutElectronTV`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonField`
+            &then=`setPatternPlaceholders? &cbField=`fb_email_to_dynamic` &prefix=`cf_15_144``
+        ]]]]
+        [[[[If?
+            &subject=`patternLayoutElectronTV`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonLayout`
+            &then=`setPatternPlaceholders? &cbLayout=`fb_email_to_dynamic` &prefix=`cl_15_144``
+        ]]]]
+
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_15_144`?
             &preview=``
             &code=``
             &sidebar_width=`five`
@@ -1558,8 +1922,8 @@
             &pattern_template=`patternLayoutElectronTV`
             &raw_tags=`[[+raw_tags]]`
             &rendered_tags=`[[+rendered_tags]]`
-            &idx=`11`
-            &unique_idx=`4021`
+            &idx=`15`
+            &unique_idx=`144`
         ]]
         
         [[[[modifiedIf?
@@ -1576,8 +1940,8 @@
                     &pattern_name=`fb_email_to_dynamic`
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
-                    &idx=`11`
-                    &unique_idx=`4021`
+                    &idx=`15`
+                    &unique_idx=`144`
                 `
         ]]]]
 
@@ -1585,7 +1949,7 @@
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_11_4021`
+            &then=`+preview_15_144`
         ]]]]
 
         [[$accordionOuter?
@@ -1674,15 +2038,12 @@ under Specifications, we can use the
     &content=`
     <div class="ui stackable doubling  [[+divider]] equal width grid">
         <div class=" row">
-    <div class="column">[[jsonToHTML? &json=`{
-    "caption": "Dynamic recipient address",
-    "name": "fb_email_to_dynamic",
-    "description": "You can place any snippet / FastField call here that outputs a single email address. Retrieve something inside a resource by using the &#91;&#91;+current_id&#93;&#93; placeholder. WARNING: populating this field will override the default recipient address, so test thoroughly!",
-    "category": "Settings - Advanced",
-    "sortOrder": "1",
-    "type": "textarea",
-    "templates": ["fbForm"]
-}`]]</div>
+    <div class="column">[[jsonToHTML? &json=`[[tvToJSON?
+    &tv=`fb_email_to_dynamic`
+    &showName=`1`
+    &showSource=`0`
+    &optionsDelimiter=`0`
+]]`]]</div>
 </div>
     </div>`
     &padding=`padded`
@@ -1704,11 +2065,11 @@ under Specifications, we can use the
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4016`
+    &unique_idx=`139`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`4017`
+	&unique_idx=`140`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -1721,11 +2082,11 @@ under Specifications, we can use the
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4018`
+    &unique_idx=`141`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`4019`
+	&unique_idx=`142`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -1750,8 +2111,8 @@ under Specifications, we can use the
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`4007`
-    &layout_idx=`10`
+    &unique_idx=`130`
+    &layout_idx=`14`
 ]]
     </div>
 </div>
@@ -1762,16 +2123,181 @@ under Specifications, we can use the
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fb_email_template` &prefix=`cf_12_4032``
+            &then=`setPatternPlaceholders? &cbField=`fb_redirect_dynamic` &prefix=`cf_16_155``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fb_email_template` &prefix=`cl_12_4032``
+            &then=`setPatternPlaceholders? &cbLayout=`fb_redirect_dynamic` &prefix=`cl_16_155``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_12_4032`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_16_155`?
+            &preview=``
+            &code=``
+            &sidebar_width=`five`
+            &pattern_name=`fb_redirect_dynamic`
+            &pattern_template=`patternLayoutElectronTV`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
+            &idx=`16`
+            &unique_idx=`155`
+        ]]
+        
+        [[[[modifiedIf?
+            &subject=`patternLayoutElectronTV`
+            &operator=`contains`
+            &operand=`Electron`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`fb_redirect_dynamic`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`fb_redirect_dynamic`
+                    &pattern_template=`patternLayoutElectronTV`
+                    &pattern_status=`green`
+                    &idx=`16`
+                    &unique_idx=`155`
+                `
+        ]]]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutElectronTV`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`+preview_16_155`
+        ]]]]
+
+        [[$accordionOuter?
+    &rows=`[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=``
+    &heading_icon=``
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>[[getElementDescription? &name=`fb_redirect_dynamic` &type=`patternLayoutElectronTV`]]
+</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>
+    </div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
+    &idx=`1`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=``
+    &heading_icon=``
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
+    <div class="column">[[jsonToHTML? &json=`[[tvToJSON?
+    &tv=`fb_redirect_dynamic`
+    &showName=`1`
+    &showSource=`0`
+    &optionsDelimiter=`0`
+]]`]]</div>
+</div>
+    </div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
+    &idx=`2`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=``
+    &heading_icon=``
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.assigned_templates]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`150`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`151`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`assignedTemplates`
+	&pattern_template=`patternLayoutElectronTV`
+	&pattern_name=`fb_redirect_dynamic`
+	]]
+</div>
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`152`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`153`
+	&layout_id=`12`
+	&layout_column=`col_2`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_template=`patternLayoutElectronTV`
+	&pattern_name=`fb_redirect_dynamic`
+	]]
+</div>
+</div>
+    </div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=`fluid styled`
+    &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`145`
+    &layout_idx=`15`
+]]
+    </div>
+</div>
+
+<div class="ui vertical stripe pattern segment white">
+    <div class="ui   container">
+        [[[[If?
+            &subject=`patternLayoutElectronTV`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonField`
+            &then=`setPatternPlaceholders? &cbField=`fb_email_template` &prefix=`cf_17_166``
+        ]]]]
+        [[[[If?
+            &subject=`patternLayoutElectronTV`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonLayout`
+            &then=`setPatternPlaceholders? &cbLayout=`fb_email_template` &prefix=`cl_17_166``
+        ]]]]
+
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_17_166`?
             &preview=``
             &code=``
             &sidebar_width=`five`
@@ -1779,8 +2305,8 @@ under Specifications, we can use the
             &pattern_template=`patternLayoutElectronTV`
             &raw_tags=`[[+raw_tags]]`
             &rendered_tags=`[[+rendered_tags]]`
-            &idx=`12`
-            &unique_idx=`4032`
+            &idx=`17`
+            &unique_idx=`166`
         ]]
         
         [[[[modifiedIf?
@@ -1797,8 +2323,8 @@ under Specifications, we can use the
                     &pattern_name=`fb_email_template`
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
-                    &idx=`12`
-                    &unique_idx=`4032`
+                    &idx=`17`
+                    &unique_idx=`166`
                 `
         ]]]]
 
@@ -1806,7 +2332,7 @@ under Specifications, we can use the
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_12_4032`
+            &then=`+preview_17_166`
         ]]]]
 
         [[$accordionOuter?
@@ -1871,11 +2397,11 @@ under Specifications, we can use the
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4027`
+    &unique_idx=`161`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`4028`
+	&unique_idx=`162`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -1888,11 +2414,11 @@ under Specifications, we can use the
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4029`
+    &unique_idx=`163`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`4030`
+	&unique_idx=`164`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -1917,8 +2443,8 @@ under Specifications, we can use the
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`4022`
-    &layout_idx=`11`
+    &unique_idx=`156`
+    &layout_idx=`16`
 ]]
     </div>
 </div>
@@ -1929,16 +2455,16 @@ under Specifications, we can use the
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonField`
-            &then=`setPatternPlaceholders? &cbField=`fb_email_template_rows` &prefix=`cf_13_4043``
+            &then=`setPatternPlaceholders? &cbField=`fb_email_template_rows` &prefix=`cf_18_177``
         ]]]]
         [[[[If?
             &subject=`patternLayoutElectronTV`
             &operator=`EQ`
             &operand=`patternLayoutBosonLayout`
-            &then=`setPatternPlaceholders? &cbLayout=`fb_email_template_rows` &prefix=`cl_13_4043``
+            &then=`setPatternPlaceholders? &cbLayout=`fb_email_template_rows` &prefix=`cl_18_177``
         ]]]]
 
-        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_13_4043`?
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_18_177`?
             &preview=``
             &code=``
             &sidebar_width=`five`
@@ -1946,8 +2472,8 @@ under Specifications, we can use the
             &pattern_template=`patternLayoutElectronTV`
             &raw_tags=`[[+raw_tags]]`
             &rendered_tags=`[[+rendered_tags]]`
-            &idx=`13`
-            &unique_idx=`4043`
+            &idx=`18`
+            &unique_idx=`177`
         ]]
         
         [[[[modifiedIf?
@@ -1964,8 +2490,8 @@ under Specifications, we can use the
                     &pattern_name=`fb_email_template_rows`
                     &pattern_template=`patternLayoutElectronTV`
                     &pattern_status=`green`
-                    &idx=`13`
-                    &unique_idx=`4043`
+                    &idx=`18`
+                    &unique_idx=`177`
                 `
         ]]]]
 
@@ -1973,7 +2499,7 @@ under Specifications, we can use the
             &subject=`patternLayoutElectronTV`
             &operator=`containsnot`
             &operand=`Electron`
-            &then=`+preview_13_4043`
+            &then=`+preview_18_177`
         ]]]]
 
         [[$accordionOuter?
@@ -2038,11 +2564,11 @@ under Specifications, we can use the
     &value=`[[%romanesco.patterns.assigned_templates]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4038`
+    &unique_idx=`172`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`4039`
+	&unique_idx=`173`
 	&layout_id=`12`
 	&layout_column=`col_1`
 	&layout_idx=`0`
@@ -2055,11 +2581,11 @@ under Specifications, we can use the
     &value=`[[%romanesco.patterns.referring_patterns]]`
     &level=`h5`
     &alignment=``
-    &unique_idx=`4040`
+    &unique_idx=`174`
 ]]
 
 [[$referringPatternsOuter? 
-	&unique_idx=`4041`
+	&unique_idx=`175`
 	&layout_id=`12`
 	&layout_column=`col_2`
 	&layout_idx=`0`
@@ -2084,8 +2610,8 @@ under Specifications, we can use the
     &menu_position=`top`
     &menu_cols=`four`
     &justify_tabs=`0`
-    &unique_idx=`4033`
-    &layout_idx=`12`
+    &unique_idx=`167`
+    &layout_idx=`17`
 ]]
     </div>
 </div>
