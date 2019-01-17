@@ -1,0 +1,148 @@
+<div class="ui vertical stripe pattern segment white">
+    <div class="ui   container">
+        [[[[If?
+            &subject=`patternLayoutElectronSystemSetting`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonField`
+            &then=`setPatternPlaceholders? &cbField=`cb_field_code_id` &prefix=`cf_1_3608``
+        ]]]]
+        [[[[If?
+            &subject=`patternLayoutElectronSystemSetting`
+            &operator=`EQ`
+            &operand=`patternLayoutBosonLayout`
+            &then=`setPatternPlaceholders? &cbLayout=`cb_field_code_id` &prefix=`cl_1_3608``
+        ]]]]
+
+        [[!$cbLayoutPatternPreview:toPlaceholder=`preview_1_3608`?
+            &preview=``
+            &code=``
+            &sidebar_width=`five`
+            &pattern_name=`cb_field_code_id`
+            &pattern_template=`patternLayoutElectronSystemSetting`
+            &raw_tags=`[[+raw_tags]]`
+            &rendered_tags=`[[+rendered_tags]]`
+            &idx=`1`
+            &unique_idx=`3608`
+        ]]
+        
+        [[[[modifiedIf?
+            &subject=`patternLayoutElectronSystemSetting`
+            &operator=`contains`
+            &operand=`Electron`
+            &then=`
+                $toolbarPatternElectron?
+                    &pattern_name=`cb_field_code_id`
+                    &pattern_status=`green`
+                `
+            &else=`
+                $toolbarPattern?
+                    &pattern_name=`cb_field_code_id`
+                    &pattern_template=`patternLayoutElectronSystemSetting`
+                    &pattern_status=`green`
+                    &idx=`1`
+                    &unique_idx=`3608`
+                `
+        ]]]]
+
+        [[[[modifiedIf?
+            &subject=`patternLayoutElectronSystemSetting`
+            &operator=`containsnot`
+            &operand=`Electron`
+            &then=`+preview_1_3608`
+        ]]]]
+
+        [[$accordionOuter?
+    &rows=`[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.purpose_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=`<p>System setting to indicate which ID the 'Code' ContentBlock has inside this installation. This is used to only load the assets for code highlighting if a code block is present on the page.<br>
+</p>`
+    &segment_type=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>
+    </div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
+    &idx=`1`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.specifications_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
+    <div class="column">[[jsonToHTML? &json=`{
+    "key": "cb_field_code_id",
+    "type": "numberfield",
+    "area": "ContentBlocks - Settings",
+    "value": ""
+}`]]</div>
+</div>
+    </div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
+    &idx=`2`
+]]
+
+[[$accordionRowBasic?
+    &heading=`[[%romanesco.patterns.references_title]]`
+    &heading_level=`h4`
+    &heading_subtitle=`[[+heading_subtitle]]`
+    &heading_icon=`[[+heading_icon]]`
+    &content=`
+    <div class="ui stackable doubling  [[+divider]] equal width grid">
+        <div class=" row">
+    <div class="column">[[$headingBasic?
+    &value=`[[%romanesco.patterns.referring_patterns]]`
+    &level=`h5`
+    &alignment=``
+    &unique_idx=`3605`
+]]
+
+[[$referringPatternsOuter? 
+	&unique_idx=`3606`
+	&layout_id=`12`
+	&layout_column=`col_1`
+	&layout_idx=`0`
+	&pattern_list=`referringChunks,referringTemplates`
+	&pattern_template=`patternLayoutElectronSystemSetting`
+	&pattern_name=`cb_field_code_id`
+	]]
+</div>
+    <div class="column"></div>
+</div>
+    </div>`
+    &padding=`padded`
+    &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
+    &idx=`3`
+]]`
+    &total=`3`
+    &padding=`padded`
+    &accordion_type=`fluid styled`
+    &tab_type=`regular`
+    &icon_position=`left`
+    &menu_position=`top`
+    &menu_cols=`four`
+    &justify_tabs=`0`
+    &unique_idx=`3600`
+    &layout_idx=`0`
+]]
+    </div>
+</div>
