@@ -10,7 +10,7 @@ if ($object->xpdo) {
             $assetsPath = $modx->getOption('romanescobackyard.assets_path',null,$modx->getOption('assets_path') . 'components/romanescobackyard/');
 
             if (is_dir($assetsPath)) {
-                copy($assetsPath . 'resourcemap.php', $assetsPath . 'backup/resourcemap_' . time() . '.php.bak');
+                copy($assetsPath . 'resourcemap.php', $modx->getOption('base_path') . '_backup/resourcemap_' . time() . '.php.bak');
 
                 $modx->log(xPDO::LOG_LEVEL_INFO, '[Romanesco] Resource map successfully backed up.');
 
