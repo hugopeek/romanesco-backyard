@@ -72,4 +72,4 @@ $_lang['formblocks.registration.email_content'] = '
 
 $_lang['formblocks.registration.success_message'] = 'Thanks for signing up! Please check your email and click the confirmation link to activate your account.';
 $_lang['formblocks.registration.validation_error_heading'] = 'Uh oh, something went wrong!';
-$_lang['formblocks.registration.validation_error_message'] = 'The form could not be sent, because of the following error:<br>[[+validation_error_message]]';
+$_lang['formblocks.registration.validation_error_message'] = 'The form could not be sent, because of the following issue:<br>[[+validation_error_message]]';
