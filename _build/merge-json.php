@@ -4,12 +4,12 @@
  */
 
 // Use external library for validating JSON
-require_once '../../romanesco-patterns/core/components/romanesco/vendor/autoload.php';
+require_once '../core/components/romanesco/vendor/autoload.php';
 use Seld\JsonLint\JsonParser;
 $parser = new JsonParser();
 
 // Get all JSON files from src folder
-$sources = glob("{src/*.json,src/*/*.json,src/*/*/*.json,src/*/*/*/*.json}", GLOB_BRACE);
+$sources = glob("{src/*.json,src/*/*.json,src/*/*/*.json}", GLOB_BRACE);
 
 // Get template lists for linking TV assignments in bulk
 $templateList = glob("{src_snippets/*}", GLOB_BRACE);
@@ -26,7 +26,7 @@ foreach ($sources as $index => $source) {
     if ($validateSource) {
         echo $validateSource . "\n";
         echo "Source: $source \n";
-        echo "Validation failed.";
+        echo "Validation failed. \n";
         return false;
     }
 
@@ -60,10 +60,12 @@ if ($validateOutput) {
     echo $validateOutput . "\n";
     echo "Validation of merged JSON failed.";
     return false;
+} else {
+    echo "Config file is valid JSON. \n";
 }
 
 // Write the config file
 file_put_contents("config.json", $output);
-echo 'Done.';
+echo "Config file successfully built. \n";
 
 return;
