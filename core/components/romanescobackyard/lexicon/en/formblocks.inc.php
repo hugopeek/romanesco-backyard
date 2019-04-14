@@ -44,6 +44,7 @@ $_lang['formblocks.cb.input_textarea_description'] = 'You can add an optional pl
 
 $_lang['formblocks.form.validation_error_heading'] = 'Uh oh, something went wrong!';
 $_lang['formblocks.form.validation_error_message'] = 'The form could not be sent, because not all required fields were filled. Please fill in the remaining fields (marked in red) and try again.';
+$_lang['formblocks.form.honeypot_field'] = 'If you\'re a human, keep this field blank!';
 $_lang['formblocks.form.submit_button'] = 'Send';
 
 // Email template
