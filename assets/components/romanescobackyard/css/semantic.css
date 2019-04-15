@@ -401,7 +401,7 @@
 
 .chunkOutput .header a:not(.inverted),
 .chunkOutput a.header:not(.inverted),
-.chunkOutput .menu a {
+.chunkOutput .menu:not(.tabular) a {
   border-bottom: none !important;
 }
 
@@ -19105,7 +19105,7 @@ for instance `lemon icon` not `lemon outline icon` since there is only one lemon
   font-size: 1.1rem;
 }
 
-.chunkOutput .ui.form .help.error {
+.chunkOutput .ui.form:not(.inverted) .help.error {
   color: #DB2828;
 }
 
@@ -19167,6 +19167,11 @@ for instance `lemon icon` not `lemon outline icon` since there is only one lemon
 .chunkOutput .ui.form.inverted .field input[type='field'],
 .chunkOutput .ui.form.inverted .field textarea {
   border: 1px solid #fff !important;
+}
+
+.chunkOutput .ui.form.inverted .field.error input,
+.chunkOutput .ui.form.inverted .field.error textarea {
+  border-color: transparent !important;
 }
 
 @media screen and (min-width: 768px) {
