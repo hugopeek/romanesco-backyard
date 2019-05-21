@@ -43,6 +43,10 @@ $_lang['romanesco.menu.clear_cache_publication_title'] = 'Publication';
 $_lang['romanesco.menu.clear_cache_team_title'] = 'Team';
 $_lang['romanesco.menu.clear_cache_testimonials_title'] = 'Testimonials';
 
+// Tool shed
+$_lang['romanesco.menu.tool_shed_title'] = 'Tool Shed';
+$_lang['romanesco.menu.tool_shed_description'] = 'Settings and information to help you manage your project';
+
 // Collection views
 // ---------------------------------------------------------------------
 
