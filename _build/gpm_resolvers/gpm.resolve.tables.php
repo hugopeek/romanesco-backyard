@@ -22,7 +22,6 @@ if ($object->xpdo) {
             $modx->addPackage('romanescobackyard', $modelPath, null);
 
 
-
             $manager = $modx->getManager();
 
             $manager->createObjectContainer('rmTimeline');
@@ -35,7 +34,6 @@ if ($object->xpdo) {
             $manager->createObjectContainer('rmCrosslinkRepurpose');
             $manager->createObjectContainer('rmOption');
             $manager->createObjectContainer('rmOptionGroup');
-
 
             break;
     }
