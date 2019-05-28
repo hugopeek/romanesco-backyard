@@ -180,6 +180,21 @@
     "columns": [
         {
             "MIGX_id": 1,
+            "header": "ID",
+            "dataIndex": "id",
+            "width": 10,
+            "sortable": true,
+            "show_in_grid": 1,
+            "customrenderer": "",
+            "renderer": "",
+            "clickaction": "",
+            "selectorconfig": "",
+            "renderchunktpl": "",
+            "renderoptions": "",
+            "editor": ""
+        },
+        {
+            "MIGX_id": 2,
             "header": "Name",
             "dataIndex": "name",
             "width": 80,
@@ -194,7 +209,7 @@
             "editor": "this.textEditor"
         },
         {
-            "MIGX_id": 2,
+            "MIGX_id": 3,
             "header": "Description",
             "dataIndex": "description",
             "width": 130,
@@ -209,7 +224,7 @@
             "editor": "this.textEditor"
         },
         {
-            "MIGX_id": 3,
+            "MIGX_id": 4,
             "header": "Alias",
             "dataIndex": "alias",
             "width": 80,
@@ -224,7 +239,7 @@
             "editor": "this.textEditor"
         },
         {
-            "MIGX_id": 4,
+            "MIGX_id": 5,
             "header": "Position",
             "dataIndex": "position",
             "width": 30,
@@ -237,21 +252,6 @@
             "renderchunktpl": "",
             "renderoptions": "",
             "editor": "this.textEditor"
-        },
-        {
-            "MIGX_id": 97,
-            "header": "ID",
-            "dataIndex": "id",
-            "width": 10,
-            "sortable": true,
-            "show_in_grid": 0,
-            "customrenderer": "",
-            "renderer": "",
-            "clickaction": "",
-            "selectorconfig": "",
-            "renderchunktpl": "",
-            "renderoptions": "",
-            "editor": ""
         },
         {
             "MIGX_id": 99,
