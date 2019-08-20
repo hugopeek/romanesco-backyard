@@ -109,12 +109,17 @@
                         {
                             "MIGX_id": 1,
                             "context": "web",
-                            "sourceid": 14
+                            "sourceid": 13
                         },
                         {
                             "MIGX_id": 2,
                             "context": "mgr",
-                            "sourceid": 14
+                            "sourceid": 13
+                        },
+                        {
+                            "MIGX_id": 3,
+                            "context": "global",
+                            "sourceid": 13
                         }
                     ],
                     "inputOptionValues": "",
