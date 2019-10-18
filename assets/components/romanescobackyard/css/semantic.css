@@ -827,12 +827,14 @@
 }
 
 .chunkOutput .meta,
-.chunkOutput .help {
+.chunkOutput .help,
+.chunkOutput .muted {
   color: rgba(0, 0, 0, 0.4);
 }
 
 .chunkOutput .inverted .meta,
-.chunkOutput .inverted .help {
+.chunkOutput .inverted .help,
+.chunkOutput .inverted .muted {
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -40424,6 +40426,10 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   margin-top: 2rem;
 }
 
+.chunkOutput .ui.nested.grid.celled {
+  margin-top: 0;
+}
+
 .chunkOutput .ui.nested.grid > .column.publication {
   margin-bottom: 4rem;
 }
@@ -40466,7 +40472,15 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
     padding-right: 1rem !important;
   }
 
+  .chunkOutput .ui.container .ui.stackable.celled.grid,
+  .chunkOutput .ui.container .ui.stackable.celled.grid {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
   .chunkOutput .ui.container .ui.stackable.celled.grid > .column,
+  .chunkOutput .ui.container .ui.stackable.celled.grid > .column,
+  .chunkOutput .ui.container .ui.stackable.celled.grid > .row > .column,
   .chunkOutput .ui.container .ui.stackable.celled.grid > .row > .column {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
