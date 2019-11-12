@@ -202,7 +202,7 @@
     "filters": "",
     "extended": {
         "migx_add": "Add background image",
-        "disable_add_item": "",
+        "disable_add_item": 1,
         "add_items_directly": "",
         "formcaption": "",
         "update_win_title": "Manage global background images",
