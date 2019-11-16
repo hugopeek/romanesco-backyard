@@ -32,5 +32,6 @@ class Romanesco
             }
         }
         return $result;
+        //yield $result;
     }
 }
