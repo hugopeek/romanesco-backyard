@@ -2,14 +2,26 @@
 ul.contentblocks-repeater-item-wrapper > li:first-child {
     min-height: 250px;
 }
-ul.contentblocks-repeater-item-wrapper > li:first-child.preview {
+ul.contentblocks-repeater-item-wrapper > li:first-child .preview {
     position: relative;
     z-index: 1;
     background: white;
 }
 ul.contentblocks-repeater-item-wrapper > li:last-child {
-    margin-top: -238px;
+    margin-top: -230px;
 }
 .contentblocks-collapser {
     z-index: 99;
+}
+
+/* Place content settings above repeater */
+.contentblocks-field-wrap {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.contentblocks-exposed-fields-as-setting-wrapper {
+    margin: -25px -15px 20px -15px;
+    padding: 15px 15px;
+    width: auto;
+    background: rgb(250, 250, 250);
 }
