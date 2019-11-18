@@ -52,39 +52,39 @@ $_lang['romanesco.menu.tool_shed_description'] = 'Settings and information to he
 
 $_lang['collections.footers.children'] = 'Footers';
 $_lang['collections.footers.children.create'] = 'Add footer';
-$_lang['collections.footers.children.back_to_collection_label'] = 'Back to Footers';
-
-$_lang['collections.forms.children'] = 'Forms';
-$_lang['collections.forms.children.create'] = 'Add form';
-$_lang['collections.forms.children.back_to_collection_label'] = 'Back to Forms';
+$_lang['collections.footers.children.back_to_collection_label'] = 'Back to overview';
 
 $_lang['collections.cta.children'] = 'Call To Actions';
 $_lang['collections.cta.children.create'] = 'Add CTA';
-$_lang['collections.cta.children.back_to_collection_label'] = 'Back to CTAs';
+$_lang['collections.cta.children.back_to_collection_label'] = 'Back to overview';
+
+$_lang['collections.background.children'] = 'Backgrounds';
+$_lang['collections.background.children.create'] = 'Add background';
+$_lang['collections.background.children.back_to_collection_label'] = 'Back to overview';
 
 $_lang['collections.publication.children'] = 'Articles';
 $_lang['collections.publication.children.create'] = 'New article';
-$_lang['collections.publication.children.back_to_collection_label'] = 'Back to Articles';
+$_lang['collections.publication.children.back_to_collection_label'] = 'Back to overview';
 
 $_lang['collections.team.children'] = 'Team';
 $_lang['collections.team.children.create'] = 'Add team member';
-$_lang['collections.team.children.back_to_collection_label'] = 'Back to Team';
+$_lang['collections.team.children.back_to_collection_label'] = 'Back to overview';
 
 $_lang['collections.organizations.children'] = 'Organizations';
 $_lang['collections.organizations.children.create'] = 'Add organization';
-$_lang['collections.organizations.children.back_to_collection_label'] = 'Back to Organizations';
+$_lang['collections.organizations.children.back_to_collection_label'] = 'Back to overview';
 
 $_lang['collections.testimonials.children'] = 'Testimonials';
 $_lang['collections.testimonials.children.create'] = 'Add testimonial';
-$_lang['collections.testimonials.children.back_to_collection_label'] = 'Back to Testimonials';
+$_lang['collections.testimonials.children.back_to_collection_label'] = 'Back to overview';
 
 $_lang['collections.library.children'] = 'Pattern Library';
 $_lang['collections.library.children.create'] = 'Add component';
-$_lang['collections.library.children.back_to_collection_label'] = 'Back to Library';
+$_lang['collections.library.children.back_to_collection_label'] = 'Back to overview';
 
 $_lang['collections.portfolio.children'] = 'Portfolio';
 $_lang['collections.portfolio.children.create'] = 'Add project';
-$_lang['collections.portfolio.children.back_to_collection_label'] = 'Back to Portfolio';
+$_lang['collections.portfolio.children.back_to_collection_label'] = 'Back to overview';
 
 // Pattern library
 // ---------------------------------------------------------------------
