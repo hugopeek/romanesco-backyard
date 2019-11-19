@@ -958,6 +958,18 @@
   font-size: 2.14285714rem;
 }
 
+@media only screen and (max-width: 767.98px) {
+  .chunkOutput .ui.stackable.center.when.stacked {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 991.98px) {
+  .chunkOutput .ui.stackable.center.when.stacked.on.tablet {
+    text-align: center;
+  }
+}
+
 .chunkOutput #footer p {
   font-size: 1rem;
 }
@@ -1106,71 +1118,6 @@
 
   .chunkOutput .slick-lightbox .slick-lightbox-close:before {
     font-size: 20px;
-  }
-}
-
-/* Mobile */
-
-@media only screen and (max-width: 767px) {
-  .chunkOutput [class*="mobile hidden"],
-  .chunkOutput [class*="tablet only"]:not(.mobile),
-  .chunkOutput [class*="computer only"]:not(.mobile),
-  .chunkOutput [class*="large screen only"]:not(.mobile),
-  .chunkOutput [class*="widescreen only"]:not(.mobile),
-  .chunkOutput [class*="or lower hidden"] {
-    display: none !important;
-  }
-}
-
-/* Tablet / iPad Portrait */
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .chunkOutput [class*="mobile only"]:not(.tablet),
-  .chunkOutput [class*="tablet hidden"],
-  .chunkOutput [class*="computer only"]:not(.tablet),
-  .chunkOutput [class*="large screen only"]:not(.tablet),
-  .chunkOutput [class*="widescreen only"]:not(.tablet),
-  .chunkOutput [class*="or lower hidden"]:not(.mobile) {
-    display: none !important;
-  }
-}
-
-/* Computer / Desktop / iPad Landscape */
-
-@media only screen and (min-width: 992px) and (max-width: 1299px) {
-  .chunkOutput [class*="mobile only"]:not(.computer),
-  .chunkOutput [class*="tablet only"]:not(.computer),
-  .chunkOutput [class*="computer hidden"],
-  .chunkOutput [class*="large screen only"]:not(.computer),
-  .chunkOutput [class*="widescreen only"]:not(.computer),
-  .chunkOutput [class*="or lower hidden"]:not(.tablet):not(.mobile) {
-    display: none !important;
-  }
-}
-
-/* Large Monitor */
-
-@media only screen and (min-width: 1300px) and (max-width: 1919px) {
-  .chunkOutput [class*="mobile only"]:not([class*="large screen"]),
-  .chunkOutput [class*="tablet only"]:not([class*="large screen"]),
-  .chunkOutput [class*="computer only"]:not([class*="large screen"]),
-  .chunkOutput [class*="large screen hidden"],
-  .chunkOutput [class*="widescreen only"]:not([class*="large screen"]),
-  .chunkOutput [class*="or lower hidden"]:not(.computer):not(.tablet):not(.mobile) {
-    display: none !important;
-  }
-}
-
-/* Widescreen Monitor */
-
-@media only screen and (min-width: 1920px) {
-  .chunkOutput [class*="mobile only"]:not([class*="widescreen"]),
-  .chunkOutput [class*="tablet only"]:not([class*="widescreen"]),
-  .chunkOutput [class*="computer only"]:not([class*="widescreen"]),
-  .chunkOutput [class*="large screen only"]:not([class*="widescreen"]),
-  .chunkOutput [class*="widescreen hidden"],
-  .chunkOutput [class*="widescreen or lower hidden"] {
-    display: none !important;
   }
 }
 
@@ -6260,7 +6207,7 @@
          Theme Overrides
 *******************************/
 
-.chunkOutput .center.aligned .ui.button {
+.chunkOutput .center.aligned .ui.button:not(.attached) {
   margin-left: 0.25em;
 }
 
@@ -6459,7 +6406,6 @@
 }
 
 .chunkOutput .ui.text.container p {
-  font-size: 1.5rem;
   line-height: 1.6;
 }
 
@@ -43093,7 +43039,6 @@ Floated Menu / Item
   -webkit-transition: height 0.2s;
   transition: height 0.2s;
   background: rgba(255, 255, 255, 0.95);
-  border-bottom: 1px solid rgba(34, 36, 38, 0.15);
   z-index: 9999;
 }
 
@@ -43120,6 +43065,7 @@ Floated Menu / Item
 
 .chunkOutput #menu.tightened {
   height: 5rem;
+  border-bottom: 1px solid rgba(34, 36, 38, 0.15);
 }
 
 @media only screen and (max-width: 767.98px) {
