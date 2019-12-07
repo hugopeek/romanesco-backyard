@@ -46,3 +46,8 @@ var imageRendererTeam = function(value, metaData, record, rowIndex, colIndex, st
         return '<div class="imageRendererTeam"><img src="' + baseUrl + value + '" width="100"></div>';
     }
 }
+
+var booleanRenderer = function(value, metaData, record, rowIndex, colIndex, store) {
+    var iconclass = (value != 0) ? 'icon-check' : 'icon-times';
+    return '<div style="text-align:center;"><i class="icon ' + iconclass + '"></i></div>';
+}
