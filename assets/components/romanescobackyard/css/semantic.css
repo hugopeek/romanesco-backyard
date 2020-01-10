@@ -822,6 +822,29 @@
   margin-top: 1.3em;
 }
 
+.chunkOutput img.lazy {
+  opacity: 0;
+}
+
+.chunkOutput img.lazy:not(.initial) {
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.chunkOutput img.lazy.initial,
+.chunkOutput img.lazy.loaded,
+.chunkOutput img.lazy.error {
+  opacity: 1;
+}
+
+.chunkOutput svg {
+  fill: currentColor;
+}
+
+.chunkOutput svg.hidden {
+  display: none;
+}
+
 .chunkOutput .lead {
   font-size: 1.25em !important;
   line-height: 1.45 !important;
@@ -989,142 +1012,7 @@
 }
 
 .chunkOutput .map {
-  height: 40rem;
-}
-
-.chunkOutput svg {
-  fill: currentColor;
-}
-
-.chunkOutput svg.hidden {
-  display: none;
-}
-
-@media screen and (min-width: 992px) {
-  .chunkOutput .masthead .slider-wrapper {
-    border-bottom: 80px solid #F3F4F5 !important;
-  }
-}
-
-.chunkOutput .slick-slider {
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-.chunkOutput .slick-slider .slick-slide:focus {
-  outline: none;
-}
-
-.chunkOutput .slick-slider .slick-dots {
-  bottom: -3rem;
-}
-
-.chunkOutput .slick-slider .slick-arrow {
-  width: 4.5rem;
-  height: 100%;
-  -webkit-transition: background 0.2s;
-  transition: background 0.2s;
-  z-index: 999;
-}
-
-@media (max-width: 768px) {
-  .chunkOutput .slick-slider .slick-arrow {
-    width: 3rem;
-  }
-}
-
-.chunkOutput .slick-slider .slick-arrow:hover {
-  background: rgba(0, 0, 0, 0.15);
-}
-
-.chunkOutput .slick-slider .slick-arrow:before {
-  font-size: 4rem;
-  color: #545454;
-}
-
-@media (max-width: 768px) {
-  .chunkOutput .slick-slider .slick-arrow:before {
-    font-size: 2.5rem;
-  }
-}
-
-.chunkOutput .slick-slider .slick-arrow.slick-prev {
-  left: 0;
-}
-
-.chunkOutput .slick-slider .slick-arrow.slick-prev:before {
-  font-family: "Icons";
-  content: '\f104';
-}
-
-.chunkOutput .slick-slider .slick-arrow.slick-next {
-  right: 0;
-}
-
-.chunkOutput .slick-slider .slick-arrow.slick-next:before {
-  font-family: "Icons";
-  content: '\f105';
-}
-
-.chunkOutput .slick-slider.cards .slick-slide {
-  padding: 0.15rem 0.2rem;
-}
-
-.chunkOutput .slick-slider.cards .slick-arrow.slick-prev {
-  -webkit-clip-path: inset(0.15rem 0 0.15rem 0.15rem);
-  clip-path: inset(0.15rem 0 0.15rem 0.15rem);
-}
-
-.chunkOutput .slick-slider.cards .slick-arrow.slick-next {
-  -webkit-clip-path: inset(0.15rem 0.15rem 0.15rem 0);
-  clip-path: inset(0.15rem 0.15rem 0.15rem 0);
-}
-
-.chunkOutput .slick-lightbox .slick-lightbox-slick-caption {
-  float: left;
-  text-align: left;
-  padding-left: 5%;
-}
-
-@media (max-width: 768px) {
-  .chunkOutput .slick-lightbox .slick-lightbox-slick-item-inner,
-  .chunkOutput .slick-lightbox .slick-lightbox-slick-img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-}
-
-.chunkOutput .slick-lightbox .slick-lightbox-close {
-  top: 0;
-  right: 0;
-  width: 4.5rem;
-  height: 4.5rem;
-  z-index: 1001;
-}
-
-.chunkOutput .slick-lightbox .slick-lightbox-close:before {
-  font-size: 32px;
-  line-height: 0.25;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.chunkOutput .slick-lightbox .slick-lightbox-close:hover {
-  background: rgba(0, 0, 0, 0.15);
-}
-
-.chunkOutput .slick-lightbox .slick-lightbox-close:hover:before {
-  color: #FFFFFF;
-}
-
-@media (max-width: 768px) {
-  .chunkOutput .slick-lightbox .slick-lightbox-close {
-    width: 3rem;
-    height: 3rem;
-  }
-
-  .chunkOutput .slick-lightbox .slick-lightbox-close:before {
-    font-size: 20px;
-  }
+  height: 70vh;
 }
 
 /* Mobile */
@@ -24875,6 +24763,12 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 
 .chunkOutput .ui.form .vertical.field > .button {
   margin-top: 0 !important;
+}
+
+.chunkOutput .ui.form .compact.field {
+  -webkit-box-flex: 0 !important;
+  -ms-flex: 0 !important;
+  flex: 0 !important;
 }
 
 .chunkOutput .ui.form .grouped.fields.error > label {
