@@ -3,6 +3,7 @@
 ## Backyard 0.10.2
 Released on ...
 
+- Add lexicon keys for pagination elements
 - Prevent CB Add field / Add layout modals to be split into 2 columns
 
 ## Backyard 0.10.1

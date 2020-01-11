@@ -17,6 +17,12 @@ $_lang['romanesco.menu.overview'] = 'Overview';
 $_lang['romanesco.menu.logo_title'] = 'Homepage of [[++site_name]]';
 $_lang['romanesco.menu.close_title'] = 'Close';
 
+$_lang['romanesco.pagination.prev'] = 'Previous page';
+$_lang['romanesco.pagination.next'] = 'Next page';
+$_lang['romanesco.pagination.first'] = 'First page';
+$_lang['romanesco.pagination.last'] = 'Last page';
+$_lang['romanesco.pagination.load_more'] = 'Load more';
+
 // Social
 // ---------------------------------------------------------------------
 
