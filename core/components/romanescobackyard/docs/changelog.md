@@ -1,7 +1,7 @@
 # Changelog for Romanesco Backyard
 
 ## Backyard 0.10.2
-Released on ...
+Released on January 14, 2020
 
 - Add lexicon keys for pagination elements
 - Prevent CB Add field / Add layout modals to be split into 2 columns
