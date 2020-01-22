@@ -1,5 +1,10 @@
 # Changelog for Romanesco Backyard
 
+## Backyard 0.10.3
+Released on ...
+
+- Remove margin top in 2-column ContentBlocks modals
+
 ## Backyard 0.10.2
 Released on January 14, 2020
 
