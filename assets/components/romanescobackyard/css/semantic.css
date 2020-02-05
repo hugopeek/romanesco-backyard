@@ -777,8 +777,11 @@
   color: #FFFFFF !important;
 }
 
-.chunkOutput #main #sidebar {
-  margin-top: 4rem !important;
+@media only screen and (min-width: 992px) {
+  .chunkOutput body.detail #content,
+  .chunkOutput body.detail #sidebar {
+    margin-top: 4rem;
+  }
 }
 
 .chunkOutput #content > .introduction + .ui.stripe.segment.white {
@@ -22420,17 +22423,20 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   padding-top: 0;
 }
 
-.chunkOutput body.detail #main .ui.container:not(.fluid) .ui.stripe.segment:not(.white) {
+.chunkOutput body.detail #main .ui.container:not(.fluid) .ui.stripe.segment:not(.white),
+.chunkOutput body.detail.non-white #main .ui.container:not(.fluid) .ui.stripe.segment.white {
   margin-bottom: 4em;
   padding: 0;
   border-radius: 0.28571429rem;
 }
 
-.chunkOutput body.detail #main .ui.container:not(.fluid) .ui.stripe.segment:not(.white) + .white {
+.chunkOutput body.detail #main .ui.container:not(.fluid) .ui.stripe.segment:not(.white) + .white,
+.chunkOutput body.detail.non-white #main .ui.container:not(.fluid) .ui.stripe.segment.white + .white {
   padding-top: 0;
 }
 
-.chunkOutput body.detail #main .ui.container:not(.fluid) .ui.stripe.segment:not(.white) > .container {
+.chunkOutput body.detail #main .ui.container:not(.fluid) .ui.stripe.segment:not(.white):not(.transparent) > .container,
+.chunkOutput body.detail.non-white #main .ui.container:not(.fluid) .ui.stripe.segment.white:not(.transparent) > .container {
   padding: 2em;
 }
 
