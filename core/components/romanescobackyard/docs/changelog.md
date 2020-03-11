@@ -3,6 +3,7 @@
 ## Backyard 0.10.3
 Released on ...
 
+- Add lexicon key share_this_short
 - Remove margin top in 2-column ContentBlocks modals
 
 ## Backyard 0.10.2

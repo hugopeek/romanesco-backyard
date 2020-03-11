@@ -58,6 +58,7 @@ $_lang['romanesco.article.written_on'] = 'on';
 $_lang['romanesco.article.about_author'] = 'About the author,';
 $_lang['romanesco.article.comments'] = 'Comments';
 $_lang['romanesco.article.share_this'] = 'Share this article';
+$_lang['romanesco.article.share_this_short'] = 'Share';
 $_lang['romanesco.article.back_to_overview'] = 'All articles';
 
 $_lang['romanesco.article.read_another'] = 'Read another article';

@@ -52,6 +52,7 @@ $_lang['romanesco.article.written_by'] = 'Geschreven door';
 $_lang['romanesco.article.written_on'] = 'op';
 $_lang['romanesco.article.comments'] = 'Reacties';
 $_lang['romanesco.article.share_this'] = 'Deel dit artikel';
+$_lang['romanesco.article.share_this_short'] = 'Delen';
 $_lang['romanesco.article.back_to_overview'] = 'Alle artikelen';
 
 $_lang['romanesco.article.read_another'] = 'Lees nog een artikel';
