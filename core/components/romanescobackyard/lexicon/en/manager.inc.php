@@ -1,22 +1,7 @@
 <?php
 
-// ContentBlocks layouts
-//$_lang['Achtergrond'] = 'Background';
-//$_lang['Wit'] = 'White';
-//$_lang['Hoofdkleur'] = 'Primary';
-//$_lang['Accent'] = 'Secondary';
-//$_lang['Licht'] = 'Light';
-//$_lang['Donker'] = 'Dark';
-//$_lang['Patroon'] = 'Pattern';
-
-// MANAGER CONTEXT
-// =====================================================================
-
 // Top menu
 // ---------------------------------------------------------------------
-
-// Note: top menu items were moved to default.inc.php, because some menu items
-// only seem to accept strings inside the namespace default group.
 
 // Global content
 $_lang['romanesco.menu.global_content_title'] = 'Global Content';
@@ -46,6 +31,7 @@ $_lang['romanesco.menu.clear_cache_testimonials_title'] = 'Testimonials';
 // Tool shed
 $_lang['romanesco.menu.tool_shed_title'] = 'Tool Shed';
 $_lang['romanesco.menu.tool_shed_description'] = 'Settings and information to help you manage your project';
+
 
 // Collection views
 // ---------------------------------------------------------------------
@@ -85,15 +71,3 @@ $_lang['collections.library.children.back_to_collection_label'] = 'Back to overv
 $_lang['collections.portfolio.children'] = 'Portfolio';
 $_lang['collections.portfolio.children.create'] = 'Add project';
 $_lang['collections.portfolio.children.back_to_collection_label'] = 'Back to overview';
-
-// Pattern library
-// ---------------------------------------------------------------------
-
-$_lang['romanesco.patterns.status_green'] = 'Solid (safe to use as instructed)';
-$_lang['romanesco.patterns.status_yellow'] = 'Incoherent (works without issues, but might be refactored at some point)';
-$_lang['romanesco.patterns.status_orange'] = 'Conflicting (there are open issues related to this pattern)';
-$_lang['romanesco.patterns.status_red'] = 'Unstable (severely flawed, do not use)';
-$_lang['romanesco.patterns.status_pink'] = 'Experimental (just fiddling with some ideas here)';
-$_lang['romanesco.patterns.status_purple'] = 'Untested (use at your own risk)';
-$_lang['romanesco.patterns.status_blue'] = 'In review (under evaluation if this belongs in the library or not)';
-$_lang['romanesco.patterns.status_brown'] = 'Deprecated (will be deleted in the next major release)';

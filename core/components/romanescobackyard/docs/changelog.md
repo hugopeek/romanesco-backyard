@@ -1,8 +1,13 @@
 # Changelog for Romanesco Backyard
 
-## Backyard 0.10.3
+## Backyard 0.11.0
 Released on ...
 
+- Remove Google+ keys
+- Remove duplicate status grid keys
+- Fix broken social connect keys for organizations in Dutch lexicon
+- Add missing keys to Dutch lexicons
+- Add lexicon keys for email footer and share button
 - Add lexicon key share_this_short
 - Remove margin top in 2-column ContentBlocks modals
 
