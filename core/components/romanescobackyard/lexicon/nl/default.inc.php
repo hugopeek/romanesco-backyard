@@ -25,6 +25,7 @@ $_lang['romanesco.social.connect_instagram_organization'] = 'Volg ons op Instagr
 $_lang['romanesco.social.connect_linkedin_organization'] = 'Verbinden via LinkedIn';
 $_lang['romanesco.social.connect_pinterest_organization'] = 'Bekijk ons Pinterest board';
 $_lang['romanesco.social.connect_twitter_organization'] = 'Volg ons op Twitter';
+$_lang['romanesco.social.connect_whatsapp_organization'] = 'Stuur ons een WhatsApp berichtje';
 $_lang['romanesco.social.connect_youtube_organization'] = 'Bekijk ons Youtube kanaal';
 $_lang['romanesco.social.connect_github_organization'] = 'Bekijk ons Github profiel';
 
@@ -33,6 +34,7 @@ $_lang['romanesco.social.connect_instagram_person'] = 'Volg mij op Instagram';
 $_lang['romanesco.social.connect_linkedin_person'] = 'Verbinden via LinkedIn';
 $_lang['romanesco.social.connect_pinterest_person'] = 'Bekijk mijn Pinterest board';
 $_lang['romanesco.social.connect_twitter_person'] = 'Volg mij op Twitter';
+$_lang['romanesco.social.connect_whatsapp_person'] = 'Stuur mij een WhatsApp berichtje';
 $_lang['romanesco.social.connect_youtube_person'] = 'Bekijk mijn Youtube kanaal';
 $_lang['romanesco.social.connect_github_person'] = 'Bekijk mijn Github profiel';
 
@@ -41,7 +43,7 @@ $_lang['romanesco.social.share_linkedin_title'] = 'Delen via LinkedIn';
 $_lang['romanesco.social.share_pinterest_title'] = 'Pinnen';
 $_lang['romanesco.social.share_twitter_title'] = 'Tweeten';
 $_lang['romanesco.social.share_email'] = 'Delen via email';
-$_lang['romanesco.social.share_email_body'] = 'Hoi vriend, volgens mij vind jij dit ook wel interessant:';
+$_lang['romanesco.social.share_email_body'] = 'Dag vriend, volgens mij vind jij dit ook wel interessant:';
 
 // Publication
 $_lang['romanesco.article.written_by'] = 'Geschreven door';
