@@ -1,9 +1,9 @@
 # Changelog for Romanesco Backyard
 
 ## Backyard 0.11.0
-Released on March 29, 2020
+Released on March 30, 2020
 
-- Reduce file size of manager preview CSS by removing color presets
+- Reduce file size of manager preview CSS by removing colors and form styles
 - Remove Google+ keys
 - Remove duplicate status grid keys
 - Fix broken social connect keys for organizations in Dutch lexicon
