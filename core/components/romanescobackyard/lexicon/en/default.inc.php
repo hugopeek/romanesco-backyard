@@ -53,6 +53,7 @@ $_lang['romanesco.article.comments'] = 'Comments';
 $_lang['romanesco.article.share_this'] = 'Share this article';
 $_lang['romanesco.article.share_this_short'] = 'Share';
 $_lang['romanesco.article.back_to_overview'] = 'All articles';
+$_lang['romanesco.article.back_to_overview_title'] = 'Back to overview page';
 
 $_lang['romanesco.article.read_another'] = 'Read another article';
 $_lang['romanesco.article.latest'] = 'Latest';
