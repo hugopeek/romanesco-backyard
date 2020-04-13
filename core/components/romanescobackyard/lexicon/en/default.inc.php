@@ -52,6 +52,8 @@ $_lang['romanesco.article.about_author'] = 'About the author';
 $_lang['romanesco.article.comments'] = 'Comments';
 $_lang['romanesco.article.share_this'] = 'Share this article';
 $_lang['romanesco.article.share_this_short'] = 'Share';
+$_lang['romanesco.article.previous'] = 'Previous article';
+$_lang['romanesco.article.next'] = 'Next article';
 $_lang['romanesco.article.back_to_overview'] = 'All articles';
 $_lang['romanesco.article.back_to_overview_title'] = 'Back to overview page';
 
