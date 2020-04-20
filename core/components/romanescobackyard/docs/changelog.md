@@ -1,5 +1,12 @@
 # Changelog for Romanesco Backyard
 
+## Backyard 0.11.1
+Released on April 20, 2020
+
+- Add more custom CB icons
+- Change menu index of tool shed in top menu
+- New lexicon keys for articles
+
 ## Backyard 0.11.0
 Released on March 30, 2020
 
