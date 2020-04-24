@@ -1,5 +1,10 @@
 # Changelog for Romanesco Backyard
 
+## Backyard 0.11.2
+Released on ...
+
+- Add FAQ category to input options
+
 ## Backyard 0.11.1
 Released on April 20, 2020
 
