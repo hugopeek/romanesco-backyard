@@ -183,6 +183,21 @@
     },
     "columns": [
         {
+            "MIGX_id": 0,
+            "header": "ID",
+            "dataIndex": "id",
+            "width": 10,
+            "sortable": true,
+            "show_in_grid": 1,
+            "customrenderer": "",
+            "renderer": "",
+            "clickaction": "",
+            "selectorconfig": "",
+            "renderchunktpl": "",
+            "renderoptions": "",
+            "editor": ""
+        },
+        {
             "MIGX_id": 1,
             "header": "Name",
             "dataIndex": "name",
@@ -251,21 +266,6 @@
             "show_in_grid": 1,
             "customrenderer": "",
             "renderer": "this.renderPositionSelector",
-            "clickaction": "",
-            "selectorconfig": "",
-            "renderchunktpl": "",
-            "renderoptions": "",
-            "editor": ""
-        },
-        {
-            "MIGX_id": 98,
-            "header": "ID",
-            "dataIndex": "id",
-            "width": 10,
-            "sortable": true,
-            "show_in_grid": 0,
-            "customrenderer": "",
-            "renderer": "",
             "clickaction": "",
             "selectorconfig": "",
             "renderchunktpl": "",

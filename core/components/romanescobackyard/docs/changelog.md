@@ -3,6 +3,7 @@
 ## Backyard 0.11.2
 Released on ...
 
+- Show option group IDs in MIGX grid
 - Add FAQ category to input options
 
 ## Backyard 0.11.1
