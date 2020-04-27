@@ -1,7 +1,7 @@
 # Changelog for Romanesco Backyard
 
 ## Backyard 0.11.2
-Released on ...
+Released on April 27, 2020
 
 - Show option group IDs in MIGX grid
 - Add FAQ category to input options
