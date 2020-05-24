@@ -3,6 +3,7 @@
 ## Backyard 0.11.3
 Released on ...
 
+- Update Jquery to v3.5.1
 - Add custom combobox to Collections that stores 1 and 0 values correctly
 
 ## Backyard 0.11.2
