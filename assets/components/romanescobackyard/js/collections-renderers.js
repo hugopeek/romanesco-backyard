@@ -51,3 +51,28 @@ var booleanRenderer = function(value, metaData, record, rowIndex, colIndex, stor
     var iconclass = (value != 0) ? 'icon-check' : 'icon-times';
     return '<div style="text-align:center;"><i class="icon ' + iconclass + '"></i></div>';
 }
+
+collections.combo.rmExtendedBoolean = function(config) {
+    config = config || {};
+    Ext.applyIf(config,{
+        store: new Ext.data.SimpleStore({
+            fields: ['d','v']
+            ,data: [
+                [_('yes'),1]
+                ,[_('no'),0]
+            ]
+        })
+        ,displayField: 'd'
+        ,valueField: 'v'
+        ,mode: 'local'
+        ,triggerAction: 'all'
+        ,editable: false
+        ,selectOnFocus: false
+        ,preventRender: true
+        ,forceSelection: true
+        ,enableKeyEvents: true
+    });
+    collections.combo.rmExtendedBoolean.superclass.constructor.call(this,config);
+};
+Ext.extend(collections.combo.rmExtendedBoolean,MODx.combo.ComboBox);
+Ext.reg('rm-combo-boolean',collections.combo.rmExtendedBoolean);

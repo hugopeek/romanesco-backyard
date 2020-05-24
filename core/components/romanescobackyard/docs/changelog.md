@@ -1,5 +1,10 @@
 # Changelog for Romanesco Backyard
 
+## Backyard 0.11.3
+Released on ...
+
+- Add custom combobox to Collections that stores 1 and 0 values correctly
+
 ## Backyard 0.11.2
 Released on April 27, 2020
 
