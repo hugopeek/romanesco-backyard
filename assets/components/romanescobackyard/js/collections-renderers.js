@@ -1,10 +1,6 @@
 var imageRenderer = function(value, metaData, record, rowIndex, colIndex, store) {
     if (value != '' && value != null) {
-        var baseUrl = MODx.config.default_site_url;
-        if (value.indexOf('http://') === 0) {
-            baseUrl = '';
-        }
-        return '<div class="imageRenderer"><img src="' + baseUrl + value + '" width="100"></div>';
+        return '<div class="imageRenderer"><img src="' + value + '" style="max-width:100%;height:auto;"></div>';
     }
 }
 var imageRendererTestimonialCompany = function(value, metaData, record, rowIndex, colIndex, store) {
