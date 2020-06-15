@@ -1,8 +1,9 @@
 # Changelog for Romanesco Backyard
 
 ## Backyard 0.11.3
-Released on ...
+Released on June 15, 2020
 
+- Apply minimal styling to Redactor instances in narrower columns
 - Modify Collections image renderer to only accept absolute path
 - Add Gulp configuration for generating CSS per context
 - Update Jquery to v3.5.1
