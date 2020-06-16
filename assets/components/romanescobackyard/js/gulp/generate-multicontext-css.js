@@ -77,7 +77,7 @@ gulp.task('build-context', function (done) {
     gulp.task('revert-switch', function (revertDone) {
         const clean = require('gulp-clean');
         gulp.src(basePathSemantic + 'src/tmp/theme.config').pipe(gulp.dest(basePathSemantic + 'src/'));
-        gulp.src(basePathSemantic + 'src/tmp', {read: false}).pipe(clean());
+        gulp.src(basePathSemantic + 'src/tmp', {read: false}).pipe(clean({force: true}));
         revertDone();
     })
 

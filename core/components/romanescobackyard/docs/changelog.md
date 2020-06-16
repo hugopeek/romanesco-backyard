@@ -1,5 +1,10 @@
 # Changelog for Romanesco Backyard
 
+## Backyard 0.11.4
+Released on ...
+
+- Force Gulp clean task when generating CSS per context
+
 ## Backyard 0.11.3
 Released on June 15, 2020
 
