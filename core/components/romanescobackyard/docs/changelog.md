@@ -3,6 +3,7 @@
 ## Backyard 0.11.4
 Released on ...
 
+- Add Gulp task for minifying CSS
 - Force Gulp clean task when generating CSS per context
 
 ## Backyard 0.11.3

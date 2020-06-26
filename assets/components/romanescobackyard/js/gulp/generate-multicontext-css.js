@@ -3,7 +3,7 @@
  *******************************/
 
 const
-    gulp   = require('gulp'),
+    gulp = require('gulp'),
 
     // load yargs for reading command line arguments
     argv = require('yargs')
@@ -12,7 +12,7 @@ const
         .alias('d', 'dist')
         .describe('c', 'Provide the context_key of the context you want to build.')
         .describe('t', 'Choose which task to run. You can add separate flags for multiple tasks.')
-        .describe('d', 'Path context dist folder.')
+        .describe('d', 'Path to context dist folder.')
         .choices('t', ['css', 'javascript', 'assets', 'custom', 'all'])
         .default('t','css','css')
         .default('d','','assets/semantic/dist/CONTEXT_KEY')
