@@ -1,7 +1,7 @@
 # Changelog for Romanesco Backyard
 
 ## Backyard 0.11.4
-Released on ...
+Released on July 1, 2020
 
 - Add Gulp task for minifying CSS
 - Fix asynchronous callback for Gulp generate-favicon task
