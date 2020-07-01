@@ -4,6 +4,7 @@
 Released on ...
 
 - Add Gulp task for minifying CSS
+- Fix asynchronous callback for Gulp generate-favicon task
 - Force Gulp clean task when generating CSS per context
 
 ## Backyard 0.11.3

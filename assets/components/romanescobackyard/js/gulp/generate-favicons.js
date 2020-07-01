@@ -1,7 +1,7 @@
 var
     realFavicon     = require ('gulp-real-favicon'),
 
-    gulp            = require('gulp-help')(require('gulp')),
+    gulp            = require('gulp'),
     fs              = require('fs'),
     argv            = require('yargs').argv,
 
@@ -102,8 +102,9 @@ gulp.task('generate-favicon', function(done) {
         },
         markupFile: FAVICON_DATA_FILE
     }, function() {
-        done();
+        //done();
     });
+    done();
 });
 
 // Inject the favicon markups in your HTML pages. You should run
