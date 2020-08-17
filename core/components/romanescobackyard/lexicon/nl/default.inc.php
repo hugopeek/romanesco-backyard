@@ -9,6 +9,7 @@ $_lang['romanesco.footer.qredits_title'] = 'Modulaire web projecten met MODX CMS
 
 // Navigation
 $_lang['romanesco.menu.brand'] = 'Home';
+$_lang['romanesco.menu.toc'] = 'Menu';
 $_lang['romanesco.menu.overview'] = 'Overzicht';
 $_lang['romanesco.menu.logo_title'] = 'Homepage van [[++site_name]]';
 $_lang['romanesco.menu.close_title'] = 'Sluiten';
@@ -18,6 +19,9 @@ $_lang['romanesco.pagination.next'] = 'Volgende pagina';
 $_lang['romanesco.pagination.first'] = 'Eerste pagina';
 $_lang['romanesco.pagination.last'] = 'Laatste pagina';
 $_lang['romanesco.pagination.load_more'] = 'Laad meer';
+
+// Overviews
+$_lang['romanesco.overview.img_fallback'] = 'Afbeelding niet beschikbaar';
 
 // Social
 $_lang['romanesco.social.connect_facebook_organization'] = 'Bezoek onze Facebook pagina';

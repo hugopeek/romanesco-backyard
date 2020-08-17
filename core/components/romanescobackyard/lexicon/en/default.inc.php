@@ -9,6 +9,7 @@ $_lang['romanesco.footer.qredits_title'] = 'Modular websites built with MODX';
 
 // Navigation
 $_lang['romanesco.menu.brand'] = 'Home';
+$_lang['romanesco.menu.toc'] = 'Menu';
 $_lang['romanesco.menu.overview'] = 'Overview';
 $_lang['romanesco.menu.logo_title'] = 'Homepage of [[++site_name]]';
 $_lang['romanesco.menu.close_title'] = 'Close';
@@ -18,6 +19,9 @@ $_lang['romanesco.pagination.next'] = 'Next page';
 $_lang['romanesco.pagination.first'] = 'First page';
 $_lang['romanesco.pagination.last'] = 'Last page';
 $_lang['romanesco.pagination.load_more'] = 'Load more';
+
+// Overviews
+$_lang['romanesco.overview.img_fallback'] = 'Image not available';
 
 // Social
 $_lang['romanesco.social.connect_facebook_organization'] = 'Visit our Facebook page';
