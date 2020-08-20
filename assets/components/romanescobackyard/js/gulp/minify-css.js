@@ -3,7 +3,7 @@
  *******************************/
 
 const
-    gulp   = require('gulp'),
+    gulp = require('gulp'),
 
     // load yargs for reading command line arguments
     argv = require('yargs')
