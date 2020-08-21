@@ -38,11 +38,13 @@ gulp.task('critical', function (done) {
     let src = argv.src;
     let dist = argv.dist;
 
-    console.log(src);
-    console.log(dist);
-
     critical.generate({
         base: basePath,
+        rebase: asset => {
+            if (asset.url[0] !== '/') {
+                return `${asset.absolutePath}`;
+            }
+        },
         src: src,
         dimensions: [
             {
@@ -56,10 +58,22 @@ gulp.task('critical', function (done) {
                 height: 1200
             }
         ],
+        css: [
+            'assets/semantic/dist/semantic.css',
+            'assets/css/site.css'
+        ],
         target: dist,
         minify: true,
         ignore: {
-            atrule: ['@font-face']
+            atrule: ['@inline']
+        },
+        penthouse: {
+            forceInclude: ['.ui.popup']
+        },
+        request: {
+            https: {
+                rejectUnauthorized: false
+            }
         }
     });
 
