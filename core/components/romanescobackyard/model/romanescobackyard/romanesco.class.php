@@ -55,7 +55,7 @@ class Romanesco
             $cssPath = $this->modx->getOption('base_path') . 'assets/css';
         }
 
-        $buildCommand = 'gulp critical --src ' . $this->modx->makeUrl($resource->get('id'),'','','full') . ' --dist ' . $cssPath . '/critical/'. rtrim($resource->get('uri'),'/') . '.css';
+        $buildCommand = 'gulp critical --src ' . $this->modx->makeUrl($resource->get('id'),'','','full') . ' --dist ' . $cssPath . '/critical/' . rtrim($resource->get('uri'),'/') . '.css';
 
         exec(
             '"$HOME/.nvm/nvm-exec" ' . $buildCommand .
@@ -65,6 +65,8 @@ class Romanesco
             $output,
             $return_css
         );
+
+        $this->modx->log(modX::LOG_LEVEL_INFO, "Critical CSS generated for {$resource->get('uri')} ({$resource->get('id')})");
 
         return true;
     }
