@@ -6,8 +6,18 @@
 
 class Romanesco
 {
+    /**
+     * A configuration array
+     * @var array $config
+     */
     public $config = array();
 
+    /**
+     * Romanesco constructor
+     *
+     * @param modX $modx A reference to the modX instance.
+     * @param array $config An array of configuration options. Optional.
+     */
     function __construct(modX &$modx, array $config = array())
     {
         $this->modx =& $modx;
@@ -20,7 +30,13 @@ class Romanesco
         $this->modx->addPackage('romanescobackyard', $this->config['modelPath']);
     }
 
-    // Look for a key in a multidimensional array
+    /**
+     * Look for a key in a multidimensional array.
+     *
+     * @param array $array
+     * @param string $needle
+     * @return mixed
+     */
     public function recursiveArraySearch(array $array, $needle) {
         $result = array();
         $iterator  = new RecursiveArrayIterator($array);
@@ -37,25 +53,43 @@ class Romanesco
         //yield $result;
     }
 
-    // Generate critical CSS for a given page
-    public function generateCriticalCSS($resource) {
+    /**
+     * Get correct custom CSS path for a resource, based on its context.
+     * This path is relative to the project root.
+     *
+     * @param string $contextKey
+     * @return string
+     */
+    public function getCssPath($contextKey) {
         $cssPathSystem = $this->modx->getObject('modSystemSetting', array(
             'key' => 'romanesco.custom_css_path'
         ));
         $cssPathContext = $this->modx->getObject('modContextSetting', array(
-            'context_key' => $resource->get('context_key'),
+            'context_key' => $contextKey,
             'key' => 'romanesco.custom_css_path'
         ));
 
         if ($cssPathContext) {
-            $cssPath = $this->modx->getOption('base_path') . $cssPathContext->get('value');
+            $cssPath = $cssPathContext->get('value');
         } else if ($cssPathSystem) {
-            $cssPath = $this->modx->getOption('base_path') . $cssPathSystem->get('value');
+            $cssPath = $cssPathSystem->get('value');
         } else {
-            $cssPath = $this->modx->getOption('base_path') . 'assets/css';
+            $cssPath = 'assets/css';
         }
 
-        $buildCommand = 'gulp critical --src ' . $this->modx->makeUrl($resource->get('id'),'','','full') . ' --dist ' . $cssPath . '/critical/' . rtrim($resource->get('uri'),'/') . '.css';
+        return $cssPath;
+    }
+
+    /**
+     * Generate critical CSS for a given page.
+     *
+     * @param int $resourceID
+     * @param string $resourceURI
+     * @param string $cssPath
+     * @return true
+     */
+    public function generateCriticalCSS($resourceID,$resourceURI,$cssPath) {
+        $buildCommand = 'gulp critical --src ' . $this->modx->makeUrl($resourceID,'','','full') . ' --dist ' . $this->modx->getOption('base_path') . $cssPath . '/critical/' . rtrim($resourceURI,'/') . '.css';
 
         exec(
             '"$HOME/.nvm/nvm-exec" ' . $buildCommand .
@@ -66,7 +100,7 @@ class Romanesco
             $return_css
         );
 
-        $this->modx->log(modX::LOG_LEVEL_INFO, "Critical CSS generated for {$resource->get('uri')} ({$resource->get('id')})");
+        $this->modx->log(modX::LOG_LEVEL_INFO, "Critical CSS generated for $resourceURI ($resourceID)");
 
         return true;
     }
