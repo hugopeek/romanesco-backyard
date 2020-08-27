@@ -1,7 +1,7 @@
 # Changelog for Romanesco Backyard
 
-## Backyard 0.11.5
-Released on ...
+## Backyard 1.0.0-beta1
+Released on August 27, 2020
 
 - Add function to generate critical CSS to Romanesco class
 - Add Gulp task for generating critical CSS
