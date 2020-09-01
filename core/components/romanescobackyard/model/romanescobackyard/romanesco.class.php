@@ -86,16 +86,21 @@ class Romanesco
      * @param int $resourceID
      * @param string $resourceURI
      * @param string $cssPath
+     * @param bool $parallel
      * @return true
      */
-    public function generateCriticalCSS($resourceID,$resourceURI,$cssPath) {
+    public function generateCriticalCSS(int $resourceID, string $resourceURI, string $cssPath, bool $parallel = true) {
         $buildCommand = 'gulp critical --src ' . $this->modx->makeUrl($resourceID,'','','full') . ' --dist ' . $this->modx->getOption('base_path') . $cssPath . '/critical/' . rtrim($resourceURI,'/') . '.css';
+
+        // Run parallel (by disowning the command) or in sequence
+        // Take note that running multiple processes (> 10) in parallel will severely cripple your server!
+        $disown = $parallel ? ' &' : '';
 
         exec(
             '"$HOME/.nvm/nvm-exec" ' . $buildCommand .
             ' --gulpfile ' . escapeshellcmd($this->modx->getOption('assets_path')) . 'components/romanescobackyard/js/gulp/generate-critical-css.js' .
             ' >> ' . escapeshellcmd($this->modx->getOption('core_path')) . 'cache/logs/css-critical.log' .
-            ' 2>>' . escapeshellcmd($this->modx->getOption('core_path')) . 'cache/logs/css-error.log &',
+            ' 2>>' . escapeshellcmd($this->modx->getOption('core_path')) . 'cache/logs/css-error.log' . $disown,
             $output,
             $return_css
         );
