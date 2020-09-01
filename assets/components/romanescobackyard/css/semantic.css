@@ -1,5 +1,5 @@
 /*
- * # Fomantic UI - 2.8.4
+ * # Fomantic UI - 2.8.6
  * https://github.com/fomantic/Fomantic-UI
  * http://fomantic-ui.com/
  *
@@ -1752,16 +1752,19 @@
 .chunkOutput .ui.button > .icon:not(.button) {
   height: auto;
   opacity: 0.8;
-  margin: 0 0.42857143em 0 -0.21428571em;
   -webkit-transition: opacity 0.1s ease;
   transition: opacity 0.1s ease;
-  vertical-align: '';
   color: '';
 }
 
 .chunkOutput .ui.button:not(.icon) > .icon:not(.button):not(.dropdown),
 .chunkOutput .ui.button:not(.icon) > .icons:not(.button):not(.dropdown) {
   margin: 0 0.42857143em 0 -0.21428571em;
+  vertical-align: baseline;
+}
+
+.chunkOutput .ui.button:not(.icon) > .icons:not(.button):not(.dropdown) > .icon {
+  vertical-align: baseline;
 }
 
 .chunkOutput .ui.button:not(.icon) > .right.icon:not(.button):not(.dropdown) {
@@ -1885,14 +1888,19 @@
 ---------------*/
 
 .chunkOutput .ui.icon.buttons .button,
-.chunkOutput .ui.icon.button {
+.chunkOutput .ui.icon.button:not(.animated) {
   padding: 0.78571429em 0.78571429em 0.88571429em;
 }
 
+.chunkOutput .ui.animated.icon.button > .content > .icon,
 .chunkOutput .ui.icon.buttons .button > .icon,
 .chunkOutput .ui.icon.button > .icon {
   opacity: 0.9;
   margin: 0 !important;
+  vertical-align: top;
+}
+
+.chunkOutput .ui.animated.button > .content > .icon {
   vertical-align: top;
 }
 
@@ -8110,55 +8118,49 @@
 .chunkOutput i.icon,
 .chunkOutput i.icons {
   font-size: 1em;
+  line-height: 1;
 }
 
 .chunkOutput i.mini.mini.mini.icon,
 .chunkOutput i.mini.mini.mini.icons {
-  line-height: 1;
-  vertical-align: middle;
   font-size: 0.4em;
+  vertical-align: middle;
 }
 
 .chunkOutput i.tiny.tiny.tiny.icon,
 .chunkOutput i.tiny.tiny.tiny.icons {
-  line-height: 1;
-  vertical-align: middle;
   font-size: 0.5em;
+  vertical-align: middle;
 }
 
 .chunkOutput i.small.small.small.icon,
 .chunkOutput i.small.small.small.icons {
-  line-height: 1;
-  vertical-align: middle;
   font-size: 0.75em;
+  vertical-align: middle;
 }
 
 .chunkOutput i.large.large.large.icon,
 .chunkOutput i.large.large.large.icons {
-  line-height: 1;
-  vertical-align: middle;
   font-size: 1.5em;
+  vertical-align: middle;
 }
 
 .chunkOutput i.big.big.big.icon,
 .chunkOutput i.big.big.big.icons {
-  line-height: 1;
-  vertical-align: middle;
   font-size: 2em;
+  vertical-align: middle;
 }
 
 .chunkOutput i.huge.huge.huge.icon,
 .chunkOutput i.huge.huge.huge.icons {
-  line-height: 1;
-  vertical-align: middle;
   font-size: 4em;
+  vertical-align: middle;
 }
 
 .chunkOutput i.massive.massive.massive.icon,
 .chunkOutput i.massive.massive.massive.icons {
-  line-height: 1;
-  vertical-align: middle;
   font-size: 8em;
+  vertical-align: middle;
 }
 
 /*******************************
@@ -8235,7 +8237,7 @@
 }
 
 /*
-* Font Awesome 5.12.0 by @fontawesome [https://fontawesome.com]
+* Font Awesome 5.13.0 by @fontawesome [https://fontawesome.com]
 * License - https://fontawesome.com/license (Icons: CC BY 4.0 License, Fonts: SIL OFL 1.1 License, CSS: MIT License)
 */
 
@@ -8701,6 +8703,10 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 
 .chunkOutput i.icon.box.open:before {
   content: "\f49e";
+}
+
+.chunkOutput i.icon.box.tissue:before {
+  content: "\f95b";
 }
 
 .chunkOutput i.icon.boxes:before {
@@ -9335,6 +9341,10 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   content: "\f5eb";
 }
 
+.chunkOutput i.icon.disease:before {
+  content: "\f7fa";
+}
+
 .chunkOutput i.icon.divide:before {
   content: "\f529";
 }
@@ -9537,6 +9547,10 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 
 .chunkOutput i.icon.fast.forward:before {
   content: "\f050";
+}
+
+.chunkOutput i.icon.faucet:before {
+  content: "\f905";
 }
 
 .chunkOutput i.icon.fax:before {
@@ -9959,8 +9973,16 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   content: "\f4be";
 }
 
+.chunkOutput i.icon.hand.holding.medical:before {
+  content: "\f95c";
+}
+
 .chunkOutput i.icon.hand.holding.usd:before {
   content: "\f4c0";
+}
+
+.chunkOutput i.icon.hand.holding.water:before {
+  content: "\f4c1";
 }
 
 .chunkOutput i.icon.hand.lizard:before {
@@ -10007,6 +10029,10 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   content: "\f257";
 }
 
+.chunkOutput i.icon.hand.sparkles:before {
+  content: "\f95d";
+}
+
 .chunkOutput i.icon.hand.spock:before {
   content: "\f259";
 }
@@ -10019,8 +10045,20 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   content: "\f4c4";
 }
 
+.chunkOutput i.icon.hands.wash:before {
+  content: "\f95e";
+}
+
 .chunkOutput i.icon.handshake:before {
   content: "\f2b5";
+}
+
+.chunkOutput i.icon.handshake.alternate.slash:before {
+  content: "\f95f";
+}
+
+.chunkOutput i.icon.handshake.slash:before {
+  content: "\f960";
 }
 
 .chunkOutput i.icon.hanukiah:before {
@@ -10049,6 +10087,22 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 
 .chunkOutput i.icon.hdd:before {
   content: "\f0a0";
+}
+
+.chunkOutput i.icon.head.side.cough:before {
+  content: "\f961";
+}
+
+.chunkOutput i.icon.head.side.cough.slash:before {
+  content: "\f962";
+}
+
+.chunkOutput i.icon.head.side.mask:before {
+  content: "\f963";
+}
+
+.chunkOutput i.icon.head.side.virus:before {
+  content: "\f964";
 }
 
 .chunkOutput i.icon.heading:before {
@@ -10131,6 +10185,10 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   content: "\f47e";
 }
 
+.chunkOutput i.icon.hospital.user:before {
+  content: "\f80d";
+}
+
 .chunkOutput i.icon.hot.tub:before {
   content: "\f593";
 }
@@ -10161,6 +10219,10 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 
 .chunkOutput i.icon.house.damage:before {
   content: "\f6f1";
+}
+
+.chunkOutput i.icon.house.user:before {
+  content: "\f965";
 }
 
 .chunkOutput i.icon.hryvnia:before {
@@ -10295,6 +10357,10 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   content: "\f5fc";
 }
 
+.chunkOutput i.icon.laptop.house:before {
+  content: "\f966";
+}
+
 .chunkOutput i.icon.laptop.medical:before {
   content: "\f812";
 }
@@ -10409,6 +10475,14 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 
 .chunkOutput i.icon.luggage.cart:before {
   content: "\f59d";
+}
+
+.chunkOutput i.icon.lungs:before {
+  content: "\f604";
+}
+
+.chunkOutput i.icon.lungs.virus:before {
+  content: "\f967";
 }
 
 .chunkOutput i.icon.magic:before {
@@ -10771,6 +10845,10 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   content: "\f5ae";
 }
 
+.chunkOutput i.icon.people.arrows:before {
+  content: "\f968";
+}
+
 .chunkOutput i.icon.people.carry:before {
   content: "\f4ce";
 }
@@ -10845,6 +10923,10 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 
 .chunkOutput i.icon.plane.departure:before {
   content: "\f5b0";
+}
+
+.chunkOutput i.icon.plane.slash:before {
+  content: "\f969";
 }
 
 .chunkOutput i.icon.play:before {
@@ -10937,6 +11019,14 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 
 .chunkOutput i.icon.project.diagram:before {
   content: "\f542";
+}
+
+.chunkOutput i.icon.pump.medical:before {
+  content: "\f96a";
+}
+
+.chunkOutput i.icon.pump.soap:before {
+  content: "\f96b";
 }
 
 .chunkOutput i.icon.puzzle.piece:before {
@@ -11187,6 +11277,10 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   content: "\f3ed";
 }
 
+.chunkOutput i.icon.shield.virus:before {
+  content: "\f96c";
+}
+
 .chunkOutput i.icon.ship:before {
   content: "\f21a";
 }
@@ -11325,6 +11419,10 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 
 .chunkOutput i.icon.snowplow:before {
   content: "\f7d2";
+}
+
+.chunkOutput i.icon.soap:before {
+  content: "\f96e";
 }
 
 .chunkOutput i.icon.socks:before {
@@ -11491,12 +11589,24 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   content: "\f2f2";
 }
 
+.chunkOutput i.icon.stopwatch.20:before {
+  content: "\f96f";
+}
+
 .chunkOutput i.icon.store:before {
   content: "\f54e";
 }
 
 .chunkOutput i.icon.store.alternate:before {
   content: "\f54f";
+}
+
+.chunkOutput i.icon.store.alternate.slash:before {
+  content: "\f970";
+}
+
+.chunkOutput i.icon.store.slash:before {
+  content: "\f971";
 }
 
 .chunkOutput i.icon.stream:before {
@@ -11737,6 +11847,10 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 
 .chunkOutput i.icon.toilet.paper:before {
   content: "\f71e";
+}
+
+.chunkOutput i.icon.toilet.paper.slash:before {
+  content: "\f972";
 }
 
 .chunkOutput i.icon.toolbox:before {
@@ -12037,6 +12151,18 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 
 .chunkOutput i.icon.vihara:before {
   content: "\f6a7";
+}
+
+.chunkOutput i.icon.virus:before {
+  content: "\f974";
+}
+
+.chunkOutput i.icon.virus.slash:before {
+  content: "\f975";
+}
+
+.chunkOutput i.icon.viruses:before {
+  content: "\f976";
 }
 
 .chunkOutput i.icon.voicemail:before {
@@ -14445,6 +14571,11 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   font-family: 'brand-icons';
 }
 
+.chunkOutput i.icon.dailymotion:before {
+  content: "\f952";
+  font-family: 'brand-icons';
+}
+
 .chunkOutput i.icon.dashcube:before {
   content: "\f210";
   font-family: 'brand-icons';
@@ -14975,6 +15106,11 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   font-family: 'brand-icons';
 }
 
+.chunkOutput i.icon.instagram.square:before {
+  content: "\f955";
+  font-family: 'brand-icons';
+}
+
 .chunkOutput i.icon.intercom:before {
   content: "\f7af";
   font-family: 'brand-icons';
@@ -15227,6 +15363,11 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 
 .chunkOutput i.icon.mixcloud:before {
   content: "\f289";
+  font-family: 'brand-icons';
+}
+
+.chunkOutput i.icon.mixer:before {
+  content: "\f956";
   font-family: 'brand-icons';
 }
 
@@ -15607,6 +15748,11 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 
 .chunkOutput i.icon.shirtsinbulk:before {
   content: "\f214";
+  font-family: 'brand-icons';
+}
+
+.chunkOutput i.icon.shopify:before {
+  content: "\f957";
   font-family: 'brand-icons';
 }
 
@@ -17353,16 +17499,16 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   border-bottom: 1px solid #E0B4B4;
 }
 
-.chunkOutput .ui.form > .field.error > .ui.left.action.input > .ui.button,
+.chunkOutput .ui.form > .field.error > .ui[class*="left action"].input > .ui.button,
 .chunkOutput .ui.form > .field.error > .ui.labeled.input:not(.right):not([class*="corner labeled"]) > .ui.label,
-.chunkOutput .ui.left.action.input.error > .ui.button,
+.chunkOutput .ui[class*="left action"].input.error > .ui.button,
 .chunkOutput .ui.labeled.input.error:not(.right):not([class*="corner labeled"]) > .ui.label {
   border-left: 1px solid #E0B4B4;
 }
 
-.chunkOutput .ui.form > .field.error > .ui.action.input:not(.left) > input + .ui.button,
+.chunkOutput .ui.form > .field.error > .ui.action.input:not([class*="left action"]) > input + .ui.button,
 .chunkOutput .ui.form > .field.error > .ui.right.labeled.input:not([class*="corner labeled"]) > input + .ui.label,
-.chunkOutput .ui.action.input.error:not(.left) > input + .ui.button,
+.chunkOutput .ui.action.input.error:not([class*="left action"]) > input + .ui.button,
 .chunkOutput .ui.right.labeled.input.error:not([class*="corner labeled"]) > input + .ui.label {
   border-right: 1px solid #E0B4B4;
 }
@@ -17380,16 +17526,16 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   border-bottom: 1px solid #A9D5DE;
 }
 
-.chunkOutput .ui.form > .field.info > .ui.left.action.input > .ui.button,
+.chunkOutput .ui.form > .field.info > .ui[class*="left action"].input > .ui.button,
 .chunkOutput .ui.form > .field.info > .ui.labeled.input:not(.right):not([class*="corner labeled"]) > .ui.label,
-.chunkOutput .ui.left.action.input.info > .ui.button,
+.chunkOutput .ui[class*="left action"].input.info > .ui.button,
 .chunkOutput .ui.labeled.input.info:not(.right):not([class*="corner labeled"]) > .ui.label {
   border-left: 1px solid #A9D5DE;
 }
 
-.chunkOutput .ui.form > .field.info > .ui.action.input:not(.left) > input + .ui.button,
+.chunkOutput .ui.form > .field.info > .ui.action.input:not([class*="left action"]) > input + .ui.button,
 .chunkOutput .ui.form > .field.info > .ui.right.labeled.input:not([class*="corner labeled"]) > input + .ui.label,
-.chunkOutput .ui.action.input.info:not(.left) > input + .ui.button,
+.chunkOutput .ui.action.input.info:not([class*="left action"]) > input + .ui.button,
 .chunkOutput .ui.right.labeled.input.info:not([class*="corner labeled"]) > input + .ui.label {
   border-right: 1px solid #A9D5DE;
 }
@@ -17407,16 +17553,16 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   border-bottom: 1px solid #A3C293;
 }
 
-.chunkOutput .ui.form > .field.success > .ui.left.action.input > .ui.button,
+.chunkOutput .ui.form > .field.success > .ui[class*="left action"].input > .ui.button,
 .chunkOutput .ui.form > .field.success > .ui.labeled.input:not(.right):not([class*="corner labeled"]) > .ui.label,
-.chunkOutput .ui.left.action.input.success > .ui.button,
+.chunkOutput .ui[class*="left action"].input.success > .ui.button,
 .chunkOutput .ui.labeled.input.success:not(.right):not([class*="corner labeled"]) > .ui.label {
   border-left: 1px solid #A3C293;
 }
 
-.chunkOutput .ui.form > .field.success > .ui.action.input:not(.left) > input + .ui.button,
+.chunkOutput .ui.form > .field.success > .ui.action.input:not([class*="left action"]) > input + .ui.button,
 .chunkOutput .ui.form > .field.success > .ui.right.labeled.input:not([class*="corner labeled"]) > input + .ui.label,
-.chunkOutput .ui.action.input.success:not(.left) > input + .ui.button,
+.chunkOutput .ui.action.input.success:not([class*="left action"]) > input + .ui.button,
 .chunkOutput .ui.right.labeled.input.success:not([class*="corner labeled"]) > input + .ui.label {
   border-right: 1px solid #A3C293;
 }
@@ -17434,16 +17580,16 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   border-bottom: 1px solid #C9BA9B;
 }
 
-.chunkOutput .ui.form > .field.warning > .ui.left.action.input > .ui.button,
+.chunkOutput .ui.form > .field.warning > .ui[class*="left action"].input > .ui.button,
 .chunkOutput .ui.form > .field.warning > .ui.labeled.input:not(.right):not([class*="corner labeled"]) > .ui.label,
-.chunkOutput .ui.left.action.input.warning > .ui.button,
+.chunkOutput .ui[class*="left action"].input.warning > .ui.button,
 .chunkOutput .ui.labeled.input.warning:not(.right):not([class*="corner labeled"]) > .ui.label {
   border-left: 1px solid #C9BA9B;
 }
 
-.chunkOutput .ui.form > .field.warning > .ui.action.input:not(.left) > input + .ui.button,
+.chunkOutput .ui.form > .field.warning > .ui.action.input:not([class*="left action"]) > input + .ui.button,
 .chunkOutput .ui.form > .field.warning > .ui.right.labeled.input:not([class*="corner labeled"]) > input + .ui.label,
-.chunkOutput .ui.action.input.warning:not(.left) > input + .ui.button,
+.chunkOutput .ui.action.input.warning:not([class*="left action"]) > input + .ui.button,
 .chunkOutput .ui.right.labeled.input.warning:not([class*="corner labeled"]) > input + .ui.label {
   border-right: 1px solid #C9BA9B;
 }
@@ -17768,12 +17914,32 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   margin-bottom: 2rem !important;
 }
 
+.chunkOutput .ui.segment:not(.basic) > .ui.top.attached.label {
+  margin-top: -1px;
+}
+
+.chunkOutput .ui.segment:not(.basic) > .ui.bottom.attached.label {
+  margin-bottom: -1px;
+}
+
+.chunkOutput .ui.segment:not(.basic) > .ui.attached.label:not(.right) {
+  margin-left: -1px;
+}
+
+.chunkOutput .ui.segment:not(.basic) > .ui.right.attached.label {
+  margin-right: -1px;
+}
+
+.chunkOutput .ui.segment:not(.basic) > .ui.attached.label:not(.left):not(.right) {
+  width: calc(100% + 2px);
+}
+
 /*******************************
              Types
 *******************************/
 
 .chunkOutput .ui.image.label {
-  width: auto !important;
+  width: auto;
   margin-top: 0;
   margin-bottom: 0;
   max-width: 9999px;
@@ -17784,6 +17950,10 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   border-radius: 0.21428571rem;
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+
+.chunkOutput .ui.image.label.attached:not(.basic) {
+  padding: 0.5833em 0.833em 0.5833em 0.5em;
 }
 
 .chunkOutput .ui.image.label img {
@@ -17799,6 +17969,16 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   margin: -0.5833em -0.833em -0.5833em 0.5em;
   padding: 0.5833em 0.833em;
   border-radius: 0 0.21428571rem 0.21428571rem 0;
+}
+
+.chunkOutput .ui.bottom.attached.image.label:not(.right) > img,
+.chunkOutput .ui.top.right.attached.image.label > img {
+  border-top-left-radius: 0;
+}
+
+.chunkOutput .ui.top.attached.image.label:not(.right) > img,
+.chunkOutput .ui.bottom.right.attached.image.label > img {
+  border-bottom-left-radius: 0;
 }
 
 /*-------------------
@@ -18088,7 +18268,7 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 
 .chunkOutput .ui[class*="top left attached"].label {
   width: auto;
-  margin-top: 0 !important;
+  margin-top: 0;
   border-radius: 0.21428571rem 0 0.21428571rem 0;
 }
 
@@ -18213,6 +18393,18 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   color: rgba(0, 0, 0, 0.87);
   -webkit-box-shadow: none;
   box-shadow: none;
+  padding-top: calc(0.5833em - 1px);
+  padding-bottom: calc(0.5833em - 1px);
+  padding-right: calc(0.833em - 1px);
+}
+
+.chunkOutput .ui.basic.labels:not(.tag):not(.image):not(.ribbon) .label,
+.chunkOutput .ui.basic.label:not(.tag):not(.image):not(.ribbon) {
+  padding-left: calc(0.833em - 1px);
+}
+
+.chunkOutput .ui.basic.image.label {
+  padding-left: calc(0.5em - 1px);
 }
 
 /* Link */
@@ -22547,6 +22739,10 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
              Text
 *******************************/
 
+.chunkOutput span.ui.text {
+  line-height: 1;
+}
+
 .chunkOutput span.ui.primary.text {
   color: #698f73;
 }
@@ -25171,27 +25367,29 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
       Very compact
   -----------------*/
 
-.chunkOutput .ui[class*="very compact"].grid > .column:not(.row),
-.chunkOutput .ui[class*="very compact"].grid > .row > .column {
+.chunkOutput .ui.ui.ui[class*="very compact"].grid > .column:not(.row),
+.chunkOutput .ui.ui.ui[class*="very compact"].grid > .row > .column {
   padding-left: 0.25rem;
-  padding-right: 0.5rem;
+  padding-right: 0.25rem;
 }
 
-.chunkOutput .ui[class*="very compact"].grid > * {
+.chunkOutput .ui.ui.ui[class*="very compact"].grid > * {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
 }
 
 /* Row */
 
-.chunkOutput .ui[class*="very compact"].grid > .row {
+.chunkOutput .ui.ui.ui[class*="very compact"].grid > .row {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 /* Columns */
 
-.chunkOutput .ui[class*="very compact"].grid > .column:not(.row) {
+.chunkOutput .ui.ui.ui[class*="very compact"].grid > .column:not(.row) {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 }
@@ -36730,6 +36928,10 @@ Floated Menu / Item
   transform-origin: center center;
 }
 
+.chunkOutput .ui.page.dimmer.modals {
+  -moz-perspective: none;
+}
+
 .chunkOutput body.animating.in.dimmable,
 .chunkOutput body.dimmed.dimmable {
   overflow: hidden;
@@ -37286,7 +37488,7 @@ Floated Menu / Item
   top: 0;
   left: 100%;
   right: auto;
-  margin: 0 0 0 -0.5em !important;
+  margin: 0 -0.5em !important;
   border-radius: 0.21428571rem !important;
   z-index: 21 !important;
 }
@@ -37373,9 +37575,9 @@ Floated Menu / Item
 
 /* Automatically float dropdown menu right on last menu item */
 
-.chunkOutput .ui.menu .right.menu .dropdown:last-child .menu,
-.chunkOutput .ui.menu .right.dropdown.item .menu,
-.chunkOutput .ui.buttons > .ui.dropdown:last-child .menu {
+.chunkOutput .ui.menu .right.menu .dropdown:last-child > .menu:not(.left),
+.chunkOutput .ui.menu .right.dropdown.item > .menu:not(.left),
+.chunkOutput .ui.buttons > .ui.dropdown:last-child > .menu:not(.left) {
   left: auto;
   right: 0;
 }
@@ -38578,13 +38780,21 @@ Floated Menu / Item
 }
 
 .chunkOutput .ui.simple.dropdown > .menu > .item:active > .menu,
-.chunkOutput .ui.simple.dropdown:hover > .menu > .item:hover > .menu {
+.chunkOutput .ui.simple.dropdown .menu .item:hover > .menu {
   overflow: visible;
   width: auto;
   height: auto;
   top: 0 !important;
-  left: 100% !important;
+  left: 100%;
   opacity: 1;
+}
+
+.chunkOutput .ui.simple.dropdown > .menu > .item:active > .left.menu,
+.chunkOutput .ui.simple.dropdown .menu .item:hover > .left.menu,
+.chunkOutput .right.menu .ui.simple.dropdown > .menu > .item:active > .menu:not(.right),
+.chunkOutput .right.menu .ui.simple.dropdown > .menu .item:hover > .menu:not(.right) {
+  left: auto;
+  right: 100%;
 }
 
 .chunkOutput .ui.simple.disabled.dropdown:hover .menu {
@@ -41217,6 +41427,116 @@ Floated Menu / Item
 *******************************/
 
 /*-------------------
+       Scrolling
+  --------------------*/
+
+.chunkOutput .ui.scrolling.search > .results,
+.chunkOutput .ui.search.long > .results,
+.chunkOutput .ui.search.short > .results {
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .chunkOutput .ui.scrolling.search > .results {
+    max-height: 12.17714286em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .chunkOutput .ui.scrolling.search > .results {
+    max-height: 18.26571429em;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .chunkOutput .ui.scrolling.search > .results {
+    max-height: 24.35428571em;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .chunkOutput .ui.scrolling.search > .results {
+    max-height: 36.53142857em;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .chunkOutput .ui.search.short > .results {
+    max-height: 12.17714286em;
+  }
+
+  .chunkOutput .ui.search[class*="very short"] > .results {
+    max-height: 9.13285714em;
+  }
+
+  .chunkOutput .ui.search.long > .results {
+    max-height: 24.35428571em;
+  }
+
+  .chunkOutput .ui.search[class*="very long"] > .results {
+    max-height: 36.53142857em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .chunkOutput .ui.search.short > .results {
+    max-height: 18.26571429em;
+  }
+
+  .chunkOutput .ui.search[class*="very short"] > .results {
+    max-height: 13.69928571em;
+  }
+
+  .chunkOutput .ui.search.long > .results {
+    max-height: 36.53142857em;
+  }
+
+  .chunkOutput .ui.search[class*="very long"] > .results {
+    max-height: 54.79714286em;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .chunkOutput .ui.search.short > .results {
+    max-height: 24.35428571em;
+  }
+
+  .chunkOutput .ui.search[class*="very short"] > .results {
+    max-height: 18.26571429em;
+  }
+
+  .chunkOutput .ui.search.long > .results {
+    max-height: 48.70857143em;
+  }
+
+  .chunkOutput .ui.search[class*="very long"] > .results {
+    max-height: 73.06285714em;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .chunkOutput .ui.search.short > .results {
+    max-height: 36.53142857em;
+  }
+
+  .chunkOutput .ui.search[class*="very short"] > .results {
+    max-height: 27.39857143em;
+  }
+
+  .chunkOutput .ui.search.long > .results {
+    max-height: 73.06285714em;
+  }
+
+  .chunkOutput .ui.search[class*="very long"] > .results {
+    max-height: 109.59428571em;
+  }
+}
+
+/*-------------------
        Left / Right
   --------------------*/
 
@@ -42281,8 +42601,8 @@ Floated Menu / Item
 */
 
 /*--------------
-     Browse
----------------*/
+       Browse
+  ---------------*/
 
 .chunkOutput .transition.browse {
   -webkit-animation-duration: 500ms;
@@ -42466,8 +42786,8 @@ Floated Menu / Item
 }
 
 /*--------------
-     Drop
----------------*/
+       Drop
+  ---------------*/
 
 .chunkOutput .drop.transition {
   -webkit-transform-origin: top center;
@@ -42547,8 +42867,8 @@ Floated Menu / Item
 }
 
 /*--------------
-      Fade
----------------*/
+        Fade
+  ---------------*/
 
 .chunkOutput .transition.fade.in {
   -webkit-animation-name: fadeIn;
@@ -42869,8 +43189,8 @@ Floated Menu / Item
 }
 
 /*--------------
-     Flips
----------------*/
+       Flips
+  ---------------*/
 
 .chunkOutput .flip.transition.in,
 .chunkOutput .flip.transition.out {
@@ -43015,8 +43335,8 @@ Floated Menu / Item
 }
 
 /*--------------
-      Scale
----------------*/
+        Scale
+  ---------------*/
 
 .chunkOutput .scale.transition.in {
   -webkit-animation-name: scaleIn;
@@ -43087,8 +43407,8 @@ Floated Menu / Item
 }
 
 /*--------------
-      Fly
----------------*/
+        Fly
+  ---------------*/
 
 /* Inward */
 
@@ -43628,8 +43948,8 @@ Floated Menu / Item
 }
 
 /*--------------
-     Slide
----------------*/
+       Slide
+  ---------------*/
 
 .chunkOutput .transition.slide.in,
 .chunkOutput .transition[class*="slide down"].in {
@@ -43649,15 +43969,15 @@ Floated Menu / Item
 .chunkOutput .transition[class*="slide left"].in {
   -webkit-animation-name: slideInX;
   animation-name: slideInX;
-  -webkit-transform-origin: center right;
-  transform-origin: center right;
+  -webkit-transform-origin: right center;
+  transform-origin: right center;
 }
 
 .chunkOutput .transition[class*="slide right"].in {
   -webkit-animation-name: slideInX;
   animation-name: slideInX;
-  -webkit-transform-origin: center left;
-  transform-origin: center left;
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
 }
 
 .chunkOutput .transition.slide.out,
@@ -43678,15 +43998,15 @@ Floated Menu / Item
 .chunkOutput .transition[class*="slide left"].out {
   -webkit-animation-name: slideOutX;
   animation-name: slideOutX;
-  -webkit-transform-origin: center right;
-  transform-origin: center right;
+  -webkit-transform-origin: right center;
+  transform-origin: right center;
 }
 
 .chunkOutput .transition[class*="slide right"].out {
   -webkit-animation-name: slideOutX;
   animation-name: slideOutX;
-  -webkit-transform-origin: center left;
-  transform-origin: center left;
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
 }
 
 /* In */
@@ -43806,8 +44126,8 @@ Floated Menu / Item
 }
 
 /*--------------
-     Swing
----------------*/
+       Swing
+  ---------------*/
 
 .chunkOutput .transition.swing {
   -webkit-animation-duration: 800ms;
@@ -43831,15 +44151,15 @@ Floated Menu / Item
 .chunkOutput .transition[class*="swing left"].in {
   -webkit-animation-name: swingInY;
   animation-name: swingInY;
-  -webkit-transform-origin: center right;
-  transform-origin: center right;
+  -webkit-transform-origin: right center;
+  transform-origin: right center;
 }
 
 .chunkOutput .transition[class*="swing right"].in {
   -webkit-animation-name: swingInY;
   animation-name: swingInY;
-  -webkit-transform-origin: center left;
-  transform-origin: center left;
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
 }
 
 .chunkOutput .transition.swing.out,
@@ -43860,15 +44180,15 @@ Floated Menu / Item
 .chunkOutput .transition[class*="swing left"].out {
   -webkit-animation-name: swingOutY;
   animation-name: swingOutY;
-  -webkit-transform-origin: center right;
-  transform-origin: center right;
+  -webkit-transform-origin: right center;
+  transform-origin: right center;
 }
 
 .chunkOutput .transition[class*="swing right"].out {
   -webkit-animation-name: swingOutY;
   animation-name: swingOutY;
-  -webkit-transform-origin: center left;
-  transform-origin: center left;
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
 }
 
 /* In */
@@ -44108,8 +44428,8 @@ Floated Menu / Item
 }
 
 /*--------------
-      Zoom
----------------*/
+        Zoom
+  ---------------*/
 
 .chunkOutput .transition.zoom.in {
   -webkit-animation-name: zoomIn;
