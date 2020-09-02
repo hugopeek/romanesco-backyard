@@ -55,31 +55,36 @@ class Romanesco
     }
 
     /**
-     * Get correct custom CSS path for a resource, based on its context.
-     * This path is relative to the project root.
+     * Custom context settings are not always picked up by chunks and snippets,
+     * because they are not automatically initialized.
      *
+     * This function checks the context settings for given setting and returns
+     * its value when found. Otherwise it returns the system setting, mimicking
+     * default MODX behaviour.
+     *
+     * @param string $setting
      * @param string $contextKey
+     * @param string $default
      * @return string
      */
-    public function getCssPath($contextKey)
+    public function getCustomSetting(string $setting, string $contextKey, string $default = '')
     {
-        $cssPathSystem = $this->modx->getObject('modSystemSetting', array(
-            'key' => 'romanesco.custom_css_path'
+        $systemSetting = $this->modx->getObject('modSystemSetting', array(
+            'key' => $setting
         ));
-        $cssPathContext = $this->modx->getObject('modContextSetting', array(
+        $contextSetting = $this->modx->getObject('modContextSetting', array(
             'context_key' => $contextKey,
-            'key' => 'romanesco.custom_css_path'
+            'key' => $setting
         ));
 
-        if ($cssPathContext) {
-            $cssPath = $cssPathContext->get('value');
-        } else if ($cssPathSystem) {
-            $cssPath = $cssPathSystem->get('value');
-        } else {
-            $cssPath = 'assets/css';
+        if ($contextSetting) {
+            return $contextSetting->get('value');
+        }
+        if ($systemSetting) {
+            return $systemSetting->get('value');
         }
 
-        return $cssPath;
+        return $default;
     }
 
     /**
