@@ -8,11 +8,25 @@ const
 
     // load yargs for reading command line arguments
     argv = require('yargs')
-        .alias('s', 'src')
-        .alias('d', 'dist')
-        .describe('s', 'Source URL')
-        .describe('d', 'Path to context dist folder')
-        .default('d','','assets/semantic/dist/CONTEXT_KEY')
+        .option('src', {
+            demandOption: true,
+            describe: 'Source URL',
+            type: 'string'
+        })
+        .option('dest', {
+            demandOption: true,
+            describe: 'Absolute path to destination file',
+            type: 'string'
+        })
+        .option('cssPaths', {
+            demandOption: true,
+            describe: 'Relative path(s) to source CSS files',
+            type: 'array'
+        })
+        .option('devMode', {
+            describe: 'Enable this to accept self-signed SSL certificates',
+            type: 'boolean'
+        })
         .help('help')
         .argv,
 
@@ -36,7 +50,15 @@ require(basePathSemantic + 'tasks/collections/build')(gulp);
 // Generate & inline critical-path CSS
 gulp.task('critical', function (done) {
     let src = argv.src;
-    let dist = argv.dist;
+    let dest = argv.dest;
+    let cssPaths = argv.cssPaths;
+    let devMode = argv.devMode;
+
+    // Allow unauthorized requests (from self-signed SSL certificates) in dev mode
+    let rejectUnauthorized = true;
+    if (devMode === true) {
+        rejectUnauthorized = false
+    }
 
     critical.generate({
         base: basePath,
@@ -46,6 +68,15 @@ gulp.task('critical', function (done) {
             }
         },
         src: src,
+        target: dest,
+        css: cssPaths,
+        minify: true,
+        ignore: {
+            atrule: ['@inline']
+        },
+        penthouse: {
+            forceInclude: ['.ui.popup']
+        },
         dimensions: [
             {
                 width: 320,
@@ -58,24 +89,10 @@ gulp.task('critical', function (done) {
                 height: 1200
             }
         ],
-        css: [
-            'assets/semantic/dist/semantic.css',
-            'assets/css/site.css'
-        ],
-        target: dist,
-        minify: true,
-        ignore: {
-            atrule: ['@inline']
-        },
-        penthouse: {
-            forceInclude: ['.ui.popup']
-        },
         request: {
             https: {
-                rejectUnauthorized: false
+                rejectUnauthorized: rejectUnauthorized
             }
         }
-    });
-
-    done();
+    }, done);
 });

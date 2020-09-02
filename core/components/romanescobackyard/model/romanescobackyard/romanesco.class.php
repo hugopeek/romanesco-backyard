@@ -33,13 +33,14 @@ class Romanesco
     /**
      * Look for a key in a multidimensional array.
      *
-     * @param array $array
+     * @param array $haystack
      * @param string $needle
      * @return mixed
      */
-    public function recursiveArraySearch(array $array, $needle) {
+    public function recursiveArraySearch(array $haystack, $needle)
+    {
         $result = array();
-        $iterator  = new RecursiveArrayIterator($array);
+        $iterator  = new RecursiveArrayIterator($haystack);
         $recursive = new RecursiveIteratorIterator(
             $iterator,
             RecursiveIteratorIterator::SELF_FIRST
@@ -60,7 +61,8 @@ class Romanesco
      * @param string $contextKey
      * @return string
      */
-    public function getCssPath($contextKey) {
+    public function getCssPath($contextKey)
+    {
         $cssPathSystem = $this->modx->getObject('modSystemSetting', array(
             'key' => 'romanesco.custom_css_path'
         ));
@@ -83,21 +85,22 @@ class Romanesco
     /**
      * Generate critical CSS for a given page.
      *
-     * @param int $resourceID
-     * @param string $resourceURI
-     * @param string $cssPath
-     * @param bool $parallel
+     * @param array $settings
      * @return true
      */
-    public function generateCriticalCSS(int $resourceID, string $resourceURI, string $cssPath, bool $parallel = true) {
-        $buildCommand = 'gulp critical --src ' . $this->modx->makeUrl($resourceID,'','','full') . ' --dist ' . $this->modx->getOption('base_path') . $cssPath . '/critical/' . rtrim($resourceURI,'/') . '.css';
-
+    public function generateCriticalCSS(array $settings = array())
+    {
         // Run parallel (by disowning the command) or in sequence
         // Take note that running multiple processes (> 10) in parallel will severely cripple your server!
-        $disown = $parallel ? ' &' : '';
+        $disown = $settings['parallel'] ?? true ? ' &' : '';
 
         exec(
-            '"$HOME/.nvm/nvm-exec" ' . $buildCommand .
+            '"$HOME/.nvm/nvm-exec" gulp critical' .
+            ' --src ' . $this->modx->makeUrl($settings['id'],'','','full') .
+            ' --dest ' . $this->modx->getOption('base_path') . $settings['cssPath'] . '/critical/' . rtrim($settings['uri'],'/') . '.css' .
+            ' --cssPaths ' . rtrim($settings['distPath'],'/') . '/semantic.css' .
+            ' --cssPaths ' . rtrim($settings['cssPath'],'/') . '/site.css' .
+            ' --devMode ' . $this->modx->getOption('romanesco.dev_mode') .
             ' --gulpfile ' . escapeshellcmd($this->modx->getOption('assets_path')) . 'components/romanescobackyard/js/gulp/generate-critical-css.js' .
             ' >> ' . escapeshellcmd($this->modx->getOption('core_path')) . 'cache/logs/css-critical.log' .
             ' 2>>' . escapeshellcmd($this->modx->getOption('core_path')) . 'cache/logs/css-error.log' . $disown,
@@ -105,7 +108,7 @@ class Romanesco
             $return_css
         );
 
-        $this->modx->log(modX::LOG_LEVEL_INFO, "Critical CSS generated for $resourceURI ($resourceID)");
+        $this->modx->log(modX::LOG_LEVEL_ERROR, "Critical CSS generated for {$settings['uri']} ({$settings['id']})");
 
         return true;
     }
