@@ -55,19 +55,19 @@ class Romanesco
     }
 
     /**
-     * Custom context settings are not always picked up by chunks and snippets,
-     * because they are not automatically initialized.
+     * Custom context settings are not always picked up by chunks and snippets
+     * because (unlike native MODX settings) they are not automatically
+     * initialized.
      *
-     * This function checks the context settings for given setting and returns
-     * its value when found. Otherwise it returns the system setting, mimicking
-     * default MODX behaviour.
+     * This function mimics the default MODX behaviour: it checks the context
+     * settings first and falls back on the system setting if nothing was found.
      *
      * @param string $setting
      * @param string $contextKey
      * @param string $default
      * @return string
      */
-    public function getCustomSetting(string $setting, string $contextKey, string $default = '')
+    public function getContextSetting(string $setting, string $contextKey, string $default = '')
     {
         $systemSetting = $this->modx->getObject('modSystemSetting', array(
             'key' => $setting
