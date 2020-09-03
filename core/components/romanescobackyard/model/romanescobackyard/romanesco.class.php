@@ -69,9 +69,6 @@ class Romanesco
      */
     public function getContextSetting(string $setting, string $contextKey, string $default = '')
     {
-        $systemSetting = $this->modx->getObject('modSystemSetting', array(
-            'key' => $setting
-        ));
         $contextSetting = $this->modx->getObject('modContextSetting', array(
             'context_key' => $contextKey,
             'key' => $setting
@@ -80,6 +77,11 @@ class Romanesco
         if ($contextSetting) {
             return $contextSetting->get('value');
         }
+
+        $systemSetting = $this->modx->getObject('modSystemSetting', array(
+            'key' => $setting
+        ));
+
         if ($systemSetting) {
             return $systemSetting->get('value');
         }
