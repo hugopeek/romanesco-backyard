@@ -1,5 +1,12 @@
 # Changelog for Romanesco Backyard
 
+## Backyard 1.0.0-beta2
+Released on September 4, 2020
+
+- Add option to generate critical CSS in sequence
+- Add function to retrieve custom context setting
+- Add function to retrieve context aware Configuration setting
+
 ## Backyard 1.0.0-beta1
 Released on August 27, 2020
 
