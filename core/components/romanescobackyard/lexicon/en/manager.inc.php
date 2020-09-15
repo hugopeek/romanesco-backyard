@@ -71,3 +71,9 @@ $_lang['collections.library.children.back_to_collection_label'] = 'Back to overv
 $_lang['collections.portfolio.children'] = 'Portfolio';
 $_lang['collections.portfolio.children.create'] = 'Add project';
 $_lang['collections.portfolio.children.back_to_collection_label'] = 'Back to overview';
+
+
+// ContentBlocks previews
+// ---------------------------------------------------------------------
+
+$_lang['romanesco.cb_preview.overview_note'] = '<p><em>Please note: this preview automatically limits the amount of items to 2 rows in the manager &bull; Item styling may not reflect the actual output on the page &bull; Preview doesn\'t work with Pagination enabled.</em></p>';
