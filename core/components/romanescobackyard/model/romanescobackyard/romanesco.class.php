@@ -97,13 +97,13 @@ class Romanesco
      * @param string $default
      * @return string
      */
-    public function getConfigSetting(string $setting, string $contextKey, string $default = '')
+    public function getConfigSetting(string $setting, string $contextKey = '', string $default = '')
     {
         // Get the global setting first
         $cgSetting = $this->modx->getObject('cgSetting', array('key' => $setting));
 
         // If ClientConfig is context aware, dig deeper for a context setting
-        if (is_object($cgSetting) && $this->modx->getOption('clientconfig.context_aware') == true) {
+        if (is_object($cgSetting) && $contextKey && $this->modx->getOption('clientconfig.context_aware') == true) {
             $cgContextValue = $this->modx->getObject('cgContextValue', array('setting' => $cgSetting->get('id'), 'context' => $contextKey));
 
             if (is_object($cgContextValue)) {
@@ -113,7 +113,7 @@ class Romanesco
             }
         }
 
-        // Contexts are disabled
+        // Contexts are disabled, return global setting
         if (is_object($cgSetting)) {
             return $cgSetting->get('value');
         }
