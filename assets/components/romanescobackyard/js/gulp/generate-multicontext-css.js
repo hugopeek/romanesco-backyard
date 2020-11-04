@@ -13,7 +13,7 @@ const
         .describe('c', 'Provide the context_key of the context you want to build.')
         .describe('t', 'Choose which task to run. You can add separate flags for multiple tasks.')
         .describe('d', 'Path to context dist folder.')
-        .choices('t', ['css', 'javascript', 'assets', 'custom', 'all'])
+        .choices('t', ['css', 'javascript', 'assets', 'all'])
         .default('t','css','css')
         .default('d','','assets/semantic/dist/CONTEXT_KEY')
         .help('help')
