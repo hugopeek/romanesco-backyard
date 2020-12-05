@@ -99,6 +99,7 @@ $_lang['romanesco.patterns.preview_not_available'] = 'No preview available';
 $_lang['romanesco.patterns.code_tooltip'] = 'View source';
 $_lang['romanesco.patterns.copy_tooltip'] = 'Copy code';
 $_lang['romanesco.patterns.comment_tooltip'] = 'Ask a question, suggest an edit or report a bug';
+$_lang['romanesco.patterns.connections_tooltip'] = 'Connected patterns';
 $_lang['romanesco.patterns.example_label'] = 'MODX';
 $_lang['romanesco.patterns.code_label'] = 'Source';
 $_lang['romanesco.patterns.template_label'] = 'Template';
@@ -116,11 +117,23 @@ $_lang['romanesco.patterns.assigned_templates'] = 'Assigned to the following tem
 $_lang['romanesco.patterns.assigned_tvs'] = 'Has the following TVs assigned';
 
 // Status indicator
-$_lang['romanesco.patterns.status_green'] = 'Solid (safe to use as instructed)';
-$_lang['romanesco.patterns.status_yellow'] = 'Incoherent (works without issues, but might be refactored at some point)';
-$_lang['romanesco.patterns.status_orange'] = 'Conflicting (there are open issues related to this pattern)';
-$_lang['romanesco.patterns.status_red'] = 'Unstable (severely flawed, do not use)';
-$_lang['romanesco.patterns.status_pink'] = 'Experimental (just fiddling with some ideas here)';
-$_lang['romanesco.patterns.status_purple'] = 'Untested (use at your own risk)';
-$_lang['romanesco.patterns.status_blue'] = 'In review (under evaluation if this belongs in the library or not)';
-$_lang['romanesco.patterns.status_brown'] = 'Deprecated (will be deleted in the next major release)';
+$_lang['romanesco.patterns.status_solid'] = 'Solid (safe to use as instructed)';
+$_lang['romanesco.patterns.status_incoherent'] = 'Incoherent (works without issues, but might be refactored at some point)';
+$_lang['romanesco.patterns.status_conflicting'] = 'Conflicting (there are open issues related to this pattern)';
+$_lang['romanesco.patterns.status_unstable'] = 'Unstable (severely flawed, do not use)';
+$_lang['romanesco.patterns.status_untested'] = 'Untested (use at your own risk)';
+$_lang['romanesco.patterns.status_experimental'] = 'Experimental (just fiddling with some ideas here)';
+$_lang['romanesco.patterns.status_review'] = 'In review (under evaluation if this belongs in the library or not)';
+$_lang['romanesco.patterns.status_deprecated'] = 'Deprecated (will be deleted in the next major release)';
+$_lang['romanesco.patterns.status_unknown'] = 'Unknown (shrouded in mystery, this element is)';
+
+$_lang['romanesco.patterns.status_solid_color'] = 'green';
+$_lang['romanesco.patterns.status_incoherent_color'] = 'yellow';
+$_lang['romanesco.patterns.status_conflicting_color'] = 'orange';
+$_lang['romanesco.patterns.status_unstable_color'] = 'red';
+$_lang['romanesco.patterns.status_untested_color'] = 'purple';
+$_lang['romanesco.patterns.status_experimental_color'] = 'pink';
+$_lang['romanesco.patterns.status_review_color'] = 'blue';
+$_lang['romanesco.patterns.status_deprecated_color'] = 'grey';
+$_lang['romanesco.patterns.status_unknown_color'] = 'black';
+
