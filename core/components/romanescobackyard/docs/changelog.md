@@ -3,6 +3,7 @@
 ## Backyard 1.0.0-beta3
 Released on ...
 
+- Add custom formatting and CSS for Redactor v3
 - Allow getConfigSetting function to run without context key
 
 ## Backyard 1.0.0-beta2
