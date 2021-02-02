@@ -21,8 +21,8 @@ $_lang['formblocks.menu.edit_forms_description'] = 'Bouw en bewerk je eigen form
 // Collection views
 $_lang['formblocks.collections'] = 'Overzicht van al je FormBlocks formulieren';
 $_lang['formblocks.collections.children'] = 'Formulieren';
-$_lang['formblocks.collections.children.create'] = 'Nieuw formulier';
-$_lang['formblocks.collections.children.back_to_collection_label'] = 'FormBlocks overzicht';
+$_lang['formblocks.collections.children.create'] = 'Nieuw Formulier';
+$_lang['formblocks.collections.children.back_to_collection_label'] = 'Alle Formulieren';
 
 
 // Web context

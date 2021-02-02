@@ -22,8 +22,8 @@ $_lang['formblocks.menu.edit_forms_description'] = 'Build and edit your own form
 // Collection views
 $_lang['formblocks.collections'] = 'Overview of all your FormBlocks forms';
 $_lang['formblocks.collections.children'] = 'Forms';
-$_lang['formblocks.collections.children.create'] = 'Create new form';
-$_lang['formblocks.collections.children.back_to_collection_label'] = 'Back to overview';
+$_lang['formblocks.collections.children.create'] = 'Create Form';
+$_lang['formblocks.collections.children.back_to_collection_label'] = 'All Forms';
 
 // ContentBlocks
 $_lang['formblocks.cb.input_textfield_description'] = 'You can select a different input type or add an optional placeholder in the Settings menu.';
