@@ -3,6 +3,7 @@
 ## Backyard 1.0.0-beta3
 Released on ...
 
+- Update lexicon keys for footer credits
 - Add boolean editor and renderer for indicating hidemenu status in Collections
 - Remove additional top margin on first CB repeater row
 - Add custom formatting and CSS for Redactor v3

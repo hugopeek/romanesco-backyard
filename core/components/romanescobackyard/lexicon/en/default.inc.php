@@ -3,10 +3,6 @@
 // Web context
 // ---------------------------------------------------------------------
 
-// Common website elements
-$_lang['romanesco.footer.qredits_text'] = 'A Romanesco project';
-$_lang['romanesco.footer.qredits_title'] = 'Modular websites built with MODX';
-
 // Navigation
 $_lang['romanesco.menu.brand'] = 'Home';
 $_lang['romanesco.menu.toc'] = 'Menu';
@@ -73,6 +69,12 @@ $_lang['romanesco.testimonials.logo_title'] = 'Read why [[+pagetitle]] loves to 
 $_lang['romanesco.search.field_placeholder'] = 'What are you looking for?';
 $_lang['romanesco.search.field_button_text'] = 'Search';
 $_lang['romanesco.search.result_button_text'] = 'Go to this page';
+
+// Footer
+$_lang['romanesco.footer.qredits_title'] = 'A Romanesco project';
+$_lang['romanesco.footer.qredits_text'] = '<p><strong>A Romanesco project</strong><br>Build pragmatic websites, starting with content.</p>';
+$_lang['romanesco.footer.qredits_romanesco'] = 'romanesco.info';
+$_lang['romanesco.footer.qredits_modx'] = 'Powered by MODX';
 
 
 // Project hub
