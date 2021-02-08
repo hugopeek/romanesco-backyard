@@ -1,5 +1,5 @@
 /*
- * # Fomantic UI - 2.8.6
+ * # Fomantic UI - 2.8.7
  * https://github.com/fomantic/Fomantic-UI
  * http://fomantic-ui.com/
  *
@@ -1961,7 +1961,7 @@
 ---------------*/
 
 .chunkOutput .ui.icon.buttons .button,
-.chunkOutput .ui.icon.button:not(.animated) {
+.chunkOutput .ui.icon.button:not(.animated):not(.compact) {
   padding: 0.78571429em 0.78571429em 0.88571429em;
 }
 
@@ -6721,7 +6721,7 @@
       Icon
 ---------------*/
 
-.chunkOutput .ui.header > .icon {
+.chunkOutput .ui.header > i.icon {
   display: table-cell;
   opacity: 1;
   font-size: 1.5em;
@@ -6731,7 +6731,7 @@
 
 /* With Text Node */
 
-.chunkOutput .ui.header .icon:only-child {
+.chunkOutput .ui.header > i.icon:only-child {
   display: inline-block;
   padding: 0;
   margin-right: 0.75rem;
@@ -6774,7 +6774,7 @@
 
 /* After Icon */
 
-.chunkOutput .ui.header > .icon + .content {
+.chunkOutput .ui.header > i.icon + .content {
   padding-left: 0.75rem;
   display: table-cell;
   vertical-align: middle;
@@ -6977,7 +6977,7 @@
   margin-top: 0;
 }
 
-.chunkOutput .ui.icon.header .icon {
+.chunkOutput .ui.icon.header > i.icon {
   float: none;
   display: block;
   width: auto;
@@ -6998,15 +6998,15 @@
   padding: 0;
 }
 
-.chunkOutput .ui.icon.header .circular.icon {
+.chunkOutput .ui.icon.header > i.circular.icon {
   font-size: 2em;
 }
 
-.chunkOutput .ui.icon.header .square.icon {
+.chunkOutput .ui.icon.header > i.square.icon {
   font-size: 2em;
 }
 
-.chunkOutput .ui.block.icon.header .icon {
+.chunkOutput .ui.block.icon.header > i.icon {
   margin-bottom: 0;
 }
 
@@ -7485,7 +7485,7 @@
   padding-bottom: 0.21428571rem;
 }
 
-.chunkOutput .ui.dividing.header .icon {
+.chunkOutput .ui.dividing.header i.icon {
   margin-bottom: 0;
 }
 
@@ -9022,6 +9022,10 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 }
 
 .chunkOutput i.icon.chart.line:before {
+  content: "\f201";
+}
+
+.chunkOutput i.icon.chartline:before {
   content: "\f201";
 }
 
@@ -11669,7 +11673,7 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   content: "\f2f2";
 }
 
-.chunkOutput i.icon.stopwatch.20:before {
+.chunkOutput i.icon.stopwatch.twenty:before {
   content: "\f96f";
 }
 
@@ -12900,6 +12904,10 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 }
 
 .chunkOutput i.icon.line.graph:before {
+  content: "\f201";
+}
+
+.chunkOutput i.icon.linegraph:before {
   content: "\f201";
 }
 
@@ -16724,7 +16732,6 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
     Vertical Aligned
   -------------------*/
 
-.chunkOutput .ui.top.aligned.images .image,
 .chunkOutput .ui.top.aligned.image,
 .chunkOutput .ui.top.aligned.image svg,
 .chunkOutput .ui.top.aligned.image img {
@@ -16732,7 +16739,6 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   vertical-align: top;
 }
 
-.chunkOutput .ui.middle.aligned.images .image,
 .chunkOutput .ui.middle.aligned.image,
 .chunkOutput .ui.middle.aligned.image svg,
 .chunkOutput .ui.middle.aligned.image img {
@@ -16740,12 +16746,29 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   vertical-align: middle;
 }
 
-.chunkOutput .ui.bottom.aligned.images .image,
 .chunkOutput .ui.bottom.aligned.image,
 .chunkOutput .ui.bottom.aligned.image svg,
 .chunkOutput .ui.bottom.aligned.image img {
   display: inline-block;
   vertical-align: bottom;
+}
+
+.chunkOutput .ui.top.aligned.images .image,
+.chunkOutput .ui.images .ui.top.aligned.image {
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
+.chunkOutput .ui.middle.aligned.images .image,
+.chunkOutput .ui.images .ui.middle.aligned.image {
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.chunkOutput .ui.bottom.aligned.images .image,
+.chunkOutput .ui.images .ui.bottom.aligned.image {
+  -ms-flex-item-align: end;
+  align-self: flex-end;
 }
 
 /*--------------
@@ -16864,10 +16887,28 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   margin-bottom: 0;
 }
 
-.chunkOutput .ui.centered.images,
 .chunkOutput .ui.centered.image {
+  display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.chunkOutput .ui.centered.images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 /*--------------
@@ -17529,7 +17570,7 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   padding-right: 3.25em !important;
 }
 
-.chunkOutput .ui[class*="corner labeled"].icon.input:not([class*="left corner labeled"]) > .icon {
+.chunkOutput .ui[class*="corner labeled"].icon.input:not([class*="left corner labeled"]) > i.icon {
   margin-right: 1.25em;
 }
 
@@ -17545,15 +17586,15 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   padding-left: 3.25em !important;
 }
 
-.chunkOutput .ui[class*="left corner labeled"].icon.input > .icon {
+.chunkOutput .ui[class*="left corner labeled"].icon.input > i.icon {
   margin-left: 1.25em;
 }
 
-.chunkOutput .ui.icon.input > textarea ~ .icon {
+.chunkOutput .ui.icon.input > textarea ~ i.icon {
   height: 3em;
 }
 
-.chunkOutput :not(.field) > .ui.transparent.icon.input > textarea ~ .icon {
+.chunkOutput :not(.field) > .ui.transparent.icon.input > textarea ~ i.icon {
   height: 1.3em;
 }
 
@@ -17571,110 +17612,110 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 
 /* Labeled and action input states */
 
-.chunkOutput .ui.form > .field.error > .ui.action.input > .ui.button,
-.chunkOutput .ui.form > .field.error > .ui.labeled.input:not([class*="corner labeled"]) > .ui.label,
+.chunkOutput .ui.form .field.error > .ui.action.input > .ui.button,
+.chunkOutput .ui.form .field.error > .ui.labeled.input:not([class*="corner labeled"]) > .ui.label,
 .chunkOutput .ui.action.input.error > .ui.button,
 .chunkOutput .ui.labeled.input.error:not([class*="corner labeled"]) > .ui.label {
   border-top: 1px solid #E0B4B4;
   border-bottom: 1px solid #E0B4B4;
 }
 
-.chunkOutput .ui.form > .field.error > .ui[class*="left action"].input > .ui.button,
-.chunkOutput .ui.form > .field.error > .ui.labeled.input:not(.right):not([class*="corner labeled"]) > .ui.label,
+.chunkOutput .ui.form .field.error > .ui[class*="left action"].input > .ui.button,
+.chunkOutput .ui.form .field.error > .ui.labeled.input:not(.right):not([class*="corner labeled"]) > .ui.label,
 .chunkOutput .ui[class*="left action"].input.error > .ui.button,
 .chunkOutput .ui.labeled.input.error:not(.right):not([class*="corner labeled"]) > .ui.label {
   border-left: 1px solid #E0B4B4;
 }
 
-.chunkOutput .ui.form > .field.error > .ui.action.input:not([class*="left action"]) > input + .ui.button,
-.chunkOutput .ui.form > .field.error > .ui.right.labeled.input:not([class*="corner labeled"]) > input + .ui.label,
+.chunkOutput .ui.form .field.error > .ui.action.input:not([class*="left action"]) > input + .ui.button,
+.chunkOutput .ui.form .field.error > .ui.right.labeled.input:not([class*="corner labeled"]) > input + .ui.label,
 .chunkOutput .ui.action.input.error:not([class*="left action"]) > input + .ui.button,
 .chunkOutput .ui.right.labeled.input.error:not([class*="corner labeled"]) > input + .ui.label {
   border-right: 1px solid #E0B4B4;
 }
 
-.chunkOutput .ui.form > .field.error > .ui.right.labeled.input:not([class*="corner labeled"]) > .ui.label:first-child,
+.chunkOutput .ui.form .field.error > .ui.right.labeled.input:not([class*="corner labeled"]) > .ui.label:first-child,
 .chunkOutput .ui.right.labeled.input.error:not([class*="corner labeled"]) > .ui.label:first-child {
   border-left: 1px solid #E0B4B4;
 }
 
-.chunkOutput .ui.form > .field.info > .ui.action.input > .ui.button,
-.chunkOutput .ui.form > .field.info > .ui.labeled.input:not([class*="corner labeled"]) > .ui.label,
+.chunkOutput .ui.form .field.info > .ui.action.input > .ui.button,
+.chunkOutput .ui.form .field.info > .ui.labeled.input:not([class*="corner labeled"]) > .ui.label,
 .chunkOutput .ui.action.input.info > .ui.button,
 .chunkOutput .ui.labeled.input.info:not([class*="corner labeled"]) > .ui.label {
   border-top: 1px solid #A9D5DE;
   border-bottom: 1px solid #A9D5DE;
 }
 
-.chunkOutput .ui.form > .field.info > .ui[class*="left action"].input > .ui.button,
-.chunkOutput .ui.form > .field.info > .ui.labeled.input:not(.right):not([class*="corner labeled"]) > .ui.label,
+.chunkOutput .ui.form .field.info > .ui[class*="left action"].input > .ui.button,
+.chunkOutput .ui.form .field.info > .ui.labeled.input:not(.right):not([class*="corner labeled"]) > .ui.label,
 .chunkOutput .ui[class*="left action"].input.info > .ui.button,
 .chunkOutput .ui.labeled.input.info:not(.right):not([class*="corner labeled"]) > .ui.label {
   border-left: 1px solid #A9D5DE;
 }
 
-.chunkOutput .ui.form > .field.info > .ui.action.input:not([class*="left action"]) > input + .ui.button,
-.chunkOutput .ui.form > .field.info > .ui.right.labeled.input:not([class*="corner labeled"]) > input + .ui.label,
+.chunkOutput .ui.form .field.info > .ui.action.input:not([class*="left action"]) > input + .ui.button,
+.chunkOutput .ui.form .field.info > .ui.right.labeled.input:not([class*="corner labeled"]) > input + .ui.label,
 .chunkOutput .ui.action.input.info:not([class*="left action"]) > input + .ui.button,
 .chunkOutput .ui.right.labeled.input.info:not([class*="corner labeled"]) > input + .ui.label {
   border-right: 1px solid #A9D5DE;
 }
 
-.chunkOutput .ui.form > .field.info > .ui.right.labeled.input:not([class*="corner labeled"]) > .ui.label:first-child,
+.chunkOutput .ui.form .field.info > .ui.right.labeled.input:not([class*="corner labeled"]) > .ui.label:first-child,
 .chunkOutput .ui.right.labeled.input.info:not([class*="corner labeled"]) > .ui.label:first-child {
   border-left: 1px solid #A9D5DE;
 }
 
-.chunkOutput .ui.form > .field.success > .ui.action.input > .ui.button,
-.chunkOutput .ui.form > .field.success > .ui.labeled.input:not([class*="corner labeled"]) > .ui.label,
+.chunkOutput .ui.form .field.success > .ui.action.input > .ui.button,
+.chunkOutput .ui.form .field.success > .ui.labeled.input:not([class*="corner labeled"]) > .ui.label,
 .chunkOutput .ui.action.input.success > .ui.button,
 .chunkOutput .ui.labeled.input.success:not([class*="corner labeled"]) > .ui.label {
   border-top: 1px solid #A3C293;
   border-bottom: 1px solid #A3C293;
 }
 
-.chunkOutput .ui.form > .field.success > .ui[class*="left action"].input > .ui.button,
-.chunkOutput .ui.form > .field.success > .ui.labeled.input:not(.right):not([class*="corner labeled"]) > .ui.label,
+.chunkOutput .ui.form .field.success > .ui[class*="left action"].input > .ui.button,
+.chunkOutput .ui.form .field.success > .ui.labeled.input:not(.right):not([class*="corner labeled"]) > .ui.label,
 .chunkOutput .ui[class*="left action"].input.success > .ui.button,
 .chunkOutput .ui.labeled.input.success:not(.right):not([class*="corner labeled"]) > .ui.label {
   border-left: 1px solid #A3C293;
 }
 
-.chunkOutput .ui.form > .field.success > .ui.action.input:not([class*="left action"]) > input + .ui.button,
-.chunkOutput .ui.form > .field.success > .ui.right.labeled.input:not([class*="corner labeled"]) > input + .ui.label,
+.chunkOutput .ui.form .field.success > .ui.action.input:not([class*="left action"]) > input + .ui.button,
+.chunkOutput .ui.form .field.success > .ui.right.labeled.input:not([class*="corner labeled"]) > input + .ui.label,
 .chunkOutput .ui.action.input.success:not([class*="left action"]) > input + .ui.button,
 .chunkOutput .ui.right.labeled.input.success:not([class*="corner labeled"]) > input + .ui.label {
   border-right: 1px solid #A3C293;
 }
 
-.chunkOutput .ui.form > .field.success > .ui.right.labeled.input:not([class*="corner labeled"]) > .ui.label:first-child,
+.chunkOutput .ui.form .field.success > .ui.right.labeled.input:not([class*="corner labeled"]) > .ui.label:first-child,
 .chunkOutput .ui.right.labeled.input.success:not([class*="corner labeled"]) > .ui.label:first-child {
   border-left: 1px solid #A3C293;
 }
 
-.chunkOutput .ui.form > .field.warning > .ui.action.input > .ui.button,
-.chunkOutput .ui.form > .field.warning > .ui.labeled.input:not([class*="corner labeled"]) > .ui.label,
+.chunkOutput .ui.form .field.warning > .ui.action.input > .ui.button,
+.chunkOutput .ui.form .field.warning > .ui.labeled.input:not([class*="corner labeled"]) > .ui.label,
 .chunkOutput .ui.action.input.warning > .ui.button,
 .chunkOutput .ui.labeled.input.warning:not([class*="corner labeled"]) > .ui.label {
   border-top: 1px solid #C9BA9B;
   border-bottom: 1px solid #C9BA9B;
 }
 
-.chunkOutput .ui.form > .field.warning > .ui[class*="left action"].input > .ui.button,
-.chunkOutput .ui.form > .field.warning > .ui.labeled.input:not(.right):not([class*="corner labeled"]) > .ui.label,
+.chunkOutput .ui.form .field.warning > .ui[class*="left action"].input > .ui.button,
+.chunkOutput .ui.form .field.warning > .ui.labeled.input:not(.right):not([class*="corner labeled"]) > .ui.label,
 .chunkOutput .ui[class*="left action"].input.warning > .ui.button,
 .chunkOutput .ui.labeled.input.warning:not(.right):not([class*="corner labeled"]) > .ui.label {
   border-left: 1px solid #C9BA9B;
 }
 
-.chunkOutput .ui.form > .field.warning > .ui.action.input:not([class*="left action"]) > input + .ui.button,
-.chunkOutput .ui.form > .field.warning > .ui.right.labeled.input:not([class*="corner labeled"]) > input + .ui.label,
+.chunkOutput .ui.form .field.warning > .ui.action.input:not([class*="left action"]) > input + .ui.button,
+.chunkOutput .ui.form .field.warning > .ui.right.labeled.input:not([class*="corner labeled"]) > input + .ui.label,
 .chunkOutput .ui.action.input.warning:not([class*="left action"]) > input + .ui.button,
 .chunkOutput .ui.right.labeled.input.warning:not([class*="corner labeled"]) > input + .ui.label {
   border-right: 1px solid #C9BA9B;
 }
 
-.chunkOutput .ui.form > .field.warning > .ui.right.labeled.input:not([class*="corner labeled"]) > .ui.label:first-child,
+.chunkOutput .ui.form .field.warning > .ui.right.labeled.input:not([class*="corner labeled"]) > .ui.label:first-child,
 .chunkOutput .ui.right.labeled.input.warning:not([class*="corner labeled"]) > .ui.label:first-child {
   border-left: 1px solid #C9BA9B;
 }
@@ -20377,17 +20418,17 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 }
 
 .chunkOutput .ui.list .list > .item > .image + .content,
-.chunkOutput .ui.list .list > .item > .icon + .content,
+.chunkOutput .ui.list .list > .item > i.icon + .content,
 .chunkOutput .ui.list > .item > .image + .content,
-.chunkOutput .ui.list > .item > .icon + .content {
+.chunkOutput .ui.list > .item > i.icon + .content {
   display: table-cell;
   width: 100%;
   padding: 0 0 0 0.5em;
   vertical-align: top;
 }
 
-.chunkOutput .ui.list .list > .item > .loading.icon + .content,
-.chunkOutput .ui.list > .item > .loading.icon + .content {
+.chunkOutput .ui.list .list > .item > i.loading.icon + .content,
+.chunkOutput .ui.list > .item > i.loading.icon + .content {
   padding-left: calc(0.2857142857142857em + 0.5em);
 }
 
@@ -20548,8 +20589,8 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 
 .chunkOutput .ui.horizontal.list > .item > .image,
 .chunkOutput .ui.horizontal.list .list > .item > .image,
-.chunkOutput .ui.horizontal.list > .item > .icon,
-.chunkOutput .ui.horizontal.list .list > .item > .icon,
+.chunkOutput .ui.horizontal.list > .item > i.icon,
+.chunkOutput .ui.horizontal.list .list > .item > i.icon,
 .chunkOutput .ui.horizontal.list > .item > .content,
 .chunkOutput .ui.horizontal.list .list > .item > .content {
   vertical-align: middle;
@@ -20572,8 +20613,8 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 }
 
 .chunkOutput .ui.horizontal.list > .item > .image + .content,
-.chunkOutput .ui.horizontal.list > .item > .icon,
-.chunkOutput .ui.horizontal.list > .item > .icon + .content {
+.chunkOutput .ui.horizontal.list > .item > i.icon,
+.chunkOutput .ui.horizontal.list > .item > i.icon + .content {
   float: none;
   display: inline-block;
   width: auto;
@@ -20608,8 +20649,8 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 
 .chunkOutput .ui.list .list > a.item:hover > .icons,
 .chunkOutput .ui.list > a.item:hover > .icons,
-.chunkOutput .ui.list .list > a.item:hover > .icon,
-.chunkOutput .ui.list > a.item:hover > .icon {
+.chunkOutput .ui.list .list > a.item:hover > i.icon,
+.chunkOutput .ui.list > a.item:hover > i.icon {
   color: rgba(0, 0, 0, 0.87);
 }
 
@@ -20621,8 +20662,8 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
          Inverted
   --------------------*/
 
-.chunkOutput .ui.inverted.list .list > a.item > .icon,
-.chunkOutput .ui.inverted.list > a.item > .icon {
+.chunkOutput .ui.inverted.list .list > a.item > i.icon,
+.chunkOutput .ui.inverted.list > a.item > i.icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -22084,6 +22125,14 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   border-left: none;
 }
 
+.chunkOutput .ui.horizontal.segments > .segment:first-child {
+  border-radius: 0.21428571rem 0 0 0.21428571rem;
+}
+
+.chunkOutput .ui.horizontal.segments > .segment:last-child {
+  border-radius: 0 0.21428571rem 0.21428571rem 0;
+}
+
 /*******************************
             States
 *******************************/
@@ -22929,6 +22978,22 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 
 .chunkOutput span.ui.inverted.black.text {
   color: #545454;
+}
+
+.chunkOutput span.ui.error.text {
+  color: #DB2828;
+}
+
+.chunkOutput span.ui.info.text {
+  color: #31CCEC;
+}
+
+.chunkOutput span.ui.success.text {
+  color: #21BA45;
+}
+
+.chunkOutput span.ui.warning.text {
+  color: #F2C037;
 }
 
 .chunkOutput span.ui.disabled.text {
@@ -25917,7 +25982,8 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   display: block;
 }
 
-.chunkOutput .ui.menu .ui.dropdown .menu > .item .icon:not(.dropdown) {
+.chunkOutput .ui.menu .ui.dropdown .menu > .item > .icons,
+.chunkOutput .ui.menu .ui.dropdown .menu > .item > i.icon:not(.dropdown) {
   display: inline-block;
   font-size: 1em !important;
   float: none;
@@ -25947,7 +26013,7 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 
 /* Vertical */
 
-.chunkOutput .ui.vertical.menu .dropdown.item > .icon {
+.chunkOutput .ui.vertical.menu .dropdown.item > i.icon {
   float: right;
   content: "\f0da";
   margin-left: 1em;
@@ -27006,27 +27072,27 @@ Floated Menu / Item
 
 /* Icon */
 
-.chunkOutput .ui.icon.menu .item > .icon:not(.dropdown) {
+.chunkOutput .ui.icon.menu .item > i.icon:not(.dropdown) {
   margin: 0;
   opacity: 1;
 }
 
 /* Icon Gylph */
 
-.chunkOutput .ui.icon.menu .icon:before {
+.chunkOutput .ui.icon.menu i.icon:before {
   opacity: 1;
 }
 
 /* (x) Item Icon */
 
-.chunkOutput .ui.menu .icon.item > .icon {
+.chunkOutput .ui.menu .icon.item > i.icon {
   width: auto;
   margin: 0 auto;
 }
 
 /* Vertical Icon */
 
-.chunkOutput .ui.vertical.icon.menu .item > .icon:not(.dropdown) {
+.chunkOutput .ui.vertical.icon.menu .item > i.icon:not(.dropdown) {
   display: block;
   opacity: 1;
   margin: 0 auto;
@@ -27061,7 +27127,7 @@ Floated Menu / Item
 
 /* Icon */
 
-.chunkOutput .ui.labeled.icon.menu > .item > .icon:not(.dropdown) {
+.chunkOutput .ui.labeled.icon.menu > .item > i.icon:not(.dropdown) {
   height: 1em;
   display: block;
   font-size: 1.71428571em !important;
@@ -28774,7 +28840,7 @@ Floated Menu / Item
 
 /* Icon */
 
-.chunkOutput .ui.message > .icon {
+.chunkOutput .ui.message > i.icon {
   margin-right: 0.6em;
 }
 
@@ -28905,7 +28971,7 @@ Floated Menu / Item
   align-items: center;
 }
 
-.chunkOutput .ui.icon.message > .icon:not(.close) {
+.chunkOutput .ui.icon.message > i.icon:not(.close) {
   display: block;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
@@ -28925,11 +28991,11 @@ Floated Menu / Item
   vertical-align: middle;
 }
 
-.chunkOutput .ui.icon.message .icon:not(.close) + .content {
+.chunkOutput .ui.icon.message > i.icon:not(.close) + .content {
   padding-left: 0;
 }
 
-.chunkOutput .ui.icon.message .circular.icon {
+.chunkOutput .ui.icon.message > i.circular.icon {
   width: 1em;
 }
 
@@ -29524,7 +29590,7 @@ Floated Menu / Item
   text-align: inherit;
   color: rgba(0, 0, 0, 0.87);
   padding: 0.78571429em 0.78571429em;
-  vertical-align: middle;
+  vertical-align: inherit;
   font-style: normal;
   font-weight: normal;
   text-transform: none;
@@ -29578,11 +29644,11 @@ Floated Menu / Item
 
 /* Icons */
 
-.chunkOutput .ui.table > .icon {
+.chunkOutput .ui.table > i.icon {
   vertical-align: baseline;
 }
 
-.chunkOutput .ui.table > .icon:only-child {
+.chunkOutput .ui.table > i.icon:only-child {
   margin: 0;
 }
 
@@ -32426,7 +32492,7 @@ Floated Menu / Item
 
 .chunkOutput .ui.cards > .card .dimmer,
 .chunkOutput .ui.card .dimmer {
-  background-color: '';
+  background: '';
   z-index: 10;
 }
 
@@ -34215,11 +34281,11 @@ Floated Menu / Item
   transition: 0.2s color ease;
 }
 
-.chunkOutput .ui.feed > .event > .content .meta .like:hover .icon {
+.chunkOutput .ui.feed > .event > .content .meta .like:hover i.icon {
   color: #FF2733;
 }
 
-.chunkOutput .ui.feed > .event > .content .meta .active.like .icon {
+.chunkOutput .ui.feed > .event > .content .meta .active.like i.icon {
   color: #EF404A;
 }
 
@@ -34236,7 +34302,7 @@ Floated Menu / Item
 /* Action */
 
 .chunkOutput .ui.feed > .event > .content .meta a,
-.chunkOutput .ui.feed > .event > .content .meta > .icon {
+.chunkOutput .ui.feed > .event > .content .meta > i.icon {
   cursor: pointer;
   opacity: 1;
   color: rgba(0, 0, 0, 0.5);
@@ -34245,8 +34311,8 @@ Floated Menu / Item
 }
 
 .chunkOutput .ui.feed > .event > .content .meta a:hover,
-.chunkOutput .ui.feed > .event > .content .meta a:hover .icon,
-.chunkOutput .ui.feed > .event > .content .meta > .icon:hover {
+.chunkOutput .ui.feed > .event > .content .meta a:hover i.icon,
+.chunkOutput .ui.feed > .event > .content .meta > i.icon:hover {
   color: rgba(0, 0, 0, 0.95);
 }
 
@@ -35131,8 +35197,8 @@ Floated Menu / Item
    Icon Value
 ---------------*/
 
-.chunkOutput .ui.statistics .statistic > .value .icon,
-.chunkOutput .ui.statistic > .value .icon {
+.chunkOutput .ui.statistics .statistic > .value > i.icon,
+.chunkOutput .ui.statistic > .value > i.icon {
   opacity: 1;
   width: auto;
   margin: 0;
@@ -35303,8 +35369,8 @@ Floated Menu / Item
   min-height: 0 !important;
 }
 
-.chunkOutput .ui.horizontal.statistics .statistic > .value .icon,
-.chunkOutput .ui.horizontal.statistic > .value .icon {
+.chunkOutput .ui.horizontal.statistics .statistic > .value > i.icon,
+.chunkOutput .ui.horizontal.statistic > .value > i.icon {
   width: 1.18em;
 }
 
@@ -36864,7 +36930,7 @@ Floated Menu / Item
   text-align: center;
   vertical-align: middle;
   padding: 1em;
-  background-color: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.85);
   opacity: 0;
   line-height: 1;
   -webkit-animation-fill-mode: both;
@@ -37030,15 +37096,15 @@ Floated Menu / Item
   ---------------*/
 
 .chunkOutput .medium.medium.medium.medium.medium.dimmer {
-  background-color: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.65);
 }
 
 .chunkOutput .light.light.light.light.light.dimmer {
-  background-color: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.45);
 }
 
 .chunkOutput .very.light.light.light.light.dimmer {
-  background-color: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.25);
 }
 
 /*--------------
@@ -37046,7 +37112,7 @@ Floated Menu / Item
   ---------------*/
 
 .chunkOutput .ui.inverted.dimmer {
-  background-color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.85);
 }
 
 .chunkOutput .ui.inverted.dimmer > .content,
@@ -37059,15 +37125,15 @@ Floated Menu / Item
     ---------------*/
 
 .chunkOutput .medium.medium.medium.medium.medium.inverted.dimmer {
-  background-color: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.65);
 }
 
 .chunkOutput .light.light.light.light.light.inverted.dimmer {
-  background-color: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.45);
 }
 
 .chunkOutput .very.light.light.light.light.inverted.dimmer {
-  background-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.25);
 }
 
 /*--------------
@@ -37083,7 +37149,7 @@ Floated Menu / Item
   width: 0;
   height: 0;
   z-index: -100;
-  background-color: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0);
 }
 
 .chunkOutput .dimmed.dimmable > .ui.simple.dimmer {
@@ -37091,16 +37157,16 @@ Floated Menu / Item
   opacity: 1;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.85);
   z-index: 1;
 }
 
 .chunkOutput .ui.simple.inverted.dimmer {
-  background-color: rgba(255, 255, 255, 0);
+  background: rgba(255, 255, 255, 0);
 }
 
 .chunkOutput .dimmed.dimmable > .ui.simple.inverted.dimmer {
-  background-color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.85);
 }
 
 /*--------------
@@ -37453,6 +37519,16 @@ Floated Menu / Item
   border-top-width: 0;
 }
 
+.chunkOutput .ui.dropdown .menu > .item.vertical {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
 /*--------------
   Floated Content
 ---------------*/
@@ -37471,7 +37547,7 @@ Floated Menu / Item
   margin-right: 1em !important;
 }
 
-.chunkOutput .ui.dropdown .menu .item > .icon.floated,
+.chunkOutput .ui.dropdown .menu .item > i.icon.floated,
 .chunkOutput .ui.dropdown .menu .item > .flag.floated,
 .chunkOutput .ui.dropdown .menu .item > .image.floated,
 .chunkOutput .ui.dropdown .menu .item > img.floated {
@@ -37522,7 +37598,7 @@ Floated Menu / Item
 }
 
 .chunkOutput .ui.dropdown .menu > .input:not(.transparent) .button,
-.chunkOutput .ui.dropdown .menu > .input:not(.transparent) .icon,
+.chunkOutput .ui.dropdown .menu > .input:not(.transparent) i.icon,
 .chunkOutput .ui.dropdown .menu > .input:not(.transparent) .label {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
@@ -37537,6 +37613,18 @@ Floated Menu / Item
   float: right;
   margin: 0 0 0 1em;
   color: rgba(0, 0, 0, 0.4);
+}
+
+.chunkOutput .ui.dropdown .menu > .item.vertical > .description {
+  margin: 0;
+}
+
+/*-----------------
+      Item Text
+-------------------*/
+
+.chunkOutput .ui.dropdown .menu > .item.vertical > .text {
+  margin-bottom: 0.25em;
 }
 
 /*-----------------
@@ -37577,7 +37665,7 @@ Floated Menu / Item
 
 /* Icons / Flags / Labels / Image */
 
-.chunkOutput .ui.dropdown > .text > .icon,
+.chunkOutput .ui.dropdown > .text > i.icon,
 .chunkOutput .ui.dropdown > .text > .label,
 .chunkOutput .ui.dropdown > .text > .flag,
 .chunkOutput .ui.dropdown > .text > img,
@@ -37585,7 +37673,7 @@ Floated Menu / Item
   margin-top: 0em;
 }
 
-.chunkOutput .ui.dropdown .menu > .item > .icon,
+.chunkOutput .ui.dropdown .menu > .item > i.icon,
 .chunkOutput .ui.dropdown .menu > .item > .label,
 .chunkOutput .ui.dropdown .menu > .item > .flag,
 .chunkOutput .ui.dropdown .menu > .item > .image,
@@ -37593,12 +37681,12 @@ Floated Menu / Item
   margin-top: 0em;
 }
 
-.chunkOutput .ui.dropdown > .text > .icon,
+.chunkOutput .ui.dropdown > .text > i.icon,
 .chunkOutput .ui.dropdown > .text > .label,
 .chunkOutput .ui.dropdown > .text > .flag,
 .chunkOutput .ui.dropdown > .text > img,
 .chunkOutput .ui.dropdown > .text > .image,
-.chunkOutput .ui.dropdown .menu > .item > .icon,
+.chunkOutput .ui.dropdown .menu > .item > i.icon,
 .chunkOutput .ui.dropdown .menu > .item > .label,
 .chunkOutput .ui.dropdown .menu > .item > .flag,
 .chunkOutput .ui.dropdown .menu > .item > .image,
@@ -37783,12 +37871,12 @@ Floated Menu / Item
 }
 
 @media only screen and (max-width: 767.98px) {
-  .chunkOutput .ui.selection.dropdown[class*="very short"] .menu {
-    max-height: 4.00714286rem;
-  }
-
   .chunkOutput .ui.selection.dropdown.short .menu {
     max-height: 6.01071429rem;
+  }
+
+  .chunkOutput .ui.selection.dropdown[class*="very short"] .menu {
+    max-height: 4.00714286rem;
   }
 
   .chunkOutput .ui.selection.dropdown .menu {
@@ -37805,12 +37893,12 @@ Floated Menu / Item
 }
 
 @media only screen and (min-width: 768px) {
-  .chunkOutput .ui.selection.dropdown[class*="very short"] .menu {
-    max-height: 5.34285714rem;
-  }
-
   .chunkOutput .ui.selection.dropdown.short .menu {
     max-height: 8.01428571rem;
+  }
+
+  .chunkOutput .ui.selection.dropdown[class*="very short"] .menu {
+    max-height: 5.34285714rem;
   }
 
   .chunkOutput .ui.selection.dropdown .menu {
@@ -37827,12 +37915,12 @@ Floated Menu / Item
 }
 
 @media only screen and (min-width: 992px) {
-  .chunkOutput .ui.selection.dropdown[class*="very short"] .menu {
-    max-height: 8.01428571rem;
-  }
-
   .chunkOutput .ui.selection.dropdown.short .menu {
     max-height: 12.02142857rem;
+  }
+
+  .chunkOutput .ui.selection.dropdown[class*="very short"] .menu {
+    max-height: 8.01428571rem;
   }
 
   .chunkOutput .ui.selection.dropdown .menu {
@@ -37849,12 +37937,12 @@ Floated Menu / Item
 }
 
 @media only screen and (min-width: 1920px) {
-  .chunkOutput .ui.selection.dropdown[class*="very short"] .menu {
-    max-height: 10.68571429rem;
-  }
-
   .chunkOutput .ui.selection.dropdown.short .menu {
     max-height: 16.02857143rem;
+  }
+
+  .chunkOutput .ui.selection.dropdown[class*="very short"] .menu {
+    max-height: 10.68571429rem;
   }
 
   .chunkOutput .ui.selection.dropdown .menu {
@@ -37971,6 +38059,64 @@ Floated Menu / Item
   box-shadow: none !important;
 }
 
+/* CSS specific to iOS devices or firefox mobile only  */
+
+@supports (-webkit-touch-callout: none) or (-webkit-overflow-scrolling: touch) or (-moz-appearance:none) {
+@media (-moz-touch-enabled), (pointer: coarse) {
+    .ui.dropdown .scrollhint.menu:not(.hidden):before {
+      -webkit-animation: scrollhint 2s ease 2;
+      animation: scrollhint 2s ease 2;
+      content: '';
+      z-index: 15;
+      display: block;
+      position: absolute;
+      opacity: 0;
+      right: 0.25em;
+      top: 0;
+      height: 100%;
+      border-right: 0.25em solid;
+      border-left: 0;
+      -webkit-border-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0))) 1 100%;
+      -webkit-border-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)) 1 100%;
+      -o-border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)) 1 100%;
+      border-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0))) 1 100%;
+      border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)) 1 100%;
+    }
+
+    .ui.inverted.dropdown .scrollhint.menu:not(.hidden):before {
+      -webkit-border-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.75)), to(rgba(255, 255, 255, 0))) 1 100%;
+      -webkit-border-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0)) 1 100%;
+      -o-border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0)) 1 100%;
+      border-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.75)), to(rgba(255, 255, 255, 0))) 1 100%;
+      border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0)) 1 100%;
+    }
+
+@-webkit-keyframes scrollhint {
+      0% {
+        opacity: 1;
+        top: 100%;
+      }
+
+      100% {
+        opacity: 0;
+        top: 0;
+      }
+}
+
+@keyframes scrollhint {
+      0% {
+        opacity: 1;
+        top: 100%;
+      }
+
+      100% {
+        opacity: 0;
+        top: 0;
+      }
+}
+}
+}
+
 /*--------------
      Searchable
   ---------------*/
@@ -38041,13 +38187,17 @@ Floated Menu / Item
 
 /* Filtered Text */
 
-.chunkOutput .ui.active.search.dropdown input.search:focus + .text .icon,
+.chunkOutput .ui.active.search.dropdown input.search:focus + .text i.icon,
 .chunkOutput .ui.active.search.dropdown input.search:focus + .text .flag {
   opacity: 0.45;
 }
 
 .chunkOutput .ui.active.search.dropdown input.search:focus + .text {
   color: rgba(115, 115, 115, 0.87) !important;
+}
+
+.chunkOutput .ui.search.dropdown.button > span.sizer {
+  display: none;
 }
 
 /* Search Menu */
@@ -38116,7 +38266,7 @@ Floated Menu / Item
 
 /* Multiple Selection */
 
-.chunkOutput .ui.multiple.dropdown {
+.chunkOutput .ui.ui.multiple.dropdown {
   padding: 0.22620476em 3.2em 0.22620476em 0.35714286em;
 }
 
@@ -38151,6 +38301,12 @@ Floated Menu / Item
   max-width: 100%;
   margin: 0.45240952em 0 0.45240952em 0.64285714em;
   line-height: 1.21428571em;
+}
+
+.chunkOutput .ui.multiple.dropdown > .text.default {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .chunkOutput .ui.multiple.dropdown > .label ~ input.search {
@@ -38210,6 +38366,10 @@ Floated Menu / Item
   margin: 0.45240952em 0 0.45240952em 0.64285714em;
   width: 2.2em;
   line-height: 1.21428571em;
+}
+
+.chunkOutput .ui.multiple.search.dropdown.button {
+  min-width: 14em;
 }
 
 /*--------------
@@ -38790,23 +38950,24 @@ Floated Menu / Item
      Columnar
 ---------------*/
 
+.chunkOutput .ui.column.dropdown > .menu {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
 .chunkOutput .ui.dropdown[class*="two column"] > .menu > .item {
-  display: inline-block;
   width: 50%;
 }
 
 .chunkOutput .ui.dropdown[class*="three column"] > .menu > .item {
-  display: inline-block;
   width: 33%;
 }
 
 .chunkOutput .ui.dropdown[class*="four column"] > .menu > .item {
-  display: inline-block;
   width: 25%;
 }
 
 .chunkOutput .ui.dropdown[class*="five column"] > .menu > .item {
-  display: inline-block;
   width: 20%;
 }
 
@@ -39296,7 +39457,7 @@ Floated Menu / Item
   color: rgba(255, 255, 255, 0.7);
 }
 
-.chunkOutput .ui.inverted.active.search.dropdown input.search:focus + .text .icon,
+.chunkOutput .ui.inverted.active.search.dropdown input.search:focus + .text i.icon,
 .chunkOutput .ui.inverted.active.search.dropdown input.search:focus + .text .flag {
   opacity: 0.45;
 }
@@ -39537,7 +39698,7 @@ Floated Menu / Item
       Icon
 ---------------*/
 
-.chunkOutput .ui.embed > .icon {
+.chunkOutput .ui.embed > i.icon {
   cursor: pointer;
   position: absolute;
   top: 0;
@@ -39547,7 +39708,7 @@ Floated Menu / Item
   z-index: 2;
 }
 
-.chunkOutput .ui.embed > .icon:after {
+.chunkOutput .ui.embed > i.icon:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -39562,7 +39723,7 @@ Floated Menu / Item
   transition: opacity 0.5s ease;
 }
 
-.chunkOutput .ui.embed > .icon:before {
+.chunkOutput .ui.embed > i.icon:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -39584,13 +39745,13 @@ Floated Menu / Item
      Hover
 ---------------*/
 
-.chunkOutput .ui.embed .icon:hover:after {
+.chunkOutput .ui.embed i.icon:hover:after {
   background: -webkit-radial-gradient(transparent 45%, rgba(0, 0, 0, 0.3));
   background: radial-gradient(transparent 45%, rgba(0, 0, 0, 0.3));
   opacity: 1;
 }
 
-.chunkOutput .ui.embed .icon:hover:before {
+.chunkOutput .ui.embed i.icon:hover:before {
   color: #FFFFFF;
 }
 
@@ -39598,7 +39759,7 @@ Floated Menu / Item
      Active
 ---------------*/
 
-.chunkOutput .ui.active.embed > .icon,
+.chunkOutput .ui.active.embed > i.icon,
 .chunkOutput .ui.active.embed > .placeholder {
   display: none;
 }
@@ -39736,6 +39897,7 @@ Floated Menu / Item
   position: absolute;
   text-transform: none;
   text-align: left;
+  text-shadow: none;
   white-space: nowrap;
   font-size: 1rem;
   border: 1px solid #D4D4D5;
@@ -39834,6 +39996,7 @@ Floated Menu / Item
 .chunkOutput [data-tooltip][data-position="right center"]:hover:after {
   -webkit-transform: translateY(-50%) scale(1) !important;
   transform: translateY(-50%) scale(1) !important;
+  -moz-transform: translateY(-50%) scale(1.0001) !important;
 }
 
 .chunkOutput [data-tooltip][data-position="top left"]:after,
@@ -41791,6 +41954,7 @@ Floated Menu / Item
 .chunkOutput .pushable:not(body) {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+  overflow-y: hidden;
 }
 
 .chunkOutput .pushable:not(body) > .ui.sidebar,
@@ -41847,7 +42011,7 @@ Floated Menu / Item
   top: 0;
   right: 0;
   content: '';
-  background-color: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.4);
   overflow: hidden;
   opacity: 0;
   -webkit-transition: opacity 500ms;
@@ -42428,7 +42592,6 @@ Floated Menu / Item
 *******************************/
 
 .chunkOutput .ui.native.sticky {
-  position: -webkit-sticky;
   position: -moz-sticky;
   position: -ms-sticky;
   position: -o-sticky;
