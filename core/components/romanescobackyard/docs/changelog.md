@@ -1,8 +1,10 @@
 # Changelog for Romanesco Backyard
 
 ## Backyard 1.0.0-beta3
-Released on ...
+Released on February 8, 2021
 
+- Add auto-generated front-end pattern library
+- Add top menu items for clearing custom cache
 - Update lexicon keys for footer credits
 - Add boolean editor and renderer for indicating hidemenu status in Collections
 - Remove additional top margin on first CB repeater row
