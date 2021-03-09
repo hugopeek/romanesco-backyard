@@ -1,5 +1,10 @@
 # Changelog for Romanesco Backyard
 
+## Backyard 1.0.0-beta4
+Released on ...
+
+- Fix incorrect reference to permissions key in menu config
+
 ## Backyard 1.0.0-beta3
 Released on February 8, 2021
 
