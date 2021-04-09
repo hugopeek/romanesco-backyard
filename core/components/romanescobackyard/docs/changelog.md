@@ -3,6 +3,7 @@
 ## Backyard 1.0.0-beta4
 Released on ...
 
+- Add public function to get cache busting string
 - Fix incorrect reference to permissions key in menu config
 
 ## Backyard 1.0.0-beta3

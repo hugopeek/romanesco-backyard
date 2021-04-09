@@ -35,9 +35,9 @@ class Romanesco
      *
      * @param array $haystack
      * @param string $needle
-     * @return mixed
+     * @return array
      */
-    public function recursiveArraySearch(array $haystack, $needle)
+    public function recursiveArraySearch(array $haystack, string $needle)
     {
         $result = array();
         $iterator  = new RecursiveArrayIterator($haystack);
@@ -128,7 +128,7 @@ class Romanesco
      * Generate critical CSS for a given page.
      *
      * @param array $settings
-     * @return true
+     * @return bool
      */
     public function generateCriticalCSS(array $settings = array())
     {
@@ -153,5 +153,26 @@ class Romanesco
         $this->modx->log(modX::LOG_LEVEL_INFO, "[Romanesco] Critical CSS generated for {$settings['uri']} ({$settings['id']})");
 
         return true;
+    }
+
+    /**
+     *
+     * @param string $type
+     * @return string
+     */
+    public function getCacheBustingString(string $type): string
+    {
+        if (!in_array(strtolower($type),['css','js'])) return '';
+
+        try {
+            if ($this->modx->getObject('cgSetting', array('key' => 'cache_buster'))->get('value') == 1) {
+                return '.' . str_replace('.', '', $this->modx->getOption('romanesco.assets_version_' . strtolower($type)));
+            }
+            return '';
+        }
+        catch (Error $e) {
+            $this->modx->log(modX::LOG_LEVEL_ERROR, $e);
+            return '';
+        }
     }
 }
