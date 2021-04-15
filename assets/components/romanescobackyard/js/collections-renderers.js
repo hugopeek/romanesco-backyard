@@ -1,9 +1,9 @@
-imageRenderer = function(value, metaData, record, rowIndex, colIndex, store) {
+var imageRenderer = function(value, metaData, record, rowIndex, colIndex, store) {
     if (value != '' && value != null) {
         return '<div class="imageRenderer"><img src="' + value + '" style="max-width:100%;height:auto;"></div>';
     }
 }
-imageRendererTestimonialCompany = function(value, metaData, record, rowIndex, colIndex, store) {
+var imageRendererTestimonialCompany = function(value, metaData, record, rowIndex, colIndex, store) {
     //if (value != '' && value != null) {
     //    var baseUrl = MODx.config.default_site_url + "testimonials/companies/";
     //    if (value.indexOf('http://') === 0) {
@@ -24,7 +24,7 @@ imageRendererTestimonialCompany = function(value, metaData, record, rowIndex, co
     })
     return '<div class="imageRendererTestimonialCompany"><img src="' + url + '" style="max-width:100%; height:auto;" /></div>';
 }
-imageRendererTestimonialPerson = function(value, metaData, record, rowIndex, colIndex, store) {
+var imageRendererTestimonialPerson = function(value, metaData, record, rowIndex, colIndex, store) {
     if (value != '' && value != null) {
         var baseUrl = MODx.config.default_site_url + "testimonials/persons/";
         if (value.indexOf('http://') === 0) {
@@ -33,7 +33,7 @@ imageRendererTestimonialPerson = function(value, metaData, record, rowIndex, col
         return '<div class="imageRendererTestimonialPerson"><img src="' + baseUrl + value + '" width="100"></div>';
     }
 }
-imageRendererTeam = function(value, metaData, record, rowIndex, colIndex, store) {
+var imageRendererTeam = function(value, metaData, record, rowIndex, colIndex, store) {
     if (value != '' && value != null) {
         var baseUrl = MODx.config.default_site_url + "team/";
         if (value.indexOf('http://') === 0) {
@@ -44,13 +44,13 @@ imageRendererTeam = function(value, metaData, record, rowIndex, colIndex, store)
 }
 
 // Default boolean renderer doesn't always process 0 values correctly
-booleanRenderer = function(value, metaData, record, rowIndex, colIndex, store) {
+var booleanRenderer = function(value, metaData, record, rowIndex, colIndex, store) {
     var iconclass = (value != 0) ? 'icon-check' : 'icon-times';
     return '<div style="text-align:center;"><i class="icon ' + iconclass + '"></i></div>';
 }
 
 // Default boolean is counterintuitive for indicating hidden resources
-booleanRendererVisibility = function(value, metaData, record, rowIndex, colIndex, store) {
+var booleanRendererVisibility = function(value, metaData, record, rowIndex, colIndex, store) {
     var iconclass = (value != 0) ? 'icon-ban' : 'icon-eye';
     return '<div style="text-align:center;"><i class="icon ' + iconclass + '"></i></div>';
 }

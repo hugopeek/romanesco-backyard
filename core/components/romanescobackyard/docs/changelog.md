@@ -4,6 +4,7 @@
 Released on ...
 
 - Add public function to get cache busting string
+- Fix variables in Collection renderers
 - Fix incorrect reference to permissions key in menu config
 
 ## Backyard 1.0.0-beta3
