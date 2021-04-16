@@ -63,7 +63,7 @@ gulp.task('critical', function (done) {
     critical.generate({
         base: basePath,
         rebase: asset => {
-            if (asset.url[0] !== '/') {
+            if (asset.url[0] !== '/' && asset.url.slice(0,5) !== 'data:') {
                 return `${asset.absolutePath}`;
             }
         },
