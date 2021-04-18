@@ -136,8 +136,6 @@ class Romanesco
         // Take note that running multiple processes (> 10) in parallel will severely cripple your server!
         $disown = $settings['parallel'] ?? true ? ' &' : '';
 
-        $this->modx->log(modX::LOG_LEVEL_ERROR, $settings['url']);
-
         exec(
             '"$HOME/.nvm/nvm-exec" gulp critical' .
             ' --src ' . $settings['url'] .
