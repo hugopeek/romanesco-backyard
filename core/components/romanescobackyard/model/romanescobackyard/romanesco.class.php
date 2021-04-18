@@ -136,9 +136,11 @@ class Romanesco
         // Take note that running multiple processes (> 10) in parallel will severely cripple your server!
         $disown = $settings['parallel'] ?? true ? ' &' : '';
 
+        $this->modx->log(modX::LOG_LEVEL_ERROR, $settings['url']);
+
         exec(
             '"$HOME/.nvm/nvm-exec" gulp critical' .
-            ' --src ' . $this->modx->makeUrl($settings['id'],'','','full') .
+            ' --src ' . $settings['url'] .
             ' --dest ' . $this->modx->getOption('base_path') . $settings['cssPath'] . '/critical/' . rtrim($settings['uri'],'/') . '.css' .
             ' --cssPaths ' . rtrim($settings['distPath'],'/') . '/semantic.css' .
             ' --cssPaths ' . rtrim($settings['cssPath'],'/') . '/site.css' .
