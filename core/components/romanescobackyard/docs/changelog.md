@@ -1,7 +1,7 @@
 # Changelog for Romanesco Backyard
 
 ## Backyard 1.0.0-beta4
-Released on ...
+Released on April 19, 2021
 
 - Prevent critical CSS generator from messing up data urls
 - Add public function to get cache busting string
