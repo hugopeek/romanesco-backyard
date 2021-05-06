@@ -86,7 +86,7 @@
                     "display": "",
                     "sourceFrom": "config",
                     "sources": "",
-                    "inputOptionValues": "1||2||3||5||8||13||21||34||55||89",
+                    "inputOptionValues": "@CHUNK tvSelectFibonacci",
                     "default": "",
                     "useDefaultIfEmpty": "0",
                     "pos": 5
