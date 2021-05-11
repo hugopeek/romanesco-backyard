@@ -142,6 +142,8 @@ class Romanesco
             ' --dest ' . $this->modx->getOption('base_path') . $settings['cssPath'] . '/critical/' . rtrim($settings['uri'],'/') . '.css' .
             ' --cssPaths ' . rtrim($settings['distPath'],'/') . '/semantic.css' .
             ' --cssPaths ' . rtrim($settings['cssPath'],'/') . '/site.css' .
+            ' --user ' . escapeshellcmd($this->modx->getOption('romanesco.htpasswd_user')) .
+            ' --pass ' . escapeshellcmd($this->modx->getOption('romanesco.htpasswd_pass')) .
             ' --devMode ' . $this->modx->getOption('romanesco.dev_mode') .
             ' --gulpfile ' . escapeshellcmd($this->modx->getOption('assets_path')) . 'components/romanescobackyard/js/gulp/generate-critical-css.js' .
             ' >> ' . escapeshellcmd($this->modx->getOption('core_path')) . 'cache/logs/css-critical.log' .

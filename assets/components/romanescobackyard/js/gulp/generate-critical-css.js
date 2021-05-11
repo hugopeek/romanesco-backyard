@@ -27,6 +27,14 @@ const
             describe: 'Enable this to accept self-signed SSL certificates',
             type: 'boolean'
         })
+        .option('user', {
+            describe: 'Fill in username/password to access pages behind htpasswd',
+            type: 'string'
+        })
+        .option('pass', {
+            describe: 'Fill in username/password to access pages behind htpasswd',
+            type: 'string'
+        })
         .help('help')
         .argv,
 
@@ -52,6 +60,8 @@ gulp.task('critical', function (done) {
     let src = argv.src;
     let dest = argv.dest;
     let cssPaths = argv.cssPaths;
+    let user = argv.user;
+    let pass = argv.pass;
     let devMode = argv.devMode;
 
     // Allow unauthorized requests (from self-signed SSL certificates) in dev mode
@@ -93,6 +103,8 @@ gulp.task('critical', function (done) {
             https: {
                 rejectUnauthorized: rejectUnauthorized
             }
-        }
+        },
+        user: user,
+        pass: pass
     }, done);
 });
