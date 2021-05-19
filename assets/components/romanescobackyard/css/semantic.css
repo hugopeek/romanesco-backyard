@@ -1278,6 +1278,17 @@
   font-size: 85%;
 }
 
+.chunkOutput #content .video {
+  overflow: hidden;
+}
+
+.chunkOutput #content .video > video {
+  width: 100%;
+  max-width: calc(100% + 2px);
+  margin-top: -1px;
+  margin-left: -1px;
+}
+
 .chunkOutput #home .lead.rotating.sentence {
   position: relative;
 }
@@ -6232,7 +6243,7 @@
          Theme Overrides
 *******************************/
 
-.chunkOutput .ui[class*="center aligned"] .ui.button:not(.attached):not(.center.aligned) {
+.chunkOutput .ui[class*="center aligned"] .ui.button:not(.attached):not(.center.aligned):not(:last-child) {
   margin-left: 0.25em;
 }
 
@@ -23101,16 +23112,6 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
          Site Overrides
 *******************************/
 
-.chunkOutput .ui.segment.background.spirograph:before {
-  background-position: 40vw 46% !important;
-  background-size: 90rem !important;
-}
-
-.chunkOutput .ui.segment.background.fractal-badge:before {
-  background-position: 40vw 26% !important;
-  background-size: 60rem !important;
-}
-
 /*!
  * # Fomantic-UI - Breadcrumb
  * http://github.com/fomantic/Fomantic-UI/
@@ -33781,6 +33782,12 @@ Floated Menu / Item
   }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .chunkOutput .ui.stackable[class*="on tablet"].cards > .card {
+    width: 100% !important;
+  }
+}
+
 /*******************************
     User Variable Overrides
 *******************************/
@@ -42690,7 +42697,6 @@ Floated Menu / Item
 *******************************/
 
 .chunkOutput .ui.native.sticky {
-  position: -webkit-sticky;
   position: -moz-sticky;
   position: -ms-sticky;
   position: -o-sticky;
