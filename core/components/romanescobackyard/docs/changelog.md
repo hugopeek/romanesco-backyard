@@ -1,9 +1,14 @@
 # Changelog for Romanesco Backyard
 
+## Backyard 1.0.0-beta5
+Released on June 10, 2021
+
+- Add option to generate critical CSS for pages behind htpasswd wall 
+- Replace hardcoded Fibonacci input values with generated ones
+
 ## Backyard 1.0.0-beta4
 Released on April 19, 2021
 
-- Add option to generate critical CSS for pages behind htpasswd wall
 - Prevent critical CSS generator from messing up data urls
 - Add public function to get cache busting string
 - Fix variables in Collection renderers
