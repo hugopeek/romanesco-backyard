@@ -1,9 +1,6 @@
 <?php
 /**
- * Default English Lexicon Entries for FormBlocks
- *
- * @package formblocks
- * @subpackage lexicon
+ * Default English lexicon entries for FormBlocks
  */
 
 // General
