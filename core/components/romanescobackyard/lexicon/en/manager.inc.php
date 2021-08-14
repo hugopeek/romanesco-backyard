@@ -76,6 +76,10 @@ $_lang['collections.downloads.children'] = 'Download';
 $_lang['collections.downloads.children.create'] = 'Add Download';
 $_lang['collections.downloads.children.back_to_collection_label'] = 'All Downloads';
 
+$_lang['collections.notes.children'] = 'Notes';
+$_lang['collections.notes.children.create'] = 'Add Note';
+$_lang['collections.notes.children.back_to_collection_label'] = 'All Notes';
+
 
 // ContentBlocks previews
 // ---------------------------------------------------------------------
