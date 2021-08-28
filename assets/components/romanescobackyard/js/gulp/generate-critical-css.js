@@ -29,10 +29,12 @@ const
         })
         .option('user', {
             describe: 'Fill in username/password to access pages behind htpasswd',
+            default: 'empty', // needs a non-empty value, or task will fail
             type: 'string'
         })
         .option('pass', {
             describe: 'Fill in username/password to access pages behind htpasswd',
+            default: 'empty',
             type: 'string'
         })
         .help('help')

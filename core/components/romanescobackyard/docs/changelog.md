@@ -3,6 +3,7 @@
 ## Backyard 1.0.0-beta6
 Released on ...
 
+- Set non-empty default values for htpasswd user and pass
 - Remove minify parameter from critical task (was removed in 4.0)
 
 ## Backyard 1.0.0-beta5
