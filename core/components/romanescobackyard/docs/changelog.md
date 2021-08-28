@@ -1,9 +1,14 @@
 # Changelog for Romanesco Backyard
 
+## Backyard 1.0.0-beta6
+Released on ...
+
+- Remove minify parameter from critical task (was removed in 4.0)
+
 ## Backyard 1.0.0-beta5
 Released on June 10, 2021
 
-- Add option to generate critical CSS for pages behind htpasswd wall 
+- Add option to generate critical CSS for pages behind htpasswd wall
 - Replace hardcoded Fibonacci input values with generated ones
 
 ## Backyard 1.0.0-beta4

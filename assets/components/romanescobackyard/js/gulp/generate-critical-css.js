@@ -80,7 +80,6 @@ gulp.task('critical', function (done) {
         src: src,
         target: dest,
         css: cssPaths,
-        minify: true,
         ignore: {
             atrule: ['@inline']
         },
