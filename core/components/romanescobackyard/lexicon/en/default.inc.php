@@ -112,11 +112,12 @@ $_lang['romanesco.patterns.caveats_title'] = 'Caveats';
 $_lang['romanesco.patterns.specifications_title'] = 'Specifications';
 $_lang['romanesco.patterns.settings_title'] = 'Settings';
 $_lang['romanesco.patterns.references_title'] = 'References';
-$_lang['romanesco.patterns.included_patterns'] = 'Contains the following patterns';
-$_lang['romanesco.patterns.referring_patterns'] = 'Included in the following patterns';
-$_lang['romanesco.patterns.referring_pages'] = 'Used on the following pages';
-$_lang['romanesco.patterns.assigned_templates'] = 'Assigned to the following templates';
-$_lang['romanesco.patterns.assigned_tvs'] = 'Has the following TVs assigned';
+$_lang['romanesco.patterns.included_patterns'] = 'Included patterns';
+$_lang['romanesco.patterns.referring_patterns'] = 'Referring patterns';
+$_lang['romanesco.patterns.referring_pages'] = 'Used on these pages';
+$_lang['romanesco.patterns.assigned_templates'] = 'Assigned to templates';
+$_lang['romanesco.patterns.assigned_tvs'] = 'Assigned TVs';
+$_lang['romanesco.patterns.not_found'] = 'No references found.';
 
 // Status indicator
 $_lang['romanesco.patterns.status_solid'] = 'Solid (safe to use as instructed)';
@@ -126,7 +127,7 @@ $_lang['romanesco.patterns.status_unstable'] = 'Unstable (severely flawed, do no
 $_lang['romanesco.patterns.status_untested'] = 'Untested (use at your own risk)';
 $_lang['romanesco.patterns.status_experimental'] = 'Experimental (just fiddling with some ideas here)';
 $_lang['romanesco.patterns.status_review'] = 'In review (under evaluation if this belongs in the library or not)';
-$_lang['romanesco.patterns.status_deprecated'] = 'Deprecated (will be deleted in the next major release)';
+$_lang['romanesco.patterns.status_deprecated'] = 'Deprecated (will be deleted in a next major release)';
 $_lang['romanesco.patterns.status_unknown'] = 'Unknown (shrouded in mystery, this element is)';
 
 $_lang['romanesco.patterns.status_solid_color'] = 'green';
