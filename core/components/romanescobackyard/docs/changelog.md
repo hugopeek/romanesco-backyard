@@ -1,7 +1,7 @@
 # Changelog for Romanesco Backyard
 
 ## Backyard 1.0.0-beta6
-Released on ...
+Released on August 30, 2021
 
 - Add custom cache partition for patterns
 - Fix clearing of individual custom cache partitions
