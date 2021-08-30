@@ -117,6 +117,7 @@ $_lang['romanesco.patterns.referring_patterns'] = 'Referring patterns';
 $_lang['romanesco.patterns.referring_pages'] = 'Used on these pages';
 $_lang['romanesco.patterns.assigned_templates'] = 'Assigned to templates';
 $_lang['romanesco.patterns.assigned_tvs'] = 'Assigned TVs';
+$_lang['romanesco.patterns.assigned_chunk'] = 'Assigned';
 $_lang['romanesco.patterns.not_found'] = 'No references found.';
 
 // Status indicator
