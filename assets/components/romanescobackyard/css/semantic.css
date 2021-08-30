@@ -1,18 +1,16 @@
 /*
- * # Fomantic UI - 2.8.7
+ * # Fomantic UI - 2.8.8
  * https://github.com/fomantic/Fomantic-UI
  * http://fomantic-ui.com/
  *
- * Copyright 2014 Contributors
+ * Copyright 2021 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
  */
 
-@import url('https://fonts.googleapis.com/css?family=Source Sans Pro:400,700,400italic,700italic&display=swap&subset=latin');
-
 /*!
- * # Fomantic-UI - Reset
+ * # Fomantic-UI 2.8.8 - Reset
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -474,7 +472,7 @@
 *******************************/
 
 /*!
- * # Fomantic-UI - Site
+ * # Fomantic-UI 2.8.8 - Site
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -503,8 +501,8 @@
   min-width: 320px;
   background: #ffffff;
   font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  font-size: 1.25rem;
-  line-height: 1.45;
+  font-size: 1.28rem;
+  line-height: 1.4285em;
   color: rgba(0, 0, 0, 0.87);
 }
 
@@ -526,23 +524,23 @@
 
 .chunkOutput h1 {
   min-height: 1rem;
-  font-size: 2.58411724rem;
+  font-size: 2.64613605rem;
 }
 
 .chunkOutput h2 {
-  font-size: 2.22111125rem;
+  font-size: 2.27441792rem;
 }
 
 .chunkOutput h3 {
-  font-size: 1.93857257rem;
+  font-size: 1.98509831rem;
 }
 
 .chunkOutput h4 {
-  font-size: 1.66625rem;
+  font-size: 1.70624rem;
 }
 
 .chunkOutput h5 {
-  font-size: 1.454293rem;
+  font-size: 1.48919603rem;
 }
 
 .chunkOutput h1:first-child,
@@ -567,7 +565,7 @@
 
 .chunkOutput p {
   margin: 0em 0em 1.333em;
-  line-height: 1.45;
+  line-height: 1.4285em;
 }
 
 .chunkOutput p:first-child {
@@ -705,6 +703,7 @@
 .chunkOutput html {
   font-size: 80%;
   font-family: "mobile";
+  scroll-padding-top: 7rem;
 }
 
 .chunkOutput body:after {
@@ -856,12 +855,12 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .chunkOutput body.note.toc #content,
-  .chunkOutput body.note.toc #sidebar {
+  .chunkOutput body.vertical.toc #content,
+  .chunkOutput body.vertical.toc #sidebar {
     margin-top: calc(var(--baseline) * 3rem);
   }
 
-  .chunkOutput body.note.toc #content > .stripe.segment:first-child {
+  .chunkOutput body.vertical.toc #content > .stripe.segment:first-child {
     padding-top: 0;
   }
 }
@@ -928,11 +927,12 @@
 
 .chunkOutput p {
   margin: 0 0 calc(var(--baseline) * 2rem);
+  font-weight: normal;
 }
 
 .chunkOutput .lead {
   font-size: 1.333em !important;
-  line-height: 1.55 !important;
+  line-height: 1.5285em !important;
 }
 
 @media only screen and (max-width: 767.98px) {
@@ -1036,16 +1036,16 @@
 
 .chunkOutput .quote p,
 .chunkOutput .quote {
-  font-size: 1.93857257rem !important;
+  font-size: 1.98509831rem !important;
 }
 
 .chunkOutput .quote footer {
-  font-size: 1.66625rem;
+  font-size: 1.70624rem;
 }
 
 .chunkOutput .quote.mini p,
 .chunkOutput .quote.mini {
-  font-size: 1.25rem !important;
+  font-size: 1.28rem !important;
 }
 
 .chunkOutput .quote.mini footer {
@@ -1054,7 +1054,7 @@
 
 .chunkOutput .quote.tiny p,
 .chunkOutput .quote.tiny {
-  font-size: 1.454293rem !important;
+  font-size: 1.48919603rem !important;
 }
 
 .chunkOutput .quote.tiny footer {
@@ -1063,7 +1063,7 @@
 
 .chunkOutput .quote.small p,
 .chunkOutput .quote.small {
-  font-size: 1.66625rem !important;
+  font-size: 1.70624rem !important;
 }
 
 .chunkOutput .quote.small footer {
@@ -1072,7 +1072,7 @@
 
 .chunkOutput .quote.large p,
 .chunkOutput .quote.large {
-  font-size: 2.22111125rem !important;
+  font-size: 2.27441792rem !important;
 }
 
 .chunkOutput .quote.large footer {
@@ -1081,7 +1081,7 @@
 
 .chunkOutput .quote.big p,
 .chunkOutput .quote.big {
-  font-size: 2.58411724rem !important;
+  font-size: 2.64613605rem !important;
 }
 
 .chunkOutput .quote.big footer {
@@ -1090,7 +1090,7 @@
 
 .chunkOutput .quote.huge p,
 .chunkOutput .quote.huge {
-  font-size: 3.44462828rem !important;
+  font-size: 3.52729936rem !important;
 }
 
 .chunkOutput .quote.huge footer {
@@ -1099,7 +1099,7 @@
 
 .chunkOutput .quote.massive p,
 .chunkOutput .quote.massive {
-  font-size: 4.5916895rem !important;
+  font-size: 4.70189004rem !important;
 }
 
 .chunkOutput .quote.massive footer {
@@ -1289,6 +1289,10 @@
   margin-left: -1px;
 }
 
+.chunkOutput svg tspan {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
 .chunkOutput #home .lead.rotating.sentence {
   position: relative;
 }
@@ -1442,8 +1446,46 @@
   }
 }
 
+.chunkOutput #color-palette .basic.segment {
+  border-radius: 0.28571429em;
+}
+
+.chunkOutput #commercial-support .cards > .card > .image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 8rem;
+  padding: 1em 1.5em;
+}
+
+.chunkOutput #commercial-support .cards > .card > .image img {
+  max-height: 5rem;
+  max-width: 21rem;
+  margin: 0 auto;
+}
+
+.chunkOutput #commercial-support .cards > .card:nth-child(1) .image {
+  background: #698f73;
+}
+
+.chunkOutput #commercial-support .cards > .card:nth-child(2) .image {
+  background: -webkit-linear-gradient(315deg, #c6437d 0%, #50348f 100%);
+  background: linear-gradient(135deg, #c6437d 0%, #50348f 100%);
+}
+
+.chunkOutput #commercial-support .cards > .card:nth-child(3) .image {
+  background: #1f4a7f;
+}
+
+@media (max-width: 767.98px) {
+  .chunkOutput #hub .ui.pattern.segment > .stackable.grid {
+    margin-left: -1rem !important;
+    margin-right: -1rem !important;
+  }
+}
+
 /*!
- * # Fomantic-UI - Button
+ * # Fomantic-UI 2.8.8 - Button
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -1806,7 +1848,7 @@
 /* Twitter */
 
 .chunkOutput .ui.twitter.button {
-  background-color: #0084B4;
+  background-color: #1DA1F2;
   color: #FFFFFF;
   text-shadow: none;
   background-image: none;
@@ -1815,13 +1857,13 @@
 }
 
 .chunkOutput .ui.twitter.button:hover {
-  background-color: #00719b;
+  background-color: #0298f3;
   color: #FFFFFF;
   text-shadow: none;
 }
 
 .chunkOutput .ui.twitter.button:active {
-  background-color: #005f81;
+  background-color: #0c85d0;
   color: #FFFFFF;
   text-shadow: none;
 }
@@ -1829,7 +1871,7 @@
 /* Google Plus */
 
 .chunkOutput .ui.google.plus.button {
-  background-color: #DC4A38;
+  background-color: #DD4B39;
   color: #FFFFFF;
   text-shadow: none;
   background-image: none;
@@ -1838,13 +1880,13 @@
 }
 
 .chunkOutput .ui.google.plus.button:hover {
-  background-color: #de321d;
+  background-color: #e0321c;
   color: #FFFFFF;
   text-shadow: none;
 }
 
 .chunkOutput .ui.google.plus.button:active {
-  background-color: #bf3322;
+  background-color: #c23321;
   color: #FFFFFF;
   text-shadow: none;
 }
@@ -1852,19 +1894,19 @@
 /* Linked In */
 
 .chunkOutput .ui.linkedin.button {
-  background-color: #1F88BE;
+  background-color: #0077B5;
   color: #FFFFFF;
   text-shadow: none;
 }
 
 .chunkOutput .ui.linkedin.button:hover {
-  background-color: #147baf;
+  background-color: #00669c;
   color: #FFFFFF;
   text-shadow: none;
 }
 
 .chunkOutput .ui.linkedin.button:active {
-  background-color: #186992;
+  background-color: #005582;
   color: #FFFFFF;
   text-shadow: none;
 }
@@ -1872,7 +1914,7 @@
 /* YouTube */
 
 .chunkOutput .ui.youtube.button {
-  background-color: #CC181E;
+  background-color: #FF0000;
   color: #FFFFFF;
   text-shadow: none;
   background-image: none;
@@ -1881,13 +1923,13 @@
 }
 
 .chunkOutput .ui.youtube.button:hover {
-  background-color: #bd0d13;
+  background-color: #e60000;
   color: #FFFFFF;
   text-shadow: none;
 }
 
 .chunkOutput .ui.youtube.button:active {
-  background-color: #9e1317;
+  background-color: #cc0000;
   color: #FFFFFF;
   text-shadow: none;
 }
@@ -1918,7 +1960,7 @@
 /* Pinterest */
 
 .chunkOutput .ui.pinterest.button {
-  background-color: #00ACED;
+  background-color: #BD081C;
   color: #FFFFFF;
   text-shadow: none;
   background-image: none;
@@ -1927,13 +1969,13 @@
 }
 
 .chunkOutput .ui.pinterest.button:hover {
-  background-color: #0099d4;
+  background-color: #ac0013;
   color: #FFFFFF;
   text-shadow: none;
 }
 
 .chunkOutput .ui.pinterest.button:active {
-  background-color: #0087ba;
+  background-color: #8c0615;
   color: #FFFFFF;
   text-shadow: none;
 }
@@ -1941,7 +1983,7 @@
 /* VK */
 
 .chunkOutput .ui.vk.button {
-  background-color: #4D7198;
+  background-color: #45668E;
   color: #FFFFFF;
   background-image: none;
   -webkit-box-shadow: 0 0 0 0 rgba(34, 36, 38, 0.15) inset;
@@ -1949,12 +1991,12 @@
 }
 
 .chunkOutput .ui.vk.button:hover {
-  background-color: #41648a;
+  background-color: #395980;
   color: #FFFFFF;
 }
 
 .chunkOutput .ui.vk.button:active {
-  background-color: #3c5876;
+  background-color: #344d6c;
   color: #FFFFFF;
 }
 
@@ -2027,6 +2069,36 @@
 /*******************************
            Variations
 *******************************/
+
+/*--------------
+     Stackable
+  ---------------*/
+
+/* Tablet Or Below */
+
+@media only screen and (max-width: 767.98px) {
+  .chunkOutput .ui.stackable.buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .chunkOutput .ui.stackable.buttons .button:first-child {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0.28571429rem;
+  }
+
+  .chunkOutput .ui.stackable.buttons .button:last-child {
+    border-bottom-left-radius: 0.28571429rem;
+    border-top-right-radius: 0;
+  }
+
+  .chunkOutput .ui.stackable.buttons .button:only-child {
+    border-radius: 0.28571429rem;
+  }
+}
 
 /*-------------------
          Floated
@@ -2141,7 +2213,7 @@
 ---------------*/
 
 .chunkOutput .ui.icon.buttons .button,
-.chunkOutput .ui.icon.button:not(.animated):not(.compact) {
+.chunkOutput .ui.icon.button:not(.animated):not(.compact):not(.labeled) {
   padding: 0.78571429em 0.78571429em 0.88571429em;
 }
 
@@ -6300,7 +6372,7 @@
 *******************************/
 
 /*!
- * # Fomantic-UI - Container
+ * # Fomantic-UI 2.8.8 - Container
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -6416,9 +6488,9 @@
 
 .chunkOutput .ui.text.container {
   font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  max-width: 51.66rem;
+  max-width: 52.26rem;
   line-height: 1.618;
-  font-size: 1.66625rem;
+  font-size: 1.70624rem;
 }
 
 /* Fluid */
@@ -6480,7 +6552,7 @@
 @media only screen and (min-width: 768px) {
   .chunkOutput body.readability #content .ui.container p,
   .chunkOutput .ui.text.container p {
-    font-size: 1.66625rem;
+    font-size: 1.70624rem;
     line-height: 1.618;
   }
 }
@@ -6516,7 +6588,7 @@
 *******************************/
 
 /*!
- * # Fomantic-UI - Divider
+ * # Fomantic-UI 2.8.8 - Divider
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -6861,7 +6933,7 @@
 *******************************/
 
 /*!
- * # Fomantic-UI - Header
+ * # Fomantic-UI 2.8.8 - Header
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -6904,7 +6976,7 @@
   font-weight: normal;
   padding: 0;
   margin: 0.5em 0 0;
-  font-size: 1.32381258rem;
+  font-size: 1.35558408rem;
   line-height: 1.2em;
   color: rgba(0, 0, 0, 0.6);
 }
@@ -6913,6 +6985,7 @@
       Icon
 ---------------*/
 
+.chunkOutput .ui.header > .icons,
 .chunkOutput .ui.header > i.icon {
   display: table-cell;
   opacity: 1;
@@ -6923,7 +6996,8 @@
 
 /* With Text Node */
 
-.chunkOutput .ui.header > i.icon:only-child {
+.chunkOutput .ui.header:not(.icon) > .icons:only-child,
+.chunkOutput .ui.header:not(.icon) > i.icon:only-child {
   display: inline-block;
   padding: 0;
   margin-right: 0.75rem;
@@ -6966,7 +7040,8 @@
 
 /* After Icon */
 
-.chunkOutput .ui.header > i.icon + .content {
+.chunkOutput .ui.header:not(.icon):not(.centered):not(.aligned) > .icons + .content,
+.chunkOutput .ui.header:not(.icon):not(.centered):not(.aligned) > i.icon + .content {
   padding-left: 0.75rem;
   display: table-cell;
   vertical-align: middle;
@@ -6997,51 +7072,51 @@
 ---------------*/
 
 .chunkOutput h1.ui.header {
-  font-size: 2.58411724rem;
+  font-size: 2.64613605rem;
 }
 
 .chunkOutput h1.ui.header .sub.header {
-  font-size: 1.50601626rem;
+  font-size: 1.54216065rem;
 }
 
 .chunkOutput h2.ui.header {
-  font-size: 2.22111125rem;
+  font-size: 2.27441792rem;
 }
 
 .chunkOutput h2.ui.header .sub.header {
-  font-size: 1.4119785rem;
+  font-size: 1.44586598rem;
 }
 
 .chunkOutput h3.ui.header {
-  font-size: 1.93857257rem;
+  font-size: 1.98509831rem;
 }
 
 .chunkOutput h3.ui.header .sub.header {
-  font-size: 1.32381258rem;
+  font-size: 1.35558408rem;
 }
 
 .chunkOutput h4.ui.header {
-  font-size: 1.66625rem;
+  font-size: 1.70624rem;
 }
 
 .chunkOutput h4.ui.header .sub.header {
-  font-size: 1.24115186rem;
+  font-size: 1.27093951rem;
 }
 
 .chunkOutput h5.ui.header {
-  font-size: 1.454293rem;
+  font-size: 1.48919603rem;
 }
 
 .chunkOutput h5.ui.header .sub.header {
-  font-size: 1.1636526rem;
+  font-size: 1.19158026rem;
 }
 
 .chunkOutput h6.ui.header {
-  font-size: 1.25rem;
+  font-size: 1.28rem;
 }
 
 .chunkOutput h6.ui.header .sub.header {
-  font-size: 1.0909925rem;
+  font-size: 1.11717632rem;
 }
 
 /*--------------
@@ -7049,11 +7124,11 @@
 ---------------*/
 
 .chunkOutput .ui.mini.header {
-  font-size: 1.25em;
+  font-size: 1.28em;
 }
 
 .chunkOutput .ui.mini.header .sub.header {
-  font-size: 1.0909925rem;
+  font-size: 1.11717632rem;
 }
 
 .chunkOutput .ui.mini.sub.header {
@@ -7061,11 +7136,11 @@
 }
 
 .chunkOutput .ui.tiny.header {
-  font-size: 1.454293em;
+  font-size: 1.48919603em;
 }
 
 .chunkOutput .ui.tiny.header .sub.header {
-  font-size: 1.1636526rem;
+  font-size: 1.19158026rem;
 }
 
 .chunkOutput .ui.tiny.sub.header {
@@ -7073,11 +7148,11 @@
 }
 
 .chunkOutput .ui.small.header {
-  font-size: 1.66625em;
+  font-size: 1.70624em;
 }
 
 .chunkOutput .ui.small.header .sub.header {
-  font-size: 1.24115186rem;
+  font-size: 1.27093951rem;
 }
 
 .chunkOutput .ui.small.sub.header {
@@ -7085,12 +7160,12 @@
 }
 
 .chunkOutput .ui.large.header {
-  font-size: 2.22111125em;
+  font-size: 2.27441792em;
   min-height: 1em;
 }
 
 .chunkOutput .ui.large.header .sub.header {
-  font-size: 1.4119785rem;
+  font-size: 1.44586598rem;
 }
 
 .chunkOutput .ui.large.sub.header {
@@ -7102,7 +7177,7 @@
 }
 
 .chunkOutput .ui.big.header .sub.header {
-  font-size: 1.50601626rem;
+  font-size: 1.54216065rem;
 }
 
 .chunkOutput .ui.big.sub.header {
@@ -7110,12 +7185,12 @@
 }
 
 .chunkOutput .ui.huge.header {
-  font-size: 2.58411724em;
+  font-size: 2.64613605em;
   min-height: 1em;
 }
 
 .chunkOutput .ui.huge.header .sub.header {
-  font-size: 1.50601626rem;
+  font-size: 1.54216065rem;
 }
 
 .chunkOutput .ui.huge.sub.header {
@@ -7170,6 +7245,7 @@
   margin-top: 0;
 }
 
+.chunkOutput .ui.icon.header > .icons,
 .chunkOutput .ui.icon.header > i.icon {
   float: none;
   display: block;
@@ -7191,14 +7267,15 @@
   padding: 0;
 }
 
-.chunkOutput .ui.icon.header > i.circular.icon {
+.chunkOutput .ui.icon.header > i.circular {
   font-size: 2em;
 }
 
-.chunkOutput .ui.icon.header > i.square.icon {
+.chunkOutput .ui.icon.header > i.square {
   font-size: 2em;
 }
 
+.chunkOutput .ui.block.icon.header > .icons,
 .chunkOutput .ui.block.icon.header > i.icon {
   margin-bottom: 0;
 }
@@ -7800,7 +7877,7 @@
 --------------------*/
 
 .chunkOutput .ui.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
-  font-size: 1.93857257em;
+  font-size: 1.98509831em;
 }
 
 /*******************************
@@ -7855,27 +7932,27 @@
 }
 
 .chunkOutput h1.ui.header + .subtitle {
-  font-size: 1.50601626rem;
+  font-size: 1.54216065rem;
 }
 
 .chunkOutput h2.ui.header + .subtitle {
-  font-size: 1.4119785rem;
+  font-size: 1.44586598rem;
 }
 
 .chunkOutput h3.ui.header + .subtitle {
-  font-size: 1.32381258rem;
+  font-size: 1.35558408rem;
 }
 
 .chunkOutput h4.ui.header + .subtitle {
-  font-size: 1.24115186rem;
+  font-size: 1.27093951rem;
 }
 
 .chunkOutput h5.ui.header + .subtitle {
-  font-size: 1.1636526rem;
+  font-size: 1.19158026rem;
 }
 
 .chunkOutput h6.ui.header + .subtitle {
-  font-size: 1.0909925rem;
+  font-size: 1.11717632rem;
 }
 
 .chunkOutput .ui.header.left.aligned + .subtitle {
@@ -7901,28 +7978,28 @@
 
 @media only screen and (max-width: 767.98px) {
   .chunkOutput h1.ui.header {
-    font-size: 2.22111125rem;
+    font-size: 2.27441792rem;
   }
 
   .chunkOutput h2.ui.header {
-    font-size: 1.93857257rem;
+    font-size: 1.98509831rem;
   }
 
   .chunkOutput h3.ui.header {
-    font-size: 1.66625rem;
+    font-size: 1.70624rem;
   }
 
   .chunkOutput h4.ui.header {
-    font-size: 1.454293rem;
+    font-size: 1.48919603rem;
   }
 
   .chunkOutput h5.ui.header {
-    font-size: 1.25rem;
+    font-size: 1.28rem;
   }
 
   .chunkOutput .ui.header > .sub.header,
   .chunkOutput .ui.header + .subtitle {
-    font-size: 1.25rem;
+    font-size: 1.28rem;
   }
 }
 
@@ -7953,12 +8030,12 @@
 @media only screen and (min-width: 768px) {
   .chunkOutput .ui.vertical.stripe.segment > .container > h1.header:first-child,
   .chunkOutput .ui.vertical.stripe.segment > .container > .column > h1.header:first-child {
-    font-size: 3.44462828rem;
+    font-size: 3.52729936rem;
   }
 
   .chunkOutput .ui.vertical.stripe.segment > .container > h1.header:first-child + .subtitle,
   .chunkOutput .ui.vertical.stripe.segment > .container > .column > h1.header:first-child + .subtitle {
-    font-size: 1.6942683rem;
+    font-size: 1.73493074rem;
   }
 }
 
@@ -7976,12 +8053,12 @@
 @media only screen and (min-width: 768px) {
   .chunkOutput .ui.vertical.stripe.segment > .container > h2.header:first-child,
   .chunkOutput .ui.vertical.stripe.segment > .container > .column > h2.header:first-child {
-    font-size: 2.9607413rem;
+    font-size: 3.03179909rem;
   }
 
   .chunkOutput .ui.vertical.stripe.segment > .container > h2.header:first-child + .subtitle,
   .chunkOutput .ui.vertical.stripe.segment > .container > .column > h2.header:first-child + .subtitle {
-    font-size: 1.58847581rem;
+    font-size: 1.62659923rem;
   }
 }
 
@@ -7990,7 +8067,7 @@
 *******************************/
 
 /*!
- * # Fomantic-UI - Icon
+ * # Fomantic-UI 2.8.8 - Icon
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -8044,9 +8121,13 @@
       Loading
   ---------------*/
 
-.chunkOutput i.icon.loading {
+.chunkOutput i.loading.icon {
   height: 1em;
   line-height: 1;
+}
+
+.chunkOutput i.loading.icon,
+.chunkOutput i.loading.icons {
   -webkit-animation: loader 2s linear infinite;
   animation: loader 2s linear infinite;
 }
@@ -8115,6 +8196,11 @@
   height: 2em !important;
 }
 
+.chunkOutput i.circular.icon.colored {
+  -webkit-box-shadow: 0 0 0 0.1em currentColor inset;
+  box-shadow: 0 0 0 0.1em currentColor inset;
+}
+
 .chunkOutput i.circular.inverted.icon {
   border: none;
   -webkit-box-shadow: none;
@@ -8134,6 +8220,17 @@
 .chunkOutput i.vertically.flipped.icon {
   -webkit-transform: scale(1, -1);
   transform: scale(1, -1);
+}
+
+.chunkOutput .icons i.flipped.icon:not(.corner):not(:first-child),
+.chunkOutput .icons i.horizontally.flipped.icon:not(.corner):not(:first-child) {
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(-1, 1);
+  transform: translateX(-50%) translateY(-50%) scale(-1, 1);
+}
+
+.chunkOutput .icons i.vertically.flipped.icon:not(.corner):not(:first-child) {
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(1, -1);
+  transform: translateX(-50%) translateY(-50%) scale(1, -1);
 }
 
 /*-------------------
@@ -8156,6 +8253,24 @@
 .chunkOutput i.halfway.rotated.icon {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+
+.chunkOutput .icons i.rotated.rotated.icon:not(.corner):not(:first-child),
+.chunkOutput .icons i.right.rotated.icon:not(.corner):not(:first-child),
+.chunkOutput .icons i.clockwise.rotated.icon:not(.corner):not(:first-child) {
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(90deg);
+  transform: translateX(-50%) translateY(-50%) rotate(90deg);
+}
+
+.chunkOutput .icons i.left.rotated.icon:not(.corner):not(:first-child),
+.chunkOutput .icons i.counterclockwise.rotated.icon:not(.corner):not(:first-child) {
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+  transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+}
+
+.chunkOutput .icons i.halfway.rotated.icon:not(.corner):not(:first-child) {
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(180deg);
+  transform: translateX(-50%) translateY(-50%) rotate(180deg);
 }
 
 /*--------------------------
@@ -8198,6 +8313,42 @@
   transform: scale(1, -1) rotate(180deg);
 }
 
+.chunkOutput .icons i.rotated.flipped.icon:not(.corner):not(:first-child),
+.chunkOutput .icons i.right.rotated.flipped.icon:not(.corner):not(:first-child),
+.chunkOutput .icons i.clockwise.rotated.flipped.icon:not(.corner):not(:first-child) {
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(-1, 1) rotate(90deg);
+  transform: translateX(-50%) translateY(-50%) scale(-1, 1) rotate(90deg);
+}
+
+.chunkOutput .icons i.left.rotated.flipped.icon:not(.corner):not(:first-child),
+.chunkOutput .icons i.counterclockwise.rotated.flipped.icon:not(.corner):not(:first-child) {
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(-1, 1) rotate(-90deg);
+  transform: translateX(-50%) translateY(-50%) scale(-1, 1) rotate(-90deg);
+}
+
+.chunkOutput .icons i.halfway.rotated.flipped.icon:not(.corner):not(:first-child) {
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(-1, 1) rotate(180deg);
+  transform: translateX(-50%) translateY(-50%) scale(-1, 1) rotate(180deg);
+}
+
+.chunkOutput .icons i.rotated.vertically.flipped.icon:not(.corner):not(:first-child),
+.chunkOutput .icons i.right.rotated.vertically.flipped.icon:not(.corner):not(:first-child),
+.chunkOutput .icons i.clockwise.rotated.vertically.flipped.icon:not(.corner):not(:first-child) {
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(1, -1) rotate(90deg);
+  transform: translateX(-50%) translateY(-50%) scale(1, -1) rotate(90deg);
+}
+
+.chunkOutput .icons i.left.rotated.vertically.flipped.icon:not(.corner):not(:first-child),
+.chunkOutput .icons i.counterclockwise.rotated.vertically.flipped.icon:not(.corner):not(:first-child) {
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(1, -1) rotate(-90deg);
+  transform: translateX(-50%) translateY(-50%) scale(1, -1) rotate(-90deg);
+}
+
+.chunkOutput .icons i.halfway.rotated.vertically.flipped.icon:not(.corner):not(:first-child) {
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(1, -1) rotate(180deg);
+  transform: translateX(-50%) translateY(-50%) scale(1, -1) rotate(180deg);
+}
+
 /*-------------------
         Bordered
   --------------------*/
@@ -8210,6 +8361,11 @@
   padding: 0.5em 0 !important;
   -webkit-box-shadow: 0 0 0 0.1em rgba(0, 0, 0, 0.1) inset;
   box-shadow: 0 0 0 0.1em rgba(0, 0, 0, 0.1) inset;
+}
+
+.chunkOutput i.bordered.icon.colored {
+  -webkit-box-shadow: 0 0 0 0.1em currentColor inset;
+  box-shadow: 0 0 0 0.1em currentColor inset;
 }
 
 .chunkOutput i.bordered.inverted.icon {
@@ -8238,212 +8394,242 @@
        Colors
 --------------------*/
 
-.chunkOutput i.primary.icon.icon.icon.icon {
+.chunkOutput i.primary.icon.icon.icon.icon.icon {
   color: #698f73;
 }
 
-.chunkOutput i.inverted.primary.icon.icon.icon.icon {
+.chunkOutput i.inverted.primary.icon.icon.icon.icon.icon {
   color: #eaf3ec;
 }
 
-.chunkOutput i.inverted.bordered.primary.icon.icon.icon.icon,
-.chunkOutput i.inverted.circular.primary.icon.icon.icon.icon {
+.chunkOutput i.inverted.bordered.primary.icon.icon.icon.icon.icon,
+.chunkOutput i.inverted.circular.primary.icon.icon.icon.icon.icon,
+.chunkOutput i.inverted.bordered.primary.icons,
+.chunkOutput i.inverted.circular.primary.icons {
   background-color: #698f73;
   color: #FFFFFF;
 }
 
-.chunkOutput i.secondary.icon.icon.icon.icon {
+.chunkOutput i.secondary.icon.icon.icon.icon.icon {
   color: #5f7ebe;
 }
 
-.chunkOutput i.inverted.secondary.icon.icon.icon.icon {
+.chunkOutput i.inverted.secondary.icon.icon.icon.icon.icon {
   color: #edf1f8;
 }
 
-.chunkOutput i.inverted.bordered.secondary.icon.icon.icon.icon,
-.chunkOutput i.inverted.circular.secondary.icon.icon.icon.icon {
+.chunkOutput i.inverted.bordered.secondary.icon.icon.icon.icon.icon,
+.chunkOutput i.inverted.circular.secondary.icon.icon.icon.icon.icon,
+.chunkOutput i.inverted.bordered.secondary.icons,
+.chunkOutput i.inverted.circular.secondary.icons {
   background-color: #5f7ebe;
   color: #FFFFFF;
 }
 
-.chunkOutput i.red.icon.icon.icon.icon {
+.chunkOutput i.red.icon.icon.icon.icon.icon {
   color: #DB2828;
 }
 
-.chunkOutput i.inverted.red.icon.icon.icon.icon {
+.chunkOutput i.inverted.red.icon.icon.icon.icon.icon {
   color: #FF695E;
 }
 
-.chunkOutput i.inverted.bordered.red.icon.icon.icon.icon,
-.chunkOutput i.inverted.circular.red.icon.icon.icon.icon {
+.chunkOutput i.inverted.bordered.red.icon.icon.icon.icon.icon,
+.chunkOutput i.inverted.circular.red.icon.icon.icon.icon.icon,
+.chunkOutput i.inverted.bordered.red.icons,
+.chunkOutput i.inverted.circular.red.icons {
   background-color: #DB2828;
   color: #FFFFFF;
 }
 
-.chunkOutput i.orange.icon.icon.icon.icon {
+.chunkOutput i.orange.icon.icon.icon.icon.icon {
   color: #F2711C;
 }
 
-.chunkOutput i.inverted.orange.icon.icon.icon.icon {
+.chunkOutput i.inverted.orange.icon.icon.icon.icon.icon {
   color: #FF851B;
 }
 
-.chunkOutput i.inverted.bordered.orange.icon.icon.icon.icon,
-.chunkOutput i.inverted.circular.orange.icon.icon.icon.icon {
+.chunkOutput i.inverted.bordered.orange.icon.icon.icon.icon.icon,
+.chunkOutput i.inverted.circular.orange.icon.icon.icon.icon.icon,
+.chunkOutput i.inverted.bordered.orange.icons,
+.chunkOutput i.inverted.circular.orange.icons {
   background-color: #F2711C;
   color: #FFFFFF;
 }
 
-.chunkOutput i.yellow.icon.icon.icon.icon {
+.chunkOutput i.yellow.icon.icon.icon.icon.icon {
   color: #FBBD08;
 }
 
-.chunkOutput i.inverted.yellow.icon.icon.icon.icon {
+.chunkOutput i.inverted.yellow.icon.icon.icon.icon.icon {
   color: #FFE21F;
 }
 
-.chunkOutput i.inverted.bordered.yellow.icon.icon.icon.icon,
-.chunkOutput i.inverted.circular.yellow.icon.icon.icon.icon {
+.chunkOutput i.inverted.bordered.yellow.icon.icon.icon.icon.icon,
+.chunkOutput i.inverted.circular.yellow.icon.icon.icon.icon.icon,
+.chunkOutput i.inverted.bordered.yellow.icons,
+.chunkOutput i.inverted.circular.yellow.icons {
   background-color: #FBBD08;
   color: #FFFFFF;
 }
 
-.chunkOutput i.olive.icon.icon.icon.icon {
+.chunkOutput i.olive.icon.icon.icon.icon.icon {
   color: #B5CC18;
 }
 
-.chunkOutput i.inverted.olive.icon.icon.icon.icon {
+.chunkOutput i.inverted.olive.icon.icon.icon.icon.icon {
   color: #D9E778;
 }
 
-.chunkOutput i.inverted.bordered.olive.icon.icon.icon.icon,
-.chunkOutput i.inverted.circular.olive.icon.icon.icon.icon {
+.chunkOutput i.inverted.bordered.olive.icon.icon.icon.icon.icon,
+.chunkOutput i.inverted.circular.olive.icon.icon.icon.icon.icon,
+.chunkOutput i.inverted.bordered.olive.icons,
+.chunkOutput i.inverted.circular.olive.icons {
   background-color: #B5CC18;
   color: #FFFFFF;
 }
 
-.chunkOutput i.green.icon.icon.icon.icon {
+.chunkOutput i.green.icon.icon.icon.icon.icon {
   color: #21BA45;
 }
 
-.chunkOutput i.inverted.green.icon.icon.icon.icon {
+.chunkOutput i.inverted.green.icon.icon.icon.icon.icon {
   color: #2ECC40;
 }
 
-.chunkOutput i.inverted.bordered.green.icon.icon.icon.icon,
-.chunkOutput i.inverted.circular.green.icon.icon.icon.icon {
+.chunkOutput i.inverted.bordered.green.icon.icon.icon.icon.icon,
+.chunkOutput i.inverted.circular.green.icon.icon.icon.icon.icon,
+.chunkOutput i.inverted.bordered.green.icons,
+.chunkOutput i.inverted.circular.green.icons {
   background-color: #21BA45;
   color: #FFFFFF;
 }
 
-.chunkOutput i.teal.icon.icon.icon.icon {
+.chunkOutput i.teal.icon.icon.icon.icon.icon {
   color: #00B5AD;
 }
 
-.chunkOutput i.inverted.teal.icon.icon.icon.icon {
+.chunkOutput i.inverted.teal.icon.icon.icon.icon.icon {
   color: #6DFFFF;
 }
 
-.chunkOutput i.inverted.bordered.teal.icon.icon.icon.icon,
-.chunkOutput i.inverted.circular.teal.icon.icon.icon.icon {
+.chunkOutput i.inverted.bordered.teal.icon.icon.icon.icon.icon,
+.chunkOutput i.inverted.circular.teal.icon.icon.icon.icon.icon,
+.chunkOutput i.inverted.bordered.teal.icons,
+.chunkOutput i.inverted.circular.teal.icons {
   background-color: #00B5AD;
   color: #FFFFFF;
 }
 
-.chunkOutput i.blue.icon.icon.icon.icon {
+.chunkOutput i.blue.icon.icon.icon.icon.icon {
   color: #2185D0;
 }
 
-.chunkOutput i.inverted.blue.icon.icon.icon.icon {
+.chunkOutput i.inverted.blue.icon.icon.icon.icon.icon {
   color: #54C8FF;
 }
 
-.chunkOutput i.inverted.bordered.blue.icon.icon.icon.icon,
-.chunkOutput i.inverted.circular.blue.icon.icon.icon.icon {
+.chunkOutput i.inverted.bordered.blue.icon.icon.icon.icon.icon,
+.chunkOutput i.inverted.circular.blue.icon.icon.icon.icon.icon,
+.chunkOutput i.inverted.bordered.blue.icons,
+.chunkOutput i.inverted.circular.blue.icons {
   background-color: #2185D0;
   color: #FFFFFF;
 }
 
-.chunkOutput i.violet.icon.icon.icon.icon {
+.chunkOutput i.violet.icon.icon.icon.icon.icon {
   color: #6435C9;
 }
 
-.chunkOutput i.inverted.violet.icon.icon.icon.icon {
+.chunkOutput i.inverted.violet.icon.icon.icon.icon.icon {
   color: #A291FB;
 }
 
-.chunkOutput i.inverted.bordered.violet.icon.icon.icon.icon,
-.chunkOutput i.inverted.circular.violet.icon.icon.icon.icon {
+.chunkOutput i.inverted.bordered.violet.icon.icon.icon.icon.icon,
+.chunkOutput i.inverted.circular.violet.icon.icon.icon.icon.icon,
+.chunkOutput i.inverted.bordered.violet.icons,
+.chunkOutput i.inverted.circular.violet.icons {
   background-color: #6435C9;
   color: #FFFFFF;
 }
 
-.chunkOutput i.purple.icon.icon.icon.icon {
+.chunkOutput i.purple.icon.icon.icon.icon.icon {
   color: #A333C8;
 }
 
-.chunkOutput i.inverted.purple.icon.icon.icon.icon {
+.chunkOutput i.inverted.purple.icon.icon.icon.icon.icon {
   color: #DC73FF;
 }
 
-.chunkOutput i.inverted.bordered.purple.icon.icon.icon.icon,
-.chunkOutput i.inverted.circular.purple.icon.icon.icon.icon {
+.chunkOutput i.inverted.bordered.purple.icon.icon.icon.icon.icon,
+.chunkOutput i.inverted.circular.purple.icon.icon.icon.icon.icon,
+.chunkOutput i.inverted.bordered.purple.icons,
+.chunkOutput i.inverted.circular.purple.icons {
   background-color: #A333C8;
   color: #FFFFFF;
 }
 
-.chunkOutput i.pink.icon.icon.icon.icon {
+.chunkOutput i.pink.icon.icon.icon.icon.icon {
   color: #E03997;
 }
 
-.chunkOutput i.inverted.pink.icon.icon.icon.icon {
+.chunkOutput i.inverted.pink.icon.icon.icon.icon.icon {
   color: #FF8EDF;
 }
 
-.chunkOutput i.inverted.bordered.pink.icon.icon.icon.icon,
-.chunkOutput i.inverted.circular.pink.icon.icon.icon.icon {
+.chunkOutput i.inverted.bordered.pink.icon.icon.icon.icon.icon,
+.chunkOutput i.inverted.circular.pink.icon.icon.icon.icon.icon,
+.chunkOutput i.inverted.bordered.pink.icons,
+.chunkOutput i.inverted.circular.pink.icons {
   background-color: #E03997;
   color: #FFFFFF;
 }
 
-.chunkOutput i.brown.icon.icon.icon.icon {
+.chunkOutput i.brown.icon.icon.icon.icon.icon {
   color: #A5673F;
 }
 
-.chunkOutput i.inverted.brown.icon.icon.icon.icon {
+.chunkOutput i.inverted.brown.icon.icon.icon.icon.icon {
   color: #D67C1C;
 }
 
-.chunkOutput i.inverted.bordered.brown.icon.icon.icon.icon,
-.chunkOutput i.inverted.circular.brown.icon.icon.icon.icon {
+.chunkOutput i.inverted.bordered.brown.icon.icon.icon.icon.icon,
+.chunkOutput i.inverted.circular.brown.icon.icon.icon.icon.icon,
+.chunkOutput i.inverted.bordered.brown.icons,
+.chunkOutput i.inverted.circular.brown.icons {
   background-color: #A5673F;
   color: #FFFFFF;
 }
 
-.chunkOutput i.grey.icon.icon.icon.icon {
+.chunkOutput i.grey.icon.icon.icon.icon.icon {
   color: #767676;
 }
 
-.chunkOutput i.inverted.grey.icon.icon.icon.icon {
+.chunkOutput i.inverted.grey.icon.icon.icon.icon.icon {
   color: #DCDDDE;
 }
 
-.chunkOutput i.inverted.bordered.grey.icon.icon.icon.icon,
-.chunkOutput i.inverted.circular.grey.icon.icon.icon.icon {
+.chunkOutput i.inverted.bordered.grey.icon.icon.icon.icon.icon,
+.chunkOutput i.inverted.circular.grey.icon.icon.icon.icon.icon,
+.chunkOutput i.inverted.bordered.grey.icons,
+.chunkOutput i.inverted.circular.grey.icons {
   background-color: #767676;
   color: #FFFFFF;
 }
 
-.chunkOutput i.black.icon.icon.icon.icon {
+.chunkOutput i.black.icon.icon.icon.icon.icon {
   color: #1B1C1D;
 }
 
-.chunkOutput i.inverted.black.icon.icon.icon.icon {
+.chunkOutput i.inverted.black.icon.icon.icon.icon.icon {
   color: #545454;
 }
 
-.chunkOutput i.inverted.bordered.black.icon.icon.icon.icon,
-.chunkOutput i.inverted.circular.black.icon.icon.icon.icon {
+.chunkOutput i.inverted.bordered.black.icon.icon.icon.icon.icon,
+.chunkOutput i.inverted.circular.black.icon.icon.icon.icon.icon,
+.chunkOutput i.inverted.bordered.black.icons,
+.chunkOutput i.inverted.circular.black.icons {
   background-color: #1B1C1D;
   color: #FFFFFF;
 }
@@ -8456,6 +8642,7 @@
 .chunkOutput i.icons {
   font-size: 1em;
   line-height: 1;
+  font-style: normal;
 }
 
 .chunkOutput i.mini.mini.mini.icon,
@@ -8514,9 +8701,12 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  margin: 0;
+}
+
+.chunkOutput i.icons .icon:not(.corner):not(.rotated):not(.flipped) {
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  margin: 0;
 }
 
 .chunkOutput i.icons .icon:first-child {
@@ -8524,6 +8714,9 @@
   width: auto;
   height: auto;
   vertical-align: top;
+}
+
+.chunkOutput i.icons:not(.bordered):not(.circular) .icon:first-child:not(.rotated):not(.flipped) {
   -webkit-transform: none;
   transform: none;
 }
@@ -8535,10 +8728,13 @@
   left: auto;
   right: 0;
   bottom: 0;
-  -webkit-transform: none;
-  transform: none;
   font-size: 0.45em;
   text-shadow: -1px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 1px 1px 0 #FFFFFF;
+}
+
+.chunkOutput i.icons .corner.icon:not(.rotated):not(.flipped) {
+  -webkit-transform: none;
+  transform: none;
 }
 
 .chunkOutput i.icons .icon.corner[class*="top right"] {
@@ -8571,6 +8767,83 @@
 
 .chunkOutput i.icons .inverted.corner.icon {
   text-shadow: -1px -1px 0 #1B1C1D, 1px -1px 0 #1B1C1D, -1px 1px 0 #1B1C1D, 1px 1px 0 #1B1C1D;
+}
+
+/*************************************************
+     Bordered/circular with corner or group icons
+  *************************************************/
+
+.chunkOutput i.bordered.icons,
+.chunkOutput i.circular.icons {
+  width: 2em;
+  height: 2em;
+  -webkit-box-shadow: 0 0 0 0.1em rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 0 0 0.1em rgba(0, 0, 0, 0.1) inset;
+  vertical-align: middle;
+}
+
+.chunkOutput i.bordered.icons.colored,
+.chunkOutput i.circular.icons.colored {
+  -webkit-box-shadow: 0 0 0 0.1em currentColor inset;
+  box-shadow: 0 0 0 0.1em currentColor inset;
+}
+
+.chunkOutput i.circular.icons {
+  border-radius: 500em;
+}
+
+.chunkOutput i.bordered.icons i.icon:first-child,
+.chunkOutput i.circular.icons i.icon:first-child {
+  position: absolute;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+/* Inverted Icon */
+
+.chunkOutput i.bordered.inverted.icons,
+.chunkOutput i.circular.inverted.icons {
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: #1B1C1D;
+  color: #FFFFFF;
+}
+
+/* Corner Icon */
+
+.chunkOutput i.bordered.icons .icon.corner,
+.chunkOutput i.circular.icons .icon.corner,
+.chunkOutput i.bordered.icons .icon.corner[class*="bottom right"],
+.chunkOutput i.circular.icons .icon.corner[class*="bottom right"] {
+  top: auto;
+  left: auto;
+  right: 1.15em;
+  bottom: 1.15em;
+}
+
+.chunkOutput i.bordered.icons .icon.corner[class*="top right"],
+.chunkOutput i.circular.icons .icon.corner[class*="top right"] {
+  top: 1.15em;
+  left: auto;
+  right: 1.15em;
+  bottom: auto;
+}
+
+.chunkOutput i.bordered.icons .icon.corner[class*="top left"],
+.chunkOutput i.circular.icons .icon.corner[class*="top left"] {
+  top: 1.15em;
+  left: 1.15em;
+  right: auto;
+  bottom: auto;
+}
+
+.chunkOutput i.bordered.icons .icon.corner[class*="bottom left"],
+.chunkOutput i.circular.icons .icon.corner[class*="bottom left"] {
+  top: auto;
+  left: 1.15em;
+  right: auto;
+  bottom: 1.15em;
 }
 
 /*
@@ -16913,7 +17186,7 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 *******************************/
 
 /*!
- * # Fomantic-UI - Image
+ * # Fomantic-UI 2.8.8 - Image
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -17320,7 +17593,7 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 *******************************/
 
 /*!
- * # Fomantic-UI - Input
+ * # Fomantic-UI 2.8.8 - Input
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -17356,9 +17629,9 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   outline: none;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   text-align: left;
-  line-height: 1.2142em;
+  line-height: 1.21428571em;
   font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  padding: 0.67861429em 1em;
+  padding: 0.67857143em 1em;
   background: #FFFFFF;
   border: 1px solid rgba(34, 36, 38, 0.15);
   color: rgba(0, 0, 0, 0.87);
@@ -17383,6 +17656,7 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 
 .chunkOutput .ui.input > input::-moz-placeholder {
   color: rgba(191, 191, 191, 0.87);
+  opacity: 1;
 }
 
 .chunkOutput .ui.input > input:-ms-input-placeholder {
@@ -17647,7 +17921,7 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 }
 
 .chunkOutput .field .ui.transparent.input > textarea {
-  padding: 0.67861429em 1em;
+  padding: 0.67857143em 1em;
 }
 
 /* Transparent Icon */
@@ -18126,7 +18400,7 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 *******************************/
 
 /*!
- * # Fomantic-UI - Label
+ * # Fomantic-UI 2.8.8 - Label
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -20527,7 +20801,7 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 *******************************/
 
 /*!
- * # Fomantic-UI - List
+ * # Fomantic-UI 2.8.8 - List
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -20902,12 +21176,12 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 .chunkOutput .ui.list .list > .disabled.item,
 .chunkOutput .ui.list > .disabled.item {
   pointer-events: none;
-  color: rgba(0, 0, 0, 0.2) !important;
+  color: rgba(40, 40, 40, 0.3) !important;
 }
 
 .chunkOutput .ui.inverted.list .list > .disabled.item,
 .chunkOutput .ui.inverted.list > .disabled.item {
-  color: rgba(255, 255, 255, 0.2) !important;
+  color: rgba(225, 225, 225, 0.3) !important;
 }
 
 /*-------------------
@@ -21646,7 +21920,7 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 *******************************/
 
 /*!
- * # Fomantic-UI - Reveal
+ * # Fomantic-UI 2.8.8 - Reveal
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -21990,7 +22264,7 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 *******************************/
 
 /*!
- * # Fomantic-UI - Segment
+ * # Fomantic-UI 2.8.8 - Segment
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -22006,8 +22280,8 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 .chunkOutput .ui.segment {
   position: relative;
   background: #FFFFFF;
-  -webkit-box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
-  box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+  -webkit-box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15);
   margin: 1rem 0;
   padding: 1em 1em;
   border-radius: 0.28571429rem;
@@ -22046,6 +22320,8 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 
 /* Header */
 
+.chunkOutput .ui.inverted.segments .segment > .ui.header .sub.header,
+.chunkOutput .ui.inverted.segments .segment > .ui.header,
 .chunkOutput .ui.inverted.segment > .ui.header .sub.header,
 .chunkOutput .ui.inverted.segment > .ui.header {
   color: #FFFFFF;
@@ -22092,8 +22368,8 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 .chunkOutput .ui.basic.table.segment {
   background: #FFFFFF;
   border: 1px solid rgba(34, 36, 38, 0.15);
-  -webkit-box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
-  box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+  -webkit-box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15);
 }
 
 .chunkOutput .ui[class*="very basic"].table.segment {
@@ -22138,6 +22414,16 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   border-color: rgba(34, 36, 38, 0.15);
   -webkit-box-shadow: 0 2px 25px 0 rgba(34, 36, 38, 0.05) inset;
   box-shadow: 0 2px 25px 0 rgba(34, 36, 38, 0.05) inset;
+}
+
+.chunkOutput .ui.placeholder.segment.tab {
+  display: none;
+}
+
+.chunkOutput .ui.placeholder.segment.tab.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .chunkOutput .ui.placeholder.segment .button,
@@ -22240,8 +22526,8 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 
 .chunkOutput .ui.raised.raised.segments,
 .chunkOutput .ui.raised.raised.segment {
-  -webkit-box-shadow: 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
-  box-shadow: 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
+  -webkit-box-shadow: 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
 }
 
 /*******************************
@@ -22258,8 +22544,8 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   position: relative;
   margin: 1rem 0;
   border: 1px solid rgba(34, 36, 38, 0.15);
-  -webkit-box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
-  box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+  -webkit-box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15);
   border-radius: 0.28571429rem;
 }
 
@@ -22301,8 +22587,8 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   bottom: 0;
   margin-top: 0;
   margin-bottom: 0;
-  -webkit-box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15), none;
-  box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15), none;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15), none;
+  box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15), none;
   border-radius: 0 0 0.28571429rem 0.28571429rem;
 }
 
@@ -22339,8 +22625,8 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   flex-direction: row;
   background-color: transparent;
   padding: 0;
-  -webkit-box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
-  box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+  -webkit-box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15);
   margin: 1rem 0;
   border-radius: 0.28571429rem;
   border: 1px solid rgba(34, 36, 38, 0.15);
@@ -22400,6 +22686,12 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   border-radius: 0 0.28571429rem 0.28571429rem 0;
 }
 
+/* Equal Width */
+
+.chunkOutput .ui[class*="equal width"].horizontal.segments > .segment {
+  width: 100%;
+}
+
 /*******************************
             States
 *******************************/
@@ -22408,24 +22700,35 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
       Disabled
   ---------------*/
 
+.chunkOutput .ui.disabled.segments,
 .chunkOutput .ui.disabled.segment {
   opacity: 0.45;
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(40, 40, 40, 0.3);
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 /*--------------
       Loading
   ---------------*/
 
+.chunkOutput .ui.loading.segments,
 .chunkOutput .ui.loading.segment {
   position: relative;
   cursor: default;
   pointer-events: none;
-  text-shadow: none !important;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-transition: all 0s linear;
   transition: all 0s linear;
 }
 
+.chunkOutput .ui.loading.segments:before,
 .chunkOutput .ui.loading.segment:before {
   position: absolute;
   content: '';
@@ -22438,6 +22741,7 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   z-index: 100;
 }
 
+.chunkOutput .ui.loading.segments:after,
 .chunkOutput .ui.loading.segment:after {
   position: absolute;
   content: '';
@@ -22640,12 +22944,15 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
         Inverted
   --------------------*/
 
+.chunkOutput .ui.inverted.segments,
+.chunkOutput .ui.inverted.segments .segment,
 .chunkOutput .ui.inverted.segment {
   border: none;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
+.chunkOutput .ui.inverted.segments .segment,
 .chunkOutput .ui.inverted.segment,
 .chunkOutput .ui.primary.inverted.segment {
   background: #1B1C1D;
@@ -22670,10 +22977,12 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 
 /* Loading */
 
+.chunkOutput .ui.inverted.loading.segments,
 .chunkOutput .ui.inverted.loading.segment {
   color: #FFFFFF;
 }
 
+.chunkOutput .ui.inverted.loading.segments:before,
 .chunkOutput .ui.inverted.loading.segment:before {
   background: rgba(0, 0, 0, 0.85);
 }
@@ -22753,8 +23062,8 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   margin-top: 0;
   top: 0;
   margin-bottom: 1rem;
-  -webkit-box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15), none;
-  box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15), none;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15), none;
+  box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15), none;
   border-radius: 0 0 0.28571429rem 0.28571429rem;
 }
 
@@ -22882,19 +23191,19 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   padding-bottom: calc(var(--baseline) * 3rem);
 }
 
-.chunkOutput .header-vertical .ui.vertical.stripe.segment {
+.chunkOutput body.vertical .ui.vertical.stripe.segment {
   padding: calc(var(--baseline) * 5rem) 0;
 }
 
 @media only screen and (max-width: 767.98px) {
-  .chunkOutput .header-vertical .ui.vertical.stripe.segment > .container > .grid {
+  .chunkOutput body.vertical .ui.vertical.stripe.segment > .container > .grid {
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .chunkOutput .header-vertical .ui.vertical.stripe.segment {
+  .chunkOutput body.vertical .ui.vertical.stripe.segment {
     padding: calc(var(--baseline) * 5rem) 5%;
   }
 }
@@ -22908,7 +23217,7 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 }
 
 @media only screen and (min-width: 768px) {
-  .chunkOutput #toolbar.ui.segment .header-vertical {
+  .chunkOutput body.vertical #toolbar.ui.segment {
     padding: calc(var(--baseline) * 1rem) 3%;
   }
 }
@@ -23036,6 +23345,14 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   top: 6rem;
 }
 
+.chunkOutput .ui.reducible.tab.segment {
+  margin: 0;
+}
+
+.chunkOutput .ui.reducible.tab.segment.basic {
+  padding: 0;
+}
+
 @media only screen and (min-width: 992px) {
   .chunkOutput .ui.snapped.segment {
     padding-bottom: 0 !important;
@@ -23103,7 +23420,7 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 }
 
 @media only screen and (min-width: 768px) {
-  .chunkOutput .header-vertical .ui.backyard.segment {
+  .chunkOutput body.vertical .ui.backyard.segment {
     padding: 1em 5%;
   }
 }
@@ -23113,7 +23430,7 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 *******************************/
 
 /*!
- * # Fomantic-UI - Breadcrumb
+ * # Fomantic-UI 2.8.8 - Breadcrumb
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -23127,7 +23444,7 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 *******************************/
 
 .chunkOutput .ui.breadcrumb {
-  line-height: 1.45;
+  line-height: 1.4285em;
   display: inline-block;
   margin: 0 0;
   vertical-align: middle;
@@ -23259,7 +23576,7 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 *******************************/
 
 /*!
- * # Fomantic-UI - Grid
+ * # Fomantic-UI 2.8.8 - Grid
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -25304,7 +25621,7 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   --------------------*/
 
 @media only screen and (max-width: 767.98px) {
-  .chunkOutput .ui.stackable.grid {
+  .chunkOutput .ui.ui.ui.ui.stackable.grid {
     width: auto;
     margin-left: 0 !important;
     margin-right: 0 !important;
@@ -25533,6 +25850,10 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
         Compact
   -----------------*/
 
+.chunkOutput .ui.ui.ui.compact.grid {
+  margin: -0.5rem;
+}
+
 .chunkOutput .ui.ui.ui.compact.grid > .column:not(.row),
 .chunkOutput .ui.ui.ui.compact.grid > .row > .column {
   padding-left: 0.5rem;
@@ -25549,6 +25870,8 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 .chunkOutput .ui.ui.ui.compact.grid > .row {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /* Columns */
@@ -25574,6 +25897,10 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
       Very compact
   -----------------*/
 
+.chunkOutput .ui.ui.ui[class*="very compact"].grid {
+  margin: -0.25rem;
+}
+
 .chunkOutput .ui.ui.ui[class*="very compact"].grid > .column:not(.row),
 .chunkOutput .ui.ui.ui[class*="very compact"].grid > .row > .column {
   padding-left: 0.25rem;
@@ -25590,8 +25917,8 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 .chunkOutput .ui.ui.ui[class*="very compact"].grid > .row {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /* Columns */
@@ -25710,18 +26037,23 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   width: auto;
 }
 
-.chunkOutput .header-vertical #header {
+.chunkOutput #content .ui.grid .empty.column {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.chunkOutput body.vertical #header {
   margin: 0;
 }
 
 @media only screen and (max-width: 767.98px) {
-  .chunkOutput .header-vertical #header {
+  .chunkOutput body.vertical #header {
     padding: 0.5em 1em;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .chunkOutput .header-vertical #header {
+  .chunkOutput body.vertical #header {
     position: fixed;
     width: 15rem;
     height: 100%;
@@ -25730,12 +26062,12 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 }
 
 @media only screen and (min-width: 992px) {
-  .chunkOutput .header-vertical #header {
+  .chunkOutput body.vertical #header {
     width: 20%;
   }
 }
 
-.chunkOutput .header-vertical #main {
+.chunkOutput body.vertical #main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25746,26 +26078,28 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   min-height: 100vh;
 }
 
-.chunkOutput .header-vertical #main #content {
+.chunkOutput body.vertical #main #content {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.chunkOutput .header-vertical #main #footer {
+.chunkOutput body.vertical #main #footer {
   -webkit-box-flex: 0;
   -ms-flex: 0;
   flex: 0;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 @media only screen and (min-width: 768px) {
-  .chunkOutput .header-vertical #main {
+  .chunkOutput body.vertical #main {
     margin-left: 15rem;
   }
 }
 
 @media only screen and (min-width: 992px) {
-  .chunkOutput .header-vertical #main {
+  .chunkOutput body.vertical #main {
     margin-left: 20%;
   }
 }
@@ -25775,20 +26109,20 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 *******************************/
 
 @media (max-width: 767.98px) {
-  .chunkOutput #main .ui.fluid.container {
+  .chunkOutput #main .ui.fluid.container:not(.dormant-grid) {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
   }
 }
 
 @media (min-width: 768px) {
-  .chunkOutput #main .ui.fluid.container {
+  .chunkOutput #main .ui.fluid.container:not(.dormant-grid) {
     padding-left: 2rem !important;
     padding-right: 2rem !important;
   }
 }
 
-.chunkOutput #main .ui.fluid.container > .cards {
+.chunkOutput #main .ui.fluid.container:not(.dormant-grid) > .cards {
   margin-top: 2em;
 }
 
@@ -26031,10 +26365,13 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   margin: 0 0 0;
   -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
-  -webkit-box-orient: vertical !important;
-  -webkit-box-direction: normal !important;
-  -ms-flex-direction: column !important;
-  flex-direction: column !important;
+}
+
+.chunkOutput .ui.menu .dropdown.item:not(.column) .menu {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 /* Menu Items */
@@ -26307,7 +26644,7 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 .chunkOutput .ui.ui.menu .item.disabled {
   cursor: default;
   background-color: transparent;
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(40, 40, 40, 0.3);
   pointer-events: none;
 }
 
@@ -27429,7 +27766,7 @@ Floated Menu / Item
 /* Disabled */
 
 .chunkOutput .ui.ui.inverted.menu .item.disabled {
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(225, 225, 225, 0.3);
 }
 
 /*--- Hover ---*/
@@ -28693,13 +29030,13 @@ Floated Menu / Item
 
 @media only screen and (min-width: 768px) {
   .chunkOutput #menu-neighbors .item {
-    font-size: 1.66625rem;
+    font-size: 1.70624rem;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .chunkOutput #menu-neighbors .item {
-    font-size: 1.93857257rem;
+    font-size: 1.98509831rem;
   }
 }
 
@@ -28772,6 +29109,25 @@ Floated Menu / Item
   border-top: 0;
 }
 
+@media (max-width: 767.98px) {
+  .chunkOutput .menu#toolbar.attached .right.menu {
+    width: 100%;
+  }
+
+  .chunkOutput .menu#toolbar.attached .right.menu .search.item,
+  .chunkOutput .menu#toolbar.attached .right.menu #form-search {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  .chunkOutput .menu#toolbar.attached .right.menu #form-search > .input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .chunkOutput .menu#toolbar > .item:first-child:before {
   display: none;
 }
@@ -28816,15 +29172,30 @@ Floated Menu / Item
          Site Overrides
 *******************************/
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 767.98px) {
+  .chunkOutput #menu-vertical .item.branding {
+    padding-right: 2em !important;
+  }
+
   .chunkOutput #menu-vertical .brand.logo {
-    margin-top: -1em;
+    max-height: 2.7rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .chunkOutput #menu-vertical .item.branding {
+    padding: 0 1em !important;
+  }
+
+  .chunkOutput #menu-vertical .brand.logo {
+    margin-top: 0;
     margin-bottom: 2em;
+    min-width: 100%;
   }
 }
 
 /*!
- * # Fomantic-UI - Message
+ * # Fomantic-UI 2.8.8 - Message
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -28843,7 +29214,7 @@ Floated Menu / Item
   margin: 1em 0;
   background: #F8F8F9;
   padding: 1em 1.5em;
-  line-height: 1.45;
+  line-height: 1.4285em;
   color: rgba(0, 0, 0, 0.87);
   -webkit-transition: opacity 0.1s ease, color 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
   transition: opacity 0.1s ease, color 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
@@ -28939,8 +29310,14 @@ Floated Menu / Item
 
 /* Icon */
 
-.chunkOutput .ui.message > i.icon {
+.chunkOutput .ui.icon.message > .icons,
+.chunkOutput .ui.icon.message > i.icon {
   margin-right: 0.6em;
+}
+
+.chunkOutput .ui.icon.message > .icons:last-child,
+.chunkOutput .ui.icon.message > i.icon:last-child {
+  margin: 0 0 0 0.6em;
 }
 
 /* Close Icon */
@@ -28949,7 +29326,7 @@ Floated Menu / Item
   cursor: pointer;
   position: absolute;
   margin: 0;
-  top: 0.775em;
+  top: 0.78575em;
   right: 0.5em;
   opacity: 0.7;
   -webkit-transition: opacity 0.1s ease;
@@ -29008,6 +29385,25 @@ Floated Menu / Item
             Variations
 *******************************/
 
+.chunkOutput .ui.centered.message,
+.chunkOutput .ui.center.aligned.message {
+  text-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.chunkOutput .ui.centered.message > .content,
+.chunkOutput .ui.center.aligned.message > .content {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.chunkOutput .ui.right.aligned.message {
+  text-align: right;
+}
+
 /*--------------
       Compact
   ---------------*/
@@ -29044,8 +29440,8 @@ Floated Menu / Item
 .chunkOutput .ui.bottom.attached.message {
   margin-top: -1px;
   border-radius: 0 0 0.28571429rem 0.28571429rem;
-  -webkit-box-shadow: 0 0 0 1px rgba(34, 36, 38, 0.15) inset, 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
-  box-shadow: 0 0 0 1px rgba(34, 36, 38, 0.15) inset, 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+  -webkit-box-shadow: 0 0 0 1px rgba(34, 36, 38, 0.15) inset, 0 1px 2px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0 0 0 1px rgba(34, 36, 38, 0.15) inset, 0 1px 2px 0 rgba(34, 36, 38, 0.15);
 }
 
 .chunkOutput .ui.bottom.attached.message:not(:last-child) {
@@ -29070,6 +29466,7 @@ Floated Menu / Item
   align-items: center;
 }
 
+.chunkOutput .ui.icon.message > .icons,
 .chunkOutput .ui.icon.message > i.icon:not(.close) {
   display: block;
   -webkit-box-flex: 0;
@@ -29090,11 +29487,12 @@ Floated Menu / Item
   vertical-align: middle;
 }
 
+.chunkOutput .ui.icon.message > .icons + .content,
 .chunkOutput .ui.icon.message > i.icon:not(.close) + .content {
   padding-left: 0;
 }
 
-.chunkOutput .ui.icon.message > i.circular.icon {
+.chunkOutput .ui.icon.message > i.circular {
   width: 1em;
 }
 
@@ -29103,8 +29501,8 @@ Floated Menu / Item
   ---------------*/
 
 .chunkOutput .ui.floating.message {
-  -webkit-box-shadow: 0 0 0 1px rgba(34, 36, 38, 0.22) inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
-  box-shadow: 0 0 0 1px rgba(34, 36, 38, 0.22) inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
+  -webkit-box-shadow: 0 0 0 1px rgba(34, 36, 38, 0.22) inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0 0 0 1px rgba(34, 36, 38, 0.22) inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
 }
 
 /*--------------
@@ -29127,12 +29525,17 @@ Floated Menu / Item
 }
 
 .chunkOutput .ui.floating.positive.message {
-  -webkit-box-shadow: 0 0 0 1px #A3C293 inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
-  box-shadow: 0 0 0 1px #A3C293 inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
+  -webkit-box-shadow: 0 0 0 1px #A3C293 inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0 0 0 1px #A3C293 inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
 }
 
 .chunkOutput .ui.positive.message .header {
   color: #1A531B;
+}
+
+.chunkOutput .ui.inverted.positive.message,
+.chunkOutput .ui.inverted.positive.message .header {
+  color: #A3C293;
 }
 
 .chunkOutput .ui.negative.message {
@@ -29147,12 +29550,17 @@ Floated Menu / Item
 }
 
 .chunkOutput .ui.floating.negative.message {
-  -webkit-box-shadow: 0 0 0 1px #E0B4B4 inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
-  box-shadow: 0 0 0 1px #E0B4B4 inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
+  -webkit-box-shadow: 0 0 0 1px #E0B4B4 inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0 0 0 1px #E0B4B4 inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
 }
 
 .chunkOutput .ui.negative.message .header {
   color: #912D2B;
+}
+
+.chunkOutput .ui.inverted.negative.message,
+.chunkOutput .ui.inverted.negative.message .header {
+  color: #E0B4B4;
 }
 
 .chunkOutput .ui.info.message {
@@ -29167,12 +29575,17 @@ Floated Menu / Item
 }
 
 .chunkOutput .ui.floating.info.message {
-  -webkit-box-shadow: 0 0 0 1px #A9D5DE inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
-  box-shadow: 0 0 0 1px #A9D5DE inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
+  -webkit-box-shadow: 0 0 0 1px #A9D5DE inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0 0 0 1px #A9D5DE inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
 }
 
 .chunkOutput .ui.info.message .header {
   color: #0E566C;
+}
+
+.chunkOutput .ui.inverted.info.message,
+.chunkOutput .ui.inverted.info.message .header {
+  color: #c6e3e9;
 }
 
 .chunkOutput .ui.warning.message {
@@ -29187,12 +29600,17 @@ Floated Menu / Item
 }
 
 .chunkOutput .ui.floating.warning.message {
-  -webkit-box-shadow: 0 0 0 1px #C9BA9B inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
-  box-shadow: 0 0 0 1px #C9BA9B inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
+  -webkit-box-shadow: 0 0 0 1px #C9BA9B inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0 0 0 1px #C9BA9B inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
 }
 
 .chunkOutput .ui.warning.message .header {
   color: #794B02;
+}
+
+.chunkOutput .ui.inverted.warning.message,
+.chunkOutput .ui.inverted.warning.message .header {
+  color: #d7ccb5;
 }
 
 .chunkOutput .ui.error.message {
@@ -29207,12 +29625,17 @@ Floated Menu / Item
 }
 
 .chunkOutput .ui.floating.error.message {
-  -webkit-box-shadow: 0 0 0 1px #E0B4B4 inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
-  box-shadow: 0 0 0 1px #E0B4B4 inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
+  -webkit-box-shadow: 0 0 0 1px #E0B4B4 inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0 0 0 1px #E0B4B4 inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
 }
 
 .chunkOutput .ui.error.message .header {
   color: #912D2B;
+}
+
+.chunkOutput .ui.inverted.error.message,
+.chunkOutput .ui.inverted.error.message .header {
+  color: #ecd1d1;
 }
 
 .chunkOutput .ui.success.message {
@@ -29227,17 +29650,22 @@ Floated Menu / Item
 }
 
 .chunkOutput .ui.floating.success.message {
-  -webkit-box-shadow: 0 0 0 1px #A3C293 inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
-  box-shadow: 0 0 0 1px #A3C293 inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
+  -webkit-box-shadow: 0 0 0 1px #A3C293 inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0 0 0 1px #A3C293 inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
 }
 
 .chunkOutput .ui.success.message .header {
   color: #1A531B;
 }
 
+.chunkOutput .ui.inverted.success.message,
+.chunkOutput .ui.inverted.success.message .header {
+  color: #b9d1ad;
+}
+
 .chunkOutput .ui.primary.message {
-  background-color: #DFF0FF;
-  color: rgba(255, 255, 255, 0.9);
+  background-color: #eaf3ec;
+  color: #5e8067;
 }
 
 .chunkOutput .ui.primary.message,
@@ -29247,17 +29675,17 @@ Floated Menu / Item
 }
 
 .chunkOutput .ui.floating.primary.message {
-  -webkit-box-shadow: 0 0 0 1px #698f73 inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
-  box-shadow: 0 0 0 1px #698f73 inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
+  -webkit-box-shadow: 0 0 0 1px #698f73 inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0 0 0 1px #698f73 inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
 }
 
 .chunkOutput .ui.primary.message .header {
-  color: rgba(242, 242, 242, 0.9);
+  color: #53725b;
 }
 
 .chunkOutput .ui.secondary.message {
-  background-color: #F4F4F4;
-  color: rgba(255, 255, 255, 0.9);
+  background-color: #edf1f8;
+  color: #4d6fb7;
 }
 
 .chunkOutput .ui.secondary.message,
@@ -29267,12 +29695,12 @@ Floated Menu / Item
 }
 
 .chunkOutput .ui.floating.secondary.message {
-  -webkit-box-shadow: 0 0 0 1px #5f7ebe inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
-  box-shadow: 0 0 0 1px #5f7ebe inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
+  -webkit-box-shadow: 0 0 0 1px #5f7ebe inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0 0 0 1px #5f7ebe inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
 }
 
 .chunkOutput .ui.secondary.message .header {
-  color: rgba(242, 242, 242, 0.9);
+  color: #4464a6;
 }
 
 .chunkOutput .ui.red.message {
@@ -29287,8 +29715,8 @@ Floated Menu / Item
 }
 
 .chunkOutput .ui.floating.red.message {
-  -webkit-box-shadow: 0 0 0 1px #DB2828 inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
-  box-shadow: 0 0 0 1px #DB2828 inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
+  -webkit-box-shadow: 0 0 0 1px #DB2828 inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0 0 0 1px #DB2828 inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
 }
 
 .chunkOutput .ui.red.message .header {
@@ -29307,8 +29735,8 @@ Floated Menu / Item
 }
 
 .chunkOutput .ui.floating.orange.message {
-  -webkit-box-shadow: 0 0 0 1px #F2711C inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
-  box-shadow: 0 0 0 1px #F2711C inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
+  -webkit-box-shadow: 0 0 0 1px #F2711C inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0 0 0 1px #F2711C inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
 }
 
 .chunkOutput .ui.orange.message .header {
@@ -29327,8 +29755,8 @@ Floated Menu / Item
 }
 
 .chunkOutput .ui.floating.yellow.message {
-  -webkit-box-shadow: 0 0 0 1px #B58105 inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
-  box-shadow: 0 0 0 1px #B58105 inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
+  -webkit-box-shadow: 0 0 0 1px #B58105 inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0 0 0 1px #B58105 inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
 }
 
 .chunkOutput .ui.yellow.message .header {
@@ -29347,8 +29775,8 @@ Floated Menu / Item
 }
 
 .chunkOutput .ui.floating.olive.message {
-  -webkit-box-shadow: 0 0 0 1px #8ABC1E inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
-  box-shadow: 0 0 0 1px #8ABC1E inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
+  -webkit-box-shadow: 0 0 0 1px #8ABC1E inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0 0 0 1px #8ABC1E inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
 }
 
 .chunkOutput .ui.olive.message .header {
@@ -29367,8 +29795,8 @@ Floated Menu / Item
 }
 
 .chunkOutput .ui.floating.green.message {
-  -webkit-box-shadow: 0 0 0 1px #1EBC30 inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
-  box-shadow: 0 0 0 1px #1EBC30 inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
+  -webkit-box-shadow: 0 0 0 1px #1EBC30 inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0 0 0 1px #1EBC30 inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
 }
 
 .chunkOutput .ui.green.message .header {
@@ -29387,8 +29815,8 @@ Floated Menu / Item
 }
 
 .chunkOutput .ui.floating.teal.message {
-  -webkit-box-shadow: 0 0 0 1px #10A3A3 inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
-  box-shadow: 0 0 0 1px #10A3A3 inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
+  -webkit-box-shadow: 0 0 0 1px #10A3A3 inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0 0 0 1px #10A3A3 inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
 }
 
 .chunkOutput .ui.teal.message .header {
@@ -29407,8 +29835,8 @@ Floated Menu / Item
 }
 
 .chunkOutput .ui.floating.blue.message {
-  -webkit-box-shadow: 0 0 0 1px #2185D0 inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
-  box-shadow: 0 0 0 1px #2185D0 inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
+  -webkit-box-shadow: 0 0 0 1px #2185D0 inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0 0 0 1px #2185D0 inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
 }
 
 .chunkOutput .ui.blue.message .header {
@@ -29427,8 +29855,8 @@ Floated Menu / Item
 }
 
 .chunkOutput .ui.floating.violet.message {
-  -webkit-box-shadow: 0 0 0 1px #6435C9 inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
-  box-shadow: 0 0 0 1px #6435C9 inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
+  -webkit-box-shadow: 0 0 0 1px #6435C9 inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0 0 0 1px #6435C9 inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
 }
 
 .chunkOutput .ui.violet.message .header {
@@ -29447,8 +29875,8 @@ Floated Menu / Item
 }
 
 .chunkOutput .ui.floating.purple.message {
-  -webkit-box-shadow: 0 0 0 1px #A333C8 inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
-  box-shadow: 0 0 0 1px #A333C8 inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
+  -webkit-box-shadow: 0 0 0 1px #A333C8 inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0 0 0 1px #A333C8 inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
 }
 
 .chunkOutput .ui.purple.message .header {
@@ -29467,8 +29895,8 @@ Floated Menu / Item
 }
 
 .chunkOutput .ui.floating.pink.message {
-  -webkit-box-shadow: 0 0 0 1px #E03997 inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
-  box-shadow: 0 0 0 1px #E03997 inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
+  -webkit-box-shadow: 0 0 0 1px #E03997 inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0 0 0 1px #E03997 inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
 }
 
 .chunkOutput .ui.pink.message .header {
@@ -29487,8 +29915,8 @@ Floated Menu / Item
 }
 
 .chunkOutput .ui.floating.brown.message {
-  -webkit-box-shadow: 0 0 0 1px #A5673F inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
-  box-shadow: 0 0 0 1px #A5673F inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
+  -webkit-box-shadow: 0 0 0 1px #A5673F inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0 0 0 1px #A5673F inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
 }
 
 .chunkOutput .ui.brown.message .header {
@@ -29507,8 +29935,8 @@ Floated Menu / Item
 }
 
 .chunkOutput .ui.floating.grey.message {
-  -webkit-box-shadow: 0 0 0 1px #767676 inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
-  box-shadow: 0 0 0 1px #767676 inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
+  -webkit-box-shadow: 0 0 0 1px #767676 inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0 0 0 1px #767676 inset, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
 }
 
 .chunkOutput .ui.grey.message .header {
@@ -29574,7 +30002,7 @@ Floated Menu / Item
 *******************************/
 
 /*!
- * # Fomantic-UI - Table
+ * # Fomantic-UI 2.8.8 - Table
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -30207,6 +30635,10 @@ Floated Menu / Item
   -moz-transform: scale(1);
 }
 
+.chunkOutput .ui.definition.table > thead:not(.full-width) > tr > th:first-child:not(:empty) {
+  pointer-events: auto;
+}
+
 .chunkOutput .ui.definition.table > tfoot:not(.full-width) > tr > th:first-child {
   pointer-events: none;
   background: #FFFFFF;
@@ -30324,7 +30756,7 @@ Floated Menu / Item
 .chunkOutput .ui.table tr.disabled:hover,
 .chunkOutput .ui.table tr:hover td.disabled {
   pointer-events: none;
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(40, 40, 40, 0.3);
 }
 
 /*******************************
@@ -30935,14 +31367,14 @@ Floated Menu / Item
 .chunkOutput .ui.ui.ui.ui.table tr.primary:not(.marked),
 .chunkOutput .ui.ui.table td.primary:not(.marked) {
   background: #fbfdfb;
-  color: rgba(255, 255, 255, 0.9);
+  color: #5e8067;
 }
 
 .chunkOutput .ui.ui.selectable.table tr.primary:not(.marked):hover,
 .chunkOutput .ui.table tr td.selectable.primary:not(.marked):hover,
 .chunkOutput .ui.selectable.table tr:hover td.primary:not(.marked) {
   background: #f4f9f5;
-  color: rgba(255, 255, 255, 0.9);
+  color: #5e8067;
 }
 
 .chunkOutput .ui.table td.marked.primary.left,
@@ -30981,14 +31413,14 @@ Floated Menu / Item
 .chunkOutput .ui.ui.ui.ui.table tr.secondary:not(.marked),
 .chunkOutput .ui.ui.table td.secondary:not(.marked) {
   background: #fbfcfe;
-  color: rgba(255, 255, 255, 0.9);
+  color: #4d6fb7;
 }
 
 .chunkOutput .ui.ui.selectable.table tr.secondary:not(.marked):hover,
 .chunkOutput .ui.table tr td.selectable.secondary:not(.marked):hover,
 .chunkOutput .ui.selectable.table tr:hover td.secondary:not(.marked) {
   background: #ffffff;
-  color: rgba(255, 255, 255, 0.9);
+  color: #4d6fb7;
 }
 
 .chunkOutput .ui.table td.marked.secondary.left,
@@ -31813,7 +32245,7 @@ Floated Menu / Item
 
 .chunkOutput .ui.sortable.table th.disabled:hover {
   cursor: auto;
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(40, 40, 40, 0.3);
 }
 
 .chunkOutput .ui.sortable.table > thead > tr > th:hover {
@@ -31908,14 +32340,14 @@ Floated Menu / Item
 .chunkOutput .ui.inverted.table tr.disabled:hover td,
 .chunkOutput .ui.inverted.table tr:hover td.disabled {
   pointer-events: none;
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(225, 225, 225, 0.3);
 }
 
 .chunkOutput .ui.inverted.table tr td.disabled:not([class="disabled"]),
 .chunkOutput .ui.inverted.table tr.disabled:not([class="disabled"]) td,
 .chunkOutput .ui.inverted.table tr.disabled td[class]:not(.disabled),
 .chunkOutput .ui.inverted.table tr:hover td.disabled:not([class="disabled"]) {
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(40, 40, 40, 0.3);
 }
 
 /* Definition */
@@ -31925,7 +32357,8 @@ Floated Menu / Item
   background: #FFFFFF;
 }
 
-.chunkOutput .ui.inverted.definition.table > tbody > tr > td:first-child .ui.inverted.definition.table > tfoot > tr > td:first-child,
+.chunkOutput .ui.inverted.definition.table > tbody > tr > td:first-child,
+.chunkOutput .ui.inverted.definition.table > tfoot > tr > td:first-child,
 .chunkOutput .ui.inverted.definition.table > tr > td:first-child {
   background: rgba(255, 255, 255, 0.02);
   color: #ffffff;
@@ -32218,7 +32651,7 @@ Floated Menu / Item
 *******************************/
 
 /*!
- * # Fomantic-UI - Card
+ * # Fomantic-UI 2.8.8 - Card
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -32410,7 +32843,7 @@ Floated Menu / Item
 .chunkOutput .ui.card > .content > .header:not(.ui) {
   font-weight: bold;
   font-size: 1.28571429em;
-  margin-top: -0.225em;
+  margin-top: -0.21425em;
   line-height: 1.2;
 }
 
@@ -32682,6 +33115,62 @@ Floated Menu / Item
 }
 
 /*******************************
+            States
+*******************************/
+
+/*--------------
+      Disabled
+  ---------------*/
+
+.chunkOutput .ui.disabled.card {
+  opacity: 0.45;
+  color: rgba(40, 40, 40, 0.3);
+  pointer-events: none;
+}
+
+/*--------------
+      Loading
+  ---------------*/
+
+.chunkOutput .ui.loading.card {
+  position: relative;
+  cursor: default;
+  pointer-events: none;
+  -webkit-transition: all 0s linear;
+  transition: all 0s linear;
+}
+
+.chunkOutput .ui.loading.card:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  height: 100%;
+  border-radius: 0.28571429rem;
+  z-index: 100;
+}
+
+.chunkOutput .ui.loading.card:after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  margin: -1.5em 0 0 -1.5em;
+  width: 3em;
+  height: 3em;
+  -webkit-animation: loader 0.6s infinite linear;
+  animation: loader 0.6s infinite linear;
+  border: 0.2em solid #767676;
+  border-radius: 500rem;
+  -webkit-box-shadow: 0 0 0 1px transparent;
+  box-shadow: 0 0 0 1px transparent;
+  visibility: visible;
+  z-index: 101;
+}
+
+/*******************************
            Variations
 *******************************/
 
@@ -32723,7 +33212,6 @@ Floated Menu / Item
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 100%;
   border-radius: 0.28571429rem 0 0 0.28571429rem;
 }
 
@@ -32734,6 +33222,7 @@ Floated Menu / Item
 
 .chunkOutput .ui.horizontal.cards > .card > .content,
 .chunkOutput .ui.horizontal.card > .content {
+  border-top: none;
   -ms-flex-preferred-size: 1px;
   flex-basis: 1px;
 }
@@ -32750,8 +33239,8 @@ Floated Menu / Item
 
 .chunkOutput .ui.raised.cards > .card,
 .chunkOutput .ui.raised.card {
-  -webkit-box-shadow: 0 0 0 1px #D4D4D5, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
-  box-shadow: 0 0 0 1px #D4D4D5, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
+  -webkit-box-shadow: 0 0 0 1px #D4D4D5, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0 0 0 1px #D4D4D5, 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
 }
 
 .chunkOutput .ui.raised.cards a.card:hover,
@@ -33643,6 +34132,16 @@ Floated Menu / Item
   color: rgba(255, 255, 255, 0.9);
 }
 
+.chunkOutput .ui.inverted.cards > .card > .content > a.header,
+.chunkOutput .ui.inverted.card > .content > a.header {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.chunkOutput .ui.inverted.cards > .card > .content > a.header:hover,
+.chunkOutput .ui.inverted.card > .content > a.header:hover {
+  color: #448f58;
+}
+
 /* Description */
 
 .chunkOutput .ui.inverted.cards > .card > .content > .description,
@@ -33692,6 +34191,16 @@ Floated Menu / Item
 .chunkOutput a.inverted.ui.card:hover,
 .chunkOutput .ui.inverted.link.card:hover {
   background: #1B1C1D;
+}
+
+/* Loading */
+
+.chunkOutput .ui.inverted.loading.card {
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.inverted.loading.card:before {
+  background: rgba(0, 0, 0, 0.85);
 }
 
 /*******************************
@@ -33793,7 +34302,7 @@ Floated Menu / Item
 *******************************/
 
 /*!
- * # Fomantic-UI - Comment
+ * # Fomantic-UI 2.8.8 - Comment
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -34130,7 +34639,7 @@ Floated Menu / Item
 *******************************/
 
 /*!
- * # Fomantic-UI - Feed
+ * # Fomantic-UI 2.8.8 - Feed
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -34343,7 +34852,7 @@ Floated Menu / Item
   border-left: none;
   font-size: 1em;
   max-width: 500px;
-  line-height: 1.45;
+  line-height: 1.4285em;
 }
 
 /*--------------
@@ -34517,7 +35026,7 @@ Floated Menu / Item
 *******************************/
 
 /*!
- * # Fomantic-UI - Item
+ * # Fomantic-UI 2.8.8 - Item
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -34666,7 +35175,7 @@ Floated Menu / Item
 
 .chunkOutput .ui.items > .item > .content > .header {
   display: inline-block;
-  margin: -0.225em 0 0;
+  margin: -0.21425em 0 0;
   font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.85);
@@ -34715,7 +35224,7 @@ Floated Menu / Item
   margin-top: 0.6em;
   max-width: auto;
   font-size: 1em;
-  line-height: 1.45;
+  line-height: 1.4285em;
   color: rgba(0, 0, 0, 0.87);
 }
 
@@ -35154,7 +35663,7 @@ Floated Menu / Item
 *******************************/
 
 /*!
- * # Fomantic-UI - Statistic
+ * # Fomantic-UI 2.8.8 - Statistic
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -35861,7 +36370,7 @@ Floated Menu / Item
 *******************************/
 
 /*!
- * # Fomantic-UI - Accordion
+ * # Fomantic-UI 2.8.8 - Accordion
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -35946,7 +36455,7 @@ Floated Menu / Item
 
 .chunkOutput .ui.accordion.menu .item .title > .dropdown.icon {
   float: right;
-  margin: 0.225em 0 0 1em;
+  margin: 0.21425em 0 0 1em;
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
@@ -35989,8 +36498,8 @@ Floated Menu / Item
 .chunkOutput .ui.styled.accordion .accordion {
   border-radius: 0.28571429rem;
   background: #FFFFFF;
-  -webkit-box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15), 0 0 0 1px rgba(34, 36, 38, 0.15);
-  box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15), 0 0 0 1px rgba(34, 36, 38, 0.15);
+  -webkit-box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15), 0 0 0 1px rgba(34, 36, 38, 0.15);
+  box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15), 0 0 0 1px rgba(34, 36, 38, 0.15);
 }
 
 .chunkOutput .ui.styled.accordion .title,
@@ -36159,7 +36668,7 @@ Floated Menu / Item
 *******************************/
 
 /*!
- * # Fomantic-UI - Checkbox
+ * # Fomantic-UI 2.8.8 - Checkbox
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -36248,6 +36757,17 @@ Floated Menu / Item
   transition: border 0.1s ease, opacity 0.1s ease, -webkit-transform 0.1s ease, -webkit-box-shadow 0.1s ease;
   transition: border 0.1s ease, opacity 0.1s ease, transform 0.1s ease, box-shadow 0.1s ease;
   transition: border 0.1s ease, opacity 0.1s ease, transform 0.1s ease, box-shadow 0.1s ease, -webkit-transform 0.1s ease, -webkit-box-shadow 0.1s ease;
+}
+
+.chunkOutput .ui.right.aligned.checkbox label {
+  padding-left: 0;
+  padding-right: 1.85714em;
+}
+
+.chunkOutput .ui.right.aligned.checkbox label:after,
+.chunkOutput .ui.right.aligned.checkbox label:before {
+  right: 0;
+  left: auto;
 }
 
 /*--------------
@@ -36357,6 +36877,11 @@ Floated Menu / Item
   left: 1.075rem;
 }
 
+.chunkOutput .ui.right.aligned.indeterminate.toggle.checkbox input:not([type=radio]) ~ label:after {
+  left: auto;
+  right: 1.075rem;
+}
+
 /*--------------
   Active Focus
 ---------------*/
@@ -36373,12 +36898,13 @@ Floated Menu / Item
 }
 
 /*--------------
-    Read-Only
----------------*/
+      Read-Only
+  ---------------*/
 
 .chunkOutput .ui.read-only.checkbox,
 .chunkOutput .ui.read-only.checkbox label {
   cursor: default;
+  pointer-events: none;
 }
 
 /*--------------
@@ -36387,7 +36913,7 @@ Floated Menu / Item
 
 .chunkOutput .ui.disabled.checkbox label,
 .chunkOutput .ui.checkbox input[disabled] ~ label {
-  cursor: default !important;
+  cursor: default;
   opacity: 0.5;
   color: #000000;
   pointer-events: none;
@@ -36549,8 +37075,8 @@ Floated Menu / Item
   opacity: 1;
   z-index: 2;
   border: none;
-  -webkit-box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15), 0 0 0 1px rgba(34, 36, 38, 0.15) inset;
-  box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15), 0 0 0 1px rgba(34, 36, 38, 0.15) inset;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15), 0 0 0 1px rgba(34, 36, 38, 0.15) inset;
+  box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15), 0 0 0 1px rgba(34, 36, 38, 0.15) inset;
   width: 1.5rem;
   height: 1.5rem;
   top: -0.25rem;
@@ -36601,6 +37127,23 @@ Floated Menu / Item
 
 .chunkOutput .ui.slider.checkbox input:focus:checked ~ label:before {
   background-color: #000000 !important;
+}
+
+.chunkOutput .ui.right.aligned.slider.checkbox label {
+  padding-left: 0;
+  padding-right: 4.5rem;
+}
+
+.chunkOutput .ui.right.aligned.slider.checkbox label:after {
+  left: auto;
+  right: 2rem;
+  -webkit-transition: right 0.3s ease;
+  transition: right 0.3s ease;
+}
+
+.chunkOutput .ui.right.aligned.slider.checkbox input:checked ~ label:after {
+  left: auto;
+  right: 0;
 }
 
 /*--------------
@@ -36660,8 +37203,8 @@ Floated Menu / Item
   opacity: 1;
   z-index: 2;
   border: none;
-  -webkit-box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15), 0 0 0 1px rgba(34, 36, 38, 0.15) inset;
-  box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15), 0 0 0 1px rgba(34, 36, 38, 0.15) inset;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15), 0 0 0 1px rgba(34, 36, 38, 0.15) inset;
+  box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15), 0 0 0 1px rgba(34, 36, 38, 0.15) inset;
   width: 1.5rem;
   height: 1.5rem;
   top: 0;
@@ -36673,8 +37216,8 @@ Floated Menu / Item
 
 .chunkOutput .ui.toggle.checkbox input ~ label:after {
   left: -0.05rem;
-  -webkit-box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15), 0 0 0 1px rgba(34, 36, 38, 0.15) inset;
-  box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15), 0 0 0 1px rgba(34, 36, 38, 0.15) inset;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15), 0 0 0 1px rgba(34, 36, 38, 0.15) inset;
+  box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15), 0 0 0 1px rgba(34, 36, 38, 0.15) inset;
 }
 
 /* Focus */
@@ -36703,8 +37246,8 @@ Floated Menu / Item
 
 .chunkOutput .ui.toggle.checkbox input:checked ~ label:after {
   left: 2.15rem;
-  -webkit-box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15), 0 0 0 1px rgba(34, 36, 38, 0.15) inset;
-  box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15), 0 0 0 1px rgba(34, 36, 38, 0.15) inset;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15), 0 0 0 1px rgba(34, 36, 38, 0.15) inset;
+  box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15), 0 0 0 1px rgba(34, 36, 38, 0.15) inset;
 }
 
 /* Active Focus */
@@ -36715,6 +37258,23 @@ Floated Menu / Item
 
 .chunkOutput .ui.toggle.checkbox input:focus:checked ~ label:before {
   background-color: #557b5f !important;
+}
+
+.chunkOutput .ui.right.aligned.toggle.checkbox label {
+  padding-left: 0;
+  padding-right: 4.5rem;
+}
+
+.chunkOutput .ui.right.aligned.toggle.checkbox input ~ label:after {
+  left: auto;
+  right: 2.15rem;
+  -webkit-transition: background 0.3s ease, right 0.3s ease;
+  transition: background 0.3s ease, right 0.3s ease;
+}
+
+.chunkOutput .ui.right.aligned.toggle.checkbox input:checked ~ label:after {
+  left: auto;
+  right: -0.05rem;
 }
 
 /*******************************
@@ -37008,7 +37568,7 @@ Floated Menu / Item
 *******************************/
 
 /*!
- * # Fomantic-UI - Dimmer
+ * # Fomantic-UI 2.8.8 - Dimmer
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -37489,7 +38049,7 @@ Floated Menu / Item
 *******************************/
 
 /*!
- * # Fomantic-UI - Dropdown
+ * # Fomantic-UI 2.8.8 - Dropdown
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -37572,6 +38132,7 @@ Floated Menu / Item
 .chunkOutput .ui.dropdown:not(.labeled) > .dropdown.icon {
   position: relative;
   width: auto;
+  min-width: 1em;
   font-size: 0.85714286em;
   margin: 0 0 0 1em;
 }
@@ -37770,6 +38331,7 @@ Floated Menu / Item
 
 /* Icons / Flags / Labels / Image */
 
+.chunkOutput .ui.dropdown > .text > i.icons,
 .chunkOutput .ui.dropdown > .text > i.icon,
 .chunkOutput .ui.dropdown > .text > .label,
 .chunkOutput .ui.dropdown > .text > .flag,
@@ -37778,6 +38340,7 @@ Floated Menu / Item
   margin-top: 0em;
 }
 
+.chunkOutput .ui.dropdown .menu > .item > i.icons,
 .chunkOutput .ui.dropdown .menu > .item > i.icon,
 .chunkOutput .ui.dropdown .menu > .item > .label,
 .chunkOutput .ui.dropdown .menu > .item > .flag,
@@ -37786,11 +38349,13 @@ Floated Menu / Item
   margin-top: 0em;
 }
 
+.chunkOutput .ui.dropdown > .text > i.icons,
 .chunkOutput .ui.dropdown > .text > i.icon,
 .chunkOutput .ui.dropdown > .text > .label,
 .chunkOutput .ui.dropdown > .text > .flag,
 .chunkOutput .ui.dropdown > .text > img,
 .chunkOutput .ui.dropdown > .text > .image,
+.chunkOutput .ui.dropdown .menu > .item > i.icons,
 .chunkOutput .ui.dropdown .menu > .item > i.icon,
 .chunkOutput .ui.dropdown .menu > .item > .label,
 .chunkOutput .ui.dropdown .menu > .item > .flag,
@@ -37897,7 +38462,7 @@ Floated Menu / Item
   -webkit-transform: rotateZ(0deg);
   transform: rotateZ(0deg);
   min-width: 14em;
-  min-height: 2.7142em;
+  min-height: 2.71428571em;
   background: #FFFFFF;
   display: inline-block;
   padding: 0.78571429em 3.2em 0.78571429em 1em;
@@ -37924,7 +38489,7 @@ Floated Menu / Item
   position: absolute;
   width: auto;
   height: auto;
-  line-height: 1.2142em;
+  line-height: 1.21428571em;
   top: 0.78571429em;
   right: 1em;
   z-index: 3;
@@ -38265,15 +38830,15 @@ Floated Menu / Item
 /* Search Selection */
 
 .chunkOutput .ui.search.selection.dropdown > input.search {
-  line-height: 1.2142em;
-  padding: 0.67861429em 3.2em 0.67861429em 1em;
+  line-height: 1.21428571em;
+  padding: 0.67857143em 3.2em 0.67857143em 1em;
 }
 
 /* Used to size multi select input to character width */
 
 .chunkOutput .ui.search.selection.dropdown > span.sizer {
-  line-height: 1.2142em;
-  padding: 0.67861429em 3.2em 0.67861429em 1em;
+  line-height: 1.21428571em;
+  padding: 0.67857143em 3.2em 0.67857143em 1em;
   display: none;
   white-space: pre;
 }
@@ -38346,11 +38911,19 @@ Floated Menu / Item
   font-size: 0.85714286em;
   margin: -0.78571429em;
   padding: 0.91666667em;
-  right: 3em;
+  right: 2em;
   top: 0.78571429em;
   position: absolute;
   opacity: 0.6;
   z-index: 3;
+}
+
+.chunkOutput .ui.selection.dropdown > .remove.icon {
+  right: 3em;
+}
+
+.chunkOutput .ui.inline.dropdown > .remove.icon {
+  right: 2.2em;
 }
 
 .chunkOutput .ui.clearable.dropdown .text,
@@ -38365,6 +38938,14 @@ Floated Menu / Item
   display: none;
 }
 
+.chunkOutput .ui.dropdown:not(.selection) > .remove.icon ~ .dropdown.icon {
+  margin-left: 1.5em;
+}
+
+.chunkOutput .ui.dropdown:not(.selection) > .remove.icon {
+  margin-top: -1.35em;
+}
+
 /*--------------
       Multiple
   ---------------*/
@@ -38372,7 +38953,7 @@ Floated Menu / Item
 /* Multiple Selection */
 
 .chunkOutput .ui.ui.multiple.dropdown {
-  padding: 0.22620476em 3.2em 0.22620476em 0.35714286em;
+  padding: 0.22619048em 3.2em 0.22619048em 0.35714286em;
 }
 
 .chunkOutput .ui.multiple.dropdown .menu {
@@ -38404,7 +38985,7 @@ Floated Menu / Item
   position: static;
   padding: 0;
   max-width: 100%;
-  margin: 0.45240952em 0 0.45240952em 0.64285714em;
+  margin: 0.45238095em 0 0.45238095em 0.64285714em;
   line-height: 1.21428571em;
 }
 
@@ -38454,7 +39035,7 @@ Floated Menu / Item
   top: 0;
   left: 0;
   padding: inherit;
-  margin: 0.45240952em 0 0.45240952em 0.64285714em;
+  margin: 0.45238095em 0 0.45238095em 0.64285714em;
   line-height: 1.21428571em;
 }
 
@@ -38468,7 +39049,7 @@ Floated Menu / Item
   position: static;
   padding: 0;
   max-width: 100%;
-  margin: 0.45240952em 0 0.45240952em 0.64285714em;
+  margin: 0.45238095em 0 0.45238095em 0.64285714em;
   width: 2.2em;
   line-height: 1.21428571em;
 }
@@ -38811,12 +39392,14 @@ Floated Menu / Item
         Clear
 ----------------------*/
 
+.chunkOutput .ui.dropdown > .remove.icon,
 .chunkOutput .ui.dropdown > .clear.dropdown.icon {
-  opacity: 0.8;
+  opacity: 0.6;
   -webkit-transition: opacity 0.1s ease;
   transition: opacity 0.1s ease;
 }
 
+.chunkOutput .ui.dropdown > .remove.icon:hover,
 .chunkOutput .ui.dropdown > .clear.dropdown.icon:hover {
   opacity: 1;
 }
@@ -38832,6 +39415,15 @@ Floated Menu / Item
   cursor: default;
   pointer-events: none;
   opacity: 0.45;
+}
+
+/*--------------------
+          Read-Only
+  ----------------------*/
+
+.chunkOutput .ui.read-only.dropdown {
+  cursor: default;
+  pointer-events: none;
 }
 
 /*******************************
@@ -39051,6 +39643,31 @@ Floated Menu / Item
   }
 }
 
+/*--------------------
+          Labeled
+  ---------------------*/
+
+/* Regular Label on Left */
+
+.chunkOutput .ui.labeled.input:not([class*="corner labeled"]) .label:first-child + .dropdown {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left-color: transparent;
+}
+
+/* Regular Label on Right */
+
+.chunkOutput .ui[class*="right labeled"].input > .dropdown:not(:last-child) {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-right-color: transparent !important;
+}
+
+.chunkOutput .ui[class*="right labeled"].input > .dropdown + .label {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
 /*--------------
      Columnar
 ---------------*/
@@ -39177,8 +39794,8 @@ Floated Menu / Item
 .chunkOutput .ui.floating.dropdown .menu {
   left: 0;
   right: auto;
-  -webkit-box-shadow: 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08) !important;
-  box-shadow: 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08) !important;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15) !important;
+  box-shadow: 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15) !important;
   border-radius: 0.28571429rem !important;
 }
 
@@ -39474,6 +40091,7 @@ Floated Menu / Item
 
 /* General rules and basic dropdowns */
 
+.chunkOutput .ui.dropdown .inverted.menu,
 .chunkOutput .ui.inverted.dropdown .menu {
   background: #1B1C1D;
   -webkit-box-shadow: none;
@@ -39481,10 +40099,12 @@ Floated Menu / Item
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
+.chunkOutput .ui.dropdown .inverted.menu > .item,
 .chunkOutput .ui.inverted.dropdown .menu > .item {
   color: rgba(255, 255, 255, 0.8);
 }
 
+.chunkOutput .ui.dropdown .inverted.menu .active.item,
 .chunkOutput .ui.inverted.dropdown .menu .active.item {
   background: transparent;
   color: rgba(255, 255, 255, 0.8);
@@ -39492,30 +40112,36 @@ Floated Menu / Item
   box-shadow: none;
 }
 
+.chunkOutput .ui.dropdown .inverted.menu > .item:hover,
 .chunkOutput .ui.inverted.dropdown .menu > .item:hover {
   background: rgba(255, 255, 255, 0.08);
   color: rgba(255, 255, 255, 0.8);
 }
 
 .chunkOutput .ui.inverted.dropdown.selected,
+.chunkOutput .ui.dropdown .inverted.menu .selected.item,
 .chunkOutput .ui.inverted.dropdown .menu .selected.item {
   background: rgba(255, 255, 255, 0.15);
   color: rgba(255, 255, 255, 0.8);
 }
 
+.chunkOutput .ui.dropdown .inverted.menu > .header,
 .chunkOutput .ui.inverted.dropdown .menu > .header {
   color: #FFFFFF;
 }
 
 .chunkOutput .ui.inverted.dropdown > .text > .description,
+.chunkOutput .ui.dropdown .inverted.menu > .item > .description,
 .chunkOutput .ui.inverted.dropdown .menu > .item > .description {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.chunkOutput .ui.dropdown .inverted.menu > .divider,
 .chunkOutput .ui.inverted.dropdown .menu > .divider {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
+.chunkOutput .ui.dropdown .inverted.scrolling.menu,
 .chunkOutput .ui.inverted.dropdown .scrolling.menu {
   border: none;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
@@ -39543,11 +40169,13 @@ Floated Menu / Item
   color: rgba(255, 255, 255, 0.9);
 }
 
+.chunkOutput .ui.selection.active.dropdown .inverted.menu,
 .chunkOutput .ui.inverted.selection.active.dropdown .menu,
 .chunkOutput .ui.inverted.selection.active.dropdown:hover {
   border-color: rgba(255, 255, 255, 0.15);
 }
 
+.chunkOutput .ui.selection.dropdown .inverted.menu > .item,
 .chunkOutput .ui.inverted.selection.dropdown .menu > .item {
   border-top: 1px solid #242526;
 }
@@ -39571,12 +40199,14 @@ Floated Menu / Item
   color: rgba(255, 255, 255, 0.7) !important;
 }
 
+.chunkOutput .ui.dropdown .inverted.menu > .message:not(.ui),
 .chunkOutput .ui.inverted.dropdown .menu > .message:not(.ui) {
   color: rgba(255, 255, 255, 0.5);
 }
 
 /* Fixing the border */
 
+.chunkOutput .ui.dropdown .inverted.menu > .item:first-child,
 .chunkOutput .ui.inverted.dropdown .menu > .item:first-child {
   border-top-width: 0;
 }
@@ -39636,22 +40266,27 @@ Floated Menu / Item
 
 /* Scrollbars */
 
+.chunkOutput .ui.dropdown .inverted.menu::-webkit-scrollbar-track,
 .chunkOutput .ui.inverted.dropdown .menu::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.1);
 }
 
+.chunkOutput .ui.dropdown .inverted.menu::-webkit-scrollbar-thumb,
 .chunkOutput .ui.inverted.dropdown .menu::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.25);
 }
 
+.chunkOutput .ui.dropdown .inverted.menu::-webkit-scrollbar-thumb:window-inactive,
 .chunkOutput .ui.inverted.dropdown .menu::-webkit-scrollbar-thumb:window-inactive {
   background: rgba(255, 255, 255, 0.15);
 }
 
+.chunkOutput .ui.dropdown .inverted.menu::-webkit-scrollbar-thumb:hover,
 .chunkOutput .ui.inverted.dropdown .menu::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.35);
 }
 
+.chunkOutput .ui.pointing.dropdown > .inverted.menu:after,
 .chunkOutput .ui.inverted.pointing.dropdown > .menu:after {
   background: #1B1C1D;
   -webkit-box-shadow: -1px -1px 0 0 rgba(255, 255, 255, 0.15);
@@ -39736,7 +40371,7 @@ Floated Menu / Item
 *******************************/
 
 /*!
- * # Fomantic-UI - Video
+ * # Fomantic-UI 2.8.8 - Video
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -39902,7 +40537,7 @@ Floated Menu / Item
 *******************************/
 
 /*!
- * # Fomantic-UI - Popup
+ * # Fomantic-UI 2.8.8 - Popup
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -39926,7 +40561,7 @@ Floated Menu / Item
   min-width: min-content;
   z-index: 1900;
   border: 1px solid #D4D4D5;
-  line-height: 1.45;
+  line-height: 1.4285em;
   max-width: 250px;
   background: #FFFFFF;
   padding: 0.833em 1em;
@@ -39934,8 +40569,8 @@ Floated Menu / Item
   font-style: normal;
   color: rgba(0, 0, 0, 0.87);
   border-radius: 0.28571429rem;
-  -webkit-box-shadow: 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
-  box-shadow: 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
+  -webkit-box-shadow: 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
 }
 
 .chunkOutput .ui.popup > .header {
@@ -40006,7 +40641,7 @@ Floated Menu / Item
   white-space: nowrap;
   font-size: 1rem;
   border: 1px solid #D4D4D5;
-  line-height: 1.45;
+  line-height: 1.4285em;
   max-width: none;
   background: #FFFFFF;
   padding: 0.833em 1em;
@@ -40014,8 +40649,8 @@ Floated Menu / Item
   font-style: normal;
   color: rgba(0, 0, 0, 0.87);
   border-radius: 0.28571429rem;
-  -webkit-box-shadow: 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
-  box-shadow: 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
+  -webkit-box-shadow: 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
   z-index: 1900;
 }
 
@@ -40263,7 +40898,9 @@ Floated Menu / Item
   top: 100%;
   left: 50%;
   margin-left: -0.07142857rem;
-  margin-top: 0.14285714rem;
+  margin-top: 0.30714286em;
+  -webkit-transform-origin: center top;
+  transform-origin: center top;
 }
 
 /* Bottom Left */
@@ -40813,7 +41450,7 @@ Floated Menu / Item
 *******************************/
 
 /*!
- * # Fomantic-UI - Rating
+ * # Fomantic-UI 2.8.8 - Rating
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -41308,6 +41945,7 @@ Floated Menu / Item
 
 .chunkOutput .ui.disabled.rating .icon {
   cursor: default;
+  pointer-events: none;
 }
 
 /*-------------------
@@ -41370,7 +42008,7 @@ Floated Menu / Item
 *******************************/
 
 /*!
- * # Fomantic-UI - Search
+ * # Fomantic-UI 2.8.8 - Search
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -41395,8 +42033,8 @@ Floated Menu / Item
   text-shadow: none;
   font-style: normal;
   font-weight: normal;
-  line-height: 1.2142em;
-  padding: 0.67861429em 1em;
+  line-height: 1.21428571em;
+  padding: 0.67857143em 1em;
   font-size: 1em;
   background: #FFFFFF;
   border: 1px solid rgba(34, 36, 38, 0.15);
@@ -41439,8 +42077,8 @@ Floated Menu / Item
   margin-top: 0.5em;
   width: 18em;
   border-radius: 0.28571429rem;
-  -webkit-box-shadow: 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
-  box-shadow: 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
+  -webkit-box-shadow: 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
   border: 1px solid #D4D4D5;
   z-index: 998;
 }
@@ -41953,7 +42591,7 @@ Floated Menu / Item
 *******************************/
 
 /*!
- * # Fomantic-UI - Sidebar
+ * # Fomantic-UI 2.8.8 - Sidebar
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -42638,7 +43276,7 @@ Floated Menu / Item
 *******************************/
 
 /*!
- * # Fomantic-UI - Sticky
+ * # Fomantic-UI 2.8.8 - Sticky
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -42712,7 +43350,7 @@ Floated Menu / Item
 *******************************/
 
 /*!
- * # Fomantic-UI - Tab
+ * # Fomantic-UI 2.8.8 - Tab
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -42852,7 +43490,7 @@ Floated Menu / Item
 *******************************/
 
 /*!
- * # Fomantic-UI - Transition
+ * # Fomantic-UI 2.8.8 - Transition
  * http://github.com/fomantic/Fomantic-UI/
  *
  *
