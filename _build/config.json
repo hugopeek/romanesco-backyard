@@ -15,7 +15,7 @@
                 "icon": "",
                 "menuIndex": 1,
                 "params": "",
-                "handler": "var topics = {\n    overviews: \"/getcache/cache/partition/refresh/overviews/\",\n    clients: \"/getcache/cache/partition/refresh/clients/\",\n    gallery: \"/getcache/cache/partition/refresh/gallery/\",\n    portfolio: \"/getcache/cache/partition/refresh/portfolio/\",\n    publication: \"/getcache/cache/partition/refresh/publication/\",\n    team: \"/getcache/cache/partition/refresh/team/\",\n    testimonials: \"/getcache/cache/partition/refresh/testimonials/\"\n};\n\nif (this.console == null || this.console == undefined) {\n    this.console = MODx.load({\n        xtype: 'modx-console'\n        ,register: 'mgr'\n        ,topic: topics\n        ,show_filename: 0\n        ,listeners: {\n            'shutdown': {fn:function() {\n                window.location.reload();\n            },scope:this}\n        }\n    });\n} else {\n    this.console.setRegister('mgr', topics);\n}\n\nthis.console.show(Ext.getBody());\n\nfor (var partition in topics) {\n    MODx.Ajax.request({\n        url: MODx.config.assets_url+'components/getcache/connector.php'\n        ,params: { action: 'cache/partition/refresh', partitions: partition, register: 'mgr' , topic: topics[partition] }\n        ,listeners: {\n            'success':{fn:function() {\n                // @todo: output some kind of response here\n                this.console.fireEvent('complete');\n            },scope:this}\n        }\n    });\n}\n\nreturn false;",
+                "handler": "var topics = {\n    overviews: \"/getcache/cache/partition/refresh/overviews/\",\n    clients: \"/getcache/cache/partition/refresh/clients/\",\n    gallery: \"/getcache/cache/partition/refresh/gallery/\",\n    portfolio: \"/getcache/cache/partition/refresh/portfolio/\",\n    publication: \"/getcache/cache/partition/refresh/publication/\",\n    team: \"/getcache/cache/partition/refresh/team/\",\n    testimonials: \"/getcache/cache/partition/refresh/testimonials/\",\n    patterns: \"/getcache/cache/partition/refresh/patterns/\"\n};\n\nif (this.console == null || this.console == undefined) {\n    this.console = MODx.load({\n        xtype: 'modx-console'\n        ,register: 'mgr'\n        ,topic: topics\n        ,show_filename: 0\n        ,listeners: {\n            'shutdown': {fn:function() {\n                window.location.reload();\n            },scope:this}\n        }\n    });\n} else {\n    this.console.setRegister('mgr', topics);\n}\n\nthis.console.show(Ext.getBody());\n\nfor (var partition in topics) {\n    MODx.Ajax.request({\n        url: MODx.config.assets_url+'components/getcache/connector.php'\n        ,params: { action: 'cache/partition/refresh', partitions: partition, register: 'mgr' , topic: topics[partition] }\n        ,listeners: {\n            'success':{fn:function() {\n                // @todo: output some kind of response here\n                this.console.fireEvent('complete');\n            },scope:this}\n        }\n    });\n}\n\nreturn false;",
                 "permissions": "empty_cache"
             },{
                 "text": "romanesco.menu.clear_cache_overviews_title",
@@ -26,7 +26,7 @@
                 "icon": "",
                 "menuIndex": 1,
                 "params": "",
-                "handler": "var topic = {\n    overviews: \"/getcache/cache/partition/refresh/overviews/\"\n};\n\nthis.console = MODx.load({\n    xtype: 'modx-console'\n    ,register: 'mgr'\n    ,topic: topic\n    ,show_filename: 0\n});\n\nthis.console.show(Ext.getBody());\n\nMODx.Ajax.request({\n    url: MODx.config.assets_url+'components/getcache/connector.php'\n    ,params: { action: 'cache/partition/refresh', partitions: 'overviews', register: 'mgr' , topic: topic }\n    ,listeners: {\n        'success':{fn:function() {\n            this.console.fireEvent('complete');\n        },scope:this}\n    }\n});\n\nreturn false;",
+                "handler": "var topic = '/getcache/cache/partition/refresh/overviews/';\n\nthis.console = MODx.load({\n    xtype: 'modx-console'\n    ,register: 'mgr'\n    ,topic: topic\n    ,show_filename: 0\n});\n\nthis.console.show(Ext.getBody());\n\nMODx.Ajax.request({\n    url: MODx.config.assets_url+'components/getcache/connector.php'\n    ,params: { action: 'cache/partition/refresh', partitions: 'overviews', register: 'mgr' , topic: topic }\n    ,listeners: {\n        'success':{fn:function() {\n            this.console.fireEvent('complete');\n            this.console = null;\n        },scope:this}\n    }\n});\n\nreturn false;",
                 "permissions": "empty_cache"
             },{
                 "text": "romanesco.menu.clear_cache_publication_title",
@@ -37,7 +37,7 @@
                 "icon": "",
                 "menuIndex": 2,
                 "params": "",
-                "handler": "var topic = {\n    publication: \"/getcache/cache/partition/refresh/publication/\"\n};\n\nthis.console = MODx.load({\n    xtype: 'modx-console'\n    ,register: 'mgr'\n    ,topic: topic\n    ,show_filename: 0\n});\n\nthis.console.show(Ext.getBody());\n\nMODx.Ajax.request({\n    url: MODx.config.assets_url+'components/getcache/connector.php'\n    ,params: { action: 'cache/partition/refresh', partitions: 'publication', register: 'mgr' , topic: topic }\n    ,listeners: {\n        'success':{fn:function() {\n            this.console.fireEvent('complete');\n        },scope:this}\n    }\n});\n\nreturn false;",
+                "handler": "var topic = '/getcache/cache/partition/refresh/publication/';\n\nthis.console = MODx.load({\n    xtype: 'modx-console'\n    ,register: 'mgr'\n    ,topic: topic\n    ,show_filename: 0\n});\n\nthis.console.show(Ext.getBody());\n\nMODx.Ajax.request({\n    url: MODx.config.assets_url+'components/getcache/connector.php'\n    ,params: { action: 'cache/partition/refresh', partitions: 'publication', register: 'mgr' , topic: topic }\n    ,listeners: {\n        'success':{fn:function() {\n            this.console.fireEvent('complete');\n            this.console = null;\n        },scope:this}\n    }\n});\n\nreturn false;",
                 "permissions": "empty_cache"
             },{
                 "text": "romanesco.menu.clear_cache_gallery_title",
@@ -48,7 +48,7 @@
                 "icon": "",
                 "menuIndex": 3,
                 "params": "",
-                "handler": "var topic = {\n    gallery: \"/getcache/cache/partition/refresh/gallery/\"\n};\n\nthis.console = MODx.load({\n    xtype: 'modx-console'\n    ,register: 'mgr'\n    ,topic: topic\n    ,show_filename: 0\n});\n\nthis.console.show(Ext.getBody());\n\nMODx.Ajax.request({\n    url: MODx.config.assets_url+'components/getcache/connector.php'\n    ,params: { action: 'cache/partition/refresh', partitions: 'gallery', register: 'mgr' , topic: topic }\n    ,listeners: {\n        'success':{fn:function() {\n            this.console.fireEvent('complete');\n        },scope:this}\n    }\n});\n\nreturn false;",
+                "handler": "var topic = '/getcache/cache/partition/refresh/gallery/';\n\nthis.console = MODx.load({\n    xtype: 'modx-console'\n    ,register: 'mgr'\n    ,topic: topic\n    ,show_filename: 0\n});\n\nthis.console.show(Ext.getBody());\n\nMODx.Ajax.request({\n    url: MODx.config.assets_url+'components/getcache/connector.php'\n    ,params: { action: 'cache/partition/refresh', partitions: 'gallery', register: 'mgr' , topic: topic }\n    ,listeners: {\n        'success':{fn:function() {\n            this.console.fireEvent('complete');\n            this.console = null;\n        },scope:this}\n    }\n});\n\nreturn false;",
                 "permissions": "empty_cache"
             },{
                 "text": "romanesco.menu.clear_cache_clients_title",
@@ -59,7 +59,7 @@
                 "icon": "",
                 "menuIndex": 4,
                 "params": "",
-                "handler": "var topic = {\n    clients: \"/getcache/cache/partition/refresh/clients/\"\n};\n\nthis.console = MODx.load({\n    xtype: 'modx-console'\n    ,register: 'mgr'\n    ,topic: topic\n    ,show_filename: 0\n});\n\nthis.console.show(Ext.getBody());\n\nMODx.Ajax.request({\n    url: MODx.config.assets_url+'components/getcache/connector.php'\n    ,params: { action: 'cache/partition/refresh', partitions: 'clients', register: 'mgr' , topic: topic }\n    ,listeners: {\n        'success':{fn:function() {\n            this.console.fireEvent('complete');\n        },scope:this}\n    }\n});\n\nreturn false;",
+                "handler": "var topic = '/getcache/cache/partition/refresh/clients/';\n\nthis.console = MODx.load({\n    xtype: 'modx-console'\n    ,register: 'mgr'\n    ,topic: topic\n    ,show_filename: 0\n});\n\nthis.console.show(Ext.getBody());\n\nMODx.Ajax.request({\n    url: MODx.config.assets_url+'components/getcache/connector.php'\n    ,params: { action: 'cache/partition/refresh', partitions: 'clients', register: 'mgr' , topic: topic }\n    ,listeners: {\n        'success':{fn:function() {\n            this.console.fireEvent('complete');\n            this.console = null;\n        },scope:this}\n    }\n});\n\nreturn false;",
                 "permissions": "empty_cache"
             },{
                 "text": "romanesco.menu.clear_cache_portfolio_title",
@@ -70,7 +70,7 @@
                 "icon": "",
                 "menuIndex": 5,
                 "params": "",
-                "handler": "var topic = {\n    portfolio: \"/getcache/cache/partition/refresh/portfolio/\"\n};\n\nthis.console = MODx.load({\n    xtype: 'modx-console'\n    ,register: 'mgr'\n    ,topic: topic\n    ,show_filename: 0\n});\n\nthis.console.show(Ext.getBody());\n\nMODx.Ajax.request({\n    url: MODx.config.assets_url+'components/getcache/connector.php'\n    ,params: { action: 'cache/partition/refresh', partitions: 'portfolio', register: 'mgr' , topic: topic }\n    ,listeners: {\n        'success':{fn:function() {\n            this.console.fireEvent('complete');\n        },scope:this}\n    }\n});\n\nreturn false;",
+                "handler": "var topic = '/getcache/cache/partition/refresh/portfolio/';\n\nthis.console = MODx.load({\n    xtype: 'modx-console'\n    ,register: 'mgr'\n    ,topic: topic\n    ,show_filename: 0\n});\n\nthis.console.show(Ext.getBody());\n\nMODx.Ajax.request({\n    url: MODx.config.assets_url+'components/getcache/connector.php'\n    ,params: { action: 'cache/partition/refresh', partitions: 'portfolio', register: 'mgr' , topic: topic }\n    ,listeners: {\n        'success':{fn:function() {\n            this.console.fireEvent('complete');\n            this.console = null;\n        },scope:this}\n    }\n});\n\nreturn false;",
                 "permissions": "empty_cache"
             },{
                 "text": "romanesco.menu.clear_cache_team_title",
@@ -81,7 +81,7 @@
                 "icon": "",
                 "menuIndex": 6,
                 "params": "",
-                "handler": "var topic = {\n    team: \"/getcache/cache/partition/refresh/team/\"\n};\n\nthis.console = MODx.load({\n    xtype: 'modx-console'\n    ,register: 'mgr'\n    ,topic: topic\n    ,show_filename: 0\n});\n\nthis.console.show(Ext.getBody());\n\nMODx.Ajax.request({\n    url: MODx.config.assets_url+'components/getcache/connector.php'\n    ,params: { action: 'cache/partition/refresh', partitions: 'team', register: 'mgr' , topic: topic }\n    ,listeners: {\n        'success':{fn:function() {\n            this.console.fireEvent('complete');\n        },scope:this}\n    }\n});\n\nreturn false;",
+                "handler": "var topic = '/getcache/cache/partition/refresh/team/';\n\nthis.console = MODx.load({\n    xtype: 'modx-console'\n    ,register: 'mgr'\n    ,topic: topic\n    ,show_filename: 0\n});\n\nthis.console.show(Ext.getBody());\n\nMODx.Ajax.request({\n    url: MODx.config.assets_url+'components/getcache/connector.php'\n    ,params: { action: 'cache/partition/refresh', partitions: 'team', register: 'mgr' , topic: topic }\n    ,listeners: {\n        'success':{fn:function() {\n            this.console.fireEvent('complete');\n            this.console = null;\n        },scope:this}\n    }\n});\n\nreturn false;",
                 "permissions": "empty_cache"
             },{
                 "text": "romanesco.menu.clear_cache_testimonials_title",
@@ -92,7 +92,18 @@
                 "icon": "",
                 "menuIndex": 7,
                 "params": "",
-                "handler": "var topic = {\n    testimonials: \"/getcache/cache/partition/refresh/testimonials/\"\n};\n\nthis.console = MODx.load({\n    xtype: 'modx-console'\n    ,register: 'mgr'\n    ,topic: topic\n    ,show_filename: 0\n});\n\nthis.console.show(Ext.getBody());\n\nMODx.Ajax.request({\n    url: MODx.config.assets_url+'components/getcache/connector.php'\n    ,params: { action: 'cache/partition/refresh', partitions: 'testimonials', register: 'mgr' , topic: topic }\n    ,listeners: {\n        'success':{fn:function() {\n            this.console.fireEvent('complete');\n        },scope:this}\n    }\n});\n\nreturn false;",
+                "handler": "var topic = '/getcache/cache/partition/refresh/testimonials/';\n\nthis.console = MODx.load({\n    xtype: 'modx-console'\n    ,register: 'mgr'\n    ,topic: topic\n    ,show_filename: 0\n});\n\nthis.console.show(Ext.getBody());\n\nMODx.Ajax.request({\n    url: MODx.config.assets_url+'components/getcache/connector.php'\n    ,params: { action: 'cache/partition/refresh', partitions: 'testimonials', register: 'mgr' , topic: topic }\n    ,listeners: {\n        'success':{fn:function() {\n            this.console.fireEvent('complete');\n            this.console = null;\n        },scope:this}\n    }\n});\n\nreturn false;",
+                "permissions": "empty_cache"
+            },{
+                "text": "romanesco.menu.clear_cache_patterns_title",
+                "description": "",
+                "action": "",
+                "namespace": "romanescobackyard",
+                "parent": "romanesco.menu.clear_cache_all_title",
+                "icon": "",
+                "menuIndex": 8,
+                "params": "",
+                "handler": "var topic = '/getcache/cache/partition/refresh/patterns/';\n\nthis.console = MODx.load({\n    xtype: 'modx-console'\n    ,register: 'mgr'\n    ,topic: topic\n    ,show_filename: 0\n});\n\nthis.console.show(Ext.getBody());\n\nMODx.Ajax.request({\n    url: MODx.config.assets_url+'components/getcache/connector.php'\n    ,params: { action: 'cache/partition/refresh', partitions: 'patterns', register: 'mgr' , topic: topic }\n    ,listeners: {\n        'success':{fn:function() {\n            this.console.fireEvent('complete');\n            this.console = null;\n        },scope:this}\n    }\n});\n\nreturn false;",
                 "permissions": "empty_cache"
             },{
                 "text": "romanesco.menu.tool_shed_title",

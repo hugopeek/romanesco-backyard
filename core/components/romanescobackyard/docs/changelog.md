@@ -3,6 +3,8 @@
 ## Backyard 1.0.0-beta6
 Released on ...
 
+- Add custom cache partition for patterns
+- Fix clearing of individual custom cache partitions
 - Set non-empty default values for htpasswd user and pass
 - Remove minify parameter from critical task (was removed in 4.0)
 

@@ -27,6 +27,7 @@ $_lang['romanesco.menu.clear_cache_portfolio_title'] = 'Portfolio';
 $_lang['romanesco.menu.clear_cache_publication_title'] = 'Publication';
 $_lang['romanesco.menu.clear_cache_team_title'] = 'Team';
 $_lang['romanesco.menu.clear_cache_testimonials_title'] = 'Testimonials';
+$_lang['romanesco.menu.clear_cache_patterns_title'] = 'Patterns';
 
 // Tool shed
 $_lang['romanesco.menu.tool_shed_title'] = 'Tool Shed';
