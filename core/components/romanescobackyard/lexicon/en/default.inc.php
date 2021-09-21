@@ -10,6 +10,8 @@ $_lang['romanesco.menu.overview'] = 'Overview';
 $_lang['romanesco.menu.logo_title'] = 'Homepage of [[++site_name]]';
 $_lang['romanesco.menu.close_title'] = 'Close';
 
+$_lang['romanesco.toc.dropdown_title'] = 'Jump to:';
+
 $_lang['romanesco.pagination.prev'] = 'Previous page';
 $_lang['romanesco.pagination.next'] = 'Next page';
 $_lang['romanesco.pagination.first'] = 'First page';
