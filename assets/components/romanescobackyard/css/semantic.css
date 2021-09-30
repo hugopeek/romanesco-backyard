@@ -21945,12 +21945,12 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   }
 }
 
-.chunkOutput body.vertical .ui.vertical.stripe.segment#submenu-dropdown {
+.chunkOutput body.vertical .ui.vertical.stripe.segment#dropdown-toc {
   padding: calc(var(--baseline) * 2rem) 0;
 }
 
 @media only screen and (min-width: 768px) {
-  .chunkOutput body.vertical .ui.vertical.stripe.segment#submenu-dropdown {
+  .chunkOutput body.vertical .ui.vertical.stripe.segment#dropdown-toc {
     padding: 0 5%;
   }
 }
@@ -24970,6 +24970,13 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   .chunkOutput .ui.stackable[class*="on tablet"].grid > .column,
   .chunkOutput .ui.stackable[class*="on tablet"].grid > .row > .column {
     width: 100% !important;
+  }
+
+  .chunkOutput .ui.stackable[class*="on tablet"].mobile.reversed.grid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
   }
 }
 
@@ -28080,11 +28087,11 @@ Floated Menu / Item
   padding: 0.25714286em 1.14285714em;
 }
 
-.chunkOutput #submenu-dropdown .toc .item.h1:first-child {
+.chunkOutput #dropdown-toc .menu .item.h1:first-child {
   display: none !important;
 }
 
-.chunkOutput #submenu-dropdown .toc .item .level:before {
+.chunkOutput #dropdown-toc .menu .item .level:before {
   margin-right: 0.3em;
   letter-spacing: 0.3em;
 }
@@ -28157,6 +28164,10 @@ Floated Menu / Item
   color: rgba(34, 36, 38, 0.15);
 }
 
+.chunkOutput .inverted.menu.toc .item .level:before {
+  color: rgba(225, 225, 225, 0.3);
+}
+
 .chunkOutput .menu.toc .item.h3 .level:before {
   content: '•';
 }
@@ -28167,6 +28178,10 @@ Floated Menu / Item
 
 .chunkOutput .menu.toc .item.h5 .level:before {
   content: '•••';
+}
+
+.chunkOutput .vertical.text.menu.toc .item {
+  margin: 0.15em 0;
 }
 
 .chunkOutput .ui.secondary.vertical.right.pointing.menu {
