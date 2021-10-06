@@ -32,6 +32,7 @@ $_lang['formblocks.collections.children.back_to_collection_label'] = 'Alle Formu
 $_lang['formblocks.form.validation_error_heading'] = 'Ai, er is iets mis gegaan!';
 $_lang['formblocks.form.validation_error_message'] = 'Het formulier kon helaas niet worden verstuurd, omdat niet alle verplichte velden zijn ingevuld. Vul a.u.b. de ontbrekende velden in (in rood gemarkeerd) en probeer het opnieuw.';
 $_lang['formblocks.form.honeypot_field'] = 'Wezens van vlees en bloed: dit veld niet invullen aub!';
+$_lang['formblocks.form.recaptchav3_legal_notice'] = 'Dit formulier is beveiligd met reCAPTCHA en de Google <a href="https://policies.google.com/privacy">Privacy Policy</a> en <a href="https://policies.google.com/terms">Algemene Voorwaarden</a> zijn hierop van toepassing.';
 $_lang['formblocks.form.submit_button'] = 'Verzenden';
 
 // Email template
