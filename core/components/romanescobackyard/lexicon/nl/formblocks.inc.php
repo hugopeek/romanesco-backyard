@@ -41,6 +41,19 @@ $_lang['formblocks.email.introtext'] = 'Dit is wat de bezoeker heeft ingevuld:';
 $_lang['formblocks.email.footer'] = '--- Einde bericht ---';
 $_lang['formblocks.email.other_namely'] = 'namelijk:';
 
+// Frontend validation
+$_lang['formblocks.validation.required_text_empty'] = 'Vul het veld <strong>[[+field_name:lcase]]</strong> in.';
+$_lang['formblocks.validation.required_text_checked'] = 'Dit veld moet worden aangevinkt.';
+$_lang['formblocks.validation.required_text_email'] = 'Geef een geldig <strong>emailadres</strong> op.';
+$_lang['formblocks.validation.required_text_url'] = 'Vul een geldige URL in.';
+$_lang['formblocks.validation.required_text_number'] = 'He, dat is geen nummer...';
+$_lang['formblocks.validation.required_text_password'] = 'Vul een wachtwoord in van minimaal 8 karakters.';
+$_lang['formblocks.validation.required_text_date_start'] = 'Selecteer een <strong>start datum</strong>.';
+$_lang['formblocks.validation.required_text_date_end'] = 'Selecteer een <strong>eind datum</strong>.';
+$_lang['formblocks.validation.required_text_math'] = 'Maak je het rekensommetje nog even af?';
+$_lang['formblocks.validation.required_text_terms'] = 'Je dient akkoord te gaan met de <strong>voorwaarden</strong>.';
+
+
 // Registration
 $_lang['formblocks.registration.email_subject'] = 'Bevestig je registratie';
 $_lang['formblocks.registration.email_content'] = '

@@ -43,6 +43,18 @@ $_lang['formblocks.email.introtext'] = 'This is what the visitor submitted:';
 $_lang['formblocks.email.footer'] = '--- End of message ---';
 $_lang['formblocks.email.other_namely'] = 'namely:';
 
+// Frontend validation
+$_lang['formblocks.validation.required_text_empty'] = 'Please fill in the <strong>[[+field_name:lcase]]</strong> field.';
+$_lang['formblocks.validation.required_text_checked'] = 'This field needs to be checked.';
+$_lang['formblocks.validation.required_text_email'] = 'Please provide a valid <strong>email address</strong>.';
+$_lang['formblocks.validation.required_text_url'] = 'Please provide a valid URL.';
+$_lang['formblocks.validation.required_text_number'] = 'Oops, that\'s not a number.';
+$_lang['formblocks.validation.required_text_password'] = 'Please provide a password of at least 8 characters long.';
+$_lang['formblocks.validation.required_text_date_start'] = 'Please select a <strong>start date</strong>.';
+$_lang['formblocks.validation.required_text_date_end'] = 'Please select an <strong>end date</strong>.';
+$_lang['formblocks.validation.required_text_math'] = 'You need to beat the spam bots at math!';
+$_lang['formblocks.validation.required_text_terms'] = 'You need to accept the <strong>terms and conditions</strong> to continue.';
+
 // Registration
 $_lang['formblocks.registration.email_subject'] = 'Confirm your registration';
 $_lang['formblocks.registration.email_content'] = '

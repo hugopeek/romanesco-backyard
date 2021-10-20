@@ -1,5 +1,10 @@
 # Changelog for Romanesco Backyard
 
+## Backyard 1.0.0-beta7
+Released on ...
+
+- Add lexicon keys for frontend form validation
+
 ## Backyard 1.0.0-beta6
 Released on August 30, 2021
 
