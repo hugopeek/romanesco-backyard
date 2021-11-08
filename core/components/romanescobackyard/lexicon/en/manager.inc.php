@@ -86,3 +86,9 @@ $_lang['collections.notes.children.back_to_collection_label'] = 'All Notes';
 // ---------------------------------------------------------------------
 
 $_lang['romanesco.cb_preview.overview_note'] = '<p><em>Please note: this preview automatically limits the amount of items to 2 rows in the manager &bull; Item styling may not reflect the actual output on the page &bull; Preview doesn\'t work with Pagination enabled.</em></p>';
+
+
+// Feedback widget
+// ---------------------------------------------------------------------
+
+$_lang['romanesco.feedback.button_text'] = 'Feedback';

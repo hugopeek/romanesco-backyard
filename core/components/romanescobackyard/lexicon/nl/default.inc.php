@@ -95,3 +95,9 @@ $_lang['romanesco.status.table_date_due'] = 'Vervaldatum';
 $_lang['romanesco.status.legend'] = 'Legenda';
 $_lang['romanesco.status.legend_progress'] = 'Voortgang';
 $_lang['romanesco.status.legend_health'] = 'Conditie';
+
+
+// Feedback widget
+// ---------------------------------------------------------------------
+
+$_lang['romanesco.feedback.button_text'] = 'Probleem melden';

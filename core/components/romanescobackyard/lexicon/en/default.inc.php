@@ -143,3 +143,7 @@ $_lang['romanesco.patterns.status_review_color'] = 'blue';
 $_lang['romanesco.patterns.status_deprecated_color'] = 'grey';
 $_lang['romanesco.patterns.status_unknown_color'] = 'black';
 
+// Feedback widget
+// ---------------------------------------------------------------------
+
+$_lang['romanesco.feedback.button_text'] = 'Feedback';
