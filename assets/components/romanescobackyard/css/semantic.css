@@ -820,8 +820,14 @@
   padding-top: 9rem;
 }
 
+@media only screen and (max-width: 767.98px) {
+  .chunkOutput #header.without.hero:not(.non-stick) + #toolbar {
+    padding-top: 8rem;
+  }
+}
+
 .chunkOutput body:not(.detail) #header.without.hero:not(.non-stick) + #main #content > .ui.stripe.segment:first-child {
-  padding-top: 12rem;
+  padding-top: 12.944rem;
 }
 
 @media only screen and (max-width: 767.98px) {
@@ -832,7 +838,7 @@
 
 .chunkOutput body.detail #header.without.hero:not(.non-stick) + #main #content,
 .chunkOutput body.detail #header.without.hero:not(.non-stick) + #main #sidebar {
-  margin-top: 12rem;
+  margin-top: 12.944rem;
 }
 
 @media only screen and (max-width: 991.98px) {
@@ -17562,11 +17568,7 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   cursor: pointer;
 }
 
-.chunkOutput .ui.image.centered {
-  display: block;
-  overflow: auto;
-}
-
+.chunkOutput .ui.image .caption,
 .chunkOutput .ui.image figcaption,
 .chunkOutput .ui.image + figcaption {
   margin-top: calc(var(--baseline) * 1rem);
@@ -24935,6 +24937,8 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 
 .chunkOutput .ui.nested.grid.celled {
   margin-top: 0;
+  border-radius: 0.46228571rem;
+  overflow: hidden;
 }
 
 .chunkOutput .ui.nested.grid > .column.publication {
@@ -24994,7 +24998,9 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   }
 
   .chunkOutput .ui.container > .pagination-wrapper .ui.stackable.grid > .column,
-  .chunkOutput .ui.container > .pagination-wrapper .ui.stackable.grid > .row > .column {
+  .chunkOutput .ui.container > .ui.stackable.grid .ui.stackable.grid > .column,
+  .chunkOutput .ui.container > .pagination-wrapper .ui.stackable.grid > .row > .column,
+  .chunkOutput .ui.container > .ui.stackable.grid .ui.stackable.grid > .row > .column {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
@@ -25004,6 +25010,8 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   .chunkOutput .ui.stackable[class*="on tablet"].grid > .column,
   .chunkOutput .ui.stackable[class*="on tablet"].grid > .row > .column {
     width: 100% !important;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .chunkOutput .ui.stackable[class*="on tablet"].mobile.reversed.grid {
@@ -27664,6 +27672,12 @@ Floated Menu / Item
   height: 8rem;
 }
 
+@media only screen and (max-width: 767.98px) {
+  .chunkOutput #menu {
+    height: 6.4rem;
+  }
+}
+
 .chunkOutput #menu.sticky {
   position: fixed;
   top: 0;
@@ -27685,7 +27699,7 @@ Floated Menu / Item
 
 @media only screen and (min-width: 768px) {
   .chunkOutput #menu.sticky + .ui.vertical.segment {
-    padding-top: 13rem;
+    padding-top: 12.944rem;
   }
 }
 
