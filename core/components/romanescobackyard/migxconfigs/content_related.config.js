@@ -4,9 +4,10 @@
             "MIGX_id": 1,
             "caption": "Content relations",
             "print_before_tabs": "0",
+            "pos": 1,
             "fields": [
                 {
-                    "MIGX_id": 1,
+                    "MIGX_id": "",
                     "field": "source",
                     "caption": "Source page",
                     "description": "",
@@ -30,10 +31,10 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 1
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 2,
+                    "MIGX_id": "",
                     "field": "destination",
                     "caption": "Related page",
                     "description": "",
@@ -57,10 +58,10 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 2
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 3,
+                    "MIGX_id": "",
                     "field": "title",
                     "caption": "Title",
                     "description": "Briefly summarize the content of the related page, from the perspective of the source page. How does the story continue on the related page?",
@@ -76,10 +77,10 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 3
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 4,
+                    "MIGX_id": "",
                     "field": "description",
                     "caption": "Description",
                     "description": "Here you can expand on the title a bit more, if necessary.",
@@ -95,10 +96,10 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 4
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 5,
+                    "MIGX_id": "",
                     "field": "weight",
                     "caption": "Weight",
                     "description": "Indicate how closely the source and destination pages are related. More weight means a higher position in related content lists.",
@@ -116,10 +117,10 @@
                     "inputOptionValues": "@CHUNK tvSelectFibonacci",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 5
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 97,
+                    "MIGX_id": "",
                     "field": "createdby",
                     "caption": "Author",
                     "description": "",
@@ -135,10 +136,10 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 97
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 98,
+                    "MIGX_id": "",
                     "field": "createdon",
                     "caption": "Date",
                     "description": "",
@@ -154,10 +155,10 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 98
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 98,
+                    "MIGX_id": "",
                     "field": "crosslink_id",
                     "caption": "Crosslink ID",
                     "description": "This is the ID of the MIGXdb object. For internal use only.",
@@ -173,10 +174,10 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 98
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 99,
+                    "MIGX_id": "",
                     "field": "id",
                     "caption": "ID",
                     "description": "",
@@ -192,10 +193,9 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 99
+                    "pos": ""
                 }
-            ],
-            "pos": 1
+            ]
         }
     ],
     "contextmenus": "update||duplicate||recall_remove_delete",
@@ -258,7 +258,7 @@
     },
     "columns": [
         {
-            "MIGX_id": 1,
+            "MIGX_id": "",
             "header": "Source",
             "dataIndex": "source",
             "width": 80,
@@ -273,7 +273,7 @@
             "editor": ""
         },
         {
-            "MIGX_id": 2,
+            "MIGX_id": "",
             "header": "Destination",
             "dataIndex": "destination",
             "width": 80,
@@ -288,7 +288,7 @@
             "editor": ""
         },
         {
-            "MIGX_id": 10,
+            "MIGX_id": "",
             "header": "Title",
             "dataIndex": "title",
             "width": 80,
@@ -303,7 +303,7 @@
             "editor": "this.textEditor"
         },
         {
-            "MIGX_id": 11,
+            "MIGX_id": "",
             "header": "Description",
             "dataIndex": "description",
             "width": 130,
@@ -318,7 +318,7 @@
             "editor": "this.textEditor"
         },
         {
-            "MIGX_id": 12,
+            "MIGX_id": "",
             "header": "Weight",
             "dataIndex": "weight",
             "width": 20,
@@ -333,7 +333,7 @@
             "editor": "this.textEditor"
         },
         {
-            "MIGX_id": 13,
+            "MIGX_id": "",
             "header": "Author",
             "dataIndex": "Author_username",
             "width": 30,
@@ -348,7 +348,7 @@
             "editor": ""
         },
         {
-            "MIGX_id": 98,
+            "MIGX_id": "",
             "header": "ID",
             "dataIndex": "id",
             "width": 10,
@@ -363,7 +363,7 @@
             "editor": ""
         },
         {
-            "MIGX_id": 99,
+            "MIGX_id": "",
             "header": "deleted",
             "dataIndex": "deleted",
             "width": 10,

@@ -4,9 +4,10 @@
             "MIGX_id": 1,
             "caption": "Input option",
             "print_before_tabs": "0",
+            "pos": 1,
             "fields": [
                 {
-                    "MIGX_id": 1,
+                    "MIGX_id": "",
                     "field": "name",
                     "caption": "Name",
                     "description": "",
@@ -22,10 +23,10 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 1
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 2,
+                    "MIGX_id": "",
                     "field": "description",
                     "caption": "Description",
                     "description": "",
@@ -41,10 +42,10 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 2
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 2,
+                    "MIGX_id": "",
                     "field": "alias",
                     "caption": "Alias",
                     "description": "",
@@ -60,10 +61,10 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 3
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 97,
+                    "MIGX_id": "",
                     "field": "key",
                     "caption": "Key",
                     "description": "",
@@ -79,10 +80,10 @@
                     "inputOptionValues": "",
                     "default": "0",
                     "useDefaultIfEmpty": "0",
-                    "pos": 97
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 98,
+                    "MIGX_id": "",
                     "field": "group",
                     "caption": "Group",
                     "description": "",
@@ -98,10 +99,10 @@
                     "inputOptionValues": "",
                     "default": "0",
                     "useDefaultIfEmpty": "0",
-                    "pos": 98
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 99,
+                    "MIGX_id": "",
                     "field": "id",
                     "caption": "ID",
                     "description": "",
@@ -117,10 +118,9 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 99
+                    "pos": ""
                 }
-            ],
-            "pos": 1
+            ]
         }
     ],
     "contextmenus": "update||duplicate||recall_remove_delete",
@@ -179,7 +179,7 @@
     },
     "columns": [
         {
-            "MIGX_id": 1,
+            "MIGX_id": "",
             "header": "ID",
             "dataIndex": "id",
             "width": 10,
@@ -194,7 +194,7 @@
             "editor": ""
         },
         {
-            "MIGX_id": 2,
+            "MIGX_id": "",
             "header": "Name",
             "dataIndex": "name",
             "width": 80,
@@ -209,7 +209,7 @@
             "editor": "this.textEditor"
         },
         {
-            "MIGX_id": 3,
+            "MIGX_id": "",
             "header": "Description",
             "dataIndex": "description",
             "width": 130,
@@ -224,7 +224,7 @@
             "editor": "this.textEditor"
         },
         {
-            "MIGX_id": 4,
+            "MIGX_id": "",
             "header": "Alias",
             "dataIndex": "alias",
             "width": 80,
@@ -239,7 +239,7 @@
             "editor": "this.textEditor"
         },
         {
-            "MIGX_id": 5,
+            "MIGX_id": "",
             "header": "Position",
             "dataIndex": "pos",
             "width": 30,
@@ -254,7 +254,7 @@
             "editor": "this.textEditor"
         },
         {
-            "MIGX_id": 99,
+            "MIGX_id": "",
             "header": "deleted",
             "dataIndex": "deleted",
             "width": 10,

@@ -4,9 +4,10 @@
             "MIGX_id": 1,
             "caption": "Milestone",
             "print_before_tabs": "0",
+            "pos": 1,
             "fields": [
                 {
-                    "MIGX_id": 1,
+                    "MIGX_id": "",
                     "field": "date",
                     "caption": "Date stamp",
                     "description": "",
@@ -22,10 +23,10 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 1
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 2,
+                    "MIGX_id": "",
                     "field": "title",
                     "caption": "Title",
                     "description": "",
@@ -41,10 +42,10 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 2
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 3,
+                    "MIGX_id": "",
                     "field": "description",
                     "caption": "Description",
                     "description": "",
@@ -60,18 +61,18 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 3
+                    "pos": ""
                 }
-            ],
-            "pos": 1
+            ]
         },
         {
             "MIGX_id": 2,
             "caption": "Properties",
             "print_before_tabs": "0",
+            "pos": 2,
             "fields": [
                 {
-                    "MIGX_id": 5,
+                    "MIGX_id": "",
                     "field": "complexity",
                     "caption": "Complexity",
                     "description": "Indicate how much effort this milestone will take, in points.",
@@ -89,10 +90,10 @@
                     "inputOptionValues": "@CHUNK tvSelectFibonacci",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 5
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 6,
+                    "MIGX_id": "",
                     "field": "user_id",
                     "caption": "Assigned to",
                     "description": "Who is in charge of reaching this milestone?",
@@ -115,10 +116,10 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 6
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 8,
+                    "MIGX_id": "",
                     "field": "icon",
                     "caption": "Icon",
                     "description": "This icon will be displayed in the timeline marker.",
@@ -134,10 +135,10 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 8
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 96,
+                    "MIGX_id": "",
                     "field": "type",
                     "caption": "Timeline type",
                     "description": "",
@@ -153,10 +154,10 @@
                     "inputOptionValues": "",
                     "default": "project-hub",
                     "useDefaultIfEmpty": "0",
-                    "pos": 96
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 97,
+                    "MIGX_id": "",
                     "field": "createdby",
                     "caption": "Author",
                     "description": "",
@@ -172,10 +173,10 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 97
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 98,
+                    "MIGX_id": "",
                     "field": "createdon",
                     "caption": "Date",
                     "description": "",
@@ -191,10 +192,10 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 98
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 99,
+                    "MIGX_id": "",
                     "field": "id",
                     "caption": "ID",
                     "description": "",
@@ -210,10 +211,9 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 99
+                    "pos": ""
                 }
-            ],
-            "pos": 2
+            ]
         }
     ],
     "contextmenus": "update||duplicate||recall_remove_delete",
@@ -266,7 +266,7 @@
     },
     "columns": [
         {
-            "MIGX_id": 1,
+            "MIGX_id": "",
             "header": "Date",
             "dataIndex": "date",
             "width": 50,
@@ -281,7 +281,7 @@
             "editor": ""
         },
         {
-            "MIGX_id": 2,
+            "MIGX_id": "",
             "header": "Title",
             "dataIndex": "title",
             "width": 80,
@@ -296,7 +296,7 @@
             "editor": "this.textEditor"
         },
         {
-            "MIGX_id": 3,
+            "MIGX_id": "",
             "header": "Description",
             "dataIndex": "description",
             "width": 120,
@@ -310,7 +310,7 @@
             "renderoptions": "",
             "editor": "this.textEditor"
         },{
-            "MIGX_id": 4,
+            "MIGX_id": "",
             "header": "Complexity",
             "dataIndex": "complexity",
             "width": 30,
@@ -325,7 +325,7 @@
             "editor": "this.textEditor"
         },
         {
-            "MIGX_id": 5,
+            "MIGX_id": "",
             "header": "Owner",
             "dataIndex": "user_id",
             "width": 50,
@@ -340,7 +340,7 @@
             "editor": ""
         },
         {
-            "MIGX_id": 98,
+            "MIGX_id": "",
             "header": "ID",
             "dataIndex": "id",
             "width": "",
@@ -355,7 +355,7 @@
             "editor": ""
         },
         {
-            "MIGX_id": 99,
+            "MIGX_id": "",
             "header": "deleted",
             "dataIndex": "deleted",
             "width": "",

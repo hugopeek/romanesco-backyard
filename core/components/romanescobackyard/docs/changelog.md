@@ -3,6 +3,7 @@
 ## Backyard 1.0.0-beta8
 Released on November 18, 2021
 
+- Remove unnecessary migx_id and pos values in MIGX configs
 - Fix aggregate keys for Author in schema (don't use alias field!)
 - Improve data formatting and descriptions in Related Content grids
 - Change sort order of Input Options with drag&drop [BC]

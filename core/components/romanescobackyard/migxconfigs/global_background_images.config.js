@@ -1,12 +1,13 @@
 {
     "formtabs": [
         {
-            "MIGX_id": 3,
+            "MIGX_id": 1,
             "caption": "Select image",
             "print_before_tabs": "0",
+            "pos": 1,
             "fields": [
                 {
-                    "MIGX_id": 6,
+                    "MIGX_id": "",
                     "field": "background_img",
                     "caption": "Background image",
                     "description": "",
@@ -33,10 +34,10 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 1
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 19,
+                    "MIGX_id": "",
                     "field": "background_img_portrait",
                     "caption": "Background image (portrait)",
                     "description": "",
@@ -50,12 +51,12 @@
                     "sourceFrom": "migx",
                     "sources": [
                         {
-                            "MIGX_id": 1,
+                            "MIGX_id": "",
                             "context": "mgr",
                             "sourceid": 13
                         },
                         {
-                            "MIGX_id": 2,
+                            "MIGX_id": "",
                             "context": "web",
                             "sourceid": 13
                         }
@@ -63,10 +64,10 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 2
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 7,
+                    "MIGX_id": "",
                     "field": "background_title",
                     "caption": "Background title",
                     "description": "Give this background a descriptive name, so you'll remember its contents when referenced elsewhere. Try to keep it short!",
@@ -82,18 +83,18 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 3
+                    "pos": ""
                 }
-            ],
-            "pos": 1
+            ]
         },
         {
-            "MIGX_id": 7,
+            "MIGX_id": 2,
             "caption": "Select SVG",
             "print_before_tabs": "0",
+            "pos": 2,
             "fields": [
                 {
-                    "MIGX_id": 20,
+                    "MIGX_id": "",
                     "field": "background_svg",
                     "caption": "Background SVG",
                     "description": "As an alternative to a regular JPG or PNG image, you can also select an SVG for background usage. SVGs are great for creating scalable or pattern backgrounds, but they may need some extra adjustments still with CSS.",
@@ -125,18 +126,18 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 1
+                    "pos": ""
                 }
-            ],
-            "pos": 2
+            ]
         },
         {
-            "MIGX_id": 4,
+            "MIGX_id": 3,
             "caption": "Additional settings",
             "print_before_tabs": "0",
+            "pos": 3,
             "fields": [
                 {
-                    "MIGX_id": 8,
+                    "MIGX_id": "",
                     "field": "background_inverted",
                     "caption": "Invert background",
                     "description": "Set to \"yes\" if you want the content to appear in white on this background.",
@@ -152,10 +153,10 @@
                     "inputOptionValues": "Yes==1||No==0",
                     "default": "0",
                     "useDefaultIfEmpty": "0",
-                    "pos": 1
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 9,
+                    "MIGX_id": "",
                     "field": "background_color",
                     "caption": "Background color",
                     "description": "You can enter any valid CSS value here, such as hex value (including # symbol) or rgba.",
@@ -171,10 +172,10 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 2
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 10,
+                    "MIGX_id": "",
                     "field": "background_opacity",
                     "caption": "Image opacity",
                     "description": "You can fade the image with this setting, so the background color will come through. Enter a value between 0 and 100.",
@@ -190,10 +191,9 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 3
+                    "pos": ""
                 }
-            ],
-            "pos": 3
+            ]
         }
     ],
     "contextmenus": "",
@@ -246,7 +246,7 @@
     },
     "columns": [
         {
-            "MIGX_id": 1,
+            "MIGX_id": "",
             "header": "Image",
             "dataIndex": "background_img",
             "width": 50,
@@ -261,7 +261,7 @@
             "editor": ""
         },
         {
-            "MIGX_id": 3,
+            "MIGX_id": "",
             "header": "Title",
             "dataIndex": "background_title",
             "width": 60,
@@ -276,7 +276,7 @@
             "editor": "this.textEditor"
         },
         {
-            "MIGX_id": 4,
+            "MIGX_id": "",
             "header": "Background",
             "dataIndex": "background_color",
             "width": 40,
@@ -291,7 +291,7 @@
             "editor": "this.textEditor"
         },
         {
-            "MIGX_id": 5,
+            "MIGX_id": "",
             "header": "Opacity",
             "dataIndex": "background_opacity",
             "width": 40,
@@ -306,7 +306,7 @@
             "editor": "this.textEditor"
         },
         {
-            "MIGX_id": 2,
+            "MIGX_id": "",
             "header": "Inverted",
             "dataIndex": "background_inverted",
             "width": 30,
@@ -319,7 +319,7 @@
             "renderchunktpl": "",
             "renderoptions": [
                 {
-                    "MIGX_id": 1,
+                    "MIGX_id": "",
                     "name": "inactive",
                     "use_as_fallback": 1,
                     "value": "0",
@@ -328,7 +328,7 @@
                     "image": "assets\/semantic\/dist\/themes\/romanesco\/assets\/icons\/square-o.svg"
                 },
                 {
-                    "MIGX_id": 2,
+                    "MIGX_id": "",
                     "name": "active",
                     "use_as_fallback": "",
                     "value": 1,
@@ -337,7 +337,7 @@
                     "image": "assets\/semantic\/dist\/themes\/romanesco\/assets\/icons\/check-square-o.svg"
                 },
                 {
-                    "MIGX_id": 3,
+                    "MIGX_id": "",
                     "name": "inactive",
                     "use_as_fallback": "",
                     "value": "",

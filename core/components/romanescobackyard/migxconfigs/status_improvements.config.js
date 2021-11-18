@@ -1,12 +1,13 @@
 {
     "formtabs": [
         {
-            "MIGX_id": 5,
+            "MIGX_id": 1,
             "caption": "Improvement",
             "print_before_tabs": "0",
+            "pos": 1,
             "fields": [
                 {
-                    "MIGX_id": 11,
+                    "MIGX_id": "",
                     "field": "improvements",
                     "caption": "Nature",
                     "description": "",
@@ -26,10 +27,10 @@
                     "inputOptionValues": "@CHUNK tvSelectInputOption@StatusImprovement",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 1
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 12,
+                    "MIGX_id": "",
                     "field": "title",
                     "caption": "Title",
                     "description": "",
@@ -45,10 +46,10 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 2
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 13,
+                    "MIGX_id": "",
                     "field": "content",
                     "caption": "Explanation",
                     "description": "",
@@ -64,18 +65,18 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 2
+                    "pos": ""
                 }
-            ],
-            "pos": 1
+            ]
         },
         {
-            "MIGX_id": 6,
+            "MIGX_id": 2,
             "caption": "Properties",
             "print_before_tabs": "0",
+            "pos": 2,
             "fields": [
                 {
-                    "MIGX_id": 14,
+                    "MIGX_id": "",
                     "field": "complexity",
                     "caption": "Complexity",
                     "description": "",
@@ -93,10 +94,10 @@
                     "inputOptionValues": "@CHUNK tvSelectFibonacci",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 14
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 15,
+                    "MIGX_id": "",
                     "field": "priority",
                     "caption": "Priority",
                     "description": "",
@@ -112,10 +113,10 @@
                     "inputOptionValues": "@CHUNK tvSelectInputOption@ImprovementPriority",
                     "default": "2",
                     "useDefaultIfEmpty": "true",
-                    "pos": 15
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 16,
+                    "MIGX_id": "",
                     "field": "user_id",
                     "caption": "Assigned to",
                     "description": "Who is best suited to look at this improvement?",
@@ -138,10 +139,10 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 16
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 96,
+                    "MIGX_id": "",
                     "field": "type",
                     "caption": "Type",
                     "description": "",
@@ -157,10 +158,10 @@
                     "inputOptionValues": "",
                     "default": "improvement",
                     "useDefaultIfEmpty": "0",
-                    "pos": 96
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 97,
+                    "MIGX_id": "",
                     "field": "createdby",
                     "caption": "Author",
                     "description": "",
@@ -176,10 +177,10 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 97
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 98,
+                    "MIGX_id": "",
                     "field": "createdon",
                     "caption": "Date",
                     "description": "",
@@ -195,10 +196,10 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 98
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 99,
+                    "MIGX_id": "",
                     "field": "id",
                     "caption": "ID",
                     "description": "",
@@ -214,10 +215,9 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 99
+                    "pos": ""
                 }
-            ],
-            "pos": 2
+            ]
         }
     ],
     "contextmenus": "update||duplicate||recall_remove_delete",
@@ -270,7 +270,7 @@
     },
     "columns": [
         {
-            "MIGX_id": 1,
+            "MIGX_id": "",
             "header": "Area",
             "dataIndex": "improvements",
             "width": 30,
@@ -285,7 +285,7 @@
             "editor": ""
         },
         {
-            "MIGX_id": 2,
+            "MIGX_id": "",
             "header": "Title",
             "dataIndex": "title",
             "width": 50,
@@ -300,7 +300,7 @@
             "editor": "this.textEditor"
         },
         {
-            "MIGX_id": 3,
+            "MIGX_id": "",
             "header": "Explanation",
             "dataIndex": "content",
             "width": 80,
@@ -315,7 +315,7 @@
             "editor": "this.textEditor"
         },
         {
-            "MIGX_id": 4,
+            "MIGX_id": "",
             "header": "Author",
             "dataIndex": "author_id",
             "width": 30,
@@ -330,7 +330,7 @@
             "editor": ""
         },
         {
-            "MIGX_id": 5,
+            "MIGX_id": "",
             "header": "Assigned to",
             "dataIndex": "user_id",
             "width": 30,
@@ -345,7 +345,7 @@
             "editor": ""
         },
         {
-            "MIGX_id": 6,
+            "MIGX_id": "",
             "header": "Created on",
             "dataIndex": "createdon",
             "width": 30,
@@ -360,7 +360,7 @@
             "editor": ""
         },
         {
-            "MIGX_id": 7,
+            "MIGX_id": "",
             "header": "Priority",
             "dataIndex": "priority",
             "width": 20,
@@ -375,7 +375,7 @@
             "editor": ""
         },
         {
-            "MIGX_id": 98,
+            "MIGX_id": "",
             "header": "ID",
             "dataIndex": "id",
             "width": 10,
@@ -390,7 +390,7 @@
             "editor": ""
         },
         {
-            "MIGX_id": 99,
+            "MIGX_id": "",
             "header": "deleted",
             "dataIndex": "deleted",
             "width": 10,

@@ -4,9 +4,10 @@
             "MIGX_id": 1,
             "caption": "Options",
             "print_before_tabs": "0",
+            "pos": 1,
             "fields": [
                 {
-                    "MIGX_id": 1,
+                    "MIGX_id": "",
                     "field": "options",
                     "caption": "Options",
                     "description": "",
@@ -22,18 +23,18 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 1
+                    "pos": ""
                 }
-            ],
-            "pos": 1
+            ]
         },
         {
             "MIGX_id": 2,
             "caption": "Group",
             "print_before_tabs": "0",
+            "pos": 2,
             "fields": [
                 {
-                    "MIGX_id": 2,
+                    "MIGX_id": "",
                     "field": "name",
                     "caption": "Name",
                     "description": "",
@@ -49,10 +50,10 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 1
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 3,
+                    "MIGX_id": "",
                     "field": "key",
                     "caption": "Key",
                     "description": "This identifier will be used by the TV to fetch the options. Don't use spaces.",
@@ -68,10 +69,10 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 2
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 4,
+                    "MIGX_id": "",
                     "field": "description",
                     "caption": "Description",
                     "description": "",
@@ -87,10 +88,10 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 3
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 98,
+                    "MIGX_id": "",
                     "field": "pos",
                     "caption": "Position",
                     "description": "",
@@ -106,10 +107,10 @@
                     "inputOptionValues": "",
                     "default": 0,
                     "useDefaultIfEmpty": "0",
-                    "pos": 98
+                    "pos": ""
                 },
                 {
-                    "MIGX_id": 99,
+                    "MIGX_id": "",
                     "field": "id",
                     "caption": "ID",
                     "description": "",
@@ -125,10 +126,9 @@
                     "inputOptionValues": "",
                     "default": "",
                     "useDefaultIfEmpty": "0",
-                    "pos": 99
+                    "pos": ""
                 }
-            ],
-            "pos": 2
+            ]
         }
     ],
     "contextmenus": "update||duplicate||recall_remove_delete",
@@ -183,7 +183,7 @@
     },
     "columns": [
         {
-            "MIGX_id": 0,
+            "MIGX_id": "",
             "header": "ID",
             "dataIndex": "id",
             "width": 10,
@@ -198,7 +198,7 @@
             "editor": ""
         },
         {
-            "MIGX_id": 1,
+            "MIGX_id": "",
             "header": "Name",
             "dataIndex": "name",
             "width": 80,
@@ -213,7 +213,7 @@
             "editor": "this.textEditor"
         },
         {
-            "MIGX_id": 2,
+            "MIGX_id": "",
             "header": "Key",
             "dataIndex": "key",
             "width": 50,
@@ -228,7 +228,7 @@
             "editor": "this.textEditor"
         },
         {
-            "MIGX_id": 3,
+            "MIGX_id": "",
             "header": "Description",
             "dataIndex": "description",
             "width": 130,
@@ -243,7 +243,7 @@
             "editor": "this.textEditor"
         },
         {
-            "MIGX_id": 4,
+            "MIGX_id": "",
             "header": "Options",
             "dataIndex": "options",
             "width": 130,
@@ -258,7 +258,7 @@
             "editor": ""
         },
         {
-            "MIGX_id": 5,
+            "MIGX_id": "",
             "header": "Sort",
             "dataIndex": "pos",
             "width": 30,
@@ -273,7 +273,7 @@
             "editor": "this.textEditor"
         },
         {
-            "MIGX_id": 99,
+            "MIGX_id": "",
             "header": "deleted",
             "dataIndex": "deleted",
             "width": 10,
