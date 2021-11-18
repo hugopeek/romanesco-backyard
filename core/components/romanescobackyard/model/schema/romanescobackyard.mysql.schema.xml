@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model package="romanescobackyard" baseClass="xPDOObject" platform="mysql" defaultEngine="InnoDB" phpdoc-package="romanescobackyard" version="1.1">
+
     <!-- Timeline -->
     <object class="rmTimeline" table="romanesco_timeline" extends="xPDOSimpleObject">
         <field key="resource_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="" />
@@ -23,6 +24,7 @@
         <aggregate alias="Resource" class="modResource" local="resource_id" foreign="id" cardinality="one" owner="foreign" />
         <aggregate alias="Author" class="modUser" local="author_id" foreign="id" cardinality="one" owner="foreign" />
     </object>
+
     <!-- Notes -->
     <object class="rmNote" table="romanesco_notes" extends="xPDOSimpleObject">
         <field key="resource_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="" />
@@ -44,6 +46,7 @@
         <aggregate alias="Resource" class="modResource" local="resource_id" foreign="id" cardinality="one" owner="foreign" />
         <aggregate alias="Author" class="modUser" local="author_id" foreign="id" cardinality="one" owner="foreign" />
     </object>
+
     <!-- Crosslinks -->
     <object class="rmCrosslink" table="romanesco_crosslinks" extends="xPDOSimpleObject">
         <field key="source" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="true" default="" />
@@ -58,6 +61,30 @@
 
         <aggregate alias="Author" class="modUser" local="author_id" foreign="id" cardinality="one" owner="foreign" />
     </object>
+
+    <!-- External links -->
+    <object class="rmExternalLink" table="romanesco_external_links" extends="xPDOSimpleObject">
+        <field key="resource_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="" />
+        <field key="number" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+        <field key="url" dbtype="varchar" precision="1000" phptype="string" null="true" />
+        <field key="title" dbtype="varchar" precision="1000" phptype="string" null="false" default="" />
+        <field key="description" dbtype="text" phptype="string" null="false" default="" />
+        <field key="date_accessed" dbtype="datetime" phptype="datetime" null="true" />
+
+        <field key="createdon" dbtype="int" precision="20" phptype="timestamp" null="false" default="" />
+        <field key="createdby" dbtype="int" precision="10" phptype="integer" null="false" default="" />
+        <field key="deleted" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="0" />
+
+        <alias key="author_id" field="createdby" />
+
+        <index alias="resource_id" name="resource_id" primary="false" unique="false" type="BTREE">
+            <column key="resource_id" length="" collation="A" null="false" />
+        </index>
+
+        <aggregate alias="Resource" class="modResource" local="resource_id" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Author" class="modUser" local="author_id" foreign="id" cardinality="one" owner="foreign" />
+    </object>
+
     <!-- Options -->
     <object class="rmOption" table="romanesco_options" extends="xPDOSimpleObject">
         <field key="name" dbtype="varchar" precision="190" phptype="string" null="false" default="" />
@@ -79,6 +106,7 @@
 
         <aggregate alias="Group" class="rmOptionGroup" local="key" foreign="key" cardinality="one" owner="foreign" />
     </object>
+
     <!-- Option groups -->
     <object class="rmOptionGroup" table="romanesco_option_groups" extends="xPDOSimpleObject">
         <field key="name" dbtype="varchar" precision="190" phptype="string" null="false" />
@@ -127,6 +155,7 @@
         <aggregate alias="Author" class="modUser" local="author_id" foreign="id" cardinality="one" owner="foreign" />
         <aggregate alias="User" class="modUser" local="user_id" foreign="id" cardinality="one" owner="foreign" />
     </object>
+
     <object class="rmNoteImprovement" table="romanesco_notes_improvement" extends="xPDOSimpleObject">
         <field key="resource_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="" />
         <field key="title" dbtype="varchar" precision="190" phptype="string" null="false" default="" />
@@ -155,6 +184,7 @@
         <aggregate alias="Author" class="modUser" local="author_id" foreign="id" cardinality="one" owner="foreign" />
         <aggregate alias="User" class="modUser" local="user_id" foreign="id" cardinality="one" owner="foreign" />
     </object>
+
     <object class="rmNoteIssue" table="romanesco_notes_issue" extends="xPDOSimpleObject">
         <field key="resource_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="" />
         <field key="title" dbtype="varchar" precision="190" phptype="string" null="false" default="" />
@@ -183,6 +213,7 @@
         <aggregate alias="Author" class="modUser" local="author_id" foreign="id" cardinality="one" owner="foreign" />
         <aggregate alias="User" class="modUser" local="user_id" foreign="id" cardinality="one" owner="foreign" />
     </object>
+
     <object class="rmCrosslinkRepurpose" table="romanesco_crosslinks_repurpose" extends="xPDOSimpleObject">
         <field key="source" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="true" default="" />
         <field key="destination" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="true" default="" />
@@ -204,6 +235,7 @@
         <aggregate alias="Destination" class="modResource" local="destination" foreign="id" cardinality="one" owner="foreign" />
         <aggregate alias="Author" class="modUser" local="author_id" foreign="id" cardinality="one" owner="foreign" />
     </object>
+
     <object class="rmCrosslinkRelated" table="romanesco_crosslinks_related" extends="xPDOSimpleObject">
         <field key="source" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="true" default="" />
         <field key="destination" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="true" default="" />

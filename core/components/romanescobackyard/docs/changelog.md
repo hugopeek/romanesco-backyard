@@ -3,6 +3,7 @@
 ## Backyard 1.0.0-beta8
 Released on November 15, 2021
 
+- Add database table and MIGX grid for external links
 - Add lexicon keys for feedback widget
 
 ## Backyard 1.0.0-beta7
