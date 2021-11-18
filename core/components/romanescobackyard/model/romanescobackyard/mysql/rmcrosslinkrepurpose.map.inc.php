@@ -133,7 +133,7 @@ $xpdo_meta_map['rmCrosslinkRepurpose']= array (
     'Author' => 
     array (
       'class' => 'modUser',
-      'local' => 'author_id',
+      'local' => 'createdby',
       'foreign' => 'id',
       'cardinality' => 'one',
       'owner' => 'foreign',

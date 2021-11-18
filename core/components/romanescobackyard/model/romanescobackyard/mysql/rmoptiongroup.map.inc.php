@@ -66,15 +66,15 @@ $xpdo_meta_map['rmOptionGroup']= array (
   ),
   'indexes' => 
   array (
-    'position' => 
+    'pos' => 
     array (
-      'alias' => 'position',
+      'alias' => 'pos',
       'primary' => false,
       'unique' => false,
       'type' => 'BTREE',
       'columns' => 
       array (
-        'position' => 
+        'pos' => 
         array (
           'length' => '',
           'collation' => 'A',

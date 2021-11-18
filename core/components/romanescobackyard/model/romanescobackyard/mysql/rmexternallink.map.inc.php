@@ -132,7 +132,7 @@ $xpdo_meta_map['rmExternalLink']= array (
     'Author' => 
     array (
       'class' => 'modUser',
-      'local' => 'author_id',
+      'local' => 'createdby',
       'foreign' => 'id',
       'cardinality' => 'one',
       'owner' => 'foreign',

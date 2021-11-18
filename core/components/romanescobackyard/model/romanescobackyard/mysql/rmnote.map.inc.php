@@ -124,7 +124,7 @@ $xpdo_meta_map['rmNote']= array (
     'Author' => 
     array (
       'class' => 'modUser',
-      'local' => 'author_id',
+      'local' => 'createdby',
       'foreign' => 'id',
       'cardinality' => 'one',
       'owner' => 'foreign',
