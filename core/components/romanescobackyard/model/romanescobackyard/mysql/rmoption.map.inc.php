@@ -18,7 +18,7 @@ $xpdo_meta_map['rmOption']= array (
     'alias' => '',
     'group' => NULL,
     'key' => '',
-    'position' => 0,
+    'pos' => 0,
     'deleted' => 0,
   ),
   'fieldMeta' => 
@@ -62,7 +62,7 @@ $xpdo_meta_map['rmOption']= array (
       'null' => true,
       'default' => '',
     ),
-    'position' => 
+    'pos' => 
     array (
       'dbtype' => 'int',
       'precision' => '10',
@@ -83,6 +83,7 @@ $xpdo_meta_map['rmOption']= array (
   'fieldAliases' => 
   array (
     'parent' => 'group',
+    'position' => 'pos',
   ),
   'indexes' => 
   array (
