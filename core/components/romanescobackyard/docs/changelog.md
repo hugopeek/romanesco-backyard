@@ -1,8 +1,9 @@
 # Changelog for Romanesco Backyard
 
 ## Backyard 1.0.0-beta8
-Released on November 15, 2021
+Released on November 18, 2021
 
+- Improve data formatting and descriptions in Related Content grids
 - Change sort order of Input Options with drag&drop [BC]
 - Add database table and MIGX grid for external links
 - Add lexicon keys for feedback widget

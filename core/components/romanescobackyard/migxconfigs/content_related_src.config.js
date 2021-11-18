@@ -8,7 +8,7 @@
                 {
                     "MIGX_id": 1,
                     "field": "source",
-                    "caption": "Source",
+                    "caption": "Source page",
                     "description": "",
                     "description_is_code": "0",
                     "inputTV": "",
@@ -55,7 +55,7 @@
                     "MIGX_id": 3,
                     "field": "title",
                     "caption": "Title",
-                    "description": "",
+                    "description": "Briefly summarize the content of the related page, from the perspective of the current page. How does the story continue on the related page?",
                     "description_is_code": "0",
                     "inputTV": "",
                     "inputTVtype": "text",
@@ -74,7 +74,7 @@
                     "MIGX_id": 4,
                     "field": "description",
                     "caption": "Description",
-                    "description": "",
+                    "description": "Here you can expand on the title a bit more, if necessary.",
                     "description_is_code": "0",
                     "inputTV": "",
                     "inputTVtype": "textarea",
@@ -93,17 +93,19 @@
                     "MIGX_id": 5,
                     "field": "weight",
                     "caption": "Weight",
-                    "description": "",
+                    "description": "Indicate how closely the source and destination pages are related. More weight means a higher position in related content lists.",
                     "description_is_code": "0",
                     "inputTV": "",
-                    "inputTVtype": "number",
+                    "inputTVtype": "option",
                     "validation": "",
-                    "configs": "",
+                    "configs": {
+                        "columns": "20"
+                    },
                     "restrictive_condition": "",
                     "display": "",
                     "sourceFrom": "config",
                     "sources": "",
-                    "inputOptionValues": "",
+                    "inputOptionValues": "@CHUNK tvSelectFibonacci",
                     "default": "",
                     "useDefaultIfEmpty": "0",
                     "pos": 5
@@ -112,7 +114,7 @@
                     "MIGX_id": 98,
                     "field": "crosslink_id",
                     "caption": "Crosslink ID",
-                    "description": "",
+                    "description": "This is the ID of the MIGXdb object. For internal use only.",
                     "description_is_code": "0",
                     "inputTV": "",
                     "inputTVtype": "number",
@@ -224,14 +226,22 @@
         "check_resid": 0,
         "check_resid_TV": "",
         "join_alias": "",
-        "has_jointable": "no",
+        "has_jointable": 1,
         "getlistwhere": "{\"source\":[[+resource_id]]}",
-        "joins": "",
+        "joins": [
+            {
+                "alias": "Source"
+            },{
+                "alias": "Destination"
+            },{
+                "alias": "Author"
+            }
+        ],
         "hooksnippets": {
             "aftersave": "migxSaveRelated"
         },
-        "cmpmaincaption": "Tool shed",
-        "cmptabcaption": "Content relations",
+        "cmpmaincaption": "",
+        "cmptabcaption": "",
         "cmptabdescription": "",
         "cmptabcontroller": "",
         "winbuttons": "",
@@ -242,15 +252,15 @@
         {
             "MIGX_id": 1,
             "header": "Source",
-            "dataIndex": "source",
+            "dataIndex": "Source_pagetitle",
             "width": 80,
             "sortable": true,
             "show_in_grid": 0,
             "customrenderer": "",
-            "renderer": "this.renderChunk",
+            "renderer": "",
             "clickaction": "",
             "selectorconfig": "",
-            "renderchunktpl": "[[#[[+source]].pagetitle]]",
+            "renderchunktpl": "",
             "renderoptions": "",
             "editor": ""
         },
@@ -258,14 +268,14 @@
             "MIGX_id": 2,
             "header": "Related page",
             "dataIndex": "destination",
-            "width": 130,
+            "width": 80,
             "sortable": true,
             "show_in_grid": 1,
             "customrenderer": "",
             "renderer": "this.renderChunk",
             "clickaction": "",
             "selectorconfig": "",
-            "renderchunktpl": "[[#[[+destination]].pagetitle]]",
+            "renderchunktpl": "[[+Destination_pagetitle]] ([[+destination]])",
             "renderoptions": "",
             "editor": ""
         },
