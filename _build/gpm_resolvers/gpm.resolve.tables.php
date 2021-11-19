@@ -32,6 +32,7 @@ if ($object->xpdo) {
             $manager->createObjectContainer('rmCrosslink');
             $manager->createObjectContainer('rmCrosslinkRelated');
             $manager->createObjectContainer('rmCrosslinkRepurpose');
+            $manager->createObjectContainer('rmExternalLink');
             $manager->createObjectContainer('rmOption');
             $manager->createObjectContainer('rmOptionGroup');
 
