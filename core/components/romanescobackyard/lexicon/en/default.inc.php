@@ -67,6 +67,12 @@ $_lang['romanesco.article.related'] = 'Related';
 // Testimonials
 $_lang['romanesco.testimonials.logo_title'] = 'Read why [[+pagetitle]] loves to work with us!';
 
+// External references
+$_lang['romanesco.external.title'] = 'External sources';
+$_lang['romanesco.external.accessed_on'] = 'Accessed on';
+$_lang['romanesco.external.visit_source'] = 'Visit source';
+$_lang['romanesco.external.view_all'] = 'View all sources';
+
 // Search
 $_lang['romanesco.search.field_placeholder'] = 'What are you looking for?';
 $_lang['romanesco.search.field_button_text'] = 'Search';

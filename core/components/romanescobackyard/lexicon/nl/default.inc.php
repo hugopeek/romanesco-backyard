@@ -67,6 +67,12 @@ $_lang['romanesco.article.related'] = 'Gerelateerde artikelen';
 // Testimonials
 $_lang['romanesco.testimonials.logo_title'] = 'Lees waarom [[+pagetitle]] graag met ons samenwerkt!';
 
+// External references
+$_lang['romanesco.external.title'] = 'Bronvermelding';
+$_lang['romanesco.external.accessed_on'] = 'Laatst bekeken';
+$_lang['romanesco.external.visit_source'] = 'Bezoek pagina';
+$_lang['romanesco.external.view_all'] = 'Alle bronnen';
+
 // Search
 $_lang['romanesco.search.field_placeholder'] = 'Waar ben je naar op zoek?';
 $_lang['romanesco.search.field_button_text'] = 'Zoeken';
@@ -76,7 +82,7 @@ $_lang['romanesco.search.result_button_text'] = 'Ga naar deze pagina';
 $_lang['romanesco.footer.qredits_title'] = 'Een Romanesco project';
 $_lang['romanesco.footer.qredits_text'] = '<p><strong>Een Romanesco project</strong><br>Pragmatische websites. Begin met de inhoud.</p>';
 $_lang['romanesco.footer.qredits_romanesco'] = 'romanesco.info';
-$_lang['romanesco.footer.qredits_modx'] = 'Powered by MODX';
+$_lang['romanesco.footer.qredits_modx'] = 'Gemaakt met MODX';
 
 
 // Project hub
