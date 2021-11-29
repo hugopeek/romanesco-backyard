@@ -1,5 +1,10 @@
 # Changelog for Romanesco Backyard
 
+## Backyard 1.0.0-beta9
+Released on ...
+
+- Sort input options by position in group view
+
 ## Backyard 1.0.0-beta8
 Released on November 19, 2021
 
