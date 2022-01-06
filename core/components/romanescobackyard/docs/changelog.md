@@ -3,6 +3,7 @@
 ## Backyard 1.0.0-beta9
 Released on ...
 
+- Fix alternative field positioning in global backgrounds CB
 - Sort input options by position in group view
 
 ## Backyard 1.0.0-beta8
