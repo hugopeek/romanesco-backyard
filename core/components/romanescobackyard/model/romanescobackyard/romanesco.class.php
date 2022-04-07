@@ -190,6 +190,63 @@ class Romanesco
     }
 
     /**
+     * Generate CSS for given context.
+     *
+     * @param string $context
+     * @param bool $bumpVersion
+     * @return bool
+     */
+    public function generateCustomCSS(string $context = '', bool $bumpVersion = false)
+    {
+        // Terminate any existing gulp processes first
+        $killCommand = "ps aux | grep '[g]ulp build-' | awk '{print $2}'";
+        exec(
+            'kill $(' . $killCommand . ') 2> /dev/null',
+            $output,
+            $return_kill
+        );
+
+        // Construct build command
+        if ($context) {
+            $distPath = $this->modx->getObject('modContextSetting', array(
+                'context_key' => $context,
+                'key' => 'romanesco.semantic_dist_path'
+            ));
+            $buildCommand = 'gulp build-context --key ' . $context . ' --dist ' . $this->modx->getOption('base_path') . $distPath->get('value');
+        }
+        else {
+            $buildCommand = 'gulp build-css';
+        }
+
+        // Run gulp process to generate new CSS
+        exec(
+            '"$HOME/.nvm/nvm-exec" ' . $buildCommand .
+            ' --gulpfile ' . escapeshellcmd($this->modx->getOption('assets_path')) . 'components/romanescobackyard/js/gulp/generate-multicontext-css.js' .
+            ' > ' . escapeshellcmd($this->modx->getOption('core_path')) . 'cache/logs/css.log' .
+            ' 2>' . escapeshellcmd($this->modx->getOption('core_path')) . 'cache/logs/css-error.log &',
+            $output,
+            $return_css
+        );
+
+        // Bump CSS version number to force refresh
+        $versionCSS = $this->modx->getObject('modSystemSetting', array('key' => 'romanesco.assets_version_css'));
+        if ($versionCSS && $bumpVersion)
+        {
+            // Only update minor version number (1.0.1<--)
+            $versionArray = explode('.', $versionCSS->get('value'));
+            $versionMinor = array_pop($versionArray);
+            $versionArray[] = $versionMinor + 1;
+
+            $versionCSS->set('value', implode('.', $versionArray));
+            $versionCSS->save();
+        } else {
+            $this->modx->log(modX::LOG_LEVEL_ERROR, 'Could not find romanesco.assets_version_css setting');
+        }
+
+        return true;
+    }
+
+    /**
      *
      * @param string $type
      * @return string
