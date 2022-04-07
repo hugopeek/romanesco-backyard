@@ -158,6 +158,38 @@ class Romanesco
     }
 
     /**
+     * Generate theme.variables file based on Presentation settings.
+     *
+     * @param array $settings
+     * @param string $context
+     * @return bool
+     */
+    public function generateThemeVariables(array $settings = [], string $context = '')
+    {
+        // Set theme.variables path for current context
+        $themesFolder = $this->modx->getOption('base_path') . 'assets/semantic/src/themes/';
+        if ($context) {
+            $themeVariablesPath = $themesFolder . $context . '/globals/theme.variables';
+        } else {
+            $themeVariablesPath = $themesFolder . 'project/globals/theme.variables';
+        }
+
+        // Write to theme.variables
+        $pathInfo = pathinfo($themeVariablesPath);
+        $path = $pathInfo['dirname'];
+        if (!file_exists($path)) {
+            mkdir($path, 0755, true);
+        }
+
+        file_put_contents(
+            $themeVariablesPath,
+            $this->modx->getChunk('themeVariables', $settings)
+        );
+
+        return true;
+    }
+
+    /**
      *
      * @param string $type
      * @return string
