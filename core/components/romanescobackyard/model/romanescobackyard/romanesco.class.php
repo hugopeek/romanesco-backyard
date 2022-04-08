@@ -132,9 +132,12 @@ class Romanesco
      */
     public function generateCriticalCSS(array $settings = array())
     {
-        // Run parallel (by disowning the command) or in sequence
+        // Run parallel (execute command in the background) or in sequence
         // Take note that running multiple processes (> 10) in parallel will severely cripple your server!
-        $disown = $settings['parallel'] ?? true ? ' &' : '';
+        $background = '';
+        if ($settings['parallel']) {
+            $background = ' &';
+        }
 
         exec(
             '"$HOME/.nvm/nvm-exec" gulp critical' .
@@ -147,7 +150,7 @@ class Romanesco
             ' --devMode ' . $this->modx->getOption('romanesco.dev_mode') .
             ' --gulpfile ' . escapeshellcmd($this->modx->getOption('assets_path')) . 'components/romanescobackyard/js/gulp/generate-critical-css.js' .
             ' >> ' . escapeshellcmd($this->modx->getOption('core_path')) . 'cache/logs/css-critical.log' .
-            ' 2>>' . escapeshellcmd($this->modx->getOption('core_path')) . 'cache/logs/css-error.log' . $disown,
+            ' 2>>' . escapeshellcmd($this->modx->getOption('core_path')) . 'cache/logs/css-error.log' . $background,
             $output,
             $return_css
         );
@@ -193,11 +196,18 @@ class Romanesco
      * Generate CSS for given context.
      *
      * @param string $context
+     * @param bool $parallel
      * @param bool $bumpVersion
      * @return bool
      */
-    public function generateCustomCSS(string $context = '', bool $bumpVersion = false)
+    public function generateCustomCSS(string $context = '', bool $parallel = false, bool $bumpVersion = false)
     {
+        // Run parallel (execute command in the background) or in sequence
+        $background = '';
+        if ($parallel) {
+            $background = ' &';
+        }
+
         // Terminate any existing gulp processes first
         $killCommand = "ps aux | grep '[g]ulp build-' | awk '{print $2}'";
         exec(
@@ -223,7 +233,7 @@ class Romanesco
             '"$HOME/.nvm/nvm-exec" ' . $buildCommand .
             ' --gulpfile ' . escapeshellcmd($this->modx->getOption('assets_path')) . 'components/romanescobackyard/js/gulp/generate-multicontext-css.js' .
             ' > ' . escapeshellcmd($this->modx->getOption('core_path')) . 'cache/logs/css.log' .
-            ' 2>' . escapeshellcmd($this->modx->getOption('core_path')) . 'cache/logs/css-error.log &',
+            ' 2>' . escapeshellcmd($this->modx->getOption('core_path')) . 'cache/logs/css-error.log' . $background,
             $output,
             $return_css
         );
@@ -243,6 +253,41 @@ class Romanesco
             $this->modx->log(modX::LOG_LEVEL_ERROR, 'Could not find romanesco.assets_version_css setting');
         }
 
+        return $return_css;
+    }
+
+    /**
+     * Generate favicon for given context.
+     *
+     * @param array $settings
+     * @return bool
+     */
+    public function generateFavicons(array $settings = [])
+    {
+        $path = $this->modx->getOption('base_path') . $settings['logo_badge_path'];
+
+        exec(
+            '"$HOME/.nvm/nvm-exec"' .
+            ' gulp generate-favicon' .
+            ' --gulpfile ' . escapeshellcmd($this->modx->getOption('assets_path')) . 'components/romanescobackyard/js/gulp/generate-favicons.js' .
+            ' --name ' . escapeshellarg($this->modx->getOption('site_name')) .
+            ' --img ' . escapeshellarg($path) .
+            ' --primary ' . escapeshellarg($settings['theme_color_primary']) .
+            ' --secondary ' . escapeshellarg($settings['theme_color_secondary']) .
+            ' > ' . escapeshellcmd($this->modx->getOption('core_path')) . 'cache/logs/favicon.log' .
+            ' 2>' . escapeshellcmd($this->modx->getOption('core_path')) . 'cache/logs/favicon-error.log &',
+            $output,
+            $return_favicon
+        );
+
+        // Bump favicon version number to force refresh
+        $version = $this->modx->getObject('modSystemSetting', array('key' => 'romanesco.favicon_version'));
+        if ($version) {
+            $version->set('value', $version->get('value') + 0.1);
+            $version->save();
+        } else {
+            $this->modx->log(modX::LOG_LEVEL_ERROR, 'Could not find favicon_version setting');
+        }
         return true;
     }
 
