@@ -253,7 +253,7 @@ class Romanesco
             $this->modx->log(modX::LOG_LEVEL_ERROR, 'Could not find romanesco.assets_version_css setting');
         }
 
-        return $return_css;
+        return true;
     }
 
     /**
