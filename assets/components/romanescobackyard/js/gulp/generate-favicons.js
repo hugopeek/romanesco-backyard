@@ -84,9 +84,8 @@ gulp.task('generate-favicon', function(done) {
         },
         markupFile: FAVICON_DATA_FILE
     }, function() {
-        //done();
+        done();
     });
-    done();
 });
 
 // Inject the favicon markups in your HTML pages. You should run
