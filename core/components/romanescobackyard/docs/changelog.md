@@ -3,6 +3,9 @@
 ## Backyard 1.0.0-beta9
 Released on ...
 
+- Wait for favicon process to finish before returning
+- Set default favicon variables after checking command line argument, not before
+- Accept custom dist path for generate-favicons task
 - Add option to hide advanced CB features in manager
 - Fix alternative field positioning in global backgrounds CB
 - Sort input options by position in group view
