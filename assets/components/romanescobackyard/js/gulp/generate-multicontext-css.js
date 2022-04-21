@@ -92,6 +92,5 @@ gulp.task('build-context', function (done) {
     }
 
     // Run in sequence
-    console.info('Building Semantic');
     gulp.series('switch-config',tasks.join(','),'revert-switch')(done);
 });

@@ -5,37 +5,19 @@ var
     fs              = require('fs'),
     argv            = require('yargs').argv,
 
-    // Set default variables
-    projectName     = 'Romanesco',
-    projectRoot     = __dirname.split("assets").shift(),
-    masterPicture   = projectRoot + 'assets/img/badge.svg',
-    backgroundColor = 'ffffff',
-    primaryColor    = '698f73',
-    secondaryColor  = '5f7ebe',
+    // Set variables
+    projectName     = argv.name ? argv.name             : 'Romanesco',
+    projectRoot     = argv.root ? argv.root             : __dirname.split("assets").shift(),
+    relativePath    = argv.rel ? argv.rel               : 'assets/favicons/',
+    distPath        = argv.dist ? argv.dist             : projectRoot + relativePath,
+    masterPicture   = argv.img ? argv.img               : projectRoot + 'assets/img/badge.svg',
+    backgroundColor = argv.bg ? argv.bg                 : 'ffffff',
+    primaryColor    = argv.primary? argv.primary        : '698f73',
+    secondaryColor  = argv.secondary ? argv.secondary   : '5f7ebe',
 
-    // File where the favicon markups are stored
-    FAVICON_DATA_FILE = projectRoot + 'assets/favicons/favicons.json'
+    // File where the result is stored
+    FAVICON_DATA_FILE = distPath + 'favicons.json'
 ;
-
-// Fetch variables from command line input
-if (argv.name) {
-    var projectName = argv.name;
-}
-if (argv.root) {
-    var projectRoot = argv.root;
-}
-if (argv.img) {
-    var masterPicture = argv.img;
-}
-if (argv.bg) {
-    var backgroundColor = argv.bg;
-}
-if (argv.primary) {
-    var primaryColor = argv.primary;
-}
-if (argv.secondary) {
-    var secondaryColor = argv.secondary;
-}
 
 // Generate the icons. This task takes a few seconds to complete.
 // You should run it at least once to create the icons. Then,
@@ -44,8 +26,8 @@ if (argv.secondary) {
 gulp.task('generate-favicon', function(done) {
     realFavicon.generateFavicon({
         masterPicture: masterPicture,
-        dest: projectRoot + 'assets/favicons',
-        iconsPath: 'assets/favicons/',
+        dest: distPath,
+        iconsPath: relativePath,
         design: {
             ios: {
                 pictureAspect: 'backgroundAndMargin',
