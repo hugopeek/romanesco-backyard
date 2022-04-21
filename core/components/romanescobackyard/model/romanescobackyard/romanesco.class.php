@@ -1,11 +1,16 @@
 <?php
 /**
- * @property modX modx
  * @package romanesco
  */
 
 class Romanesco
 {
+    /**
+     * A reference to the modX instance
+     * @var modX $modx
+     */
+    public $modx;
+
     /**
      * A configuration array
      * @var array $config
@@ -21,13 +26,23 @@ class Romanesco
     function __construct(modX &$modx, array $config = array())
     {
         $this->modx =& $modx;
+
         $corePath = $this->modx->getOption('romanescobackyard.core_path', $config, $this->modx->getOption('core_path') . 'components/romanescobackyard/');
+        $assetsUrl = $this->modx->getOption('romanescobackyard.assets_url',$config,$this->modx->getOption('assets_url') . 'components/romanescobackyard/');
+
         $this->config = array_merge(array(
             'basePath' => $this->modx->getOption('base_path'),
             'corePath' => $corePath,
             'modelPath' => $corePath . 'model/',
+            'processorsPath' => $corePath . 'processors/',
+            'jsUrl' => $assetsUrl . 'js/',
+            'cssUrl' => $assetsUrl . 'css/',
+            'assetsUrl' => $assetsUrl,
+            'connectorUrl' => $assetsUrl . 'connector.php',
         ), $config);
+
         $this->modx->addPackage('romanescobackyard', $this->config['modelPath']);
+        $this->modx->lexicon->load('romanescobackyard:default');
     }
 
     /**
@@ -202,7 +217,7 @@ class Romanesco
      */
     public function generateCustomCSS(string $context = '', bool $parallel = false, bool $bumpVersion = false)
     {
-        // Run parallel (execute command in the background) or in sequence
+        // Execute command in the background or wait for output in current PHP process
         $background = '';
         if ($parallel) {
             $background = ' &';
