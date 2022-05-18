@@ -9,13 +9,13 @@ class Romanesco
      * A reference to the modX instance
      * @var modX $modx
      */
-    public $modx;
+    public modX $modx;
 
     /**
      * A configuration array
      * @var array $config
      */
-    public $config = array();
+    public array $config = [];
 
     /**
      * Romanesco constructor
@@ -23,14 +23,14 @@ class Romanesco
      * @param modX $modx A reference to the modX instance.
      * @param array $config An array of configuration options. Optional.
      */
-    function __construct(modX &$modx, array $config = array())
+    function __construct(modX &$modx, array $config = [])
     {
         $this->modx =& $modx;
 
         $corePath = $this->modx->getOption('romanescobackyard.core_path', $config, $this->modx->getOption('core_path') . 'components/romanescobackyard/');
         $assetsUrl = $this->modx->getOption('romanescobackyard.assets_url',$config,$this->modx->getOption('assets_url') . 'components/romanescobackyard/');
 
-        $this->config = array_merge(array(
+        $this->config = array_merge([
             'basePath' => $this->modx->getOption('base_path'),
             'corePath' => $corePath,
             'modelPath' => $corePath . 'model/',
@@ -39,7 +39,7 @@ class Romanesco
             'cssUrl' => $assetsUrl . 'css/',
             'assetsUrl' => $assetsUrl,
             'connectorUrl' => $assetsUrl . 'connector.php',
-        ), $config);
+        ], $config);
 
         $this->modx->addPackage('romanescobackyard', $this->config['modelPath']);
         $this->modx->lexicon->load('romanescobackyard:default');
@@ -52,9 +52,9 @@ class Romanesco
      * @param string $needle
      * @return array
      */
-    public function recursiveArraySearch(array $haystack, string $needle)
+    public function recursiveArraySearch(array $haystack, string $needle): array
     {
-        $result = array();
+        $result = [];
         $iterator  = new RecursiveArrayIterator($haystack);
         $recursive = new RecursiveIteratorIterator(
             $iterator,
@@ -82,20 +82,20 @@ class Romanesco
      * @param string $default
      * @return string
      */
-    public function getContextSetting(string $setting, string $contextKey, string $default = '')
+    public function getContextSetting(string $setting, string $contextKey, string $default = ''): string
     {
-        $contextSetting = $this->modx->getObject('modContextSetting', array(
+        $contextSetting = $this->modx->getObject('modContextSetting', [
             'context_key' => $contextKey,
             'key' => $setting
-        ));
+        ]);
 
         if ($contextSetting) {
             return $contextSetting->get('value');
         }
 
-        $systemSetting = $this->modx->getObject('modSystemSetting', array(
+        $systemSetting = $this->modx->getObject('modSystemSetting', [
             'key' => $setting
-        ));
+        ]);
 
         if ($systemSetting) {
             return $systemSetting->get('value');
@@ -112,14 +112,14 @@ class Romanesco
      * @param string $default
      * @return string
      */
-    public function getConfigSetting(string $setting, string $contextKey = '', string $default = '')
+    public function getConfigSetting(string $setting, string $contextKey = '', string $default = ''): string
     {
         // Get the global setting first
-        $cgSetting = $this->modx->getObject('cgSetting', array('key' => $setting));
+        $cgSetting = $this->modx->getObject('cgSetting', ['key' => $setting]);
 
         // If ClientConfig is context aware, dig deeper for a context setting
-        if (is_object($cgSetting) && $contextKey && $this->modx->getOption('clientconfig.context_aware') == true) {
-            $cgContextValue = $this->modx->getObject('cgContextValue', array('setting' => $cgSetting->get('id'), 'context' => $contextKey));
+        if (is_object($cgSetting) && $contextKey && $this->modx->getOption('clientconfig.context_aware')) {
+            $cgContextValue = $this->modx->getObject('cgContextValue', ['setting' => $cgSetting->get('id'), 'context' => $contextKey]);
 
             if (is_object($cgContextValue)) {
                 return $cgContextValue->get('value');
@@ -145,7 +145,7 @@ class Romanesco
      * @param array $settings
      * @return bool
      */
-    public function generateCriticalCSS(array $settings = array())
+    public function generateCriticalCSS(array $settings = []): bool
     {
         // Run parallel (execute command in the background) or in sequence
         // Take note that running multiple processes (> 10) in parallel will severely cripple your server!
@@ -182,7 +182,7 @@ class Romanesco
      * @param string $context
      * @return bool
      */
-    public function generateThemeVariables(array $settings = [], string $context = '')
+    public function generateThemeVariables(array $settings = [], string $context = ''): bool
     {
         // Set theme.variables path for current context
         $themesFolder = $this->modx->getOption('base_path') . 'assets/semantic/src/themes/';
@@ -215,7 +215,7 @@ class Romanesco
      * @param bool $bumpVersion
      * @return bool
      */
-    public function generateCustomCSS(string $context = '', bool $parallel = false, bool $bumpVersion = false)
+    public function generateCustomCSS(string $context = '', bool $parallel = false, bool $bumpVersion = false): bool
     {
         // Execute command in the background or wait for output in current PHP process
         $background = '';
@@ -233,10 +233,10 @@ class Romanesco
 
         // Construct build command
         if ($context) {
-            $distPath = $this->modx->getObject('modContextSetting', array(
+            $distPath = $this->modx->getObject('modContextSetting', [
                 'context_key' => $context,
                 'key' => 'romanesco.semantic_dist_path'
-            ));
+            ]);
             $buildCommand = 'gulp build-context --key ' . $context . ' --dist ' . $this->modx->getOption('base_path') . $distPath->get('value');
         }
         else {
@@ -254,7 +254,7 @@ class Romanesco
         );
 
         // Bump CSS version number to force refresh
-        $versionCSS = $this->modx->getObject('modSystemSetting', array('key' => 'romanesco.assets_version_css'));
+        $versionCSS = $this->modx->getObject('modSystemSetting', ['key' => 'romanesco.assets_version_css']);
         if ($versionCSS && $bumpVersion)
         {
             // Only update minor version number (1.0.1<--)
@@ -277,7 +277,7 @@ class Romanesco
      * @param array $settings
      * @return bool
      */
-    public function generateFavicons(array $settings = [])
+    public function generateFavicons(array $settings = []): bool
     {
         $path = $this->modx->getOption('base_path') . $settings['logo_badge_path'];
 
@@ -296,7 +296,7 @@ class Romanesco
         );
 
         // Bump favicon version number to force refresh
-        $version = $this->modx->getObject('modSystemSetting', array('key' => 'romanesco.favicon_version'));
+        $version = $this->modx->getObject('modSystemSetting', ['key' => 'romanesco.favicon_version']);
         if ($version) {
             $version->set('value', $version->get('value') + 0.1);
             $version->save();
@@ -316,7 +316,7 @@ class Romanesco
         if (!in_array(strtolower($type),['css','js'])) return '';
 
         try {
-            if ($this->modx->getObject('cgSetting', array('key' => 'cache_buster'))->get('value') == 1) {
+            if ($this->modx->getObject('cgSetting', ['key' => 'cache_buster'])->get('value') == 1) {
                 return '.' . str_replace('.', '', $this->modx->getOption('romanesco.assets_version_' . strtolower($type)));
             }
             return '';
