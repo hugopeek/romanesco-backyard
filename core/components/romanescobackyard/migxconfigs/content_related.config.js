@@ -2,7 +2,7 @@
     "formtabs": [
         {
             "MIGX_id": 1,
-            "caption": "Content relations",
+            "caption": "Relation",
             "print_before_tabs": "0",
             "pos": 1,
             "fields": [
@@ -221,7 +221,7 @@
         "extrahandlers": "",
         "filtersperrow": 4,
         "packageName": "romanescobackyard",
-        "classname": "rmCrosslinkRelated",
+        "classname": "rmCrossLink",
         "task": "",
         "getlistsort": "",
         "getlistsortdir": "",

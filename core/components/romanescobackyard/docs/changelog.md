@@ -3,6 +3,9 @@
 ## Backyard 1.0.0-beta9
 Released on ...
 
+- Refactor existing database tables
+- Add social_sharing table
+- Add social_connections table
 - Wait for favicon process to finish before returning
 - Set default favicon variables after checking command line argument, not before
 - Accept custom dist path for generate-favicons task
