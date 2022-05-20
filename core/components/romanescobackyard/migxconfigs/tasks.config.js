@@ -131,7 +131,7 @@
                     "sources": "",
                     "inputOptionValues": "@CHUNK tvSelectInputOption@IssuePriority",
                     "default": "2",
-                    "useDefaultIfEmpty": "true",
+                    "useDefaultIfEmpty": "0",
                     "pos": ""
                 },
                 {
@@ -218,6 +218,33 @@
                     "pos": ""
                 }
             ]
+        },
+        {
+            "MIGX_id": 3,
+            "caption": "Comments",
+            "print_before_tabs": "0",
+            "pos": 3,
+            "fields": [
+                {
+                    "MIGX_id": "",
+                    "field": "comments",
+                    "caption": "Comments",
+                    "description": "",
+                    "description_is_code": "0",
+                    "inputTV": "",
+                    "inputTVtype": "migxdb",
+                    "validation": "",
+                    "configs": "task_comments:romanescobackyard",
+                    "restrictive_condition": "",
+                    "display": "",
+                    "sourceFrom": "config",
+                    "sources": "",
+                    "inputOptionValues": "",
+                    "default": "",
+                    "useDefaultIfEmpty": "0",
+                    "pos": ""
+                }
+            ]
         }
     ],
     "contextmenus": "update||duplicate||recall_remove_delete",
@@ -258,7 +285,15 @@
         "join_alias": "",
         "has_jointable": "yes",
         "getlistwhere": "",
-        "joins": "",
+        "joins": [
+            {
+                "alias": "Resource"
+            },{
+                "alias": "User"
+            },{
+                "alias": "Author"
+            }
+        ],
         "hooksnippets": "",
         "cmpmaincaption": "Tool shed",
         "cmptabcaption": "Tasks",
@@ -273,7 +308,7 @@
             "MIGX_id": "",
             "header": "ID",
             "dataIndex": "id",
-            "width": "",
+            "width": 10,
             "sortable": true,
             "show_in_grid": 1,
             "customrenderer": "",
@@ -316,16 +351,31 @@
         },
         {
             "MIGX_id": "",
-            "header": "Author",
-            "dataIndex": "author_id",
-            "width": 30,
+            "header": "Priority",
+            "dataIndex": "priority",
+            "width": 20,
             "sortable": true,
             "show_in_grid": 1,
+            "customrenderer": "",
+            "renderer": "",
+            "clickaction": "",
+            "selectorconfig": "",
+            "renderchunktpl": "",
+            "renderoptions": "",
+            "editor": "this.textEditor"
+        },
+        {
+            "MIGX_id": "",
+            "header": "Author",
+            "dataIndex": "createdby",
+            "width": 30,
+            "sortable": true,
+            "show_in_grid": 0,
             "customrenderer": "",
             "renderer": "this.renderChunk",
             "clickaction": "",
             "selectorconfig": "",
-            "renderchunktpl": "[[+author_id:userinfo=`username`]]",
+            "renderchunktpl": "[[+createdby:userinfo=`username`]]",
             "renderoptions": "",
             "editor": ""
         },
@@ -361,31 +411,31 @@
         },
         {
             "MIGX_id": "",
-            "header": "Priority",
-            "dataIndex": "priority",
-            "width": 20,
-            "sortable": true,
+            "header": "Due on",
+            "dataIndex": "date_due",
+            "width": 30,
+            "sortable": 1,
             "show_in_grid": 1,
             "customrenderer": "",
-            "renderer": "",
+            "renderer": "this.renderChunk",
             "clickaction": "",
             "selectorconfig": "",
-            "renderchunktpl": "",
+            "renderchunktpl": "[[+date_due:date=`[[++romanesco.date_format_short]]`]]",
             "renderoptions": "",
             "editor": ""
         },
         {
             "MIGX_id": "",
-            "header": "ID",
-            "dataIndex": "id",
-            "width": 10,
-            "sortable": true,
-            "show_in_grid": 0,
+            "header": "Comments",
+            "dataIndex": "task_id",
+            "width": 20,
+            "sortable": false,
+            "show_in_grid": 1,
             "customrenderer": "",
-            "renderer": "",
+            "renderer": "this.renderChunk",
             "clickaction": "",
             "selectorconfig": "",
-            "renderchunktpl": "",
+            "renderchunktpl": "[[migxLoopCollection?\n&packageName=`romanescobackyard`\n&classname=`rmTaskComment`\n&where=`{\"task_id\":\"[[+id]]\"}`\n&tpl=`@CODE: [[+total]]`\n&limit=`1`\n]]",
             "renderoptions": "",
             "editor": ""
         },
