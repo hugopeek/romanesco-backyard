@@ -2,10 +2,10 @@
 /**
  * @package romanescobackyard
  */
-$xpdo_meta_map['rmCrossLink']= array (
+$xpdo_meta_map['rmTask']= array (
   'package' => 'romanescobackyard',
   'version' => '1.1',
-  'table' => 'romanesco_crosslinks',
+  'table' => 'romanesco_tasks',
   'extends' => 'xPDOSimpleObject',
   'tableMeta' => 
   array (
@@ -13,19 +13,25 @@ $xpdo_meta_map['rmCrossLink']= array (
   ),
   'fields' => 
   array (
-    'source' => 0,
-    'destination' => 0,
+    'resource_id' => 0,
+    'user_id' => 0,
     'title' => '',
-    'description' => '',
-    'crosslink_id' => 0,
-    'weight' => 0,
+    'content' => '',
+    'status' => NULL,
+    'priority' => NULL,
+    'complexity' => NULL,
+    'date_start' => NULL,
+    'date_due' => NULL,
+    'tags' => '',
+    'attachments' => '',
+    'links' => '',
     'createdon' => 0,
     'createdby' => 0,
     'deleted' => 0,
   ),
   'fieldMeta' => 
   array (
-    'source' => 
+    'resource_id' => 
     array (
       'dbtype' => 'int',
       'precision' => '11',
@@ -34,7 +40,7 @@ $xpdo_meta_map['rmCrossLink']= array (
       'null' => false,
       'default' => 0,
     ),
-    'destination' => 
+    'user_id' => 
     array (
       'dbtype' => 'int',
       'precision' => '11',
@@ -51,29 +57,66 @@ $xpdo_meta_map['rmCrossLink']= array (
       'null' => false,
       'default' => '',
     ),
-    'description' => 
+    'content' => 
     array (
       'dbtype' => 'text',
       'phptype' => 'string',
       'null' => false,
       'default' => '',
     ),
-    'crosslink_id' => 
-    array (
-      'dbtype' => 'int',
-      'precision' => '11',
-      'attributes' => 'unsigned',
-      'phptype' => 'integer',
-      'null' => true,
-      'default' => 0,
-    ),
-    'weight' => 
+    'status' => 
     array (
       'dbtype' => 'int',
       'precision' => '10',
       'phptype' => 'integer',
+      'null' => true,
+    ),
+    'priority' => 
+    array (
+      'dbtype' => 'int',
+      'precision' => '10',
+      'phptype' => 'integer',
+      'null' => true,
+    ),
+    'complexity' => 
+    array (
+      'dbtype' => 'int',
+      'precision' => '10',
+      'phptype' => 'integer',
+      'null' => true,
+    ),
+    'date_start' => 
+    array (
+      'dbtype' => 'datetime',
+      'phptype' => 'datetime',
+      'null' => true,
+    ),
+    'date_due' => 
+    array (
+      'dbtype' => 'datetime',
+      'phptype' => 'datetime',
+      'null' => true,
+    ),
+    'tags' => 
+    array (
+      'dbtype' => 'text',
+      'phptype' => 'string',
       'null' => false,
-      'default' => 0,
+      'default' => '',
+    ),
+    'attachments' => 
+    array (
+      'dbtype' => 'text',
+      'phptype' => 'string',
+      'null' => false,
+      'default' => '',
+    ),
+    'links' => 
+    array (
+      'dbtype' => 'text',
+      'phptype' => 'string',
+      'null' => false,
+      'default' => '',
     ),
     'createdon' => 
     array (
@@ -104,25 +147,51 @@ $xpdo_meta_map['rmCrossLink']= array (
   'fieldAliases' => 
   array (
     'author_id' => 'createdby',
-    'resource_id' => 'source',
+    'assigned_to' => 'user_id',
   ),
   'indexes' => 
   array (
-    'crosslink' => 
+    'resource_id' => 
     array (
-      'alias' => 'crosslink',
+      'alias' => 'resource_id',
       'primary' => false,
-      'unique' => true,
+      'unique' => false,
       'type' => 'BTREE',
       'columns' => 
       array (
-        'source' => 
+        'resource_id' => 
         array (
           'length' => '',
           'collation' => 'A',
           'null' => false,
         ),
-        'destination' => 
+      ),
+    ),
+    'user_id' => 
+    array (
+      'alias' => 'user_id',
+      'primary' => false,
+      'unique' => false,
+      'type' => 'BTREE',
+      'columns' => 
+      array (
+        'user_id' => 
+        array (
+          'length' => '',
+          'collation' => 'A',
+          'null' => false,
+        ),
+      ),
+    ),
+    'status' => 
+    array (
+      'alias' => 'status',
+      'primary' => false,
+      'unique' => false,
+      'type' => 'BTREE',
+      'columns' => 
+      array (
+        'status' => 
         array (
           'length' => '',
           'collation' => 'A',
@@ -133,29 +202,29 @@ $xpdo_meta_map['rmCrossLink']= array (
   ),
   'composites' => 
   array (
-    'CrossLink' => 
+    'Comments' => 
     array (
-      'class' => 'rmCrossLink',
-      'local' => 'crosslink_id',
-      'foreign' => 'id',
-      'cardinality' => 'one',
+      'class' => 'rmTaskComment',
+      'local' => 'id',
+      'foreign' => 'task_id',
+      'cardinality' => 'many',
       'owner' => 'local',
     ),
   ),
   'aggregates' => 
   array (
-    'Source' => 
+    'Resource' => 
     array (
       'class' => 'modResource',
-      'local' => 'source',
+      'local' => 'resource_id',
       'foreign' => 'id',
       'cardinality' => 'one',
       'owner' => 'foreign',
     ),
-    'Destination' => 
+    'User' => 
     array (
-      'class' => 'modResource',
-      'local' => 'destination',
+      'class' => 'modUser',
+      'local' => 'user_id',
       'foreign' => 'id',
       'cardinality' => 'one',
       'owner' => 'foreign',

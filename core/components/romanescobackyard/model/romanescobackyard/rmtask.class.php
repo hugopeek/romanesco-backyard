@@ -2,5 +2,5 @@
 /**
  * @package romanescobackyard
  */
-class rmNote extends xPDOSimpleObject {}
+class rmTask extends xPDOSimpleObject {}
 ?>

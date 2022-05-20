@@ -39,4 +39,5 @@ for (var partition in topics) {
     });
 }
 
+// noinspection JSAnnotator
 return false;

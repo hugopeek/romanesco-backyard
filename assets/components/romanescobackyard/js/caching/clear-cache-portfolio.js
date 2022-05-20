@@ -21,4 +21,5 @@ MODx.Ajax.request({
     }
 });
 
+// noinspection JSAnnotator
 return false;

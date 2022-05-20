@@ -114,7 +114,6 @@
     <object class="rmSocialConnect" table="romanesco_social_connections" extends="xPDOSimpleObject">
         <field key="resource_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="" />
         <field key="user_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="" />
-        <field key="context" dbtype="varchar" precision="191" phptype="string" null="false" default="" />
 
         <field key="name" dbtype="varchar" precision="191" phptype="string" null="false" default="" />
         <field key="title" dbtype="varchar" precision="1000" phptype="string" null="false" default="" />
@@ -122,6 +121,7 @@
         <field key="username" dbtype="varchar" precision="191" phptype="string" null="false" default="" />
         <field key="icon" dbtype="varchar" precision="191" phptype="string" null="false" default="" />
 
+        <field key="context" dbtype="varchar" precision="191" phptype="string" null="false" default="" />
         <field key="active" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="1" />
         <field key="pos" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
         <field key="deleted" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="0" />
@@ -134,6 +134,12 @@
         <index alias="user_id" name="user_id" primary="false" unique="false" type="BTREE">
             <column key="user_id" length="" collation="A" null="false" />
         </index>
+        <index alias="context" name="context" primary="false" unique="false" type="BTREE">
+            <column key="context" length="" collation="A" null="false" />
+        </index>
+        <index alias="active" name="active" primary="false" unique="false" type="BTREE">
+            <column key="active" length="" collation="A" null="false" />
+        </index>
         <index alias="pos" name="pos" primary="false" unique="false" type="BTREE">
             <column key="pos" length="" collation="A" null="false" />
         </index>
@@ -144,13 +150,12 @@
 
     <!-- Social sharing links -->
     <object class="rmSocialShare" table="romanesco_social_sharing" extends="xPDOSimpleObject">
-        <field key="context" dbtype="varchar" precision="191" phptype="string" null="false" default="" />
-
         <field key="name" dbtype="varchar" precision="191" phptype="string" null="false" default="" />
         <field key="title" dbtype="varchar" precision="1000" phptype="string" null="false" default="" />
         <field key="url" dbtype="text" phptype="string" null="false" default="" />
         <field key="icon" dbtype="varchar" precision="191" phptype="string" null="false" default="" />
 
+        <field key="context" dbtype="varchar" precision="191" phptype="string" null="false" default="" />
         <field key="active" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="1" />
         <field key="pos" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
         <field key="deleted" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="0" />
@@ -159,6 +164,9 @@
 
         <index alias="context" name="context" primary="false" unique="false" type="BTREE">
             <column key="context" length="" collation="A" null="false" />
+        </index>
+        <index alias="active" name="active" primary="false" unique="false" type="BTREE">
+            <column key="active" length="" collation="A" null="false" />
         </index>
         <index alias="pos" name="pos" primary="false" unique="false" type="BTREE">
             <column key="pos" length="" collation="A" null="false" />
