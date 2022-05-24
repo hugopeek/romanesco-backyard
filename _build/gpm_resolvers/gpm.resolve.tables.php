@@ -24,15 +24,11 @@ if ($object->xpdo) {
 
             $manager = $modx->getManager();
 
-            $manager->createObjectContainer('rmTimeline');
-            $manager->createObjectContainer('rmTimelineProject');
-            $manager->createObjectContainer('rmNote');
-            $manager->createObjectContainer('rmNoteImprovement');
-            $manager->createObjectContainer('rmNoteIssue');
-            $manager->createObjectContainer('rmCrosslink');
-            $manager->createObjectContainer('rmCrosslinkRelated');
-            $manager->createObjectContainer('rmCrosslinkRepurpose');
+            $manager->createObjectContainer('rmTask');
+            $manager->createObjectContainer('rmCrossLink');
             $manager->createObjectContainer('rmExternalLink');
+            $manager->createObjectContainer('rmSocialConnect');
+            $manager->createObjectContainer('rmSocialShare');
             $manager->createObjectContainer('rmOption');
             $manager->createObjectContainer('rmOptionGroup');
 

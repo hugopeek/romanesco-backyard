@@ -1,9 +1,11 @@
 # Changelog for Romanesco Backyard
 
 ## Backyard 1.0.0-beta9
-Released on ...
+Released on May 24, 2022
 
-- Refactor existing database tables
+- Remove content_repurpose table + grid [BC]
+- Use tasks table for project timeline entries [BC]
+- Combine notes, issues and improvements into tasks table [BC]
 - Add social_sharing table + grid
 - Add social_connections table + grid
 - Wait for favicon process to finish before returning
