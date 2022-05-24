@@ -856,6 +856,11 @@
   .chunkOutput body.detail.toc #content > .stripe.segment:first-child {
     padding-top: 0;
   }
+
+  .chunkOutput body.detail #sidebar {
+    background: #F3F4F5;
+    padding: calc(var(--baseline) * 5rem) 0;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -1493,7 +1498,7 @@
   border-radius: 0.28571429em;
 }
 
-.chunkOutput #commercial-support .cards > .card > .image {
+.chunkOutput #commercial .cards > .card > .image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1501,23 +1506,24 @@
   padding: 1em 1.5em;
 }
 
-.chunkOutput #commercial-support .cards > .card > .image img {
+.chunkOutput #commercial .cards > .card > .image img,
+.chunkOutput #commercial .cards > .card > .image svg {
   max-height: 5rem;
   max-width: 21rem;
   margin: 0 auto;
 }
 
-.chunkOutput #commercial-support .cards > .card:nth-child(1) .image {
+.chunkOutput #commercial .cards > .card:nth-child(1) .image {
   background: #698f73;
 }
 
-.chunkOutput #commercial-support .cards > .card:nth-child(2) .image {
-  background: -webkit-linear-gradient(315deg, #c6437d 0%, #50348f 100%);
-  background: linear-gradient(135deg, #c6437d 0%, #50348f 100%);
+.chunkOutput #commercial .cards > .card:nth-child(2) .image {
+  background: #1f4a7f;
 }
 
-.chunkOutput #commercial-support .cards > .card:nth-child(3) .image {
-  background: #1f4a7f;
+.chunkOutput #commercial .cards > .card:nth-child(3) .image {
+  background: -webkit-linear-gradient(315deg, #c6437d 0%, #50348f 100%);
+  background: linear-gradient(135deg, #c6437d 0%, #50348f 100%);
 }
 
 @media (max-width: 767.98px) {
@@ -6388,6 +6394,18 @@
   margin-right: 0;
 }
 
+.chunkOutput .ui.button.very.basic {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.chunkOutput .ui.button.very.basic:hover,
+.chunkOutput .ui.button.very.basic:active,
+.chunkOutput .ui.button.very.basic:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
 .chunkOutput .file-uploader-buttons .ui.button {
   margin: 0 0.75em 0 0 !important;
 }
@@ -6624,6 +6642,13 @@
 
 .chunkOutput .ui.tightened.container {
   max-width: 933px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1299.98px) {
+  .chunkOutput body.vertical .ui.text.container,
+  .chunkOutput body.vertical .ui.tightened.container {
+    width: 100% !important;
+  }
 }
 
 /*******************************
@@ -7931,6 +7956,10 @@
          Theme Overrides
 *******************************/
 
+.chunkOutput span.ui.header {
+  display: inline-block;
+}
+
 .chunkOutput .ui.header.horizontal:not(.divider) {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8012,11 +8041,6 @@
 
 .chunkOutput .ui.header + .subtitle {
   margin-top: -1rem;
-}
-
-.chunkOutput #sidebar > .ui.header.tiny {
-  display: block;
-  margin: calc(var(--baseline) * 1rem) 0.9em 1em 0.9em;
 }
 
 @media only screen and (max-width: 767.98px) {
@@ -8161,11 +8185,7 @@
 @font-face {
   font-family: 'Icons';
   src: url("/assets/semantic/dist/themes/default/assets/fonts/icons.eot");
-  src: url("/assets/semantic/dist/themes/default/assets/fonts/icons.eot?#iefix") format('embedded-opentype'),
-       url("/assets/semantic/dist/themes/default/assets/fonts/icons.woff2") format('woff2'),
-       url("/assets/semantic/dist/themes/default/assets/fonts/icons.woff") format('woff'),
-       url("/assets/semantic/dist/themes/default/assets/fonts/icons.ttf") format('truetype'),
-       url("/assets/semantic/dist/themes/default/assets/fonts/icons.svg#icons") format('svg');
+  src: url("/assets/semantic/dist/themes/default/assets/fonts/icons.eot?#iefix") format('embedded-opentype'), url("/assets/semantic/dist/themes/default/assets/fonts/icons.woff2") format('woff2'), url("/assets/semantic/dist/themes/default/assets/fonts/icons.woff") format('woff'), url("/assets/semantic/dist/themes/default/assets/fonts/icons.ttf") format('truetype'), url("/assets/semantic/dist/themes/default/assets/fonts/icons.svg#icons") format('svg');
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -17391,7 +17411,7 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 .chunkOutput .ui.rounded.image,
 .chunkOutput .ui.rounded.images .image > *,
 .chunkOutput .ui.rounded.image > * {
-  border-radius: 0.3125em;
+  border-radius: 0.46228571rem;
 }
 
 /*--------------
@@ -21630,7 +21650,7 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
   -webkit-box-shadow: none;
   box-shadow: none;
   border: none;
-  border-radius: 0;
+  border-radius: 0.28571429rem;
 }
 
 /*-------------------
@@ -22057,6 +22077,10 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 
 .chunkOutput .ui.inverted.segment .segment {
   border: none;
+}
+
+.chunkOutput .ui.background.segment {
+  z-index: 0;
 }
 
 .chunkOutput #hero.ui.segment {
@@ -28144,21 +28168,51 @@ Floated Menu / Item
   margin: 0.1em 0 0 0.8em;
 }
 
-.chunkOutput #submenu.vertical.tabular .item .header a.active {
+.chunkOutput #submenu.secondary {
+  margin: 0 0 calc(var(--baseline) * 2rem);
+}
+
+.chunkOutput #submenu.secondary .item:not(.active) {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.chunkOutput #submenu.secondary .item:not(.active):hover {
+  color: rgba(0, 0, 0, 0.95);
+}
+
+.chunkOutput #submenu.secondary .item.active {
+  font-weight: bold;
+}
+
+.chunkOutput #submenu.secondary .item.active .item {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.chunkOutput #submenu.secondary .item.active .item:hover {
+  color: #ffffff;
+}
+
+.chunkOutput #submenu.secondary .header > .item.active {
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
+.chunkOutput #submenu.secondary:not(.toc).fixed .item {
+  border-radius: 0.28571429rem !important;
+}
+
+.chunkOutput #submenu.tabular.vertical .item .header a.active {
   margin-bottom: 0.75em;
   padding: 0;
   border: none;
 }
 
-.chunkOutput #submenu.vertical.tabular .item .menu a.active {
+.chunkOutput #submenu.tabular.vertical .item .menu a.active {
   border: none;
 }
 
-.chunkOutput #submenu.sticky.tabular {
-  margin-bottom: 1em;
-}
-
-.chunkOutput #submenu.sticky.tabular.bottom {
+.chunkOutput #submenu.tabular.sticky.bottom {
   border-top: 0;
 }
 
@@ -28197,6 +28251,10 @@ Floated Menu / Item
 
 .chunkOutput #submenu.toc .item.h5 {
   padding: 0.25714286em 1.14285714em;
+}
+
+.chunkOutput #submenu-header {
+  margin-bottom: calc(var(--baseline) * 1rem);
 }
 
 .chunkOutput #dropdown-toc .menu .item .level:before {
