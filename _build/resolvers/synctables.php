@@ -112,6 +112,7 @@ if ($object->xpdo) {
 
             $tables = [
                 "rmTask",
+                "rmTaskComment",
                 "rmCrossLink",
                 "rmExternalLink",
                 "rmSocialConnect",
