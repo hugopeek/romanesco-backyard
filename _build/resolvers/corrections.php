@@ -1,6 +1,10 @@
 <?php
-/** @var array $options */
-/** @var xPDOObject $object */
+/**
+ * DEPRECATED.
+ *
+ * @var array $options
+ * @var xPDOObject $object
+ */
 if ($object->xpdo) {
     switch ($options[xPDOTransport::PACKAGE_ACTION]) {
         case xPDOTransport::ACTION_INSTALL:

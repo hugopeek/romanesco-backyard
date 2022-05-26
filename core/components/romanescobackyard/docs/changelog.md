@@ -3,6 +3,7 @@
 ## Backyard 1.0.0-beta9
 Released on May 24, 2022
 
+- Disable resolver with getPage corrections
 - Remove content_repurpose table + grid [BC]
 - Use tasks table for project timeline entries [BC]
 - Combine notes, issues and improvements into tasks table [BC]
