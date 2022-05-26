@@ -111,15 +111,11 @@ if ($object->xpdo) {
             $modx =& $object->xpdo;
 
             $tables = [
-                "rmTimeline",
-                "rmTimelineProject",
-                "rmNote",
-                "rmNoteImprovement",
-                "rmNoteIssue",
-                "rmCrosslink",
-                "rmCrosslinkRelated",
-                "rmCrosslinkRepurpose",
+                "rmTask",
+                "rmCrossLink",
                 "rmExternalLink",
+                "rmSocialConnect",
+                "rmSocialShare",
                 "rmOption",
                 "rmOptionGroup"
             ];
