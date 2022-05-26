@@ -25,6 +25,7 @@ if ($object->xpdo) {
             $manager = $modx->getManager();
 
             $manager->createObjectContainer('rmTask');
+            $manager->createObjectContainer('rmTaskComment');
             $manager->createObjectContainer('rmCrossLink');
             $manager->createObjectContainer('rmExternalLink');
             $manager->createObjectContainer('rmSocialConnect');
