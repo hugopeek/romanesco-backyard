@@ -1,5 +1,10 @@
 # Changelog for Romanesco Backyard
 
+## Backyard 1.0.0-beta10
+Released on ...
+
+- Fix mini repeater layout in custom CB stylesheet
+
 ## Backyard 1.0.0-beta9
 Released on May 24, 2022
 
