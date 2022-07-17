@@ -94,6 +94,7 @@ $_lang['romanesco.footer.qredits_modx'] = 'Powered by MODX';
 $_lang['romanesco.status.table_indicator'] = 'Status';
 $_lang['romanesco.status.table_id'] = 'ID';
 $_lang['romanesco.status.table_resource'] = 'Page';
+$_lang['romanesco.status.table_tasks'] = 'Tasks';
 $_lang['romanesco.status.table_improvements'] = 'Improvements';
 $_lang['romanesco.status.table_issues'] = 'Issues';
 $_lang['romanesco.status.table_indexation'] = 'Indexation';

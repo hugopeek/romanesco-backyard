@@ -3,6 +3,10 @@
 ## Backyard 1.0.0-beta10
 Released on ...
 
+- Autoload Romanesco base class with Composer
+- Include HtmlPageDom library (no need for separate package anymore)
+- Auto install Composer dependencies during package installation
+- Use Composer for installing dependencies
 - Fix mini repeater layout in custom CB stylesheet
 
 ## Backyard 1.0.0-beta9

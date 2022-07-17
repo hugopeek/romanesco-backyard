@@ -1,7 +1,7 @@
 {
     "name": "RomanescoBackyard",
     "lowCaseName": "romanescobackyard",
-    "description": "Database tables, manager customizations and translations for Romanesco.",
+    "description": "Database tables, base class, manager customizations and translations for Romanesco.",
     "author": "Hugo Peek",
     "version": "1.0.0-beta9",
     "package": {
@@ -134,11 +134,15 @@
         "readme": "docs/readme.md",
         "license": "docs/license.md",
         "changelog": "docs/changelog.md",
+        "options": {
+            "composer": true
+        },
         "resolver": {
             "before": [
                 "backupresourcemap.php"
             ],
             "after": [
+                "composer.php",
                 "setresourceids.php",
                 "setinputoptions.php",
                 "synctables.php"
