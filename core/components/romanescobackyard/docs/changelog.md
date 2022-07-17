@@ -3,6 +3,7 @@
 ## Backyard 1.0.0-beta10
 Released on ...
 
+- Rename todo and doing SVG icons
 - Autoload Romanesco base class with Composer
 - Include HtmlPageDom library (no need for separate package anymore)
 - Auto install Composer dependencies during package installation
