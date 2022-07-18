@@ -1,11 +1,11 @@
 # Changelog for Romanesco Backyard
 
 ## Backyard 1.0.0-beta10
-Released on ...
+Released on July 18, 2022
 
 - Rename todo and doing SVG icons
 - Autoload Romanesco base class with Composer
-- Include HtmlPageDom library (no need for separate package anymore)
+- Add HtmlPageDom package as dependency
 - Auto install Composer dependencies during package installation
 - Use Composer for installing dependencies
 - Fix mini repeater layout in custom CB stylesheet

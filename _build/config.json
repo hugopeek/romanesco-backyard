@@ -3,7 +3,7 @@
     "lowCaseName": "romanescobackyard",
     "description": "Database tables, base class, manager customizations and translations for Romanesco.",
     "author": "Hugo Peek",
-    "version": "1.0.0-beta9",
+    "version": "1.0.0-beta10",
     "package": {
         "menus": [
             {
@@ -130,12 +130,29 @@
             "rmOptionGroup"
         ]
     },
+    "dependencies": [
+        {
+            "name": "php",
+            "version": ">=7.3"
+        },{
+            "name": "modx",
+            "version": ">=2.8"
+        },{
+            "name": "htmlpagedom",
+            "version": ">=1.0"
+        }
+    ],
     "build": {
         "readme": "docs/readme.md",
         "license": "docs/license.md",
         "changelog": "docs/changelog.md",
         "options": {
-            "composer": true
+            "composer": true,
+            "empty_folders": {
+                "{package_path}core/components/romanescobackyard/vendor/symfony/deprecation-contracts" : ".*",
+                "{package_path}core/components/romanescobackyard/vendor/" : "*",
+                "{package_path}core/components/romanescobackyard/" : "vendor"
+            }
         },
         "resolver": {
             "before": [
