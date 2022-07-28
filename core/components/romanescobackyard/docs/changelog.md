@@ -1,5 +1,12 @@
 # Changelog for Romanesco Backyard
 
+## Backyard 1.0.0-beta11
+Released on ...
+
+- Replace exec commands with Symfony processes [WIP]
+- Add function to minify CSS
+- Add function to generate background CSS
+
 ## Backyard 1.0.0-beta10
 Released on July 18, 2022
 

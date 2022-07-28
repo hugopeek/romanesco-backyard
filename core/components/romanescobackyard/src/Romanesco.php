@@ -7,6 +7,15 @@
 namespace FractalFarming\Romanesco;
 
 use modX;
+use RecursiveArrayIterator;
+use RecursiveIteratorIterator;
+use Error;
+use Scheduler;
+
+use Symfony\Component\Process\Exception\ProcessFailedException;
+use Symfony\Component\Process\Process;
+use CssLint\Linter;
+
 //use rmCrossLink;
 //use rmExternalLink;
 //use rmOption;
@@ -310,20 +319,138 @@ class Romanesco
         );
 
         // Bump CSS version number to force refresh
-        $versionCSS = $this->modx->getObject('modSystemSetting', ['key' => 'romanesco.assets_version_css']);
-        if ($versionCSS && $bumpVersion)
-        {
-            // Only update minor version number (1.0.1<--)
-            $versionArray = explode('.', $versionCSS->get('value'));
-            $versionMinor = array_pop($versionArray);
-            $versionArray[] = $versionMinor + 1;
-
-            $versionCSS->set('value', implode('.', $versionArray));
-            $versionCSS->save();
-        } else {
-            $this->modx->log(modX::LOG_LEVEL_ERROR, 'Could not find romanesco.assets_version_css setting');
+        if ($bumpVersion) {
+            $this->bumpVersionNumber();
         }
 
+        return true;
+    }
+
+    /**
+     * Generate static CSS file with global backgrounds.
+     *
+     * A generic site.css will be created in the default location, containing
+     * the backgrounds in the Global Backgrounds container. If there are child
+     * containers present under this resource, a separate file will be generated
+     * for this context in a sub folder.
+     *
+     * @return bool
+     */
+    public function generateBackgroundCSS(): bool
+    {
+        // Get all background containers
+        $bgContainers = $this->modx->getCollection('modResource', array(
+            'parent' => $this->modx->getOption('romanesco.global_backgrounds_id'),
+            'template' => 8
+        ));
+
+        // Get chunk with CSS template
+        if ($this->modx->getObject('modChunk', array('name' => 'cssTheme'))) {
+            $cssChunk = 'cssTheme';
+        } else {
+            $cssChunk = 'css';
+        }
+
+        // Get default CSS path
+        $cssPathSystem = $this->modx->getObject('modSystemSetting', array('key' => 'romanesco.custom_css_path'));
+        if ($cssPathSystem) {
+            $cssPathDefault = $this->modx->getOption('base_path') . $cssPathSystem->get('value');
+        } else {
+            $cssPathDefault = $this->modx->getOption('base_path') . 'assets/css';
+        }
+
+        // Set file content and path
+        $css = $this->modx->getChunk($cssChunk);
+        $staticFile = $cssPathDefault . '/site.css';
+
+        // Validate all CSS
+        $cssLinter = new Linter();
+        if ($cssLinter->lintString($css) !== true) {
+            $this->modx->log(modX::LOG_LEVEL_ERROR, "CSS is not valid and will not be generated at $staticFile");
+            return true;
+        }
+
+        // Generate CSS file
+        if (!$this->modx->cacheManager->writeFile($staticFile, $css)) {
+            $this->modx->log(modX::LOG_LEVEL_ERROR, "Error writing CSS to static file {$staticFile}", '', __FUNCTION__, __FILE__, __LINE__);
+        }
+
+        // Start collecting CSS paths for minification down the road
+        $minifyCSS[] = $cssPathDefault;
+
+        // Each container represents a context
+        foreach ($bgContainers as $container) {
+            $context = $container->get('alias');
+
+            // Find correct file path for this context
+            $cssPathContext = $this->modx->getObject('modContextSetting', array(
+                'context_key' => $context,
+                'key' => 'romanesco.custom_css_path'
+            ));
+            if ($cssPathContext) {
+                $cssPath = $this->modx->getOption('base_path') . $cssPathContext->get('value');
+            } else {
+                $cssPath = $cssPathDefault . '/' . $context;
+            }
+
+            // Prepare CSS for this context
+            $css = $this->modx->getChunk($cssChunk, array(
+                'context' => $context,
+            ));
+            $staticFile = $cssPath . '/site.css';
+
+            // Validate CSS
+            if ($cssLinter->lintString($css) !== true) {
+                $this->modx->log(modX::LOG_LEVEL_ERROR, "CSS is not valid and will not be generated at $staticFile");
+                break;
+            }
+
+            // Generate CSS file
+            if (!$this->modx->cacheManager->writeFile($staticFile, $css)) {
+                $this->modx->log(modX::LOG_LEVEL_ERROR, "Error writing CSS to static file {$staticFile}", '', __FUNCTION__, __FILE__, __LINE__);
+            }
+
+            // Sign up for minification
+            $minifyCSS[] = $cssPath;
+        }
+
+        // Minify CSS
+        foreach ($minifyCSS as $path) {
+            $this->modx->runSnippet('minifyCSS', ['css_path' => $path]);
+            //$this->minifyCSS($path);
+        }
+
+        return true;
+    }
+
+    /**
+     * Minify given CSS file with Gulp.
+     *
+     * @param string $path
+     * @return bool
+     */
+    public function minifyCSS(string $path): bool
+    {
+        $cmd = [
+            'gulp', 'minify-css',
+            '--path', $path,
+            '--gulpfile', escapeshellcmd($this->modx->getOption('assets_path')) . 'components/romanescobackyard/js/gulp/minify-css.js'
+        ];
+
+        // Start Symfony process
+        $process = new Process($cmd, MODX_BASE_PATH, [
+            'PATH' => escapeshellarg($this->modx->getOption('romanesco.global_backgrounds_id'))
+        ]);
+        $process->run();
+
+        // After command is finished
+        if (!$process->isSuccessful()) {
+            $error = new ProcessFailedException($process);
+            $this->modx->log(modX::LOG_LEVEL_ERROR, "\n" . $error);
+            return false;
+        }
+
+        $this->modx->log(modX::LOG_LEVEL_INFO, "\n" . $process->getOutput());
         return true;
     }
 
@@ -363,6 +490,38 @@ class Romanesco
     }
 
     /**
+     * Bump semantic version number to force refresh in browser.
+     *
+     * @param string $type Asset type can be either CSS or JS. Defaults to CSS.
+     * @return void
+     */
+    public function bumpVersionNumber(string $type = 'CSS') : void
+    {
+        switch ($type) {
+            case 'JS':
+                $version = $this->modx->getObject('modSystemSetting', ['key' => 'romanesco.assets_version_js']);
+                break;
+            default:
+                $version = $this->modx->getObject('modSystemSetting', ['key' => 'romanesco.assets_version_css']);
+        }
+
+        if (is_object($version))
+        {
+            // Only update minor version number (1.0.1<--)
+            $versionArray = explode('.', $version->get('value'));
+            $versionMinor = array_pop($versionArray);
+            $versionArray[] = $versionMinor + 1;
+
+            $version->set('value', implode('.', $versionArray));
+            $version->save();
+        } else {
+            $setting = 'romanesco.assets_version_'. strtolower($type);
+            $this->modx->log(modX::LOG_LEVEL_ERROR, "Could not find $setting setting");
+        }
+    }
+
+    /**
+     * Inject version number into assets path, to force browsers to refresh their cache.
      *
      * @param string $type
      * @return string
