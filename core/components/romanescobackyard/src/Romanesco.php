@@ -10,7 +10,6 @@ use modX;
 use RecursiveArrayIterator;
 use RecursiveIteratorIterator;
 use Error;
-use Scheduler;
 
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Symfony\Component\Process\Process;
@@ -352,9 +351,9 @@ class Romanesco
         }
 
         // Get default CSS path
-        $cssPathSystem = $this->modx->getObject('modSystemSetting', array('key' => 'romanesco.custom_css_path'));
+        $cssPathSystem = $this->modx->getOption('romanesco.custom_css_path');
         if ($cssPathSystem) {
-            $cssPathDefault = $this->modx->getOption('base_path') . $cssPathSystem->get('value');
+            $cssPathDefault = $this->modx->getOption('base_path') . $cssPathSystem;
         } else {
             $cssPathDefault = $this->modx->getOption('base_path') . 'assets/css';
         }
@@ -439,7 +438,7 @@ class Romanesco
 
         // Start Symfony process
         $process = new Process($cmd, MODX_BASE_PATH, [
-            'PATH' => escapeshellarg($this->modx->getOption('romanesco.global_backgrounds_id'))
+            'PATH' => escapeshellarg($this->modx->getOption('romanesco.shell_path'))
         ]);
         $process->run();
 
