@@ -9,6 +9,7 @@ namespace FractalFarming\Romanesco;
 use modX;
 use RecursiveArrayIterator;
 use RecursiveIteratorIterator;
+use DateTime;
 use Error;
 
 use Symfony\Component\Process\Exception\ProcessFailedException;
@@ -337,6 +338,10 @@ class Romanesco
      */
     public function generateBackgroundCSS(): bool
     {
+        $logFile = MODX_CORE_PATH . 'cache/logs/css-error.log';
+        $date = new DateTime();
+        $date = $date->format("Y-m-d H:i:s");
+
         // Get all background containers
         $bgContainers = $this->modx->getCollection('modResource', array(
             'parent' => $this->modx->getOption('romanesco.global_backgrounds_id'),
@@ -365,7 +370,10 @@ class Romanesco
         // Validate all CSS
         $cssLinter = new Linter();
         if ($cssLinter->lintString($css) !== true) {
-            $this->modx->log(modX::LOG_LEVEL_ERROR, "CSS is not valid and will not be generated at $staticFile");
+            $msg = "CSS is not valid and will not be generated at $staticFile:";
+            $errors = implode("\n", $cssLinter->getErrors());
+            file_put_contents($logFile, "[$date] $msg\n" . $errors, FILE_APPEND);
+            $this->modx->log(modX::LOG_LEVEL_ERROR, $msg);
             return true;
         }
 
@@ -400,8 +408,11 @@ class Romanesco
 
             // Validate CSS
             if ($cssLinter->lintString($css) !== true) {
-                $this->modx->log(modX::LOG_LEVEL_ERROR, "CSS is not valid and will not be generated at $staticFile");
-                break;
+                $msg = "CSS is not valid and will not be generated at $staticFile:";
+                $errors = implode("\n", $cssLinter->getErrors());
+                file_put_contents($logFile, "[$date] $msg\n" . $errors, FILE_APPEND);
+                $this->modx->log(modX::LOG_LEVEL_ERROR, $msg);
+                continue;
             }
 
             // Generate CSS file
