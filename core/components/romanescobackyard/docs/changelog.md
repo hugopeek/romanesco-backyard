@@ -3,7 +3,7 @@
 ## Backyard 1.0.0-beta11
 Released on ...
 
-- Replace exec commands with Symfony processes [WIP]
+- Replace exec commands with Symfony processes
 - Add function to minify CSS
 - Add function to generate background CSS
 

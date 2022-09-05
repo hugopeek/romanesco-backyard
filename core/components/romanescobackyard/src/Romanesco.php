@@ -212,30 +212,20 @@ class Romanesco
      */
     public function generateCriticalCSS(array $settings = []): bool
     {
-        // Run parallel (execute command in the background) or in sequence
-        // Take note that running multiple processes (> 10) in parallel will severely cripple your server!
-        $background = '';
-        if ($settings['parallel']) {
-            $background = ' &';
-        }
+        $cmd = [
+            'gulp', 'critical',
+            '--src', $settings['url'],
+            '--dest', $this->modx->getOption('base_path') . $settings['cssPath'] . '/critical/' . rtrim($settings['uri'],'/') . '.css',
+            '--cssPaths', rtrim($settings['distPath'],'/') . '/semantic.css',
+            '--cssPaths', rtrim($settings['cssPath'],'/') . '/site.css',
+            '--user', escapeshellarg($this->modx->getOption('romanesco.htpasswd_user')),
+            '--pass', escapeshellarg($this->modx->getOption('romanesco.htpasswd_pass')),
+            '--devMode', $this->modx->getOption('romanesco.dev_mode'),
+            '--gulpfile', escapeshellcmd($this->modx->getOption('assets_path')) . 'components/romanescobackyard/js/gulp/generate-critical-css.js'
+        ];
 
-        exec(
-            '"$HOME/.nvm/nvm-exec" gulp critical' .
-            ' --src ' . $settings['url'] .
-            ' --dest ' . $this->modx->getOption('base_path') . $settings['cssPath'] . '/critical/' . rtrim($settings['uri'],'/') . '.css' .
-            ' --cssPaths ' . rtrim($settings['distPath'],'/') . '/semantic.css' .
-            ' --cssPaths ' . rtrim($settings['cssPath'],'/') . '/site.css' .
-            ' --user ' . escapeshellcmd($this->modx->getOption('romanesco.htpasswd_user')) .
-            ' --pass ' . escapeshellcmd($this->modx->getOption('romanesco.htpasswd_pass')) .
-            ' --devMode ' . $this->modx->getOption('romanesco.dev_mode') .
-            ' --gulpfile ' . escapeshellcmd($this->modx->getOption('assets_path')) . 'components/romanescobackyard/js/gulp/generate-critical-css.js' .
-            ' >> ' . escapeshellcmd($this->modx->getOption('core_path')) . 'cache/logs/css-critical.log' .
-            ' 2>>' . escapeshellcmd($this->modx->getOption('core_path')) . 'cache/logs/css-error.log' . $background,
-            $output,
-            $return_css
-        );
-
-        $this->modx->log(modX::LOG_LEVEL_INFO, "[Romanesco] Critical CSS generated for {$settings['uri']} ({$settings['id']})");
+        // Start Symfony process
+        $this->runCommand($cmd);
 
         return true;
     }
@@ -276,47 +266,35 @@ class Romanesco
      * Generate CSS for given context.
      *
      * @param string $context
-     * @param bool $parallel
      * @param bool $bumpVersion
      * @return bool
      */
-    public function generateCustomCSS(string $context = '', bool $parallel = false, bool $bumpVersion = false): bool
+    public function generateCustomCSS(string $context = '', bool $bumpVersion = false): bool
     {
-        // Execute command in the background or wait for output in current PHP process
-        $background = '';
-        if ($parallel) {
-            $background = ' &';
-        }
-
-        // Terminate any existing gulp processes first
-        $killCommand = "ps aux | grep '[g]ulp build-' | awk '{print $2}'";
-        exec(
-            'kill $(' . $killCommand . ') 2> /dev/null',
-            $output,
-            $return_kill
-        );
-
         // Construct build command
+        $gulpFile = escapeshellcmd($this->modx->getOption('assets_path')) . 'components/romanescobackyard/js/gulp/generate-multicontext-css.js';
+
         if ($context) {
             $distPath = $this->modx->getObject('modContextSetting', [
                 'context_key' => $context,
                 'key' => 'romanesco.semantic_dist_path'
             ]);
-            $buildCommand = 'gulp build-context --key ' . $context . ' --dist ' . $this->modx->getOption('base_path') . $distPath->get('value');
+            $cmd = [
+                'gulp', 'build-context',
+                '--gulpfile', $gulpFile,
+                '--key', $context,
+                '--dist', $this->modx->getOption('base_path') . $distPath->get('value')
+            ];
         }
         else {
-            $buildCommand = 'gulp build-css';
+            $cmd = [
+                'gulp', 'build-css',
+                '--gulpfile', $gulpFile,
+            ];
         }
 
-        // Run gulp process to generate new CSS
-        exec(
-            '"$HOME/.nvm/nvm-exec" ' . $buildCommand .
-            ' --gulpfile ' . escapeshellcmd($this->modx->getOption('assets_path')) . 'components/romanescobackyard/js/gulp/generate-multicontext-css.js' .
-            ' > ' . escapeshellcmd($this->modx->getOption('core_path')) . 'cache/logs/css.log' .
-            ' 2>' . escapeshellcmd($this->modx->getOption('core_path')) . 'cache/logs/css-error.log' . $background,
-            $output,
-            $return_css
-        );
+        // Start Symfony process
+        $this->runCommand($cmd);
 
         // Bump CSS version number to force refresh
         if ($bumpVersion) {
@@ -448,24 +426,13 @@ class Romanesco
         ];
 
         // Start Symfony process
-        $process = new Process($cmd, MODX_BASE_PATH, [
-            'PATH' => escapeshellarg($this->modx->getOption('romanesco.shell_path'))
-        ]);
-        $process->run();
+        $this->runCommand($cmd);
 
-        // After command is finished
-        if (!$process->isSuccessful()) {
-            $error = new ProcessFailedException($process);
-            $this->modx->log(modX::LOG_LEVEL_ERROR, "\n" . $error);
-            return false;
-        }
-
-        $this->modx->log(modX::LOG_LEVEL_INFO, "\n" . $process->getOutput());
         return true;
     }
 
     /**
-     * Generate favicon for given context.
+     * Generate favicons for given context.
      *
      * @param array $settings
      * @return bool
@@ -474,19 +441,18 @@ class Romanesco
     {
         $path = $this->modx->getOption('base_path') . $settings['logo_badge_path'];
 
-        exec(
-            '"$HOME/.nvm/nvm-exec"' .
-            ' gulp generate-favicon' .
-            ' --gulpfile ' . escapeshellcmd($this->modx->getOption('assets_path')) . 'components/romanescobackyard/js/gulp/generate-favicons.js' .
-            ' --name ' . escapeshellarg($this->modx->getOption('site_name')) .
-            ' --img ' . escapeshellarg($path) .
-            ' --primary ' . escapeshellarg($settings['theme_color_primary']) .
-            ' --secondary ' . escapeshellarg($settings['theme_color_secondary']) .
-            ' > ' . escapeshellcmd($this->modx->getOption('core_path')) . 'cache/logs/favicon.log' .
-            ' 2>' . escapeshellcmd($this->modx->getOption('core_path')) . 'cache/logs/favicon-error.log &',
-            $output,
-            $return_favicon
-        );
+        $cmd = [
+            'gulp', 'generate-favicon',
+            '--path', $path,
+            '--gulpfile', escapeshellcmd($this->modx->getOption('assets_path')) . 'components/romanescobackyard/js/gulp/generate-favicons.js',
+            '--name', escapeshellarg($this->modx->getOption('site_name')),
+            '--img', escapeshellarg($path),
+            '--primary', escapeshellarg($settings['theme_color_primary']),
+            '--secondary', escapeshellarg($settings['theme_color_secondary'])
+        ];
+
+        // Start Symfony process
+        $this->runCommand($cmd);
 
         // Bump favicon version number to force refresh
         $version = $this->modx->getObject('modSystemSetting', ['key' => 'romanesco.favicon_version']);
@@ -496,6 +462,7 @@ class Romanesco
         } else {
             $this->modx->log(modX::LOG_LEVEL_ERROR, 'Could not find favicon_version setting');
         }
+
         return true;
     }
 
@@ -550,5 +517,32 @@ class Romanesco
             $this->modx->log(modX::LOG_LEVEL_ERROR, $e);
             return '';
         }
+    }
+
+    /**
+     * Run command outside MODX with Symfony Process
+     *
+     * @param array $cmd
+     * @return bool
+     */
+    private function runCommand(array $cmd): bool
+    {
+        // Set working directory and shell PATH
+        $process = new Process($cmd, MODX_BASE_PATH, [
+            'PATH' => escapeshellarg($this->modx->getOption('romanesco.shell_path'))
+        ]);
+
+        // Start process
+        $process->run();
+
+        // After command is finished
+        if (!$process->isSuccessful()) {
+            $error = new ProcessFailedException($process);
+            $this->modx->log(modX::LOG_LEVEL_ERROR, "\n" . $error);
+            return false;
+        }
+        $this->modx->log(modX::LOG_LEVEL_INFO, "\n" . $process->getOutput());
+
+        return true;
     }
 }
