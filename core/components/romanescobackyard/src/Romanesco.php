@@ -205,32 +205,6 @@ class Romanesco
     }
 
     /**
-     * Generate critical CSS for a given page.
-     *
-     * @param array $settings
-     * @return bool
-     */
-    public function generateCriticalCSS(array $settings = []): bool
-    {
-        $cmd = [
-            'gulp', 'critical',
-            '--src', $settings['url'],
-            '--dest', $this->modx->getOption('base_path') . $settings['cssPath'] . '/critical/' . rtrim($settings['uri'],'/') . '.css',
-            '--cssPaths', rtrim($settings['distPath'],'/') . '/semantic.css',
-            '--cssPaths', rtrim($settings['cssPath'],'/') . '/site.css',
-            '--user', escapeshellarg($this->modx->getOption('romanesco.htpasswd_user')),
-            '--pass', escapeshellarg($this->modx->getOption('romanesco.htpasswd_pass')),
-            '--devMode', $this->modx->getOption('romanesco.dev_mode'),
-            '--gulpfile', escapeshellcmd($this->modx->getOption('assets_path')) . 'components/romanescobackyard/js/gulp/generate-critical-css.js'
-        ];
-
-        // Start Symfony process
-        $this->runCommand($cmd);
-
-        return true;
-    }
-
-    /**
      * Generate theme.variables file based on Presentation settings.
      *
      * @param array $settings
@@ -294,12 +268,38 @@ class Romanesco
         }
 
         // Start Symfony process
-        $this->runCommand($cmd);
+        $this->runCommand($cmd, 'css.log');
 
         // Bump CSS version number to force refresh
         if ($bumpVersion) {
             $this->bumpVersionNumber();
         }
+
+        return true;
+    }
+
+    /**
+     * Generate critical CSS for a given page.
+     *
+     * @param array $settings
+     * @return bool
+     */
+    public function generateCriticalCSS(array $settings = []): bool
+    {
+        $cmd = [
+            'gulp', 'critical',
+            '--src', $settings['url'],
+            '--dest', $this->modx->getOption('base_path') . $settings['cssPath'] . '/critical/' . rtrim($settings['uri'],'/') . '.css',
+            '--cssPaths', rtrim($settings['distPath'],'/') . '/semantic.css',
+            '--cssPaths', rtrim($settings['cssPath'],'/') . '/site.css',
+            '--user', escapeshellarg($this->modx->getOption('romanesco.htpasswd_user')),
+            '--pass', escapeshellarg($this->modx->getOption('romanesco.htpasswd_pass')),
+            '--devMode', $this->modx->getOption('romanesco.dev_mode'),
+            '--gulpfile', escapeshellcmd($this->modx->getOption('assets_path')) . 'components/romanescobackyard/js/gulp/generate-critical-css.js'
+        ];
+
+        // Start Symfony process
+        $this->runCommand($cmd, 'critical.log');
 
         return true;
     }
@@ -316,10 +316,6 @@ class Romanesco
      */
     public function generateBackgroundCSS(): bool
     {
-        $logFile = MODX_CORE_PATH . 'cache/logs/css-error.log';
-        $date = new DateTime();
-        $date = $date->format("Y-m-d H:i:s");
-
         // Get all background containers
         $bgContainers = $this->modx->getCollection('modResource', array(
             'parent' => $this->modx->getOption('romanesco.global_backgrounds_id'),
@@ -350,8 +346,7 @@ class Romanesco
         if ($cssLinter->lintString($css) !== true) {
             $msg = "CSS is not valid and will not be generated at $staticFile:";
             $errors = implode("\n", $cssLinter->getErrors());
-            file_put_contents($logFile, "[$date] $msg\n" . $errors, FILE_APPEND);
-            $this->modx->log(modX::LOG_LEVEL_ERROR, $msg);
+            $this->modx->log(modX::LOG_LEVEL_ERROR, "$msg\n$errors");
             return true;
         }
 
@@ -388,8 +383,7 @@ class Romanesco
             if ($cssLinter->lintString($css) !== true) {
                 $msg = "CSS is not valid and will not be generated at $staticFile:";
                 $errors = implode("\n", $cssLinter->getErrors());
-                file_put_contents($logFile, "[$date] $msg\n" . $errors, FILE_APPEND);
-                $this->modx->log(modX::LOG_LEVEL_ERROR, $msg);
+                $this->modx->log(modX::LOG_LEVEL_ERROR, "$msg\n$errors");
                 continue;
             }
 
@@ -402,10 +396,9 @@ class Romanesco
             $minifyCSS[] = $cssPath;
         }
 
-        // Minify CSS
+        // Minify CSS (run as snippet, so it can be scheduled)
         foreach ($minifyCSS as $path) {
             $this->modx->runSnippet('minifyCSS', ['css_path' => $path]);
-            //$this->minifyCSS($path);
         }
 
         return true;
@@ -452,7 +445,7 @@ class Romanesco
         ];
 
         // Start Symfony process
-        $this->runCommand($cmd);
+        $this->runCommand($cmd, 'favicon.log');
 
         // Bump favicon version number to force refresh
         $version = $this->modx->getObject('modSystemSetting', ['key' => 'romanesco.favicon_version']);
@@ -522,10 +515,11 @@ class Romanesco
     /**
      * Run command outside MODX with Symfony Process
      *
-     * @param array $cmd
-     * @return bool
+     * @param array $cmd Format the command as an array, with each argument as a separate value.
+     * @param string|null $logFile Write standard output to log file (optional). Errors will always be written to error log.
+     * @return void
      */
-    private function runCommand(array $cmd): bool
+    public function runCommand(array $cmd, string $logFile = null): void
     {
         // Set working directory and shell PATH
         $process = new Process($cmd, MODX_BASE_PATH, [
@@ -539,10 +533,19 @@ class Romanesco
         if (!$process->isSuccessful()) {
             $error = new ProcessFailedException($process);
             $this->modx->log(modX::LOG_LEVEL_ERROR, "\n" . $error);
-            return false;
+            return;
         }
-        $this->modx->log(modX::LOG_LEVEL_INFO, "\n" . $process->getOutput());
 
-        return true;
+        // Log standard output to file or error log
+        $output = $process->getOutput();
+
+        if ($logFile) {
+            $logFile = MODX_CORE_PATH . 'cache/logs/' . $logFile;
+            $date = new DateTime();
+            $date = $date->format("Y-m-d H:i:s");
+            file_put_contents($logFile, "[$date] $output", FILE_APPEND);
+        } else {
+            $this->modx->log(modX::LOG_LEVEL_INFO, "\n" . $output);
+        }
     }
 }
