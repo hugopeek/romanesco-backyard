@@ -436,7 +436,6 @@ class Romanesco
 
         $cmd = [
             'gulp', 'generate-favicon',
-            '--path', $path,
             '--gulpfile', escapeshellcmd($this->modx->getOption('assets_path')) . 'components/romanescobackyard/js/gulp/generate-favicons.js',
             '--name', escapeshellarg($this->modx->getOption('site_name')),
             '--img', escapeshellarg($path),

@@ -13,11 +13,14 @@ var
     masterPicture   = argv.img ? argv.img               : projectRoot + 'assets/img/badge.svg',
     backgroundColor = argv.bg ? argv.bg                 : 'ffffff',
     primaryColor    = argv.primary? argv.primary        : '698f73',
-    secondaryColor  = argv.secondary ? argv.secondary   : '5f7ebe',
-
-    // File where the result is stored
-    FAVICON_DATA_FILE = distPath + 'favicons.json'
+    secondaryColor  = argv.secondary ? argv.secondary   : '5f7ebe'
 ;
+
+// Ensure destination path has trailing /
+distPath += distPath.endsWith("/") ? "" : "/";
+
+// File where the result is stored
+var FAVICON_DATA_FILE = distPath + 'favicons.json';
 
 // Generate the icons. This task takes a few seconds to complete.
 // You should run it at least once to create the icons. Then,
