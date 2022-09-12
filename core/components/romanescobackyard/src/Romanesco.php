@@ -292,8 +292,8 @@ class Romanesco
             '--dest', $this->modx->getOption('base_path') . $settings['cssPath'] . '/critical/' . rtrim($settings['uri'],'/') . '.css',
             '--cssPaths', rtrim($settings['distPath'],'/') . '/semantic.css',
             '--cssPaths', rtrim($settings['cssPath'],'/') . '/site.css',
-            '--user', escapeshellarg($this->modx->getOption('romanesco.htpasswd_user')),
-            '--pass', escapeshellarg($this->modx->getOption('romanesco.htpasswd_pass')),
+            '--user', escapeshellcmd($this->modx->getOption('romanesco.htpasswd_user')) ?: 'undefined',
+            '--pass', escapeshellcmd($this->modx->getOption('romanesco.htpasswd_pass')) ?: 'undefined',
             '--devMode', $this->modx->getOption('romanesco.dev_mode'),
             '--gulpfile', escapeshellcmd($this->modx->getOption('assets_path')) . 'components/romanescobackyard/js/gulp/generate-critical-css.js'
         ];
@@ -433,14 +433,15 @@ class Romanesco
     public function generateFavicons(array $settings = []): bool
     {
         $path = $this->modx->getOption('base_path') . $settings['logo_badge_path'];
+        $path = str_replace('//', '/', $path);
 
         $cmd = [
             'gulp', 'generate-favicon',
             '--gulpfile', escapeshellcmd($this->modx->getOption('assets_path')) . 'components/romanescobackyard/js/gulp/generate-favicons.js',
-            '--name', escapeshellarg($this->modx->getOption('site_name')),
-            '--img', escapeshellarg($path),
-            '--primary', escapeshellarg($settings['theme_color_primary']),
-            '--secondary', escapeshellarg($settings['theme_color_secondary'])
+            '--name', escapeshellcmd($this->modx->getOption('site_name')),
+            '--img', escapeshellcmd($path),
+            '--primary', escapeshellcmd($settings['theme_color_primary']),
+            '--secondary', escapeshellcmd($settings['theme_color_secondary'])
         ];
 
         // Start Symfony process
@@ -515,14 +516,14 @@ class Romanesco
      * Run command outside MODX with Symfony Process
      *
      * @param array $cmd Format the command as an array, with each argument as a separate value.
-     * @param string|null $logFile Write standard output to log file (optional). Errors will always be written to error log.
+     * @param string|null $logFile Write standard output to log file (optional). All errors are written to error log.
      * @return void
      */
     public function runCommand(array $cmd, string $logFile = null): void
     {
         // Set working directory and shell PATH
         $process = new Process($cmd, MODX_BASE_PATH, [
-            'PATH' => escapeshellarg($this->modx->getOption('romanesco.shell_path'))
+            'PATH' => escapeshellcmd($this->modx->getOption('romanesco.shell_path'))
         ]);
 
         // Start process
