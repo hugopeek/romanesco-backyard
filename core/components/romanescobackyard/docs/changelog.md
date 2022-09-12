@@ -1,7 +1,7 @@
 # Changelog for Romanesco Backyard
 
 ## Backyard 1.0.0-beta11
-Released on ...
+Released on September 12, 2022
 
 - Add missing resolver for extension package
 - Replace exec commands with Symfony processes
