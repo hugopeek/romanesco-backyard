@@ -3,6 +3,7 @@
 ## Backyard 1.0.0-beta11
 Released on ...
 
+- Add missing resolver for extension package
 - Replace exec commands with Symfony processes
 - Add function to minify CSS
 - Add function to generate background CSS
