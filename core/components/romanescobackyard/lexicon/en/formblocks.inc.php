@@ -36,6 +36,9 @@ $_lang['formblocks.form.validation_error_message'] = 'The form could not be sent
 $_lang['formblocks.form.honeypot_field'] = 'If you\'re a human, keep this field blank!';
 $_lang['formblocks.form.recaptchav3_legal_notice'] = 'This form is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.';
 $_lang['formblocks.form.submit_button'] = 'Send';
+$_lang['formblocks.form.submit_loading'] = 'Sending';
+$_lang['formblocks.form.success_heading'] = 'The form has been sent.';
+$_lang['formblocks.form.success_message'] = 'Thank you for your message!';
 
 // Email template
 $_lang['formblocks.email.subject'] = 'Contact form response';
