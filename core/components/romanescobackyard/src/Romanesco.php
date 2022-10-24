@@ -521,9 +521,9 @@ class Romanesco
      */
     public function runCommand(array $cmd, string $logFile = null): void
     {
-        // Set working directory and shell PATH
+        // Set working directory and environment PATH
         $process = new Process($cmd, MODX_BASE_PATH, [
-            'PATH' => escapeshellcmd($this->modx->getOption('romanesco.shell_path'))
+            'PATH' => escapeshellcmd($this->modx->getOption('romanesco.env_path'))
         ]);
 
         // Start process
