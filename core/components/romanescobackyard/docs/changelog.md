@@ -1,7 +1,7 @@
 # Changelog for Romanesco Backyard
 
 ## Backyard 1.0.0-beta12
-Released on ...
+Released on October 30, 2022
 
 - Update internal FUI styling to 2.9.0
 - Rename shell_path setting to env_path
