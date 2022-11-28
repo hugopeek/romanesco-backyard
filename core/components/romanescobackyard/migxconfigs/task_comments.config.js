@@ -133,7 +133,7 @@
         "hooksnippets": {
             "aftersave": "migxSaveTaskComment"
         },
-        "cmpmaincaption": "Tool shed",
+        "cmpmaincaption": "Project data",
         "cmptabcaption": "Task comments",
         "cmptabdescription": "Attach questions and updates to the parent task.",
         "cmptabcontroller": "",

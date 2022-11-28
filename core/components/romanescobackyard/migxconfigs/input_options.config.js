@@ -169,7 +169,7 @@
         "hooksnippets": {
             "aftersave": "migxSaveOption"
         },
-        "cmpmaincaption": "Tool shed",
+        "cmpmaincaption": "Project data",
         "cmptabcaption": "Input options",
         "cmptabdescription": "",
         "cmptabcontroller": "",

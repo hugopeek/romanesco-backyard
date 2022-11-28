@@ -327,7 +327,7 @@
             }
         ],
         "hooksnippets": "",
-        "cmpmaincaption": "Tool shed",
+        "cmpmaincaption": "Project data",
         "cmptabcaption": "Social connections",
         "cmptabdescription": "Maintain a list of social media channels, through which visitors can connect with you.",
         "cmptabcontroller": "",

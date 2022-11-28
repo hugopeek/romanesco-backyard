@@ -29,9 +29,9 @@ $_lang['romanesco.menu.clear_cache_team_title'] = 'Team';
 $_lang['romanesco.menu.clear_cache_testimonials_title'] = 'Testimonials';
 $_lang['romanesco.menu.clear_cache_patterns_title'] = 'Patterns';
 
-// Tool shed
-$_lang['romanesco.menu.tool_shed_title'] = 'Tool Shed';
-$_lang['romanesco.menu.tool_shed_description'] = 'Settings and information to help you manage your project';
+// Project data
+$_lang['romanesco.menu.project_data_title'] = 'Project Data';
+$_lang['romanesco.menu.project_data_description'] = 'Manage project specific information';
 
 
 // Collection views

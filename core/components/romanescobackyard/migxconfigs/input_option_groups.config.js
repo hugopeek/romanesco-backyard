@@ -173,7 +173,7 @@
         "hooksnippets": {
             "aftersave": "migxSaveOptionGroup"
         },
-        "cmpmaincaption": "Tool shed",
+        "cmpmaincaption": "Project data",
         "cmptabcaption": "Input options",
         "cmptabdescription": "These groups contain options that can be used throughout the platform, in selectors and checkboxes and such. They are similar to tags, but can contain a little more information.",
         "cmptabcontroller": "",

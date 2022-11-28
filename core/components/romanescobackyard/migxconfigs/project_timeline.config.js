@@ -218,7 +218,7 @@
         "getlistwhere": "",
         "joins": "",
         "hooksnippets": "",
-        "cmpmaincaption": "Tool shed",
+        "cmpmaincaption": "Project data",
         "cmptabcaption": "Project timeline",
         "cmptabdescription": "",
         "cmptabcontroller": "",

@@ -247,7 +247,7 @@
         "hooksnippets": {
             "aftersave": "migxSaveExternalLink"
         },
-        "cmpmaincaption": "Tool shed",
+        "cmpmaincaption": "Project data",
         "cmptabcaption": "External links",
         "cmptabdescription": "Create links to external references. You can list them as sources for your article for example.",
         "cmptabcontroller": "",

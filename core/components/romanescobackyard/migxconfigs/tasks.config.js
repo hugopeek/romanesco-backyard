@@ -295,7 +295,7 @@
             }
         ],
         "hooksnippets": "",
-        "cmpmaincaption": "Tool shed",
+        "cmpmaincaption": "Project data",
         "cmptabcaption": "Tasks",
         "cmptabdescription": "The tasks in this list are collected from the Status tab on each page and the project timeline on the Dashboard page. But you can also add generic issues here directly.",
         "cmptabcontroller": "",

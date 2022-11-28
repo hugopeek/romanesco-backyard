@@ -248,7 +248,7 @@
         "hooksnippets": {
             "aftersave": "migxSaveRelated"
         },
-        "cmpmaincaption": "Tool shed",
+        "cmpmaincaption": "Project data",
         "cmptabcaption": "Content relations",
         "cmptabdescription": "Create links between areas of your project that complement each other. You can use these links to display related content on a page, for example.",
         "cmptabcontroller": "",

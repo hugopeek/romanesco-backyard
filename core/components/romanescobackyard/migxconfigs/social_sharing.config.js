@@ -264,7 +264,7 @@
         "getlistwhere": "",
         "joins": "",
         "hooksnippets": "",
-        "cmpmaincaption": "Tool shed",
+        "cmpmaincaption": "Project data",
         "cmptabcaption": "Social sharing",
         "cmptabdescription": "Maintain a list of social media channels, through which visitors can share your content.",
         "cmptabcontroller": "",
