@@ -18,16 +18,18 @@ $_lang['romanesco.menu.edit_cta_description'] = 'Build and edit your own CTA\'s'
 
 // Custom caching
 $_lang['romanesco.menu.clear_cache_all_title'] = 'Clear Custom Cache';
-$_lang['romanesco.menu.clear_cache_all_description'] = 'Delete files inside all custom cache partitions';
+$_lang['romanesco.menu.clear_cache_all_description'] = 'Delete files in all custom partitions';
 $_lang['romanesco.menu.clear_cache_overviews_title'] = 'Overviews';
-$_lang['romanesco.menu.clear_cache_overviews_description'] = 'Only clear cache of standard Overview grids';
-$_lang['romanesco.menu.clear_cache_clients_title'] = 'Clients';
-$_lang['romanesco.menu.clear_cache_gallery_title'] = 'Gallery';
-$_lang['romanesco.menu.clear_cache_portfolio_title'] = 'Portfolio';
-$_lang['romanesco.menu.clear_cache_publication_title'] = 'Publication';
-$_lang['romanesco.menu.clear_cache_team_title'] = 'Team';
-$_lang['romanesco.menu.clear_cache_testimonials_title'] = 'Testimonials';
+$_lang['romanesco.menu.clear_cache_overviews_description'] = 'Only clear cache of generic Overview grids';
+$_lang['romanesco.menu.clear_cache_galleries_title'] = 'Galleries';
+$_lang['romanesco.menu.clear_cache_galleries_description'] = 'Only clear cache of Gallery CBs';
 $_lang['romanesco.menu.clear_cache_patterns_title'] = 'Patterns';
+$_lang['romanesco.menu.clear_cache_patterns_description'] = 'Clear cache of pattern library in Project Hub';
+$_lang['romanesco.menu.clear_cache_clients_title'] = 'Clients'; //deprecated
+$_lang['romanesco.menu.clear_cache_portfolio_title'] = 'Portfolio'; //deprecated
+$_lang['romanesco.menu.clear_cache_publication_title'] = 'Publication'; //deprecated
+$_lang['romanesco.menu.clear_cache_team_title'] = 'Team'; //deprecated
+$_lang['romanesco.menu.clear_cache_testimonials_title'] = 'Testimonials'; //deprecated
 
 // Project data
 $_lang['romanesco.menu.project_data_title'] = 'Project Data';
