@@ -1,7 +1,7 @@
 # Changelog for Romanesco Backyard
 
 ## Backyard 1.0.0-beta13
-Released on ...
+Released on December 1, 2022
 
 - Improve clearing of custom cache
 - Rename Tool Shed to Project Data
