@@ -1,5 +1,10 @@
 # Changelog for Romanesco Backyard
 
+## Backyard 1.0.0-beta14
+Released on February 1, 2023
+
+- Require Composer php-vips package
+
 ## Backyard 1.0.0-beta13
 Released on December 1, 2022
 
