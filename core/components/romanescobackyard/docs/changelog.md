@@ -1,5 +1,10 @@
 # Changelog for Romanesco Backyard
 
+## Backyard 1.0.0-beta15
+Released on ...
+
+- Check if semantic_dist_path context setting exists before building custom CSS
+
 ## Backyard 1.0.0-beta14
 Released on February 1, 2023
 

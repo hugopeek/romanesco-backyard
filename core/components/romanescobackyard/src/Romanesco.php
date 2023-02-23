@@ -253,6 +253,10 @@ class Romanesco
                 'context_key' => $context,
                 'key' => 'romanesco.semantic_dist_path'
             ]);
+            if (!is_object($distPath)) {
+                $this->modx->log(modX::LOG_LEVEL_ERROR, "Could not find semantic_dist_path setting for context: $context.");
+                return false;
+            }
             $cmd = [
                 'gulp', 'build-context',
                 '--gulpfile', $gulpFile,
