@@ -40,6 +40,9 @@ $_lang['formblocks.form.submit_loading'] = 'Sending';
 $_lang['formblocks.form.success_heading'] = 'The form has been sent.';
 $_lang['formblocks.form.success_message'] = 'Thank you for your message!';
 
+// Form fields
+$_lang['formblocks.field.other_namely'] = 'namely...';
+
 // Email template
 $_lang['formblocks.email.subject'] = 'Contact form response';
 $_lang['formblocks.email.introtext'] = 'This is what the visitor submitted:';
