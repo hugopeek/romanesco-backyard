@@ -1,8 +1,10 @@
 # Changelog for Romanesco Backyard
 
 ## Backyard 1.0.0-beta15
-Released on ...
+Released on April 8, 2023
 
+- Update internal FUI styling to 2.9.3 nightly
+- Better placeholder for other option fields
 - Check if semantic_dist_path context setting exists before building custom CSS
 
 ## Backyard 1.0.0-beta14
