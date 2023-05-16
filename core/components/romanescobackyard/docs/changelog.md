@@ -1,5 +1,10 @@
 # Changelog for Romanesco Backyard
 
+## Backyard 1.0.0-beta16
+Released on ...
+
+- Don't show soft deleted input options in grid
+
 ## Backyard 1.0.0-beta15
 Released on April 8, 2023
 
