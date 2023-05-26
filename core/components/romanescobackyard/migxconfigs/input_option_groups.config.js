@@ -134,7 +134,31 @@
     "contextmenus": "update||duplicate||recall_remove_delete",
     "actionbuttons": "addItem||bulk||toggletrash||emptyTrash",
     "columnbuttons": "",
-    "filters": "",
+    "filters": [
+        {
+            "MIGX_id": 1,
+            "name": "search_options",
+            "label": "Search",
+            "emptytext": "Search",
+            "type": "textbox",
+            "getlistwhere": {
+                "name:LIKE": "%[[+search_options]]%",
+                "OR:description:LIKE": "%[[+search_options]]%",
+                "OR:key:LIKE": "%[[+search_options]]%"
+            },
+            "getcomboprocessor": "",
+            "combotextfield": "",
+            "comboidfield": "",
+            "combowhere": "",
+            "comboclassname": "",
+            "combopackagename": "",
+            "combo_use_custom_prefix": "0",
+            "comboprefix": "",
+            "combojoins": "",
+            "comboparent": "",
+            "default": ""
+        }
+    ],
     "extended": {
         "migx_add": "Add group",
         "disable_add_item": "",
