@@ -16,7 +16,7 @@
                     "inputTVtype": "migxdb",
                     "validation": "",
                     "configs": "input_options:romanescobackyard",
-                    "restrictive_condition": "",
+                    "restrictive_condition": "[[If? &subject=`[[+id]]` &operator=`empty` &then=`break`]]",
                     "display": "",
                     "sourceFrom": "config",
                     "sources": "",
@@ -138,7 +138,7 @@
     "extended": {
         "migx_add": "Add group",
         "disable_add_item": "",
-        "add_items_directly": 1,
+        "add_items_directly": "",
         "formcaption": "",
         "update_win_title": "Edit group",
         "win_id": 5,

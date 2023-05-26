@@ -3,6 +3,7 @@
 ## Backyard 1.0.0-beta16
 Released on ...
 
+- Add new input option groups through modal
 - Don't show soft deleted input options in grid
 
 ## Backyard 1.0.0-beta15
