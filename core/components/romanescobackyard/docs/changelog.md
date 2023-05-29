@@ -3,6 +3,7 @@
 ## Backyard 1.0.0-beta16
 Released on ...
 
+- Add styling for right floated icons in MIGX grids
 - Add search field to input options grid
 - Add new input option groups through modal
 - Don't show soft deleted input options in grid
