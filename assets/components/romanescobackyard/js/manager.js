@@ -45,3 +45,18 @@ $(document).arrive("#contentblocks-modal", function() {
         }
     });
 });
+
+// Remove HTML from selected value in combo boxes (dropdowns)
+$(document).arrive("[id*='modx-tv-tab'] .x-form-element > .x-form-field-wrap > input.x-form-text", function() {
+    // Alter value on load
+    let value = this.value.replace(/<\/?[^>]+(>|$)/g, "").trim();
+    $(this).val(value);
+
+    // Alter value again when selection changes
+    $(document).on('click', ".x-combo-list-item.x-combo-selected", function(){
+        $("[id*='modx-tv-tab'] .x-form-element > .x-form-field-wrap > input.x-form-text").each(function (){
+            let value = this.value.replace(/<\/?[^>]+(>|$)/g, "").trim();
+            $(this).val(value);
+        });
+    });
+});
