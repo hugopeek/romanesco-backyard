@@ -48,14 +48,22 @@ $(document).arrive("#contentblocks-modal", function() {
 
 // Remove HTML from selected value in combo boxes (dropdowns)
 $(document).arrive("[id*='modx-tv-tab'] .x-form-element > .x-form-field-wrap > input.x-form-text", function() {
-    // Alter value on load
+    let img = this.value.match(/<img.*?src="([^">]*\/([^">]*?))".*?>/g);
     let value = this.value.replace(/<\/?[^>]+(>|$)/g, "").trim();
+
+    // Show preview image, why not :)
+    if (img) {
+        $(this).parent().after(img[0].replace('width:30%', 'width:402px;margin-top:5px'));
+    }
+
+    // Alter value on load
     $(this).val(value);
 
     // Alter value and image preview again when selection changes
     $(document).on('click', ".x-combo-list-item.x-combo-selected", {fieldId : this.id}, function(e){
         $('#' + e.data.fieldId).each(function () {
             let id = this.id;
+            let img = this.value.match(/<img.*?src="([^">]*\/([^">]*?))".*?>/g);
             let value = this.value.replace(/<\/?[^>]+(>|$)/g, "").trim();
             let ghost = '<div id="' + id + '_ghost" class="x-form-text x-form-field x-trigger-noedit x-form-focus" style="margin-top:-30px;">' + value + '</div>';
 
@@ -71,6 +79,11 @@ $(document).arrive("[id*='modx-tv-tab'] .x-form-element > .x-form-field-wrap > i
                 .css('z-index', '2')
             ;
 
+            // Replace image thumbnail
+            if (img) {
+                $(this).parent().siblings('img').remove();
+                $(this).parent().after(img[0].replace('width:30%', 'width:402px;margin-top:5px'));
+            }
         });
     });
 });

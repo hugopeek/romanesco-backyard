@@ -3,6 +3,7 @@
 ## Backyard 1.0.0-beta16
 Released on ...
 
+- Show thumbnail next to selector after selecting image
 - Replace updated combo box value with ghost element
 - Remove HTML from selected value in combo boxes
 - Include PHPStan via Composer
