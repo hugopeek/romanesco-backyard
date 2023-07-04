@@ -3,6 +3,7 @@
 ## Backyard 1.0.0-beta16
 Released on ...
 
+- Avoid horizontal scrollbars in MIGX modals with nested grid
 - Show thumbnail next to selector after selecting image
 - Replace updated combo box value with ghost element
 - Remove HTML from selected value in combo boxes

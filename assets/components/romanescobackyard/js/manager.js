@@ -87,3 +87,8 @@ $(document).arrive("[id*='modx-tv-tab'] .x-form-element > .x-form-field-wrap > i
         });
     });
 });
+
+// Reset element width after initial calculations
+$(document).arrive("div[id*='modx-window-mi-grid-update-'] .x-panel.x-grid-panel", function() {
+    $(this).css('width','100%');
+});
