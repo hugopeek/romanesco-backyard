@@ -52,11 +52,25 @@ $(document).arrive("[id*='modx-tv-tab'] .x-form-element > .x-form-field-wrap > i
     let value = this.value.replace(/<\/?[^>]+(>|$)/g, "").trim();
     $(this).val(value);
 
-    // Alter value again when selection changes
-    $(document).on('click', ".x-combo-list-item.x-combo-selected", function(){
-        $("[id*='modx-tv-tab'] .x-form-element > .x-form-field-wrap > input.x-form-text").each(function (){
+    // Alter value and image preview again when selection changes
+    $(document).on('click', ".x-combo-list-item.x-combo-selected", {fieldId : this.id}, function(e){
+        $('#' + e.data.fieldId).each(function () {
+            let id = this.id;
             let value = this.value.replace(/<\/?[^>]+(>|$)/g, "").trim();
-            $(this).val(value);
+            let ghost = '<div id="' + id + '_ghost" class="x-form-text x-form-field x-trigger-noedit x-form-focus" style="margin-top:-30px;">' + value + '</div>';
+
+            // Unset previous selection
+            $('#' + id +'_ghost').remove();
+
+            // Add shadow element
+            $(ghost).insertAfter('#' + id);
+
+            // Make existing selector transparent, so ghost content is visible underneath
+            $(this)
+                .css('opacity', '0')
+                .css('z-index', '2')
+            ;
+
         });
     });
 });

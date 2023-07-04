@@ -3,6 +3,7 @@
 ## Backyard 1.0.0-beta16
 Released on ...
 
+- Replace updated combo box value with ghost element
 - Remove HTML from selected value in combo boxes
 - Include PHPStan via Composer
 - Add styling for right floated icons in MIGX grids
