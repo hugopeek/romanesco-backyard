@@ -3,6 +3,7 @@
 ## Backyard 1.0.0-beta16
 Released on ...
 
+- Add lexicon keys for image alt fallback text
 - Make search field smaller in MIGX TV grids
 - Avoid horizontal scrollbars in MIGX modals with nested grid
 - Show thumbnail next to selector after selecting image

@@ -20,8 +20,13 @@ $_lang['romanesco.pagination.first'] = 'First page';
 $_lang['romanesco.pagination.last'] = 'Last page';
 $_lang['romanesco.pagination.load_more'] = 'Load more';
 
-// Overviews
-$_lang['romanesco.overview.img_fallback'] = 'Image not available';
+// Images
+$_lang['romanesco.img.not_available'] = 'Image not available';
+$_lang['romanesco.img.alt_fallback'] = 'Content image';
+
+// Galleries
+$_lang['romanesco.gallery.alt_fallback'] = 'Gallery image [[+idx]]';
+$_lang['romanesco.gallery.alt_fallback_lightbox'] = 'Lightbox image';
 
 // Social
 $_lang['romanesco.social.connect_facebook_organization'] = 'Visit our Facebook page';
