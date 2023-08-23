@@ -49,7 +49,8 @@ $(document).arrive("#contentblocks-modal", function() {
 // Remove HTML from selected value in combo boxes (dropdowns)
 $(document).arrive("[id*='modx-tv-tab'] .x-form-element > .x-form-field-wrap > input.x-form-text", function() {
     let img = this.value.match(/<img.*?src="([^">]*\/([^">]*?))".*?>/g);
-    let value = this.value.replace(/<\/?[^>]+(>|$)/g, "").trim();
+    let value = this.value.replace(/<div[^>]+class\s*=\s*"[^"]*description[^"]*".*<\/div>/im, "").trim();
+        value = value.replace(/<\/?[^>]+(>|$)/g, "").trim();
 
     // Show preview image, why not :)
     if (img) {
@@ -64,7 +65,8 @@ $(document).arrive("[id*='modx-tv-tab'] .x-form-element > .x-form-field-wrap > i
         $('#' + e.data.fieldId).each(function () {
             let id = this.id;
             let img = this.value.match(/<img.*?src="([^">]*\/([^">]*?))".*?>/g);
-            let value = this.value.replace(/<\/?[^>]+(>|$)/g, "").trim();
+            let value = this.value.replace(/<div[^>]+class\s*=\s*"[^"]*description[^"]*".*<\/div>/im, "").trim();
+                value = value.replace(/<\/?[^>]+(>|$)/g, "").trim();
             let ghost = '<div id="' + id + '_ghost" class="x-form-text x-form-field x-trigger-noedit x-form-focus" style="margin-top:-30px;">' + value + '</div>';
 
             // Unset previous selection
