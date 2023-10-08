@@ -1,8 +1,11 @@
 # Changelog for Romanesco Backyard
 
 ## Backyard 1.0.0-beta16
-Released on ...
+Released on October 8, 2023
 
+- Set minimum PHP version to 8.0
+- Update internal FUI styling to 2.9.3
+- Update Composer dependencies
 - Update composer.phar to 2.5.8
 - Add lexicon keys for image alt fallback text
 - Make search field smaller in MIGX TV grids
