@@ -3,6 +3,7 @@
 ## Backyard 1.0.0-beta16
 Released on October 8, 2023
 
+- Add lexicon keys for overview filters
 - Set minimum PHP version to 8.0
 - Update internal FUI styling to 2.9.3
 - Update Composer dependencies

@@ -85,6 +85,12 @@ $_lang['romanesco.search.field_placeholder'] = 'What are you looking for?';
 $_lang['romanesco.search.field_button_text'] = 'Search';
 $_lang['romanesco.search.result_button_text'] = 'Go to this page';
 
+// Filter
+$_lang['romanesco.filter.active'] = 'Filtered on';
+$_lang['romanesco.filter.and'] = 'and';
+$_lang['romanesco.filter.or'] = 'or';
+$_lang['romanesco.filter.reset'] = 'Reset';
+
 // Footer
 $_lang['romanesco.footer.qredits_title'] = 'A Romanesco project';
 $_lang['romanesco.footer.qredits_text'] = '<p><strong>A Romanesco project</strong><br>Build pragmatic websites, starting with content.</p>';
