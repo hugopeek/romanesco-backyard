@@ -950,25 +950,25 @@
 @media only screen and (min-width: 768px) {
   .chunkOutput body.vertical.toc #content,
   .chunkOutput body.vertical.toc #sidebar {
-    margin-top: calc(var(--baseline) * 2rem);
+    margin-top: calc(var(--baseline) * 3rem);
   }
 }
 
-.chunkOutput p a:not(.button):not(.image):not(.item),
-.chunkOutput li a:not(.button):not(.image):not(.item),
-.chunkOutput .lead a:not(.button):not(.image):not(.item),
-.chunkOutput .content a:not(.button):not(.image):not(.item),
-.chunkOutput .header.inverted a:not(.button):not(.image):not(.item),
-.chunkOutput .header.sub a:not(.button):not(.image):not(.item) {
+.chunkOutput p a:not(.button):not(.image):not(.item):not(.label),
+.chunkOutput li a:not(.button):not(.image):not(.item):not(.label),
+.chunkOutput .lead a:not(.button):not(.image):not(.item):not(.label),
+.chunkOutput .content a:not(.button):not(.image):not(.item):not(.label),
+.chunkOutput .header.inverted a:not(.button):not(.image):not(.item):not(.label),
+.chunkOutput .header.sub a:not(.button):not(.image):not(.item):not(.label) {
   border-bottom: 1px dotted;
 }
 
-.chunkOutput p a:not(.button):not(.image):not(.item):hover,
-.chunkOutput li a:not(.button):not(.image):not(.item):hover,
-.chunkOutput .lead a:not(.button):not(.image):not(.item):hover,
-.chunkOutput .content a:not(.button):not(.image):not(.item):hover,
-.chunkOutput .header.inverted a:not(.button):not(.image):not(.item):hover,
-.chunkOutput .header.sub a:not(.button):not(.image):not(.item):hover {
+.chunkOutput p a:not(.button):not(.image):not(.item):not(.label):hover,
+.chunkOutput li a:not(.button):not(.image):not(.item):not(.label):hover,
+.chunkOutput .lead a:not(.button):not(.image):not(.item):not(.label):hover,
+.chunkOutput .content a:not(.button):not(.image):not(.item):not(.label):hover,
+.chunkOutput .header.inverted a:not(.button):not(.image):not(.item):not(.label):hover,
+.chunkOutput .header.sub a:not(.button):not(.image):not(.item):not(.label):hover {
   border-bottom: 1px solid;
 }
 
@@ -1121,14 +1121,6 @@
   right: -1%;
 }
 
-.chunkOutput .quote:not(.basic) footer {
-  color: rgba(0, 0, 0, 0.6);
-}
-
-.chunkOutput .inverted.quote:not(.basic) footer {
-  color: rgba(255, 255, 255, 0.8);
-}
-
 .chunkOutput * + .quote,
 .chunkOutput .quote + * {
   margin-top: calc(var(--baseline) * 3rem) !important;
@@ -1215,6 +1207,16 @@
   .chunkOutput .quote.quote footer {
     font-size: 1.28rem;
   }
+}
+
+.chunkOutput blockquote footer,
+.chunkOutput .quote footer {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.chunkOutput .invertedblockquote footer,
+.chunkOutput .inverted.quote footer {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .chunkOutput #content ul:not(:last-child):not(.ui.list),
@@ -3988,27 +3990,104 @@
   }
 }
 
-.chunkOutput body.readability #content .ui.container p:not(.meta):not(:first-child),
-.chunkOutput .ui.text.container:not(.conventional) p:not(.meta):not(:first-child) {
+.chunkOutput body.readability #content .ui.container > * + h1,
+.chunkOutput .ui.text.container:not(.conventional) > * + h1,
+.chunkOutput body.readability #content .ui.container > * + h2,
+.chunkOutput .ui.text.container:not(.conventional) > * + h2,
+.chunkOutput body.readability #content .ui.container > * + h3,
+.chunkOutput .ui.text.container:not(.conventional) > * + h3,
+.chunkOutput body.readability #content .ui.container > * + h4,
+.chunkOutput .ui.text.container:not(.conventional) > * + h4 {
+  margin-top: calc(var(--baseline) * 5rem);
+  margin-bottom: calc(var(--baseline) * 3rem);
+}
+
+.chunkOutput body.readability #content .ui.container > *:first-child,
+.chunkOutput .ui.text.container:not(.conventional) > *:first-child {
+  margin-top: 0 !important;
+}
+
+.chunkOutput body.readability #content .ui.container > p:not(.meta),
+.chunkOutput .ui.text.container:not(.conventional) > p:not(.meta) {
   margin-top: calc(var(--baseline) * 3rem);
 }
 
+.chunkOutput body.readability #content .ui.container > blockquote,
+.chunkOutput .ui.text.container:not(.conventional) > blockquote {
+  margin: calc(var(--baseline) * 5rem) 0;
+}
+
+.chunkOutput body.readability #content .ui.container > .ui.divider,
+.chunkOutput .ui.text.container:not(.conventional) > .ui.divider {
+  margin: calc(var(--baseline) * 3rem) 0;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .chunkOutput body.readability #content .ui.container p.image > img,
+  .chunkOutput .ui.text.container:not(.conventional) p.image > img {
+    box-shadow: none;
+    border-radius: 0;
+    margin: 0 -1em 0 -1em;
+    max-width: calc(100% + 2em);
+  }
+}
+
 @media only screen and (min-width: 768px) {
+  .chunkOutput body.readability #content .ui.container h1,
+  .chunkOutput .ui.text.container:not(.conventional) h1 {
+    margin-left: -2rem;
+  }
+
   .chunkOutput body.readability #content .ui.container p,
   .chunkOutput .ui.text.container:not(.conventional) p {
     font-size: 1.70624rem;
     line-height: 1.618;
   }
-}
 
-.chunkOutput body.readability #content .ui.container p + h2,
-.chunkOutput .ui.text.container:not(.conventional) p + h2,
-.chunkOutput body.readability #content .ui.container p + h3,
-.chunkOutput .ui.text.container:not(.conventional) p + h3,
-.chunkOutput body.readability #content .ui.container p + h4,
-.chunkOutput .ui.text.container:not(.conventional) p + h4 {
-  margin-top: calc(var(--baseline) * 5rem);
-  margin-bottom: calc(var(--baseline) * 3rem);
+  .chunkOutput body.readability #content .ui.container p.image,
+  .chunkOutput .ui.text.container:not(.conventional) p.image {
+    text-align: center;
+  }
+
+  .chunkOutput body.readability #content .ui.container p.image > img,
+  .chunkOutput .ui.text.container:not(.conventional) p.image > img {
+    max-width: calc(100% + 2rem * 4);
+    margin-left: -4rem;
+    margin-right: -4rem;
+  }
+
+  .chunkOutput body.readability #content .ui.container > blockquote,
+  .chunkOutput .ui.text.container:not(.conventional) > blockquote {
+    margin: calc(var(--baseline) * 5rem) -2rem;
+    padding-left: calc(2rem - 5px);
+    padding-right: 2rem;
+  }
+
+  .chunkOutput body.readability #content .ui.container > blockquote.message,
+  .chunkOutput .ui.text.container:not(.conventional) > blockquote.message {
+    margin: calc(var(--baseline) * 5rem) -4rem;
+    padding: calc(var(--baseline) * 3rem) 4rem calc(var(--baseline) * 3rem) calc(4rem - 5px);
+  }
+
+  .chunkOutput body.readability #content .ui.container > div > pre,
+  .chunkOutput .ui.text.container:not(.conventional) > div > pre {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    padding: 2rem;
+  }
+
+  .chunkOutput body.readability #content .ui.container > p > code,
+  .chunkOutput .ui.text.container:not(.conventional) > p > code {
+    padding: 0.5rem 0.8rem;
+  }
+
+  .chunkOutput body.readability #content .ui.container pre,
+  .chunkOutput .ui.text.container:not(.conventional) pre,
+  .chunkOutput body.readability #content .ui.container code,
+  .chunkOutput .ui.text.container:not(.conventional) code {
+    font-size: 1.3rem;
+    line-height: 1.618;
+  }
 }
 
 .chunkOutput .ui.conventional.text.container {
@@ -16403,6 +16482,14 @@
 *******************************/
 
 /*******************************
+         Theme Overrides
+*******************************/
+
+.chunkOutput #filter-active .ui.labels {
+  margin-bottom: -0.5em;
+}
+
+/*******************************
          Site Overrides
 *******************************/
 
@@ -17512,7 +17599,7 @@
   margin-bottom: calc(var(--baseline) * 2rem);
 }
 
-.chunkOutput ul.ui.list > li:before {
+.chunkOutput ul.ui.list li:before {
   margin-top: 1px;
   font-family: Arial, sans-serif;
   font-size: 1.2em;
@@ -18478,6 +18565,10 @@
   padding-bottom: calc(var(--baseline) * 3rem);
 }
 
+.chunkOutput .ui.vertical.stripe.segment.introduction .subtitle {
+  margin-bottom: 0 !important;
+}
+
 .chunkOutput body.vertical .ui.vertical.stripe.segment {
   padding: calc(var(--baseline) * 5rem) 0;
 }
@@ -18492,6 +18583,10 @@
 @media only screen and (min-width: 768px) {
   .chunkOutput body.vertical .ui.vertical.stripe.segment {
     padding: calc(var(--baseline) * 5rem) 5%;
+  }
+
+  .chunkOutput body.vertical .ui.vertical.stripe.segment:first-child {
+    padding-top: calc(var(--baseline) * 4rem);
   }
 }
 
@@ -21163,12 +21258,25 @@
   overflow: hidden;
 }
 
-.chunkOutput .ui.nested.grid.relaxed.overview .column {
-  margin-bottom: calc(var(--baseline) * 1rem);
+.chunkOutput .ui.overview.grid.relaxed > .column {
+  margin-bottom: calc(var(--baseline) * 2rem);
 }
 
-.chunkOutput .ui.nested.grid[class*="very relaxed"].overview .column {
+.chunkOutput .ui.overview.grid[class*="very relaxed"] > .column {
   margin-bottom: calc(var(--baseline) * 3rem);
+}
+
+.chunkOutput .ui.overview.grid .column.publication figure + .ui.header {
+  margin-top: calc(var(--baseline) * 1rem);
+}
+
+.chunkOutput .ui.overview.grid .column.publication .ui.header + .meta {
+  margin-top: -1em;
+  margin-bottom: 0.5em;
+}
+
+.chunkOutput .ui.overview.grid .column.publication p + a.ui.button {
+  margin-top: 0.5em;
 }
 
 .chunkOutput .ui.wireframe.grid > .column:not(:last-child),
@@ -21237,6 +21345,11 @@
     width: 100% !important;
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+
+  .chunkOutput .ui.stackable[class*="on tablet"].grid > .row {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .chunkOutput .ui.stackable[class*="on tablet"].mobile.reversed.grid {
@@ -24623,6 +24736,23 @@ Floated Menu / Item
 /*******************************
          Theme Overrides
 *******************************/
+
+/*******************************
+         Theme Overrides
+*******************************/
+
+.chunkOutput .ui.message {
+  border-color: currentColor;
+}
+
+.chunkOutput .ui.message a {
+  color: currentColor;
+}
+
+.chunkOutput .ui.message :not(pre) > code[class*="language-"],
+.chunkOutput .ui.message pre[class*="language-"] {
+  background: rgba(0, 0, 0, 0.05);
+}
 
 /*******************************
         Site Overrides
