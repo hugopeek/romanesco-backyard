@@ -4014,7 +4014,8 @@
 
 .chunkOutput body.readability #content .ui.container > blockquote,
 .chunkOutput .ui.text.container:not(.conventional) > blockquote {
-  margin: calc(var(--baseline) * 5rem) 0;
+  margin-top: calc(var(--baseline) * 5rem) !important;
+  margin-bottom: calc(var(--baseline) * 5rem) !important;
 }
 
 .chunkOutput body.readability #content .ui.container > .ui.divider,
@@ -4051,22 +4052,30 @@
 
   .chunkOutput body.readability #content .ui.container p.image > img,
   .chunkOutput .ui.text.container:not(.conventional) p.image > img {
-    max-width: calc(100% + 2rem * 4);
+    max-width: calc(100% + (2rem * 4));
     margin-left: -4rem;
     margin-right: -4rem;
-  }
-
-  .chunkOutput body.readability #content .ui.container > blockquote,
-  .chunkOutput .ui.text.container:not(.conventional) > blockquote {
-    margin: calc(var(--baseline) * 5rem) -2rem;
-    padding-left: calc(2rem - 5px);
-    padding-right: 2rem;
   }
 
   .chunkOutput body.readability #content .ui.container > blockquote.message,
   .chunkOutput .ui.text.container:not(.conventional) > blockquote.message {
     margin: calc(var(--baseline) * 5rem) -4rem;
     padding: calc(var(--baseline) * 3rem) 4rem calc(var(--baseline) * 3rem) calc(4rem - 5px);
+  }
+
+  .chunkOutput body.readability #content .ui.container > table,
+  .chunkOutput .ui.text.container:not(.conventional) > table {
+    width: calc(100% + (2rem * 2));
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+
+  .chunkOutput body.readability #content .ui.container > table th,
+  .chunkOutput .ui.text.container:not(.conventional) > table th,
+  .chunkOutput body.readability #content .ui.container > table td,
+  .chunkOutput .ui.text.container:not(.conventional) > table td {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .chunkOutput body.readability #content .ui.container > div > pre,
