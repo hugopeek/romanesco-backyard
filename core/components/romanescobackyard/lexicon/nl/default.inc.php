@@ -80,6 +80,12 @@ $_lang['romanesco.search.field_placeholder'] = 'Waar ben je naar op zoek?';
 $_lang['romanesco.search.field_button_text'] = 'Zoeken';
 $_lang['romanesco.search.result_button_text'] = 'Ga naar deze pagina';
 
+// Filter
+$_lang['romanesco.filter.active'] = 'Gefilterd op';
+$_lang['romanesco.filter.and'] = 'en';
+$_lang['romanesco.filter.or'] = 'of';
+$_lang['romanesco.filter.reset'] = 'Herstel';
+
 // Footer
 $_lang['romanesco.footer.qredits_title'] = 'Een Romanesco project';
 $_lang['romanesco.footer.qredits_text'] = '<p><strong>Een Romanesco project</strong><br>Pragmatische websites. Begin met de inhoud.</p>';
