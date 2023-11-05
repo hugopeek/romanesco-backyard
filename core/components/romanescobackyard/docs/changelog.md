@@ -3,6 +3,7 @@
 ## Backyard 1.0.0-beta17
 Released on November 3, 2023
 
+- Use separate setting for critical CSS path
 - Add lexicon keys for overview filters
 
 ## Backyard 1.0.0-beta16

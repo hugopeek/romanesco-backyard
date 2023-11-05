@@ -293,7 +293,7 @@ class Romanesco
         $cmd = [
             'gulp', 'critical',
             '--src', $settings['url'],
-            '--dest', $this->modx->getOption('base_path') . $settings['cssPath'] . '/critical/' . rtrim($settings['uri'],'/') . '.css',
+            '--dest', $this->modx->getOption('base_path') . rtrim($settings['criticalPath'],'/') . '/' . rtrim($settings['uri'],'/') . '.css',
             '--cssPaths', rtrim($settings['distPath'],'/') . '/semantic.css',
             '--cssPaths', rtrim($settings['cssPath'],'/') . '/site.css',
             '--user', escapeshellcmd($this->modx->getOption('romanesco.htpasswd_user')) ?: 'undefined',
