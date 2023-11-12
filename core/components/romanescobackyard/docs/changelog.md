@@ -1,8 +1,9 @@
 # Changelog for Romanesco Backyard
 
 ## Backyard 1.0.0-beta17
-Released on November 3, 2023
+Released on ...
 
+- Include CSS of individual components when assessing critical CSS
 - Use separate setting for critical CSS path
 - Add lexicon keys for overview filters
 
