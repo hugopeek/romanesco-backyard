@@ -89,7 +89,7 @@ $_lang['romanesco.filter.reset'] = 'Herstel';
 // Footer
 $_lang['romanesco.footer.qredits_title'] = 'Een Romanesco project';
 $_lang['romanesco.footer.qredits_text'] = '<p><strong>Een Romanesco project</strong><br>Pragmatische websites. Begin met de inhoud.</p>';
-$_lang['romanesco.footer.qredits_romanesco'] = 'romanesco.info';
+$_lang['romanesco.footer.qredits_link'] = 'https://romanesco.info';
 $_lang['romanesco.footer.qredits_modx'] = 'Gemaakt met MODX';
 
 

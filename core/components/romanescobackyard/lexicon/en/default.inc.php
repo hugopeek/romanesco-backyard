@@ -94,8 +94,9 @@ $_lang['romanesco.filter.reset'] = 'Reset';
 // Footer
 $_lang['romanesco.footer.qredits_title'] = 'A Romanesco project';
 $_lang['romanesco.footer.qredits_text'] = '<p><strong>A Romanesco project</strong><br>Build pragmatic websites, starting with content.</p>';
-$_lang['romanesco.footer.qredits_romanesco'] = 'romanesco.info';
+$_lang['romanesco.footer.qredits_link'] = 'https://romanesco.info';
 $_lang['romanesco.footer.qredits_modx'] = 'Powered by MODX';
+$_lang['romanesco.footer.qredits_img_alt'] = 'Logo Romanesco';
 
 
 // Project hub
