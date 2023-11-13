@@ -1,7 +1,7 @@
 # Changelog for Romanesco Backyard
 
 ## Backyard 1.0.0-beta17
-Released on ...
+Released on November 13, 2023
 
 - Modify lexicon strings of Qredits component
 - Include CSS of individual components when assessing critical CSS
