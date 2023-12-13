@@ -98,6 +98,8 @@ $_lang['romanesco.footer.qredits_link'] = 'https://romanesco.info';
 $_lang['romanesco.footer.qredits_modx'] = 'Powered by MODX';
 $_lang['romanesco.footer.qredits_img_alt'] = 'Logo Romanesco';
 
+// Consent
+$_lang['romanesco.consent.video_embed'] = 'You need to give <a onclick="klaro.show();return false;">consent</a> in order to view content from [[+service]].';
 
 // Project hub
 // ---------------------------------------------------------------------
@@ -163,6 +165,7 @@ $_lang['romanesco.patterns.status_experimental_color'] = 'pink';
 $_lang['romanesco.patterns.status_review_color'] = 'blue';
 $_lang['romanesco.patterns.status_deprecated_color'] = 'grey';
 $_lang['romanesco.patterns.status_unknown_color'] = 'black';
+
 
 // Feedback widget
 // ---------------------------------------------------------------------

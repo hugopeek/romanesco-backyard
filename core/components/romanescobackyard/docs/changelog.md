@@ -1,5 +1,10 @@
 # Changelog for Romanesco Backyard
 
+## Backyard 1.0.0-beta18
+Released on ...
+
+- Add lexicon strings for video embed consent messages
+
 ## Backyard 1.0.0-beta17
 Released on November 13, 2023
 

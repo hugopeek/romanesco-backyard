@@ -92,6 +92,9 @@ $_lang['romanesco.footer.qredits_text'] = '<p><strong>Een Romanesco project</str
 $_lang['romanesco.footer.qredits_link'] = 'https://romanesco.info';
 $_lang['romanesco.footer.qredits_modx'] = 'Gemaakt met MODX';
 
+// Consent
+$_lang['romanesco.consent.video_embed'] = 'Je dient <a onclick="klaro.show();return false;">toestemming</a> te geven om [[+service]] video\'s te kunnen bekijken.';
+
 
 // Project hub
 // ---------------------------------------------------------------------
