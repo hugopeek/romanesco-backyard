@@ -43,6 +43,17 @@ var imageRendererTeam = function(value, metaData, record, rowIndex, colIndex, st
     }
 }
 
+var tvRendererList = function(value, metaData, record, rowIndex, colIndex, store) {
+    if (value != '' && value != null) {
+        const array = value.split('||');
+        let output = '';
+        for (let element of array) {
+            output += '<li>' + element.charAt(0).toUpperCase() + element.slice(1) + '</li>';
+        }
+        return '<ul>' + output + '</ul>';
+    }
+}
+
 // Default boolean renderer doesn't always process 0 values correctly
 var booleanRenderer = function(value, metaData, record, rowIndex, colIndex, store) {
     var iconclass = (value != 0) ? 'icon-check' : 'icon-times';
