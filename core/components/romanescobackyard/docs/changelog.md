@@ -3,6 +3,7 @@
 ## Backyard 1.0.0-beta18
 Released on ...
 
+- Add scrollbar to tall resource lists in Collection views
 - Add lexicon strings for video embed consent messages
 
 ## Backyard 1.0.0-beta17
