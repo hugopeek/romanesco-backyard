@@ -1,7 +1,7 @@
 # Changelog for Romanesco Backyard
 
 ## Backyard 1.0.0-beta18
-Released on ...
+Released on December 20, 2023
 
 - Add Collections renderer for displaying TV values as list
 - Add scrollbar to tall resource lists in Collection views
