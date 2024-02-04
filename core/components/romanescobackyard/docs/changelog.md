@@ -1,5 +1,11 @@
 # Changelog for Romanesco Backyard
 
+## Backyard 1.0.0-beta19
+Released on ...
+
+- Style HTML headings in MIGX grid row actions
+- Tweak select dropdowns that contain a description
+
 ## Backyard 1.0.0-beta18
 Released on December 20, 2023
 
