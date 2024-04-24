@@ -61,6 +61,10 @@ $_lang['formblocks.validation.required_text_date_end'] = 'Please select an <stro
 $_lang['formblocks.validation.required_text_math'] = 'You need to beat the spam bots at math!';
 $_lang['formblocks.validation.required_text_terms'] = 'You need to accept the <strong>terms and conditions</strong> to continue.';
 
+// Backend validation
+$_lang['formblocks.validation.file_too_big'] = 'File is too big. The maximum allowed file size is [[+max_file_size]] MB.';
+$_lang['formblocks.validation.file_not_allowed'] = 'File type .[[+ext]] is not allowed.';
+
 // Registration
 $_lang['formblocks.registration.email_subject'] = 'Confirm your registration';
 $_lang['formblocks.registration.email_content'] = '

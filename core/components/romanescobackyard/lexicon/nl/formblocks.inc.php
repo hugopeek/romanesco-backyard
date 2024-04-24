@@ -53,6 +53,9 @@ $_lang['formblocks.validation.required_text_date_end'] = 'Selecteer een <strong>
 $_lang['formblocks.validation.required_text_math'] = 'Maak je het rekensommetje nog even af?';
 $_lang['formblocks.validation.required_text_terms'] = 'Je dient akkoord te gaan met de <strong>voorwaarden</strong>.';
 
+// Backend validation
+$_lang['formblocks.validation.file_too_big'] = 'Bestand is te groot. De maximum toegestane grootte is [[+max_file_size]] MB.';
+$_lang['formblocks.validation.file_not_allowed'] = 'Bestanden met .[[+ext]] extensie zijn niet toegestaan.';
 
 // Registration
 $_lang['formblocks.registration.email_subject'] = 'Bevestig je registratie';

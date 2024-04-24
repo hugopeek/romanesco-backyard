@@ -3,6 +3,7 @@
 ## Backyard 1.0.0-beta19
 Released on ...
 
+- Add lexicon strings for backend form validation
 - Style HTML headings in MIGX grid row actions
 - Tweak select dropdowns that contain a description
 
