@@ -1,5 +1,5 @@
 /*
- * # Fomantic UI - 2.9.3
+ * # Fomantic UI - 2.9.4-beta.60+c48cd9d
  * https://github.com/fomantic/Fomantic-UI
  * https://fomantic-ui.com/
  *
@@ -10,7 +10,7 @@
  */
 
 /*!
- * # Fomantic-UI 2.9.3 - Reset
+ * # Fomantic-UI 2.9.4-beta.60+c48cd9d - Reset
  * https://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -467,7 +467,7 @@
 *******************************/
 
 /*!
- * # Fomantic-UI 2.9.3 - Site
+ * # Fomantic-UI 2.9.4-beta.60+c48cd9d - Site
  * https://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -618,10 +618,12 @@
   background: rgba(128, 135, 139, 0.8);
 }
 
-.chunkOutput body .ui {
-  /* firefox: first color thumb, second track */
-  scrollbar-color: rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.1);
-  scrollbar-width: thin;
+@supports (-moz-appearance: none) {
+  body .ui {
+    /* firefox: first color thumb, second track */
+    scrollbar-color: rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.1);
+    scrollbar-width: thin;
+  }
 }
 
 /* Inverted UI */
@@ -642,9 +644,11 @@
   background: rgba(255, 255, 255, 0.35);
 }
 
-.chunkOutput body .ui.inverted:not(.dimmer) {
-  /* firefox: first color thumb, second track */
-  scrollbar-color: rgba(255, 255, 255, 0.25) rgba(255, 255, 255, 0.1);
+@supports (-moz-appearance: none) {
+  body .ui.inverted:not(.dimmer) {
+    /* firefox: first color thumb, second track */
+    scrollbar-color: rgba(255, 255, 255, 0.25) rgba(255, 255, 255, 0.1);
+  }
 }
 
 /*******************************
@@ -1472,7 +1476,7 @@
 }
 
 /*!
- * # Fomantic-UI 2.9.3 - Button
+ * # Fomantic-UI 2.9.4-beta.60+c48cd9d - Button
  * https://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -2241,7 +2245,7 @@
   border-top: 1px solid rgba(34, 36, 38, 0.15);
 }
 
-.chunkOutput .ui.basic.vertical.buttons:not(.spaced) .button:first-child {
+.chunkOutput .ui.basic.vertical.buttons:not(.spaced):not(.circular) .button:first-child {
   border-top: none;
 }
 
@@ -2395,13 +2399,36 @@
         Circular
     --------------- */
 
-.chunkOutput .ui.circular.button {
+.chunkOutput .ui.ui.circular.buttons .button,
+.chunkOutput .ui.ui.ui.ui.circular.button {
   border-radius: 10em;
+  min-width: 2.5em;
 }
 
+.chunkOutput .ui.circular.buttons .button > .icon,
 .chunkOutput .ui.circular.button > .icon {
   width: 1em;
   vertical-align: baseline;
+}
+
+.chunkOutput .ui.circular.buttons:not(.vertical):not(.spaced) .button {
+  margin-right: 0.25em;
+}
+
+.chunkOutput .ui.vertical.circular.buttons .button {
+  margin-bottom: 0.25em;
+}
+
+.chunkOutput .ui.circular.basic.buttons {
+  border: none;
+}
+
+.chunkOutput .ui.circular.basic.buttons .button {
+  border: 1px solid rgba(34, 36, 38, 0.15);
+}
+
+.chunkOutput .ui.circular.basic.buttons .button.basic {
+  border: none;
 }
 
 /* -------------------
@@ -3539,7 +3566,7 @@
 *******************************/
 
 /*!
- * # Fomantic-UI 2.9.3 - Container
+ * # Fomantic-UI 2.9.4-beta.60+c48cd9d - Container
  * https://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -3910,6 +3937,11 @@
   }
 }
 
+.chunkOutput #menu > .ui.fluid.container {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
 .chunkOutput body.readability #content .ui.container > * + h1,
 .chunkOutput .ui.text.container:not(.conventional) > * + h1,
 .chunkOutput body.readability #content .ui.container > * + h2,
@@ -4051,7 +4083,7 @@
 *******************************/
 
 /*!
- * # Fomantic-UI 2.9.3 - Divider
+ * # Fomantic-UI 2.9.4-beta.60+c48cd9d - Divider
  * https://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -4394,7 +4426,7 @@
 *******************************/
 
 /*!
- * # Fomantic-UI 2.9.3 - Header
+ * # Fomantic-UI 2.9.4-beta.60+c48cd9d - Header
  * https://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -4983,6 +5015,10 @@
   border-radius: 0 0 0.28571429rem 0.28571429rem;
 }
 
+.chunkOutput .ui.seamless.attached:not(.bottom).header {
+  border-bottom: none;
+}
+
 /* Attached Sizes */
 
 .chunkOutput .ui.attached.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
@@ -5161,7 +5197,7 @@
   margin-right: 0 !important;
 }
 
-.chunkOutput .ui.icon.header.inverted > .icon {
+.chunkOutput .ui.icon.header.inverted > .circular.icon {
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1) inset;
 }
 
@@ -5253,7 +5289,7 @@
 *******************************/
 
 /*!
- * # Fomantic-UI 2.9.3 - Icon
+ * # Fomantic-UI 2.9.4-beta.60+c48cd9d - Icon
  * https://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -5493,6 +5529,44 @@
 .chunkOutput i.massive.massive.massive.icons {
   font-size: 8em;
   vertical-align: middle;
+}
+
+/* Deprecated *In/Out Naming Conflict) */
+
+.chunkOutput i.icon.linkedin-in::before {
+  content: "\f0e1";
+}
+
+.chunkOutput i.icon.zoom-in::before {
+  content: "\f00e";
+}
+
+.chunkOutput i.icon.zoom-out::before {
+  content: "\f010";
+}
+
+.chunkOutput i.icon.sign-in::before {
+  content: "\f2f6";
+}
+
+.chunkOutput i.icon.in-cart::before {
+  content: "\f218";
+}
+
+.chunkOutput i.icon.log-out::before {
+  content: "\f2f5";
+}
+
+.chunkOutput i.icon.sign-out::before {
+  content: "\f2f5";
+}
+
+.chunkOutput i.icon.sign-in.alternate::before {
+  content: "\f2f6";
+}
+
+.chunkOutput i.icon.sign-out.alternate::before {
+  content: "\f2f5";
 }
 
 /*******************************
@@ -11266,7 +11340,7 @@
 *******************************/
 
 /*!
- * # Fomantic-UI 2.9.3 - Image
+ * # Fomantic-UI 2.9.4-beta.60+c48cd9d - Image
  * https://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -11612,7 +11686,25 @@
 }
 
 .chunkOutput .ui.image.lightbox {
+  position: initial;
+  overflow: hidden;
+}
+
+.chunkOutput .ui.image.lightbox:not(.card) > figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.chunkOutput .ui.image.lightbox img {
   cursor: pointer;
+  transition: all 0.2s;
+}
+
+.chunkOutput .ui.image.lightbox:hover img,
+.chunkOutput .ui.image.lightbox:focus img {
+  transform: scale(1.2);
 }
 
 .chunkOutput .ui.image.video {
@@ -11622,11 +11714,10 @@
 .chunkOutput .ui.image .caption,
 .chunkOutput .ui.image figcaption,
 .chunkOutput .ui.image + figcaption {
-  margin-top: calc(var(--baseline) * 1rem);
+  margin-top: 0;
 }
 
 .chunkOutput .ui.image .credits {
-  float: right;
   font-style: normal;
 }
 
@@ -11658,7 +11749,7 @@
 *******************************/
 
 /*!
- * # Fomantic-UI 2.9.3 - Input
+ * # Fomantic-UI 2.9.4-beta.60+c48cd9d - Input
  * https://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -11686,7 +11777,7 @@
 .chunkOutput .ui.input > input {
   margin: 0;
   max-width: 100%;
-  flex: 1 0 auto;
+  flex: 1 1 auto;
   outline: none;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   text-align: left;
@@ -12082,7 +12173,11 @@
 .chunkOutput .ui.form .field.error > .ui.action.input:not([class*="left action"]) > input + .ui.button,
 .chunkOutput .ui.form .field.error > .ui.right.labeled.input:not([class*="corner labeled"]) > input + .ui.label,
 .chunkOutput .ui.action.input.error:not([class*="left action"]) > input + .ui.button,
-.chunkOutput .ui.right.labeled.input.error:not([class*="corner labeled"]) > input + .ui.label {
+.chunkOutput .ui.right.labeled.input.error:not([class*="corner labeled"]) > input + .ui.label,
+.chunkOutput .ui.form .field.error > .ui.action.input:not([class*="left action"]) > textarea + .ui.button,
+.chunkOutput .ui.form .field.error > .ui.right.labeled.input:not([class*="corner labeled"]) > textarea + .ui.label,
+.chunkOutput .ui.action.input.error:not([class*="left action"]) > textarea + .ui.button,
+.chunkOutput .ui.right.labeled.input.error:not([class*="corner labeled"]) > textarea + .ui.label {
   border-right: 1px solid #E0B4B4;
 }
 
@@ -12109,7 +12204,11 @@
 .chunkOutput .ui.form .field.success > .ui.action.input:not([class*="left action"]) > input + .ui.button,
 .chunkOutput .ui.form .field.success > .ui.right.labeled.input:not([class*="corner labeled"]) > input + .ui.label,
 .chunkOutput .ui.action.input.success:not([class*="left action"]) > input + .ui.button,
-.chunkOutput .ui.right.labeled.input.success:not([class*="corner labeled"]) > input + .ui.label {
+.chunkOutput .ui.right.labeled.input.success:not([class*="corner labeled"]) > input + .ui.label,
+.chunkOutput .ui.form .field.success > .ui.action.input:not([class*="left action"]) > textarea + .ui.button,
+.chunkOutput .ui.form .field.success > .ui.right.labeled.input:not([class*="corner labeled"]) > textarea + .ui.label,
+.chunkOutput .ui.action.input.success:not([class*="left action"]) > textarea + .ui.button,
+.chunkOutput .ui.right.labeled.input.success:not([class*="corner labeled"]) > textarea + .ui.label {
   border-right: 1px solid #A3C293;
 }
 
@@ -12378,7 +12477,7 @@
 *******************************/
 
 /*!
- * # Fomantic-UI 2.9.3 - Label
+ * # Fomantic-UI 2.9.4-beta.60+c48cd9d - Label
  * https://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -13651,7 +13750,7 @@
 *******************************/
 
 /*!
- * # Fomantic-UI 2.9.3 - List
+ * # Fomantic-UI 2.9.4-beta.60+c48cd9d - List
  * https://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -14751,8 +14850,8 @@
          Theme Overrides
 *******************************/
 
-.chunkOutput .ui.list:not(.overview):not(ul ul),
-.chunkOutput .ui.list:not(.overview):not(ol ol) {
+.chunkOutput #content .ui.list:not(.overview):not(ul ul),
+.chunkOutput #content .ui.list:not(.overview):not(ol ol) {
   margin-top: calc(var(--baseline) * 2rem);
 }
 
@@ -14798,7 +14897,7 @@
 *******************************/
 
 /*!
- * # Fomantic-UI 2.9.3 - Segment
+ * # Fomantic-UI 2.9.4-beta.60+c48cd9d - Segment
  * https://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -15768,6 +15867,15 @@
   z-index: 0;
 }
 
+.chunkOutput .ui.background.segment > .credits {
+  z-index: -1;
+  position: absolute;
+  right: 0.8em;
+  bottom: 0.3em;
+  opacity: 0.3;
+  font-size: 0.8em;
+}
+
 .chunkOutput #hero.ui.segment {
   border-top: none;
 }
@@ -15989,7 +16097,7 @@
 *******************************/
 
 /*!
- * # Fomantic-UI 2.9.3 - Text
+ * # Fomantic-UI 2.9.4-beta.60+c48cd9d - Text
  * https://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -16085,7 +16193,7 @@
 *******************************/
 
 /*!
- * # Fomantic-UI 2.9.3 - Breadcrumb
+ * # Fomantic-UI 2.9.4-beta.60+c48cd9d - Breadcrumb
  * https://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -16231,7 +16339,7 @@
 *******************************/
 
 /*!
- * # Fomantic-UI 2.9.3 - Grid
+ * # Fomantic-UI 2.9.4-beta.60+c48cd9d - Grid
  * https://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -18127,10 +18235,10 @@
     border-top: none !important;
   }
 
-  .chunkOutput .ui.inverted.stackable.celled.grid > .column:not(.row),
-  .chunkOutput .ui.inverted.stackable.divided.grid > .column:not(.row),
-  .chunkOutput .ui.inverted.stackable.celled.grid > .row > .column,
-  .chunkOutput .ui.inverted.stackable.divided.grid > .row > .column {
+  .chunkOutput .ui.ui.inverted.stackable.celled.grid > .column:not(.row),
+  .chunkOutput .ui.ui.inverted.stackable.divided.grid > .column:not(.row),
+  .chunkOutput .ui.ui.inverted.stackable.celled.grid > .row > .column,
+  .chunkOutput .ui.ui.inverted.stackable.divided.grid > .row > .column {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
 
@@ -18419,13 +18527,13 @@
   margin-top: calc(var(--baseline) * 2rem);
 }
 
-.chunkOutput * + .ui.nested.grid.expanded,
-.chunkOutput .ui.nested.grid.expanded + * {
+.chunkOutput * + .ui.nested.grid.spaced,
+.chunkOutput .ui.nested.grid.spaced + * {
   margin-top: calc(var(--baseline) * 3rem);
 }
 
-.chunkOutput * + .ui.nested.grid[class*="very expanded"],
-.chunkOutput .ui.nested.grid[class*="very expanded"] + * {
+.chunkOutput * + .ui.nested.grid[class*="very spaced"],
+.chunkOutput .ui.nested.grid[class*="very spaced"] + * {
   margin-top: calc(var(--baseline) * 5rem);
 }
 
@@ -18629,7 +18737,7 @@
 }
 
 /*!
- * # Fomantic-UI 2.9.3 - Menu
+ * # Fomantic-UI 2.9.4-beta.60+c48cd9d - Menu
  * https://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -21427,7 +21535,7 @@ Floated Menu / Item
 }
 
 /*!
- * # Fomantic-UI 2.9.3 - Message
+ * # Fomantic-UI 2.9.4-beta.60+c48cd9d - Message
  * https://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -21631,6 +21739,7 @@ Floated Menu / Item
 
 .chunkOutput .ui.compact.message {
   display: inline-block;
+  max-width: 100%;
 }
 
 .chunkOutput .ui.compact.icon.message {
@@ -21970,7 +22079,7 @@ Floated Menu / Item
 *******************************/
 
 /*!
- * # Fomantic-UI 2.9.3 - Card
+ * # Fomantic-UI 2.9.4-beta.60+c48cd9d - Card
  * https://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -23304,6 +23413,18 @@ Floated Menu / Item
   color: rgba(255, 255, 255, 0.9);
 }
 
+.chunkOutput .ui.lightbox.card {
+  position: relative;
+  cursor: pointer;
+}
+
+.chunkOutput .ui.lightbox.card > .content {
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+  background: #FFFFFF;
+}
+
 .chunkOutput .ui.horizontal.cards .card > .content,
 .chunkOutput .ui.card.horizontal > .content {
   border-top: none;
@@ -23332,7 +23453,7 @@ Floated Menu / Item
 *******************************/
 
 /*!
- * # Fomantic-UI 2.9.3 - Item
+ * # Fomantic-UI 2.9.4-beta.60+c48cd9d - Item
  * https://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -23950,7 +24071,7 @@ Floated Menu / Item
 *******************************/
 
 /*!
- * # Fomantic-UI 2.9.3 - Statistic
+ * # Fomantic-UI 2.9.4-beta.60+c48cd9d - Statistic
  * https://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -24473,7 +24594,7 @@ Floated Menu / Item
 *******************************/
 
 /*!
- * # Fomantic-UI 2.9.3 - Accordion
+ * # Fomantic-UI 2.9.4-beta.60+c48cd9d - Accordion
  * https://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -24929,7 +25050,7 @@ Floated Menu / Item
 *******************************/
 
 /*!
- * # Fomantic-UI 2.9.3 - Sidebar
+ * # Fomantic-UI 2.9.4-beta.60+c48cd9d - Sidebar
  * https://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -25397,7 +25518,7 @@ Floated Menu / Item
 *******************************/
 
 /*!
- * # Fomantic-UI 2.9.3 - Sticky
+ * # Fomantic-UI 2.9.4-beta.60+c48cd9d - Sticky
  * https://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -25467,7 +25588,7 @@ Floated Menu / Item
 *******************************/
 
 /*!
- * # Fomantic-UI 2.9.3 - Transition
+ * # Fomantic-UI 2.9.4-beta.60+c48cd9d - Transition
  * https://github.com/fomantic/Fomantic-UI/
  *
  *
