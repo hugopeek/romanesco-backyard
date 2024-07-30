@@ -1,5 +1,10 @@
 # Changelog for Romanesco Backyard
 
+## Backyard 1.0.0-beta20
+Released on ...
+
+- Remove NPM gulp-clean dependency (use del module instead)
+
 ## Backyard 1.0.0-beta19
 Released on April 25, 2024
 

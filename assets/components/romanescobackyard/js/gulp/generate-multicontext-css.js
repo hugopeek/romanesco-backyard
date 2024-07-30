@@ -4,6 +4,7 @@
 
 const
     gulp = require('gulp'),
+    del = require('del'),
 
     // load yargs for reading command line arguments
     argv = require('yargs')
@@ -75,11 +76,14 @@ gulp.task('build-context', function (done) {
         switchDone();
     })
     gulp.task('revert-switch', function (revertDone) {
-        const clean = require('gulp-clean');
         gulp.src(basePathSemantic + 'src/tmp/theme.config').pipe(gulp.dest(basePathSemantic + 'src/'));
-        gulp.src(basePathSemantic + 'src/tmp', {read: false}).pipe(clean({force: true}));
         revertDone();
     })
+
+    // Task for clearing temp folder
+    gulp.task('clean-tmp', function () {
+        return del(basePathSemantic + 'src/tmp', {'force': true});
+    });
 
     // Exit on error
     if (!context) {
@@ -92,5 +96,10 @@ gulp.task('build-context', function (done) {
     }
 
     // Run in sequence
-    gulp.series('switch-config',tasks.join(','),'revert-switch')(done);
+    gulp.series(
+        'switch-config',
+        tasks.join(','),
+        'revert-switch',
+        'clean-tmp')
+    (done);
 });
