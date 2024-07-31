@@ -306,7 +306,7 @@ class Romanesco
             '--user', escapeshellcmd($this->modx->getOption('romanesco.htpasswd_user')) ?: 'undefined',
             '--pass', escapeshellcmd($this->modx->getOption('romanesco.htpasswd_pass')) ?: 'undefined',
             '--devMode', $this->modx->getOption('romanesco.dev_mode'),
-            '--gulpfile', escapeshellcmd($this->modx->getOption('assets_path')) . 'components/romanescobackyard/js/gulp/generate-critical-css.js'
+            '--gulpfile', escapeshellcmd($this->modx->getOption('assets_path')) . 'components/romanescobackyard/js/gulp/generate-critical-css.mjs'
         ];
 
         // Start Symfony process
