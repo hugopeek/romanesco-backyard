@@ -1,7 +1,7 @@
 # Changelog for Romanesco Backyard
 
 ## Backyard 1.0.0-beta20
-Released on ...
+Released on August 6, 2024
 
 - Run Critical gulp task as ESM module (requires critical > v5)
 - Remove NPM gulp-clean dependency (use del module instead)
