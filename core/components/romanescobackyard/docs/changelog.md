@@ -1,5 +1,10 @@
 # Changelog for Romanesco Backyard
 
+## Backyard 1.0.0-beta21
+Released on ...
+
+- Fix floated icons messing up each others positions in MIGX grids
+
 ## Backyard 1.0.0-beta20
 Released on August 6, 2024
 
