@@ -1,7 +1,7 @@
 # Changelog for Romanesco Backyard
 
 ## Backyard 1.0.0-beta21
-Released on ...
+Released on January 3, 2025
 
 - Add menu item for clearing SVG cache
 - Set minimum PHP version to 8.1
