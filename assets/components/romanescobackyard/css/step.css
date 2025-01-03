@@ -1,5 +1,5 @@
 /*!
- * # Fomantic-UI 2.9.4-beta.60+c48cd9d - Step
+ * # Fomantic-UI 2.9.4-beta.94+1ecfaf3 - Step
  * https://github.com/fomantic/Fomantic-UI/
  *
  *
@@ -12,7 +12,7 @@
             Plural
 *******************************/
 
-.chunkOutput .ui.steps {
+.chunkOutput .ui.steps:not(.circular) {
   display: inline-flex;
   flex-direction: row;
   align-items: stretch;
@@ -44,7 +44,7 @@
            Singular
 *******************************/
 
-.chunkOutput .ui.steps .step {
+.chunkOutput .ui.steps:not(.circular) .step {
   position: relative;
   display: flex;
   flex: 1 0 auto;
@@ -65,7 +65,7 @@
 
 /* Arrow */
 
-.chunkOutput .ui.steps .step::after {
+.chunkOutput .ui.steps:not(.circular) .step::after {
   display: none;
   position: absolute;
   z-index: 2;
@@ -84,14 +84,14 @@
 
 /* First Step */
 
-.chunkOutput .ui.steps .step:first-child {
+.chunkOutput .ui.steps:not(.circular) .step:first-child {
   padding-left: 2em;
   border-radius: 0.28571429rem 0 0 0.28571429rem;
 }
 
 /* Last Step */
 
-.chunkOutput .ui.steps .step:last-child {
+.chunkOutput .ui.steps:not(.circular) .step:last-child {
   border-radius: 0 0.28571429rem 0.28571429rem 0;
   border-right: none;
   margin-right: 0;
@@ -99,7 +99,7 @@
 
 /* Only Step */
 
-.chunkOutput .ui.steps .step:only-child {
+.chunkOutput .ui.steps:not(.circular) .step:only-child {
   border-radius: 0.28571429rem;
 }
 
@@ -113,6 +113,7 @@
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1.14285714em;
   font-weight: bold;
+  line-height: 1.14285714em;
 }
 
 .chunkOutput .ui.steps .step > .title {
@@ -125,6 +126,7 @@
   font-weight: normal;
   font-size: 0.92857143em;
   color: rgba(0, 0, 0, 0.87);
+  line-height: 1.14285714em;
 }
 
 .chunkOutput .ui.steps .step > .description {
@@ -167,6 +169,143 @@
             Types
 *******************************/
 
+.chunkOutput .ui.circular.steps {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.chunkOutput .ui.circular.steps:not(.vertical) {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  position: relative;
+  display: flex;
+  padding: 1em 0;
+  margin: 1em 0;
+}
+
+.chunkOutput .ui.circular.steps:not(.vertical) .step {
+  background: rgba(34, 36, 38, 0.15);
+  cursor: default;
+  height: 2px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex: 1;
+  position: relative;
+  margin-left: 2.2em;
+}
+
+.chunkOutput .ui.circular.steps:not(.vertical) .step::before {
+  left: -2.2em;
+}
+
+.chunkOutput .ui.circular.steps:not(.vertical) .step::after {
+  left: calc((-2.2em + 0.95em) - 0.3em);
+}
+
+.chunkOutput .ui.circular.steps:not(.vertical) .step.link::before,
+.chunkOutput .ui.circular.steps:not(.vertical) .step.link::after {
+  cursor: pointer;
+}
+
+.chunkOutput .ui.circular.steps:not(.vertical) .step.completed {
+  background: #21BA45;
+}
+
+.chunkOutput .ui.circular.steps:not(.vertical) .step.completed::after {
+  left: calc(-2.2em + ((2.2em / 2) / 2) + (2px / 2));
+}
+
+.chunkOutput .ui.circular.steps:not(.vertical) .step:last-child {
+  flex: 0;
+}
+
+.chunkOutput .ui.circular.steps:not(.vertical) .step .content {
+  margin-top: -1.5em;
+  padding: 0 0.5em;
+}
+
+.chunkOutput .ui.circular.steps:not(.vertical) .step .content.center.aligned {
+  margin-top: -0.65em;
+}
+
+.chunkOutput .ui.circular.steps:not(.vertical) .step .content.center.aligned .title {
+  padding: 0 0.5em;
+  margin-left: -0.5em;
+  background: #FFFFFF;
+}
+
+.chunkOutput .ui.circular.steps:not(.vertical) .step .content.bottom.aligned {
+  margin-top: 0.5em;
+}
+
+.chunkOutput .ui.circular.steps:not(.vertical) .step .content:not(.aligned) .title + .description {
+  margin-top: 0.5em;
+}
+
+.chunkOutput .ui.circular.steps .step {
+  color: inherit;
+}
+
+.chunkOutput .ui.circular.steps .step::before {
+  content: "";
+  border-radius: 50%;
+  border: 2px solid rgba(34, 36, 38, 0.15);
+  height: 2.2em;
+  width: 2.2em;
+  line-height: 2.2em;
+  position: absolute;
+}
+
+.chunkOutput .ui.circular.steps .step::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(34, 36, 38, 0.15);
+  height: 0.95em;
+  width: 0.95em;
+}
+
+.chunkOutput .ui.circular.steps .step.active::before {
+  border-color: #21BA45;
+}
+
+.chunkOutput .ui.circular.steps .step.active::after {
+  background: #21BA45;
+}
+
+.chunkOutput .ui.circular.steps .step.active .title {
+  color: #21BA45;
+}
+
+.chunkOutput .ui.circular.steps .step.completed::before {
+  background: #21BA45;
+  border-color: #21BA45;
+}
+
+.chunkOutput .ui.circular.steps .step.completed::after {
+  background: transparent;
+  content: "\e800";
+  font-family: Step;
+  color: #FFFFFF;
+  height: auto;
+  line-height: 1em;
+}
+
+@supports selector(:has(.f)) {
+  .ui.circular.steps:not(.vertical) .step:last-child:has(.content) {
+    flex: 1;
+  }
+
+  .ui.circular.steps:not(.vertical) .step:last-child:has(.center.aligned.content) {
+    background: none;
+  }
+}
+
 /* --------------
          Ordered
     --------------- */
@@ -176,16 +315,35 @@
 }
 
 .chunkOutput .ui.ordered.steps .step::before {
-  display: block;
-  position: static;
   text-align: center;
   content: counter(ordered);
   align-self: center;
-  margin-right: 1rem;
-  font-size: 2.5em;
   counter-increment: ordered;
   font-family: inherit;
   font-weight: bold;
+}
+
+.chunkOutput .ui.ordered.steps:not(.circular) .step::before {
+  display: block;
+  position: static;
+  font-size: 2.5em;
+  margin-right: 1rem;
+}
+
+.chunkOutput .ui.circular.ordered.steps .step::before {
+  line-height: calc(2.2em - 2px);
+}
+
+.chunkOutput .ui.circular.ordered.steps .step.completed::before {
+  content: "";
+}
+
+.chunkOutput .ui.circular.ordered.steps .step::after {
+  background: transparent;
+}
+
+.chunkOutput .ui.circular.ordered.steps .step.active::before {
+  color: #21BA45;
 }
 
 .chunkOutput .ui.ordered.steps .step > * {
@@ -197,13 +355,13 @@
         Vertical
     --------------- */
 
-.chunkOutput .ui.vertical.steps {
+.chunkOutput .ui.vertical.steps:not(.circular) {
   display: inline-flex;
   flex-direction: column;
   overflow: visible;
 }
 
-.chunkOutput .ui.vertical.steps .step {
+.chunkOutput .ui.vertical.steps:not(.circular) .step {
   justify-content: flex-start;
   border-radius: 0;
   padding: 1.14285714em 2em;
@@ -211,46 +369,99 @@
   border-bottom: 1px solid rgba(34, 36, 38, 0.15);
 }
 
-.chunkOutput .ui.vertical.steps .step:first-child {
+.chunkOutput .ui.vertical.steps:not(.circular) .step:first-child {
   padding: 1.14285714em 2em;
   border-radius: 0.28571429rem 0.28571429rem 0 0;
 }
 
-.chunkOutput .ui.vertical.steps .step:last-child {
+.chunkOutput .ui.vertical.steps:not(.circular) .step:last-child {
   border-bottom: none;
   border-radius: 0 0 0.28571429rem 0.28571429rem;
 }
 
-.chunkOutput .ui.vertical.steps .step:only-child {
+.chunkOutput .ui.vertical.steps:not(.circular) .step:only-child {
   border-radius: 0.28571429rem;
 }
 
 /* Arrow */
 
-.chunkOutput .ui.vertical.steps .step::after {
+.chunkOutput .ui.vertical.steps:not(.circular) .step::after {
   top: 50%;
   right: 0;
   border-width: 0 1px 1px 0;
   display: none;
 }
 
-.chunkOutput .ui.right.vertical.steps .step::after {
+.chunkOutput .ui.right.vertical.steps:not(.circular) .step::after {
   border-width: 1px 0 0 1px;
   left: 0;
   right: 100%;
   transform: translateY(-50%) translateX(-50%) rotate(-45deg);
 }
 
-.chunkOutput .ui.vertical.steps .active.step::after {
+.chunkOutput .ui.vertical.steps:not(.circular) .active.step::after {
   display: block;
 }
 
-.chunkOutput .ui.vertical.steps .step:last-child::after {
+.chunkOutput .ui.vertical.steps:not(.circular) .step:last-child::after {
   display: none;
 }
 
-.chunkOutput .ui.vertical.steps .active.step:last-child::after {
+.chunkOutput .ui.vertical.steps:not(.circular) .active.step:last-child::after {
   display: block;
+}
+
+/* Circular Step */
+
+.chunkOutput .ui.circular.vertical.steps {
+  display: inline-flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+}
+
+.chunkOutput .ui.circular.vertical.steps .step {
+  position: relative;
+  width: 100%;
+}
+
+.chunkOutput .ui.circular.vertical.steps .step::before {
+  left: 0;
+  top: 0;
+}
+
+.chunkOutput .ui.circular.vertical.steps .step::after {
+  left: calc((2.2em / (2.2 * 2)) + 2px);
+  top: calc((2.2em / (2.2 * 2)) + 2px);
+}
+
+.chunkOutput .ui.circular.vertical.steps .step .content {
+  padding-left: 3.5em;
+}
+
+.chunkOutput .ui.circular.vertical.steps .step:not(:last-child) {
+  padding-bottom: 3em;
+}
+
+.chunkOutput .ui.circular.vertical.steps .step:not(:last-child) .content::before {
+  content: "";
+  position: absolute;
+  border-left: 2px solid rgba(34, 36, 38, 0.15);
+  top: 2.2em;
+  bottom: 0;
+  left: calc(2.2em / 2);
+}
+
+.chunkOutput .ui.circular.vertical.steps .step.completed .content::before {
+  border-color: #21BA45;
+}
+
+.chunkOutput .ui.circular.vertical.steps .step.completed::before {
+  background: #21BA45;
+  border-color: #21BA45;
+}
+
+.chunkOutput .ui.circular.vertical.steps .step.completed::after {
+  top: calc((2.2em / (2.2 * 2)) + (2px - (2px / 2)));
 }
 
 /* ---------------
@@ -260,13 +471,13 @@
 /* Mobile (Default) */
 
 @media only screen and (max-width: 767.98px) {
-  .chunkOutput .ui.steps:not(.unstackable) {
+  .chunkOutput .ui.steps:not(.unstackable):not(.circular) {
     display: inline-flex;
     overflow: visible;
     flex-direction: column;
   }
 
-  .chunkOutput .ui.steps:not(.unstackable) .step {
+  .chunkOutput .ui.steps:not(.unstackable):not(.circular) .step {
     width: 100% !important;
     flex-direction: column;
     border-radius: 0;
@@ -275,39 +486,39 @@
     border-bottom: 1px solid rgba(34, 36, 38, 0.15);
   }
 
-  .chunkOutput .ui.steps:not(.unstackable) .step:first-child {
+  .chunkOutput .ui.steps:not(.unstackable):not(.circular) .step:first-child {
     padding: 1.14285714em 2em;
     border-radius: 0.28571429rem 0.28571429rem 0 0;
   }
 
-  .chunkOutput .ui.steps:not(.unstackable) .step:last-child {
+  .chunkOutput .ui.steps:not(.unstackable):not(.circular) .step:last-child {
     border-radius: 0 0 0.28571429rem 0.28571429rem;
     border-bottom: none;
   }
 
   /* Arrow */
 
-  .chunkOutput .ui.steps:not(.unstackable) .step::after {
+  .chunkOutput .ui.steps:not(.unstackable):not(.circular) .step::after {
     top: unset;
     bottom: -1.14285714em;
     right: 50%;
     transform: translateY(-50%) translateX(50%) rotate(45deg);
   }
 
-  .chunkOutput .ui.vertical.steps .active.step:last-child::after {
+  .chunkOutput .ui.vertical.steps:not(.circular) .active.step:last-child::after {
     display: none;
   }
 
   /* Content */
 
-  .chunkOutput .ui.steps:not(.unstackable) .step .content {
+  .chunkOutput .ui.steps:not(.unstackable):not(.circular) .step .content {
     text-align: center;
   }
 
   /* Icon */
 
-  .chunkOutput .ui.steps:not(.unstackable) .step > i.icon,
-  .chunkOutput .ui.ordered.steps:not(.unstackable) .step::before {
+  .chunkOutput .ui.steps:not(.unstackable):not(.circular) .step > i.icon,
+  .chunkOutput .ui.ordered.steps:not(.unstackable):not(.circular) .step::before {
     margin: 0 0 1rem 0;
   }
 }
@@ -318,36 +529,36 @@
 
 /* Link Hover */
 
-.chunkOutput .ui.steps .link.step:hover::after,
-.chunkOutput .ui.steps .link.step:hover,
-.chunkOutput .ui.steps a.step:hover::after,
-.chunkOutput .ui.steps a.step:hover {
+.chunkOutput .ui.steps:not(.circular) .link.step:hover::after,
+.chunkOutput .ui.steps:not(.circular) .link.step:hover,
+.chunkOutput .ui.steps:not(.circular) a.step:hover::after,
+.chunkOutput .ui.steps:not(.circular) a.step:hover {
   background: #F9FAFB;
   color: rgba(0, 0, 0, 0.8);
 }
 
 /* Link Down */
 
-.chunkOutput .ui.steps .link.step:active::after,
-.chunkOutput .ui.steps .link.step:active,
-.chunkOutput .ui.steps a.step:active::after,
-.chunkOutput .ui.steps a.step:active {
+.chunkOutput .ui.steps:not(.circular) .link.step:active::after,
+.chunkOutput .ui.steps:not(.circular) .link.step:active,
+.chunkOutput .ui.steps:not(.circular) a.step:active::after,
+.chunkOutput .ui.steps:not(.circular) a.step:active {
   background: #F3F4F5;
   color: rgba(0, 0, 0, 0.9);
 }
 
 /* Active */
 
-.chunkOutput .ui.steps .step.active {
+.chunkOutput .ui.steps:not(.circular) .step.active {
   cursor: auto;
   background: #F3F4F5;
 }
 
-.chunkOutput .ui.steps .step.active::after {
+.chunkOutput .ui.steps:not(.circular) .step.active::after {
   background: #F3F4F5;
 }
 
-.chunkOutput .ui.steps .step.active .title {
+.chunkOutput .ui.steps:not(.circular) .step.active .title {
   color: #698f73;
 }
 
@@ -358,28 +569,28 @@
 
 /* Active Arrow */
 
-.chunkOutput .ui.steps .step::after {
+.chunkOutput .ui.steps:not(.circular) .step::after {
   display: block;
 }
 
-.chunkOutput .ui.steps .active.step::after {
+.chunkOutput .ui.steps:not(.circular) .active.step::after {
   display: block;
 }
 
-.chunkOutput .ui.steps .step:last-child::after {
+.chunkOutput .ui.steps:not(.circular) .step:last-child::after {
   display: none;
 }
 
-.chunkOutput .ui.steps .active.step:last-child::after {
+.chunkOutput .ui.steps:not(.circular) .active.step:last-child::after {
   display: none;
 }
 
 /* Active Hover */
 
-.chunkOutput .ui.steps .link.active.step:hover::after,
-.chunkOutput .ui.steps .link.active.step:hover,
-.chunkOutput .ui.steps a.active.step:hover::after,
-.chunkOutput .ui.steps a.active.step:hover {
+.chunkOutput .ui.steps:not(.circular) .link.active.step:hover::after,
+.chunkOutput .ui.steps:not(.circular) .link.active.step:hover,
+.chunkOutput .ui.steps:not(.circular) a.active.step:hover::after,
+.chunkOutput .ui.steps:not(.circular) a.active.step:hover {
   cursor: pointer;
   background: #DCDDDE;
   color: rgba(0, 0, 0, 0.87);
@@ -394,20 +605,30 @@
 
 /* Disabled */
 
-.chunkOutput .ui.steps .disabled.step {
+.chunkOutput .ui.steps:not(.circular) .disabled.step {
   cursor: auto;
   background: #FFFFFF;
   pointer-events: none;
 }
 
-.chunkOutput .ui.steps .disabled.step,
-.chunkOutput .ui.steps .disabled.step .title,
-.chunkOutput .ui.steps .disabled.step .description {
+.chunkOutput .ui.steps:not(.circular) .disabled.step,
+.chunkOutput .ui.steps:not(.circular) .disabled.step .title,
+.chunkOutput .ui.steps:not(.circular) .disabled.step .description {
   color: rgba(40, 40, 40, 0.3);
 }
 
-.chunkOutput .ui.steps .disabled.step::after {
+.chunkOutput .ui.steps:not(.circular) .disabled.step::after {
   background: #FFFFFF;
+}
+
+.chunkOutput .ui.circular.steps .disabled.step {
+  cursor: auto;
+  opacity: 0.5;
+}
+
+.chunkOutput .ui.circular.steps .disabled.step::before,
+.chunkOutput .ui.circular.steps .disabled.step::after {
+  cursor: auto;
 }
 
 /*******************************
@@ -421,7 +642,7 @@
 /* Tablet Or Below */
 
 @media only screen and (max-width: 991.98px) {
-  .chunkOutput .ui[class*="tablet stackable"].steps {
+  .chunkOutput .ui[class*="tablet stackable"].steps:not(.circular) {
     display: inline-flex;
     overflow: visible;
     flex-direction: column;
@@ -429,7 +650,7 @@
 
   /* Steps */
 
-  .chunkOutput .ui[class*="tablet stackable"].steps .step {
+  .chunkOutput .ui[class*="tablet stackable"].steps:not(.circular) .step {
     flex-direction: column;
     border-radius: 0;
     padding: 1.14285714em 2em;
@@ -437,19 +658,19 @@
     border-bottom: 1px solid rgba(34, 36, 38, 0.15);
   }
 
-  .chunkOutput .ui[class*="tablet stackable"].steps .step:first-child {
+  .chunkOutput .ui[class*="tablet stackable"].steps:not(.circular) .step:first-child {
     padding: 1.14285714em 2em;
     border-radius: 0.28571429rem 0.28571429rem 0 0;
   }
 
-  .chunkOutput .ui[class*="tablet stackable"].steps .step:last-child {
+  .chunkOutput .ui[class*="tablet stackable"].steps:not(.circular) .step:last-child {
     border-radius: 0 0 0.28571429rem 0.28571429rem;
     border-bottom: none;
   }
 
   /* Arrow */
 
-  .chunkOutput .ui[class*="tablet stackable"].steps .step::after {
+  .chunkOutput .ui[class*="tablet stackable"].steps:not(.circular) .step::after {
     top: unset;
     bottom: -1.14285714em;
     right: 50%;
@@ -458,7 +679,7 @@
 
   /* Content */
 
-  .chunkOutput .ui[class*="tablet stackable"].steps .step .content {
+  .chunkOutput .ui[class*="tablet stackable"].steps:not(.circular) .step .content {
     text-align: center;
   }
 
@@ -487,33 +708,33 @@
 
 /* Top */
 
-.chunkOutput .ui.attached.steps {
+.chunkOutput .ui.attached.steps:not(.circular) {
   width: calc(100% + 2px) !important;
   margin: 0 -1px 0;
   max-width: calc(100% + 2px);
   border-radius: 0.28571429rem 0.28571429rem 0 0;
 }
 
-.chunkOutput .ui.attached.steps .step:first-child {
+.chunkOutput .ui.attached.steps:not(.circular) .step:first-child {
   border-radius: 0.28571429rem 0 0 0;
 }
 
-.chunkOutput .ui.attached.steps .step:last-child {
+.chunkOutput .ui.attached.steps:not(.circular) .step:last-child {
   border-radius: 0 0.28571429rem 0 0;
 }
 
 /* Bottom */
 
-.chunkOutput .ui.bottom.attached.steps {
+.chunkOutput .ui.bottom.attached.steps:not(.circular) {
   margin: 0 -1px 0;
   border-radius: 0 0 0.28571429rem 0.28571429rem;
 }
 
-.chunkOutput .ui.bottom.attached.steps .step:first-child {
+.chunkOutput .ui.bottom.attached.steps:not(.circular) .step:first-child {
   border-radius: 0 0 0 0.28571429rem;
 }
 
-.chunkOutput .ui.bottom.attached.steps .step:last-child {
+.chunkOutput .ui.bottom.attached.steps:not(.circular) .step:last-child {
   border-radius: 0 0 0.28571429rem 0;
 }
 
@@ -589,9 +810,19 @@
   font-size: 0.78571429rem;
 }
 
+.chunkOutput .ui.mini.circular.steps:not(.vertical) {
+  margin: 0.78571429rem 0;
+  padding: 0.78571429rem 0;
+}
+
 .chunkOutput .ui.tiny.steps .step,
 .chunkOutput .ui.tiny.step {
   font-size: 0.85714286rem;
+}
+
+.chunkOutput .ui.tiny.circular.steps:not(.vertical) {
+  margin: 0.85714286rem 0;
+  padding: 0.85714286rem 0;
 }
 
 .chunkOutput .ui.small.steps .step,
@@ -599,9 +830,19 @@
   font-size: 0.92857143rem;
 }
 
+.chunkOutput .ui.small.circular.steps:not(.vertical) {
+  margin: 0.92857143rem 0;
+  padding: 0.92857143rem 0;
+}
+
 .chunkOutput .ui.large.steps .step,
 .chunkOutput .ui.large.step {
   font-size: 1.14285714rem;
+}
+
+.chunkOutput .ui.large.circular.steps:not(.vertical) {
+  margin: 1.14285714rem 0;
+  padding: 1.14285714rem 0;
 }
 
 .chunkOutput .ui.big.steps .step,
@@ -609,9 +850,19 @@
   font-size: 1.28571429rem;
 }
 
+.chunkOutput .ui.big.circular.steps:not(.vertical) {
+  margin: 1.28571429rem 0;
+  padding: 1.28571429rem 0;
+}
+
 .chunkOutput .ui.huge.steps .step,
 .chunkOutput .ui.huge.step {
   font-size: 1.42857143rem;
+}
+
+.chunkOutput .ui.huge.circular.steps:not(.vertical) {
+  margin: 1.42857143rem 0;
+  padding: 1.42857143rem 0;
 }
 
 .chunkOutput .ui.massive.steps .step,
@@ -619,21 +870,26 @@
   font-size: 1.71428571rem;
 }
 
+.chunkOutput .ui.massive.circular.steps:not(.vertical) {
+  margin: 1.71428571rem 0;
+  padding: 1.71428571rem 0;
+}
+
 /* --------------
         Inverted
     --------------- */
 
-.chunkOutput .ui.inverted.steps {
+.chunkOutput .ui.inverted.steps:not(.circular) {
   border: 1px solid #555;
 }
 
-.chunkOutput .ui.inverted.steps .step {
+.chunkOutput .ui.inverted.steps:not(.circular) .step {
   color: rgba(255, 255, 255, 0.9);
   background: #1B1C1D;
   border-color: #555;
 }
 
-.chunkOutput .ui.inverted.steps .step::after {
+.chunkOutput .ui.inverted.steps:not(.circular) .step::after {
   background-color: #1B1C1D;
   border-color: #555;
 }
@@ -644,47 +900,191 @@
 
 /* Active */
 
-.chunkOutput .ui.inverted.steps .step.active,
-.chunkOutput .ui.inverted.steps .step.active::after {
+.chunkOutput .ui.inverted.steps:not(.circular) .step.active,
+.chunkOutput .ui.inverted.steps:not(.circular) .step.active::after {
   background: #333;
 }
 
-.chunkOutput .ui.inverted.ordered.steps .step.active::before,
-.chunkOutput .ui.inverted.steps .active.step i.icon {
+.chunkOutput .ui.inverted.ordered.steps:not(.circular) .step.active::before,
+.chunkOutput .ui.inverted.steps:not(.circular) .active.step i.icon {
   color: #ffffff;
 }
 
 /* Disabled */
 
-.chunkOutput .ui.inverted.steps .disabled.step,
-.chunkOutput .ui.inverted.steps .disabled.step::after {
+.chunkOutput .ui.inverted.steps:not(.circular) .disabled.step,
+.chunkOutput .ui.inverted.steps:not(.circular) .disabled.step::after {
   background: #222;
 }
 
-.chunkOutput .ui.inverted.steps .disabled.step,
-.chunkOutput .ui.inverted.steps .disabled.step .title,
-.chunkOutput .ui.inverted.steps .disabled.step .description {
+.chunkOutput .ui.inverted.steps:not(.circular) .disabled.step,
+.chunkOutput .ui.inverted.steps:not(.circular) .disabled.step .title,
+.chunkOutput .ui.inverted.steps:not(.circular) .disabled.step .description {
   color: rgba(225, 225, 225, 0.3);
 }
 
 /* Link Hover */
 
-.chunkOutput .ui.inverted.steps .link.step:hover::after,
-.chunkOutput .ui.inverted.steps .link.step:hover,
-.chunkOutput .ui.inverted.steps a.step:hover::after,
-.chunkOutput .ui.inverted.steps a.step:hover {
+.chunkOutput .ui.inverted.steps:not(.circular) .link.step:hover::after,
+.chunkOutput .ui.inverted.steps:not(.circular) .link.step:hover,
+.chunkOutput .ui.inverted.steps:not(.circular) a.step:hover::after,
+.chunkOutput .ui.inverted.steps:not(.circular) a.step:hover {
   background: #3f3f3f;
   color: #ffffff;
 }
 
 /* Link Down */
 
-.chunkOutput .ui.inverted.steps .link.step:active::after,
-.chunkOutput .ui.inverted.steps .link.step:active,
-.chunkOutput .ui.inverted.steps a.step:active::after,
-.chunkOutput .ui.inverted.steps a.step:active {
+.chunkOutput .ui.inverted.steps:not(.circular) .link.step:active::after,
+.chunkOutput .ui.inverted.steps:not(.circular) .link.step:active,
+.chunkOutput .ui.inverted.steps:not(.circular) a.step:active::after,
+.chunkOutput .ui.inverted.steps:not(.circular) a.step:active {
   background: #444;
   color: #ffffff;
+}
+
+/* Circular Step */
+
+.chunkOutput .ui.inverted.circular.steps .step .content {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.chunkOutput .ui.inverted.circular.steps:not(.vertical) .step:not(.completed) {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.chunkOutput .ui.inverted.circular.steps:not(.vertical) .step:not(.active):not(.completed)::before {
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+.chunkOutput .ui.inverted.circular.steps:not(.vertical) .step .center.aligned.content .title {
+  background: #1B1C1D;
+}
+
+.chunkOutput .ui.inverted.circular.steps:not(.ordered) .step:not(.active):not(.completed)::after {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.chunkOutput .ui.inverted.circular.steps.vertical .step:not(.active):not(.completed)::before {
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+.chunkOutput .ui.inverted.circular.steps.vertical .step:not(.completed) .content::before {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.chunkOutput .ui.ui.circular.steps .step.primary::before {
+  border-color: #698f73;
+}
+
+.chunkOutput .ui.ui.circular.steps .step.primary::after {
+  background: #698f73;
+}
+
+.chunkOutput .ui.ui.primary.circular.steps .step.active::before,
+.chunkOutput .ui.ui.ui.circular.steps .step.primary.active::before {
+  border-color: #698f73;
+}
+
+.chunkOutput .ui.ui.primary.circular.steps .step.active::after,
+.chunkOutput .ui.ui.ui.circular.steps .step.primary.active::after {
+  background: #698f73;
+}
+
+.chunkOutput .ui.ui.primary.circular.steps .step.completed::before,
+.chunkOutput .ui.ui.ui.circular.steps .step.primary.completed::before {
+  background: #698f73;
+  border-color: #698f73;
+}
+
+.chunkOutput .ui.ui.primary.circular.steps:not(.vertical) .step.completed,
+.chunkOutput .ui.ui.ui.circular.steps:not(.vertical) .step.primary.completed {
+  background: #698f73;
+}
+
+.chunkOutput .ui.ui.circular.steps:not(.vertical) .step.primary {
+  background: #698f73;
+}
+
+.chunkOutput .ui.ui.primary.circular.steps .step.active .content .title,
+.chunkOutput .ui.ui.ui.circular.steps .step.primary.active .content .title {
+  color: #698f73;
+}
+
+.chunkOutput .ui.ui.vertical.circular.steps .step.completed.primary .content::before {
+  border-color: #698f73;
+}
+
+.chunkOutput .ui.ui.primary.vertical.circular.steps .step.completed .content::before,
+.chunkOutput .ui.ui.vertical.circular.steps .step.primary.completed .content::before {
+  border-color: #698f73;
+}
+
+.chunkOutput .ui.ui.primary.circular.ordered.steps .step::after,
+.chunkOutput .ui.ui.circular.ordered.steps .step.primary::after {
+  background: transparent;
+}
+
+.chunkOutput .ui.ui.primary.circular.ordered.steps .step.active::before,
+.chunkOutput .ui.ui.circular.ordered.steps .step.primary.active::before {
+  color: #698f73;
+}
+
+.chunkOutput .ui.ui.circular.steps .step.secondary::before {
+  border-color: #5f7ebe;
+}
+
+.chunkOutput .ui.ui.circular.steps .step.secondary::after {
+  background: #5f7ebe;
+}
+
+.chunkOutput .ui.ui.secondary.circular.steps .step.active::before,
+.chunkOutput .ui.ui.ui.circular.steps .step.secondary.active::before {
+  border-color: #5f7ebe;
+}
+
+.chunkOutput .ui.ui.secondary.circular.steps .step.active::after,
+.chunkOutput .ui.ui.ui.circular.steps .step.secondary.active::after {
+  background: #5f7ebe;
+}
+
+.chunkOutput .ui.ui.secondary.circular.steps .step.completed::before,
+.chunkOutput .ui.ui.ui.circular.steps .step.secondary.completed::before {
+  background: #5f7ebe;
+  border-color: #5f7ebe;
+}
+
+.chunkOutput .ui.ui.secondary.circular.steps:not(.vertical) .step.completed,
+.chunkOutput .ui.ui.ui.circular.steps:not(.vertical) .step.secondary.completed {
+  background: #5f7ebe;
+}
+
+.chunkOutput .ui.ui.circular.steps:not(.vertical) .step.secondary {
+  background: #5f7ebe;
+}
+
+.chunkOutput .ui.ui.secondary.circular.steps .step.active .content .title,
+.chunkOutput .ui.ui.ui.circular.steps .step.secondary.active .content .title {
+  color: #5f7ebe;
+}
+
+.chunkOutput .ui.ui.vertical.circular.steps .step.completed.secondary .content::before {
+  border-color: #5f7ebe;
+}
+
+.chunkOutput .ui.ui.secondary.vertical.circular.steps .step.completed .content::before,
+.chunkOutput .ui.ui.vertical.circular.steps .step.secondary.completed .content::before {
+  border-color: #5f7ebe;
+}
+
+.chunkOutput .ui.ui.secondary.circular.ordered.steps .step::after,
+.chunkOutput .ui.ui.circular.ordered.steps .step.secondary::after {
+  background: transparent;
+}
+
+.chunkOutput .ui.ui.secondary.circular.ordered.steps .step.active::before,
+.chunkOutput .ui.ui.circular.ordered.steps .step.secondary.active::before {
+  color: #5f7ebe;
 }
 
 /*******************************
