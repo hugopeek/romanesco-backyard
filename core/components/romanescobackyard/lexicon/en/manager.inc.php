@@ -25,6 +25,9 @@ $_lang['romanesco.menu.clear_cache_galleries_title'] = 'Galleries';
 $_lang['romanesco.menu.clear_cache_galleries_description'] = 'Only clear cache of Gallery CBs';
 $_lang['romanesco.menu.clear_cache_patterns_title'] = 'Patterns';
 $_lang['romanesco.menu.clear_cache_patterns_description'] = 'Clear cache of pattern library in Project Hub';
+$_lang['romanesco.menu.clear_cache_svg_title'] = 'Clear SVGs';
+$_lang['romanesco.menu.clear_cache_svg_description'] = 'Empty the svgSanitizer cache';
+
 $_lang['romanesco.menu.clear_cache_clients_title'] = 'Clients'; //deprecated
 $_lang['romanesco.menu.clear_cache_portfolio_title'] = 'Portfolio'; //deprecated
 $_lang['romanesco.menu.clear_cache_publication_title'] = 'Publication'; //deprecated

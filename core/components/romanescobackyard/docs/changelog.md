@@ -3,6 +3,7 @@
 ## Backyard 1.0.0-beta21
 Released on ...
 
+- Add menu item for clearing SVG cache
 - Set minimum PHP version to 8.1
 - Update Composer dependencies
 - Fix floated icons messing up each others positions in MIGX grids
