@@ -81,7 +81,6 @@ class Romanesco
             'connectorUrl' => $assetsUrl . 'connector.php'
         ], $options);
 
-        $this->modx->addPackage($this->namespace, $this->getOption('modelPath'));
         $lexicon = $this->modx->getService('lexicon', 'modLexicon');
         $lexicon->load($this->namespace . ':default');
     }

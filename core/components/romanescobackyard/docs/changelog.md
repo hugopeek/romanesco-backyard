@@ -3,6 +3,7 @@
 ## Backyard 1.0.0-beta22
 Released on ...
 
+- Stop using extension package to autoload base class
 - Evaluate widest breakpoint when generating critical CSS (1920px)
 - Provide base path for critical CSS snippet upfront
 
