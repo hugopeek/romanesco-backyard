@@ -294,6 +294,7 @@ class Romanesco
             'gulp', 'critical',
             '--src', $settings['url'],
             '--dest', $this->modx->getOption('base_path') . rtrim($settings['criticalPath'],'/') . '/' . rtrim($settings['uri'],'/') . '.css',
+            '--basePath', $this->modx->getOption('base_path'),
             '--cssPaths', rtrim($settings['distPath'],'/') . '/semantic.css',
             '--cssPaths', rtrim($settings['distPath'],'/') . '/components/form.css',
             '--cssPaths', rtrim($settings['distPath'],'/') . '/components/checkbox.css',
