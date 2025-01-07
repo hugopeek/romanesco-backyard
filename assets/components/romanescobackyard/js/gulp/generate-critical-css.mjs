@@ -63,7 +63,7 @@ gulp.task('critical', function (cb) {
                 width: 800,
                 height: 600
             },{
-                width: 1600,
+                width: 1920,
                 height: 1200
             }
         ],

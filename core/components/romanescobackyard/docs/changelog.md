@@ -3,7 +3,8 @@
 ## Backyard 1.0.0-beta22
 Released on ...
 
-- Provide base path for Critical CSS snippet upfront
+- Evaluate widest breakpoint when generating critical CSS (1920px)
+- Provide base path for critical CSS snippet upfront
 
 ## Backyard 1.0.0-beta21
 Released on January 3, 2025
