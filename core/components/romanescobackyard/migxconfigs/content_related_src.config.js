@@ -213,7 +213,7 @@
         "extrahandlers": "",
         "filtersperrow": 4,
         "packageName": "romanescobackyard",
-        "classname": "rmCrosslinkRelated",
+        "classname": "rmCrossLink",
         "task": "",
         "getlistsort": "",
         "getlistsortdir": "",
