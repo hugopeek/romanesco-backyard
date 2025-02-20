@@ -4,17 +4,23 @@
 // ---------------------------------------------------------------------
 
 // Global content
-$_lang['romanesco.menu.global_content_title'] = 'Global Content';
-$_lang['romanesco.menu.global_content_description'] = 'Change content that\'s available site-wide';
+$_lang['romanesco.menu.global_content_title'] = 'Global';
+$_lang['romanesco.menu.global_content_description'] = 'Reusable content parts';
 
-$_lang['romanesco.menu.edit_footer_title'] = 'Edit footer';
-$_lang['romanesco.menu.edit_footer_description'] = 'Change footer content for all pages';
+$_lang['romanesco.menu.global_backgrounds_title'] = 'Backgrounds';
+$_lang['romanesco.menu.global_backgrounds_description'] = 'Create custom backgrounds for use in CB';
 
-$_lang['romanesco.menu.edit_forms_title'] = 'FormBlocks';
-$_lang['romanesco.menu.edit_forms_description'] = 'Build and edit your own forms';
+$_lang['romanesco.menu.global_cta_title'] = 'CTAs';
+$_lang['romanesco.menu.global_cta_description'] = 'Manage your Call To Actions';
 
-$_lang['romanesco.menu.edit_cta_title'] = 'Call To Actions';
-$_lang['romanesco.menu.edit_cta_description'] = 'Build and edit your own CTA\'s';
+$_lang['romanesco.menu.global_footers_title'] = 'Footers';
+$_lang['romanesco.menu.global_footers_description'] = 'Manage footer content for all pages';
+
+$_lang['romanesco.menu.global_forms_title'] = 'FormBlocks';
+$_lang['romanesco.menu.global_forms_description'] = 'Build your own forms';
+
+$_lang['romanesco.menu.global_mails_title'] = 'MailBlocks';
+$_lang['romanesco.menu.global_mails_description'] = 'Build your own email templates';
 
 // Custom caching
 $_lang['romanesco.menu.clear_cache_all_title'] = 'Clear Custom Cache';
@@ -87,10 +93,21 @@ $_lang['collections.notes.children.create'] = 'Add Note';
 $_lang['collections.notes.children.back_to_collection_label'] = 'All Notes';
 
 
-// ContentBlocks previews
+// ContentBlocks
 // ---------------------------------------------------------------------
 
+// Previews
 $_lang['romanesco.cb_preview.overview_note'] = '<p><em>Please note: this preview automatically limits the amount of items to 2 rows in the manager &bull; Item styling may not reflect the actual output on the page &bull; Preview doesn\'t work with Pagination enabled.</em></p>';
+
+// Field / layout settings
+//$_lang['Background'] = 'Hallo';
+//$_lang['Container type'] = 'Hallo';
+//$_lang['Content alignment'] = 'Hallo';
+//$_lang['Inflate main title'] = 'Hallo';
+//$_lang['Text alignment'] = 'Hallo';
+//$_lang['Alignment'] = 'Hallo';
+//$_lang['Extra padding'] = 'Hallo';
+//$_lang['Segment type'] = 'Hallo';
 
 
 // Feedback widget
