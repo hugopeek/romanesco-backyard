@@ -83,6 +83,8 @@ class Romanesco
 
         $lexicon = $this->modx->getService('lexicon', 'modLexicon');
         $lexicon->load($this->namespace . ':default');
+
+        $this->modx->addPackage($this->namespace, $this->getOption('modelPath'));
     }
 
     /**
