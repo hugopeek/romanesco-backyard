@@ -3,6 +3,9 @@
 ## Backyard 1.0.0-beta22
 Released on ...
 
+- Add search to Tasks grid
+- Allow Tasks to be attached to objects other than resource
+- Tweak lexicon keys for Global Content top menu
 - Stop using extension package to autoload base class
 - Evaluate widest breakpoint when generating critical CSS (1920px)
 - Provide base path for critical CSS snippet upfront

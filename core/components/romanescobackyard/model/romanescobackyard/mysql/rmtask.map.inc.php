@@ -7,13 +7,15 @@ $xpdo_meta_map['rmTask']= array (
   'version' => '1.1',
   'table' => 'romanesco_tasks',
   'extends' => 'xPDOSimpleObject',
+  'inherit' => 'single',
   'tableMeta' => 
   array (
     'engine' => 'InnoDB',
   ),
   'fields' => 
   array (
-    'resource_id' => 0,
+    'class_key' => '',
+    'parent_id' => 0,
     'user_id' => 0,
     'title' => '',
     'content' => '',
@@ -31,10 +33,19 @@ $xpdo_meta_map['rmTask']= array (
   ),
   'fieldMeta' => 
   array (
-    'resource_id' => 
+    'class_key' => 
+    array (
+      'dbtype' => 'varchar',
+      'precision' => '50',
+      'phptype' => 'string',
+      'null' => false,
+      'default' => '',
+      'index' => 'index',
+    ),
+    'parent_id' => 
     array (
       'dbtype' => 'int',
-      'precision' => '11',
+      'precision' => '10',
       'attributes' => 'unsigned',
       'phptype' => 'integer',
       'null' => false,
@@ -151,15 +162,21 @@ $xpdo_meta_map['rmTask']= array (
   ),
   'indexes' => 
   array (
-    'resource_id' => 
+    'composite' => 
     array (
-      'alias' => 'resource_id',
+      'alias' => 'composite',
       'primary' => false,
       'unique' => false,
       'type' => 'BTREE',
       'columns' => 
       array (
-        'resource_id' => 
+        'class_key' => 
+        array (
+          'length' => '',
+          'collation' => 'A',
+          'null' => false,
+        ),
+        'parent_id' => 
         array (
           'length' => '',
           'collation' => 'A',
@@ -213,14 +230,6 @@ $xpdo_meta_map['rmTask']= array (
   ),
   'aggregates' => 
   array (
-    'Resource' => 
-    array (
-      'class' => 'modResource',
-      'local' => 'resource_id',
-      'foreign' => 'id',
-      'cardinality' => 'one',
-      'owner' => 'foreign',
-    ),
     'User' => 
     array (
       'class' => 'modUser',

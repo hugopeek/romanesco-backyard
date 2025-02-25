@@ -40,7 +40,7 @@
                     "sourceFrom": "config",
                     "sources": "",
                     "inputOptionValues": "",
-                    "default": "rmTask",
+                    "default": "rmTaskResource",
                     "useDefaultIfEmpty": 1,
                     "pos": ""
                 },
@@ -267,33 +267,9 @@
         }
     ],
     "contextmenus": "update||duplicate||recall_remove_delete",
-    "actionbuttons": "addItem||bulk||toggletrash||emptyTrash",
+    "actionbuttons": "addItem||bulk||toggletrash",
     "columnbuttons": "",
-    "filters": [
-        {
-            "MIGX_id": 1,
-            "name": "search_task",
-            "label": "Search",
-            "emptytext": "Search for specific task(s)",
-            "type": "textbox",
-            "getlistwhere": {
-                "title:LIKE": "%[[+search_task]]%",
-                "OR:content:LIKE": "%[[+search_task]]%",
-                "OR:tags:LIKE": "%[[+search_task]]%"
-            },
-            "getcomboprocessor": "",
-            "combotextfield": "",
-            "comboidfield": "",
-            "combowhere": "",
-            "comboclassname": "",
-            "combopackagename": "",
-            "combo_use_custom_prefix": "0",
-            "comboprefix": "",
-            "combojoins": "",
-            "comboparent": "",
-            "default": ""
-        }
-    ],
+    "filters": "",
     "extended": {
         "migx_add": "New task",
         "disable_add_item": "",
@@ -327,7 +303,10 @@
         "check_resid_TV": "",
         "join_alias": "",
         "has_jointable": "yes",
-        "getlistwhere": "",
+        "getlistwhere": {
+            "class_key": "rmTaskResource",
+            "parent_id": "[[+resource_id]]"
+        },
         "joins": [
             {
                 "alias": "User"
@@ -335,10 +314,12 @@
                 "alias": "Author"
             }
         ],
-        "hooksnippets": "",
+        "hooksnippets": {
+            "aftersave": "migxSaveTask"
+        },
         "cmpmaincaption": "Project data",
-        "cmptabcaption": "Tasks",
-        "cmptabdescription": "The tasks in this list are collected from the Status tab on each page and the project timeline on the Dashboard page. But you can also add generic issues here directly.",
+        "cmptabcaption": "Resource tasks",
+        "cmptabdescription": "",
         "cmptabcontroller": "",
         "winbuttons": "",
         "onsubmitsuccess": "",
@@ -462,21 +443,6 @@
             "clickaction": "",
             "selectorconfig": "",
             "renderchunktpl": "[[+date_due:date=`[[++romanesco.date_format_short]]`]]",
-            "renderoptions": "",
-            "editor": ""
-        },
-        {
-            "MIGX_id": "",
-            "header": "Parent",
-            "dataIndex": "parent_id",
-            "width": 30,
-            "sortable": true,
-            "show_in_grid": 1,
-            "customrenderer": "",
-            "renderer": "this.renderChunk",
-            "clickaction": "",
-            "selectorconfig": "",
-            "renderchunktpl": "[[+class_key:stripString=`rmTask`:is=`Resource`:then=`<a href='?a=resource/update&id=[[+parent_id]]'>Resource</a>`:else=``]]",
             "renderoptions": "",
             "editor": ""
         },
