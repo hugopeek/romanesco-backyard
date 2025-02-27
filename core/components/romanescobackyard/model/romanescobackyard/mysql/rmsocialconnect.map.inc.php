@@ -7,14 +7,15 @@ $xpdo_meta_map['rmSocialConnect']= array (
   'version' => '1.1',
   'table' => 'romanesco_social_connections',
   'extends' => 'xPDOSimpleObject',
+  'inherit' => 'single',
   'tableMeta' => 
   array (
     'engine' => 'InnoDB',
   ),
   'fields' => 
   array (
-    'resource_id' => 0,
-    'user_id' => 0,
+    'class_key' => '',
+    'parent_id' => 0,
     'name' => '',
     'title' => '',
     'url' => '',
@@ -27,19 +28,19 @@ $xpdo_meta_map['rmSocialConnect']= array (
   ),
   'fieldMeta' => 
   array (
-    'resource_id' => 
+    'class_key' => 
     array (
-      'dbtype' => 'int',
-      'precision' => '11',
-      'attributes' => 'unsigned',
-      'phptype' => 'integer',
+      'dbtype' => 'varchar',
+      'precision' => '50',
+      'phptype' => 'string',
       'null' => false,
-      'default' => 0,
+      'default' => '',
+      'index' => 'index',
     ),
-    'user_id' => 
+    'parent_id' => 
     array (
       'dbtype' => 'int',
-      'precision' => '11',
+      'precision' => '10',
       'attributes' => 'unsigned',
       'phptype' => 'integer',
       'null' => false,
@@ -125,31 +126,21 @@ $xpdo_meta_map['rmSocialConnect']= array (
   ),
   'indexes' => 
   array (
-    'resource_id' => 
+    'composite' => 
     array (
-      'alias' => 'resource_id',
+      'alias' => 'composite',
       'primary' => false,
       'unique' => false,
       'type' => 'BTREE',
       'columns' => 
       array (
-        'resource_id' => 
+        'class_key' => 
         array (
           'length' => '',
           'collation' => 'A',
           'null' => false,
         ),
-      ),
-    ),
-    'user_id' => 
-    array (
-      'alias' => 'user_id',
-      'primary' => false,
-      'unique' => false,
-      'type' => 'BTREE',
-      'columns' => 
-      array (
-        'user_id' => 
+        'parent_id' => 
         array (
           'length' => '',
           'collation' => 'A',

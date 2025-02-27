@@ -276,7 +276,7 @@
         "add_items_directly": "",
         "formcaption": "",
         "update_win_title": "Edit task",
-        "win_id": "tasks",
+        "win_id": "tasks_resource",
         "maxRecords": "",
         "addNewItemAt": "top",
         "multiple_formtabs": "",

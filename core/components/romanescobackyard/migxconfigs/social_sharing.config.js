@@ -229,11 +229,11 @@
         }
     ],
     "extended": {
-        "migx_add": "Add channel",
+        "migx_add": "Add platform",
         "disable_add_item": "",
         "add_items_directly": "",
         "formcaption": "",
-        "update_win_title": "Edit channel",
+        "update_win_title": "Edit platform",
         "win_id": "social_sharing",
         "maxRecords": "",
         "addNewItemAt": "bottom",
@@ -266,7 +266,7 @@
         "hooksnippets": "",
         "cmpmaincaption": "Project data",
         "cmptabcaption": "Social sharing",
-        "cmptabdescription": "Maintain a list of social media channels, through which visitors can share your content.",
+        "cmptabdescription": "Maintain a list of social media platforms through which visitors can share your content.",
         "cmptabcontroller": "",
         "winbuttons": "",
         "onsubmitsuccess": "",
@@ -290,7 +290,7 @@
         },
         {
             "MIGX_id": "",
-            "header": "Channel",
+            "header": "Platform",
             "dataIndex": "name",
             "width": 30,
             "sortable": true,
