@@ -1,7 +1,7 @@
 # Changelog for Romanesco Backyard
 
 ## Backyard 1.0.0-beta22
-Released on ...
+Released on February 28, 2025
 
 - Add search to Tasks grid
 - Allow Tasks to be attached to objects other than resource
