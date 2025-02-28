@@ -203,12 +203,12 @@
     "columnbuttons": "",
     "filters": "",
     "extended": {
-        "migx_add": "Add relation",
+        "migx_add": "Add Relation",
         "disable_add_item": "",
         "add_items_directly": "",
         "formcaption": "",
-        "update_win_title": "Edit relation",
-        "win_id": 10,
+        "update_win_title": "Edit Relation",
+        "win_id": "content_related",
         "maxRecords": "",
         "addNewItemAt": "top",
         "multiple_formtabs": "",
@@ -248,8 +248,8 @@
         "hooksnippets": {
             "aftersave": "migxSaveRelated"
         },
-        "cmpmaincaption": "Project data",
-        "cmptabcaption": "Content relations",
+        "cmpmaincaption": "Project Data",
+        "cmptabcaption": "Content Relations",
         "cmptabdescription": "Create links between areas of your project that complement each other. You can use these links to display related content on a page, for example.",
         "cmptabcontroller": "",
         "winbuttons": "",

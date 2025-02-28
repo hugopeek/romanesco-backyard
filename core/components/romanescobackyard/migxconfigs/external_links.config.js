@@ -2,7 +2,7 @@
     "formtabs": [
         {
             "MIGX_id": 1,
-            "caption": "External links",
+            "caption": "External Links",
             "print_before_tabs": "0",
             "pos": 1,
             "fields": [
@@ -206,12 +206,12 @@
     "columnbuttons": "",
     "filters": "",
     "extended": {
-        "migx_add": "Add link",
+        "migx_add": "Add Link",
         "disable_add_item": "",
         "add_items_directly": "",
         "formcaption": "",
-        "update_win_title": "Edit link",
-        "win_id": 15,
+        "update_win_title": "Edit Link",
+        "win_id": "external_links",
         "maxRecords": "",
         "addNewItemAt": "bottom",
         "multiple_formtabs": "",
@@ -247,8 +247,8 @@
         "hooksnippets": {
             "aftersave": "migxSaveExternalLink"
         },
-        "cmpmaincaption": "Project data",
-        "cmptabcaption": "External links",
+        "cmpmaincaption": "Project Data",
+        "cmptabcaption": "External Links",
         "cmptabdescription": "Create links to external references. You can list them as sources for your article for example.",
         "cmptabcontroller": "",
         "winbuttons": "",

@@ -218,7 +218,7 @@
         "getlistwhere": "",
         "joins": "",
         "hooksnippets": "",
-        "cmpmaincaption": "Project data",
+        "cmpmaincaption": "Project Data",
         "cmptabcaption": "Project timeline",
         "cmptabdescription": "",
         "cmptabcontroller": "",

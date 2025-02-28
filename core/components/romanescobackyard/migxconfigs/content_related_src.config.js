@@ -2,7 +2,7 @@
     "formtabs": [
         {
             "MIGX_id": 1,
-            "caption": "Content relations",
+            "caption": "Content Relations",
             "print_before_tabs": "0",
             "pos": 1,
             "fields": [
@@ -195,12 +195,12 @@
     "columnbuttons": "",
     "filters": "",
     "extended": {
-        "migx_add": "Add relation",
+        "migx_add": "Add Relation",
         "disable_add_item": "",
         "add_items_directly": "",
         "formcaption": "",
-        "update_win_title": "Edit relation",
-        "win_id": 11,
+        "update_win_title": "Edit Relation",
+        "win_id": "content_related_src",
         "maxRecords": "",
         "addNewItemAt": "top",
         "multiple_formtabs": "",

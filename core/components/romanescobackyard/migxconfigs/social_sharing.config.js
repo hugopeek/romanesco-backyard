@@ -2,7 +2,7 @@
     "formtabs": [
         {
             "MIGX_id": 1,
-            "caption": "Properties",
+            "caption": "Platform",
             "print_before_tabs": "0",
             "pos": 1,
             "fields": [
@@ -229,11 +229,11 @@
         }
     ],
     "extended": {
-        "migx_add": "Add platform",
+        "migx_add": "Add Platform",
         "disable_add_item": "",
         "add_items_directly": "",
         "formcaption": "",
-        "update_win_title": "Edit platform",
+        "update_win_title": "Edit Platform",
         "win_id": "social_sharing",
         "maxRecords": "",
         "addNewItemAt": "bottom",
@@ -264,8 +264,8 @@
         "getlistwhere": "",
         "joins": "",
         "hooksnippets": "",
-        "cmpmaincaption": "Project data",
-        "cmptabcaption": "Social sharing",
+        "cmpmaincaption": "Project Data",
+        "cmptabcaption": "Social Sharing",
         "cmptabdescription": "Maintain a list of social media platforms through which visitors can share your content.",
         "cmptabcontroller": "",
         "winbuttons": "",

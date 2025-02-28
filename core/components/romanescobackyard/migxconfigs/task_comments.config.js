@@ -90,12 +90,12 @@
     "columnbuttons": "",
     "filters": "",
     "extended": {
-        "migx_add": "Add comment",
+        "migx_add": "Add Comment",
         "disable_add_item": "",
         "add_items_directly": "",
         "formcaption": "",
-        "update_win_title": "Edit comment",
-        "win_id": "comments",
+        "update_win_title": "Edit Comment",
+        "win_id": "task_comments",
         "maxRecords": "",
         "addNewItemAt": "top",
         "multiple_formtabs": "",
@@ -133,8 +133,8 @@
         "hooksnippets": {
             "aftersave": "migxSaveTaskComment"
         },
-        "cmpmaincaption": "Project data",
-        "cmptabcaption": "Task comments",
+        "cmpmaincaption": "Project Data",
+        "cmptabcaption": "Task Comments",
         "cmptabdescription": "Attach questions and updates to the parent task.",
         "cmptabcontroller": "",
         "winbuttons": "",

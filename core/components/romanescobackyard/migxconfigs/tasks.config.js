@@ -295,11 +295,11 @@
         }
     ],
     "extended": {
-        "migx_add": "New task",
+        "migx_add": "New Task",
         "disable_add_item": "",
         "add_items_directly": "",
         "formcaption": "",
-        "update_win_title": "Edit task",
+        "update_win_title": "Edit Task",
         "win_id": "tasks",
         "maxRecords": "",
         "addNewItemAt": "top",
@@ -336,7 +336,7 @@
             }
         ],
         "hooksnippets": "",
-        "cmpmaincaption": "Project data",
+        "cmpmaincaption": "Project Data",
         "cmptabcaption": "Tasks",
         "cmptabdescription": "The tasks in this list are collected from the Status tab on each page and the project timeline on the Dashboard page. But you can also add generic issues here directly.",
         "cmptabcontroller": "",

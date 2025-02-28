@@ -2,7 +2,7 @@
     "formtabs": [
         {
             "MIGX_id": 1,
-            "caption": "Properties",
+            "caption": "Platform",
             "print_before_tabs": "0",
             "pos": 1,
             "fields": [
@@ -267,11 +267,11 @@
         }
     ],
     "extended": {
-        "migx_add": "Add platform",
+        "migx_add": "Add Platform",
         "disable_add_item": "",
         "add_items_directly": "",
         "formcaption": "",
-        "update_win_title": "Edit platform",
+        "update_win_title": "Edit Platform",
         "win_id": "social_connect",
         "maxRecords": "",
         "addNewItemAt": "bottom",
@@ -302,8 +302,8 @@
         "getlistwhere": "",
         "joins": "",
         "hooksnippets": "",
-        "cmpmaincaption": "Project data",
-        "cmptabcaption": "Social connections",
+        "cmpmaincaption": "Project Data",
+        "cmptabcaption": "Social Connections",
         "cmptabdescription": "Maintain a list of social media platforms through which visitors can connect with you.",
         "cmptabcontroller": "",
         "winbuttons": "",

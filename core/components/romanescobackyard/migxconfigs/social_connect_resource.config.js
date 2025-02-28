@@ -2,7 +2,7 @@
     "formtabs": [
         {
             "MIGX_id": 1,
-            "caption": "Properties",
+            "caption": "Platform",
             "print_before_tabs": "0",
             "pos": 1,
             "fields": [
@@ -223,11 +223,11 @@
     "columnbuttons": "",
     "filters": "",
     "extended": {
-        "migx_add": "Add platform",
+        "migx_add": "Add Platform",
         "disable_add_item": "",
         "add_items_directly": "",
         "formcaption": "",
-        "update_win_title": "Edit platform",
+        "update_win_title": "Edit Platform",
         "win_id": "social_connect_resource",
         "maxRecords": "",
         "addNewItemAt": "bottom",
@@ -263,7 +263,7 @@
         "hooksnippets": {
             "aftersave": "migxSaveSocialConnect"
         },
-        "cmpmaincaption": "Project data",
+        "cmpmaincaption": "Project Data",
         "cmptabcaption": "Resource connections",
         "cmptabdescription": "",
         "cmptabcontroller": "",

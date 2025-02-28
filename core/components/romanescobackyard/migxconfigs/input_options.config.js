@@ -133,7 +133,7 @@
         "add_items_directly": "",
         "formcaption": "",
         "update_win_title": "Edit option",
-        "win_id": 4,
+        "win_id": "input_options",
         "maxRecords": "",
         "addNewItemAt": "top",
         "multiple_formtabs": "",
@@ -169,8 +169,8 @@
         "hooksnippets": {
             "aftersave": "migxSaveOption"
         },
-        "cmpmaincaption": "Project data",
-        "cmptabcaption": "Input options",
+        "cmpmaincaption": "Project Data",
+        "cmptabcaption": "Input Options",
         "cmptabdescription": "",
         "cmptabcontroller": "",
         "winbuttons": "",

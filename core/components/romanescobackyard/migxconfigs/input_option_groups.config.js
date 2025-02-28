@@ -165,7 +165,7 @@
         "add_items_directly": "",
         "formcaption": "",
         "update_win_title": "Edit group",
-        "win_id": 5,
+        "win_id": "input_option_groups",
         "maxRecords": "",
         "addNewItemAt": "top",
         "multiple_formtabs": "",
@@ -197,8 +197,8 @@
         "hooksnippets": {
             "aftersave": "migxSaveOptionGroup"
         },
-        "cmpmaincaption": "Project data",
-        "cmptabcaption": "Input options",
+        "cmpmaincaption": "Project Data",
+        "cmptabcaption": "Input Options",
         "cmptabdescription": "These groups contain options that can be used throughout the platform, in selectors and checkboxes and such. They are similar to tags, but can contain a little more information.",
         "cmptabcontroller": "",
         "winbuttons": "",

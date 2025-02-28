@@ -271,11 +271,11 @@
     "columnbuttons": "",
     "filters": "",
     "extended": {
-        "migx_add": "New task",
+        "migx_add": "New Task",
         "disable_add_item": "",
         "add_items_directly": "",
         "formcaption": "",
-        "update_win_title": "Edit task",
+        "update_win_title": "Edit Task",
         "win_id": "tasks_resource",
         "maxRecords": "",
         "addNewItemAt": "top",
@@ -317,7 +317,7 @@
         "hooksnippets": {
             "aftersave": "migxSaveTask"
         },
-        "cmpmaincaption": "Project data",
+        "cmpmaincaption": "Project Data",
         "cmptabcaption": "Resource tasks",
         "cmptabdescription": "",
         "cmptabcontroller": "",
