@@ -160,11 +160,11 @@
         }
     ],
     "extended": {
-        "migx_add": "Add group",
+        "migx_add": "Add Group",
         "disable_add_item": "",
         "add_items_directly": "",
         "formcaption": "",
-        "update_win_title": "Edit group",
+        "update_win_title": "Edit Group",
         "win_id": "input_option_groups",
         "maxRecords": "",
         "addNewItemAt": "top",

@@ -2,7 +2,7 @@
     "formtabs": [
         {
             "MIGX_id": 1,
-            "caption": "Input option",
+            "caption": "Input Option",
             "print_before_tabs": "0",
             "pos": 1,
             "fields": [
@@ -128,11 +128,11 @@
     "columnbuttons": "",
     "filters": "",
     "extended": {
-        "migx_add": "Add option",
+        "migx_add": "Add Option",
         "disable_add_item": "",
         "add_items_directly": "",
         "formcaption": "",
-        "update_win_title": "Edit option",
+        "update_win_title": "Edit Option",
         "win_id": "input_options",
         "maxRecords": "",
         "addNewItemAt": "top",
