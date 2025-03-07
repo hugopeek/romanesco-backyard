@@ -197,23 +197,4 @@ $xpdo_meta_map['rmSocialConnect']= array (
       ),
     ),
   ),
-  'aggregates' => 
-  array (
-    'Resource' => 
-    array (
-      'class' => 'modResource',
-      'local' => 'resource_id',
-      'foreign' => 'id',
-      'cardinality' => 'one',
-      'owner' => 'foreign',
-    ),
-    'User' => 
-    array (
-      'class' => 'modUser',
-      'local' => 'user_id',
-      'foreign' => 'id',
-      'cardinality' => 'one',
-      'owner' => 'foreign',
-    ),
-  ),
 );
