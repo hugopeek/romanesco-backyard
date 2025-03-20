@@ -1,5 +1,10 @@
 # Changelog for Romanesco Backyard
 
+## Backyard 1.0.0-beta23
+Released on ...
+
+- Collect structured data in central graph object (inside base class)
+
 ## Backyard 1.0.0-beta22
 Released on February 28, 2025
 

@@ -14,6 +14,8 @@ use Error;
 
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Symfony\Component\Process\Process;
+use Spatie\SchemaOrg\Schema;
+use Spatie\SchemaOrg\Graph;
 use CssLint\Linter;
 
 //use rmCrossLink;
@@ -44,6 +46,12 @@ class Romanesco
      * @var array $options
      */
     public $options = [];
+
+    /**
+     * Structured data
+     * @var array $structuredData
+     */
+    public $structuredData = [];
 
     /**
      * Romanesco constructor
@@ -80,6 +88,9 @@ class Romanesco
             'imagesUrl' => $assetsUrl . 'img/',
             'connectorUrl' => $assetsUrl . 'connector.php'
         ], $options);
+
+        // Collect structured data in central graph object
+        $this->structuredData = new Graph();
 
         $lexicon = $this->modx->getService('lexicon', 'modLexicon');
         $lexicon->load($this->namespace . ':default');
