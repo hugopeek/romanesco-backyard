@@ -1,9 +1,11 @@
 # Changelog for Romanesco Backyard
 
 ## Backyard 1.0.0-beta23
-Released on ...
+Released on March 23, 2025
 
+- Update configuration for RealFaviconGenerator Gulp task
 - Collect structured data in central graph object (inside base class)
+- Add schema.org generator with Composer
 
 ## Backyard 1.0.0-beta22
 Released on February 28, 2025
