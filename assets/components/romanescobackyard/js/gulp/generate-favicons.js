@@ -1,11 +1,10 @@
-var
-    realFavicon     = require ('gulp-real-favicon'),
-
+const
+    realFavicon     = require ('@realfavicongenerator/gulp-real-favicon'),
     gulp            = require('gulp'),
-    fs              = require('fs'),
-    argv            = require('yargs').argv,
-
-    // Set variables
+    fs         = require('fs'),
+    argv            = require('yargs').argv
+;
+let
     projectName     = argv.name ? argv.name             : 'Romanesco',
     projectRoot     = argv.root ? argv.root             : __dirname.split("assets").shift(),
     relativePath    = argv.rel ? argv.rel               : 'assets/favicons/',
@@ -20,72 +19,60 @@ var
 distPath += distPath.endsWith("/") ? "" : "/";
 
 // File where the result is stored
-var FAVICON_DATA_FILE = distPath + 'favicons.json';
+const FaviconDataFile = distPath + 'favicons.json';
 
 // Generate the icons. This task takes a few seconds to complete.
 // You should run it at least once to create the icons. Then,
-// you should run it whenever RealFaviconGenerator updates its
-// package (see the check-for-favicon-update task below).
+//  you should run it whenever RealFaviconGenerator updates its
+//  package (see the check-for-favicon-update task below).
 gulp.task('generate-favicon', function(done) {
     realFavicon.generateFavicon({
         masterPicture: masterPicture,
         dest: distPath,
         iconsPath: relativePath,
         design: {
-            ios: {
-                pictureAspect: 'backgroundAndMargin',
-                backgroundColor: '#' + backgroundColor,
-                margin: '14%',
-                assets: {
-                    ios6AndPriorIcons: false,
-                    ios7AndLaterIcons: false,
-                    precomposedIcons: false,
-                    declareOnlyDefaultIcon: true
+            "desktop": {
+                "darkIconTransformation": {
+                    "type": "none",
+                    "backgroundColor": backgroundColor,
+                    "backgroundRadius": 0.7,
+                    "imageScale": 0.7,
+                    "brightness": 1
                 },
-                appName: projectName
-            },
-            desktopBrowser: {},
-            windows: {
-                pictureAspect: 'whiteSilhouette',
-                backgroundColor: '#' + primaryColor,
-                onConflict: 'override',
-                assets: {
-                    windows80Ie10Tile: false,
-                    windows10Ie11EdgeTiles: {
-                        small: false,
-                        medium: true,
-                        big: false,
-                        rectangle: false
-                    }
-                },
-                appName: projectName
-            },
-            androidChrome: {
-                pictureAspect: 'noChange',
-                themeColor: '#' + backgroundColor,
-                manifest: {
-                    name: projectName,
-                    display: 'standalone',
-                    orientation: 'notSet',
-                    onConflict: 'override',
-                    declared: true
-                },
-                assets: {
-                    legacyIcon: false,
-                    lowResolutionIcons: false
+                "darkIconType": "none",
+                "regularIconTransformation": {
+                    "type": "none",
+                    "backgroundColor": backgroundColor,
+                    "backgroundRadius": 0.7,
+                    "imageScale": 0.7,
+                    "brightness": 1
                 }
             },
-            safariPinnedTab: {
-                pictureAspect: 'silhouette',
-                themeColor: '#' + secondaryColor
+            "touch": {
+                "transformation": {
+                    "type": "background",
+                    "backgroundColor": backgroundColor,
+                    "backgroundRadius": 0,
+                    "imageScale": 0.7,
+                    "brightness": 1
+                },
+                "appTitle": projectName,
+            },
+            "webAppManifest": {
+                "transformation": {
+                    "type": "background",
+                    "backgroundColor": backgroundColor,
+                    "backgroundRadius": 0,
+                    "imageScale": 0.7,
+                    "brightness": 1
+                },
+                "name": projectName,
+                "shortName": projectName,
+                "backgroundColor": backgroundColor,
+                "themeColor": primaryColor
             }
         },
-        settings: {
-            compression: 1,
-            scalingAlgorithm: 'Mitchell',
-            errorOnImageTooSmall: false
-        },
-        markupFile: FAVICON_DATA_FILE
+        markupFile: FaviconDataFile
     }, function() {
         done();
     });
@@ -96,7 +83,7 @@ gulp.task('generate-favicon', function(done) {
 // as is or refactor your existing HTML pipeline.
 gulp.task('inject-favicon-markups', function() {
     return gulp.src([ 'TODO: List of the HTML files where to inject favicon markups' ])
-        .pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code))
+        .pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FaviconDataFile)).favicon.html_code))
         .pipe(gulp.dest('TODO: Path to the directory where to store the HTML files'));
 });
 
