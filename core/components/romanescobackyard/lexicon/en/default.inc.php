@@ -125,6 +125,7 @@ $_lang['romanesco.patterns.preview_tooltip'] = 'Hide example';
 $_lang['romanesco.patterns.preview_not_available'] = 'No preview available';
 $_lang['romanesco.patterns.code_tooltip'] = 'View source';
 $_lang['romanesco.patterns.copy_tooltip'] = 'Copy code';
+$_lang['romanesco.patterns.favorite_tooltip'] = 'Add to favorites';
 $_lang['romanesco.patterns.comment_tooltip'] = 'Ask a question, suggest an edit or report a bug';
 $_lang['romanesco.patterns.connections_tooltip'] = 'Connected patterns';
 $_lang['romanesco.patterns.example_label'] = 'MODX';
