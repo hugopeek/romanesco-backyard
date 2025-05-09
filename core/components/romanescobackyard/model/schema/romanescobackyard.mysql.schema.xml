@@ -71,6 +71,7 @@
         <field key="description" dbtype="text" phptype="string" null="false" default="" />
 
         <field key="crosslink_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="true" default="" />
+        <field key="category" dbtype="varchar" precision="191" phptype="string" null="false" default="" />
         <field key="weight" dbtype="int" precision="10" phptype="integer" null="false" default="" />
 
         <field key="createdon" dbtype="int" precision="20" phptype="timestamp" null="false" default="" />
@@ -83,6 +84,9 @@
         <index alias="crosslink" name="crosslink" primary="false" unique="true" type="BTREE">
             <column key="source" length="" collation="A" null="false" />
             <column key="destination" length="" collation="A" null="false" />
+        </index>
+        <index alias="category" name="category" primary="false" unique="false" type="BTREE">
+            <column key="category" length="" collation="A" null="false" />
         </index>
 
         <aggregate alias="Source" class="modResource" local="source" foreign="id" cardinality="one" owner="foreign" />
@@ -99,6 +103,7 @@
         <field key="url" dbtype="varchar" precision="1000" phptype="string" null="true" />
         <field key="title" dbtype="varchar" precision="1000" phptype="string" null="false" default="" />
         <field key="description" dbtype="text" phptype="string" null="false" default="" />
+        <field key="category" dbtype="varchar" precision="191" phptype="string" null="false" default="" />
         <field key="date_accessed" dbtype="datetime" phptype="datetime" null="true" />
 
         <field key="createdon" dbtype="int" precision="20" phptype="timestamp" null="false" default="" />
@@ -109,6 +114,9 @@
 
         <index alias="resource_id" name="resource_id" primary="false" unique="false" type="BTREE">
             <column key="resource_id" length="" collation="A" null="false" />
+        </index>
+        <index alias="category" name="category" primary="false" unique="false" type="BTREE">
+            <column key="category" length="" collation="A" null="false" />
         </index>
 
         <aggregate alias="Resource" class="modResource" local="resource_id" foreign="id" cardinality="one" owner="foreign" />

@@ -1,5 +1,10 @@
 # Changelog for Romanesco Backyard
 
+## Backyard 1.0.0-beta24
+Released on ...
+
+- Add category field to cross-link and external link objects
+
 ## Backyard 1.0.0-beta23
 Released on March 23, 2025
 

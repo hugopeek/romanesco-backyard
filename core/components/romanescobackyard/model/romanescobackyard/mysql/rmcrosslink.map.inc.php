@@ -18,6 +18,7 @@ $xpdo_meta_map['rmCrossLink']= array (
     'title' => '',
     'description' => '',
     'crosslink_id' => 0,
+    'category' => '',
     'weight' => 0,
     'createdon' => 0,
     'createdby' => 0,
@@ -66,6 +67,14 @@ $xpdo_meta_map['rmCrossLink']= array (
       'phptype' => 'integer',
       'null' => true,
       'default' => 0,
+    ),
+    'category' => 
+    array (
+      'dbtype' => 'varchar',
+      'precision' => '191',
+      'phptype' => 'string',
+      'null' => false,
+      'default' => '',
     ),
     'weight' => 
     array (
@@ -123,6 +132,22 @@ $xpdo_meta_map['rmCrossLink']= array (
           'null' => false,
         ),
         'destination' => 
+        array (
+          'length' => '',
+          'collation' => 'A',
+          'null' => false,
+        ),
+      ),
+    ),
+    'category' => 
+    array (
+      'alias' => 'category',
+      'primary' => false,
+      'unique' => false,
+      'type' => 'BTREE',
+      'columns' => 
+      array (
+        'category' => 
         array (
           'length' => '',
           'collation' => 'A',

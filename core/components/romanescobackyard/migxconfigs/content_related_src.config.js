@@ -40,7 +40,7 @@
                         "allowBlank": "1",
                         "depth": "0",
                         "limitRelatedContext": "false",
-                        "where": "[{\"deleted:=\":\"0\"},{\"context_key:!=\":\"hub\"}]",
+                        "where": "[{\"deleted:=\":\"0\"},{\"context_key:NOT IN\":[\"[[++romanesco.link_exclude_contexts:replace=` ==`:replace=`,==\",\"`]]\"]}]",
                         "pageSize": "20"
                     },
                     "restrictive_condition": "",
@@ -86,6 +86,27 @@
                     "sourceFrom": "config",
                     "sources": "",
                     "inputOptionValues": "",
+                    "default": "",
+                    "useDefaultIfEmpty": "0",
+                    "pos": ""
+                },
+                {
+                    "MIGX_id": "",
+                    "field": "category",
+                    "caption": "Category",
+                    "description": "",
+                    "description_is_code": "0",
+                    "inputTV": "",
+                    "inputTVtype": "listbox",
+                    "validation": "",
+                    "configs": {
+                        "typeAhead": "false"
+                    },
+                    "restrictive_condition": "",
+                    "display": "",
+                    "sourceFrom": "config",
+                    "sources": "",
+                    "inputOptionValues": "@CHUNK tvSelectInputOption@LinkCategory",
                     "default": "",
                     "useDefaultIfEmpty": "0",
                     "pos": ""
@@ -308,6 +329,21 @@
             "renderchunktpl": "",
             "renderoptions": "",
             "editor": "this.textEditor"
+        },
+        {
+            "MIGX_id": "",
+            "header": "Category",
+            "dataIndex": "category",
+            "width": 50,
+            "sortable": true,
+            "show_in_grid": 1,
+            "customrenderer": "",
+            "renderer": "",
+            "clickaction": "",
+            "selectorconfig": "",
+            "renderchunktpl": "",
+            "renderoptions": "",
+            "editor": ""
         },
         {
             "MIGX_id": "",

@@ -18,6 +18,7 @@ $xpdo_meta_map['rmExternalLink']= array (
     'url' => NULL,
     'title' => '',
     'description' => '',
+    'category' => '',
     'date_accessed' => NULL,
     'createdon' => 0,
     'createdby' => 0,
@@ -60,6 +61,14 @@ $xpdo_meta_map['rmExternalLink']= array (
     'description' => 
     array (
       'dbtype' => 'text',
+      'phptype' => 'string',
+      'null' => false,
+      'default' => '',
+    ),
+    'category' => 
+    array (
+      'dbtype' => 'varchar',
+      'precision' => '191',
       'phptype' => 'string',
       'null' => false,
       'default' => '',
@@ -111,6 +120,22 @@ $xpdo_meta_map['rmExternalLink']= array (
       'columns' => 
       array (
         'resource_id' => 
+        array (
+          'length' => '',
+          'collation' => 'A',
+          'null' => false,
+        ),
+      ),
+    ),
+    'category' => 
+    array (
+      'alias' => 'category',
+      'primary' => false,
+      'unique' => false,
+      'type' => 'BTREE',
+      'columns' => 
+      array (
+        'category' => 
         array (
           'length' => '',
           'collation' => 'A',
