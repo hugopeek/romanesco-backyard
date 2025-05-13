@@ -1,8 +1,9 @@
 # Changelog for Romanesco Backyard
 
-## Backyard 1.0.0-beta24
+## Backyard 1.0.0-rc1
 Released on ...
 
+- MODX 3 compatibility
 - Add category field to cross-link and external link objects
 
 ## Backyard 1.0.0-beta23

@@ -1,1 +1,0 @@
-core/components/romanescobackyard/docs/readme.md

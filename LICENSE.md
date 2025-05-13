@@ -1,1 +1,0 @@
-core/components/romanescobackyard/docs/license.md
