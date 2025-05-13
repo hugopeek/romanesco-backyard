@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model package="romanescobackyard" baseClass="xPDOObject" platform="mysql" defaultEngine="InnoDB" phpdoc-package="romanescobackyard" version="1.1">
+<model package="FractalFarming\Romanesco" baseClass="xPDO\Om\xPDOObject" platform="mysql" defaultEngine="InnoDB" phpdoc-package="romanescobackyard" version="3.0">
 
     <!-- Tasks -->
-    <object class="rmTask" table="romanesco_tasks" extends="xPDOSimpleObject" inherit="single">
+    <object class="rmTask" table="romanesco_tasks" extends="xPDO\Om\xPDOSimpleObject" inherit="single">
         <field key="class_key" dbtype="varchar" precision="50" phptype="string" null="false" default="" index="index" />
         <field key="parent_id" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" default="" />
         <field key="user_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="" />
@@ -38,15 +38,15 @@
             <column key="status" length="" collation="A" null="false" />
         </index>
 
-        <aggregate alias="User" class="modUser" local="user_id" foreign="id" cardinality="one" owner="foreign" />
-        <aggregate alias="Author" class="modUser" local="createdby" foreign="id" cardinality="one" owner="foreign" />
-        <composite alias="Comments" class="rmTaskComment" local="id" foreign="task_id" cardinality="many" owner="local" />
+        <aggregate alias="User" class="MODX\Revolution\modUser" local="user_id" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Author" class="MODX\Revolution\modUser" local="createdby" foreign="id" cardinality="one" owner="foreign" />
+        <composite alias="Comments" class="FractalFarming\Romanesco\rmTaskComment" local="id" foreign="task_id" cardinality="many" owner="local" />
     </object>
-    <object class="rmTaskResource" extends="rmTask">
-        <aggregate alias="Resource" class="modResource" local="parent_id" foreign="id" cardinality="one" owner="foreign" />
+    <object class="rmTaskResource" extends="FractalFarming\Romanesco\rmTask">
+        <aggregate alias="Resource" class="MODX\Revolution\modResource" local="parent_id" foreign="id" cardinality="one" owner="foreign" />
     </object>
 
-    <object class="rmTaskComment" table="romanesco_task_comments" extends="xPDOSimpleObject">
+    <object class="rmTaskComment" table="romanesco_task_comments" extends="xPDO\Om\xPDOSimpleObject">
         <field key="task_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="" />
         <field key="content" dbtype="text" phptype="string" null="false" default="" />
         <field key="createdon" dbtype="int" precision="20" phptype="timestamp" null="false" default="" />
@@ -59,12 +59,12 @@
             <column key="task_id" length="" collation="A" null="false" />
         </index>
 
-        <aggregate alias="Task" class="rmTask" local="task_id" foreign="id" cardinality="one" owner="foreign" />
-        <aggregate alias="Author" class="modUser" local="createdby" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Task" class="FractalFarming\Romanesco\rmTask" local="task_id" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Author" class="MODX\Revolution\modUser" local="createdby" foreign="id" cardinality="one" owner="foreign" />
     </object>
 
     <!-- Crosslinks -->
-    <object class="rmCrossLink" table="romanesco_crosslinks" extends="xPDOSimpleObject">
+    <object class="rmCrossLink" table="romanesco_crosslinks" extends="xPDO\Om\xPDOSimpleObject">
         <field key="source" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="" />
         <field key="destination" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="" />
         <field key="title" dbtype="varchar" precision="191" phptype="string" null="false" default="" />
@@ -89,15 +89,15 @@
             <column key="category" length="" collation="A" null="false" />
         </index>
 
-        <aggregate alias="Source" class="modResource" local="source" foreign="id" cardinality="one" owner="foreign" />
-        <aggregate alias="Destination" class="modResource" local="destination" foreign="id" cardinality="one" owner="foreign" />
-        <composite alias="CrossLink" class="rmCrossLink" local="id" foreign="crosslink_id" cardinality="one" owner="local" />
-        <composite alias="CrossLink" class="rmCrossLink" local="crosslink_id" foreign="id" cardinality="one" owner="local" />
-        <aggregate alias="Author" class="modUser" local="createdby" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Source" class="MODX\Revolution\modResource" local="source" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Destination" class="MODX\Revolution\modResource" local="destination" foreign="id" cardinality="one" owner="foreign" />
+        <composite alias="CrossLink" class="FractalFarming\Romanesco\rmCrossLink" local="id" foreign="crosslink_id" cardinality="one" owner="local" />
+        <composite alias="CrossLink" class="FractalFarming\Romanesco\rmCrossLink" local="crosslink_id" foreign="id" cardinality="one" owner="local" />
+        <aggregate alias="Author" class="MODX\Revolution\modUser" local="createdby" foreign="id" cardinality="one" owner="foreign" />
     </object>
 
     <!-- External links -->
-    <object class="rmExternalLink" table="romanesco_external_links" extends="xPDOSimpleObject">
+    <object class="rmExternalLink" table="romanesco_external_links" extends="xPDO\Om\xPDOSimpleObject">
         <field key="resource_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="" />
         <field key="number" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
         <field key="url" dbtype="varchar" precision="1000" phptype="string" null="true" />
@@ -119,12 +119,12 @@
             <column key="category" length="" collation="A" null="false" />
         </index>
 
-        <aggregate alias="Resource" class="modResource" local="resource_id" foreign="id" cardinality="one" owner="foreign" />
-        <aggregate alias="Author" class="modUser" local="createdby" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Resource" class="MODX\Revolution\modResource" local="resource_id" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Author" class="MODX\Revolution\modUser" local="createdby" foreign="id" cardinality="one" owner="foreign" />
     </object>
 
     <!-- Social connections -->
-    <object class="rmSocialConnect" table="romanesco_social_connections" extends="xPDOSimpleObject" inherit="single">
+    <object class="rmSocialConnect" table="romanesco_social_connections" extends="xPDO\Om\xPDOSimpleObject" inherit="single">
         <field key="class_key" dbtype="varchar" precision="50" phptype="string" null="false" default="" index="index" />
         <field key="parent_id" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" default="" />
 
@@ -155,16 +155,16 @@
             <column key="pos" length="" collation="A" null="false" />
         </index>
     </object>
-    <object class="rmSocialConnectGlobal" extends="rmSocialConnect" />
-    <object class="rmSocialConnectResource" extends="rmSocialConnect">
-        <aggregate alias="Resource" class="modResource" local="parent_id" foreign="id" cardinality="one" owner="foreign" />
+    <object class="rmSocialConnectGlobal" extends="FractalFarming\Romanesco\rmSocialConnect" />
+    <object class="rmSocialConnectResource" extends="FractalFarming\Romanesco\rmSocialConnect">
+        <aggregate alias="Resource" class="MODX\Revolution\modResource" local="parent_id" foreign="id" cardinality="one" owner="foreign" />
     </object>
-    <object class="rmSocialConnectUser" extends="rmSocialConnect">
-        <aggregate alias="User" class="modUser" local="parent_id" foreign="id" cardinality="one" owner="foreign" />
+    <object class="rmSocialConnectUser" extends="FractalFarming\Romanesco\rmSocialConnect">
+        <aggregate alias="User" class="MODX\Revolution\modUser" local="parent_id" foreign="id" cardinality="one" owner="foreign" />
     </object>
 
     <!-- Social sharing links -->
-    <object class="rmSocialShare" table="romanesco_social_sharing" extends="xPDOSimpleObject">
+    <object class="rmSocialShare" table="romanesco_social_sharing" extends="xPDO\Om\xPDOSimpleObject">
         <field key="name" dbtype="varchar" precision="191" phptype="string" null="false" default="" />
         <field key="title" dbtype="varchar" precision="1000" phptype="string" null="false" default="" />
         <field key="url" dbtype="text" phptype="string" null="false" default="" />
@@ -189,7 +189,7 @@
     </object>
 
     <!-- Options -->
-    <object class="rmOption" table="romanesco_options" extends="xPDOSimpleObject">
+    <object class="rmOption" table="romanesco_options" extends="xPDO\Om\xPDOSimpleObject">
         <field key="name" dbtype="varchar" precision="190" phptype="string" null="false" default="" />
         <field key="description" dbtype="text" phptype="string" null="false" default="" />
         <field key="alias" dbtype="varchar" precision="190" phptype="string" null="false" default="" />
@@ -208,11 +208,11 @@
             <column key="pos" length="" collation="A" null="false" />
         </index>
 
-        <aggregate alias="Group" class="rmOptionGroup" local="key" foreign="key" cardinality="one" owner="foreign" />
+        <aggregate alias="Group" class="FractalFarming\Romanesco\rmOptionGroup" local="key" foreign="key" cardinality="one" owner="foreign" />
     </object>
 
     <!-- Option groups -->
-    <object class="rmOptionGroup" table="romanesco_option_groups" extends="xPDOSimpleObject">
+    <object class="rmOptionGroup" table="romanesco_option_groups" extends="xPDO\Om\xPDOSimpleObject">
         <field key="name" dbtype="varchar" precision="190" phptype="string" null="false" />
         <field key="description" dbtype="text" phptype="string" null="false" />
         <field key="key" dbtype="varchar" precision="190" phptype="string" null="true" default="" />
@@ -225,6 +225,6 @@
             <column key="pos" length="" collation="A" null="false" />
         </index>
 
-        <composite alias="Options" class="rmOption" local="key" foreign="key" cardinality="many" owner="local" />
+        <composite alias="Options" class="FractalFarming\Romanesco\rmOption" local="key" foreign="key" cardinality="many" owner="local" />
     </object>
 </model>
