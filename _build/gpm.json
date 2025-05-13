@@ -1,1 +1,103 @@
-config.json
+{
+    "name": "RomanescoBackyard",
+    "lowCaseName": "romanescobackyard",
+    "description": "Database tables, base class, manager customizations, translations and a task runner for Romanesco.",
+    "author": "Hugo Peek",
+    "version": "1.0.0-rc1",
+    "menus": [
+        {
+            "text": "romanesco.menu.clear_cache_all_title",
+            "description": "romanesco.menu.clear_cache_all_description",
+            "action": "",
+            "namespace": "romanescobackyard",
+            "parent": "manage",
+            "icon": "",
+            "menuIndex": 1,
+            "params": "",
+            "handler": "var partition = 'custom';\nvar topic = '/getcache/cache/partition/refresh/' + partition;\n\nthis.console = MODx.load({\n    xtype: 'modx-console',\n    register: 'mgr',\n    topic: topic,\n    show_filename: 0\n});\n\nthis.console.show(Ext.getBody());\n\nMODx.Ajax.request({\n    url: MODx.config.assets_url + 'components/getcache/connector.php',\n    params: {\n        action: 'cache/partition/refresh',\n        partitions: partition,\n        register: 'mgr',\n        topic: topic\n    },\n    listeners: {\n        'success': {\n            fn: function () {\n                this.console.fireEvent('complete');\n            }, scope: this\n        }\n    }\n});\n\nreturn false;",
+            "permissions": "empty_cache"
+        },{
+            "text": "romanesco.menu.clear_cache_overviews_title",
+            "description": "romanesco.menu.clear_cache_overviews_description",
+            "action": "",
+            "namespace": "romanescobackyard",
+            "parent": "romanesco.menu.clear_cache_all_title",
+            "icon": "",
+            "menuIndex": 1,
+            "params": "",
+            "handler": "var partition = 'custom/overviews';\nvar topic = '/getcache/cache/partition/refresh/' + partition;\n\nthis.console = MODx.load({\n    xtype: 'modx-console',\n    register: 'mgr',\n    topic: topic,\n    show_filename: 0\n});\n\nthis.console.show(Ext.getBody());\n\nMODx.Ajax.request({\n    url: MODx.config.assets_url + 'components/getcache/connector.php',\n    params: {\n        action: 'cache/partition/refresh',\n        partitions: partition,\n        register: 'mgr',\n        topic: topic\n    },\n    listeners: {\n        'success': {\n            fn: function () {\n                this.console.fireEvent('complete');\n            }, scope: this\n        }\n    }\n});\n\nreturn false;",
+            "permissions": "empty_cache"
+        },{
+            "text": "romanesco.menu.clear_cache_galleries_title",
+            "description": "romanesco.menu.clear_cache_galleries_description",
+            "action": "",
+            "namespace": "romanescobackyard",
+            "parent": "romanesco.menu.clear_cache_all_title",
+            "icon": "",
+            "menuIndex": 3,
+            "params": "",
+            "handler": "var partition = 'custom/galleries';\nvar topic = '/getcache/cache/partition/refresh/' + partition;\n\nthis.console = MODx.load({\n    xtype: 'modx-console',\n    register: 'mgr',\n    topic: topic,\n    show_filename: 0\n});\n\nthis.console.show(Ext.getBody());\n\nMODx.Ajax.request({\n    url: MODx.config.assets_url + 'components/getcache/connector.php',\n    params: {\n        action: 'cache/partition/refresh',\n        partitions: partition,\n        register: 'mgr',\n        topic: topic\n    },\n    listeners: {\n        'success': {\n            fn: function () {\n                this.console.fireEvent('complete');\n            }, scope: this\n        }\n    }\n});\n\nreturn false;",
+            "permissions": "empty_cache"
+        },{
+            "text": "romanesco.menu.clear_cache_patterns_title",
+            "description": "romanesco.menu.clear_cache_patterns_description",
+            "action": "",
+            "namespace": "romanescobackyard",
+            "parent": "romanesco.menu.clear_cache_all_title",
+            "icon": "",
+            "menuIndex": 8,
+            "params": "",
+            "handler": "var partition = 'patterns';\nvar topic = '/getcache/cache/partition/refresh/' + partition;\n\nthis.console = MODx.load({\n    xtype: 'modx-console',\n    register: 'mgr',\n    topic: topic,\n    show_filename: 0\n});\n\nthis.console.show(Ext.getBody());\n\nMODx.Ajax.request({\n    url: MODx.config.assets_url + 'components/getcache/connector.php',\n    params: {\n        action: 'cache/partition/refresh',\n        partitions: partition,\n        register: 'mgr',\n        topic: topic\n    },\n    listeners: {\n        'success': {\n            fn: function () {\n                this.console.fireEvent('complete');\n            }, scope: this\n        }\n    }\n});\n\nreturn false;",
+            "permissions": "empty_cache,namespaces"
+        },{
+            "text": "romanesco.menu.clear_cache_svg_title",
+            "description": "romanesco.menu.clear_cache_svg_description",
+            "action": "",
+            "namespace": "romanescobackyard",
+            "parent": "refresh_site",
+            "icon": "",
+            "menuIndex": 2,
+            "params": "",
+            "handler": "var partition = 'svgsanitizer';\nvar topic = '/getcache/cache/partition/refresh/' + partition;\n\nthis.console = MODx.load({\n    xtype: 'modx-console',\n    register: 'mgr',\n    topic: topic,\n    show_filename: 0\n});\n\nthis.console.show(Ext.getBody());\n\nMODx.Ajax.request({\n    url: MODx.config.assets_url + 'components/getcache/connector.php',\n    params: {\n        action: 'cache/partition/refresh',\n        partitions: partition,\n        register: 'mgr',\n        topic: topic\n    },\n    listeners: {\n        'success': {\n            fn: function () {\n                this.console.fireEvent('complete');\n            }, scope: this\n        }\n    }\n});\n\nreturn false;",
+            "permissions": "empty_cache,namespaces"
+        },{
+            "text": "romanesco.menu.project_data_title",
+            "description": "romanesco.menu.project_data_description",
+            "action": "index",
+            "namespace": "migx",
+            "parent": "manage",
+            "icon": "",
+            "menuIndex": 2,
+            "params": "&configs=input_option_groups:romanescobackyard||social_connections:romanescobackyard||social_sharing:romanescobackyard||content_related:romanescobackyard||external_links:romanescobackyard||tasks:romanescobackyard",
+            "handler": ""
+        }
+    ],
+    "database": {
+        "tables": [
+            "\\FractalFarming\\Romanesco\\rmTask",
+            "\\FractalFarming\\Romanesco\\rmTaskComment",
+            "\\FractalFarming\\Romanesco\\rmCrossLink",
+            "\\FractalFarming\\Romanesco\\rmExternalLink",
+            "\\FractalFarming\\Romanesco\\rmSocialConnect",
+            "\\FractalFarming\\Romanesco\\rmSocialShare",
+            "\\FractalFarming\\Romanesco\\rmOption",
+            "\\FractalFarming\\Romanesco\\rmOptionGroup"
+        ]
+    },
+    "build": {
+        "readme": "core/components/romanescobackyard/docs/readme.md",
+        "license": "core/components/romanescobackyard/docs/license.md",
+        "changelog": "core/components/romanescobackyard/docs/changelog.md",
+        "requires": {
+            "php": ">=8.2",
+            "modx": ">=3.1",
+            "htmlpagedom": ">=1.2"
+        },
+        "scriptsAfter": [
+            "composer.php",
+            "setresourceids.php",
+            "setinputoptions.php",
+            "synctables.php"
+        ]
+    }
+}
