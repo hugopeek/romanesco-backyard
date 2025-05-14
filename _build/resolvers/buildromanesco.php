@@ -10,6 +10,8 @@
  * @var xPDOObject $object
  */
 
+use FractalFarming\Romanesco\Romanesco;
+
 if ($object->xpdo)
 {
     switch ($options[xPDOTransport::PACKAGE_ACTION]) {

@@ -6,7 +6,7 @@
 
 namespace FractalFarming\Romanesco;
 
-use modX;
+use MODX\Revolution\modX;
 use RecursiveArrayIterator;
 use RecursiveIteratorIterator;
 use DateTime;
@@ -29,46 +29,28 @@ use CssLint\Linter;
 
 class Romanesco
 {
-    /**
-     * A reference to the modX instance
-     * @var modX $modx
-     */
+    /** @var modX $modx */
     public modX $modx;
 
-    /**
-     * The namespace
-     * @var string $namespace
-     */
+    /** @var string $namespace */
     public $namespace = 'romanescobackyard';
 
-    /**
-     * The class options
-     * @var array $options
-     */
-    public $options = [];
+    /** @var array $config */
+    public $config = [];
 
-    /**
-     * Structured data
-     * @var array $structuredData
-     */
+    /** @var array $structuredData */
     public $structuredData = [];
 
-    /**
-     * Romanesco constructor
-     *
-     * @param modX $modx A reference to the modX instance.
-     * @param array $options An array of configuration options. Optional.
-     */
-    function __construct(modX &$modx, array $options = [])
+    function __construct(modX &$modx, array $config = [])
     {
         $this->modx =& $modx;
-        $this->namespace = $this->getOption('namespace', $options, $this->namespace);
+        $this->namespace = $this->getOption('namespace', $config, $this->namespace);
 
-        $corePath = $this->getOption($this->namespace. '.core_path', $options, $this->modx->getOption('core_path', null, MODX_CORE_PATH) . 'components/' . $this->namespace . '/');
-        $assetsPath = $this->getOption($this->namespace . '.assets_path', $options, $this->modx->getOption('assets_path', null, MODX_ASSETS_PATH) . 'components/' . $this->namespace . '/');
-        $assetsUrl = $this->getOption($this->namespace . '.assets_url', $options, $this->modx->getOption('assets_url', null, MODX_ASSETS_URL) . 'components/' . $this->namespace . '/');
+        $corePath = $this->getOption('core_path', $config, $this->modx->getOption('core_path', null, MODX_CORE_PATH) . 'components/' . $this->namespace . '/');
+        $assetsPath = $this->getOption('assets_path', $config, $this->modx->getOption('assets_path', null, MODX_ASSETS_PATH) . 'components/' . $this->namespace . '/');
+        $assetsUrl = $this->getOption('assets_url', $config, $this->modx->getOption('assets_url', null, MODX_ASSETS_URL) . 'components/' . $this->namespace . '/');
 
-        $this->options = array_merge([
+        $this->config = array_merge([
             'namespace' => $this->namespace,
             'corePath' => $corePath,
             'modelPath' => $corePath . 'model/',
@@ -87,15 +69,14 @@ class Romanesco
             'cssUrl' => $assetsUrl . 'css/',
             'imagesUrl' => $assetsUrl . 'img/',
             'connectorUrl' => $assetsUrl . 'connector.php'
-        ], $options);
+        ], $config);
+
+        $this->modx->lexicon->load($this->namespace . ':default');
+
+        //$this->modx->addPackage($this->namespace, $this->getOption('modelPath'));
 
         // Collect structured data in central graph object
         $this->structuredData = new Graph();
-
-        $lexicon = $this->modx->getService('lexicon', 'modLexicon');
-        $lexicon->load($this->namespace . ':default');
-
-        $this->modx->addPackage($this->namespace, $this->getOption('modelPath'));
     }
 
     /**
@@ -105,18 +86,19 @@ class Romanesco
      * @param array $options An array of options that override local options.
      * @param mixed $default The default value returned if the option is not found locally or as a
      * namespaced system setting; by default this value is null.
+     *
      * @return mixed The option value or the default value specified.
      */
-    public function getOption($key, $options = [], $default = null)
+    public function getOption(string $key, $options = [], $default = null)
     {
         $option = $default;
         if (!empty($key) && is_string($key)) {
             if ($options != null && array_key_exists($key, $options)) {
                 $option = $options[$key];
-            } elseif (array_key_exists($key, $this->options)) {
-                $option = $this->options[$key];
-            } elseif (array_key_exists("$this->namespace.$key", $this->modx->config)) {
-                $option = $this->modx->getOption("$this->namespace.$key");
+            } elseif (array_key_exists($key, $this->config)) {
+                $option = $this->config[$key];
+            } elseif (array_key_exists("{$this->namespace}.{$key}", $this->modx->config)) {
+                $option = $this->modx->getOption("{$this->namespace}.{$key}");
             }
         }
         return $option;

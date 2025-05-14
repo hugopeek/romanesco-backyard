@@ -9,6 +9,8 @@
  * @var xPDOObject $object
  */
 
+use MODX\Revolution\modX;
+use xPDO\Transport\xPDOTransport;
 use Composer\Console\HtmlOutputFormatter;
 use Composer\Factory;
 use Composer\Installer;
