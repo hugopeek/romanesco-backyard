@@ -9,7 +9,7 @@ class rmTaskResource extends \FractalFarming\Romanesco\Model\rmTaskResource
     public static $metaMap = array (
         'package' => 'FractalFarming\\Romanesco\\Model',
         'version' => '3.0',
-        'extends' => 'FractalFarming\\Romanesco\\rmTask',
+        'extends' => 'FractalFarming\\Romanesco\\Model\\rmTask',
         'tableMeta' => 
         array (
             'engine' => 'InnoDB',

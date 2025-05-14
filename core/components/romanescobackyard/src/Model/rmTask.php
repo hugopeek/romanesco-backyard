@@ -23,7 +23,7 @@ use xPDO\xPDO;
  * @property integer $createdby
  * @property boolean $deleted
  *
- * @property \FractalFarming\Romanesco\rmTaskComment[] $Comments
+ * @property \FractalFarming\Romanesco\Model\rmTaskComment[] $Comments
  *
  * @package FractalFarming\Romanesco\Model
  */

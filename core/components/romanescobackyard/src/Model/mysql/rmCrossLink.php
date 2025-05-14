@@ -162,13 +162,21 @@ class rmCrossLink extends \FractalFarming\Romanesco\Model\rmCrossLink
         ),
         'composites' => 
         array (
-            'CrossLink' => 
+            'CrossLinkTo' => 
             array (
-                'class' => 'FractalFarming\\Romanesco\\rmCrossLink',
+                'class' => 'FractalFarming\\Romanesco\\Model\\rmCrossLink',
+                'local' => 'id',
+                'foreign' => 'crosslink_id',
+                'cardinality' => 'one',
+                'owner' => 'local',
+            ),
+            'CrossLinkFrom' => 
+            array (
+                'class' => 'FractalFarming\\Romanesco\\Model\\rmCrossLink',
                 'local' => 'crosslink_id',
                 'foreign' => 'id',
                 'cardinality' => 'one',
-                'owner' => 'local',
+                'owner' => 'foreign',
             ),
         ),
         'aggregates' => 

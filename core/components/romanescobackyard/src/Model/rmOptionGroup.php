@@ -12,7 +12,7 @@ use xPDO\xPDO;
  * @property integer $pos
  * @property boolean $deleted
  *
- * @property \FractalFarming\Romanesco\rmOption[] $Options
+ * @property \FractalFarming\Romanesco\Model\rmOption[] $Options
  *
  * @package FractalFarming\Romanesco\Model
  */

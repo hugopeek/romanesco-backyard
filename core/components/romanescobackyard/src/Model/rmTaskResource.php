@@ -9,6 +9,6 @@ use xPDO\xPDO;
  *
  * @package FractalFarming\Romanesco\Model
  */
-class rmTaskResource extends \FractalFarming\Romanesco\rmTask
+class rmTaskResource extends \FractalFarming\Romanesco\Model\rmTask
 {
 }

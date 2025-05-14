@@ -16,11 +16,11 @@ $xpdo_meta_map = array (
             6 => 'FractalFarming\\Romanesco\\Model\\rmOption',
             7 => 'FractalFarming\\Romanesco\\Model\\rmOptionGroup',
         ),
-        'FractalFarming\\Romanesco\\rmTask' => 
+        'FractalFarming\\Romanesco\\Model\\rmTask' => 
         array (
             0 => 'FractalFarming\\Romanesco\\Model\\rmTaskResource',
         ),
-        'FractalFarming\\Romanesco\\rmSocialConnect' => 
+        'FractalFarming\\Romanesco\\Model\\rmSocialConnect' => 
         array (
             0 => 'FractalFarming\\Romanesco\\Model\\rmSocialConnectGlobal',
             1 => 'FractalFarming\\Romanesco\\Model\\rmSocialConnectResource',

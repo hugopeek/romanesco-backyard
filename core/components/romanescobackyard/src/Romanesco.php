@@ -53,14 +53,13 @@ class Romanesco
         $this->config = array_merge([
             'namespace' => $this->namespace,
             'corePath' => $corePath,
-            'modelPath' => $corePath . 'model/',
+            'modelPath' => $corePath . 'src/Model/',
             'vendorPath' => $corePath . 'vendor/',
             'chunksPath' => $corePath . 'elements/chunks/',
-            'pagesPath' => $corePath . 'elements/pages/',
             'snippetsPath' => $corePath . 'elements/snippets/',
             'pluginsPath' => $corePath . 'elements/plugins/',
-            'controllersPath' => $corePath . 'controllers/',
-            'processorsPath' => $corePath . 'processors/',
+            'controllersPath' => $corePath . 'src/Controllers/',
+            'processorsPath' => $corePath . 'src/Processors/',
             'templatesPath' => $corePath . 'templates/',
             'cachePath' => $this->modx->getOption('core_path') . 'cache/',
             'assetsPath' => $assetsPath,
@@ -71,12 +70,10 @@ class Romanesco
             'connectorUrl' => $assetsUrl . 'connector.php'
         ], $config);
 
-        $this->modx->lexicon->load($this->namespace . ':default');
-
         //$this->modx->addPackage($this->namespace, $this->getOption('modelPath'));
 
         // Collect structured data in central graph object
-        $this->structuredData = new Graph();
+        //$this->structuredData = new Graph();
     }
 
     /**

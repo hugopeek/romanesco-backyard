@@ -40,7 +40,7 @@ class rmTask extends \FractalFarming\Romanesco\Model\rmTask
             'class_key' => 
             array (
                 'dbtype' => 'varchar',
-                'precision' => '50',
+                'precision' => '191',
                 'phptype' => 'string',
                 'null' => false,
                 'default' => '',
@@ -225,7 +225,7 @@ class rmTask extends \FractalFarming\Romanesco\Model\rmTask
         array (
             'Comments' => 
             array (
-                'class' => 'FractalFarming\\Romanesco\\rmTaskComment',
+                'class' => 'FractalFarming\\Romanesco\\Model\\rmTaskComment',
                 'local' => 'id',
                 'foreign' => 'task_id',
                 'cardinality' => 'many',

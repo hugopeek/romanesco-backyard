@@ -40,7 +40,7 @@
                     "sourceFrom": "config",
                     "sources": "",
                     "inputOptionValues": "",
-                    "default": "rmSocialConnectResource",
+                    "default": "FractalFarming\\Romanesco\\Model\\rmSocialConnectResource",
                     "useDefaultIfEmpty": 1,
                     "pos": ""
                 },
@@ -256,7 +256,7 @@
         "join_alias": "",
         "has_jointable": "yes",
         "getlistwhere": {
-            "class_key": "rmSocialConnectResource",
+            "class_key": "FractalFarming\\Romanesco\\Model\\rmSocialConnectResource",
             "parent_id": "[[+resource_id]]"
         },
         "joins": "",

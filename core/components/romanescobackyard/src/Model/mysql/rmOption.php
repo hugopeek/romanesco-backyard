@@ -128,7 +128,7 @@ class rmOption extends \FractalFarming\Romanesco\Model\rmOption
         array (
             'Group' => 
             array (
-                'class' => 'FractalFarming\\Romanesco\\rmOptionGroup',
+                'class' => 'FractalFarming\\Romanesco\\Model\\rmOptionGroup',
                 'local' => 'key',
                 'foreign' => 'key',
                 'cardinality' => 'one',

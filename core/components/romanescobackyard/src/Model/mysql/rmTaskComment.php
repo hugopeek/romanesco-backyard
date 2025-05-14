@@ -94,7 +94,7 @@ class rmTaskComment extends \FractalFarming\Romanesco\Model\rmTaskComment
         array (
             'Task' => 
             array (
-                'class' => 'FractalFarming\\Romanesco\\rmTask',
+                'class' => 'FractalFarming\\Romanesco\\Model\\rmTask',
                 'local' => 'task_id',
                 'foreign' => 'id',
                 'cardinality' => 'one',

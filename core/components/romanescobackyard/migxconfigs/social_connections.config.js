@@ -40,7 +40,7 @@
                     "sourceFrom": "config",
                     "sources": "",
                     "inputOptionValues": "",
-                    "default": "rmSocialConnect",
+                    "default": "FractalFarming\\Romanesco\\Model\\rmSocialConnect",
                     "useDefaultIfEmpty": 1,
                     "pos": ""
                 },
@@ -429,7 +429,7 @@
             "renderer": "this.renderChunk",
             "clickaction": "",
             "selectorconfig": "",
-            "renderchunktpl": "[[+class_key:stripString=`rmSocialConnect`:is=`Resource`:then=`<a href='?a=resource/update&id=[[+parent_id]]'>Resource</a>`:else=``]][[+class_key:stripString=`rmSocialConnect`:is=`User`:then=`<a href='?a=security/user/update&id=[[+parent_id]]'>User</a>`:else=``]]",
+            "renderchunktpl": "[[+class_key:stripString=`FractalFarming\\Romanesco\\Model\\rmSocialConnect`:is=`Resource`:then=`<a href='?a=resource/update&id=[[+parent_id]]'>Resource</a>`:else=``]][[+class_key:stripString=`FractalFarming\\Romanesco\\Model\\rmSocialConnect`:is=`User`:then=`<a href='?a=security/user/update&id=[[+parent_id]]'>User</a>`:else=``]]",
             "renderoptions": "",
             "editor": ""
         },

@@ -40,7 +40,7 @@
                     "sourceFrom": "config",
                     "sources": "",
                     "inputOptionValues": "",
-                    "default": "rmTask",
+                    "default": "FractalFarming\\Romanesco\\Model\\rmTask",
                     "useDefaultIfEmpty": 1,
                     "pos": ""
                 },
@@ -491,7 +491,7 @@
             "renderer": "this.renderChunk",
             "clickaction": "",
             "selectorconfig": "",
-            "renderchunktpl": "[[migxLoopCollection?\n&packageName=`romanescobackyard`\n&classname=`rmTaskComment`\n&where=`{\"task_id\":\"[[+id]]\"}`\n&tpl=`@CODE: [[+total]]`\n&limit=`1`\n]]",
+            "renderchunktpl": "[[migxLoopCollection?\n&packageName=`romanescobackyard`\n&classname=`FractalFarming\\Romanesco\\Model\\rmTaskComment`\n&where=`{\"task_id\":\"[[+id]]\"}`\n&tpl=`@CODE: [[+total]]`\n&limit=`1`\n]]",
             "renderoptions": "",
             "editor": ""
         },

@@ -35,7 +35,7 @@ class rmSocialConnect extends \FractalFarming\Romanesco\Model\rmSocialConnect
             'class_key' => 
             array (
                 'dbtype' => 'varchar',
-                'precision' => '50',
+                'precision' => '191',
                 'phptype' => 'string',
                 'null' => false,
                 'default' => '',

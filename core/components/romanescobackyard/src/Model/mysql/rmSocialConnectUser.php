@@ -9,7 +9,7 @@ class rmSocialConnectUser extends \FractalFarming\Romanesco\Model\rmSocialConnec
     public static $metaMap = array (
         'package' => 'FractalFarming\\Romanesco\\Model',
         'version' => '3.0',
-        'extends' => 'FractalFarming\\Romanesco\\rmSocialConnect',
+        'extends' => 'FractalFarming\\Romanesco\\Model\\rmSocialConnect',
         'tableMeta' => 
         array (
             'engine' => 'InnoDB',

@@ -40,7 +40,7 @@
                     "sourceFrom": "config",
                     "sources": "",
                     "inputOptionValues": "",
-                    "default": "rmTaskResource",
+                    "default": "FractalFarming\\Romanesco\\Model\\rmTaskResource",
                     "useDefaultIfEmpty": 1,
                     "pos": ""
                 },
@@ -304,7 +304,7 @@
         "join_alias": "",
         "has_jointable": "yes",
         "getlistwhere": {
-            "class_key": "rmTaskResource",
+            "class_key": "FractalFarming\\Romanesco\\Model\\rmTaskResource",
             "parent_id": "[[+resource_id]]"
         },
         "joins": [
@@ -457,7 +457,7 @@
             "renderer": "this.renderChunk",
             "clickaction": "",
             "selectorconfig": "",
-            "renderchunktpl": "[[migxLoopCollection?\n&packageName=`romanescobackyard`\n&classname=`rmTaskComment`\n&where=`{\"task_id\":\"[[+id]]\"}`\n&tpl=`@CODE: [[+total]]`\n&limit=`1`\n]]",
+            "renderchunktpl": "[[migxLoopCollection?\n&packageName=`romanescobackyard`\n&classname=`FractalFarming\\Romanesco\\Model\\rmTaskComment`\n&where=`{\"task_id\":\"[[+id]]\"}`\n&tpl=`@CODE: [[+total]]`\n&limit=`1`\n]]",
             "renderoptions": "",
             "editor": ""
         },

@@ -17,7 +17,8 @@ use xPDO\xPDO;
  * @property integer $createdby
  * @property boolean $deleted
  *
- * @property \FractalFarming\Romanesco\rmCrossLink $CrossLink
+ * @property \FractalFarming\Romanesco\Model\rmCrossLink $CrossLinkTo
+ * @property \FractalFarming\Romanesco\Model\rmCrossLink $CrossLinkFrom
  *
  * @package FractalFarming\Romanesco\Model
  */

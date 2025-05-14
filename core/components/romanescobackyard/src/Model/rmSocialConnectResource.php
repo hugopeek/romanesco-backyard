@@ -9,6 +9,6 @@ use xPDO\xPDO;
  *
  * @package FractalFarming\Romanesco\Model
  */
-class rmSocialConnectResource extends \FractalFarming\Romanesco\rmSocialConnect
+class rmSocialConnectResource extends \FractalFarming\Romanesco\Model\rmSocialConnect
 {
 }
