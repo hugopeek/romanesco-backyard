@@ -313,7 +313,7 @@
         "extrahandlers": "",
         "filtersperrow": 4,
         "packageName": "romanescobackyard",
-        "classname": "rmTask",
+        "classname": "FractalFarming\\Romanesco\\Model\\rmTask",
         "task": "",
         "getlistsort": "createdon",
         "getlistsortdir": "DESC",

@@ -285,7 +285,7 @@
         "extrahandlers": "this.handleColumnSwitch",
         "filtersperrow": 4,
         "packageName": "romanescobackyard",
-        "classname": "rmSocialConnect",
+        "classname": "FractalFarming\\Romanesco\\Model\\rmSocialConnect",
         "task": "",
         "getlistsort": "pos",
         "getlistsortdir": "ASC",
