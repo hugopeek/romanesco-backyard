@@ -1,15 +1,15 @@
 <?php
-namespace FractalFarming\Romanesco\Model\mysql;
+namespace FractalFarming\Romanesco\mysql;
 
 use xPDO\xPDO;
 
-class rmExternalLink extends \FractalFarming\Romanesco\Model\rmExternalLink
+class rmSocialShare extends \FractalFarming\Romanesco\rmSocialShare
 {
 
     public static $metaMap = array (
-        'package' => 'FractalFarming\\Romanesco\\Model',
+        'package' => 'FractalFarming\\Romanesco',
         'version' => '3.0',
-        'table' => 'romanesco_external_links',
+        'table' => 'romanesco_social_sharing',
         'extends' => 'xPDO\\Om\\xPDOSimpleObject',
         'tableMeta' => 
         array (
@@ -17,42 +17,24 @@ class rmExternalLink extends \FractalFarming\Romanesco\Model\rmExternalLink
         ),
         'fields' => 
         array (
-            'resource_id' => 0,
-            'number' => 0,
-            'url' => NULL,
+            'name' => '',
             'title' => '',
-            'description' => '',
-            'category' => '',
-            'date_accessed' => NULL,
-            'createdon' => 0,
-            'createdby' => 0,
+            'url' => '',
+            'icon' => '',
+            'context' => '',
+            'active' => 1,
+            'pos' => 0,
             'deleted' => 0,
         ),
         'fieldMeta' => 
         array (
-            'resource_id' => 
-            array (
-                'dbtype' => 'int',
-                'precision' => '11',
-                'attributes' => 'unsigned',
-                'phptype' => 'integer',
-                'null' => false,
-                'default' => 0,
-            ),
-            'number' => 
-            array (
-                'dbtype' => 'int',
-                'precision' => '10',
-                'phptype' => 'integer',
-                'null' => false,
-                'default' => 0,
-            ),
-            'url' => 
+            'name' => 
             array (
                 'dbtype' => 'varchar',
-                'precision' => '1000',
+                'precision' => '191',
                 'phptype' => 'string',
-                'null' => true,
+                'null' => false,
+                'default' => '',
             ),
             'title' => 
             array (
@@ -62,14 +44,14 @@ class rmExternalLink extends \FractalFarming\Romanesco\Model\rmExternalLink
                 'null' => false,
                 'default' => '',
             ),
-            'description' => 
+            'url' => 
             array (
                 'dbtype' => 'text',
                 'phptype' => 'string',
                 'null' => false,
                 'default' => '',
             ),
-            'category' => 
+            'icon' => 
             array (
                 'dbtype' => 'varchar',
                 'precision' => '191',
@@ -77,21 +59,24 @@ class rmExternalLink extends \FractalFarming\Romanesco\Model\rmExternalLink
                 'null' => false,
                 'default' => '',
             ),
-            'date_accessed' => 
+            'context' => 
             array (
-                'dbtype' => 'datetime',
-                'phptype' => 'datetime',
-                'null' => true,
-            ),
-            'createdon' => 
-            array (
-                'dbtype' => 'int',
-                'precision' => '20',
-                'phptype' => 'timestamp',
+                'dbtype' => 'varchar',
+                'precision' => '191',
+                'phptype' => 'string',
                 'null' => false,
-                'default' => 0,
+                'default' => '',
             ),
-            'createdby' => 
+            'active' => 
+            array (
+                'dbtype' => 'tinyint',
+                'precision' => '1',
+                'attributes' => 'unsigned',
+                'phptype' => 'boolean',
+                'null' => false,
+                'default' => 1,
+            ),
+            'pos' => 
             array (
                 'dbtype' => 'int',
                 'precision' => '10',
@@ -111,19 +96,19 @@ class rmExternalLink extends \FractalFarming\Romanesco\Model\rmExternalLink
         ),
         'fieldAliases' => 
         array (
-            'author_id' => 'createdby',
+            'position' => 'pos',
         ),
         'indexes' => 
         array (
-            'resource_id' => 
+            'context' => 
             array (
-                'alias' => 'resource_id',
+                'alias' => 'context',
                 'primary' => false,
                 'unique' => false,
                 'type' => 'BTREE',
                 'columns' => 
                 array (
-                    'resource_id' => 
+                    'context' => 
                     array (
                         'length' => '',
                         'collation' => 'A',
@@ -131,15 +116,15 @@ class rmExternalLink extends \FractalFarming\Romanesco\Model\rmExternalLink
                     ),
                 ),
             ),
-            'category' => 
+            'active' => 
             array (
-                'alias' => 'category',
+                'alias' => 'active',
                 'primary' => false,
                 'unique' => false,
                 'type' => 'BTREE',
                 'columns' => 
                 array (
-                    'category' => 
+                    'active' => 
                     array (
                         'length' => '',
                         'collation' => 'A',
@@ -147,24 +132,21 @@ class rmExternalLink extends \FractalFarming\Romanesco\Model\rmExternalLink
                     ),
                 ),
             ),
-        ),
-        'aggregates' => 
-        array (
-            'Resource' => 
+            'pos' => 
             array (
-                'class' => 'MODX\\Revolution\\modResource',
-                'local' => 'resource_id',
-                'foreign' => 'id',
-                'cardinality' => 'one',
-                'owner' => 'foreign',
-            ),
-            'Author' => 
-            array (
-                'class' => 'MODX\\Revolution\\modUser',
-                'local' => 'createdby',
-                'foreign' => 'id',
-                'cardinality' => 'one',
-                'owner' => 'foreign',
+                'alias' => 'pos',
+                'primary' => false,
+                'unique' => false,
+                'type' => 'BTREE',
+                'columns' => 
+                array (
+                    'pos' => 
+                    array (
+                        'length' => '',
+                        'collation' => 'A',
+                        'null' => false,
+                    ),
+                ),
             ),
         ),
     );

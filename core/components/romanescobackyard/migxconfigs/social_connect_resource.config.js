@@ -40,7 +40,7 @@
                     "sourceFrom": "config",
                     "sources": "",
                     "inputOptionValues": "",
-                    "default": "FractalFarming\\Romanesco\\Model\\rmSocialConnectResource",
+                    "default": "FractalFarming\\Romanesco\\rmSocialConnectResource",
                     "useDefaultIfEmpty": 1,
                     "pos": ""
                 },
@@ -241,7 +241,7 @@
         "extrahandlers": "this.handleColumnSwitch",
         "filtersperrow": 4,
         "packageName": "romanescobackyard",
-        "classname": "FractalFarming\\Romanesco\\Model\\rmSocialConnect",
+        "classname": "FractalFarming\\Romanesco\\rmSocialConnect",
         "task": "",
         "getlistsort": "pos",
         "getlistsortdir": "ASC",
@@ -256,7 +256,7 @@
         "join_alias": "",
         "has_jointable": "yes",
         "getlistwhere": {
-            "class_key": "FractalFarming\\Romanesco\\Model\\rmSocialConnectResource",
+            "class_key": "FractalFarming\\Romanesco\\rmSocialConnectResource",
             "parent_id": "[[+resource_id]]"
         },
         "joins": "",

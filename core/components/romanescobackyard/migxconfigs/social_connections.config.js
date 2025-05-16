@@ -40,7 +40,7 @@
                     "sourceFrom": "config",
                     "sources": "",
                     "inputOptionValues": "",
-                    "default": "FractalFarming\\Romanesco\\Model\\rmSocialConnect",
+                    "default": "FractalFarming\\Romanesco\\rmSocialConnect",
                     "useDefaultIfEmpty": 1,
                     "pos": ""
                 },
@@ -285,7 +285,7 @@
         "extrahandlers": "this.handleColumnSwitch",
         "filtersperrow": 4,
         "packageName": "romanescobackyard",
-        "classname": "FractalFarming\\Romanesco\\Model\\rmSocialConnect",
+        "classname": "FractalFarming\\Romanesco\\rmSocialConnect",
         "task": "",
         "getlistsort": "pos",
         "getlistsortdir": "ASC",
@@ -429,7 +429,7 @@
             "renderer": "this.renderChunk",
             "clickaction": "",
             "selectorconfig": "",
-            "renderchunktpl": "[[+class_key:stripString=`FractalFarming\\Romanesco\\Model\\rmSocialConnect`:is=`Resource`:then=`<a href='?a=resource/update&id=[[+parent_id]]'>Resource</a>`:else=``]][[+class_key:stripString=`FractalFarming\\Romanesco\\Model\\rmSocialConnect`:is=`User`:then=`<a href='?a=security/user/update&id=[[+parent_id]]'>User</a>`:else=``]]",
+            "renderchunktpl": "[[+class_key:stripString=`FractalFarming\\Romanesco\\rmSocialConnect`:is=`Resource`:then=`<a href='?a=resource/update&id=[[+parent_id]]'>Resource</a>`:else=``]][[+class_key:stripString=`FractalFarming\\Romanesco\\rmSocialConnect`:is=`User`:then=`<a href='?a=security/user/update&id=[[+parent_id]]'>User</a>`:else=``]]",
             "renderoptions": "",
             "editor": ""
         },

@@ -1,15 +1,15 @@
 <?php
-namespace FractalFarming\Romanesco\Model\mysql;
+namespace FractalFarming\Romanesco\mysql;
 
 use xPDO\xPDO;
 
-class rmTaskResource extends \FractalFarming\Romanesco\Model\rmTaskResource
+class rmTaskResource extends \FractalFarming\Romanesco\rmTaskResource
 {
 
     public static $metaMap = array (
-        'package' => 'FractalFarming\\Romanesco\\Model',
+        'package' => 'FractalFarming\\Romanesco',
         'version' => '3.0',
-        'extends' => 'FractalFarming\\Romanesco\\Model\\rmTask',
+        'extends' => 'FractalFarming\\Romanesco\\rmTask',
         'tableMeta' => 
         array (
             'engine' => 'InnoDB',

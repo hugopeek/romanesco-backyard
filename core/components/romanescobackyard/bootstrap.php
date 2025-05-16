@@ -14,5 +14,5 @@ if (!$modx->services->has('romanesco')) {
     });
 
     // Load packages model
-    $modx->addPackage('FractalFarming\Romanesco\Model', $namespace['path'] . 'src/', null, 'FractalFarming\Romanesco\\');
+    $modx->addPackage('FractalFarming\Romanesco', $namespace['path'] . 'src/', null, 'FractalFarming\Romanesco\\');
 }

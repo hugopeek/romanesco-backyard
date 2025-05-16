@@ -1,15 +1,15 @@
 <?php
-namespace FractalFarming\Romanesco\Model\mysql;
+namespace FractalFarming\Romanesco\mysql;
 
 use xPDO\xPDO;
 
-class rmSocialConnectResource extends \FractalFarming\Romanesco\Model\rmSocialConnectResource
+class rmSocialConnectResource extends \FractalFarming\Romanesco\rmSocialConnectResource
 {
 
     public static $metaMap = array (
-        'package' => 'FractalFarming\\Romanesco\\Model',
+        'package' => 'FractalFarming\\Romanesco',
         'version' => '3.0',
-        'extends' => 'FractalFarming\\Romanesco\\Model\\rmSocialConnect',
+        'extends' => 'FractalFarming\\Romanesco\\rmSocialConnect',
         'tableMeta' => 
         array (
             'engine' => 'InnoDB',

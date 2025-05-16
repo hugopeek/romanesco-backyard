@@ -1,15 +1,15 @@
 <?php
-namespace FractalFarming\Romanesco\Model\mysql;
+namespace FractalFarming\Romanesco\mysql;
 
 use xPDO\xPDO;
 
-class rmOptionGroup extends \FractalFarming\Romanesco\Model\rmOptionGroup
+class rmOption extends \FractalFarming\Romanesco\rmOption
 {
 
     public static $metaMap = array (
-        'package' => 'FractalFarming\\Romanesco\\Model',
+        'package' => 'FractalFarming\\Romanesco',
         'version' => '3.0',
-        'table' => 'romanesco_option_groups',
+        'table' => 'romanesco_options',
         'extends' => 'xPDO\\Om\\xPDOSimpleObject',
         'tableMeta' => 
         array (
@@ -17,8 +17,10 @@ class rmOptionGroup extends \FractalFarming\Romanesco\Model\rmOptionGroup
         ),
         'fields' => 
         array (
-            'name' => NULL,
-            'description' => NULL,
+            'name' => '',
+            'description' => '',
+            'alias' => '',
+            'group' => NULL,
             'key' => '',
             'pos' => 0,
             'deleted' => 0,
@@ -31,12 +33,30 @@ class rmOptionGroup extends \FractalFarming\Romanesco\Model\rmOptionGroup
                 'precision' => '190',
                 'phptype' => 'string',
                 'null' => false,
+                'default' => '',
             ),
             'description' => 
             array (
                 'dbtype' => 'text',
                 'phptype' => 'string',
                 'null' => false,
+                'default' => '',
+            ),
+            'alias' => 
+            array (
+                'dbtype' => 'varchar',
+                'precision' => '190',
+                'phptype' => 'string',
+                'null' => false,
+                'default' => '',
+            ),
+            'group' => 
+            array (
+                'dbtype' => 'int',
+                'precision' => '10',
+                'attributes' => 'unsigned',
+                'phptype' => 'integer',
+                'null' => true,
             ),
             'key' => 
             array (
@@ -66,10 +86,27 @@ class rmOptionGroup extends \FractalFarming\Romanesco\Model\rmOptionGroup
         ),
         'fieldAliases' => 
         array (
+            'parent' => 'group',
             'position' => 'pos',
         ),
         'indexes' => 
         array (
+            'key' => 
+            array (
+                'alias' => 'key',
+                'primary' => false,
+                'unique' => false,
+                'type' => 'BTREE',
+                'columns' => 
+                array (
+                    'key' => 
+                    array (
+                        'length' => '',
+                        'collation' => 'A',
+                        'null' => false,
+                    ),
+                ),
+            ),
             'pos' => 
             array (
                 'alias' => 'pos',
@@ -87,15 +124,15 @@ class rmOptionGroup extends \FractalFarming\Romanesco\Model\rmOptionGroup
                 ),
             ),
         ),
-        'composites' => 
+        'aggregates' => 
         array (
-            'Options' => 
+            'Group' => 
             array (
-                'class' => 'FractalFarming\\Romanesco\\Model\\rmOption',
+                'class' => 'FractalFarming\\Romanesco\\rmOptionGroup',
                 'local' => 'key',
                 'foreign' => 'key',
-                'cardinality' => 'many',
-                'owner' => 'local',
+                'cardinality' => 'one',
+                'owner' => 'foreign',
             ),
         ),
     );

@@ -1,5 +1,5 @@
 <?php
-namespace FractalFarming\Romanesco\Model;
+namespace FractalFarming\Romanesco;
 
 use xPDO\xPDO;
 
@@ -12,9 +12,9 @@ use xPDO\xPDO;
  * @property integer $pos
  * @property boolean $deleted
  *
- * @property \FractalFarming\Romanesco\Model\rmOption[] $Options
+ * @property \FractalFarming\Romanesco\rmOption[] $Options
  *
- * @package FractalFarming\Romanesco\Model
+ * @package FractalFarming\Romanesco
  */
 class rmOptionGroup extends \xPDO\Om\xPDOSimpleObject
 {

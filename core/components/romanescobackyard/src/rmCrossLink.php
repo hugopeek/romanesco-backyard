@@ -1,5 +1,5 @@
 <?php
-namespace FractalFarming\Romanesco\Model;
+namespace FractalFarming\Romanesco;
 
 use xPDO\xPDO;
 
@@ -17,10 +17,10 @@ use xPDO\xPDO;
  * @property integer $createdby
  * @property boolean $deleted
  *
- * @property \FractalFarming\Romanesco\Model\rmCrossLink $CrossLinkTo
- * @property \FractalFarming\Romanesco\Model\rmCrossLink $CrossLinkFrom
+ * @property \FractalFarming\Romanesco\rmCrossLink $CrossLinkTo
+ * @property \FractalFarming\Romanesco\rmCrossLink $CrossLinkFrom
  *
- * @package FractalFarming\Romanesco\Model
+ * @package FractalFarming\Romanesco
  */
 class rmCrossLink extends \xPDO\Om\xPDOSimpleObject
 {

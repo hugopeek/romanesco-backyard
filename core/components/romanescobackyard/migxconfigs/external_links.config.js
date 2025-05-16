@@ -245,7 +245,7 @@
         "extrahandlers": "",
         "filtersperrow": 4,
         "packageName": "romanescobackyard",
-        "classname": "FractalFarming\\Romanesco\\Model\\rmExternalLink",
+        "classname": "FractalFarming\\Romanesco\\rmExternalLink",
         "task": "",
         "getlistsort": "",
         "getlistsortdir": "",

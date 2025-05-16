@@ -1,15 +1,15 @@
 <?php
-namespace FractalFarming\Romanesco\Model\mysql;
+namespace FractalFarming\Romanesco\mysql;
 
 use xPDO\xPDO;
 
-class rmCrossLink extends \FractalFarming\Romanesco\Model\rmCrossLink
+class rmExternalLink extends \FractalFarming\Romanesco\rmExternalLink
 {
 
     public static $metaMap = array (
-        'package' => 'FractalFarming\\Romanesco\\Model',
+        'package' => 'FractalFarming\\Romanesco',
         'version' => '3.0',
-        'table' => 'romanesco_crosslinks',
+        'table' => 'romanesco_external_links',
         'extends' => 'xPDO\\Om\\xPDOSimpleObject',
         'tableMeta' => 
         array (
@@ -17,20 +17,20 @@ class rmCrossLink extends \FractalFarming\Romanesco\Model\rmCrossLink
         ),
         'fields' => 
         array (
-            'source' => 0,
-            'destination' => 0,
+            'resource_id' => 0,
+            'number' => 0,
+            'url' => NULL,
             'title' => '',
             'description' => '',
-            'crosslink_id' => 0,
             'category' => '',
-            'weight' => 0,
+            'date_accessed' => NULL,
             'createdon' => 0,
             'createdby' => 0,
             'deleted' => 0,
         ),
         'fieldMeta' => 
         array (
-            'source' => 
+            'resource_id' => 
             array (
                 'dbtype' => 'int',
                 'precision' => '11',
@@ -39,19 +39,25 @@ class rmCrossLink extends \FractalFarming\Romanesco\Model\rmCrossLink
                 'null' => false,
                 'default' => 0,
             ),
-            'destination' => 
+            'number' => 
             array (
                 'dbtype' => 'int',
-                'precision' => '11',
-                'attributes' => 'unsigned',
+                'precision' => '10',
                 'phptype' => 'integer',
                 'null' => false,
                 'default' => 0,
+            ),
+            'url' => 
+            array (
+                'dbtype' => 'varchar',
+                'precision' => '1000',
+                'phptype' => 'string',
+                'null' => true,
             ),
             'title' => 
             array (
                 'dbtype' => 'varchar',
-                'precision' => '191',
+                'precision' => '1000',
                 'phptype' => 'string',
                 'null' => false,
                 'default' => '',
@@ -63,15 +69,6 @@ class rmCrossLink extends \FractalFarming\Romanesco\Model\rmCrossLink
                 'null' => false,
                 'default' => '',
             ),
-            'crosslink_id' => 
-            array (
-                'dbtype' => 'int',
-                'precision' => '11',
-                'attributes' => 'unsigned',
-                'phptype' => 'integer',
-                'null' => true,
-                'default' => 0,
-            ),
             'category' => 
             array (
                 'dbtype' => 'varchar',
@@ -80,13 +77,11 @@ class rmCrossLink extends \FractalFarming\Romanesco\Model\rmCrossLink
                 'null' => false,
                 'default' => '',
             ),
-            'weight' => 
+            'date_accessed' => 
             array (
-                'dbtype' => 'int',
-                'precision' => '10',
-                'phptype' => 'integer',
-                'null' => false,
-                'default' => 0,
+                'dbtype' => 'datetime',
+                'phptype' => 'datetime',
+                'null' => true,
             ),
             'createdon' => 
             array (
@@ -117,25 +112,18 @@ class rmCrossLink extends \FractalFarming\Romanesco\Model\rmCrossLink
         'fieldAliases' => 
         array (
             'author_id' => 'createdby',
-            'resource_id' => 'source',
         ),
         'indexes' => 
         array (
-            'crosslink' => 
+            'resource_id' => 
             array (
-                'alias' => 'crosslink',
+                'alias' => 'resource_id',
                 'primary' => false,
-                'unique' => true,
+                'unique' => false,
                 'type' => 'BTREE',
                 'columns' => 
                 array (
-                    'source' => 
-                    array (
-                        'length' => '',
-                        'collation' => 'A',
-                        'null' => false,
-                    ),
-                    'destination' => 
+                    'resource_id' => 
                     array (
                         'length' => '',
                         'collation' => 'A',
@@ -160,39 +148,12 @@ class rmCrossLink extends \FractalFarming\Romanesco\Model\rmCrossLink
                 ),
             ),
         ),
-        'composites' => 
-        array (
-            'CrossLinkTo' => 
-            array (
-                'class' => 'FractalFarming\\Romanesco\\Model\\rmCrossLink',
-                'local' => 'id',
-                'foreign' => 'crosslink_id',
-                'cardinality' => 'one',
-                'owner' => 'local',
-            ),
-            'CrossLinkFrom' => 
-            array (
-                'class' => 'FractalFarming\\Romanesco\\Model\\rmCrossLink',
-                'local' => 'crosslink_id',
-                'foreign' => 'id',
-                'cardinality' => 'one',
-                'owner' => 'foreign',
-            ),
-        ),
         'aggregates' => 
         array (
-            'Source' => 
+            'Resource' => 
             array (
                 'class' => 'MODX\\Revolution\\modResource',
-                'local' => 'source',
-                'foreign' => 'id',
-                'cardinality' => 'one',
-                'owner' => 'foreign',
-            ),
-            'Destination' => 
-            array (
-                'class' => 'MODX\\Revolution\\modResource',
-                'local' => 'destination',
+                'local' => 'resource_id',
                 'foreign' => 'id',
                 'cardinality' => 'one',
                 'owner' => 'foreign',
