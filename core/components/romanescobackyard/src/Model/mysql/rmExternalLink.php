@@ -1,15 +1,15 @@
 <?php
-namespace FractalFarming\Romanesco\mysql;
+namespace FractalFarming\Romanesco\Model\mysql;
 
 use xPDO\xPDO;
 
-class rmSocialShare extends \FractalFarming\Romanesco\rmSocialShare
+class rmExternalLink extends \FractalFarming\Romanesco\Model\rmExternalLink
 {
 
     public static $metaMap = array (
-        'package' => 'FractalFarming\\Romanesco',
+        'package' => 'FractalFarming\\Romanesco\\Model',
         'version' => '3.0',
-        'table' => 'romanesco_social_sharing',
+        'table' => 'romanesco_external_links',
         'extends' => 'xPDO\\Om\\xPDOSimpleObject',
         'tableMeta' => 
         array (
@@ -17,24 +17,42 @@ class rmSocialShare extends \FractalFarming\Romanesco\rmSocialShare
         ),
         'fields' => 
         array (
-            'name' => '',
+            'resource_id' => 0,
+            'number' => 0,
+            'url' => NULL,
             'title' => '',
-            'url' => '',
-            'icon' => '',
-            'context' => '',
-            'active' => 1,
-            'pos' => 0,
+            'description' => '',
+            'category' => '',
+            'date_accessed' => NULL,
+            'createdon' => 0,
+            'createdby' => 0,
             'deleted' => 0,
         ),
         'fieldMeta' => 
         array (
-            'name' => 
+            'resource_id' => 
+            array (
+                'dbtype' => 'int',
+                'precision' => '11',
+                'attributes' => 'unsigned',
+                'phptype' => 'integer',
+                'null' => false,
+                'default' => 0,
+            ),
+            'number' => 
+            array (
+                'dbtype' => 'int',
+                'precision' => '10',
+                'phptype' => 'integer',
+                'null' => false,
+                'default' => 0,
+            ),
+            'url' => 
             array (
                 'dbtype' => 'varchar',
-                'precision' => '191',
+                'precision' => '1000',
                 'phptype' => 'string',
-                'null' => false,
-                'default' => '',
+                'null' => true,
             ),
             'title' => 
             array (
@@ -44,14 +62,14 @@ class rmSocialShare extends \FractalFarming\Romanesco\rmSocialShare
                 'null' => false,
                 'default' => '',
             ),
-            'url' => 
+            'description' => 
             array (
                 'dbtype' => 'text',
                 'phptype' => 'string',
                 'null' => false,
                 'default' => '',
             ),
-            'icon' => 
+            'category' => 
             array (
                 'dbtype' => 'varchar',
                 'precision' => '191',
@@ -59,24 +77,21 @@ class rmSocialShare extends \FractalFarming\Romanesco\rmSocialShare
                 'null' => false,
                 'default' => '',
             ),
-            'context' => 
+            'date_accessed' => 
             array (
-                'dbtype' => 'varchar',
-                'precision' => '191',
-                'phptype' => 'string',
-                'null' => false,
-                'default' => '',
+                'dbtype' => 'datetime',
+                'phptype' => 'datetime',
+                'null' => true,
             ),
-            'active' => 
+            'createdon' => 
             array (
-                'dbtype' => 'tinyint',
-                'precision' => '1',
-                'attributes' => 'unsigned',
-                'phptype' => 'boolean',
+                'dbtype' => 'int',
+                'precision' => '20',
+                'phptype' => 'timestamp',
                 'null' => false,
-                'default' => 1,
+                'default' => 0,
             ),
-            'pos' => 
+            'createdby' => 
             array (
                 'dbtype' => 'int',
                 'precision' => '10',
@@ -96,19 +111,19 @@ class rmSocialShare extends \FractalFarming\Romanesco\rmSocialShare
         ),
         'fieldAliases' => 
         array (
-            'position' => 'pos',
+            'author_id' => 'createdby',
         ),
         'indexes' => 
         array (
-            'context' => 
+            'resource_id' => 
             array (
-                'alias' => 'context',
+                'alias' => 'resource_id',
                 'primary' => false,
                 'unique' => false,
                 'type' => 'BTREE',
                 'columns' => 
                 array (
-                    'context' => 
+                    'resource_id' => 
                     array (
                         'length' => '',
                         'collation' => 'A',
@@ -116,15 +131,15 @@ class rmSocialShare extends \FractalFarming\Romanesco\rmSocialShare
                     ),
                 ),
             ),
-            'active' => 
+            'category' => 
             array (
-                'alias' => 'active',
+                'alias' => 'category',
                 'primary' => false,
                 'unique' => false,
                 'type' => 'BTREE',
                 'columns' => 
                 array (
-                    'active' => 
+                    'category' => 
                     array (
                         'length' => '',
                         'collation' => 'A',
@@ -132,21 +147,24 @@ class rmSocialShare extends \FractalFarming\Romanesco\rmSocialShare
                     ),
                 ),
             ),
-            'pos' => 
+        ),
+        'aggregates' => 
+        array (
+            'Resource' => 
             array (
-                'alias' => 'pos',
-                'primary' => false,
-                'unique' => false,
-                'type' => 'BTREE',
-                'columns' => 
-                array (
-                    'pos' => 
-                    array (
-                        'length' => '',
-                        'collation' => 'A',
-                        'null' => false,
-                    ),
-                ),
+                'class' => 'MODX\\Revolution\\modResource',
+                'local' => 'resource_id',
+                'foreign' => 'id',
+                'cardinality' => 'one',
+                'owner' => 'foreign',
+            ),
+            'Author' => 
+            array (
+                'class' => 'MODX\\Revolution\\modUser',
+                'local' => 'createdby',
+                'foreign' => 'id',
+                'cardinality' => 'one',
+                'owner' => 'foreign',
             ),
         ),
     );

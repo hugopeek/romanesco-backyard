@@ -1,13 +1,13 @@
 <?php
-namespace FractalFarming\Romanesco\mysql;
+namespace FractalFarming\Romanesco\Model\mysql;
 
 use xPDO\xPDO;
 
-class rmTaskComment extends \FractalFarming\Romanesco\rmTaskComment
+class rmTaskComment extends \FractalFarming\Romanesco\Model\rmTaskComment
 {
 
     public static $metaMap = array (
-        'package' => 'FractalFarming\\Romanesco',
+        'package' => 'FractalFarming\\Romanesco\\Model',
         'version' => '3.0',
         'table' => 'romanesco_task_comments',
         'extends' => 'xPDO\\Om\\xPDOSimpleObject',
@@ -94,7 +94,7 @@ class rmTaskComment extends \FractalFarming\Romanesco\rmTaskComment
         array (
             'Task' => 
             array (
-                'class' => 'FractalFarming\\Romanesco\\rmTask',
+                'class' => 'FractalFarming\\Romanesco\\Model\\rmTask',
                 'local' => 'task_id',
                 'foreign' => 'id',
                 'cardinality' => 'one',

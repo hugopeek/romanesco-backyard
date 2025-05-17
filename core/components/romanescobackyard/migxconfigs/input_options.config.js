@@ -146,7 +146,7 @@
         "extrahandlers": "",
         "filtersperrow": 4,
         "packageName": "romanescobackyard",
-        "classname": "FractalFarming\\Romanesco\\rmOption",
+        "classname": "FractalFarming\\Romanesco\\Model\\rmOption",
         "task": "",
         "getlistsort": "pos",
         "getlistsortdir": "ASC",

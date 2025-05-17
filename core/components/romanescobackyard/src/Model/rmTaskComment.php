@@ -1,5 +1,5 @@
 <?php
-namespace FractalFarming\Romanesco;
+namespace FractalFarming\Romanesco\Model;
 
 use xPDO\xPDO;
 
@@ -12,7 +12,7 @@ use xPDO\xPDO;
  * @property integer $createdby
  * @property boolean $deleted
  *
- * @package FractalFarming\Romanesco
+ * @package FractalFarming\Romanesco\Model
  */
 class rmTaskComment extends \xPDO\Om\xPDOSimpleObject
 {

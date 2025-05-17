@@ -178,7 +178,7 @@
         "extrahandlers": "",
         "filtersperrow": 4,
         "packageName": "romanescobackyard",
-        "classname": "FractalFarming\\Romanesco\\rmOptionGroup",
+        "classname": "FractalFarming\\Romanesco\\Model\\rmOptionGroup",
         "task": "",
         "getlistsort": "pos",
         "getlistsortdir": "ASC",
@@ -277,7 +277,7 @@
             "renderer": "this.renderChunk",
             "clickaction": "",
             "selectorconfig": "",
-            "renderchunktpl": "[[migxLoopCollection?\n&packageName=`romanescobackyard`\n&classname=`FractalFarming\\Romanesco\\rmOption`\n&where=`[{\"group\":\"[[+id]]\"},{\"deleted:=\":0}]`\n&sortConfig=`[{\"sortby\":\"pos\",\"sortdir\":\"ASC\"}]`\n&tpl=`rawName`\n&outputSeparator=`<br>`\n]]",
+            "renderchunktpl": "[[migxLoopCollection?\n&packageName=`romanescobackyard`\n&classname=`FractalFarming\\Romanesco\\Model\\rmOption`\n&where=`[{\"group\":\"[[+id]]\"},{\"deleted:=\":0}]`\n&sortConfig=`[{\"sortby\":\"pos\",\"sortdir\":\"ASC\"}]`\n&tpl=`rawName`\n&outputSeparator=`<br>`\n]]",
             "renderoptions": "",
             "editor": ""
         },

@@ -242,7 +242,7 @@
         "extrahandlers": "",
         "filtersperrow": 4,
         "packageName": "romanescobackyard",
-        "classname": "FractalFarming\\Romanesco\\rmCrossLink",
+        "classname": "FractalFarming\\Romanesco\\Model\\rmCrossLink",
         "task": "",
         "getlistsort": "",
         "getlistsortdir": "",
