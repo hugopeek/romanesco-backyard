@@ -15,4 +15,9 @@ if (!$modx->services->has('romanesco')) {
 
     // Load packages model
     $modx->addPackage('FractalFarming\Romanesco', $namespace['path'] . 'src/', null, 'FractalFarming\Romanesco\\');
+
+    // Autoload Composer packages
+    if (file_exists(__DIR__ . '/vendor/autoload.php')) {
+        require_once __DIR__ . '/vendor/autoload.php';
+    }
 }

@@ -7,11 +7,6 @@
 namespace FractalFarming\Romanesco;
 
 use MODX\Revolution\modX;
-use RecursiveArrayIterator;
-use RecursiveIteratorIterator;
-use DateTime;
-use Error;
-
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Symfony\Component\Process\Process;
 use Spatie\SchemaOrg\Schema;
@@ -73,7 +68,7 @@ class Romanesco
         //$this->modx->addPackage($this->namespace, $this->getOption('modelPath'));
 
         // Collect structured data in central graph object
-        //$this->structuredData = new Graph();
+        $this->structuredData = new Graph();
     }
 
     /**
@@ -111,10 +106,10 @@ class Romanesco
     public function recursiveArraySearch(array $haystack, string $needle): array
     {
         $result = [];
-        $iterator  = new RecursiveArrayIterator($haystack);
-        $recursive = new RecursiveIteratorIterator(
+        $iterator  = new \RecursiveArrayIterator($haystack);
+        $recursive = new \RecursiveIteratorIterator(
             $iterator,
-            RecursiveIteratorIterator::SELF_FIRST
+            \RecursiveIteratorIterator::SELF_FIRST
         );
         foreach ($recursive as $key => $value) {
             if ($key === $needle) {
@@ -509,7 +504,7 @@ class Romanesco
             }
             return '';
         }
-        catch (Error $e) {
+        catch (\Error $e) {
             $this->modx->log(modX::LOG_LEVEL_ERROR, $e);
             return '';
         }
@@ -544,7 +539,7 @@ class Romanesco
 
         if ($logFile) {
             $logFile = MODX_CORE_PATH . 'cache/logs/' . $logFile;
-            $date = new DateTime();
+            $date = new \DateTime();
             $date = $date->format("Y-m-d H:i:s");
             file_put_contents($logFile, "[$date] $output", FILE_APPEND);
         } else {
