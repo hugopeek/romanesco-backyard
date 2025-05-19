@@ -7,24 +7,24 @@ $xpdo_meta_map = array (
     array (
         'xPDO\\Om\\xPDOSimpleObject' => 
         array (
-            0 => 'FractalFarming\\Romanesco\\Model\\rmTask',
-            1 => 'FractalFarming\\Romanesco\\Model\\rmTaskComment',
-            2 => 'FractalFarming\\Romanesco\\Model\\rmCrossLink',
-            3 => 'FractalFarming\\Romanesco\\Model\\rmExternalLink',
-            4 => 'FractalFarming\\Romanesco\\Model\\rmSocialConnect',
-            5 => 'FractalFarming\\Romanesco\\Model\\rmSocialShare',
-            6 => 'FractalFarming\\Romanesco\\Model\\rmOption',
-            7 => 'FractalFarming\\Romanesco\\Model\\rmOptionGroup',
+            0 => 'FractalFarming\\Romanesco\\Model\\Task',
+            1 => 'FractalFarming\\Romanesco\\Model\\TaskComment',
+            2 => 'FractalFarming\\Romanesco\\Model\\CrossLink',
+            3 => 'FractalFarming\\Romanesco\\Model\\ExternalLink',
+            4 => 'FractalFarming\\Romanesco\\Model\\SocialConnect',
+            5 => 'FractalFarming\\Romanesco\\Model\\SocialShare',
+            6 => 'FractalFarming\\Romanesco\\Model\\Option',
+            7 => 'FractalFarming\\Romanesco\\Model\\OptionGroup',
         ),
-        'FractalFarming\\Romanesco\\Model\\rmTask' => 
+        'FractalFarming\\Romanesco\\Model\\Task' => 
         array (
-            0 => 'FractalFarming\\Romanesco\\Model\\rmTaskResource',
+            0 => 'FractalFarming\\Romanesco\\Model\\TaskResource',
         ),
-        'FractalFarming\\Romanesco\\Model\\rmSocialConnect' => 
+        'FractalFarming\\Romanesco\\Model\\SocialConnect' => 
         array (
-            0 => 'FractalFarming\\Romanesco\\Model\\rmSocialConnectGlobal',
-            1 => 'FractalFarming\\Romanesco\\Model\\rmSocialConnectResource',
-            2 => 'FractalFarming\\Romanesco\\Model\\rmSocialConnectUser',
+            0 => 'FractalFarming\\Romanesco\\Model\\SocialConnectGlobal',
+            1 => 'FractalFarming\\Romanesco\\Model\\SocialConnectResource',
+            2 => 'FractalFarming\\Romanesco\\Model\\SocialConnectUser',
         ),
     ),
 );

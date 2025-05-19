@@ -4,7 +4,7 @@ namespace FractalFarming\Romanesco\Model;
 use xPDO\xPDO;
 
 /**
- * Class rmTaskComment
+ * Class TaskComment
  *
  * @property integer $task_id
  * @property string $content
@@ -14,6 +14,6 @@ use xPDO\xPDO;
  *
  * @package FractalFarming\Romanesco\Model
  */
-class rmTaskComment extends \xPDO\Om\xPDOSimpleObject
+class TaskComment extends \xPDO\Om\xPDOSimpleObject
 {
 }

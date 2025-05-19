@@ -109,14 +109,14 @@ if ($transport->xpdo) {
             $modx =& $transport->xpdo;
 
             $tables = [
-                FractalFarming\Romanesco\Model\rmTask::class,
-                FractalFarming\Romanesco\Model\rmTaskComment::class,
-                FractalFarming\Romanesco\Model\rmCrossLink::class,
-                FractalFarming\Romanesco\Model\rmExternalLink::class,
-                FractalFarming\Romanesco\Model\rmSocialConnect::class,
-                FractalFarming\Romanesco\Model\rmSocialShare::class,
-                FractalFarming\Romanesco\Model\rmOption::class,
-                FractalFarming\Romanesco\Model\rmOptionGroup::class,
+                FractalFarming\Romanesco\Model\Task::class,
+                FractalFarming\Romanesco\Model\TaskComment::class,
+                FractalFarming\Romanesco\Model\CrossLink::class,
+                FractalFarming\Romanesco\Model\ExternalLink::class,
+                FractalFarming\Romanesco\Model\SocialConnect::class,
+                FractalFarming\Romanesco\Model\SocialShare::class,
+                FractalFarming\Romanesco\Model\Option::class,
+                FractalFarming\Romanesco\Model\OptionGroup::class,
             ];
 
             foreach ($tables as $table) {

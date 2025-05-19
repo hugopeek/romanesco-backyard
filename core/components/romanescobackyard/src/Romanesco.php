@@ -13,14 +13,14 @@ use Spatie\SchemaOrg\Schema;
 use Spatie\SchemaOrg\Graph;
 use CssLint\Linter;
 
-//use FractalFarming\Romanesco\Model\rmCrossLink;
-//use FractalFarming\Romanesco\Model\rmExternalLink;
-//use FractalFarming\Romanesco\Model\rmOption;
-//use FractalFarming\Romanesco\Model\rmOptionGroup;
-//use FractalFarming\Romanesco\Model\rmSocialConnect;
-//use FractalFarming\Romanesco\Model\rmSocialShare;
-//use FractalFarming\Romanesco\Model\rmTask;
-//use FractalFarming\Romanesco\Model\rmTaskComment;
+//use FractalFarming\Romanesco\Model\CrossLink;
+//use FractalFarming\Romanesco\Model\ExternalLink;
+//use FractalFarming\Romanesco\Model\Option;
+//use FractalFarming\Romanesco\Model\OptionGroup;
+//use FractalFarming\Romanesco\Model\SocialConnect;
+//use FractalFarming\Romanesco\Model\SocialShare;
+//use FractalFarming\Romanesco\Model\Task;
+//use FractalFarming\Romanesco\Model\TaskComment;
 
 class Romanesco
 {

@@ -20,13 +20,13 @@ if ($options[xPDOTransport::PACKAGE_ACTION] === xPDOTransport::ACTION_UNINSTALL)
 
 $manager = $modx->getManager();
 
-$manager->createObjectContainer(FractalFarming\Romanesco\Model\rmTask::class);
-$manager->createObjectContainer(FractalFarming\Romanesco\Model\rmTaskComment::class);
-$manager->createObjectContainer(FractalFarming\Romanesco\Model\rmCrossLink::class);
-$manager->createObjectContainer(FractalFarming\Romanesco\Model\rmExternalLink::class);
-$manager->createObjectContainer(FractalFarming\Romanesco\Model\rmSocialConnect::class);
-$manager->createObjectContainer(FractalFarming\Romanesco\Model\rmSocialShare::class);
-$manager->createObjectContainer(FractalFarming\Romanesco\Model\rmOption::class);
-$manager->createObjectContainer(FractalFarming\Romanesco\Model\rmOptionGroup::class);
+$manager->createObjectContainer(FractalFarming\Romanesco\Model\Task::class);
+$manager->createObjectContainer(FractalFarming\Romanesco\Model\TaskComment::class);
+$manager->createObjectContainer(FractalFarming\Romanesco\Model\CrossLink::class);
+$manager->createObjectContainer(FractalFarming\Romanesco\Model\ExternalLink::class);
+$manager->createObjectContainer(FractalFarming\Romanesco\Model\SocialConnect::class);
+$manager->createObjectContainer(FractalFarming\Romanesco\Model\SocialShare::class);
+$manager->createObjectContainer(FractalFarming\Romanesco\Model\Option::class);
+$manager->createObjectContainer(FractalFarming\Romanesco\Model\OptionGroup::class);
 
 return true;

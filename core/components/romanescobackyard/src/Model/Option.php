@@ -4,18 +4,18 @@ namespace FractalFarming\Romanesco\Model;
 use xPDO\xPDO;
 
 /**
- * Class rmOptionGroup
+ * Class Option
  *
  * @property string $name
  * @property string $description
+ * @property string $alias
+ * @property integer $group
  * @property string $key
  * @property integer $pos
  * @property boolean $deleted
  *
- * @property \FractalFarming\Romanesco\Model\rmOption[] $Options
- *
  * @package FractalFarming\Romanesco\Model
  */
-class rmOptionGroup extends \xPDO\Om\xPDOSimpleObject
+class Option extends \xPDO\Om\xPDOSimpleObject
 {
 }

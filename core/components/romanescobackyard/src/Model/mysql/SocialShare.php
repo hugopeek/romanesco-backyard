@@ -3,27 +3,23 @@ namespace FractalFarming\Romanesco\Model\mysql;
 
 use xPDO\xPDO;
 
-class rmSocialConnect extends \FractalFarming\Romanesco\Model\rmSocialConnect
+class SocialShare extends \FractalFarming\Romanesco\Model\SocialShare
 {
 
     public static $metaMap = array (
         'package' => 'FractalFarming\\Romanesco\\Model',
         'version' => '3.0',
-        'table' => 'romanesco_social_connections',
+        'table' => 'romanesco_social_sharing',
         'extends' => 'xPDO\\Om\\xPDOSimpleObject',
-        'inherit' => 'single',
         'tableMeta' => 
         array (
             'engine' => 'InnoDB',
         ),
         'fields' => 
         array (
-            'class_key' => '',
-            'parent_id' => 0,
             'name' => '',
             'title' => '',
             'url' => '',
-            'username' => '',
             'icon' => '',
             'context' => '',
             'active' => 1,
@@ -32,24 +28,6 @@ class rmSocialConnect extends \FractalFarming\Romanesco\Model\rmSocialConnect
         ),
         'fieldMeta' => 
         array (
-            'class_key' => 
-            array (
-                'dbtype' => 'varchar',
-                'precision' => '191',
-                'phptype' => 'string',
-                'null' => false,
-                'default' => '',
-                'index' => 'index',
-            ),
-            'parent_id' => 
-            array (
-                'dbtype' => 'int',
-                'precision' => '10',
-                'attributes' => 'unsigned',
-                'phptype' => 'integer',
-                'null' => false,
-                'default' => 0,
-            ),
             'name' => 
             array (
                 'dbtype' => 'varchar',
@@ -69,14 +47,6 @@ class rmSocialConnect extends \FractalFarming\Romanesco\Model\rmSocialConnect
             'url' => 
             array (
                 'dbtype' => 'text',
-                'phptype' => 'string',
-                'null' => false,
-                'default' => '',
-            ),
-            'username' => 
-            array (
-                'dbtype' => 'varchar',
-                'precision' => '191',
                 'phptype' => 'string',
                 'null' => false,
                 'default' => '',
@@ -130,28 +100,6 @@ class rmSocialConnect extends \FractalFarming\Romanesco\Model\rmSocialConnect
         ),
         'indexes' => 
         array (
-            'composite' => 
-            array (
-                'alias' => 'composite',
-                'primary' => false,
-                'unique' => false,
-                'type' => 'BTREE',
-                'columns' => 
-                array (
-                    'class_key' => 
-                    array (
-                        'length' => '',
-                        'collation' => 'A',
-                        'null' => false,
-                    ),
-                    'parent_id' => 
-                    array (
-                        'length' => '',
-                        'collation' => 'A',
-                        'null' => false,
-                    ),
-                ),
-            ),
             'context' => 
             array (
                 'alias' => 'context',

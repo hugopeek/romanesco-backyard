@@ -4,11 +4,11 @@ namespace FractalFarming\Romanesco\Model;
 use xPDO\xPDO;
 
 /**
- * Class rmSocialConnectUser
+ * Class TaskResource
  *
  *
  * @package FractalFarming\Romanesco\Model
  */
-class rmSocialConnectUser extends \FractalFarming\Romanesco\Model\rmSocialConnect
+class TaskResource extends \FractalFarming\Romanesco\Model\Task
 {
 }

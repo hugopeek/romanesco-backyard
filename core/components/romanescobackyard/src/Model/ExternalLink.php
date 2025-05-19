@@ -4,7 +4,7 @@ namespace FractalFarming\Romanesco\Model;
 use xPDO\xPDO;
 
 /**
- * Class rmExternalLink
+ * Class ExternalLink
  *
  * @property integer $resource_id
  * @property integer $number
@@ -19,6 +19,6 @@ use xPDO\xPDO;
  *
  * @package FractalFarming\Romanesco\Model
  */
-class rmExternalLink extends \xPDO\Om\xPDOSimpleObject
+class ExternalLink extends \xPDO\Om\xPDOSimpleObject
 {
 }

@@ -4,7 +4,7 @@ namespace FractalFarming\Romanesco\Model;
 use xPDO\xPDO;
 
 /**
- * Class rmSocialShare
+ * Class SocialShare
  *
  * @property string $name
  * @property string $title
@@ -17,6 +17,6 @@ use xPDO\xPDO;
  *
  * @package FractalFarming\Romanesco\Model
  */
-class rmSocialShare extends \xPDO\Om\xPDOSimpleObject
+class SocialShare extends \xPDO\Om\xPDOSimpleObject
 {
 }

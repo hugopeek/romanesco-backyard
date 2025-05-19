@@ -4,7 +4,7 @@ namespace FractalFarming\Romanesco\Model;
 use xPDO\xPDO;
 
 /**
- * Class rmSocialConnect
+ * Class SocialConnect
  *
  * @property string $class_key
  * @property integer $parent_id
@@ -20,6 +20,6 @@ use xPDO\xPDO;
  *
  * @package FractalFarming\Romanesco\Model
  */
-class rmSocialConnect extends \xPDO\Om\xPDOSimpleObject
+class SocialConnect extends \xPDO\Om\xPDOSimpleObject
 {
 }

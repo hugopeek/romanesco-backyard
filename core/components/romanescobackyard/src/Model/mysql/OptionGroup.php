@@ -3,7 +3,7 @@ namespace FractalFarming\Romanesco\Model\mysql;
 
 use xPDO\xPDO;
 
-class rmOptionGroup extends \FractalFarming\Romanesco\Model\rmOptionGroup
+class OptionGroup extends \FractalFarming\Romanesco\Model\OptionGroup
 {
 
     public static $metaMap = array (
@@ -91,7 +91,7 @@ class rmOptionGroup extends \FractalFarming\Romanesco\Model\rmOptionGroup
         array (
             'Options' => 
             array (
-                'class' => 'FractalFarming\\Romanesco\\Model\\rmOption',
+                'class' => 'FractalFarming\\Romanesco\\Model\\Option',
                 'local' => 'key',
                 'foreign' => 'key',
                 'cardinality' => 'many',

@@ -3,7 +3,7 @@ namespace FractalFarming\Romanesco\Model\mysql;
 
 use xPDO\xPDO;
 
-class rmTaskComment extends \FractalFarming\Romanesco\Model\rmTaskComment
+class TaskComment extends \FractalFarming\Romanesco\Model\TaskComment
 {
 
     public static $metaMap = array (
@@ -94,7 +94,7 @@ class rmTaskComment extends \FractalFarming\Romanesco\Model\rmTaskComment
         array (
             'Task' => 
             array (
-                'class' => 'FractalFarming\\Romanesco\\Model\\rmTask',
+                'class' => 'FractalFarming\\Romanesco\\Model\\Task',
                 'local' => 'task_id',
                 'foreign' => 'id',
                 'cardinality' => 'one',

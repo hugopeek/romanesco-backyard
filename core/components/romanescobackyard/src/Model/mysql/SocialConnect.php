@@ -3,13 +3,13 @@ namespace FractalFarming\Romanesco\Model\mysql;
 
 use xPDO\xPDO;
 
-class rmTask extends \FractalFarming\Romanesco\Model\rmTask
+class SocialConnect extends \FractalFarming\Romanesco\Model\SocialConnect
 {
 
     public static $metaMap = array (
         'package' => 'FractalFarming\\Romanesco\\Model',
         'version' => '3.0',
-        'table' => 'romanesco_tasks',
+        'table' => 'romanesco_social_connections',
         'extends' => 'xPDO\\Om\\xPDOSimpleObject',
         'inherit' => 'single',
         'tableMeta' => 
@@ -20,19 +20,14 @@ class rmTask extends \FractalFarming\Romanesco\Model\rmTask
         array (
             'class_key' => '',
             'parent_id' => 0,
-            'user_id' => 0,
+            'name' => '',
             'title' => '',
-            'content' => '',
-            'status' => NULL,
-            'priority' => NULL,
-            'complexity' => NULL,
-            'date_start' => NULL,
-            'date_due' => NULL,
-            'tags' => '',
-            'attachments' => '',
-            'links' => '',
-            'createdon' => 0,
-            'createdby' => 0,
+            'url' => '',
+            'username' => '',
+            'icon' => '',
+            'context' => '',
+            'active' => 1,
+            'pos' => 0,
             'deleted' => 0,
         ),
         'fieldMeta' => 
@@ -55,16 +50,7 @@ class rmTask extends \FractalFarming\Romanesco\Model\rmTask
                 'null' => false,
                 'default' => 0,
             ),
-            'user_id' => 
-            array (
-                'dbtype' => 'int',
-                'precision' => '11',
-                'attributes' => 'unsigned',
-                'phptype' => 'integer',
-                'null' => false,
-                'default' => 0,
-            ),
-            'title' => 
+            'name' => 
             array (
                 'dbtype' => 'varchar',
                 'precision' => '191',
@@ -72,76 +58,55 @@ class rmTask extends \FractalFarming\Romanesco\Model\rmTask
                 'null' => false,
                 'default' => '',
             ),
-            'content' => 
+            'title' => 
+            array (
+                'dbtype' => 'varchar',
+                'precision' => '1000',
+                'phptype' => 'string',
+                'null' => false,
+                'default' => '',
+            ),
+            'url' => 
             array (
                 'dbtype' => 'text',
                 'phptype' => 'string',
                 'null' => false,
                 'default' => '',
             ),
-            'status' => 
+            'username' => 
             array (
-                'dbtype' => 'int',
-                'precision' => '10',
-                'phptype' => 'integer',
-                'null' => true,
-            ),
-            'priority' => 
-            array (
-                'dbtype' => 'int',
-                'precision' => '10',
-                'phptype' => 'integer',
-                'null' => true,
-            ),
-            'complexity' => 
-            array (
-                'dbtype' => 'int',
-                'precision' => '10',
-                'phptype' => 'integer',
-                'null' => true,
-            ),
-            'date_start' => 
-            array (
-                'dbtype' => 'datetime',
-                'phptype' => 'datetime',
-                'null' => true,
-            ),
-            'date_due' => 
-            array (
-                'dbtype' => 'datetime',
-                'phptype' => 'datetime',
-                'null' => true,
-            ),
-            'tags' => 
-            array (
-                'dbtype' => 'text',
+                'dbtype' => 'varchar',
+                'precision' => '191',
                 'phptype' => 'string',
                 'null' => false,
                 'default' => '',
             ),
-            'attachments' => 
+            'icon' => 
             array (
-                'dbtype' => 'text',
+                'dbtype' => 'varchar',
+                'precision' => '191',
                 'phptype' => 'string',
                 'null' => false,
                 'default' => '',
             ),
-            'links' => 
+            'context' => 
             array (
-                'dbtype' => 'text',
+                'dbtype' => 'varchar',
+                'precision' => '191',
                 'phptype' => 'string',
                 'null' => false,
                 'default' => '',
             ),
-            'createdon' => 
+            'active' => 
             array (
-                'dbtype' => 'int',
-                'precision' => '20',
-                'phptype' => 'timestamp',
+                'dbtype' => 'tinyint',
+                'precision' => '1',
+                'attributes' => 'unsigned',
+                'phptype' => 'boolean',
                 'null' => false,
-                'default' => 0,
+                'default' => 1,
             ),
-            'createdby' => 
+            'pos' => 
             array (
                 'dbtype' => 'int',
                 'precision' => '10',
@@ -161,8 +126,7 @@ class rmTask extends \FractalFarming\Romanesco\Model\rmTask
         ),
         'fieldAliases' => 
         array (
-            'author_id' => 'createdby',
-            'assigned_to' => 'user_id',
+            'position' => 'pos',
         ),
         'indexes' => 
         array (
@@ -188,15 +152,15 @@ class rmTask extends \FractalFarming\Romanesco\Model\rmTask
                     ),
                 ),
             ),
-            'user_id' => 
+            'context' => 
             array (
-                'alias' => 'user_id',
+                'alias' => 'context',
                 'primary' => false,
                 'unique' => false,
                 'type' => 'BTREE',
                 'columns' => 
                 array (
-                    'user_id' => 
+                    'context' => 
                     array (
                         'length' => '',
                         'collation' => 'A',
@@ -204,15 +168,15 @@ class rmTask extends \FractalFarming\Romanesco\Model\rmTask
                     ),
                 ),
             ),
-            'status' => 
+            'active' => 
             array (
-                'alias' => 'status',
+                'alias' => 'active',
                 'primary' => false,
                 'unique' => false,
                 'type' => 'BTREE',
                 'columns' => 
                 array (
-                    'status' => 
+                    'active' => 
                     array (
                         'length' => '',
                         'collation' => 'A',
@@ -220,35 +184,21 @@ class rmTask extends \FractalFarming\Romanesco\Model\rmTask
                     ),
                 ),
             ),
-        ),
-        'composites' => 
-        array (
-            'Comments' => 
+            'pos' => 
             array (
-                'class' => 'FractalFarming\\Romanesco\\Model\\rmTaskComment',
-                'local' => 'id',
-                'foreign' => 'task_id',
-                'cardinality' => 'many',
-                'owner' => 'local',
-            ),
-        ),
-        'aggregates' => 
-        array (
-            'User' => 
-            array (
-                'class' => 'MODX\\Revolution\\modUser',
-                'local' => 'user_id',
-                'foreign' => 'id',
-                'cardinality' => 'one',
-                'owner' => 'foreign',
-            ),
-            'Author' => 
-            array (
-                'class' => 'MODX\\Revolution\\modUser',
-                'local' => 'createdby',
-                'foreign' => 'id',
-                'cardinality' => 'one',
-                'owner' => 'foreign',
+                'alias' => 'pos',
+                'primary' => false,
+                'unique' => false,
+                'type' => 'BTREE',
+                'columns' => 
+                array (
+                    'pos' => 
+                    array (
+                        'length' => '',
+                        'collation' => 'A',
+                        'null' => false,
+                    ),
+                ),
             ),
         ),
     );
