@@ -3,13 +3,13 @@ namespace FractalFarming\Romanesco\Model\mysql;
 
 use xPDO\xPDO;
 
-class CrossLink extends \FractalFarming\Romanesco\Model\CrossLink
+class LinkRelated extends \FractalFarming\Romanesco\Model\LinkRelated
 {
 
     public static $metaMap = array (
         'package' => 'FractalFarming\\Romanesco\\Model',
         'version' => '3.0',
-        'table' => 'romanesco_crosslinks',
+        'table' => 'romanesco_links_related',
         'extends' => 'xPDO\\Om\\xPDOSimpleObject',
         'tableMeta' => 
         array (
@@ -162,17 +162,17 @@ class CrossLink extends \FractalFarming\Romanesco\Model\CrossLink
         ),
         'composites' => 
         array (
-            'CrossLinkTo' => 
+            'LinkTo' => 
             array (
-                'class' => 'FractalFarming\\Romanesco\\Model\\CrossLink',
+                'class' => 'FractalFarming\\Romanesco\\Model\\LinkRelated',
                 'local' => 'id',
                 'foreign' => 'crosslink_id',
                 'cardinality' => 'one',
                 'owner' => 'local',
             ),
-            'CrossLinkFrom' => 
+            'LinkFrom' => 
             array (
-                'class' => 'FractalFarming\\Romanesco\\Model\\CrossLink',
+                'class' => 'FractalFarming\\Romanesco\\Model\\LinkRelated',
                 'local' => 'crosslink_id',
                 'foreign' => 'id',
                 'cardinality' => 'one',

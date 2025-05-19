@@ -63,8 +63,8 @@
         <aggregate alias="Author" class="MODX\Revolution\modUser" local="createdby" foreign="id" cardinality="one" owner="foreign" />
     </object>
 
-    <!-- Crosslinks -->
-    <object class="CrossLink" table="romanesco_crosslinks" extends="xPDO\Om\xPDOSimpleObject">
+    <!-- Related links -->
+    <object class="LinkRelated" table="romanesco_links_related" extends="xPDO\Om\xPDOSimpleObject">
         <field key="source" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="" />
         <field key="destination" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="" />
         <field key="title" dbtype="varchar" precision="191" phptype="string" null="false" default="" />
@@ -91,13 +91,13 @@
 
         <aggregate alias="Source" class="MODX\Revolution\modResource" local="source" foreign="id" cardinality="one" owner="foreign" />
         <aggregate alias="Destination" class="MODX\Revolution\modResource" local="destination" foreign="id" cardinality="one" owner="foreign" />
-        <composite alias="CrossLinkTo" class="FractalFarming\Romanesco\Model\CrossLink" local="id" foreign="crosslink_id" cardinality="one" owner="local" />
-        <composite alias="CrossLinkFrom" class="FractalFarming\Romanesco\Model\CrossLink" local="crosslink_id" foreign="id" cardinality="one" owner="foreign" />
+        <composite alias="LinkTo" class="FractalFarming\Romanesco\Model\LinkRelated" local="id" foreign="crosslink_id" cardinality="one" owner="local" />
+        <composite alias="LinkFrom" class="FractalFarming\Romanesco\Model\LinkRelated" local="crosslink_id" foreign="id" cardinality="one" owner="foreign" />
         <aggregate alias="Author" class="MODX\Revolution\modUser" local="createdby" foreign="id" cardinality="one" owner="foreign" />
     </object>
 
     <!-- External links -->
-    <object class="ExternalLink" table="romanesco_external_links" extends="xPDO\Om\xPDOSimpleObject">
+    <object class="LinkExternal" table="romanesco_links_external" extends="xPDO\Om\xPDOSimpleObject">
         <field key="resource_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="" />
         <field key="number" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
         <field key="url" dbtype="varchar" precision="1000" phptype="string" null="true" />

@@ -22,8 +22,8 @@ $manager = $modx->getManager();
 
 $manager->createObjectContainer(FractalFarming\Romanesco\Model\Task::class);
 $manager->createObjectContainer(FractalFarming\Romanesco\Model\TaskComment::class);
-$manager->createObjectContainer(FractalFarming\Romanesco\Model\CrossLink::class);
-$manager->createObjectContainer(FractalFarming\Romanesco\Model\ExternalLink::class);
+$manager->createObjectContainer(FractalFarming\Romanesco\Model\LinkRelated::class);
+$manager->createObjectContainer(FractalFarming\Romanesco\Model\LinkExternal::class);
 $manager->createObjectContainer(FractalFarming\Romanesco\Model\SocialConnect::class);
 $manager->createObjectContainer(FractalFarming\Romanesco\Model\SocialShare::class);
 $manager->createObjectContainer(FractalFarming\Romanesco\Model\Option::class);

@@ -111,8 +111,8 @@ if ($transport->xpdo) {
             $tables = [
                 FractalFarming\Romanesco\Model\Task::class,
                 FractalFarming\Romanesco\Model\TaskComment::class,
-                FractalFarming\Romanesco\Model\CrossLink::class,
-                FractalFarming\Romanesco\Model\ExternalLink::class,
+                FractalFarming\Romanesco\Model\LinkRelated::class,
+                FractalFarming\Romanesco\Model\LinkExternal::class,
                 FractalFarming\Romanesco\Model\SocialConnect::class,
                 FractalFarming\Romanesco\Model\SocialShare::class,
                 FractalFarming\Romanesco\Model\Option::class,

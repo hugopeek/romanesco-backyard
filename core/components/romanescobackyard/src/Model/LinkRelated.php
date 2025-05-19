@@ -4,7 +4,7 @@ namespace FractalFarming\Romanesco\Model;
 use xPDO\xPDO;
 
 /**
- * Class CrossLink
+ * Class LinkRelated
  *
  * @property integer $source
  * @property integer $destination
@@ -17,11 +17,11 @@ use xPDO\xPDO;
  * @property integer $createdby
  * @property boolean $deleted
  *
- * @property \FractalFarming\Romanesco\Model\CrossLink $CrossLinkTo
- * @property \FractalFarming\Romanesco\Model\CrossLink $CrossLinkFrom
+ * @property \FractalFarming\Romanesco\Model\LinkRelated $LinkTo
+ * @property \FractalFarming\Romanesco\Model\LinkRelated $LinkFrom
  *
  * @package FractalFarming\Romanesco\Model
  */
-class CrossLink extends \xPDO\Om\xPDOSimpleObject
+class LinkRelated extends \xPDO\Om\xPDOSimpleObject
 {
 }

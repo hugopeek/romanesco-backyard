@@ -9,8 +9,8 @@ $xpdo_meta_map = array (
         array (
             0 => 'FractalFarming\\Romanesco\\Model\\Task',
             1 => 'FractalFarming\\Romanesco\\Model\\TaskComment',
-            2 => 'FractalFarming\\Romanesco\\Model\\CrossLink',
-            3 => 'FractalFarming\\Romanesco\\Model\\ExternalLink',
+            2 => 'FractalFarming\\Romanesco\\Model\\LinkRelated',
+            3 => 'FractalFarming\\Romanesco\\Model\\LinkExternal',
             4 => 'FractalFarming\\Romanesco\\Model\\SocialConnect',
             5 => 'FractalFarming\\Romanesco\\Model\\SocialShare',
             6 => 'FractalFarming\\Romanesco\\Model\\Option',

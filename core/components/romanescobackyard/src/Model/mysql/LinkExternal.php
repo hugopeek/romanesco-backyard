@@ -3,13 +3,13 @@ namespace FractalFarming\Romanesco\Model\mysql;
 
 use xPDO\xPDO;
 
-class ExternalLink extends \FractalFarming\Romanesco\Model\ExternalLink
+class LinkExternal extends \FractalFarming\Romanesco\Model\LinkExternal
 {
 
     public static $metaMap = array (
         'package' => 'FractalFarming\\Romanesco\\Model',
         'version' => '3.0',
-        'table' => 'romanesco_external_links',
+        'table' => 'romanesco_links_external',
         'extends' => 'xPDO\\Om\\xPDOSimpleObject',
         'tableMeta' => 
         array (
