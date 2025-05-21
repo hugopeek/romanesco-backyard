@@ -3,8 +3,11 @@
 ## Backyard 1.0.0-rc1
 Released on ...
 
-- MODX 3 compatibility
-- Add category field to cross-link and external link objects
+- Refactor to MODX 3 structure
+- Load HtmlPageDom with Composer
+- Add category field to link tables
+- Rename CrossLink to LinkRelated
+- Rename ExternalLink to LinkExternal
 
 ## Backyard 1.0.0-beta23
 Released on March 23, 2025
