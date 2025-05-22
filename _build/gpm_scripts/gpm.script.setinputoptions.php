@@ -44,6 +44,7 @@ return new class() {
 
                 $modx->runSnippet('jsonImportInputOptions', array(
                     'file' => $corePath . 'data/options.json',
+                    'updateExisting' => false,
                 ));
 
                 break;

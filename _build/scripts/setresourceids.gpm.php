@@ -91,7 +91,7 @@ return new class() {
                     }
                 }
 
-                $this->modx->log(xPDO::LOG_LEVEL_INFO, 'Setting resource IDs...');
+                $this->modx->log(xPDO::LOG_LEVEL_INFO, 'Connecting resource containers to corresponding system settings...');
 
                 // Find resources and set correct IDs
                 setResourceID('romanesco.footer_container_id', 'global', 'footers', $this->modx);
@@ -104,8 +104,6 @@ return new class() {
 
                 // Set site_start for Project Hub context
                 setContextSetting('site_start', 'hub', 'dashboard', $this->modx);
-
-                $this->modx->log(xPDO::LOG_LEVEL_INFO, 'Resource IDs successfully set.');
 
                 break;
         }
