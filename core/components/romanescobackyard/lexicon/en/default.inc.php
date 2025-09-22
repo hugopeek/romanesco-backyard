@@ -56,10 +56,15 @@ $_lang['romanesco.social.share_email_body'] = 'Dear friend, I thought you might 
 
 // Publication
 $_lang['romanesco.article.written_by'] = 'Written by';
+$_lang['romanesco.article.written_by_short'] = 'By';
 $_lang['romanesco.article.written_on'] = 'on';
-$_lang['romanesco.article.about_author'] = 'About the author';
+$_lang['romanesco.article.about_author'] = 'About the author, [[+author_name]]';
 $_lang['romanesco.article.comments'] = 'Comments';
-$_lang['romanesco.article.share_this'] = 'Share this article';
+$_lang['romanesco.article.views'] = 'Views';
+$_lang['romanesco.article.reading_time'] = 'minutes';
+$_lang['romanesco.article.reading_time_1'] = 'minute';
+$_lang['romanesco.article.reading_time_short'] = 'min';
+$_lang['romanesco.article.share_this'] = 'Share this';
 $_lang['romanesco.article.share_this_short'] = 'Share';
 $_lang['romanesco.article.previous'] = 'Previous article';
 $_lang['romanesco.article.next'] = 'Next article';

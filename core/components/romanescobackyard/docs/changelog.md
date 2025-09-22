@@ -1,9 +1,14 @@
 # Changelog for Romanesco Backyard
 
-## Backyard 1.0.0-beta24
-Released on ...
+## Backyard 1.0.0-rc1
+Released on May 22, 2025
 
-- Add category field to cross-link and external link objects
+- Refactor to MODX 3 structure
+- Load HtmlPageDom with Composer
+- Add category field to link tables
+- Rename CrossLink to LinkRelated
+- Rename ExternalLink to LinkExternal
+- Don't overwrite existing input options when updating package
 
 ## Backyard 1.0.0-beta23
 Released on March 23, 2025
@@ -293,16 +298,16 @@ Released on January 17, 2019
 Released on November 15, 2018
 
 - Add database schema for new Romanesco components
-    - Timeline
-    - Project timeline
-    - Notes
-    - Issues
-    - Content improvements
-    - Crosslinks
-    - Related content
-    - Re-purpose content
-    - Input options
-    - Input option groups
+  - Timeline
+  - Project timeline
+  - Notes
+  - Issues
+  - Content improvements
+  - Crosslinks
+  - Related content
+  - Re-purpose content
+  - Input options
+  - Input option groups
 - Add MIGX configs for managing data in TVs and CMPs
 - Add resolver to load default set of input options
 - Build config file with PHP instead of Grunt

@@ -6,79 +6,55 @@
 
 namespace FractalFarming\Romanesco;
 
-use modX;
-use RecursiveArrayIterator;
-use RecursiveIteratorIterator;
-use DateTime;
-use Error;
-
+use MODX\Revolution\modX;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Symfony\Component\Process\Process;
 use Spatie\SchemaOrg\Schema;
 use Spatie\SchemaOrg\Graph;
 use CssLint\Linter;
 
-//use rmCrossLink;
-//use rmExternalLink;
-//use rmOption;
-//use rmOptionGroup;
-//use rmSocialConnect;
-//use rmSocialShare;
-//use rmTask;
-//use rmTaskComment;
+//use FractalFarming\Romanesco\Model\CrossLink;
+//use FractalFarming\Romanesco\Model\ExternalLink;
+//use FractalFarming\Romanesco\Model\Option;
+//use FractalFarming\Romanesco\Model\OptionGroup;
+//use FractalFarming\Romanesco\Model\SocialConnect;
+//use FractalFarming\Romanesco\Model\SocialShare;
+//use FractalFarming\Romanesco\Model\Task;
+//use FractalFarming\Romanesco\Model\TaskComment;
 
 class Romanesco
 {
-    /**
-     * A reference to the modX instance
-     * @var modX $modx
-     */
+    /** @var modX $modx */
     public modX $modx;
 
-    /**
-     * The namespace
-     * @var string $namespace
-     */
+    /** @var string $namespace */
     public $namespace = 'romanescobackyard';
 
-    /**
-     * The class options
-     * @var array $options
-     */
-    public $options = [];
+    /** @var array $config */
+    public $config = [];
 
-    /**
-     * Structured data
-     * @var array $structuredData
-     */
+    /** @var array $structuredData */
     public $structuredData = [];
 
-    /**
-     * Romanesco constructor
-     *
-     * @param modX $modx A reference to the modX instance.
-     * @param array $options An array of configuration options. Optional.
-     */
-    function __construct(modX &$modx, array $options = [])
+    function __construct(modX &$modx, array $config = [])
     {
         $this->modx =& $modx;
-        $this->namespace = $this->getOption('namespace', $options, $this->namespace);
+        $this->namespace = $this->getOption('namespace', $config, $this->namespace);
 
-        $corePath = $this->getOption($this->namespace. '.core_path', $options, $this->modx->getOption('core_path', null, MODX_CORE_PATH) . 'components/' . $this->namespace . '/');
-        $assetsPath = $this->getOption($this->namespace . '.assets_path', $options, $this->modx->getOption('assets_path', null, MODX_ASSETS_PATH) . 'components/' . $this->namespace . '/');
-        $assetsUrl = $this->getOption($this->namespace . '.assets_url', $options, $this->modx->getOption('assets_url', null, MODX_ASSETS_URL) . 'components/' . $this->namespace . '/');
+        $corePath = $this->getOption('core_path', $config, $this->modx->getOption('core_path', null, MODX_CORE_PATH) . 'components/' . $this->namespace . '/');
+        $assetsPath = $this->getOption('assets_path', $config, $this->modx->getOption('assets_path', null, MODX_ASSETS_PATH) . 'components/' . $this->namespace . '/');
+        $assetsUrl = $this->getOption('assets_url', $config, $this->modx->getOption('assets_url', null, MODX_ASSETS_URL) . 'components/' . $this->namespace . '/');
 
-        $this->options = array_merge([
+        $this->config = array_merge([
             'namespace' => $this->namespace,
             'corePath' => $corePath,
-            'modelPath' => $corePath . 'model/',
+            'modelPath' => $corePath . 'src/Model/',
             'vendorPath' => $corePath . 'vendor/',
             'chunksPath' => $corePath . 'elements/chunks/',
-            'pagesPath' => $corePath . 'elements/pages/',
             'snippetsPath' => $corePath . 'elements/snippets/',
             'pluginsPath' => $corePath . 'elements/plugins/',
-            'controllersPath' => $corePath . 'controllers/',
-            'processorsPath' => $corePath . 'processors/',
+            'controllersPath' => $corePath . 'src/Controllers/',
+            'processorsPath' => $corePath . 'src/Processors/',
             'templatesPath' => $corePath . 'templates/',
             'cachePath' => $this->modx->getOption('core_path') . 'cache/',
             'assetsPath' => $assetsPath,
@@ -87,15 +63,12 @@ class Romanesco
             'cssUrl' => $assetsUrl . 'css/',
             'imagesUrl' => $assetsUrl . 'img/',
             'connectorUrl' => $assetsUrl . 'connector.php'
-        ], $options);
+        ], $config);
+
+        //$this->modx->addPackage($this->namespace, $this->getOption('modelPath'));
 
         // Collect structured data in central graph object
         $this->structuredData = new Graph();
-
-        $lexicon = $this->modx->getService('lexicon', 'modLexicon');
-        $lexicon->load($this->namespace . ':default');
-
-        $this->modx->addPackage($this->namespace, $this->getOption('modelPath'));
     }
 
     /**
@@ -105,18 +78,19 @@ class Romanesco
      * @param array $options An array of options that override local options.
      * @param mixed $default The default value returned if the option is not found locally or as a
      * namespaced system setting; by default this value is null.
+     *
      * @return mixed The option value or the default value specified.
      */
-    public function getOption($key, $options = [], $default = null)
+    public function getOption(string $key, $options = [], $default = null)
     {
         $option = $default;
         if (!empty($key) && is_string($key)) {
             if ($options != null && array_key_exists($key, $options)) {
                 $option = $options[$key];
-            } elseif (array_key_exists($key, $this->options)) {
-                $option = $this->options[$key];
-            } elseif (array_key_exists("$this->namespace.$key", $this->modx->config)) {
-                $option = $this->modx->getOption("$this->namespace.$key");
+            } elseif (array_key_exists($key, $this->config)) {
+                $option = $this->config[$key];
+            } elseif (array_key_exists("{$this->namespace}.{$key}", $this->modx->config)) {
+                $option = $this->modx->getOption("{$this->namespace}.{$key}");
             }
         }
         return $option;
@@ -132,10 +106,10 @@ class Romanesco
     public function recursiveArraySearch(array $haystack, string $needle): array
     {
         $result = [];
-        $iterator  = new RecursiveArrayIterator($haystack);
-        $recursive = new RecursiveIteratorIterator(
+        $iterator  = new \RecursiveArrayIterator($haystack);
+        $recursive = new \RecursiveIteratorIterator(
             $iterator,
-            RecursiveIteratorIterator::SELF_FIRST
+            \RecursiveIteratorIterator::SELF_FIRST
         );
         foreach ($recursive as $key => $value) {
             if ($key === $needle) {
@@ -530,7 +504,7 @@ class Romanesco
             }
             return '';
         }
-        catch (Error $e) {
+        catch (\Error $e) {
             $this->modx->log(modX::LOG_LEVEL_ERROR, $e);
             return '';
         }
@@ -565,7 +539,7 @@ class Romanesco
 
         if ($logFile) {
             $logFile = MODX_CORE_PATH . 'cache/logs/' . $logFile;
-            $date = new DateTime();
+            $date = new \DateTime();
             $date = $date->format("Y-m-d H:i:s");
             file_put_contents($logFile, "[$date] $output", FILE_APPEND);
         } else {

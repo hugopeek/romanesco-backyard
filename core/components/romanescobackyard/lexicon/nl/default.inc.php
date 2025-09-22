@@ -51,9 +51,14 @@ $_lang['romanesco.social.share_email_body'] = 'Dag vriend, volgens mij vind jij 
 
 // Publication
 $_lang['romanesco.article.written_by'] = 'Geschreven door';
+$_lang['romanesco.article.written_by_short'] = 'Door';
 $_lang['romanesco.article.written_on'] = 'op';
-$_lang['romanesco.article.about_author'] = 'Over de auteur';
+$_lang['romanesco.article.about_author'] = 'Over de auteur, [[+author_name]]';
 $_lang['romanesco.article.comments'] = 'Reacties';
+$_lang['romanesco.article.views'] = 'Vertoningen';
+$_lang['romanesco.article.reading_time'] = 'minuten';
+$_lang['romanesco.article.reading_time_1'] = 'minuut';
+$_lang['romanesco.article.reading_time_short'] = 'min';
 $_lang['romanesco.article.share_this'] = 'Deel dit artikel';
 $_lang['romanesco.article.share_this_short'] = 'Delen';
 $_lang['romanesco.article.previous'] = 'Vorige artikel';

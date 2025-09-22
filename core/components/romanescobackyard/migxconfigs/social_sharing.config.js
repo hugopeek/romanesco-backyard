@@ -247,7 +247,7 @@
         "extrahandlers": "this.handleColumnSwitch",
         "filtersperrow": 4,
         "packageName": "romanescobackyard",
-        "classname": "rmSocialShare",
+        "classname": "FractalFarming\\Romanesco\\Model\\SocialShare",
         "task": "",
         "getlistsort": "",
         "getlistsortdir": "",
