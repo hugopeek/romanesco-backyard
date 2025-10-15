@@ -296,7 +296,7 @@
             "renderer": "this.renderChunk",
             "clickaction": "",
             "selectorconfig": "",
-            "renderchunktpl": "[[+Destination_pagetitle]] ([[+destination]])",
+            "renderchunktpl": "[[+Destination_pagetitle]] (<a href='?a=resource/update&id=[[+destination]]'>[[+destination]]</a>)",
             "renderoptions": "",
             "editor": ""
         },

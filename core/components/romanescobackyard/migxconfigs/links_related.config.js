@@ -222,7 +222,27 @@
     "contextmenus": "update||duplicate||recall_remove_delete",
     "actionbuttons": "addItem||bulk||toggletrash||emptyTrash",
     "columnbuttons": "",
-    "filters": "",
+    "filters": [
+        {
+            "MIGX_id": 1,
+            "name": "filter_category",
+            "label": "Filter",
+            "emptytext": "All categories",
+            "type": "combobox",
+            "getlistwhere": "",
+            "getcomboprocessor": "getcombo",
+            "combotextfield": "category",
+            "comboidfield": "id",
+            "combowhere": "",
+            "comboclassname": "",
+            "combopackagename": "",
+            "combo_use_custom_prefix": "0",
+            "comboprefix": "modx_",
+            "combojoins": "",
+            "comboparent": "",
+            "default": ""
+        }
+    ],
     "extended": {
         "migx_add": "Add Relation",
         "disable_add_item": "",
@@ -289,7 +309,7 @@
             "renderer": "this.renderChunk",
             "clickaction": "",
             "selectorconfig": "",
-            "renderchunktpl": "[[+Source_pagetitle]] ([[+source]])",
+            "renderchunktpl": "[[+Source_pagetitle]] (<a href='?a=resource/update&id=[[+source]]'>[[+source]]</a>)",
             "renderoptions": "",
             "editor": ""
         },
@@ -304,7 +324,7 @@
             "renderer": "this.renderChunk",
             "clickaction": "",
             "selectorconfig": "",
-            "renderchunktpl": "[[+Destination_pagetitle]] ([[+destination]])",
+            "renderchunktpl": "[[+Destination_pagetitle]] (<a href='?a=resource/update&id=[[+destination]]'>[[+destination]]</a>)",
             "renderoptions": "",
             "editor": ""
         },
