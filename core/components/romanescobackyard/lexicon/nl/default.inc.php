@@ -115,6 +115,8 @@ $_lang['romanesco.status.table_owner'] = 'Beheerder';
 $_lang['romanesco.status.table_date_due'] = 'Vervaldatum';
 
 $_lang['romanesco.status.legend'] = 'Legenda';
+$_lang['romanesco.status.legend_description'] = 'De Status kolom toont een combinatie van conditie- en voortgangsindicatoren. Terwijl je aan een pagina werkt, toont het de voortgang van je bewerkingen. En nadat je het als Done markeert, neemt de conditie-indicator het over en toont het de staat waarin de inhoud verkeert.';
+$_lang['romanesco.status.legend_published'] = 'Rijen met gedempte tekst duiden op een niet-gepubliceerde pagina. En wanneer de paginatitel cursief is, dan is deze gemarkeerd als verborgen in menu\'s.';
 $_lang['romanesco.status.legend_progress'] = 'Voortgang';
 $_lang['romanesco.status.legend_health'] = 'Conditie';
 

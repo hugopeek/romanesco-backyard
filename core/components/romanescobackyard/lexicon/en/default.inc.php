@@ -121,8 +121,10 @@ $_lang['romanesco.status.table_owner'] = 'Owner';
 $_lang['romanesco.status.table_date_due'] = 'Due date';
 
 $_lang['romanesco.status.legend'] = 'Legend';
-$_lang['romanesco.status.legend_progress'] = 'Progress indicators';
-$_lang['romanesco.status.legend_health'] = 'Health indicators';
+$_lang['romanesco.status.legend_description'] = 'The Status column displays a combination of health and progress indicators. While you are working on a resource, it shows the progress of your editing efforts. And after you mark it as Done, the health indicator takes over, showing the condition that the content is in.';
+$_lang['romanesco.status.legend_published'] = 'Rows with muted text indicate an unpublished resource. And when the page title text is slanted, then it is marked as hidden in menus.';
+$_lang['romanesco.status.legend_progress'] = 'Progress indication';
+$_lang['romanesco.status.legend_health'] = 'Health indication';
 
 // Pattern library
 $_lang['romanesco.patterns.button_backyard'] = 'Backyard';
