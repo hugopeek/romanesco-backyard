@@ -4,11 +4,6 @@
     border: none;
 }
 
-/* Make icons work inside CB chunk previews */
-.chunkOutput i.icon {
-    font-family: 'FontAwesome' !important;
-}
-
 /* Hide chunk properties */
 .contentblocks-field-chunk-properties {
     display: none;
@@ -57,4 +52,46 @@
 }
 #contentblocks-modal .contentblocks-modal-content.large p + .contentblocks-modal-field {
     margin-top: 0;
+}
+
+/* PREVIEWS */
+
+/* Wrap preview area */
+.chunkOutput {
+    background: #fbfbfb;
+    border: 1px solid rgba(0,0,0,.075);
+    box-shadow: none;
+
+    padding: 40px 18px 16px;
+    position: relative;
+    overflow: hidden;
+}
+.chunkOutput:before {
+    content: 'Preview';
+    position: absolute;
+    width: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    padding: 3px;
+    background: rgba(0,0,0,.075);
+    font-size: 12px;
+    text-align: right;
+    color: #666;
+}
+
+/* Fix content alignment */
+.chunkOutput div {
+    max-width: inherit !important;
+}
+
+/* Hide borked elements */
+.chunkOutput .ui.pagination.menu {
+    display: none;
+}
+
+/* Make icons work */
+.chunkOutput i.icon {
+    /*font-family: 'FontAwesome' !important;*/
 }
