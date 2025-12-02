@@ -1,5 +1,13 @@
 # Changelog for Romanesco Backyard
 
+## Backyard 1.0.0-rc2
+Released on December 2, 2025
+
+- Lexicon updates
+- Include form, table and popup assets for CB previews
+- Display manager chunk previews in a frame
+- Link to source / destination page in related links grid columns
+
 ## Backyard 1.0.0-rc1
 Released on May 22, 2025
 
