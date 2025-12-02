@@ -1,0 +1,4200 @@
+/*!
+ * # Fomantic-UI 2.9.4 - Table
+ * https://github.com/fomantic/Fomantic-UI/
+ *
+ *
+ * Released under the MIT license
+ * https://opensource.org/licenses/MIT
+ *
+ */
+
+/*******************************
+             Table
+*******************************/
+
+/* Prototype */
+
+.chunkOutput .ui.table {
+  width: 100%;
+  background: #FFFFFF;
+  margin: 1em 0;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  box-shadow: none;
+  border-radius: 0.28571429rem;
+  text-align: left;
+  vertical-align: middle;
+  color: rgba(0, 0, 0, 0.87);
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.chunkOutput .ui.table:first-child {
+  margin-top: 0;
+}
+
+.chunkOutput .ui.table:last-child {
+  margin-bottom: 0;
+}
+
+.chunkOutput .ui.table > thead,
+.chunkOutput .ui.table > tbody {
+  text-align: inherit;
+  vertical-align: inherit;
+}
+
+/*******************************
+             Parts
+*******************************/
+
+/* Table Content */
+
+.chunkOutput .ui.table th,
+.chunkOutput .ui.table td {
+  transition: background 0.1s ease, color 0.1s ease;
+}
+
+/* Rowspan helper class */
+
+.chunkOutput .ui.table th.rowspanned,
+.chunkOutput .ui.table td.rowspanned {
+  display: none;
+}
+
+/* Headers */
+
+.chunkOutput .ui.table > thead {
+  box-shadow: none;
+}
+
+.chunkOutput .ui.table > thead > tr > th {
+  cursor: auto;
+  background: #F9FAFB;
+  text-align: inherit;
+  color: rgba(0, 0, 0, 0.87);
+  padding: 0.92857143em 0.78571429em;
+  vertical-align: inherit;
+  font-style: none;
+  font-weight: bold;
+  text-transform: none;
+  border-bottom: 1px solid rgba(34, 36, 38, 0.1);
+  border-left: none;
+}
+
+.chunkOutput .ui.table > thead > tr > th:first-child {
+  border-left: none;
+}
+
+.chunkOutput .ui.table > thead > tr:first-child > th:first-child {
+  border-radius: 0.28571429rem 0 0 0;
+}
+
+.chunkOutput .ui.table > thead > tr:first-child > th:last-child {
+  border-radius: 0 0.28571429rem 0 0;
+}
+
+.chunkOutput .ui.table > thead > tr:first-child > th:only-child {
+  border-radius: 0.28571429rem 0.28571429rem 0 0;
+}
+
+/* Footer */
+
+.chunkOutput .ui.table > tfoot {
+  box-shadow: none;
+}
+
+.chunkOutput .ui.table > tfoot > tr > th,
+.chunkOutput .ui.table > tfoot > tr > td {
+  cursor: auto;
+  border-top: 1px solid rgba(34, 36, 38, 0.15);
+  background: #F9FAFB;
+  text-align: inherit;
+  color: rgba(0, 0, 0, 0.87);
+  padding: 0.78571429em 0.78571429em;
+  vertical-align: inherit;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
+}
+
+.chunkOutput .ui.table > tfoot > tr > th:first-child,
+.chunkOutput .ui.table > tfoot > tr > td:first-child {
+  border-left: none;
+}
+
+.chunkOutput .ui.table > tfoot > tr:last-child > th:first-child,
+.chunkOutput .ui.table > tfoot > tr:last-child > td:first-child {
+  border-radius: 0 0 0 0.28571429rem;
+}
+
+.chunkOutput .ui.table > tfoot > tr:last-child > th:last-child,
+.chunkOutput .ui.table > tfoot > tr:last-child > td:last-child {
+  border-radius: 0 0 0.28571429rem 0;
+}
+
+.chunkOutput .ui.table > tfoot > tr:last-child > th:only-child,
+.chunkOutput .ui.table > tfoot > tr:last-child > td:only-child {
+  border-radius: 0 0 0.28571429rem 0.28571429rem;
+}
+
+/* Table Row */
+
+.chunkOutput .ui.table > tr > td,
+.chunkOutput .ui.table > tbody > tr > td {
+  border-top: 1px solid rgba(34, 36, 38, 0.1);
+}
+
+.chunkOutput .ui.table > tr:first-child > td,
+.chunkOutput .ui.table > tbody > tr:first-child > td {
+  border-top: none;
+}
+
+/* Repeated tbody */
+
+.chunkOutput .ui.table > tbody + tbody tr:first-child > td {
+  border-top: 1px solid rgba(34, 36, 38, 0.1);
+}
+
+/* Table Cells */
+
+.chunkOutput .ui.table > tbody > tr > td,
+.chunkOutput .ui.table > tr > td {
+  padding: 0.78571429em 0.78571429em;
+  text-align: inherit;
+}
+
+/* Icons */
+
+.chunkOutput .ui.table > i.icon {
+  vertical-align: baseline;
+}
+
+.chunkOutput .ui.table > i.icon:only-child {
+  margin: 0;
+}
+
+/* Table Segment */
+
+.chunkOutput .ui.table.segment {
+  padding: 0;
+}
+
+.chunkOutput .ui.table.segment::after {
+  display: none;
+}
+
+.chunkOutput .ui.table.segment.stacked::after {
+  display: block;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 767.98px) {
+  .chunkOutput .ui.table:not(.unstackable) {
+    width: 100%;
+    padding: 0;
+  }
+
+  .chunkOutput .ui.table:not(.unstackable) > thead,
+  .chunkOutput .ui.table:not(.unstackable) > thead > tr,
+  .chunkOutput .ui.table:not(.unstackable) > tfoot,
+  .chunkOutput .ui.table:not(.unstackable) > tfoot > tr,
+  .chunkOutput .ui.table:not(.unstackable) > tbody,
+  .chunkOutput .ui.table:not(.unstackable) > tr,
+  .chunkOutput .ui.table:not(.unstackable) > tbody > tr,
+  .chunkOutput .ui.table:not(.unstackable) > tr > th:not(.rowspanned),
+  .chunkOutput .ui.table:not(.unstackable) > thead > tr > th:not(.rowspanned),
+  .chunkOutput .ui.table:not(.unstackable) > tbody > tr > th:not(.rowspanned),
+  .chunkOutput .ui.table:not(.unstackable) > tfoot > tr > th:not(.rowspanned),
+  .chunkOutput .ui.table:not(.unstackable) > tr > td:not(.rowspanned),
+  .chunkOutput .ui.table:not(.unstackable) > tbody > tr > td:not(.rowspanned),
+  .chunkOutput .ui.table:not(.unstackable) > tfoot > tr > td:not(.rowspanned) {
+    display: block !important;
+    width: auto !important;
+  }
+
+  .chunkOutput .ui.table:not(.unstackable) > thead {
+    display: block;
+  }
+
+  .chunkOutput .ui.table:not(.unstackable) > tfoot {
+    display: block;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) > tr,
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) > thead > tr,
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) > tbody > tr,
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) > tfoot > tr {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) > tr > th,
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) > thead > tr > th,
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) > tbody > tr > th,
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) > tfoot > tr > th,
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) > tr > td,
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) > tbody > tr > td,
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) > tfoot > tr > td {
+    background: none;
+    border: none;
+    padding: 0.25em 0.75em;
+    box-shadow: none;
+  }
+
+  .chunkOutput .ui.table:not(.unstackable) > tr > th:first-child,
+  .chunkOutput .ui.table:not(.unstackable) > thead > tr > th:first-child,
+  .chunkOutput .ui.table:not(.unstackable) > tbody > tr > th:first-child,
+  .chunkOutput .ui.table:not(.unstackable) > tfoot > tr > th:first-child,
+  .chunkOutput .ui.table:not(.unstackable) > tr > td:first-child,
+  .chunkOutput .ui.table:not(.unstackable) > tbody > tr > td:first-child,
+  .chunkOutput .ui.table:not(.unstackable) > tfoot > tr > td:first-child {
+    font-weight: bold;
+  }
+
+  /* Definition Table */
+
+  .chunkOutput .ui.definition.table:not(.unstackable) > thead > tr > th:first-child {
+    box-shadow: none !important;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) tr[class*="primary marked"].left {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #698f73 inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) tr[class*="primary marked"].right {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #698f73 inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.inverted.table:not(.unstackable) tr[class*="primary marked"].left {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #eaf3ec inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.inverted.table:not(.unstackable) tr[class*="primary marked"].right {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #eaf3ec inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) tr[class*="secondary marked"].left {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #5f7ebe inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) tr[class*="secondary marked"].right {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #5f7ebe inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.inverted.table:not(.unstackable) tr[class*="secondary marked"].left {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #edf1f8 inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.inverted.table:not(.unstackable) tr[class*="secondary marked"].right {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #edf1f8 inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) tr[class*="red marked"].left {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #DB2828 inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) tr[class*="red marked"].right {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #DB2828 inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.inverted.table:not(.unstackable) tr[class*="red marked"].left {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #FF695E inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.inverted.table:not(.unstackable) tr[class*="red marked"].right {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #FF695E inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) tr[class*="orange marked"].left {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #F2711C inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) tr[class*="orange marked"].right {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #F2711C inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.inverted.table:not(.unstackable) tr[class*="orange marked"].left {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #FF851B inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.inverted.table:not(.unstackable) tr[class*="orange marked"].right {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #FF851B inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) tr[class*="yellow marked"].left {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #FBBD08 inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) tr[class*="yellow marked"].right {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #FBBD08 inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.inverted.table:not(.unstackable) tr[class*="yellow marked"].left {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #FFE21F inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.inverted.table:not(.unstackable) tr[class*="yellow marked"].right {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #FFE21F inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) tr[class*="olive marked"].left {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #B5CC18 inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) tr[class*="olive marked"].right {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #B5CC18 inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.inverted.table:not(.unstackable) tr[class*="olive marked"].left {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #D9E778 inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.inverted.table:not(.unstackable) tr[class*="olive marked"].right {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #D9E778 inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) tr[class*="green marked"].left {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #21BA45 inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) tr[class*="green marked"].right {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #21BA45 inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.inverted.table:not(.unstackable) tr[class*="green marked"].left {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #2ECC40 inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.inverted.table:not(.unstackable) tr[class*="green marked"].right {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #2ECC40 inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) tr[class*="teal marked"].left {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #00B5AD inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) tr[class*="teal marked"].right {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #00B5AD inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.inverted.table:not(.unstackable) tr[class*="teal marked"].left {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #6DFFFF inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.inverted.table:not(.unstackable) tr[class*="teal marked"].right {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #6DFFFF inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) tr[class*="blue marked"].left {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #2185D0 inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) tr[class*="blue marked"].right {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #2185D0 inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.inverted.table:not(.unstackable) tr[class*="blue marked"].left {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #54C8FF inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.inverted.table:not(.unstackable) tr[class*="blue marked"].right {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #54C8FF inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) tr[class*="violet marked"].left {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #6435C9 inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) tr[class*="violet marked"].right {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #6435C9 inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.inverted.table:not(.unstackable) tr[class*="violet marked"].left {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #A291FB inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.inverted.table:not(.unstackable) tr[class*="violet marked"].right {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #A291FB inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) tr[class*="purple marked"].left {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #A333C8 inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) tr[class*="purple marked"].right {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #A333C8 inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.inverted.table:not(.unstackable) tr[class*="purple marked"].left {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #DC73FF inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.inverted.table:not(.unstackable) tr[class*="purple marked"].right {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #DC73FF inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) tr[class*="pink marked"].left {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #E03997 inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) tr[class*="pink marked"].right {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #E03997 inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.inverted.table:not(.unstackable) tr[class*="pink marked"].left {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #FF8EDF inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.inverted.table:not(.unstackable) tr[class*="pink marked"].right {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #FF8EDF inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) tr[class*="brown marked"].left {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #A5673F inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) tr[class*="brown marked"].right {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #A5673F inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.inverted.table:not(.unstackable) tr[class*="brown marked"].left {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #D67C1C inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.inverted.table:not(.unstackable) tr[class*="brown marked"].right {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #D67C1C inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) tr[class*="grey marked"].left {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #767676 inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) tr[class*="grey marked"].right {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #767676 inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.inverted.table:not(.unstackable) tr[class*="grey marked"].left {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #DCDDDE inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.inverted.table:not(.unstackable) tr[class*="grey marked"].right {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #DCDDDE inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) tr[class*="black marked"].left {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #1B1C1D inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.table:not(.unstackable) tr[class*="black marked"].right {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #1B1C1D inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.inverted.table:not(.unstackable) tr[class*="black marked"].left {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #545454 inset;
+  }
+
+  .chunkOutput .ui.ui.ui.ui.inverted.table:not(.unstackable) tr[class*="black marked"].right {
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #545454 inset;
+  }
+
+  .chunkOutput .ui.scrolling.table.short > tbody {
+    max-height: 6.74983929em;
+  }
+
+  .chunkOutput .resizable.ui.scrolling.table.short > tbody {
+    height: 6.74983929em;
+  }
+
+  .chunkOutput .ui.scrolling.table[class*="very short"] > tbody {
+    max-height: 4.49989286em;
+  }
+
+  .chunkOutput .resizable.ui.scrolling.table[class*="very short"] > tbody {
+    height: 4.49989286em;
+  }
+
+  .chunkOutput .ui.scrolling.table > tbody {
+    max-height: 8.99978571em;
+  }
+
+  .chunkOutput .resizable.ui.scrolling.table > tbody {
+    height: 8.99978571em;
+  }
+
+  .chunkOutput .ui.scrolling.table.long > tbody {
+    max-height: 17.99957143em;
+  }
+
+  .chunkOutput .resizable.ui.scrolling.table.long > tbody {
+    height: 17.99957143em;
+  }
+
+  .chunkOutput .ui.scrolling.table[class*="very long"] > tbody {
+    max-height: 26.99935714em;
+  }
+
+  .chunkOutput .resizable.ui.scrolling.table[class*="very long"] > tbody {
+    height: 26.99935714em;
+  }
+
+  .chunkOutput .ui.overflowing.table.short {
+    max-height: 11.24973214em;
+  }
+
+  .chunkOutput .ui.overflowing.table[class*="very short"] {
+    max-height: 7.49982143em;
+  }
+
+  .chunkOutput .ui.overflowing.table {
+    max-height: 14.99964286em;
+  }
+
+  .chunkOutput .ui.overflowing.table.long {
+    max-height: 29.99928571em;
+  }
+
+  .chunkOutput .ui.overflowing.table[class*="very long"] {
+    max-height: 44.99892857em;
+  }
+}
+
+/* --------------
+      Scrolling
+    --------------- */
+
+@media only screen and (min-width: 768px) {
+  .chunkOutput .ui.scrolling.table.short > tbody {
+    max-height: 8.99978571em;
+  }
+
+  .chunkOutput .resizable.ui.scrolling.table.short > tbody {
+    height: 8.99978571em;
+  }
+
+  .chunkOutput .ui.scrolling.table[class*="very short"] > tbody {
+    max-height: 5.99985714em;
+  }
+
+  .chunkOutput .resizable.ui.scrolling.table[class*="very short"] > tbody {
+    height: 5.99985714em;
+  }
+
+  .chunkOutput .ui.scrolling.table > tbody {
+    max-height: 11.99971429em;
+  }
+
+  .chunkOutput .resizable.ui.scrolling.table > tbody {
+    height: 11.99971429em;
+  }
+
+  .chunkOutput .ui.scrolling.table.long > tbody {
+    max-height: 23.99942857em;
+  }
+
+  .chunkOutput .resizable.ui.scrolling.table.long > tbody {
+    height: 23.99942857em;
+  }
+
+  .chunkOutput .ui.scrolling.table[class*="very long"] > tbody {
+    max-height: 35.99914286em;
+  }
+
+  .chunkOutput .resizable.ui.scrolling.table[class*="very long"] > tbody {
+    height: 35.99914286em;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .chunkOutput .ui.scrolling.table.short > tbody {
+    max-height: 13.49967857em;
+  }
+
+  .chunkOutput .resizable.ui.scrolling.table.short > tbody {
+    height: 13.49967857em;
+  }
+
+  .chunkOutput .ui.scrolling.table[class*="very short"] > tbody {
+    max-height: 8.99978571em;
+  }
+
+  .chunkOutput .resizable.ui.scrolling.table[class*="very short"] > tbody {
+    height: 8.99978571em;
+  }
+
+  .chunkOutput .ui.scrolling.table > tbody {
+    max-height: 17.99957143em;
+  }
+
+  .chunkOutput .resizable.ui.scrolling.table > tbody {
+    height: 17.99957143em;
+  }
+
+  .chunkOutput .ui.scrolling.table.long > tbody {
+    max-height: 35.99914286em;
+  }
+
+  .chunkOutput .resizable.ui.scrolling.table.long > tbody {
+    height: 35.99914286em;
+  }
+
+  .chunkOutput .ui.scrolling.table[class*="very long"] > tbody {
+    max-height: 53.99871429em;
+  }
+
+  .chunkOutput .resizable.ui.scrolling.table[class*="very long"] > tbody {
+    height: 53.99871429em;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .chunkOutput .ui.scrolling.table.short > tbody {
+    max-height: 17.99957143em;
+  }
+
+  .chunkOutput .resizable.ui.scrolling.table.short > tbody {
+    height: 17.99957143em;
+  }
+
+  .chunkOutput .ui.scrolling.table[class*="very short"] > tbody {
+    max-height: 11.99971429em;
+  }
+
+  .chunkOutput .resizable.ui.scrolling.table[class*="very short"] > tbody {
+    height: 11.99971429em;
+  }
+
+  .chunkOutput .ui.scrolling.table > tbody {
+    max-height: 23.99942857em;
+  }
+
+  .chunkOutput .resizable.ui.scrolling.table > tbody {
+    height: 23.99942857em;
+  }
+
+  .chunkOutput .ui.scrolling.table.long > tbody {
+    max-height: 47.99885714em;
+  }
+
+  .chunkOutput .resizable.ui.scrolling.table.long > tbody {
+    height: 47.99885714em;
+  }
+
+  .chunkOutput .ui.scrolling.table[class*="very long"] > tbody {
+    max-height: 71.99828571em;
+  }
+
+  .chunkOutput .resizable.ui.scrolling.table[class*="very long"] > tbody {
+    height: 71.99828571em;
+  }
+}
+
+.chunkOutput .ui.scrolling.table > thead,
+.chunkOutput .ui.scrolling.table > tfoot,
+.chunkOutput .ui.scrolling.table > tbody {
+  display: block;
+  overflow-y: scroll;
+  -ms-scroll-chaining: none;
+  overscroll-behavior: none;
+}
+
+.chunkOutput .ui.scrolling.table > thead > tr,
+.chunkOutput .ui.scrolling.table > tfoot > tr,
+.chunkOutput .ui.scrolling.table > tbody > tr {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+@supports (-moz-appearance: none) {
+  .ui.scrolling.table > thead,
+  .ui.scrolling.table > tfoot,
+  .ui.scrolling.table > tbody {
+    scrollbar-width: thin;
+  }
+}
+
+/* Camouflage scrollbars, we need them only to gain the same width as tbody */
+
+.chunkOutput .ui.scrolling.table > thead {
+  background: #F9FAFB;
+  color: #F9FAFB;
+  border-radius: 0.28571429rem 0.28571429rem 0 0;
+}
+
+.chunkOutput .ui.scrolling.table > tfoot {
+  background: #F9FAFB;
+  color: #F9FAFB;
+  border-radius: 0 0 0.28571429rem 0.28571429rem;
+}
+
+.chunkOutput .ui.inverted.scrolling.table > thead {
+  background: rgba(0, 0, 0, 0.15);
+  color: rgba(0, 0, 0, 0.15);
+}
+
+.chunkOutput .ui.inverted.scrolling.table > tfoot {
+  background: rgba(0, 0, 0, 0.15);
+  color: rgba(0, 0, 0, 0.15);
+}
+
+.chunkOutput .ui.scrolling.table > thead::-webkit-scrollbar-track,
+.chunkOutput .ui.scrolling.table > tfoot::-webkit-scrollbar-track {
+  background: inherit;
+  border-radius: 0.28571429rem;
+}
+
+@supports (-moz-appearance: none) {
+  .ui.scrolling.table > thead,
+  .ui.scrolling.table > tfoot {
+    scrollbar-color: currentColor currentColor;
+  }
+}
+
+.chunkOutput .ui.inverted.scrolling.table > tbody::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.chunkOutput .ui.inverted.scrolling.table > tbody::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.chunkOutput .ui.inverted.scrolling.table > tbody::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.chunkOutput .ui.inverted.scrolling.table > tbody::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+@supports (-moz-appearance: none) {
+  .ui.inverted.scrolling.table > tbody {
+    /* firefox: first color thumb, second track */
+    scrollbar-color: rgba(255, 255, 255, 0.25) rgba(255, 255, 255, 0.1);
+  }
+}
+
+.chunkOutput .ui.resizable.scrolling.table > tbody {
+  resize: vertical;
+  max-height: none;
+}
+
+/* --------------
+      Overflowing
+    --------------- */
+
+.chunkOutput .ui.overflowing.table {
+  display: block;
+  overflow: auto;
+  -ms-scroll-chaining: none;
+  overscroll-behavior: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .chunkOutput .ui.overflowing.table.short {
+    max-height: 13.49967857em;
+  }
+
+  .chunkOutput .ui.overflowing.table[class*="very short"] {
+    max-height: 8.99978571em;
+  }
+
+  .chunkOutput .ui.overflowing.table {
+    max-height: 17.99957143em;
+  }
+
+  .chunkOutput .ui.overflowing.table.long {
+    max-height: 35.99914286em;
+  }
+
+  .chunkOutput .ui.overflowing.table[class*="very long"] {
+    max-height: 53.99871429em;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .chunkOutput .ui.overflowing.table.short {
+    max-height: 17.99957143em;
+  }
+
+  .chunkOutput .ui.overflowing.table[class*="very short"] {
+    max-height: 11.99971429em;
+  }
+
+  .chunkOutput .ui.overflowing.table {
+    max-height: 23.99942857em;
+  }
+
+  .chunkOutput .ui.overflowing.table.long {
+    max-height: 47.99885714em;
+  }
+
+  .chunkOutput .ui.overflowing.table[class*="very long"] {
+    max-height: 71.99828571em;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .chunkOutput .ui.overflowing.table.short {
+    max-height: 22.49946429em;
+  }
+
+  .chunkOutput .ui.overflowing.table[class*="very short"] {
+    max-height: 14.99964286em;
+  }
+
+  .chunkOutput .ui.overflowing.table {
+    max-height: 29.99928571em;
+  }
+
+  .chunkOutput .ui.overflowing.table.long {
+    max-height: 59.99857143em;
+  }
+
+  .chunkOutput .ui.overflowing.table[class*="very long"] {
+    max-height: 89.99785714em;
+  }
+}
+
+/*******************************
+            Coupling
+*******************************/
+
+/* UI Image */
+
+.chunkOutput .ui.table .collapsing .image,
+.chunkOutput .ui.table .collapsing .image img {
+  max-width: none;
+}
+
+/*******************************
+             Types
+*******************************/
+
+/* --------------
+    Complex
+--------------- */
+
+.chunkOutput .ui.structured.table {
+  border-collapse: collapse;
+}
+
+.chunkOutput .ui.structured.table > thead > tr > th {
+  border-left: none;
+  border-right: none;
+}
+
+.chunkOutput .ui.structured.sortable.table > thead > tr > th {
+  border-left: 1px solid rgba(34, 36, 38, 0.15);
+  border-right: 1px solid rgba(34, 36, 38, 0.15);
+}
+
+.chunkOutput .ui.structured.basic.table > tr > th,
+.chunkOutput .ui.structured.basic.table > thead > tr > th,
+.chunkOutput .ui.structured.basic.table > tbody > tr > th,
+.chunkOutput .ui.structured.basic.table > tfoot > tr > th {
+  border-left: none;
+  border-right: none;
+}
+
+.chunkOutput .ui.structured.celled.table > tr > th,
+.chunkOutput .ui.structured.celled.table > thead > tr > th,
+.chunkOutput .ui.structured.celled.table > tbody > tr > th,
+.chunkOutput .ui.structured.celled.table > tfoot > tr > th,
+.chunkOutput .ui.structured.celled.table > tr > td,
+.chunkOutput .ui.structured.celled.table > tbody > tr > td,
+.chunkOutput .ui.structured.celled.table > tfoot > tr > td {
+  border-left: 1px solid rgba(34, 36, 38, 0.1);
+  border-right: 1px solid rgba(34, 36, 38, 0.1);
+}
+
+/* --------------
+       Definition
+    --------------- */
+
+.chunkOutput .ui.definition.table > thead:not(.full-width) > tr > th:first-child {
+  pointer-events: none;
+  background: #FFFFFF;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.4);
+  box-shadow: -0.1em -0.2em 0 0.1em #FFFFFF;
+  -moz-transform: scale(1);
+}
+
+.chunkOutput .ui.definition.table > thead:not(.full-width) > tr > th:first-child:not(:empty) {
+  pointer-events: auto;
+}
+
+.chunkOutput .ui.definition.table > tfoot:not(.full-width) > tr > th:first-child {
+  pointer-events: none;
+  background: #FFFFFF;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.4);
+  box-shadow: -0.1em 0.2em 0 0.1em #FFFFFF;
+  -moz-transform: scale(1);
+}
+
+/* Highlight Defining Column */
+
+.chunkOutput .ui.definition.table > tr > td:first-child:not(.ignored),
+.chunkOutput .ui.definition.table > tbody > tr > td:first-child:not(.ignored),
+.chunkOutput .ui.definition.table > tfoot > tr > td:first-child:not(.ignored),
+.chunkOutput .ui.definition.table tr td.definition {
+  background: rgba(0, 0, 0, 0.03);
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.95);
+  text-transform: "";
+  box-shadow: "";
+  text-align: "";
+  font-size: 1em;
+  padding-left: "";
+  padding-right: "";
+}
+
+/* Fix 2nd Column */
+
+.chunkOutput .ui.definition.table > thead:not(.full-width) > tr > th:nth-child(2) {
+  border-left: 1px solid rgba(34, 36, 38, 0.15);
+}
+
+.chunkOutput .ui.definition.table > tfoot:not(.full-width) > tr > th:nth-child(2),
+.chunkOutput .ui.definition.table > tfoot:not(.full-width) > tr > td:nth-child(2) {
+  border-left: 1px solid rgba(34, 36, 38, 0.15);
+}
+
+.chunkOutput .ui.definition.table > tr > td:nth-child(2),
+.chunkOutput .ui.definition.table > tbody > tr > td:nth-child(2) {
+  border-left: 1px solid rgba(34, 36, 38, 0.15);
+}
+
+/*******************************
+             States
+*******************************/
+
+/* --------------
+        Positive
+    --------------- */
+
+.chunkOutput .ui.ui.ui.ui.table tr.positive,
+.chunkOutput .ui.ui.table td.positive {
+  box-shadow: 0 0 0 #A3C293 inset;
+  background: #FCFFF5;
+  color: #2C662D;
+}
+
+.chunkOutput .ui.ui.ui.ui.inverted.table tr.positive,
+.chunkOutput .ui.ui.inverted.table td.positive {
+  background: #A3C293;
+  color: #2C662D;
+}
+
+/* --------------
+         Negative
+    --------------- */
+
+.chunkOutput .ui.ui.ui.ui.table tr.negative,
+.chunkOutput .ui.ui.table td.negative {
+  box-shadow: 0 0 0 #E0B4B4 inset;
+  background: #FFF6F6;
+  color: #9F3A38;
+}
+
+.chunkOutput .ui.ui.ui.ui.inverted.table tr.negative,
+.chunkOutput .ui.ui.inverted.table td.negative {
+  background: #E0B4B4;
+  color: #9F3A38;
+}
+
+/* --------------
+          Error
+    --------------- */
+
+.chunkOutput .ui.ui.ui.ui.table tr.error,
+.chunkOutput .ui.ui.table td.error {
+  box-shadow: 0 0 0 #E0B4B4 inset;
+  background: #FFF6F6;
+  color: #9F3A38;
+}
+
+.chunkOutput .ui.ui.ui.ui.inverted.table tr.error,
+.chunkOutput .ui.ui.inverted.table td.error {
+  background: #E0B4B4;
+  color: #9F3A38;
+}
+
+/* --------------
+         Warning
+    --------------- */
+
+.chunkOutput .ui.ui.ui.ui.table tr.warning,
+.chunkOutput .ui.ui.table td.warning {
+  box-shadow: 0 0 0 #C9BA9B inset;
+  background: #FFFAF3;
+  color: #573A08;
+}
+
+.chunkOutput .ui.ui.ui.ui.inverted.table tr.warning,
+.chunkOutput .ui.ui.inverted.table td.warning {
+  background: #eec97e;
+  color: #573A08;
+}
+
+/* --------------
+         Active
+    --------------- */
+
+.chunkOutput .ui.ui.ui.ui.table tr.active,
+.chunkOutput .ui.ui.table td.active {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.87) inset;
+  background: #e0e0e0;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.chunkOutput .ui.ui.ui.ui.inverted.table tr.active,
+.chunkOutput .ui.ui.inverted.table td.active {
+  background: #a0a0a0;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+/* --------------
+         Disabled
+    --------------- */
+
+.chunkOutput .ui.ui.ui.table tr.disabled td,
+.chunkOutput .ui.ui.ui.table tr td.disabled,
+.chunkOutput .ui.table tr.disabled:hover,
+.chunkOutput .ui.table tr:hover td.disabled {
+  pointer-events: none;
+  color: rgba(40, 40, 40, 0.3);
+}
+
+/*******************************
+          Variations
+*******************************/
+
+/* --------------
+        Stackable
+    --------------- */
+
+@media only screen and (max-width: 991.98px) {
+  .chunkOutput .ui[class*="tablet stackable"].table,
+  .chunkOutput .ui[class*="tablet stackable"].table > thead,
+  .chunkOutput .ui[class*="tablet stackable"].table > thead > tr,
+  .chunkOutput .ui[class*="tablet stackable"].table > tfoot,
+  .chunkOutput .ui[class*="tablet stackable"].table > tfoot > tr,
+  .chunkOutput .ui[class*="tablet stackable"].table > tbody,
+  .chunkOutput .ui[class*="tablet stackable"].table > tbody > tr,
+  .chunkOutput .ui[class*="tablet stackable"].table > tr,
+  .chunkOutput .ui[class*="tablet stackable"].table > thead > tr > th:not(.rowspanned),
+  .chunkOutput .ui[class*="tablet stackable"].table > tbody > tr > th:not(.rowspanned),
+  .chunkOutput .ui[class*="tablet stackable"].table > tfoot > tr > th:not(.rowspanned),
+  .chunkOutput .ui[class*="tablet stackable"].table > tr > th:not(.rowspanned),
+  .chunkOutput .ui[class*="tablet stackable"].table > tbody > tr > td:not(.rowspanned),
+  .chunkOutput .ui[class*="tablet stackable"].table > tfoot > tr > td:not(.rowspanned),
+  .chunkOutput .ui[class*="tablet stackable"].table > tr > td:not(.rowspanned) {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .chunkOutput .ui[class*="tablet stackable"].table {
+    padding: 0;
+  }
+
+  .chunkOutput .ui[class*="tablet stackable"].table > thead {
+    display: block;
+  }
+
+  .chunkOutput .ui[class*="tablet stackable"].table > tfoot {
+    display: block;
+  }
+
+  .chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table > thead > tr,
+  .chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table > tbody > tr,
+  .chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table > tfoot > tr,
+  .chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table > tr {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset;
+  }
+
+  .chunkOutput .ui[class*="tablet stackable"].table > thead > tr > th,
+  .chunkOutput .ui[class*="tablet stackable"].table > tbody > tr > th,
+  .chunkOutput .ui[class*="tablet stackable"].table > tfoot > tr > th,
+  .chunkOutput .ui[class*="tablet stackable"].table > tr > th,
+  .chunkOutput .ui[class*="tablet stackable"].table > tbody > tr > td,
+  .chunkOutput .ui[class*="tablet stackable"].table > tfoot > tr > td,
+  .chunkOutput .ui[class*="tablet stackable"].table > tr > td {
+    background: none;
+    border: none !important;
+    padding: 0.25em 0.75em;
+    box-shadow: none;
+  }
+
+  /* Definition Table */
+
+  .chunkOutput .ui.definition[class*="tablet stackable"].table > thead > tr > th:first-child {
+    box-shadow: none !important;
+  }
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table tr[class*="primary marked"].left {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #698f73 inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table tr[class*="primary marked"].right {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #698f73 inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].inverted.table tr[class*="primary marked"].left {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #eaf3ec inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].inverted.table tr[class*="primary marked"].right {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #eaf3ec inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table tr[class*="secondary marked"].left {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #5f7ebe inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table tr[class*="secondary marked"].right {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #5f7ebe inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].inverted.table tr[class*="secondary marked"].left {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #edf1f8 inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].inverted.table tr[class*="secondary marked"].right {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #edf1f8 inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table tr[class*="red marked"].left {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #DB2828 inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table tr[class*="red marked"].right {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #DB2828 inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].inverted.table tr[class*="red marked"].left {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #FF695E inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].inverted.table tr[class*="red marked"].right {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #FF695E inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table tr[class*="orange marked"].left {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #F2711C inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table tr[class*="orange marked"].right {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #F2711C inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].inverted.table tr[class*="orange marked"].left {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #FF851B inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].inverted.table tr[class*="orange marked"].right {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #FF851B inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table tr[class*="yellow marked"].left {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #FBBD08 inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table tr[class*="yellow marked"].right {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #FBBD08 inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].inverted.table tr[class*="yellow marked"].left {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #FFE21F inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].inverted.table tr[class*="yellow marked"].right {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #FFE21F inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table tr[class*="olive marked"].left {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #B5CC18 inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table tr[class*="olive marked"].right {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #B5CC18 inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].inverted.table tr[class*="olive marked"].left {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #D9E778 inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].inverted.table tr[class*="olive marked"].right {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #D9E778 inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table tr[class*="green marked"].left {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #21BA45 inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table tr[class*="green marked"].right {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #21BA45 inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].inverted.table tr[class*="green marked"].left {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #2ECC40 inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].inverted.table tr[class*="green marked"].right {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #2ECC40 inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table tr[class*="teal marked"].left {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #00B5AD inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table tr[class*="teal marked"].right {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #00B5AD inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].inverted.table tr[class*="teal marked"].left {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #6DFFFF inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].inverted.table tr[class*="teal marked"].right {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #6DFFFF inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table tr[class*="blue marked"].left {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #2185D0 inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table tr[class*="blue marked"].right {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #2185D0 inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].inverted.table tr[class*="blue marked"].left {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #54C8FF inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].inverted.table tr[class*="blue marked"].right {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #54C8FF inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table tr[class*="violet marked"].left {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #6435C9 inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table tr[class*="violet marked"].right {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #6435C9 inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].inverted.table tr[class*="violet marked"].left {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #A291FB inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].inverted.table tr[class*="violet marked"].right {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #A291FB inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table tr[class*="purple marked"].left {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #A333C8 inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table tr[class*="purple marked"].right {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #A333C8 inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].inverted.table tr[class*="purple marked"].left {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #DC73FF inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].inverted.table tr[class*="purple marked"].right {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #DC73FF inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table tr[class*="pink marked"].left {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #E03997 inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table tr[class*="pink marked"].right {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #E03997 inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].inverted.table tr[class*="pink marked"].left {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #FF8EDF inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].inverted.table tr[class*="pink marked"].right {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #FF8EDF inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table tr[class*="brown marked"].left {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #A5673F inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table tr[class*="brown marked"].right {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #A5673F inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].inverted.table tr[class*="brown marked"].left {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #D67C1C inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].inverted.table tr[class*="brown marked"].right {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #D67C1C inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table tr[class*="grey marked"].left {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #767676 inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table tr[class*="grey marked"].right {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #767676 inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].inverted.table tr[class*="grey marked"].left {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #DCDDDE inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].inverted.table tr[class*="grey marked"].right {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #DCDDDE inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table tr[class*="black marked"].left {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #1B1C1D inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].table tr[class*="black marked"].right {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #1B1C1D inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].inverted.table tr[class*="black marked"].left {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0.2em 0 0 0 #545454 inset;
+}
+
+.chunkOutput .ui.ui.ui.ui[class*="tablet stackable"].inverted.table tr[class*="black marked"].right {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, -0.2em 0 0 0 #545454 inset;
+}
+
+/* --------------
+     Text Alignment
+    --------------- */
+
+.chunkOutput .ui.table[class*="left aligned"],
+.chunkOutput .ui.table [class*="left aligned"] {
+  text-align: left;
+}
+
+.chunkOutput .ui.table[class*="center aligned"],
+.chunkOutput .ui.table [class*="center aligned"] {
+  text-align: center;
+}
+
+.chunkOutput .ui.table[class*="right aligned"],
+.chunkOutput .ui.table [class*="right aligned"] {
+  text-align: right;
+}
+
+/* ------------------
+     Vertical Alignment
+    ------------------ */
+
+.chunkOutput .ui.table[class*="top aligned"],
+.chunkOutput .ui.table [class*="top aligned"] {
+  vertical-align: top;
+}
+
+.chunkOutput .ui.table[class*="middle aligned"],
+.chunkOutput .ui.table [class*="middle aligned"] {
+  vertical-align: middle;
+}
+
+.chunkOutput .ui.table[class*="bottom aligned"],
+.chunkOutput .ui.table [class*="bottom aligned"] {
+  vertical-align: bottom;
+}
+
+/* --------------
+        Collapsing
+    --------------- */
+
+.chunkOutput .ui.table th.collapsing,
+.chunkOutput .ui.table td.collapsing {
+  width: 1px;
+  white-space: nowrap;
+}
+
+/* --------------
+         Fixed
+    --------------- */
+
+.chunkOutput .ui.fixed.table {
+  table-layout: fixed;
+}
+
+.chunkOutput .ui.fixed.table th,
+.chunkOutput .ui.fixed.table td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* --------------
+       Selectable
+    --------------- */
+
+.chunkOutput .ui.ui.selectable.table > tbody > tr:hover,
+.chunkOutput .ui.table tbody tr td.selectable:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.95);
+}
+
+.chunkOutput .ui.ui.selectable.inverted.table > tbody > tr:hover,
+.chunkOutput .ui.inverted.table tbody tr td.selectable:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+/* Selectable Cell Link */
+
+.chunkOutput .ui.table tbody tr td.selectable {
+  padding: 0;
+}
+
+.chunkOutput .ui.table tbody tr td.selectable > a:not(.ui) {
+  display: block;
+  color: inherit;
+}
+
+.chunkOutput .ui.table:not(.compact) tbody tr td.selectable > a:not(.ui) {
+  padding: 0.78571429em 0.78571429em;
+}
+
+.chunkOutput .ui.table > tr > td.selectable,
+.chunkOutput .ui.table > tbody > tr > td.selectable,
+.chunkOutput .ui.selectable.table > tbody > tr,
+.chunkOutput .ui.selectable.table > tr {
+  cursor: pointer;
+}
+
+/* Other States */
+
+.chunkOutput .ui.ui.selectable.table tr.error:hover,
+.chunkOutput .ui.table tr td.selectable.error:hover,
+.chunkOutput .ui.selectable.table tr:hover td.error {
+  background: #ffe7e7;
+  color: #943634;
+}
+
+.chunkOutput .ui.ui.selectable.table tr.warning:hover,
+.chunkOutput .ui.table tr td.selectable.warning:hover,
+.chunkOutput .ui.selectable.table tr:hover td.warning {
+  background: #fff4e4;
+  color: #493107;
+}
+
+.chunkOutput .ui.ui.selectable.table tr.active:hover,
+.chunkOutput .ui.table tr td.selectable.active:hover,
+.chunkOutput .ui.selectable.table tr:hover td.active {
+  background: #e0e0e0;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.chunkOutput .ui.ui.selectable.table tr.positive:hover,
+.chunkOutput .ui.table tr td.selectable.positive:hover,
+.chunkOutput .ui.selectable.table tr:hover td.positive {
+  background: #f7ffe6;
+  color: #275b28;
+}
+
+.chunkOutput .ui.ui.selectable.table tr.negative:hover,
+.chunkOutput .ui.table tr td.selectable.negative:hover,
+.chunkOutput .ui.selectable.table tr:hover td.negative {
+  background: #ffe7e7;
+  color: #943634;
+}
+
+/* -------------------
+          Attached
+    -------------------- */
+
+/* Middle */
+
+.chunkOutput .ui.attached.table {
+  top: 0;
+  bottom: 0;
+  border-radius: 0;
+  margin: 0 -1px;
+  width: calc(100% + 2px);
+  max-width: calc(100% + 2px);
+  box-shadow: none;
+  border: 1px solid #d4d4d5;
+}
+
+.chunkOutput .ui.attached + .ui.attached.table:not(.top) {
+  border-top: none;
+}
+
+/* Top */
+
+.chunkOutput .ui[class*="top attached"].table {
+  bottom: 0;
+  margin-bottom: 0;
+  top: 0;
+  margin-top: 1em;
+  border-radius: 0.28571429rem 0.28571429rem 0 0;
+}
+
+.chunkOutput .ui.table[class*="top attached"]:first-child {
+  margin-top: 0;
+}
+
+/* Bottom */
+
+.chunkOutput .ui[class*="bottom attached"].table {
+  bottom: 0;
+  margin-top: 0;
+  top: 0;
+  margin-bottom: 1em;
+  box-shadow: none;
+  border-radius: 0 0 0.28571429rem 0.28571429rem;
+}
+
+.chunkOutput .ui[class*="bottom attached"].table:last-child {
+  margin-bottom: 0;
+}
+
+/* --------------
+         Striped
+    --------------- */
+
+/* Table Striping */
+
+.chunkOutput .ui.striped.table > tr:nth-child(2n),
+.chunkOutput .ui.striped.table > tbody > tr:nth-child(2n) {
+  background-color: rgba(0, 0, 50, 0.02);
+}
+
+/* Stripes */
+
+.chunkOutput .ui.inverted.striped.table > tr:nth-child(2n),
+.chunkOutput .ui.inverted.striped.table > tbody > tr:nth-child(2n) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Allow striped active hover */
+
+.chunkOutput .ui.striped.selectable.selectable.selectable.table tbody tr.active:hover {
+  background: #efefef;
+  color: rgba(0, 0, 0, 0.95);
+}
+
+/* --------------
+   Single Line
+--------------- */
+
+.chunkOutput .ui.table[class*="single line"],
+.chunkOutput .ui.table [class*="single line"] {
+  white-space: nowrap;
+}
+
+/* -------------------
+       Colors
+-------------------- */
+
+.chunkOutput .ui.primary.table {
+  border-top: 0.2em solid #698f73;
+}
+
+.chunkOutput .ui.inverted.primary.table {
+  background: #698f73;
+  color: #FFFFFF;
+}
+
+/* Same color for background and color to camouflage the scrollbar */
+
+.chunkOutput .ui.scrolling.table > thead.primary,
+.chunkOutput .ui.scrolling.table > tfoot.primary {
+  background: #fbfdfb;
+  color: #fbfdfb;
+}
+
+.chunkOutput .ui.scrolling.table > thead.primary > tr > th,
+.chunkOutput .ui.scrolling.table > tfoot.primary > tr > th,
+.chunkOutput .ui.scrolling.table > thead.primary > tr > td,
+.chunkOutput .ui.scrolling.table > tfoot.primary > tr > td {
+  background: inherit;
+  color: #5e8067;
+}
+
+.chunkOutput .ui.inverted.scrolling.table > thead.primary,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.primary {
+  background: #698f73;
+  color: #698f73;
+}
+
+.chunkOutput .ui.inverted.scrolling.table > thead.primary > tr > th,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.primary > tr > th,
+.chunkOutput .ui.inverted.scrolling.table > thead.primary > tr > td,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.primary > tr > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.ui.ui.table tr[class*="primary colored"],
+.chunkOutput .ui.ui.table th[class*="primary colored"],
+.chunkOutput .ui.ui.table td[class*="primary colored"],
+.chunkOutput .ui.ui.ui.ui.table tr.primary:not(.marked),
+.chunkOutput .ui.ui.table th.primary:not(.marked),
+.chunkOutput .ui.ui.table td.primary:not(.marked) {
+  background: #fbfdfb;
+  color: #5e8067;
+}
+
+.chunkOutput .ui.table > thead > tr[class*="primary colored"] > th,
+.chunkOutput .ui.table > tfoot > tr[class*="primary colored"] > th,
+.chunkOutput .ui.table > tfoot > tr[class*="primary colored"] > td,
+.chunkOutput .ui.table > thead > tr.primary:not(.marked) > th,
+.chunkOutput .ui.table > tfoot > tr.primary:not(.marked) > th,
+.chunkOutput .ui.table > tfoot > tr.primary:not(.marked) > td {
+  background: inherit;
+  color: #5e8067;
+}
+
+.chunkOutput .ui.ui.ui.ui.inverted.table tr[class*="primary colored"],
+.chunkOutput .ui.ui.inverted.table th[class*="primary colored"],
+.chunkOutput .ui.ui.inverted.table td[class*="primary colored"],
+.chunkOutput .ui.ui.ui.ui.inverted.table tr.primary:not(.marked),
+.chunkOutput .ui.ui.inverted.table th.primary:not(.marked),
+.chunkOutput .ui.ui.inverted.table td.primary:not(.marked) {
+  background: #698f73;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.inverted.table > thead > tr[class*="primary colored"] > th,
+.chunkOutput .ui.inverted.table > tfoot > tr[class*="primary colored"] > th,
+.chunkOutput .ui.inverted.table > tfoot > tr[class*="primary colored"] > td,
+.chunkOutput .ui.inverted.table > thead > tr.primary:not(.marked) > th,
+.chunkOutput .ui.inverted.table > tfoot > tr.primary:not(.marked) > th,
+.chunkOutput .ui.inverted.table > tfoot > tr.primary:not(.marked) > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.selectable.table tr[class*="primary colored"]:hover,
+.chunkOutput .ui.table tr td.selectable[class*="primary colored"]:hover,
+.chunkOutput .ui.selectable.table tr:hover td[class*="primary colored"],
+.chunkOutput .ui.ui.selectable.table tr.primary:not(.marked):hover,
+.chunkOutput .ui.table tr td.selectable.primary:not(.marked):hover,
+.chunkOutput .ui.selectable.table tr:hover td.primary:not(.marked) {
+  background: #f4f9f5;
+  color: #5e8067;
+}
+
+.chunkOutput .ui.ui.inverted.selectable.table tr[class*="primary colored"]:hover,
+.chunkOutput .ui.inverted.table tr td.selectable[class*="primary colored"]:hover,
+.chunkOutput .ui.inverted.selectable.table tr:hover td[class*="primary colored"],
+.chunkOutput .ui.ui.inverted.selectable.table tr.primary:not(.marked):hover,
+.chunkOutput .ui.inverted.table tr td.selectable.primary:not(.marked):hover,
+.chunkOutput .ui.inverted.selectable.table tr:hover td.primary:not(.marked) {
+  background: #c8e2ce;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.table td[class*="primary marked"].left,
+.chunkOutput .ui.table tr[class*="primary marked"].left {
+  box-shadow: 0.2em 0 0 0 #698f73 inset;
+}
+
+.chunkOutput .ui.table td[class*="primary marked"].right,
+.chunkOutput .ui.table tr[class*="primary marked"].right {
+  box-shadow: -0.2em 0 0 0 #698f73 inset;
+}
+
+.chunkOutput .ui.inverted.table td[class*="primary marked"].left,
+.chunkOutput .ui.inverted.table tr[class*="primary marked"].left {
+  box-shadow: 0.2em 0 0 0 #eaf3ec inset;
+}
+
+.chunkOutput .ui.inverted.table td[class*="primary marked"].right,
+.chunkOutput .ui.inverted.table tr[class*="primary marked"].right {
+  box-shadow: -0.2em 0 0 0 #eaf3ec inset;
+}
+
+.chunkOutput .ui.secondary.table {
+  border-top: 0.2em solid #5f7ebe;
+}
+
+.chunkOutput .ui.inverted.secondary.table {
+  background: #5f7ebe;
+  color: #FFFFFF;
+}
+
+/* Same color for background and color to camouflage the scrollbar */
+
+.chunkOutput .ui.scrolling.table > thead.secondary,
+.chunkOutput .ui.scrolling.table > tfoot.secondary {
+  background: #fbfcfe;
+  color: #fbfcfe;
+}
+
+.chunkOutput .ui.scrolling.table > thead.secondary > tr > th,
+.chunkOutput .ui.scrolling.table > tfoot.secondary > tr > th,
+.chunkOutput .ui.scrolling.table > thead.secondary > tr > td,
+.chunkOutput .ui.scrolling.table > tfoot.secondary > tr > td {
+  background: inherit;
+  color: #4d6fb7;
+}
+
+.chunkOutput .ui.inverted.scrolling.table > thead.secondary,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.secondary {
+  background: #5f7ebe;
+  color: #5f7ebe;
+}
+
+.chunkOutput .ui.inverted.scrolling.table > thead.secondary > tr > th,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.secondary > tr > th,
+.chunkOutput .ui.inverted.scrolling.table > thead.secondary > tr > td,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.secondary > tr > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.ui.ui.table tr[class*="secondary colored"],
+.chunkOutput .ui.ui.table th[class*="secondary colored"],
+.chunkOutput .ui.ui.table td[class*="secondary colored"],
+.chunkOutput .ui.ui.ui.ui.table tr.secondary:not(.marked),
+.chunkOutput .ui.ui.table th.secondary:not(.marked),
+.chunkOutput .ui.ui.table td.secondary:not(.marked) {
+  background: #fbfcfe;
+  color: #4d6fb7;
+}
+
+.chunkOutput .ui.table > thead > tr[class*="secondary colored"] > th,
+.chunkOutput .ui.table > tfoot > tr[class*="secondary colored"] > th,
+.chunkOutput .ui.table > tfoot > tr[class*="secondary colored"] > td,
+.chunkOutput .ui.table > thead > tr.secondary:not(.marked) > th,
+.chunkOutput .ui.table > tfoot > tr.secondary:not(.marked) > th,
+.chunkOutput .ui.table > tfoot > tr.secondary:not(.marked) > td {
+  background: inherit;
+  color: #4d6fb7;
+}
+
+.chunkOutput .ui.ui.ui.ui.inverted.table tr[class*="secondary colored"],
+.chunkOutput .ui.ui.inverted.table th[class*="secondary colored"],
+.chunkOutput .ui.ui.inverted.table td[class*="secondary colored"],
+.chunkOutput .ui.ui.ui.ui.inverted.table tr.secondary:not(.marked),
+.chunkOutput .ui.ui.inverted.table th.secondary:not(.marked),
+.chunkOutput .ui.ui.inverted.table td.secondary:not(.marked) {
+  background: #5f7ebe;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.inverted.table > thead > tr[class*="secondary colored"] > th,
+.chunkOutput .ui.inverted.table > tfoot > tr[class*="secondary colored"] > th,
+.chunkOutput .ui.inverted.table > tfoot > tr[class*="secondary colored"] > td,
+.chunkOutput .ui.inverted.table > thead > tr.secondary:not(.marked) > th,
+.chunkOutput .ui.inverted.table > tfoot > tr.secondary:not(.marked) > th,
+.chunkOutput .ui.inverted.table > tfoot > tr.secondary:not(.marked) > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.selectable.table tr[class*="secondary colored"]:hover,
+.chunkOutput .ui.table tr td.selectable[class*="secondary colored"]:hover,
+.chunkOutput .ui.selectable.table tr:hover td[class*="secondary colored"],
+.chunkOutput .ui.ui.selectable.table tr.secondary:not(.marked):hover,
+.chunkOutput .ui.table tr td.selectable.secondary:not(.marked):hover,
+.chunkOutput .ui.selectable.table tr:hover td.secondary:not(.marked) {
+  background: #ffffff;
+  color: #4d6fb7;
+}
+
+.chunkOutput .ui.ui.inverted.selectable.table tr[class*="secondary colored"]:hover,
+.chunkOutput .ui.inverted.table tr td.selectable[class*="secondary colored"]:hover,
+.chunkOutput .ui.inverted.selectable.table tr:hover td[class*="secondary colored"],
+.chunkOutput .ui.ui.inverted.selectable.table tr.secondary:not(.marked):hover,
+.chunkOutput .ui.inverted.table tr td.selectable.secondary:not(.marked):hover,
+.chunkOutput .ui.inverted.selectable.table tr:hover td.secondary:not(.marked) {
+  background: #ffffff;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.table td[class*="secondary marked"].left,
+.chunkOutput .ui.table tr[class*="secondary marked"].left {
+  box-shadow: 0.2em 0 0 0 #5f7ebe inset;
+}
+
+.chunkOutput .ui.table td[class*="secondary marked"].right,
+.chunkOutput .ui.table tr[class*="secondary marked"].right {
+  box-shadow: -0.2em 0 0 0 #5f7ebe inset;
+}
+
+.chunkOutput .ui.inverted.table td[class*="secondary marked"].left,
+.chunkOutput .ui.inverted.table tr[class*="secondary marked"].left {
+  box-shadow: 0.2em 0 0 0 #edf1f8 inset;
+}
+
+.chunkOutput .ui.inverted.table td[class*="secondary marked"].right,
+.chunkOutput .ui.inverted.table tr[class*="secondary marked"].right {
+  box-shadow: -0.2em 0 0 0 #edf1f8 inset;
+}
+
+.chunkOutput .ui.red.table {
+  border-top: 0.2em solid #DB2828;
+}
+
+.chunkOutput .ui.inverted.red.table {
+  background: #DB2828;
+  color: #FFFFFF;
+}
+
+/* Same color for background and color to camouflage the scrollbar */
+
+.chunkOutput .ui.scrolling.table > thead.red,
+.chunkOutput .ui.scrolling.table > tfoot.red {
+  background: #ffe1df;
+  color: #ffe1df;
+}
+
+.chunkOutput .ui.scrolling.table > thead.red > tr > th,
+.chunkOutput .ui.scrolling.table > tfoot.red > tr > th,
+.chunkOutput .ui.scrolling.table > thead.red > tr > td,
+.chunkOutput .ui.scrolling.table > tfoot.red > tr > td {
+  background: inherit;
+  color: #DB2828;
+}
+
+.chunkOutput .ui.inverted.scrolling.table > thead.red,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.red {
+  background: #DB2828;
+  color: #DB2828;
+}
+
+.chunkOutput .ui.inverted.scrolling.table > thead.red > tr > th,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.red > tr > th,
+.chunkOutput .ui.inverted.scrolling.table > thead.red > tr > td,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.red > tr > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.ui.ui.table tr[class*="red colored"],
+.chunkOutput .ui.ui.table th[class*="red colored"],
+.chunkOutput .ui.ui.table td[class*="red colored"],
+.chunkOutput .ui.ui.ui.ui.table tr.red:not(.marked),
+.chunkOutput .ui.ui.table th.red:not(.marked),
+.chunkOutput .ui.ui.table td.red:not(.marked) {
+  background: #ffe1df;
+  color: #DB2828;
+}
+
+.chunkOutput .ui.table > thead > tr[class*="red colored"] > th,
+.chunkOutput .ui.table > tfoot > tr[class*="red colored"] > th,
+.chunkOutput .ui.table > tfoot > tr[class*="red colored"] > td,
+.chunkOutput .ui.table > thead > tr.red:not(.marked) > th,
+.chunkOutput .ui.table > tfoot > tr.red:not(.marked) > th,
+.chunkOutput .ui.table > tfoot > tr.red:not(.marked) > td {
+  background: inherit;
+  color: #DB2828;
+}
+
+.chunkOutput .ui.ui.ui.ui.inverted.table tr[class*="red colored"],
+.chunkOutput .ui.ui.inverted.table th[class*="red colored"],
+.chunkOutput .ui.ui.inverted.table td[class*="red colored"],
+.chunkOutput .ui.ui.ui.ui.inverted.table tr.red:not(.marked),
+.chunkOutput .ui.ui.inverted.table th.red:not(.marked),
+.chunkOutput .ui.ui.inverted.table td.red:not(.marked) {
+  background: #DB2828;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.inverted.table > thead > tr[class*="red colored"] > th,
+.chunkOutput .ui.inverted.table > tfoot > tr[class*="red colored"] > th,
+.chunkOutput .ui.inverted.table > tfoot > tr[class*="red colored"] > td,
+.chunkOutput .ui.inverted.table > thead > tr.red:not(.marked) > th,
+.chunkOutput .ui.inverted.table > tfoot > tr.red:not(.marked) > th,
+.chunkOutput .ui.inverted.table > tfoot > tr.red:not(.marked) > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.selectable.table tr[class*="red colored"]:hover,
+.chunkOutput .ui.table tr td.selectable[class*="red colored"]:hover,
+.chunkOutput .ui.selectable.table tr:hover td[class*="red colored"],
+.chunkOutput .ui.ui.selectable.table tr.red:not(.marked):hover,
+.chunkOutput .ui.table tr td.selectable.red:not(.marked):hover,
+.chunkOutput .ui.selectable.table tr:hover td.red:not(.marked) {
+  background: #ffd7d5;
+  color: #DB2828;
+}
+
+.chunkOutput .ui.ui.inverted.selectable.table tr[class*="red colored"]:hover,
+.chunkOutput .ui.inverted.table tr td.selectable[class*="red colored"]:hover,
+.chunkOutput .ui.inverted.selectable.table tr:hover td[class*="red colored"],
+.chunkOutput .ui.ui.inverted.selectable.table tr.red:not(.marked):hover,
+.chunkOutput .ui.inverted.table tr td.selectable.red:not(.marked):hover,
+.chunkOutput .ui.inverted.selectable.table tr:hover td.red:not(.marked) {
+  background: #ff392b;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.table td[class*="red marked"].left,
+.chunkOutput .ui.table tr[class*="red marked"].left {
+  box-shadow: 0.2em 0 0 0 #DB2828 inset;
+}
+
+.chunkOutput .ui.table td[class*="red marked"].right,
+.chunkOutput .ui.table tr[class*="red marked"].right {
+  box-shadow: -0.2em 0 0 0 #DB2828 inset;
+}
+
+.chunkOutput .ui.inverted.table td[class*="red marked"].left,
+.chunkOutput .ui.inverted.table tr[class*="red marked"].left {
+  box-shadow: 0.2em 0 0 0 #FF695E inset;
+}
+
+.chunkOutput .ui.inverted.table td[class*="red marked"].right,
+.chunkOutput .ui.inverted.table tr[class*="red marked"].right {
+  box-shadow: -0.2em 0 0 0 #FF695E inset;
+}
+
+.chunkOutput .ui.orange.table {
+  border-top: 0.2em solid #F2711C;
+}
+
+.chunkOutput .ui.inverted.orange.table {
+  background: #F2711C;
+  color: #FFFFFF;
+}
+
+/* Same color for background and color to camouflage the scrollbar */
+
+.chunkOutput .ui.scrolling.table > thead.orange,
+.chunkOutput .ui.scrolling.table > tfoot.orange {
+  background: #ffe7d1;
+  color: #ffe7d1;
+}
+
+.chunkOutput .ui.scrolling.table > thead.orange > tr > th,
+.chunkOutput .ui.scrolling.table > tfoot.orange > tr > th,
+.chunkOutput .ui.scrolling.table > thead.orange > tr > td,
+.chunkOutput .ui.scrolling.table > tfoot.orange > tr > td {
+  background: inherit;
+  color: #F2711C;
+}
+
+.chunkOutput .ui.inverted.scrolling.table > thead.orange,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.orange {
+  background: #F2711C;
+  color: #F2711C;
+}
+
+.chunkOutput .ui.inverted.scrolling.table > thead.orange > tr > th,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.orange > tr > th,
+.chunkOutput .ui.inverted.scrolling.table > thead.orange > tr > td,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.orange > tr > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.ui.ui.table tr[class*="orange colored"],
+.chunkOutput .ui.ui.table th[class*="orange colored"],
+.chunkOutput .ui.ui.table td[class*="orange colored"],
+.chunkOutput .ui.ui.ui.ui.table tr.orange:not(.marked),
+.chunkOutput .ui.ui.table th.orange:not(.marked),
+.chunkOutput .ui.ui.table td.orange:not(.marked) {
+  background: #ffe7d1;
+  color: #F2711C;
+}
+
+.chunkOutput .ui.table > thead > tr[class*="orange colored"] > th,
+.chunkOutput .ui.table > tfoot > tr[class*="orange colored"] > th,
+.chunkOutput .ui.table > tfoot > tr[class*="orange colored"] > td,
+.chunkOutput .ui.table > thead > tr.orange:not(.marked) > th,
+.chunkOutput .ui.table > tfoot > tr.orange:not(.marked) > th,
+.chunkOutput .ui.table > tfoot > tr.orange:not(.marked) > td {
+  background: inherit;
+  color: #F2711C;
+}
+
+.chunkOutput .ui.ui.ui.ui.inverted.table tr[class*="orange colored"],
+.chunkOutput .ui.ui.inverted.table th[class*="orange colored"],
+.chunkOutput .ui.ui.inverted.table td[class*="orange colored"],
+.chunkOutput .ui.ui.ui.ui.inverted.table tr.orange:not(.marked),
+.chunkOutput .ui.ui.inverted.table th.orange:not(.marked),
+.chunkOutput .ui.ui.inverted.table td.orange:not(.marked) {
+  background: #F2711C;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.inverted.table > thead > tr[class*="orange colored"] > th,
+.chunkOutput .ui.inverted.table > tfoot > tr[class*="orange colored"] > th,
+.chunkOutput .ui.inverted.table > tfoot > tr[class*="orange colored"] > td,
+.chunkOutput .ui.inverted.table > thead > tr.orange:not(.marked) > th,
+.chunkOutput .ui.inverted.table > tfoot > tr.orange:not(.marked) > th,
+.chunkOutput .ui.inverted.table > tfoot > tr.orange:not(.marked) > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.selectable.table tr[class*="orange colored"]:hover,
+.chunkOutput .ui.table tr td.selectable[class*="orange colored"]:hover,
+.chunkOutput .ui.selectable.table tr:hover td[class*="orange colored"],
+.chunkOutput .ui.ui.selectable.table tr.orange:not(.marked):hover,
+.chunkOutput .ui.table tr td.selectable.orange:not(.marked):hover,
+.chunkOutput .ui.selectable.table tr:hover td.orange:not(.marked) {
+  background: #fae1cc;
+  color: #F2711C;
+}
+
+.chunkOutput .ui.ui.inverted.selectable.table tr[class*="orange colored"]:hover,
+.chunkOutput .ui.inverted.table tr td.selectable[class*="orange colored"]:hover,
+.chunkOutput .ui.inverted.selectable.table tr:hover td[class*="orange colored"],
+.chunkOutput .ui.ui.inverted.selectable.table tr.orange:not(.marked):hover,
+.chunkOutput .ui.inverted.table tr td.selectable.orange:not(.marked):hover,
+.chunkOutput .ui.inverted.selectable.table tr:hover td.orange:not(.marked) {
+  background: #e76b00;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.table td[class*="orange marked"].left,
+.chunkOutput .ui.table tr[class*="orange marked"].left {
+  box-shadow: 0.2em 0 0 0 #F2711C inset;
+}
+
+.chunkOutput .ui.table td[class*="orange marked"].right,
+.chunkOutput .ui.table tr[class*="orange marked"].right {
+  box-shadow: -0.2em 0 0 0 #F2711C inset;
+}
+
+.chunkOutput .ui.inverted.table td[class*="orange marked"].left,
+.chunkOutput .ui.inverted.table tr[class*="orange marked"].left {
+  box-shadow: 0.2em 0 0 0 #FF851B inset;
+}
+
+.chunkOutput .ui.inverted.table td[class*="orange marked"].right,
+.chunkOutput .ui.inverted.table tr[class*="orange marked"].right {
+  box-shadow: -0.2em 0 0 0 #FF851B inset;
+}
+
+.chunkOutput .ui.yellow.table {
+  border-top: 0.2em solid #FBBD08;
+}
+
+.chunkOutput .ui.inverted.yellow.table {
+  background: #FBBD08;
+  color: #FFFFFF;
+}
+
+/* Same color for background and color to camouflage the scrollbar */
+
+.chunkOutput .ui.scrolling.table > thead.yellow,
+.chunkOutput .ui.scrolling.table > tfoot.yellow {
+  background: #fff9d2;
+  color: #fff9d2;
+}
+
+.chunkOutput .ui.scrolling.table > thead.yellow > tr > th,
+.chunkOutput .ui.scrolling.table > tfoot.yellow > tr > th,
+.chunkOutput .ui.scrolling.table > thead.yellow > tr > td,
+.chunkOutput .ui.scrolling.table > tfoot.yellow > tr > td {
+  background: inherit;
+  color: #B58105;
+}
+
+.chunkOutput .ui.inverted.scrolling.table > thead.yellow,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.yellow {
+  background: #FBBD08;
+  color: #FBBD08;
+}
+
+.chunkOutput .ui.inverted.scrolling.table > thead.yellow > tr > th,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.yellow > tr > th,
+.chunkOutput .ui.inverted.scrolling.table > thead.yellow > tr > td,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.yellow > tr > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.ui.ui.table tr[class*="yellow colored"],
+.chunkOutput .ui.ui.table th[class*="yellow colored"],
+.chunkOutput .ui.ui.table td[class*="yellow colored"],
+.chunkOutput .ui.ui.ui.ui.table tr.yellow:not(.marked),
+.chunkOutput .ui.ui.table th.yellow:not(.marked),
+.chunkOutput .ui.ui.table td.yellow:not(.marked) {
+  background: #fff9d2;
+  color: #B58105;
+}
+
+.chunkOutput .ui.table > thead > tr[class*="yellow colored"] > th,
+.chunkOutput .ui.table > tfoot > tr[class*="yellow colored"] > th,
+.chunkOutput .ui.table > tfoot > tr[class*="yellow colored"] > td,
+.chunkOutput .ui.table > thead > tr.yellow:not(.marked) > th,
+.chunkOutput .ui.table > tfoot > tr.yellow:not(.marked) > th,
+.chunkOutput .ui.table > tfoot > tr.yellow:not(.marked) > td {
+  background: inherit;
+  color: #B58105;
+}
+
+.chunkOutput .ui.ui.ui.ui.inverted.table tr[class*="yellow colored"],
+.chunkOutput .ui.ui.inverted.table th[class*="yellow colored"],
+.chunkOutput .ui.ui.inverted.table td[class*="yellow colored"],
+.chunkOutput .ui.ui.ui.ui.inverted.table tr.yellow:not(.marked),
+.chunkOutput .ui.ui.inverted.table th.yellow:not(.marked),
+.chunkOutput .ui.ui.inverted.table td.yellow:not(.marked) {
+  background: #FBBD08;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.inverted.table > thead > tr[class*="yellow colored"] > th,
+.chunkOutput .ui.inverted.table > tfoot > tr[class*="yellow colored"] > th,
+.chunkOutput .ui.inverted.table > tfoot > tr[class*="yellow colored"] > td,
+.chunkOutput .ui.inverted.table > thead > tr.yellow:not(.marked) > th,
+.chunkOutput .ui.inverted.table > tfoot > tr.yellow:not(.marked) > th,
+.chunkOutput .ui.inverted.table > tfoot > tr.yellow:not(.marked) > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.selectable.table tr[class*="yellow colored"]:hover,
+.chunkOutput .ui.table tr td.selectable[class*="yellow colored"]:hover,
+.chunkOutput .ui.selectable.table tr:hover td[class*="yellow colored"],
+.chunkOutput .ui.ui.selectable.table tr.yellow:not(.marked):hover,
+.chunkOutput .ui.table tr td.selectable.yellow:not(.marked):hover,
+.chunkOutput .ui.selectable.table tr:hover td.yellow:not(.marked) {
+  background: #fbf5cc;
+  color: #B58105;
+}
+
+.chunkOutput .ui.ui.inverted.selectable.table tr[class*="yellow colored"]:hover,
+.chunkOutput .ui.inverted.table tr td.selectable[class*="yellow colored"]:hover,
+.chunkOutput .ui.inverted.selectable.table tr:hover td[class*="yellow colored"],
+.chunkOutput .ui.ui.inverted.selectable.table tr.yellow:not(.marked):hover,
+.chunkOutput .ui.inverted.table tr td.selectable.yellow:not(.marked):hover,
+.chunkOutput .ui.inverted.selectable.table tr:hover td.yellow:not(.marked) {
+  background: #ebcd00;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.table td[class*="yellow marked"].left,
+.chunkOutput .ui.table tr[class*="yellow marked"].left {
+  box-shadow: 0.2em 0 0 0 #FBBD08 inset;
+}
+
+.chunkOutput .ui.table td[class*="yellow marked"].right,
+.chunkOutput .ui.table tr[class*="yellow marked"].right {
+  box-shadow: -0.2em 0 0 0 #FBBD08 inset;
+}
+
+.chunkOutput .ui.inverted.table td[class*="yellow marked"].left,
+.chunkOutput .ui.inverted.table tr[class*="yellow marked"].left {
+  box-shadow: 0.2em 0 0 0 #FFE21F inset;
+}
+
+.chunkOutput .ui.inverted.table td[class*="yellow marked"].right,
+.chunkOutput .ui.inverted.table tr[class*="yellow marked"].right {
+  box-shadow: -0.2em 0 0 0 #FFE21F inset;
+}
+
+.chunkOutput .ui.olive.table {
+  border-top: 0.2em solid #B5CC18;
+}
+
+.chunkOutput .ui.inverted.olive.table {
+  background: #B5CC18;
+  color: #FFFFFF;
+}
+
+/* Same color for background and color to camouflage the scrollbar */
+
+.chunkOutput .ui.scrolling.table > thead.olive,
+.chunkOutput .ui.scrolling.table > tfoot.olive {
+  background: #f7fae4;
+  color: #f7fae4;
+}
+
+.chunkOutput .ui.scrolling.table > thead.olive > tr > th,
+.chunkOutput .ui.scrolling.table > tfoot.olive > tr > th,
+.chunkOutput .ui.scrolling.table > thead.olive > tr > td,
+.chunkOutput .ui.scrolling.table > tfoot.olive > tr > td {
+  background: inherit;
+  color: #8ABC1E;
+}
+
+.chunkOutput .ui.inverted.scrolling.table > thead.olive,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.olive {
+  background: #B5CC18;
+  color: #B5CC18;
+}
+
+.chunkOutput .ui.inverted.scrolling.table > thead.olive > tr > th,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.olive > tr > th,
+.chunkOutput .ui.inverted.scrolling.table > thead.olive > tr > td,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.olive > tr > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.ui.ui.table tr[class*="olive colored"],
+.chunkOutput .ui.ui.table th[class*="olive colored"],
+.chunkOutput .ui.ui.table td[class*="olive colored"],
+.chunkOutput .ui.ui.ui.ui.table tr.olive:not(.marked),
+.chunkOutput .ui.ui.table th.olive:not(.marked),
+.chunkOutput .ui.ui.table td.olive:not(.marked) {
+  background: #f7fae4;
+  color: #8ABC1E;
+}
+
+.chunkOutput .ui.table > thead > tr[class*="olive colored"] > th,
+.chunkOutput .ui.table > tfoot > tr[class*="olive colored"] > th,
+.chunkOutput .ui.table > tfoot > tr[class*="olive colored"] > td,
+.chunkOutput .ui.table > thead > tr.olive:not(.marked) > th,
+.chunkOutput .ui.table > tfoot > tr.olive:not(.marked) > th,
+.chunkOutput .ui.table > tfoot > tr.olive:not(.marked) > td {
+  background: inherit;
+  color: #8ABC1E;
+}
+
+.chunkOutput .ui.ui.ui.ui.inverted.table tr[class*="olive colored"],
+.chunkOutput .ui.ui.inverted.table th[class*="olive colored"],
+.chunkOutput .ui.ui.inverted.table td[class*="olive colored"],
+.chunkOutput .ui.ui.ui.ui.inverted.table tr.olive:not(.marked),
+.chunkOutput .ui.ui.inverted.table th.olive:not(.marked),
+.chunkOutput .ui.ui.inverted.table td.olive:not(.marked) {
+  background: #B5CC18;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.inverted.table > thead > tr[class*="olive colored"] > th,
+.chunkOutput .ui.inverted.table > tfoot > tr[class*="olive colored"] > th,
+.chunkOutput .ui.inverted.table > tfoot > tr[class*="olive colored"] > td,
+.chunkOutput .ui.inverted.table > thead > tr.olive:not(.marked) > th,
+.chunkOutput .ui.inverted.table > tfoot > tr.olive:not(.marked) > th,
+.chunkOutput .ui.inverted.table > tfoot > tr.olive:not(.marked) > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.selectable.table tr[class*="olive colored"]:hover,
+.chunkOutput .ui.table tr td.selectable[class*="olive colored"]:hover,
+.chunkOutput .ui.selectable.table tr:hover td[class*="olive colored"],
+.chunkOutput .ui.ui.selectable.table tr.olive:not(.marked):hover,
+.chunkOutput .ui.table tr td.selectable.olive:not(.marked):hover,
+.chunkOutput .ui.selectable.table tr:hover td.olive:not(.marked) {
+  background: #f6fada;
+  color: #8ABC1E;
+}
+
+.chunkOutput .ui.ui.inverted.selectable.table tr[class*="olive colored"]:hover,
+.chunkOutput .ui.inverted.table tr td.selectable[class*="olive colored"]:hover,
+.chunkOutput .ui.inverted.selectable.table tr:hover td[class*="olive colored"],
+.chunkOutput .ui.ui.inverted.selectable.table tr.olive:not(.marked):hover,
+.chunkOutput .ui.inverted.table tr td.selectable.olive:not(.marked):hover,
+.chunkOutput .ui.inverted.selectable.table tr:hover td.olive:not(.marked) {
+  background: #d2e745;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.table td[class*="olive marked"].left,
+.chunkOutput .ui.table tr[class*="olive marked"].left {
+  box-shadow: 0.2em 0 0 0 #B5CC18 inset;
+}
+
+.chunkOutput .ui.table td[class*="olive marked"].right,
+.chunkOutput .ui.table tr[class*="olive marked"].right {
+  box-shadow: -0.2em 0 0 0 #B5CC18 inset;
+}
+
+.chunkOutput .ui.inverted.table td[class*="olive marked"].left,
+.chunkOutput .ui.inverted.table tr[class*="olive marked"].left {
+  box-shadow: 0.2em 0 0 0 #D9E778 inset;
+}
+
+.chunkOutput .ui.inverted.table td[class*="olive marked"].right,
+.chunkOutput .ui.inverted.table tr[class*="olive marked"].right {
+  box-shadow: -0.2em 0 0 0 #D9E778 inset;
+}
+
+.chunkOutput .ui.green.table {
+  border-top: 0.2em solid #21BA45;
+}
+
+.chunkOutput .ui.inverted.green.table {
+  background: #21BA45;
+  color: #FFFFFF;
+}
+
+/* Same color for background and color to camouflage the scrollbar */
+
+.chunkOutput .ui.scrolling.table > thead.green,
+.chunkOutput .ui.scrolling.table > tfoot.green {
+  background: #d5f5d9;
+  color: #d5f5d9;
+}
+
+.chunkOutput .ui.scrolling.table > thead.green > tr > th,
+.chunkOutput .ui.scrolling.table > tfoot.green > tr > th,
+.chunkOutput .ui.scrolling.table > thead.green > tr > td,
+.chunkOutput .ui.scrolling.table > tfoot.green > tr > td {
+  background: inherit;
+  color: #1EBC30;
+}
+
+.chunkOutput .ui.inverted.scrolling.table > thead.green,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.green {
+  background: #21BA45;
+  color: #21BA45;
+}
+
+.chunkOutput .ui.inverted.scrolling.table > thead.green > tr > th,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.green > tr > th,
+.chunkOutput .ui.inverted.scrolling.table > thead.green > tr > td,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.green > tr > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.ui.ui.table tr[class*="green colored"],
+.chunkOutput .ui.ui.table th[class*="green colored"],
+.chunkOutput .ui.ui.table td[class*="green colored"],
+.chunkOutput .ui.ui.ui.ui.table tr.green:not(.marked),
+.chunkOutput .ui.ui.table th.green:not(.marked),
+.chunkOutput .ui.ui.table td.green:not(.marked) {
+  background: #d5f5d9;
+  color: #1EBC30;
+}
+
+.chunkOutput .ui.table > thead > tr[class*="green colored"] > th,
+.chunkOutput .ui.table > tfoot > tr[class*="green colored"] > th,
+.chunkOutput .ui.table > tfoot > tr[class*="green colored"] > td,
+.chunkOutput .ui.table > thead > tr.green:not(.marked) > th,
+.chunkOutput .ui.table > tfoot > tr.green:not(.marked) > th,
+.chunkOutput .ui.table > tfoot > tr.green:not(.marked) > td {
+  background: inherit;
+  color: #1EBC30;
+}
+
+.chunkOutput .ui.ui.ui.ui.inverted.table tr[class*="green colored"],
+.chunkOutput .ui.ui.inverted.table th[class*="green colored"],
+.chunkOutput .ui.ui.inverted.table td[class*="green colored"],
+.chunkOutput .ui.ui.ui.ui.inverted.table tr.green:not(.marked),
+.chunkOutput .ui.ui.inverted.table th.green:not(.marked),
+.chunkOutput .ui.ui.inverted.table td.green:not(.marked) {
+  background: #21BA45;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.inverted.table > thead > tr[class*="green colored"] > th,
+.chunkOutput .ui.inverted.table > tfoot > tr[class*="green colored"] > th,
+.chunkOutput .ui.inverted.table > tfoot > tr[class*="green colored"] > td,
+.chunkOutput .ui.inverted.table > thead > tr.green:not(.marked) > th,
+.chunkOutput .ui.inverted.table > tfoot > tr.green:not(.marked) > th,
+.chunkOutput .ui.inverted.table > tfoot > tr.green:not(.marked) > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.selectable.table tr[class*="green colored"]:hover,
+.chunkOutput .ui.table tr td.selectable[class*="green colored"]:hover,
+.chunkOutput .ui.selectable.table tr:hover td[class*="green colored"],
+.chunkOutput .ui.ui.selectable.table tr.green:not(.marked):hover,
+.chunkOutput .ui.table tr td.selectable.green:not(.marked):hover,
+.chunkOutput .ui.selectable.table tr:hover td.green:not(.marked) {
+  background: #d2eed5;
+  color: #1EBC30;
+}
+
+.chunkOutput .ui.ui.inverted.selectable.table tr[class*="green colored"]:hover,
+.chunkOutput .ui.inverted.table tr td.selectable[class*="green colored"]:hover,
+.chunkOutput .ui.inverted.selectable.table tr:hover td[class*="green colored"],
+.chunkOutput .ui.ui.inverted.selectable.table tr.green:not(.marked):hover,
+.chunkOutput .ui.inverted.table tr td.selectable.green:not(.marked):hover,
+.chunkOutput .ui.inverted.selectable.table tr:hover td.green:not(.marked) {
+  background: #1ea92e;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.table td[class*="green marked"].left,
+.chunkOutput .ui.table tr[class*="green marked"].left {
+  box-shadow: 0.2em 0 0 0 #21BA45 inset;
+}
+
+.chunkOutput .ui.table td[class*="green marked"].right,
+.chunkOutput .ui.table tr[class*="green marked"].right {
+  box-shadow: -0.2em 0 0 0 #21BA45 inset;
+}
+
+.chunkOutput .ui.inverted.table td[class*="green marked"].left,
+.chunkOutput .ui.inverted.table tr[class*="green marked"].left {
+  box-shadow: 0.2em 0 0 0 #2ECC40 inset;
+}
+
+.chunkOutput .ui.inverted.table td[class*="green marked"].right,
+.chunkOutput .ui.inverted.table tr[class*="green marked"].right {
+  box-shadow: -0.2em 0 0 0 #2ECC40 inset;
+}
+
+.chunkOutput .ui.teal.table {
+  border-top: 0.2em solid #00B5AD;
+}
+
+.chunkOutput .ui.inverted.teal.table {
+  background: #00B5AD;
+  color: #FFFFFF;
+}
+
+/* Same color for background and color to camouflage the scrollbar */
+
+.chunkOutput .ui.scrolling.table > thead.teal,
+.chunkOutput .ui.scrolling.table > tfoot.teal {
+  background: #e2ffff;
+  color: #e2ffff;
+}
+
+.chunkOutput .ui.scrolling.table > thead.teal > tr > th,
+.chunkOutput .ui.scrolling.table > tfoot.teal > tr > th,
+.chunkOutput .ui.scrolling.table > thead.teal > tr > td,
+.chunkOutput .ui.scrolling.table > tfoot.teal > tr > td {
+  background: inherit;
+  color: #10A3A3;
+}
+
+.chunkOutput .ui.inverted.scrolling.table > thead.teal,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.teal {
+  background: #00B5AD;
+  color: #00B5AD;
+}
+
+.chunkOutput .ui.inverted.scrolling.table > thead.teal > tr > th,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.teal > tr > th,
+.chunkOutput .ui.inverted.scrolling.table > thead.teal > tr > td,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.teal > tr > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.ui.ui.table tr[class*="teal colored"],
+.chunkOutput .ui.ui.table th[class*="teal colored"],
+.chunkOutput .ui.ui.table td[class*="teal colored"],
+.chunkOutput .ui.ui.ui.ui.table tr.teal:not(.marked),
+.chunkOutput .ui.ui.table th.teal:not(.marked),
+.chunkOutput .ui.ui.table td.teal:not(.marked) {
+  background: #e2ffff;
+  color: #10A3A3;
+}
+
+.chunkOutput .ui.table > thead > tr[class*="teal colored"] > th,
+.chunkOutput .ui.table > tfoot > tr[class*="teal colored"] > th,
+.chunkOutput .ui.table > tfoot > tr[class*="teal colored"] > td,
+.chunkOutput .ui.table > thead > tr.teal:not(.marked) > th,
+.chunkOutput .ui.table > tfoot > tr.teal:not(.marked) > th,
+.chunkOutput .ui.table > tfoot > tr.teal:not(.marked) > td {
+  background: inherit;
+  color: #10A3A3;
+}
+
+.chunkOutput .ui.ui.ui.ui.inverted.table tr[class*="teal colored"],
+.chunkOutput .ui.ui.inverted.table th[class*="teal colored"],
+.chunkOutput .ui.ui.inverted.table td[class*="teal colored"],
+.chunkOutput .ui.ui.ui.ui.inverted.table tr.teal:not(.marked),
+.chunkOutput .ui.ui.inverted.table th.teal:not(.marked),
+.chunkOutput .ui.ui.inverted.table td.teal:not(.marked) {
+  background: #00B5AD;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.inverted.table > thead > tr[class*="teal colored"] > th,
+.chunkOutput .ui.inverted.table > tfoot > tr[class*="teal colored"] > th,
+.chunkOutput .ui.inverted.table > tfoot > tr[class*="teal colored"] > td,
+.chunkOutput .ui.inverted.table > thead > tr.teal:not(.marked) > th,
+.chunkOutput .ui.inverted.table > tfoot > tr.teal:not(.marked) > th,
+.chunkOutput .ui.inverted.table > tfoot > tr.teal:not(.marked) > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.selectable.table tr[class*="teal colored"]:hover,
+.chunkOutput .ui.table tr td.selectable[class*="teal colored"]:hover,
+.chunkOutput .ui.selectable.table tr:hover td[class*="teal colored"],
+.chunkOutput .ui.ui.selectable.table tr.teal:not(.marked):hover,
+.chunkOutput .ui.table tr td.selectable.teal:not(.marked):hover,
+.chunkOutput .ui.selectable.table tr:hover td.teal:not(.marked) {
+  background: #d8ffff;
+  color: #10A3A3;
+}
+
+.chunkOutput .ui.ui.inverted.selectable.table tr[class*="teal colored"]:hover,
+.chunkOutput .ui.inverted.table tr td.selectable[class*="teal colored"]:hover,
+.chunkOutput .ui.inverted.selectable.table tr:hover td[class*="teal colored"],
+.chunkOutput .ui.ui.inverted.selectable.table tr.teal:not(.marked):hover,
+.chunkOutput .ui.inverted.table tr td.selectable.teal:not(.marked):hover,
+.chunkOutput .ui.inverted.selectable.table tr:hover td.teal:not(.marked) {
+  background: #3affff;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.table td[class*="teal marked"].left,
+.chunkOutput .ui.table tr[class*="teal marked"].left {
+  box-shadow: 0.2em 0 0 0 #00B5AD inset;
+}
+
+.chunkOutput .ui.table td[class*="teal marked"].right,
+.chunkOutput .ui.table tr[class*="teal marked"].right {
+  box-shadow: -0.2em 0 0 0 #00B5AD inset;
+}
+
+.chunkOutput .ui.inverted.table td[class*="teal marked"].left,
+.chunkOutput .ui.inverted.table tr[class*="teal marked"].left {
+  box-shadow: 0.2em 0 0 0 #6DFFFF inset;
+}
+
+.chunkOutput .ui.inverted.table td[class*="teal marked"].right,
+.chunkOutput .ui.inverted.table tr[class*="teal marked"].right {
+  box-shadow: -0.2em 0 0 0 #6DFFFF inset;
+}
+
+.chunkOutput .ui.blue.table {
+  border-top: 0.2em solid #2185D0;
+}
+
+.chunkOutput .ui.inverted.blue.table {
+  background: #2185D0;
+  color: #FFFFFF;
+}
+
+/* Same color for background and color to camouflage the scrollbar */
+
+.chunkOutput .ui.scrolling.table > thead.blue,
+.chunkOutput .ui.scrolling.table > tfoot.blue {
+  background: #ddf4ff;
+  color: #ddf4ff;
+}
+
+.chunkOutput .ui.scrolling.table > thead.blue > tr > th,
+.chunkOutput .ui.scrolling.table > tfoot.blue > tr > th,
+.chunkOutput .ui.scrolling.table > thead.blue > tr > td,
+.chunkOutput .ui.scrolling.table > tfoot.blue > tr > td {
+  background: inherit;
+  color: #2185D0;
+}
+
+.chunkOutput .ui.inverted.scrolling.table > thead.blue,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.blue {
+  background: #2185D0;
+  color: #2185D0;
+}
+
+.chunkOutput .ui.inverted.scrolling.table > thead.blue > tr > th,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.blue > tr > th,
+.chunkOutput .ui.inverted.scrolling.table > thead.blue > tr > td,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.blue > tr > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.ui.ui.table tr[class*="blue colored"],
+.chunkOutput .ui.ui.table th[class*="blue colored"],
+.chunkOutput .ui.ui.table td[class*="blue colored"],
+.chunkOutput .ui.ui.ui.ui.table tr.blue:not(.marked),
+.chunkOutput .ui.ui.table th.blue:not(.marked),
+.chunkOutput .ui.ui.table td.blue:not(.marked) {
+  background: #ddf4ff;
+  color: #2185D0;
+}
+
+.chunkOutput .ui.table > thead > tr[class*="blue colored"] > th,
+.chunkOutput .ui.table > tfoot > tr[class*="blue colored"] > th,
+.chunkOutput .ui.table > tfoot > tr[class*="blue colored"] > td,
+.chunkOutput .ui.table > thead > tr.blue:not(.marked) > th,
+.chunkOutput .ui.table > tfoot > tr.blue:not(.marked) > th,
+.chunkOutput .ui.table > tfoot > tr.blue:not(.marked) > td {
+  background: inherit;
+  color: #2185D0;
+}
+
+.chunkOutput .ui.ui.ui.ui.inverted.table tr[class*="blue colored"],
+.chunkOutput .ui.ui.inverted.table th[class*="blue colored"],
+.chunkOutput .ui.ui.inverted.table td[class*="blue colored"],
+.chunkOutput .ui.ui.ui.ui.inverted.table tr.blue:not(.marked),
+.chunkOutput .ui.ui.inverted.table th.blue:not(.marked),
+.chunkOutput .ui.ui.inverted.table td.blue:not(.marked) {
+  background: #2185D0;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.inverted.table > thead > tr[class*="blue colored"] > th,
+.chunkOutput .ui.inverted.table > tfoot > tr[class*="blue colored"] > th,
+.chunkOutput .ui.inverted.table > tfoot > tr[class*="blue colored"] > td,
+.chunkOutput .ui.inverted.table > thead > tr.blue:not(.marked) > th,
+.chunkOutput .ui.inverted.table > tfoot > tr.blue:not(.marked) > th,
+.chunkOutput .ui.inverted.table > tfoot > tr.blue:not(.marked) > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.selectable.table tr[class*="blue colored"]:hover,
+.chunkOutput .ui.table tr td.selectable[class*="blue colored"]:hover,
+.chunkOutput .ui.selectable.table tr:hover td[class*="blue colored"],
+.chunkOutput .ui.ui.selectable.table tr.blue:not(.marked):hover,
+.chunkOutput .ui.table tr td.selectable.blue:not(.marked):hover,
+.chunkOutput .ui.selectable.table tr:hover td.blue:not(.marked) {
+  background: #d3f1ff;
+  color: #2185D0;
+}
+
+.chunkOutput .ui.ui.inverted.selectable.table tr[class*="blue colored"]:hover,
+.chunkOutput .ui.inverted.table tr td.selectable[class*="blue colored"]:hover,
+.chunkOutput .ui.inverted.selectable.table tr:hover td[class*="blue colored"],
+.chunkOutput .ui.ui.inverted.selectable.table tr.blue:not(.marked):hover,
+.chunkOutput .ui.inverted.table tr td.selectable.blue:not(.marked):hover,
+.chunkOutput .ui.inverted.selectable.table tr:hover td.blue:not(.marked) {
+  background: #21b8ff;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.table td[class*="blue marked"].left,
+.chunkOutput .ui.table tr[class*="blue marked"].left {
+  box-shadow: 0.2em 0 0 0 #2185D0 inset;
+}
+
+.chunkOutput .ui.table td[class*="blue marked"].right,
+.chunkOutput .ui.table tr[class*="blue marked"].right {
+  box-shadow: -0.2em 0 0 0 #2185D0 inset;
+}
+
+.chunkOutput .ui.inverted.table td[class*="blue marked"].left,
+.chunkOutput .ui.inverted.table tr[class*="blue marked"].left {
+  box-shadow: 0.2em 0 0 0 #54C8FF inset;
+}
+
+.chunkOutput .ui.inverted.table td[class*="blue marked"].right,
+.chunkOutput .ui.inverted.table tr[class*="blue marked"].right {
+  box-shadow: -0.2em 0 0 0 #54C8FF inset;
+}
+
+.chunkOutput .ui.violet.table {
+  border-top: 0.2em solid #6435C9;
+}
+
+.chunkOutput .ui.inverted.violet.table {
+  background: #6435C9;
+  color: #FFFFFF;
+}
+
+/* Same color for background and color to camouflage the scrollbar */
+
+.chunkOutput .ui.scrolling.table > thead.violet,
+.chunkOutput .ui.scrolling.table > tfoot.violet {
+  background: #ece9fe;
+  color: #ece9fe;
+}
+
+.chunkOutput .ui.scrolling.table > thead.violet > tr > th,
+.chunkOutput .ui.scrolling.table > tfoot.violet > tr > th,
+.chunkOutput .ui.scrolling.table > thead.violet > tr > td,
+.chunkOutput .ui.scrolling.table > tfoot.violet > tr > td {
+  background: inherit;
+  color: #6435C9;
+}
+
+.chunkOutput .ui.inverted.scrolling.table > thead.violet,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.violet {
+  background: #6435C9;
+  color: #6435C9;
+}
+
+.chunkOutput .ui.inverted.scrolling.table > thead.violet > tr > th,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.violet > tr > th,
+.chunkOutput .ui.inverted.scrolling.table > thead.violet > tr > td,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.violet > tr > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.ui.ui.table tr[class*="violet colored"],
+.chunkOutput .ui.ui.table th[class*="violet colored"],
+.chunkOutput .ui.ui.table td[class*="violet colored"],
+.chunkOutput .ui.ui.ui.ui.table tr.violet:not(.marked),
+.chunkOutput .ui.ui.table th.violet:not(.marked),
+.chunkOutput .ui.ui.table td.violet:not(.marked) {
+  background: #ece9fe;
+  color: #6435C9;
+}
+
+.chunkOutput .ui.table > thead > tr[class*="violet colored"] > th,
+.chunkOutput .ui.table > tfoot > tr[class*="violet colored"] > th,
+.chunkOutput .ui.table > tfoot > tr[class*="violet colored"] > td,
+.chunkOutput .ui.table > thead > tr.violet:not(.marked) > th,
+.chunkOutput .ui.table > tfoot > tr.violet:not(.marked) > th,
+.chunkOutput .ui.table > tfoot > tr.violet:not(.marked) > td {
+  background: inherit;
+  color: #6435C9;
+}
+
+.chunkOutput .ui.ui.ui.ui.inverted.table tr[class*="violet colored"],
+.chunkOutput .ui.ui.inverted.table th[class*="violet colored"],
+.chunkOutput .ui.ui.inverted.table td[class*="violet colored"],
+.chunkOutput .ui.ui.ui.ui.inverted.table tr.violet:not(.marked),
+.chunkOutput .ui.ui.inverted.table th.violet:not(.marked),
+.chunkOutput .ui.ui.inverted.table td.violet:not(.marked) {
+  background: #6435C9;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.inverted.table > thead > tr[class*="violet colored"] > th,
+.chunkOutput .ui.inverted.table > tfoot > tr[class*="violet colored"] > th,
+.chunkOutput .ui.inverted.table > tfoot > tr[class*="violet colored"] > td,
+.chunkOutput .ui.inverted.table > thead > tr.violet:not(.marked) > th,
+.chunkOutput .ui.inverted.table > tfoot > tr.violet:not(.marked) > th,
+.chunkOutput .ui.inverted.table > tfoot > tr.violet:not(.marked) > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.selectable.table tr[class*="violet colored"]:hover,
+.chunkOutput .ui.table tr td.selectable[class*="violet colored"]:hover,
+.chunkOutput .ui.selectable.table tr:hover td[class*="violet colored"],
+.chunkOutput .ui.ui.selectable.table tr.violet:not(.marked):hover,
+.chunkOutput .ui.table tr td.selectable.violet:not(.marked):hover,
+.chunkOutput .ui.selectable.table tr:hover td.violet:not(.marked) {
+  background: #e3deff;
+  color: #6435C9;
+}
+
+.chunkOutput .ui.ui.inverted.selectable.table tr[class*="violet colored"]:hover,
+.chunkOutput .ui.inverted.table tr td.selectable[class*="violet colored"]:hover,
+.chunkOutput .ui.inverted.selectable.table tr:hover td[class*="violet colored"],
+.chunkOutput .ui.ui.inverted.selectable.table tr.violet:not(.marked):hover,
+.chunkOutput .ui.inverted.table tr td.selectable.violet:not(.marked):hover,
+.chunkOutput .ui.inverted.selectable.table tr:hover td.violet:not(.marked) {
+  background: #745aff;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.table td[class*="violet marked"].left,
+.chunkOutput .ui.table tr[class*="violet marked"].left {
+  box-shadow: 0.2em 0 0 0 #6435C9 inset;
+}
+
+.chunkOutput .ui.table td[class*="violet marked"].right,
+.chunkOutput .ui.table tr[class*="violet marked"].right {
+  box-shadow: -0.2em 0 0 0 #6435C9 inset;
+}
+
+.chunkOutput .ui.inverted.table td[class*="violet marked"].left,
+.chunkOutput .ui.inverted.table tr[class*="violet marked"].left {
+  box-shadow: 0.2em 0 0 0 #A291FB inset;
+}
+
+.chunkOutput .ui.inverted.table td[class*="violet marked"].right,
+.chunkOutput .ui.inverted.table tr[class*="violet marked"].right {
+  box-shadow: -0.2em 0 0 0 #A291FB inset;
+}
+
+.chunkOutput .ui.purple.table {
+  border-top: 0.2em solid #A333C8;
+}
+
+.chunkOutput .ui.inverted.purple.table {
+  background: #A333C8;
+  color: #FFFFFF;
+}
+
+/* Same color for background and color to camouflage the scrollbar */
+
+.chunkOutput .ui.scrolling.table > thead.purple,
+.chunkOutput .ui.scrolling.table > tfoot.purple {
+  background: #f8e3ff;
+  color: #f8e3ff;
+}
+
+.chunkOutput .ui.scrolling.table > thead.purple > tr > th,
+.chunkOutput .ui.scrolling.table > tfoot.purple > tr > th,
+.chunkOutput .ui.scrolling.table > thead.purple > tr > td,
+.chunkOutput .ui.scrolling.table > tfoot.purple > tr > td {
+  background: inherit;
+  color: #A333C8;
+}
+
+.chunkOutput .ui.inverted.scrolling.table > thead.purple,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.purple {
+  background: #A333C8;
+  color: #A333C8;
+}
+
+.chunkOutput .ui.inverted.scrolling.table > thead.purple > tr > th,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.purple > tr > th,
+.chunkOutput .ui.inverted.scrolling.table > thead.purple > tr > td,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.purple > tr > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.ui.ui.table tr[class*="purple colored"],
+.chunkOutput .ui.ui.table th[class*="purple colored"],
+.chunkOutput .ui.ui.table td[class*="purple colored"],
+.chunkOutput .ui.ui.ui.ui.table tr.purple:not(.marked),
+.chunkOutput .ui.ui.table th.purple:not(.marked),
+.chunkOutput .ui.ui.table td.purple:not(.marked) {
+  background: #f8e3ff;
+  color: #A333C8;
+}
+
+.chunkOutput .ui.table > thead > tr[class*="purple colored"] > th,
+.chunkOutput .ui.table > tfoot > tr[class*="purple colored"] > th,
+.chunkOutput .ui.table > tfoot > tr[class*="purple colored"] > td,
+.chunkOutput .ui.table > thead > tr.purple:not(.marked) > th,
+.chunkOutput .ui.table > tfoot > tr.purple:not(.marked) > th,
+.chunkOutput .ui.table > tfoot > tr.purple:not(.marked) > td {
+  background: inherit;
+  color: #A333C8;
+}
+
+.chunkOutput .ui.ui.ui.ui.inverted.table tr[class*="purple colored"],
+.chunkOutput .ui.ui.inverted.table th[class*="purple colored"],
+.chunkOutput .ui.ui.inverted.table td[class*="purple colored"],
+.chunkOutput .ui.ui.ui.ui.inverted.table tr.purple:not(.marked),
+.chunkOutput .ui.ui.inverted.table th.purple:not(.marked),
+.chunkOutput .ui.ui.inverted.table td.purple:not(.marked) {
+  background: #A333C8;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.inverted.table > thead > tr[class*="purple colored"] > th,
+.chunkOutput .ui.inverted.table > tfoot > tr[class*="purple colored"] > th,
+.chunkOutput .ui.inverted.table > tfoot > tr[class*="purple colored"] > td,
+.chunkOutput .ui.inverted.table > thead > tr.purple:not(.marked) > th,
+.chunkOutput .ui.inverted.table > tfoot > tr.purple:not(.marked) > th,
+.chunkOutput .ui.inverted.table > tfoot > tr.purple:not(.marked) > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.selectable.table tr[class*="purple colored"]:hover,
+.chunkOutput .ui.table tr td.selectable[class*="purple colored"]:hover,
+.chunkOutput .ui.selectable.table tr:hover td[class*="purple colored"],
+.chunkOutput .ui.ui.selectable.table tr.purple:not(.marked):hover,
+.chunkOutput .ui.table tr td.selectable.purple:not(.marked):hover,
+.chunkOutput .ui.selectable.table tr:hover td.purple:not(.marked) {
+  background: #f5d9ff;
+  color: #A333C8;
+}
+
+.chunkOutput .ui.ui.inverted.selectable.table tr[class*="purple colored"]:hover,
+.chunkOutput .ui.inverted.table tr td.selectable[class*="purple colored"]:hover,
+.chunkOutput .ui.inverted.selectable.table tr:hover td[class*="purple colored"],
+.chunkOutput .ui.ui.inverted.selectable.table tr.purple:not(.marked):hover,
+.chunkOutput .ui.inverted.table tr td.selectable.purple:not(.marked):hover,
+.chunkOutput .ui.inverted.selectable.table tr:hover td.purple:not(.marked) {
+  background: #cf40ff;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.table td[class*="purple marked"].left,
+.chunkOutput .ui.table tr[class*="purple marked"].left {
+  box-shadow: 0.2em 0 0 0 #A333C8 inset;
+}
+
+.chunkOutput .ui.table td[class*="purple marked"].right,
+.chunkOutput .ui.table tr[class*="purple marked"].right {
+  box-shadow: -0.2em 0 0 0 #A333C8 inset;
+}
+
+.chunkOutput .ui.inverted.table td[class*="purple marked"].left,
+.chunkOutput .ui.inverted.table tr[class*="purple marked"].left {
+  box-shadow: 0.2em 0 0 0 #DC73FF inset;
+}
+
+.chunkOutput .ui.inverted.table td[class*="purple marked"].right,
+.chunkOutput .ui.inverted.table tr[class*="purple marked"].right {
+  box-shadow: -0.2em 0 0 0 #DC73FF inset;
+}
+
+.chunkOutput .ui.pink.table {
+  border-top: 0.2em solid #E03997;
+}
+
+.chunkOutput .ui.inverted.pink.table {
+  background: #E03997;
+  color: #FFFFFF;
+}
+
+/* Same color for background and color to camouflage the scrollbar */
+
+.chunkOutput .ui.scrolling.table > thead.pink,
+.chunkOutput .ui.scrolling.table > tfoot.pink {
+  background: #ffe8f9;
+  color: #ffe8f9;
+}
+
+.chunkOutput .ui.scrolling.table > thead.pink > tr > th,
+.chunkOutput .ui.scrolling.table > tfoot.pink > tr > th,
+.chunkOutput .ui.scrolling.table > thead.pink > tr > td,
+.chunkOutput .ui.scrolling.table > tfoot.pink > tr > td {
+  background: inherit;
+  color: #E03997;
+}
+
+.chunkOutput .ui.inverted.scrolling.table > thead.pink,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.pink {
+  background: #E03997;
+  color: #E03997;
+}
+
+.chunkOutput .ui.inverted.scrolling.table > thead.pink > tr > th,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.pink > tr > th,
+.chunkOutput .ui.inverted.scrolling.table > thead.pink > tr > td,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.pink > tr > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.ui.ui.table tr[class*="pink colored"],
+.chunkOutput .ui.ui.table th[class*="pink colored"],
+.chunkOutput .ui.ui.table td[class*="pink colored"],
+.chunkOutput .ui.ui.ui.ui.table tr.pink:not(.marked),
+.chunkOutput .ui.ui.table th.pink:not(.marked),
+.chunkOutput .ui.ui.table td.pink:not(.marked) {
+  background: #ffe8f9;
+  color: #E03997;
+}
+
+.chunkOutput .ui.table > thead > tr[class*="pink colored"] > th,
+.chunkOutput .ui.table > tfoot > tr[class*="pink colored"] > th,
+.chunkOutput .ui.table > tfoot > tr[class*="pink colored"] > td,
+.chunkOutput .ui.table > thead > tr.pink:not(.marked) > th,
+.chunkOutput .ui.table > tfoot > tr.pink:not(.marked) > th,
+.chunkOutput .ui.table > tfoot > tr.pink:not(.marked) > td {
+  background: inherit;
+  color: #E03997;
+}
+
+.chunkOutput .ui.ui.ui.ui.inverted.table tr[class*="pink colored"],
+.chunkOutput .ui.ui.inverted.table th[class*="pink colored"],
+.chunkOutput .ui.ui.inverted.table td[class*="pink colored"],
+.chunkOutput .ui.ui.ui.ui.inverted.table tr.pink:not(.marked),
+.chunkOutput .ui.ui.inverted.table th.pink:not(.marked),
+.chunkOutput .ui.ui.inverted.table td.pink:not(.marked) {
+  background: #E03997;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.inverted.table > thead > tr[class*="pink colored"] > th,
+.chunkOutput .ui.inverted.table > tfoot > tr[class*="pink colored"] > th,
+.chunkOutput .ui.inverted.table > tfoot > tr[class*="pink colored"] > td,
+.chunkOutput .ui.inverted.table > thead > tr.pink:not(.marked) > th,
+.chunkOutput .ui.inverted.table > tfoot > tr.pink:not(.marked) > th,
+.chunkOutput .ui.inverted.table > tfoot > tr.pink:not(.marked) > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.selectable.table tr[class*="pink colored"]:hover,
+.chunkOutput .ui.table tr td.selectable[class*="pink colored"]:hover,
+.chunkOutput .ui.selectable.table tr:hover td[class*="pink colored"],
+.chunkOutput .ui.ui.selectable.table tr.pink:not(.marked):hover,
+.chunkOutput .ui.table tr td.selectable.pink:not(.marked):hover,
+.chunkOutput .ui.selectable.table tr:hover td.pink:not(.marked) {
+  background: #ffdef6;
+  color: #E03997;
+}
+
+.chunkOutput .ui.ui.inverted.selectable.table tr[class*="pink colored"]:hover,
+.chunkOutput .ui.inverted.table tr td.selectable[class*="pink colored"]:hover,
+.chunkOutput .ui.inverted.selectable.table tr:hover td[class*="pink colored"],
+.chunkOutput .ui.ui.inverted.selectable.table tr.pink:not(.marked):hover,
+.chunkOutput .ui.inverted.table tr td.selectable.pink:not(.marked):hover,
+.chunkOutput .ui.inverted.selectable.table tr:hover td.pink:not(.marked) {
+  background: #ff5bd1;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.table td[class*="pink marked"].left,
+.chunkOutput .ui.table tr[class*="pink marked"].left {
+  box-shadow: 0.2em 0 0 0 #E03997 inset;
+}
+
+.chunkOutput .ui.table td[class*="pink marked"].right,
+.chunkOutput .ui.table tr[class*="pink marked"].right {
+  box-shadow: -0.2em 0 0 0 #E03997 inset;
+}
+
+.chunkOutput .ui.inverted.table td[class*="pink marked"].left,
+.chunkOutput .ui.inverted.table tr[class*="pink marked"].left {
+  box-shadow: 0.2em 0 0 0 #FF8EDF inset;
+}
+
+.chunkOutput .ui.inverted.table td[class*="pink marked"].right,
+.chunkOutput .ui.inverted.table tr[class*="pink marked"].right {
+  box-shadow: -0.2em 0 0 0 #FF8EDF inset;
+}
+
+.chunkOutput .ui.brown.table {
+  border-top: 0.2em solid #A5673F;
+}
+
+.chunkOutput .ui.inverted.brown.table {
+  background: #A5673F;
+  color: #FFFFFF;
+}
+
+/* Same color for background and color to camouflage the scrollbar */
+
+.chunkOutput .ui.scrolling.table > thead.brown,
+.chunkOutput .ui.scrolling.table > tfoot.brown {
+  background: #f7e5d2;
+  color: #f7e5d2;
+}
+
+.chunkOutput .ui.scrolling.table > thead.brown > tr > th,
+.chunkOutput .ui.scrolling.table > tfoot.brown > tr > th,
+.chunkOutput .ui.scrolling.table > thead.brown > tr > td,
+.chunkOutput .ui.scrolling.table > tfoot.brown > tr > td {
+  background: inherit;
+  color: #A5673F;
+}
+
+.chunkOutput .ui.inverted.scrolling.table > thead.brown,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.brown {
+  background: #A5673F;
+  color: #A5673F;
+}
+
+.chunkOutput .ui.inverted.scrolling.table > thead.brown > tr > th,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.brown > tr > th,
+.chunkOutput .ui.inverted.scrolling.table > thead.brown > tr > td,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.brown > tr > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.ui.ui.table tr[class*="brown colored"],
+.chunkOutput .ui.ui.table th[class*="brown colored"],
+.chunkOutput .ui.ui.table td[class*="brown colored"],
+.chunkOutput .ui.ui.ui.ui.table tr.brown:not(.marked),
+.chunkOutput .ui.ui.table th.brown:not(.marked),
+.chunkOutput .ui.ui.table td.brown:not(.marked) {
+  background: #f7e5d2;
+  color: #A5673F;
+}
+
+.chunkOutput .ui.table > thead > tr[class*="brown colored"] > th,
+.chunkOutput .ui.table > tfoot > tr[class*="brown colored"] > th,
+.chunkOutput .ui.table > tfoot > tr[class*="brown colored"] > td,
+.chunkOutput .ui.table > thead > tr.brown:not(.marked) > th,
+.chunkOutput .ui.table > tfoot > tr.brown:not(.marked) > th,
+.chunkOutput .ui.table > tfoot > tr.brown:not(.marked) > td {
+  background: inherit;
+  color: #A5673F;
+}
+
+.chunkOutput .ui.ui.ui.ui.inverted.table tr[class*="brown colored"],
+.chunkOutput .ui.ui.inverted.table th[class*="brown colored"],
+.chunkOutput .ui.ui.inverted.table td[class*="brown colored"],
+.chunkOutput .ui.ui.ui.ui.inverted.table tr.brown:not(.marked),
+.chunkOutput .ui.ui.inverted.table th.brown:not(.marked),
+.chunkOutput .ui.ui.inverted.table td.brown:not(.marked) {
+  background: #A5673F;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.inverted.table > thead > tr[class*="brown colored"] > th,
+.chunkOutput .ui.inverted.table > tfoot > tr[class*="brown colored"] > th,
+.chunkOutput .ui.inverted.table > tfoot > tr[class*="brown colored"] > td,
+.chunkOutput .ui.inverted.table > thead > tr.brown:not(.marked) > th,
+.chunkOutput .ui.inverted.table > tfoot > tr.brown:not(.marked) > th,
+.chunkOutput .ui.inverted.table > tfoot > tr.brown:not(.marked) > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.selectable.table tr[class*="brown colored"]:hover,
+.chunkOutput .ui.table tr td.selectable[class*="brown colored"]:hover,
+.chunkOutput .ui.selectable.table tr:hover td[class*="brown colored"],
+.chunkOutput .ui.ui.selectable.table tr.brown:not(.marked):hover,
+.chunkOutput .ui.table tr td.selectable.brown:not(.marked):hover,
+.chunkOutput .ui.selectable.table tr:hover td.brown:not(.marked) {
+  background: #efe0cf;
+  color: #A5673F;
+}
+
+.chunkOutput .ui.ui.inverted.selectable.table tr[class*="brown colored"]:hover,
+.chunkOutput .ui.inverted.table tr td.selectable[class*="brown colored"]:hover,
+.chunkOutput .ui.inverted.selectable.table tr:hover td[class*="brown colored"],
+.chunkOutput .ui.ui.inverted.selectable.table tr.brown:not(.marked):hover,
+.chunkOutput .ui.inverted.table tr td.selectable.brown:not(.marked):hover,
+.chunkOutput .ui.inverted.selectable.table tr:hover td.brown:not(.marked) {
+  background: #b0620f;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.table td[class*="brown marked"].left,
+.chunkOutput .ui.table tr[class*="brown marked"].left {
+  box-shadow: 0.2em 0 0 0 #A5673F inset;
+}
+
+.chunkOutput .ui.table td[class*="brown marked"].right,
+.chunkOutput .ui.table tr[class*="brown marked"].right {
+  box-shadow: -0.2em 0 0 0 #A5673F inset;
+}
+
+.chunkOutput .ui.inverted.table td[class*="brown marked"].left,
+.chunkOutput .ui.inverted.table tr[class*="brown marked"].left {
+  box-shadow: 0.2em 0 0 0 #D67C1C inset;
+}
+
+.chunkOutput .ui.inverted.table td[class*="brown marked"].right,
+.chunkOutput .ui.inverted.table tr[class*="brown marked"].right {
+  box-shadow: -0.2em 0 0 0 #D67C1C inset;
+}
+
+.chunkOutput .ui.grey.table {
+  border-top: 0.2em solid #767676;
+}
+
+.chunkOutput .ui.inverted.grey.table {
+  background: #767676;
+  color: #FFFFFF;
+}
+
+/* Same color for background and color to camouflage the scrollbar */
+
+.chunkOutput .ui.scrolling.table > thead.grey,
+.chunkOutput .ui.scrolling.table > tfoot.grey {
+  background: #DCDDDE;
+  color: #DCDDDE;
+}
+
+.chunkOutput .ui.scrolling.table > thead.grey > tr > th,
+.chunkOutput .ui.scrolling.table > tfoot.grey > tr > th,
+.chunkOutput .ui.scrolling.table > thead.grey > tr > td,
+.chunkOutput .ui.scrolling.table > tfoot.grey > tr > td {
+  background: inherit;
+  color: #767676;
+}
+
+.chunkOutput .ui.inverted.scrolling.table > thead.grey,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.grey {
+  background: #767676;
+  color: #767676;
+}
+
+.chunkOutput .ui.inverted.scrolling.table > thead.grey > tr > th,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.grey > tr > th,
+.chunkOutput .ui.inverted.scrolling.table > thead.grey > tr > td,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.grey > tr > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.ui.ui.table tr[class*="grey colored"],
+.chunkOutput .ui.ui.table th[class*="grey colored"],
+.chunkOutput .ui.ui.table td[class*="grey colored"],
+.chunkOutput .ui.ui.ui.ui.table tr.grey:not(.marked),
+.chunkOutput .ui.ui.table th.grey:not(.marked),
+.chunkOutput .ui.ui.table td.grey:not(.marked) {
+  background: #DCDDDE;
+  color: #767676;
+}
+
+.chunkOutput .ui.table > thead > tr[class*="grey colored"] > th,
+.chunkOutput .ui.table > tfoot > tr[class*="grey colored"] > th,
+.chunkOutput .ui.table > tfoot > tr[class*="grey colored"] > td,
+.chunkOutput .ui.table > thead > tr.grey:not(.marked) > th,
+.chunkOutput .ui.table > tfoot > tr.grey:not(.marked) > th,
+.chunkOutput .ui.table > tfoot > tr.grey:not(.marked) > td {
+  background: inherit;
+  color: #767676;
+}
+
+.chunkOutput .ui.ui.ui.ui.inverted.table tr[class*="grey colored"],
+.chunkOutput .ui.ui.inverted.table th[class*="grey colored"],
+.chunkOutput .ui.ui.inverted.table td[class*="grey colored"],
+.chunkOutput .ui.ui.ui.ui.inverted.table tr.grey:not(.marked),
+.chunkOutput .ui.ui.inverted.table th.grey:not(.marked),
+.chunkOutput .ui.ui.inverted.table td.grey:not(.marked) {
+  background: #767676;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.inverted.table > thead > tr[class*="grey colored"] > th,
+.chunkOutput .ui.inverted.table > tfoot > tr[class*="grey colored"] > th,
+.chunkOutput .ui.inverted.table > tfoot > tr[class*="grey colored"] > td,
+.chunkOutput .ui.inverted.table > thead > tr.grey:not(.marked) > th,
+.chunkOutput .ui.inverted.table > tfoot > tr.grey:not(.marked) > th,
+.chunkOutput .ui.inverted.table > tfoot > tr.grey:not(.marked) > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.selectable.table tr[class*="grey colored"]:hover,
+.chunkOutput .ui.table tr td.selectable[class*="grey colored"]:hover,
+.chunkOutput .ui.selectable.table tr:hover td[class*="grey colored"],
+.chunkOutput .ui.ui.selectable.table tr.grey:not(.marked):hover,
+.chunkOutput .ui.table tr td.selectable.grey:not(.marked):hover,
+.chunkOutput .ui.selectable.table tr:hover td.grey:not(.marked) {
+  background: #c2c4c5;
+  color: #767676;
+}
+
+.chunkOutput .ui.ui.inverted.selectable.table tr[class*="grey colored"]:hover,
+.chunkOutput .ui.inverted.table tr td.selectable[class*="grey colored"]:hover,
+.chunkOutput .ui.inverted.selectable.table tr:hover td[class*="grey colored"],
+.chunkOutput .ui.ui.inverted.selectable.table tr.grey:not(.marked):hover,
+.chunkOutput .ui.inverted.table tr td.selectable.grey:not(.marked):hover,
+.chunkOutput .ui.inverted.selectable.table tr:hover td.grey:not(.marked) {
+  background: #c2c4c5;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.table td[class*="grey marked"].left,
+.chunkOutput .ui.table tr[class*="grey marked"].left {
+  box-shadow: 0.2em 0 0 0 #767676 inset;
+}
+
+.chunkOutput .ui.table td[class*="grey marked"].right,
+.chunkOutput .ui.table tr[class*="grey marked"].right {
+  box-shadow: -0.2em 0 0 0 #767676 inset;
+}
+
+.chunkOutput .ui.inverted.table td[class*="grey marked"].left,
+.chunkOutput .ui.inverted.table tr[class*="grey marked"].left {
+  box-shadow: 0.2em 0 0 0 #DCDDDE inset;
+}
+
+.chunkOutput .ui.inverted.table td[class*="grey marked"].right,
+.chunkOutput .ui.inverted.table tr[class*="grey marked"].right {
+  box-shadow: -0.2em 0 0 0 #DCDDDE inset;
+}
+
+.chunkOutput .ui.black.table {
+  border-top: 0.2em solid #1B1C1D;
+}
+
+.chunkOutput .ui.inverted.black.table {
+  background: #1B1C1D;
+  color: #FFFFFF;
+}
+
+/* Same color for background and color to camouflage the scrollbar */
+
+.chunkOutput .ui.scrolling.table > thead.black,
+.chunkOutput .ui.scrolling.table > tfoot.black {
+  background: #545454;
+  color: #545454;
+}
+
+.chunkOutput .ui.scrolling.table > thead.black > tr > th,
+.chunkOutput .ui.scrolling.table > tfoot.black > tr > th,
+.chunkOutput .ui.scrolling.table > thead.black > tr > td,
+.chunkOutput .ui.scrolling.table > tfoot.black > tr > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.inverted.scrolling.table > thead.black,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.black {
+  background: #1B1C1D;
+  color: #1B1C1D;
+}
+
+.chunkOutput .ui.inverted.scrolling.table > thead.black > tr > th,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.black > tr > th,
+.chunkOutput .ui.inverted.scrolling.table > thead.black > tr > td,
+.chunkOutput .ui.inverted.scrolling.table > tfoot.black > tr > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.ui.ui.table tr[class*="black colored"],
+.chunkOutput .ui.ui.table th[class*="black colored"],
+.chunkOutput .ui.ui.table td[class*="black colored"],
+.chunkOutput .ui.ui.ui.ui.table tr.black:not(.marked),
+.chunkOutput .ui.ui.table th.black:not(.marked),
+.chunkOutput .ui.ui.table td.black:not(.marked) {
+  background: #545454;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.table > thead > tr[class*="black colored"] > th,
+.chunkOutput .ui.table > tfoot > tr[class*="black colored"] > th,
+.chunkOutput .ui.table > tfoot > tr[class*="black colored"] > td,
+.chunkOutput .ui.table > thead > tr.black:not(.marked) > th,
+.chunkOutput .ui.table > tfoot > tr.black:not(.marked) > th,
+.chunkOutput .ui.table > tfoot > tr.black:not(.marked) > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.ui.ui.inverted.table tr[class*="black colored"],
+.chunkOutput .ui.ui.inverted.table th[class*="black colored"],
+.chunkOutput .ui.ui.inverted.table td[class*="black colored"],
+.chunkOutput .ui.ui.ui.ui.inverted.table tr.black:not(.marked),
+.chunkOutput .ui.ui.inverted.table th.black:not(.marked),
+.chunkOutput .ui.ui.inverted.table td.black:not(.marked) {
+  background: #1B1C1D;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.inverted.table > thead > tr[class*="black colored"] > th,
+.chunkOutput .ui.inverted.table > tfoot > tr[class*="black colored"] > th,
+.chunkOutput .ui.inverted.table > tfoot > tr[class*="black colored"] > td,
+.chunkOutput .ui.inverted.table > thead > tr.black:not(.marked) > th,
+.chunkOutput .ui.inverted.table > tfoot > tr.black:not(.marked) > th,
+.chunkOutput .ui.inverted.table > tfoot > tr.black:not(.marked) > td {
+  background: inherit;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.selectable.table tr[class*="black colored"]:hover,
+.chunkOutput .ui.table tr td.selectable[class*="black colored"]:hover,
+.chunkOutput .ui.selectable.table tr:hover td[class*="black colored"],
+.chunkOutput .ui.ui.selectable.table tr.black:not(.marked):hover,
+.chunkOutput .ui.table tr td.selectable.black:not(.marked):hover,
+.chunkOutput .ui.selectable.table tr:hover td.black:not(.marked) {
+  background: #000000;
+  color: #FFFFFF;
+}
+
+.chunkOutput .ui.ui.inverted.selectable.table tr[class*="black colored"]:hover,
+.chunkOutput .ui.inverted.table tr td.selectable[class*="black colored"]:hover,
+.chunkOutput .ui.inverted.selectable.table tr:hover td[class*="black colored"],
+.chunkOutput .ui.ui.inverted.selectable.table tr.black:not(.marked):hover,
+.chunkOutput .ui.inverted.table tr td.selectable.black:not(.marked):hover,
+.chunkOutput .ui.inverted.selectable.table tr:hover td.black:not(.marked) {
+  background: #000000;
+  color: #1B1C1D;
+}
+
+.chunkOutput .ui.table td[class*="black marked"].left,
+.chunkOutput .ui.table tr[class*="black marked"].left {
+  box-shadow: 0.2em 0 0 0 #1B1C1D inset;
+}
+
+.chunkOutput .ui.table td[class*="black marked"].right,
+.chunkOutput .ui.table tr[class*="black marked"].right {
+  box-shadow: -0.2em 0 0 0 #1B1C1D inset;
+}
+
+.chunkOutput .ui.inverted.table td[class*="black marked"].left,
+.chunkOutput .ui.inverted.table tr[class*="black marked"].left {
+  box-shadow: 0.2em 0 0 0 #545454 inset;
+}
+
+.chunkOutput .ui.inverted.table td[class*="black marked"].right,
+.chunkOutput .ui.inverted.table tr[class*="black marked"].right {
+  box-shadow: -0.2em 0 0 0 #545454 inset;
+}
+
+/* --------------
+      Column Count
+    --------------- */
+
+/* Grid Based */
+
+.chunkOutput .ui.one.column.table td {
+  width: 100%;
+}
+
+.chunkOutput .ui.two.column.table td {
+  width: 50%;
+}
+
+.chunkOutput .ui.three.column.table td {
+  width: 33.33333333%;
+}
+
+.chunkOutput .ui.four.column.table td {
+  width: 25%;
+}
+
+.chunkOutput .ui.five.column.table td {
+  width: 20%;
+}
+
+.chunkOutput .ui.six.column.table td {
+  width: 16.66666667%;
+}
+
+.chunkOutput .ui.seven.column.table td {
+  width: 14.28571429%;
+}
+
+.chunkOutput .ui.eight.column.table td {
+  width: 12.5%;
+}
+
+.chunkOutput .ui.nine.column.table td {
+  width: 11.11111111%;
+}
+
+.chunkOutput .ui.ten.column.table td {
+  width: 10%;
+}
+
+.chunkOutput .ui.eleven.column.table td {
+  width: 9.09090909%;
+}
+
+.chunkOutput .ui.twelve.column.table td {
+  width: 8.33333333%;
+}
+
+.chunkOutput .ui.thirteen.column.table td {
+  width: 7.69230769%;
+}
+
+.chunkOutput .ui.fourteen.column.table td {
+  width: 7.14285714%;
+}
+
+.chunkOutput .ui.fifteen.column.table td {
+  width: 6.66666667%;
+}
+
+.chunkOutput .ui.sixteen.column.table td {
+  width: 6.25%;
+}
+
+/* Column Width */
+
+.chunkOutput .ui.table th.one.wide,
+.chunkOutput .ui.table td.one.wide {
+  width: 6.25%;
+}
+
+.chunkOutput .ui.table th.two.wide,
+.chunkOutput .ui.table td.two.wide {
+  width: 12.5%;
+}
+
+.chunkOutput .ui.table th.three.wide,
+.chunkOutput .ui.table td.three.wide {
+  width: 18.75%;
+}
+
+.chunkOutput .ui.table th.four.wide,
+.chunkOutput .ui.table td.four.wide {
+  width: 25%;
+}
+
+.chunkOutput .ui.table th.five.wide,
+.chunkOutput .ui.table td.five.wide {
+  width: 31.25%;
+}
+
+.chunkOutput .ui.table th.six.wide,
+.chunkOutput .ui.table td.six.wide {
+  width: 37.5%;
+}
+
+.chunkOutput .ui.table th.seven.wide,
+.chunkOutput .ui.table td.seven.wide {
+  width: 43.75%;
+}
+
+.chunkOutput .ui.table th.eight.wide,
+.chunkOutput .ui.table td.eight.wide {
+  width: 50%;
+}
+
+.chunkOutput .ui.table th.nine.wide,
+.chunkOutput .ui.table td.nine.wide {
+  width: 56.25%;
+}
+
+.chunkOutput .ui.table th.ten.wide,
+.chunkOutput .ui.table td.ten.wide {
+  width: 62.5%;
+}
+
+.chunkOutput .ui.table th.eleven.wide,
+.chunkOutput .ui.table td.eleven.wide {
+  width: 68.75%;
+}
+
+.chunkOutput .ui.table th.twelve.wide,
+.chunkOutput .ui.table td.twelve.wide {
+  width: 75%;
+}
+
+.chunkOutput .ui.table th.thirteen.wide,
+.chunkOutput .ui.table td.thirteen.wide {
+  width: 81.25%;
+}
+
+.chunkOutput .ui.table th.fourteen.wide,
+.chunkOutput .ui.table td.fourteen.wide {
+  width: 87.5%;
+}
+
+.chunkOutput .ui.table th.fifteen.wide,
+.chunkOutput .ui.table td.fifteen.wide {
+  width: 93.75%;
+}
+
+.chunkOutput .ui.table th.sixteen.wide,
+.chunkOutput .ui.table td.sixteen.wide {
+  width: 100%;
+}
+
+/* --------------
+        Sortable
+    --------------- */
+
+.chunkOutput .ui.sortable.table > thead > tr > th {
+  cursor: pointer;
+  white-space: nowrap;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.chunkOutput .ui.celled.sortable.table > thead > tr > th:not(:first-child) {
+  border-left: 1px solid rgba(34, 36, 38, 0.15);
+}
+
+.chunkOutput .ui.sortable.table thead th.sorted,
+.chunkOutput .ui.sortable.table thead th.sorted:hover {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.chunkOutput .ui.sortable.table > thead > tr > th::after {
+  display: none;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  content: "";
+  height: 1em;
+  width: auto;
+  opacity: 0.8;
+  margin: 0 0 0 0.5em;
+  font-family: "Icons";
+}
+
+.chunkOutput .ui.sortable.table thead th.ascending::after {
+  content: "\f0d8";
+}
+
+.chunkOutput .ui.sortable.table thead th.descending::after {
+  content: "\f0d7";
+}
+
+/* Hover */
+
+.chunkOutput .ui.sortable.table th.disabled:hover {
+  cursor: auto;
+  color: rgba(40, 40, 40, 0.3);
+}
+
+.chunkOutput .ui.sortable.table > thead > tr > th:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.chunkOutput .ui.sortable.table:not(.basic) > thead > tr > th:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Sorted */
+
+.chunkOutput .ui.sortable.table thead th.sorted {
+  color: rgba(0, 0, 0, 0.95);
+}
+
+.chunkOutput .ui.sortable.table:not(.basic) thead th.sorted {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.chunkOutput .ui.sortable.table thead th.sorted::after {
+  display: inline-block;
+}
+
+/* Sorted Hover */
+
+.chunkOutput .ui.sortable.table thead th.sorted:hover {
+  color: rgba(0, 0, 0, 0.95);
+}
+
+.chunkOutput .ui.sortable.table:not(.basic) thead th.sorted:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Inverted */
+
+.chunkOutput .ui.inverted.sortable.table thead th.sorted {
+  color: #ffffff;
+}
+
+.chunkOutput .ui.inverted.sortable.table:not(.basic) thead th.sorted {
+  background: rgba(255, 255, 255, 0.15) linear-gradient(transparent, rgba(0, 0, 0, 0.05));
+}
+
+.chunkOutput .ui.inverted.sortable.table > thead > tr > th:hover {
+  color: #ffffff;
+}
+
+.chunkOutput .ui.inverted.sortable.table:not(.basic) > thead > tr > th:hover {
+  background: rgba(255, 255, 255, 0.08) linear-gradient(transparent, rgba(0, 0, 0, 0.05));
+}
+
+.chunkOutput .ui.inverted.sortable.table:not(.basic) > thead > tr > th {
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+/* --------------
+        Inverted
+    --------------- */
+
+/* Text Color */
+
+.chunkOutput .ui.inverted.table {
+  background: #333;
+  color: rgba(255, 255, 255, 0.9);
+  border: none;
+}
+
+.chunkOutput .ui.ui.inverted.table > thead > tr > th,
+.chunkOutput .ui.ui.inverted.table > tbody > tr > th,
+.chunkOutput .ui.ui.inverted.table > tr > th {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.chunkOutput .ui.ui.inverted.table > tfoot > tr > th,
+.chunkOutput .ui.ui.inverted.table > tfoot > tr > td {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.chunkOutput .ui.inverted.table > tbody > tr > td,
+.chunkOutput .ui.inverted.table > tfoot > tr > td,
+.chunkOutput .ui.inverted.table > tr > td {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.chunkOutput .ui.ui.ui.inverted.table tr.disabled td,
+.chunkOutput .ui.ui.ui.inverted.table tr td.disabled,
+.chunkOutput .ui.inverted.table tr.disabled:hover td,
+.chunkOutput .ui.inverted.table tr:hover td.disabled {
+  pointer-events: none;
+  color: rgba(225, 225, 225, 0.3);
+}
+
+.chunkOutput .ui.ui.ui.inverted.table tr td.disabled:not([class="disabled"]),
+.chunkOutput .ui.inverted.table tr.disabled:not([class="disabled"]) td,
+.chunkOutput .ui.inverted.table tr.disabled td[class]:not(.disabled),
+.chunkOutput .ui.inverted.table tr:hover td.disabled:not([class="disabled"]) {
+  color: rgba(40, 40, 40, 0.3);
+}
+
+/* Definition */
+
+.chunkOutput .ui.inverted.definition.table > tfoot:not(.full-width) > tr > th:first-child,
+.chunkOutput .ui.inverted.definition.table > thead:not(.full-width) > tr > th:first-child {
+  background: #FFFFFF;
+}
+
+.chunkOutput .ui.inverted.definition.table > tbody > tr > td:first-child,
+.chunkOutput .ui.inverted.definition.table > tfoot > tr > td:first-child,
+.chunkOutput .ui.inverted.definition.table > tr > td:first-child {
+  background: rgba(255, 255, 255, 0.02);
+  color: #ffffff;
+}
+
+/* --------------
+       Collapsing
+    --------------- */
+
+.chunkOutput .ui.collapsing.table {
+  width: auto;
+}
+
+/* --------------
+          Basic
+    --------------- */
+
+.chunkOutput .ui.basic.table {
+  background: transparent;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  box-shadow: none;
+}
+
+.chunkOutput .ui.basic.table > thead,
+.chunkOutput .ui.basic.table > tfoot {
+  box-shadow: none;
+}
+
+.chunkOutput .ui.basic.table > thead > tr > th,
+.chunkOutput .ui.basic.table > tbody > tr > th,
+.chunkOutput .ui.basic.table > tfoot > tr > th,
+.chunkOutput .ui.basic.table > tr > th {
+  background: transparent;
+  border-left: none;
+}
+
+.chunkOutput .ui.basic.table > tbody > tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.chunkOutput .ui.basic.table > tbody > tr > td,
+.chunkOutput .ui.basic.table > tfoot > tr > td,
+.chunkOutput .ui.basic.table > tr > td {
+  background: transparent;
+}
+
+.chunkOutput .ui.basic.striped.table > tbody > tr:nth-child(2n) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Very Basic */
+
+.chunkOutput .ui[class*="very basic"].table {
+  border: none;
+}
+
+.chunkOutput .ui[class*="very basic"].table:not(.sortable):not(.striped) > tr > th,
+.chunkOutput .ui[class*="very basic"].table:not(.sortable):not(.striped) > thead > tr > th,
+.chunkOutput .ui[class*="very basic"].table:not(.sortable):not(.striped) > tbody > tr > th,
+.chunkOutput .ui[class*="very basic"].table:not(.sortable):not(.striped) > tfoot > tr > th,
+.chunkOutput .ui[class*="very basic"].table:not(.sortable):not(.striped) > tr > td,
+.chunkOutput .ui[class*="very basic"].table:not(.sortable):not(.striped) > tbody > tr > td {
+  padding: "";
+}
+
+.chunkOutput .ui[class*="very basic"].table:not(.sortable):not(.striped) > tr > th:first-child,
+.chunkOutput .ui[class*="very basic"].table:not(.sortable):not(.striped) > thead > tr > th:first-child,
+.chunkOutput .ui[class*="very basic"].table:not(.sortable):not(.striped) > tbody > tr > th:first-child,
+.chunkOutput .ui[class*="very basic"].table:not(.sortable):not(.striped) > tfoot > tr > th:first-child,
+.chunkOutput .ui[class*="very basic"].table:not(.sortable):not(.striped) > tr > td:first-child,
+.chunkOutput .ui[class*="very basic"].table:not(.sortable):not(.striped) > tbody > tr > td:first-child,
+.chunkOutput .ui[class*="very basic"].table:not(.sortable):not(.striped) > tfoot > tr > td:first-child {
+  padding-left: 0;
+}
+
+.chunkOutput .ui[class*="very basic"].table:not(.sortable):not(.striped) > tr > th:last-child,
+.chunkOutput .ui[class*="very basic"].table:not(.sortable):not(.striped) > thead > tr > th:last-child,
+.chunkOutput .ui[class*="very basic"].table:not(.sortable):not(.striped) > tbody > tr > th:last-child,
+.chunkOutput .ui[class*="very basic"].table:not(.sortable):not(.striped) > tfoot > tr > th:last-child,
+.chunkOutput .ui[class*="very basic"].table:not(.sortable):not(.striped) > tr > td:last-child,
+.chunkOutput .ui[class*="very basic"].table:not(.sortable):not(.striped) > tbody > tr > td:last-child,
+.chunkOutput .ui[class*="very basic"].table:not(.sortable):not(.striped) > tfoot > tr > td:last-child {
+  padding-right: 0;
+}
+
+.chunkOutput .ui[class*="very basic"].table:not(.sortable):not(.striped) > thead > tr:first-child > th {
+  padding-top: 0;
+}
+
+/* --------------
+         Celled
+    --------------- */
+
+.chunkOutput .ui.celled.table > tr > th,
+.chunkOutput .ui.celled.table > thead > tr > th,
+.chunkOutput .ui.celled.table > tbody > tr > th,
+.chunkOutput .ui.celled.table > tfoot > tr > th,
+.chunkOutput .ui.celled.table > tr > td,
+.chunkOutput .ui.celled.table > tbody > tr > td,
+.chunkOutput .ui.celled.table > tfoot > tr > td {
+  border-left: 1px solid rgba(34, 36, 38, 0.1);
+}
+
+.chunkOutput .ui.inverted.celled.table > tbody > tr > td,
+.chunkOutput .ui.inverted.celled.table > tr > td {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chunkOutput .ui.celled.table > tr > th:first-child,
+.chunkOutput .ui.celled.table > thead > tr > th:first-child,
+.chunkOutput .ui.celled.table > tbody > tr > th:first-child,
+.chunkOutput .ui.celled.table > tfoot > tr > th:first-child,
+.chunkOutput .ui.celled.table > tr > td:first-child,
+.chunkOutput .ui.celled.table > tbody > tr > td:first-child,
+.chunkOutput .ui.celled.table > tfoot > tr > td:first-child {
+  border-left: none;
+}
+
+/* --------------
+         Padded
+    --------------- */
+
+.chunkOutput .ui.padded.table > tr > th,
+.chunkOutput .ui.padded.table > thead > tr > th,
+.chunkOutput .ui.padded.table > tbody > tr > th,
+.chunkOutput .ui.padded.table > tfoot > tr > th {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.chunkOutput .ui.padded.table > tr > th,
+.chunkOutput .ui.padded.table > thead > tr > th,
+.chunkOutput .ui.padded.table > tbody > tr > th,
+.chunkOutput .ui.padded.table > tfoot > tr > th,
+.chunkOutput .ui.padded.table > tr > td,
+.chunkOutput .ui.padded.table > tbody > tr > td,
+.chunkOutput .ui.padded.table > tfoot > tr > td {
+  padding: 1em 1em;
+}
+
+/* Very */
+
+.chunkOutput .ui[class*="very padded"].table > tr > th,
+.chunkOutput .ui[class*="very padded"].table > thead > tr > th,
+.chunkOutput .ui[class*="very padded"].table > tbody > tr > th,
+.chunkOutput .ui[class*="very padded"].table > tfoot > tr > th {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.chunkOutput .ui[class*="very padded"].table > tr > td,
+.chunkOutput .ui[class*="very padded"].table > tbody > tr > td,
+.chunkOutput .ui[class*="very padded"].table > tfoot > tr > td {
+  padding: 1.5em 1.5em;
+}
+
+/* --------------
+         Compact
+    --------------- */
+
+.chunkOutput .ui.compact.table > tr > th,
+.chunkOutput .ui.compact.table > thead > tr > th,
+.chunkOutput .ui.compact.table > tbody > tr > th,
+.chunkOutput .ui.compact.table > tfoot > tr > th {
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+}
+
+.chunkOutput .ui.compact.table > tr > td,
+.chunkOutput .ui.compact.table > tbody > tr > td,
+.chunkOutput .ui.compact.table > tfoot > tr > td {
+  padding: 0.5em 0.7em;
+}
+
+/* Very */
+
+.chunkOutput .ui[class*="very compact"].table > tr > th,
+.chunkOutput .ui[class*="very compact"].table > thead > tr > th,
+.chunkOutput .ui[class*="very compact"].table > tbody > tr > th,
+.chunkOutput .ui[class*="very compact"].table > tfoot > tr > th {
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+}
+
+.chunkOutput .ui[class*="very compact"].table > tr > td,
+.chunkOutput .ui[class*="very compact"].table > tbody > tr > td,
+.chunkOutput .ui[class*="very compact"].table > tfoot > tr > td {
+  padding: 0.4em 0.6em;
+}
+
+/* --------------
+         Stuck
+    --------------- */
+
+.chunkOutput .ui.stuck.table:not(.inverted) {
+  background: #FFFFFF;
+}
+
+.chunkOutput .ui.stuck.table:not(.inverted) > thead > tr {
+  background: #F9FAFB;
+}
+
+.chunkOutput .ui.stuck.table:not(.inverted) > tbody > tr {
+  background: #FFFFFF;
+}
+
+.chunkOutput .ui.stuck.table:not(.inverted) > tfoot > tr {
+  background: #F9FAFB;
+}
+
+.chunkOutput .ui.stuck.table:not(.inverted).basic > thead > tr,
+.chunkOutput .ui.stuck.table:not(.inverted).basic > tfoot > tr {
+  background: #FFFFFF;
+}
+
+.chunkOutput .ui.inverted.stuck.table > thead > tr {
+  background: #252525;
+}
+
+.chunkOutput .ui.inverted.stuck.table > tbody > tr {
+  background: #333;
+}
+
+.chunkOutput .ui.inverted.stuck.table > tfoot > tr {
+  background: #252525;
+}
+
+.chunkOutput .ui.inverted.stuck.table.basic > thead > tr,
+.chunkOutput .ui.inverted.stuck.table.basic > tfoot > tr {
+  background: #333;
+}
+
+.chunkOutput .ui.head.stuck.table > thead,
+.chunkOutput .ui.foot.stuck.table > tfoot {
+  position: sticky;
+  z-index: 800;
+}
+
+.chunkOutput .ui.head.stuck.table {
+  border-top: 0;
+}
+
+.chunkOutput .ui.head.stuck.table > thead {
+  top: 0;
+  bottom: auto;
+}
+
+.chunkOutput .ui.head.stuck.table > thead > tr:first-child > th {
+  border-top: 1px solid rgba(34, 36, 38, 0.1);
+}
+
+.chunkOutput .ui.head.stuck.table.inverted > thead > tr:first-child > th {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chunkOutput .ui.foot.stuck.table {
+  border-bottom: 0;
+}
+
+.chunkOutput .ui.foot.stuck.table > tfoot {
+  top: auto;
+  bottom: 0;
+}
+
+.chunkOutput .ui.foot.stuck.table > tfoot > tr:last-child > td,
+.chunkOutput .ui.foot.stuck.table > tfoot > tr:last-child > th {
+  border-bottom: 1px solid rgba(34, 36, 38, 0.1);
+}
+
+.chunkOutput .ui.foot.stuck.table.inverted > tfoot > tr:first-child > td,
+.chunkOutput .ui.foot.stuck.table.inverted > tfoot > tr:first-child > th {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chunkOutput .ui.first.stuck.table {
+  border-left: 0;
+}
+
+.chunkOutput .ui.first.stuck.table th:first-child,
+.chunkOutput .ui.first.stuck.table td:first-child {
+  position: sticky;
+  left: 0;
+  border-left: 1px solid rgba(34, 36, 38, 0.1);
+  background: inherit;
+}
+
+.chunkOutput .ui.first.stuck.table.inverted th:first-child,
+.chunkOutput .ui.first.stuck.table.inverted td:first-child {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chunkOutput .ui.last.stuck.table {
+  border-right: 0;
+}
+
+.chunkOutput .ui.last.stuck.table th:last-child,
+.chunkOutput .ui.last.stuck.table td:last-child {
+  position: sticky;
+  right: 0;
+  border-right: 1px solid rgba(34, 36, 38, 0.1);
+  background: inherit;
+}
+
+.chunkOutput .ui.last.stuck.table.inverted th:last-child,
+.chunkOutput .ui.last.stuck.table.inverted td:last-child {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chunkOutput .ui.celled.first.stuck.table th:first-child,
+.chunkOutput .ui.celled.first.stuck.table td:first-child {
+  border-right: 1px solid rgba(34, 36, 38, 0.1);
+}
+
+.chunkOutput .ui.celled.last.stuck.table th:last-child,
+.chunkOutput .ui.celled.last.stuck.table td:last-child {
+  border-left: 1px solid rgba(34, 36, 38, 0.1);
+}
+
+.chunkOutput .ui.inverted.celled.first.stuck.table th:first-child,
+.chunkOutput .ui.inverted.celled.first.stuck.table td:first-child {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chunkOutput .ui.inverted.celled.last.stuck.table th:last-child,
+.chunkOutput .ui.inverted.celled.last.stuck.table td:last-child {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --------------
+      Sizes
+--------------- */
+
+/* Standard */
+
+.chunkOutput .ui.table {
+  font-size: 1em;
+}
+
+.chunkOutput .ui.mini.table {
+  font-size: 0.78571429rem;
+}
+
+.chunkOutput .ui.tiny.table {
+  font-size: 0.85714286rem;
+}
+
+.chunkOutput .ui.small.table {
+  font-size: 0.9em;
+}
+
+.chunkOutput .ui.large.table {
+  font-size: 1.1em;
+}
+
+.chunkOutput .ui.big.table {
+  font-size: 1.28571429rem;
+}
+
+.chunkOutput .ui.huge.table {
+  font-size: 1.42857143rem;
+}
+
+.chunkOutput .ui.massive.table {
+  font-size: 1.71428571rem;
+}
+
+/*******************************
+           Overrides
+*******************************/
+
+/*******************************
+         Theme Overrides
+*******************************/
+
+.chunkOutput .ui.overview.table.ui.dormant {
+  background: transparent;
+  border: none;
+}
+
+.chunkOutput .ui.overview.table.ui.dormant tbody > tr {
+  background: linear-gradient(to right, #F9FAFB, #F9FAFB 30vw, #fff 30vw);
+  box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5 !important;
+}
+
+.chunkOutput .ui.overview.table.ui.dormant td {
+  display: flex !important;
+  text-align: left;
+}
+
+.chunkOutput .ui.overview.table.ui.dormant td > .title {
+  width: 30vw;
+}
+
+.chunkOutput .ui.overview.table.ui.dormant td > .images {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.chunkOutput .ui.overview.table.ui.dormant td > .images > img {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.chunkOutput .ui.overview.table.ui.dormant td > .images > .button {
+  margin-top: 0 !important;
+}
+
+.chunkOutput .ui.overview.table.ui.dormant tfoot > tr {
+  box-shadow: none !important;
+}
+
+.chunkOutput .ui.overview.table.ui.dormant thead[style*="display: none;"],
+.chunkOutput .ui.overview.table.ui.dormant tfoot[style*="display: none;"] {
+  display: none !important;
+}
+
+@media screen and (max-width: 767.98px) {
+  .chunkOutput .ui.very.basic.table:not(.unstackable) > tbody > tr {
+    border: none;
+  }
+
+  .chunkOutput .ui.very.basic.table:not(.unstackable) > tbody > tr > td + td {
+    padding-left: 0 !important;
+  }
+}
+
+.chunkOutput .ui.very.basic.table.inverted > thead > tr > th {
+  background-color: transparent;
+}
+
+.chunkOutput .ui.status.table a[class*="level-"]:before {
+  margin-right: 4px;
+}
+
+.chunkOutput .ui.status.table a.level-2:before {
+  content: "\2192";
+}
+
+.chunkOutput .ui.status.table a.level-3:before {
+  content: "\2192 \2192";
+}
+
+.chunkOutput .ui.status.table a.level-4:before {
+  content: "\2192 \2192 \2192";
+}
+
+.chunkOutput .ui.status.table tr.disabled td,
+.chunkOutput .ui.status.table td.disabled {
+  pointer-events: visible !important;
+}
+
+.chunkOutput .ui.status.table .hidemenu {
+  font-style: italic;
+}
+
+.chunkOutput .ui.status.table .unpublished {
+  opacity: 0.5;
+}
+
+.chunkOutput .ui.status.table .hidden {
+  display: none;
+}
+
+.chunkOutput .ui.status.table svg.icon {
+  width: 48px;
+  height: 38px;
+}
+
+.chunkOutput .ui.status.table td.metadata {
+  position: relative;
+}
+
+.chunkOutput .ui.status.table td.metadata a.floating.label {
+  float: right;
+  top: 0.5em;
+  right: 0.8em;
+}
+
+.chunkOutput .ui.status.table td.metadata a.floating.label:not(:hover) {
+  opacity: 0.6;
+}
+
+.chunkOutput .ui.status.table td.metadata a.floating.label + a.label {
+  right: 2.1em;
+}
+
+.chunkOutput .ui.status.table td.tasks a {
+  color: inherit;
+}
+
+.chunkOutput .ui.status.table td.labels {
+  padding-bottom: 0.1em;
+}
+
+/*******************************
+         Site Overrides
+*******************************/
