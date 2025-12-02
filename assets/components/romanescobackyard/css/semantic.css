@@ -777,20 +777,20 @@
 }
 
 .chunkOutput .primary-color {
-  background-color: #eaf3ec !important;
+  background: #eaf3ec !important;
 }
 
 .chunkOutput .primary-color.inverted {
-  background-color: #698f73 !important;
+  background: #698f73 !important;
   color: #FFFFFF !important;
 }
 
 .chunkOutput .secondary-color {
-  background-color: #edf1f8 !important;
+  background: #edf1f8 !important;
 }
 
 .chunkOutput .secondary-color.inverted {
-  background-color: #5f7ebe !important;
+  background: #5f7ebe !important;
   color: #FFFFFF !important;
 }
 
@@ -866,6 +866,14 @@
   .chunkOutput body.vertical.toc #sidebar {
     margin-top: calc(var(--baseline) * 3rem);
   }
+}
+
+.chunkOutput body.publication.modern #author-bio {
+  margin-top: calc(var(--baseline) * 5rem);
+}
+
+.chunkOutput body.publication.modern #author-bio .stretched.grid > .column > p:last-child {
+  flex: 0;
 }
 
 .chunkOutput p a:not(.button):not(.image):not(.item):not(.label),
@@ -951,8 +959,13 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
+.chunkOutput .publication .meta {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
 .chunkOutput .publication .meta > span {
-  display: inline-block;
   margin-right: 1em;
 }
 
@@ -967,6 +980,7 @@
 .chunkOutput .quote {
   width: max-content;
   max-width: 100%;
+  text-wrap: balance;
 }
 
 .chunkOutput .quote.basic,
@@ -1018,6 +1032,12 @@
 .chunkOutput * + .quote,
 .chunkOutput .quote + * {
   margin-top: calc(var(--baseline) * 3rem) !important;
+}
+
+.chunkOutput .quote.centered {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .chunkOutput .quote p,
@@ -1113,6 +1133,16 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
+.chunkOutput #content * + .spaced,
+.chunkOutput #content .spaced + * {
+  margin-top: calc(var(--baseline) * 3rem);
+}
+
+.chunkOutput #content * + [class*="very spaced"],
+.chunkOutput #content [class*="very spaced"] + * {
+  margin-top: calc(var(--baseline) * 5rem);
+}
+
 .chunkOutput #content * + .cta,
 .chunkOutput #content .cta + * {
   margin-top: calc(var(--baseline) * 3rem);
@@ -1151,15 +1181,6 @@
   .chunkOutput .ui.stackable.center.when.stacked.on.tablet .column {
     text-align: center;
   }
-}
-
-.chunkOutput #footer p {
-  font-size: 1rem;
-}
-
-.chunkOutput #footer .ui.list:not(.horizontal) .item {
-  width: max-content;
-  max-width: 100%;
 }
 
 .chunkOutput #qredits a.image {
@@ -3528,11 +3549,11 @@
 
 .chunkOutput .social.buttons {
   display: inline-flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .chunkOutput .social.buttons > .ui.button {
-  margin-top: calc(var(--baseline) * 1rem);
+  margin-top: 0;
 }
 
 /*******************************
@@ -3916,42 +3937,42 @@
   margin-right: 2rem;
 }
 
-.chunkOutput body.readability #content .ui.container > * + h1,
+.chunkOutput body.modern #content .ui.container > * + h1,
 .chunkOutput .ui.text.container:not(.conventional) > * + h1,
-.chunkOutput body.readability #content .ui.container > * + h2,
+.chunkOutput body.modern #content .ui.container > * + h2,
 .chunkOutput .ui.text.container:not(.conventional) > * + h2,
-.chunkOutput body.readability #content .ui.container > * + h3,
+.chunkOutput body.modern #content .ui.container > * + h3,
 .chunkOutput .ui.text.container:not(.conventional) > * + h3,
-.chunkOutput body.readability #content .ui.container > * + h4,
+.chunkOutput body.modern #content .ui.container > * + h4,
 .chunkOutput .ui.text.container:not(.conventional) > * + h4 {
   margin-top: calc(var(--baseline) * 5rem);
   margin-bottom: calc(var(--baseline) * 3rem);
 }
 
-.chunkOutput body.readability #content .ui.container > *:first-child,
+.chunkOutput body.modern #content .ui.container > *:first-child,
 .chunkOutput .ui.text.container:not(.conventional) > *:first-child {
   margin-top: 0 !important;
 }
 
-.chunkOutput body.readability #content .ui.container > p:not(.meta),
+.chunkOutput body.modern #content .ui.container > p:not(.meta),
 .chunkOutput .ui.text.container:not(.conventional) > p:not(.meta) {
   margin-top: calc(var(--baseline) * 3rem);
 }
 
-.chunkOutput body.readability #content .ui.container > blockquote,
+.chunkOutput body.modern #content .ui.container > blockquote,
 .chunkOutput .ui.text.container:not(.conventional) > blockquote,
-.chunkOutput body.readability #content .ui.container > blockquote + *,
+.chunkOutput body.modern #content .ui.container > blockquote + *,
 .chunkOutput .ui.text.container:not(.conventional) > blockquote + * {
   margin-top: calc(var(--baseline) * 5rem) !important;
 }
 
-.chunkOutput body.readability #content .ui.container > .ui.divider,
+.chunkOutput body.modern #content .ui.container > .ui.divider,
 .chunkOutput .ui.text.container:not(.conventional) > .ui.divider {
   margin: calc(var(--baseline) * 3rem) 0;
 }
 
 @media only screen and (max-width: 767.98px) {
-  .chunkOutput body.readability #content .ui.container p.image > img,
+  .chunkOutput body.modern #content .ui.container p.image > img,
   .chunkOutput .ui.text.container:not(.conventional) p.image > img {
     box-shadow: none;
     border-radius: 0;
@@ -3961,65 +3982,65 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .chunkOutput body.readability #content .ui.container h1,
+  .chunkOutput body.modern #content .ui.container h1,
   .chunkOutput .ui.text.container:not(.conventional) h1 {
     margin-left: -2rem;
   }
 
-  .chunkOutput body.readability #content .ui.container p,
+  .chunkOutput body.modern #content .ui.container p,
   .chunkOutput .ui.text.container:not(.conventional) p {
     font-size: 1.70624rem;
     line-height: 1.618;
   }
 
-  .chunkOutput body.readability #content .ui.container p.image,
+  .chunkOutput body.modern #content .ui.container p.image,
   .chunkOutput .ui.text.container:not(.conventional) p.image {
     text-align: center;
   }
 
-  .chunkOutput body.readability #content .ui.container p.image > img,
+  .chunkOutput body.modern #content .ui.container p.image > img,
   .chunkOutput .ui.text.container:not(.conventional) p.image > img {
     max-width: calc(100% + (2rem * 4));
     margin-left: -4rem;
     margin-right: -4rem;
   }
 
-  .chunkOutput body.readability #content .ui.container > blockquote.message,
+  .chunkOutput body.modern #content .ui.container > blockquote.message,
   .chunkOutput .ui.text.container:not(.conventional) > blockquote.message {
     margin: calc(var(--baseline) * 5rem) -4rem;
     padding: calc(var(--baseline) * 3rem) 4rem calc(var(--baseline) * 3rem) calc(4rem - 5px);
   }
 
-  .chunkOutput body.readability #content .ui.container > table,
+  .chunkOutput body.modern #content .ui.container > table,
   .chunkOutput .ui.text.container:not(.conventional) > table {
     width: calc(100% + (2rem * 2));
     margin-left: -2rem;
     margin-right: -2rem;
   }
 
-  .chunkOutput body.readability #content .ui.container > table th,
+  .chunkOutput body.modern #content .ui.container > table th,
   .chunkOutput .ui.text.container:not(.conventional) > table th,
-  .chunkOutput body.readability #content .ui.container > table td,
+  .chunkOutput body.modern #content .ui.container > table td,
   .chunkOutput .ui.text.container:not(.conventional) > table td {
     padding-left: 2rem;
     padding-right: 2rem;
   }
 
-  .chunkOutput body.readability #content .ui.container > div > pre,
+  .chunkOutput body.modern #content .ui.container > div > pre,
   .chunkOutput .ui.text.container:not(.conventional) > div > pre {
     margin-left: -2rem;
     margin-right: -2rem;
     padding: 2rem;
   }
 
-  .chunkOutput body.readability #content .ui.container > p > code,
+  .chunkOutput body.modern #content .ui.container > p > code,
   .chunkOutput .ui.text.container:not(.conventional) > p > code {
     padding: 0.5rem 0.8rem;
   }
 
-  .chunkOutput body.readability #content .ui.container pre,
+  .chunkOutput body.modern #content .ui.container pre,
   .chunkOutput .ui.text.container:not(.conventional) pre,
-  .chunkOutput body.readability #content .ui.container code,
+  .chunkOutput body.modern #content .ui.container code,
   .chunkOutput .ui.text.container:not(.conventional) code {
     font-size: 1.3rem;
     line-height: 1.618;
@@ -5044,36 +5065,97 @@
          Theme Overrides
 *******************************/
 
+.chunkOutput .ui.header {
+  text-wrap: balance;
+}
+
 .chunkOutput span.ui.header {
   display: inline-block;
 }
 
-.chunkOutput .ui.header.horizontal:not(.divider) {
-  display: flex;
+.chunkOutput .ui.header.icon > .image {
+  padding-bottom: 0.8em;
+  font-size: 1.2em !important;
 }
 
-.chunkOutput .ui.header.horizontal:not(.divider) > .icon,
-.chunkOutput .ui.header.horizontal:not(.divider) > .image {
-  flex: 1;
+.chunkOutput .ui.header.icon > .image > .icon {
+  margin-right: 0;
+}
+
+.chunkOutput .ui.header.icon > .svg {
+  min-width: 1.5em;
+  max-width: 2em;
+}
+
+.chunkOutput .ui.header.icon > a.image {
+  color: rgba(0, 0, 0, 0.6);
+  transition: color 0.2s, opacity 0.2s;
+}
+
+.chunkOutput .ui.header.icon > a.image:hover {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.chunkOutput .ui.header.icon > a.image.inverted {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.chunkOutput .ui.header.icon > a.image.inverted:hover {
+  color: rgba(255, 255, 255, 0.9);
+  opacity: 1;
+}
+
+.chunkOutput .ui.header.icon + p > .button {
+  margin-right: 0 !important;
+}
+
+.chunkOutput .ui.header.icon.horizontal {
+  display: flex;
+  margin: 0;
+}
+
+.chunkOutput .ui.header.icon.horizontal > .icon,
+.chunkOutput .ui.header.icon.horizontal > .image {
   display: flex;
   align-content: center;
+  align-self: baseline;
+  margin: 0 0.3em 0 0;
+  padding: 0;
+  font-size: 1em !important;
 }
 
-.chunkOutput .ui.header.horizontal:not(.divider) > .icon:before {
-  margin: auto;
-}
-
-.chunkOutput .ui.header.horizontal:not(.divider) > .content {
-  flex: 2;
+.chunkOutput .ui.header.icon.horizontal > .content {
+  flex: 1;
   align-self: center;
+  text-align: left;
+  margin-left: 0.5em;
 }
 
-.chunkOutput .ui.header.horizontal:not(.divider) > .circular.icon {
-  width: 2.2em !important;
-  height: 2.2em !important;
-  max-width: 2.2em !important;
-  max-height: 2.2em !important;
-  padding: 0 !important;
+.chunkOutput .ui.header.icon.horizontal .circular.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.chunkOutput .ui.header.icon.horizontal + .ui.icon.header {
+  margin-top: calc(var(--baseline) * 1rem);
+}
+
+.chunkOutput .ui.header.icon .circular.icon {
+  transition: box-shadow 0.2s;
+}
+
+.chunkOutput .ui.header.icon a:hover > .circular.icon {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.6) inset;
+}
+
+.chunkOutput .ui.header.icon.inverted .circular.icon {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1) inset;
+}
+
+.chunkOutput .ui.header.icon.inverted a:hover > .circular.icon {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.9) inset;
 }
 
 .chunkOutput .ui.header > .sub.header a {
@@ -5122,6 +5204,7 @@
 
 .chunkOutput #content .ui.header + .subtitle {
   margin-top: -1em;
+  text-wrap: balance;
 }
 
 .chunkOutput #content .ui.header + .description {
@@ -5157,23 +5240,6 @@
   .chunkOutput .ui.header + .subtitle {
     font-size: 1.28rem;
   }
-}
-
-.chunkOutput .ui.icon.header > .image {
-  padding-bottom: 1em;
-}
-
-.chunkOutput .ui.icon.header > .content {
-  display: block !important;
-  padding-left: 0 !important;
-}
-
-.chunkOutput .ui.icon.header + p > .button {
-  margin-right: 0 !important;
-}
-
-.chunkOutput .ui.icon.header.inverted > .circular.icon {
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1) inset;
 }
 
 .chunkOutput .ui.container.main:not(.conventional) > h1.header:first-child,
@@ -5313,7 +5379,6 @@
   speak: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -11706,12 +11771,39 @@
   margin-top: calc(var(--baseline) * 3rem);
 }
 
+@media only screen and (min-width: 992px) {
+  .chunkOutput .ui.snapped.image[class*="top snapped"] {
+    margin-top: calc(calc(var(--baseline) * -5rem) - 1rem);
+  }
+
+  .chunkOutput .ui.snapped.image[class*="bottom snapped"] {
+    margin-bottom: calc(calc(var(--baseline) * -5rem) - 1rem);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .chunkOutput .ui.inflated.image {
+    max-width: none;
+    width: 150%;
+    float: right;
+  }
+
+  .chunkOutput .ui.inflated.image[class*="very inflated"] {
+    width: 210%;
+  }
+
+  .chunkOutput .reversed > .column > .ui.inflated.image,
+  .chunkOutput :not(.reversed) > .column:last-child > .ui.inflated.image {
+    float: left;
+  }
+}
+
 .chunkOutput a.circular.image > img {
   border: 6px solid #F3F4F5;
 }
 
 .chunkOutput a.circular.image > img:hover {
-  border-color: #698f73;
+  border: 6px solid #698f73;
 }
 
 .chunkOutput img.lazy {
@@ -13712,6 +13804,50 @@
 
 .chunkOutput #filter-active .ui.labels {
   margin-bottom: -0.5em;
+}
+
+.chunkOutput .ui.cloudy.labels {
+  display: flex;
+  text-wrap: nowrap;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.chunkOutput .ui.cloudy.labels.fluffy {
+  font-size: 1.2em;
+}
+
+.chunkOutput .ui.fluffy.labels {
+  font-size: 0.85714286em;
+}
+
+.chunkOutput .ui.fluffy.labels .label.mini {
+  font-size: 0.64285714em;
+}
+
+.chunkOutput .ui.fluffy.labels .label.tiny {
+  font-size: 0.71428571em;
+}
+
+.chunkOutput .ui.fluffy.labels .label.small {
+  font-size: 0.78571429em;
+}
+
+.chunkOutput .ui.fluffy.labels .label.large {
+  font-size: 1em;
+}
+
+.chunkOutput .ui.fluffy.labels .label.big {
+  font-size: 1.28571429em;
+}
+
+.chunkOutput .ui.fluffy.labels .label.huge {
+  font-size: 1.42857143em;
+}
+
+.chunkOutput .ui.fluffy.labels .label.massive {
+  font-size: 1.71428571em;
 }
 
 /*******************************
@@ -15857,6 +15993,17 @@
 
 .chunkOutput #footer.ui.segment {
   padding: 0;
+  font-size: 1rem;
+}
+
+.chunkOutput #footer.ui.segment .ui.tiny.header,
+.chunkOutput #footer.ui.segment .ui.regular.header {
+  font-size: 1rem;
+}
+
+.chunkOutput #footer.ui.segment .ui.list:not(.horizontal) .item {
+  width: max-content;
+  max-width: 100%;
 }
 
 .chunkOutput #footer.ui.segment > .container:last-child {
@@ -15987,29 +16134,8 @@
 }
 
 @media only screen and (min-width: 992px) {
-  .chunkOutput .ui.snapped.segment {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+  .chunkOutput .ui.snapping.segment {
     overflow: hidden;
-  }
-
-  .chunkOutput .ui.snapped.segment > .container > .grid {
-    margin-top: -2rem;
-    margin-bottom: -2rem;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .chunkOutput .ui.inflated.segment > .container > .grid > .column > .image,
-  .chunkOutput .ui.inflated.segment > .container > .grid > .row > .column > .image {
-    max-width: none;
-    width: 150%;
-    float: right;
-  }
-
-  .chunkOutput .ui.inflated.segment > .container > .grid.reversed > .column > .image,
-  .chunkOutput .ui.inflated.segment > .container > .grid > .row.reversed > .column > .image {
-    float: left;
   }
 }
 
@@ -16022,6 +16148,11 @@
 
 .chunkOutput .ui.pattern.segment .preview.column:hover > .code.link.icon {
   display: block;
+}
+
+.chunkOutput .ui.pattern.segment .toolbar.grid .ui.icon.button {
+  margin-top: 0;
+  margin-left: 0.5em;
 }
 
 .chunkOutput .ui.backyard.segment.black {
@@ -18494,19 +18625,19 @@
   box-shadow: none;
 }
 
+.chunkOutput .ui.nested.grid.celled.middle.aligned > .row > .column {
+  align-self: stretch !important;
+  align-content: center;
+}
+
+.chunkOutput .ui.nested.grid.celled.bottom.aligned > .row > .column {
+  align-self: stretch !important;
+  align-content: flex-end;
+}
+
 .chunkOutput * + .ui.nested.grid,
 .chunkOutput .ui.nested.grid + * {
   margin-top: calc(var(--baseline) * 2rem);
-}
-
-.chunkOutput * + .ui.nested.grid.spaced,
-.chunkOutput .ui.nested.grid.spaced + * {
-  margin-top: calc(var(--baseline) * 3rem);
-}
-
-.chunkOutput * + .ui.nested.grid[class*="very spaced"],
-.chunkOutput .ui.nested.grid[class*="very spaced"] + * {
-  margin-top: calc(var(--baseline) * 5rem);
 }
 
 .chunkOutput .ui.overview.grid.relaxed > .column {
@@ -21215,10 +21346,12 @@ Floated Menu / Item
   border-left: 0;
   border-right: 0;
   margin: 0 0 -1px 0;
+  position: relative;
 }
 
 .chunkOutput #menu-neighbors .item {
   padding: calc(var(--baseline) * 5rem) 1em !important;
+  text-wrap: balance;
 }
 
 .chunkOutput #menu-neighbors .item:not(:hover) {
@@ -21253,6 +21386,30 @@ Floated Menu / Item
 
 .chunkOutput #menu-neighbors .item.right > .icon {
   margin: 0.1em 0 0 0.8em;
+}
+
+.chunkOutput #menu-neighbors .up.button {
+  position: absolute;
+  top: calc(50% - 1.8rem);
+  z-index: 999;
+  background: #fff;
+}
+
+.chunkOutput #menu-neighbors .up.button ~ .item.left {
+  padding-right: 5rem !important;
+}
+
+.chunkOutput #menu-neighbors .up.button ~ .item.right {
+  padding-left: 5rem !important;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .chunkOutput #menu-neighbors .up.button {
+    left: 0;
+    right: 0;
+    margin: 0 auto !important;
+    width: fit-content;
+  }
 }
 
 .chunkOutput #submenu {
@@ -22324,7 +22481,7 @@ Floated Menu / Item
 
 .chunkOutput .ui.cards > .card .meta *,
 .chunkOutput .ui.card .meta * {
-  margin-right: 0.3em;
+  margin-right: 0.5em;
 }
 
 .chunkOutput .ui.cards > .card .meta :last-child,
@@ -22335,7 +22492,7 @@ Floated Menu / Item
 .chunkOutput .ui.cards > .card .meta [class*="right floated"],
 .chunkOutput .ui.card .meta [class*="right floated"] {
   margin-right: 0;
-  margin-left: 0.3em;
+  margin-left: 0.5em;
 }
 
 /* --------------
@@ -23328,18 +23485,6 @@ Floated Menu / Item
 
 .chunkOutput .card .icon > .image {
   padding: 0.5em 0 1em;
-}
-
-.chunkOutput .card > .content:not(.extra) > .column {
-  padding: 0 !important;
-}
-
-.chunkOutput .card > .content:not(.extra) > .column:last-child {
-  padding-left: 1em !important;
-}
-
-.chunkOutput .card > .extra .icon {
-  margin-top: 0.3em;
 }
 
 .chunkOutput .card > .bottom.attached.button:not(.primary):not(.secondary) {
@@ -24955,7 +25100,6 @@ Floated Menu / Item
 .chunkOutput .ui.accordion .accordion .title > .dropdown.icon {
   font-family: Accordion;
   line-height: 1;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   font-weight: normal;
   font-style: normal;
@@ -25041,7 +25185,6 @@ Floated Menu / Item
   position: fixed;
   top: 0;
   left: 0;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transition: none;
   will-change: transform;
@@ -25060,7 +25203,6 @@ Floated Menu / Item
 /* GPU Layers for Child Elements */
 
 .chunkOutput .ui.sidebar > * {
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -25142,7 +25284,6 @@ Floated Menu / Item
 
 .chunkOutput .pushable > .fixed {
   position: fixed;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transition: transform 500ms ease;
   will-change: transform;
@@ -25155,7 +25296,6 @@ Floated Menu / Item
 
 .chunkOutput .pushable > .pusher {
   position: relative;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   min-height: 100%;
   transition: transform 500ms ease;
@@ -25587,7 +25727,6 @@ Floated Menu / Item
 /* Animating */
 
 .chunkOutput .animating.transition {
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   visibility: visible !important;
 }
