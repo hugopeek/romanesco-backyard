@@ -341,10 +341,13 @@ class Romanesco
 
         // Validate all CSS
         $cssLinter = new Linter();
-        if ($cssLinter->lintString($css) !== true) {
-            $msg = "CSS is not valid and will not be generated at $staticFile:";
-            $errors = implode("\n", $cssLinter->getErrors());
-            $this->modx->log(modX::LOG_LEVEL_ERROR, "$msg\n$errors");
+        $lintResult = $cssLinter->lintString($css);
+        $errors = [];
+        foreach ($lintResult as $error) {
+            $errors[] = $error->__toString();
+        }
+        if ($errors) {
+            $this->modx->log(modX::LOG_LEVEL_ERROR,"\nCSS is not valid and will not be generated at $staticFile:\n" . implode("\n", $errors));
             return true;
         }
 
@@ -378,10 +381,13 @@ class Romanesco
             $staticFile = $cssPath . '/site.css';
 
             // Validate CSS
-            if ($cssLinter->lintString($css) !== true) {
-                $msg = "CSS is not valid and will not be generated at $staticFile:";
-                $errors = implode("\n", $cssLinter->getErrors());
-                $this->modx->log(modX::LOG_LEVEL_ERROR, "$msg\n$errors");
+            $lintResult = $cssLinter->lintString($css);
+            $errors = [];
+            foreach ($lintResult as $error) {
+                $errors[] = $error->__toString();
+            }
+            if ($errors) {
+                $this->modx->log(modX::LOG_LEVEL_ERROR,"\nCSS is not valid and will not be generated at $staticFile:\n" . implode("\n", $errors));
                 continue;
             }
 
