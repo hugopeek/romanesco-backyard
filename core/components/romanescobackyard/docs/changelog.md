@@ -1,5 +1,11 @@
 # Changelog for Romanesco Backyard
 
+## Backyard 1.0.0-rc3
+Released on ...
+
+- Remove .ui.form classes from CB chunk preview CSS
+- Fix internal CSS validation
+
 ## Backyard 1.0.0-rc2
 Released on December 2, 2025
 

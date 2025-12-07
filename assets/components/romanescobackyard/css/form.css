@@ -16,7 +16,7 @@
         Form
 --------------------- */
 
-.chunkOutput .ui.form {
+.chunkOutput {
   position: relative;
   max-width: 100%;
 }
@@ -25,7 +25,7 @@
         Content
 --------------------- */
 
-.chunkOutput .ui.form > p {
+.chunkOutput > p {
   margin: 1em 0;
 }
 
@@ -33,18 +33,18 @@
         Field
 --------------------- */
 
-.chunkOutput .ui.form .field {
+.chunkOutput .field {
   clear: both;
   margin: 0 0 1em;
 }
 
-.chunkOutput .ui.form .fields .fields,
-.chunkOutput .ui.form .field:last-child,
-.chunkOutput .ui.form .fields:last-child .field {
+.chunkOutput .fields .fields,
+.chunkOutput .field:last-child,
+.chunkOutput .fields:last-child .field {
   margin-bottom: 0;
 }
 
-.chunkOutput .ui.form .fields .field {
+.chunkOutput .fields .field {
   clear: both;
   margin: 0;
 }
@@ -53,7 +53,7 @@
         Labels
 --------------------- */
 
-.chunkOutput .ui.form .field > label {
+.chunkOutput .field > label {
   display: block;
   margin: 0 0 0.28571429rem 0;
   font-size: 1.28rem;
@@ -69,48 +69,48 @@
     Standard Inputs
 --------------------- */
 
-.chunkOutput .ui.form textarea,
-.chunkOutput .ui.form input:not([type]),
-.chunkOutput .ui.form input[type="color"],
-.chunkOutput .ui.form input[type="date"],
-.chunkOutput .ui.form input[type="datetime-local"],
-.chunkOutput .ui.form input[type="email"],
-.chunkOutput .ui.form input[type="month"],
-.chunkOutput .ui.form input[type="number"],
-.chunkOutput .ui.form input[type="password"],
-.chunkOutput .ui.form input[type="search"],
-.chunkOutput .ui.form input[type="tel"],
-.chunkOutput .ui.form input[type="time"],
-.chunkOutput .ui.form input[type="text"],
-.chunkOutput .ui.form input[type="file"],
-.chunkOutput .ui.form input[type="url"],
-.chunkOutput .ui.form input[type="week"] {
+.chunkOutput textarea,
+.chunkOutput input:not([type]),
+.chunkOutput input[type="color"],
+.chunkOutput input[type="date"],
+.chunkOutput input[type="datetime-local"],
+.chunkOutput input[type="email"],
+.chunkOutput input[type="month"],
+.chunkOutput input[type="number"],
+.chunkOutput input[type="password"],
+.chunkOutput input[type="search"],
+.chunkOutput input[type="tel"],
+.chunkOutput input[type="time"],
+.chunkOutput input[type="text"],
+.chunkOutput input[type="file"],
+.chunkOutput input[type="url"],
+.chunkOutput input[type="week"] {
   width: 100%;
   vertical-align: top;
 }
 
 /* Set max height on unusual input */
 
-.chunkOutput .ui.form ::-webkit-datetime-edit,
-.chunkOutput .ui.form ::-webkit-inner-spin-button {
+.chunkOutput ::-webkit-datetime-edit,
+.chunkOutput ::-webkit-inner-spin-button {
   height: 1.21428571em;
 }
 
-.chunkOutput .ui.form input:not([type]),
-.chunkOutput .ui.form input[type="color"],
-.chunkOutput .ui.form input[type="date"],
-.chunkOutput .ui.form input[type="datetime-local"],
-.chunkOutput .ui.form input[type="email"],
-.chunkOutput .ui.form input[type="month"],
-.chunkOutput .ui.form input[type="number"],
-.chunkOutput .ui.form input[type="password"],
-.chunkOutput .ui.form input[type="search"],
-.chunkOutput .ui.form input[type="tel"],
-.chunkOutput .ui.form input[type="time"],
-.chunkOutput .ui.form input[type="text"],
-.chunkOutput .ui.form input[type="file"],
-.chunkOutput .ui.form input[type="url"],
-.chunkOutput .ui.form input[type="week"] {
+.chunkOutput input:not([type]),
+.chunkOutput input[type="color"],
+.chunkOutput input[type="date"],
+.chunkOutput input[type="datetime-local"],
+.chunkOutput input[type="email"],
+.chunkOutput input[type="month"],
+.chunkOutput input[type="number"],
+.chunkOutput input[type="password"],
+.chunkOutput input[type="search"],
+.chunkOutput input[type="tel"],
+.chunkOutput input[type="time"],
+.chunkOutput input[type="text"],
+.chunkOutput input[type="file"],
+.chunkOutput input[type="url"],
+.chunkOutput input[type="week"] {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   margin: 0;
   outline: none;
@@ -127,11 +127,11 @@
   transition: color 0.1s ease, border-color 0.1s ease;
 }
 
-.chunkOutput .ui.form input[type="color"] {
+.chunkOutput input[type="color"] {
   padding: initial;
 }
 
-.chunkOutput .ui.form input::-webkit-calendar-picker-indicator {
+.chunkOutput input::-webkit-calendar-picker-indicator {
   padding: 0;
   opacity: 0.5;
   -webkit-transition: opacity 0.3s ease;
@@ -142,7 +142,7 @@
 /* Text Area */
 
 .chunkOutput .ui.input textarea,
-.chunkOutput .ui.form textarea {
+.chunkOutput textarea {
   margin: 0;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
@@ -166,14 +166,14 @@
   max-width: 100%;
 }
 
-.chunkOutput .ui.form textarea:not([rows]) {
+.chunkOutput textarea:not([rows]) {
   height: 12em;
   min-height: 8em;
   max-height: 24em;
 }
 
-.chunkOutput .ui.form textarea,
-.chunkOutput .ui.form input[type="checkbox"] {
+.chunkOutput textarea,
+.chunkOutput input[type="checkbox"] {
   vertical-align: top;
 }
 
@@ -181,31 +181,31 @@
     Checkbox margin
 --------------------- */
 
-.chunkOutput .ui.form .fields:not(.grouped):not(.inline) .field:not(:only-child) label + .ui.ui.checkbox {
+.chunkOutput .fields:not(.grouped):not(.inline) .field:not(:only-child) label + .ui.ui.checkbox {
   margin-top: 0.7em;
 }
 
-.chunkOutput .ui.form .fields:not(.grouped):not(.inline) .field:not(:only-child) .ui.checkbox {
+.chunkOutput .fields:not(.grouped):not(.inline) .field:not(:only-child) .ui.checkbox {
   margin-top: 2.41428571em;
 }
 
-.chunkOutput .ui.form .fields:not(.grouped):not(.inline) .field:not(:only-child) .ui.toggle.checkbox {
+.chunkOutput .fields:not(.grouped):not(.inline) .field:not(:only-child) .ui.toggle.checkbox {
   margin-top: 2.21428571em;
 }
 
-.chunkOutput .ui.form .fields:not(.grouped):not(.inline) .field:not(:only-child) .ui.slider.checkbox {
+.chunkOutput .fields:not(.grouped):not(.inline) .field:not(:only-child) .ui.slider.checkbox {
   margin-top: 2.61428571em;
 }
 
-.chunkOutput .ui.ui.form .field .fields .field:not(:only-child) .ui.checkbox {
+.chunkOutput .ui.field .fields .field:not(:only-child) .ui.checkbox {
   margin-top: 0.6em;
 }
 
-.chunkOutput .ui.ui.form .field .fields .field:not(:only-child) .ui.toggle.checkbox {
+.chunkOutput .ui.field .fields .field:not(:only-child) .ui.toggle.checkbox {
   margin-top: 0.5em;
 }
 
-.chunkOutput .ui.ui.form .field .fields .field:not(:only-child) .ui.slider.checkbox {
+.chunkOutput .ui.field .fields .field:not(:only-child) .ui.slider.checkbox {
   margin-top: 0.7em;
 }
 
@@ -213,14 +213,14 @@
           Transparent
     --------------------- */
 
-.chunkOutput .ui.form .field .transparent.input:not(.icon) input,
-.chunkOutput .ui.form .field input.transparent,
-.chunkOutput .ui.form .field textarea.transparent {
+.chunkOutput .field .transparent.input:not(.icon) input,
+.chunkOutput .field input.transparent,
+.chunkOutput .field textarea.transparent {
   padding: 0.67857143em 1em;
 }
 
-.chunkOutput .ui.form .field input.transparent,
-.chunkOutput .ui.form .field textarea.transparent {
+.chunkOutput .field input.transparent,
+.chunkOutput .field textarea.transparent {
   border-color: transparent !important;
   background-color: transparent !important;
   box-shadow: none !important;
@@ -230,7 +230,7 @@
   Input w/ attached Button
 --------------------------- */
 
-.chunkOutput .ui.form input.attached {
+.chunkOutput input.attached {
   width: auto;
 }
 
@@ -238,7 +238,7 @@
      Basic Select
 --------------------- */
 
-.chunkOutput .ui.form select {
+.chunkOutput select {
   display: block;
   height: auto;
   width: 100%;
@@ -257,24 +257,24 @@
 
 /* Block */
 
-.chunkOutput .ui.form .field > .selection.dropdown:not(.compact) {
+.chunkOutput .field > .selection.dropdown:not(.compact) {
   min-width: auto;
   width: 100%;
 }
 
-.chunkOutput .ui.form .field > .selection.dropdown > .dropdown.icon {
+.chunkOutput .field > .selection.dropdown > .dropdown.icon {
   float: right;
 }
 
 /* Inline */
 
-.chunkOutput .ui.form .inline.fields .field > .selection.dropdown,
-.chunkOutput .ui.form .inline.field > .selection.dropdown {
+.chunkOutput .inline.fields .field > .selection.dropdown,
+.chunkOutput .inline.field > .selection.dropdown {
   width: auto;
 }
 
-.chunkOutput .ui.form .inline.fields .field > .selection.dropdown > .dropdown.icon,
-.chunkOutput .ui.form .inline.field > .selection.dropdown > .dropdown.icon {
+.chunkOutput .inline.fields .field > .selection.dropdown > .dropdown.icon,
+.chunkOutput .inline.field > .selection.dropdown > .dropdown.icon {
   float: none;
 }
 
@@ -284,41 +284,41 @@
 
 /* Block */
 
-.chunkOutput .ui.form .field .ui.input,
-.chunkOutput .ui.form .fields .field .ui.input,
-.chunkOutput .ui.form .wide.field .ui.input {
+.chunkOutput .field .ui.input,
+.chunkOutput .fields .field .ui.input,
+.chunkOutput .wide.field .ui.input {
   width: 100%;
 }
 
 /* Inline */
 
-.chunkOutput .ui.form .inline.fields .field:not(.wide) .ui.input,
-.chunkOutput .ui.form .inline.field:not(.wide) .ui.input {
+.chunkOutput .inline.fields .field:not(.wide) .ui.input,
+.chunkOutput .inline.field:not(.wide) .ui.input {
   width: auto;
   vertical-align: middle;
 }
 
 /* Auto Input */
 
-.chunkOutput .ui.form .fields .field .ui.input input,
-.chunkOutput .ui.form .fields .field .ui.input textarea,
-.chunkOutput .ui.form .field .ui.input input,
-.chunkOutput .ui.form .field .ui.input textarea {
+.chunkOutput .fields .field .ui.input input,
+.chunkOutput .fields .field .ui.input textarea,
+.chunkOutput .field .ui.input input,
+.chunkOutput .field .ui.input textarea {
   width: 100%;
 }
 
 /* Full Width Input */
 
-.chunkOutput .ui.form .ten.fields .ui.input input,
-.chunkOutput .ui.form .nine.fields .ui.input input,
-.chunkOutput .ui.form .eight.fields .ui.input input,
-.chunkOutput .ui.form .seven.fields .ui.input input,
-.chunkOutput .ui.form .six.fields .ui.input input,
-.chunkOutput .ui.form .five.fields .ui.input input,
-.chunkOutput .ui.form .four.fields .ui.input input,
-.chunkOutput .ui.form .three.fields .ui.input input,
-.chunkOutput .ui.form .two.fields .ui.input input,
-.chunkOutput .ui.form .wide.field .ui.input input {
+.chunkOutput .ten.fields .ui.input input,
+.chunkOutput .nine.fields .ui.input input,
+.chunkOutput .eight.fields .ui.input input,
+.chunkOutput .seven.fields .ui.input input,
+.chunkOutput .six.fields .ui.input input,
+.chunkOutput .five.fields .ui.input input,
+.chunkOutput .four.fields .ui.input input,
+.chunkOutput .three.fields .ui.input input,
+.chunkOutput .two.fields .ui.input input,
+.chunkOutput .wide.field .ui.input input {
   flex: 1 0 auto;
   width: 0;
 }
@@ -327,29 +327,29 @@
    Types of Messages
 --------------------- */
 
-.chunkOutput .ui.form .error.message,
-.chunkOutput .ui.form .error.message:empty {
+.chunkOutput .error.message,
+.chunkOutput .error.message:empty {
   display: none;
 }
 
-.chunkOutput .ui.form .info.message,
-.chunkOutput .ui.form .info.message:empty {
+.chunkOutput .info.message,
+.chunkOutput .info.message:empty {
   display: none;
 }
 
-.chunkOutput .ui.form .success.message,
-.chunkOutput .ui.form .success.message:empty {
+.chunkOutput .success.message,
+.chunkOutput .success.message:empty {
   display: none;
 }
 
-.chunkOutput .ui.form .warning.message,
-.chunkOutput .ui.form .warning.message:empty {
+.chunkOutput .warning.message,
+.chunkOutput .warning.message:empty {
   display: none;
 }
 
 /* Assumptions */
 
-.chunkOutput .ui.form .message:first-child {
+.chunkOutput .message:first-child {
   margin-top: 0;
 }
 
@@ -357,25 +357,25 @@
    Validation Prompt
 --------------------- */
 
-.chunkOutput .ui.form .field .prompt.label {
+.chunkOutput .field .prompt.label {
   white-space: normal;
   background: #FFFFFF !important;
   border: 1px solid #E0B4B4 !important;
   color: #9F3A38 !important;
 }
 
-.chunkOutput .ui.form .field .prompt.label li::before {
+.chunkOutput .field .prompt.label li::before {
   color: #9F3A38;
 }
 
-.chunkOutput .ui.form .inline.fields .field .prompt,
-.chunkOutput .ui.form .inline.field .prompt {
+.chunkOutput .inline.fields .field .prompt,
+.chunkOutput .inline.field .prompt {
   vertical-align: top;
   margin: -0.25em 0 -0.5em 0.5em;
 }
 
-.chunkOutput .ui.form .inline.fields .field .prompt::before,
-.chunkOutput .ui.form .inline.field .prompt::before {
+.chunkOutput .inline.fields .field .prompt::before,
+.chunkOutput .inline.field .prompt::before {
   border-width: 0 0 1px 1px;
   bottom: auto;
   right: auto;
@@ -391,14 +391,14 @@
       Autofilled
 --------------------- */
 
-.chunkOutput .ui.form .field.field input:-webkit-autofill {
+.chunkOutput .field.field input:-webkit-autofill {
   box-shadow: 0 0 0 100px #fffff0 inset !important;
   border-color: #e5dfa1 !important;
 }
 
 /* Focus */
 
-.chunkOutput .ui.form .field.field input:-webkit-autofill:focus {
+.chunkOutput .field.field input:-webkit-autofill:focus {
   box-shadow: 0 0 0 100px #fffff0 inset !important;
   border-color: #d5c315 !important;
 }
@@ -409,27 +409,27 @@
 
 /* browsers require these rules separate */
 
-.chunkOutput .ui.form :-ms-input-placeholder {
+.chunkOutput :-ms-input-placeholder {
   color: rgba(128, 128, 128, 0.87);
 }
 
-.chunkOutput .ui.form ::-ms-input-placeholder {
+.chunkOutput ::-ms-input-placeholder {
   color: rgba(128, 128, 128, 0.87);
 }
 
-.chunkOutput .ui.form ::placeholder {
+.chunkOutput ::placeholder {
   color: rgba(128, 128, 128, 0.87);
 }
 
-.chunkOutput .ui.form :focus:-ms-input-placeholder {
+.chunkOutput :focus:-ms-input-placeholder {
   color: rgba(77, 77, 77, 0.87);
 }
 
-.chunkOutput .ui.form :focus::-ms-input-placeholder {
+.chunkOutput :focus::-ms-input-placeholder {
   color: rgba(77, 77, 77, 0.87);
 }
 
-.chunkOutput .ui.form :focus::placeholder {
+.chunkOutput :focus::placeholder {
   color: rgba(77, 77, 77, 0.87);
 }
 
@@ -437,21 +437,21 @@
         Focus
 --------------------- */
 
-.chunkOutput .ui.form input:not([type]):focus,
-.chunkOutput .ui.form input[type="color"]:focus,
-.chunkOutput .ui.form input[type="date"]:focus,
-.chunkOutput .ui.form input[type="datetime-local"]:focus,
-.chunkOutput .ui.form input[type="email"]:focus,
-.chunkOutput .ui.form input[type="month"]:focus,
-.chunkOutput .ui.form input[type="number"]:focus,
-.chunkOutput .ui.form input[type="password"]:focus,
-.chunkOutput .ui.form input[type="search"]:focus,
-.chunkOutput .ui.form input[type="tel"]:focus,
-.chunkOutput .ui.form input[type="time"]:focus,
-.chunkOutput .ui.form input[type="text"]:focus,
-.chunkOutput .ui.form input[type="file"]:focus,
-.chunkOutput .ui.form input[type="url"]:focus,
-.chunkOutput .ui.form input[type="week"]:focus {
+.chunkOutput input:not([type]):focus,
+.chunkOutput input[type="color"]:focus,
+.chunkOutput input[type="date"]:focus,
+.chunkOutput input[type="datetime-local"]:focus,
+.chunkOutput input[type="email"]:focus,
+.chunkOutput input[type="month"]:focus,
+.chunkOutput input[type="number"]:focus,
+.chunkOutput input[type="password"]:focus,
+.chunkOutput input[type="search"]:focus,
+.chunkOutput input[type="tel"]:focus,
+.chunkOutput input[type="time"]:focus,
+.chunkOutput input[type="text"]:focus,
+.chunkOutput input[type="file"]:focus,
+.chunkOutput input[type="url"]:focus,
+.chunkOutput input[type="week"]:focus {
   color: rgba(0, 0, 0, 0.95);
   border-color: #85B7D9;
   border-radius: 0.28571429rem;
@@ -459,7 +459,7 @@
   box-shadow: 0 0 0 0 rgba(34, 36, 38, 0.35) inset;
 }
 
-.chunkOutput .ui.form textarea:focus {
+.chunkOutput textarea:focus {
   color: rgba(0, 0, 0, 0.95);
   border-color: #85B7D9;
   border-radius: 0.28571429rem;
@@ -470,7 +470,7 @@
 
 /* Focus */
 
-.chunkOutput .ui.form input:focus::-webkit-calendar-picker-indicator {
+.chunkOutput input:focus::-webkit-calendar-picker-indicator {
   opacity: 1;
 }
 
@@ -494,81 +494,81 @@
 
 /* On Field(s) */
 
-.chunkOutput .ui.form .fields.error .error.message:not(:empty),
-.chunkOutput .ui.form .field.error .error.message:not(:empty) {
+.chunkOutput .fields.error .error.message:not(:empty),
+.chunkOutput .field.error .error.message:not(:empty) {
   display: block;
 }
 
-.chunkOutput .ui.form .fields.error .compact.error.message:not(:empty),
-.chunkOutput .ui.form .field.error .compact.error.message:not(:empty) {
+.chunkOutput .fields.error .compact.error.message:not(:empty),
+.chunkOutput .field.error .compact.error.message:not(:empty) {
   display: inline-block;
 }
 
-.chunkOutput .ui.form .fields.error .icon.error.message:not(:empty),
-.chunkOutput .ui.form .field.error .icon.error.message:not(:empty) {
+.chunkOutput .fields.error .icon.error.message:not(:empty),
+.chunkOutput .field.error .icon.error.message:not(:empty) {
   display: flex;
 }
 
-.chunkOutput .ui.ui.form .fields.error .field label,
-.chunkOutput .ui.ui.form .fields.error .field .ui.label,
-.chunkOutput .ui.ui.form .field.error label,
-.chunkOutput .ui.ui.form .field.error .ui.label,
-.chunkOutput .ui.ui.form .fields.error .field .input,
-.chunkOutput .ui.ui.form .field.error .input {
+.chunkOutput .ui.fields.error .field label,
+.chunkOutput .ui.fields.error .field .ui.label,
+.chunkOutput .ui.field.error label,
+.chunkOutput .ui.field.error .ui.label,
+.chunkOutput .ui.fields.error .field .input,
+.chunkOutput .ui.field.error .input {
   color: #9F3A38;
 }
 
 @supports selector(:has(.f)) {
-  .ui.form .fields:has(.error) > label {
+  .fields:has(.error) > label {
     color: #9F3A38;
   }
 }
 
-.chunkOutput .ui.form .fields.error .field .ui.label,
-.chunkOutput .ui.form .field.error .ui.label {
+.chunkOutput .fields.error .field .ui.label,
+.chunkOutput .field.error .ui.label {
   background-color: #ecd1d1;
 }
 
-.chunkOutput .ui.form .fields.error .field .corner.label,
-.chunkOutput .ui.form .field.error .corner.label {
+.chunkOutput .fields.error .field .corner.label,
+.chunkOutput .field.error .corner.label {
   border-color: #9F3A38;
   color: #FFFFFF;
 }
 
-.chunkOutput .ui.form .fields.error .field textarea,
-.chunkOutput .ui.form .fields.error .field select,
-.chunkOutput .ui.form .fields.error .field input:not([type]),
-.chunkOutput .ui.form .fields.error .field input[type="color"],
-.chunkOutput .ui.form .fields.error .field input[type="date"],
-.chunkOutput .ui.form .fields.error .field input[type="datetime-local"],
-.chunkOutput .ui.form .fields.error .field input[type="email"],
-.chunkOutput .ui.form .fields.error .field input[type="month"],
-.chunkOutput .ui.form .fields.error .field input[type="number"],
-.chunkOutput .ui.form .fields.error .field input[type="password"],
-.chunkOutput .ui.form .fields.error .field input[type="search"],
-.chunkOutput .ui.form .fields.error .field input[type="tel"],
-.chunkOutput .ui.form .fields.error .field input[type="time"],
-.chunkOutput .ui.form .fields.error .field input[type="text"],
-.chunkOutput .ui.form .fields.error .field input[type="file"],
-.chunkOutput .ui.form .fields.error .field input[type="url"],
-.chunkOutput .ui.form .fields.error .field input[type="week"],
-.chunkOutput .ui.form .field.error textarea,
-.chunkOutput .ui.form .field.error select,
-.chunkOutput .ui.form .field.error input:not([type]),
-.chunkOutput .ui.form .field.error input[type="color"],
-.chunkOutput .ui.form .field.error input[type="date"],
-.chunkOutput .ui.form .field.error input[type="datetime-local"],
-.chunkOutput .ui.form .field.error input[type="email"],
-.chunkOutput .ui.form .field.error input[type="month"],
-.chunkOutput .ui.form .field.error input[type="number"],
-.chunkOutput .ui.form .field.error input[type="password"],
-.chunkOutput .ui.form .field.error input[type="search"],
-.chunkOutput .ui.form .field.error input[type="tel"],
-.chunkOutput .ui.form .field.error input[type="time"],
-.chunkOutput .ui.form .field.error input[type="text"],
-.chunkOutput .ui.form .field.error input[type="file"],
-.chunkOutput .ui.form .field.error input[type="url"],
-.chunkOutput .ui.form .field.error input[type="week"] {
+.chunkOutput .fields.error .field textarea,
+.chunkOutput .fields.error .field select,
+.chunkOutput .fields.error .field input:not([type]),
+.chunkOutput .fields.error .field input[type="color"],
+.chunkOutput .fields.error .field input[type="date"],
+.chunkOutput .fields.error .field input[type="datetime-local"],
+.chunkOutput .fields.error .field input[type="email"],
+.chunkOutput .fields.error .field input[type="month"],
+.chunkOutput .fields.error .field input[type="number"],
+.chunkOutput .fields.error .field input[type="password"],
+.chunkOutput .fields.error .field input[type="search"],
+.chunkOutput .fields.error .field input[type="tel"],
+.chunkOutput .fields.error .field input[type="time"],
+.chunkOutput .fields.error .field input[type="text"],
+.chunkOutput .fields.error .field input[type="file"],
+.chunkOutput .fields.error .field input[type="url"],
+.chunkOutput .fields.error .field input[type="week"],
+.chunkOutput .field.error textarea,
+.chunkOutput .field.error select,
+.chunkOutput .field.error input:not([type]),
+.chunkOutput .field.error input[type="color"],
+.chunkOutput .field.error input[type="date"],
+.chunkOutput .field.error input[type="datetime-local"],
+.chunkOutput .field.error input[type="email"],
+.chunkOutput .field.error input[type="month"],
+.chunkOutput .field.error input[type="number"],
+.chunkOutput .field.error input[type="password"],
+.chunkOutput .field.error input[type="search"],
+.chunkOutput .field.error input[type="tel"],
+.chunkOutput .field.error input[type="time"],
+.chunkOutput .field.error input[type="text"],
+.chunkOutput .field.error input[type="file"],
+.chunkOutput .field.error input[type="url"],
+.chunkOutput .field.error input[type="week"] {
   color: #9F3A38;
   background: #FFF6F6;
   border-color: #E0B4B4;
@@ -584,23 +584,23 @@
   box-shadow: none;
 }
 
-.chunkOutput .ui.form .field.error textarea:focus,
-.chunkOutput .ui.form .field.error select:focus,
-.chunkOutput .ui.form .field.error input:not([type]):focus,
-.chunkOutput .ui.form .field.error input[type="color"]:focus,
-.chunkOutput .ui.form .field.error input[type="date"]:focus,
-.chunkOutput .ui.form .field.error input[type="datetime-local"]:focus,
-.chunkOutput .ui.form .field.error input[type="email"]:focus,
-.chunkOutput .ui.form .field.error input[type="month"]:focus,
-.chunkOutput .ui.form .field.error input[type="number"]:focus,
-.chunkOutput .ui.form .field.error input[type="password"]:focus,
-.chunkOutput .ui.form .field.error input[type="search"]:focus,
-.chunkOutput .ui.form .field.error input[type="tel"]:focus,
-.chunkOutput .ui.form .field.error input[type="time"]:focus,
-.chunkOutput .ui.form .field.error input[type="text"]:focus,
-.chunkOutput .ui.form .field.error input[type="file"]:focus,
-.chunkOutput .ui.form .field.error input[type="url"]:focus,
-.chunkOutput .ui.form .field.error input[type="week"]:focus {
+.chunkOutput .field.error textarea:focus,
+.chunkOutput .field.error select:focus,
+.chunkOutput .field.error input:not([type]):focus,
+.chunkOutput .field.error input[type="color"]:focus,
+.chunkOutput .field.error input[type="date"]:focus,
+.chunkOutput .field.error input[type="datetime-local"]:focus,
+.chunkOutput .field.error input[type="email"]:focus,
+.chunkOutput .field.error input[type="month"]:focus,
+.chunkOutput .field.error input[type="number"]:focus,
+.chunkOutput .field.error input[type="password"]:focus,
+.chunkOutput .field.error input[type="search"]:focus,
+.chunkOutput .field.error input[type="tel"]:focus,
+.chunkOutput .field.error input[type="time"]:focus,
+.chunkOutput .field.error input[type="text"]:focus,
+.chunkOutput .field.error input[type="file"]:focus,
+.chunkOutput .field.error input[type="url"]:focus,
+.chunkOutput .field.error input[type="week"]:focus {
   background: #FFF6F6;
   border-color: #E0B4B4;
   color: #9F3A38;
@@ -609,7 +609,7 @@
 
 /* Preserve Native Select Stylings */
 
-.chunkOutput .ui.form .field.error select {
+.chunkOutput .field.error select {
   -webkit-appearance: menulist-button;
 }
 
@@ -619,46 +619,46 @@
 
 /* Transparent */
 
-.chunkOutput .ui.form .field.error .transparent.input input,
-.chunkOutput .ui.form .field.error .transparent.input textarea,
-.chunkOutput .ui.form .field.error input.transparent,
-.chunkOutput .ui.form .field.error textarea.transparent {
+.chunkOutput .field.error .transparent.input input,
+.chunkOutput .field.error .transparent.input textarea,
+.chunkOutput .field.error input.transparent,
+.chunkOutput .field.error textarea.transparent {
   background-color: #FFF6F6 !important;
   color: #9F3A38 !important;
 }
 
 /* Autofilled */
 
-.chunkOutput .ui.form .error.error input:-webkit-autofill {
+.chunkOutput .error.error input:-webkit-autofill {
   box-shadow: 0 0 0 100px #fffaf0 inset !important;
   border-color: #e0b4b4 !important;
 }
 
 /* Placeholder */
 
-.chunkOutput .ui.form .error :-ms-input-placeholder {
+.chunkOutput .error :-ms-input-placeholder {
   color: #e7bdbc;
 }
 
-.chunkOutput .ui.form .error ::-ms-input-placeholder {
+.chunkOutput .error ::-ms-input-placeholder {
   color: #e7bdbc;
 }
 
-.chunkOutput .ui.form .error .ui.dropdown > .default.text,
-.chunkOutput .ui.form .error ::placeholder {
+.chunkOutput .error .ui.dropdown > .default.text,
+.chunkOutput .error ::placeholder {
   color: #e7bdbc;
 }
 
-.chunkOutput .ui.form .error :focus:-ms-input-placeholder {
+.chunkOutput .error :focus:-ms-input-placeholder {
   color: #da9796;
 }
 
-.chunkOutput .ui.form .error :focus::-ms-input-placeholder {
+.chunkOutput .error :focus::-ms-input-placeholder {
   color: #da9796;
 }
 
-.chunkOutput .ui.form .error .ui.dropdown > input:focus ~ .default.text,
-.chunkOutput .ui.form .error :focus::placeholder {
+.chunkOutput .error .ui.dropdown > input:focus ~ .default.text,
+.chunkOutput .error :focus::placeholder {
   color: #da9796;
 }
 
@@ -666,54 +666,54 @@
             Dropdown State
         --------------------*/
 
-.chunkOutput .ui.form .fields.error .field .ui.dropdown,
-.chunkOutput .ui.form .fields.error .field .ui.dropdown .item,
-.chunkOutput .ui.form .field.error .ui.dropdown,
-.chunkOutput .ui.form .field.error .ui.dropdown > .text,
-.chunkOutput .ui.form .field.error .ui.dropdown .item {
+.chunkOutput .fields.error .field .ui.dropdown,
+.chunkOutput .fields.error .field .ui.dropdown .item,
+.chunkOutput .field.error .ui.dropdown,
+.chunkOutput .field.error .ui.dropdown > .text,
+.chunkOutput .field.error .ui.dropdown .item {
   background: #FFF6F6;
   color: #9F3A38;
 }
 
-.chunkOutput .ui.form .fields.error .field .ui.dropdown,
-.chunkOutput .ui.form .field.error .ui.dropdown {
+.chunkOutput .fields.error .field .ui.dropdown,
+.chunkOutput .field.error .ui.dropdown {
   border-color: #E0B4B4 !important;
 }
 
-.chunkOutput .ui.form .fields.error .field .ui.dropdown:hover,
-.chunkOutput .ui.form .field.error .ui.dropdown:hover {
+.chunkOutput .fields.error .field .ui.dropdown:hover,
+.chunkOutput .field.error .ui.dropdown:hover {
   border-color: #E0B4B4 !important;
 }
 
-.chunkOutput .ui.form .fields.error .field .ui.dropdown:hover .menu,
-.chunkOutput .ui.form .field.error .ui.dropdown:hover .menu {
+.chunkOutput .fields.error .field .ui.dropdown:hover .menu,
+.chunkOutput .field.error .ui.dropdown:hover .menu {
   border-color: #E0B4B4;
 }
 
-.chunkOutput .ui.form .fields.error .field .ui.multiple.selection.dropdown > .label,
-.chunkOutput .ui.form .field.error .ui.multiple.selection.dropdown > .label {
+.chunkOutput .fields.error .field .ui.multiple.selection.dropdown > .label,
+.chunkOutput .field.error .ui.multiple.selection.dropdown > .label {
   background-color: #eacbcb;
   color: #9F3A38;
 }
 
 /* Hover */
 
-.chunkOutput .ui.form .fields.error .field .ui.dropdown .menu .item:hover,
-.chunkOutput .ui.form .field.error .ui.dropdown .menu .item:hover {
+.chunkOutput .fields.error .field .ui.dropdown .menu .item:hover,
+.chunkOutput .field.error .ui.dropdown .menu .item:hover {
   background-color: #fbe7e7;
 }
 
 /* Selected */
 
-.chunkOutput .ui.form .fields.error .field .ui.dropdown .menu .selected.item,
-.chunkOutput .ui.form .field.error .ui.dropdown .menu .selected.item {
+.chunkOutput .fields.error .field .ui.dropdown .menu .selected.item,
+.chunkOutput .field.error .ui.dropdown .menu .selected.item {
   background-color: #fbe7e7;
 }
 
 /* Active */
 
-.chunkOutput .ui.form .fields.error .field .ui.dropdown .menu .active.item,
-.chunkOutput .ui.form .field.error .ui.dropdown .menu .active.item {
+.chunkOutput .fields.error .field .ui.dropdown .menu .active.item,
+.chunkOutput .field.error .ui.dropdown .menu .active.item {
   background-color: #fdcfcf !important;
 }
 
@@ -721,19 +721,19 @@
             Checkbox State
         ---------------------*/
 
-.chunkOutput .ui.form .fields.error .field .checkbox:not(.toggle):not(.slider) label,
-.chunkOutput .ui.form .field.error .checkbox:not(.toggle):not(.slider) label {
+.chunkOutput .fields.error .field .checkbox:not(.toggle):not(.slider) label,
+.chunkOutput .field.error .checkbox:not(.toggle):not(.slider) label {
   color: #9F3A38;
 }
 
-.chunkOutput .ui.form .fields.error .field .checkbox:not(.toggle):not(.slider) label::before,
-.chunkOutput .ui.form .field.error .checkbox:not(.toggle):not(.slider) label::before {
+.chunkOutput .fields.error .field .checkbox:not(.toggle):not(.slider) label::before,
+.chunkOutput .field.error .checkbox:not(.toggle):not(.slider) label::before {
   background: #FFF6F6;
   border-color: #E0B4B4;
 }
 
-.chunkOutput .ui.form .fields.error .field .checkbox label::after,
-.chunkOutput .ui.form .field.error .checkbox label::after {
+.chunkOutput .fields.error .field .checkbox label::after,
+.chunkOutput .field.error .checkbox label::after {
   color: #9F3A38;
 }
 
@@ -764,81 +764,81 @@
 
 /* On Field(s) */
 
-.chunkOutput .ui.form .fields.info .info.message:not(:empty),
-.chunkOutput .ui.form .field.info .info.message:not(:empty) {
+.chunkOutput .fields.info .info.message:not(:empty),
+.chunkOutput .field.info .info.message:not(:empty) {
   display: block;
 }
 
-.chunkOutput .ui.form .fields.info .compact.info.message:not(:empty),
-.chunkOutput .ui.form .field.info .compact.info.message:not(:empty) {
+.chunkOutput .fields.info .compact.info.message:not(:empty),
+.chunkOutput .field.info .compact.info.message:not(:empty) {
   display: inline-block;
 }
 
-.chunkOutput .ui.form .fields.info .icon.info.message:not(:empty),
-.chunkOutput .ui.form .field.info .icon.info.message:not(:empty) {
+.chunkOutput .fields.info .icon.info.message:not(:empty),
+.chunkOutput .field.info .icon.info.message:not(:empty) {
   display: flex;
 }
 
-.chunkOutput .ui.ui.form .fields.info .field label,
-.chunkOutput .ui.ui.form .fields.info .field .ui.label,
-.chunkOutput .ui.ui.form .field.info label,
-.chunkOutput .ui.ui.form .field.info .ui.label,
-.chunkOutput .ui.ui.form .fields.info .field .input,
-.chunkOutput .ui.ui.form .field.info .input {
+.chunkOutput .ui.fields.info .field label,
+.chunkOutput .ui.fields.info .field .ui.label,
+.chunkOutput .ui.field.info label,
+.chunkOutput .ui.field.info .ui.label,
+.chunkOutput .ui.fields.info .field .input,
+.chunkOutput .ui.field.info .input {
   color: #276F86;
 }
 
 @supports selector(:has(.f)) {
-  .ui.form .fields:has(.info) > label {
+  .fields:has(.info) > label {
     color: #276F86;
   }
 }
 
-.chunkOutput .ui.form .fields.info .field .ui.label,
-.chunkOutput .ui.form .field.info .ui.label {
+.chunkOutput .fields.info .field .ui.label,
+.chunkOutput .field.info .ui.label {
   background-color: #c6e3e9;
 }
 
-.chunkOutput .ui.form .fields.info .field .corner.label,
-.chunkOutput .ui.form .field.info .corner.label {
+.chunkOutput .fields.info .field .corner.label,
+.chunkOutput .field.info .corner.label {
   border-color: #276F86;
   color: #FFFFFF;
 }
 
-.chunkOutput .ui.form .fields.info .field textarea,
-.chunkOutput .ui.form .fields.info .field select,
-.chunkOutput .ui.form .fields.info .field input:not([type]),
-.chunkOutput .ui.form .fields.info .field input[type="color"],
-.chunkOutput .ui.form .fields.info .field input[type="date"],
-.chunkOutput .ui.form .fields.info .field input[type="datetime-local"],
-.chunkOutput .ui.form .fields.info .field input[type="email"],
-.chunkOutput .ui.form .fields.info .field input[type="month"],
-.chunkOutput .ui.form .fields.info .field input[type="number"],
-.chunkOutput .ui.form .fields.info .field input[type="password"],
-.chunkOutput .ui.form .fields.info .field input[type="search"],
-.chunkOutput .ui.form .fields.info .field input[type="tel"],
-.chunkOutput .ui.form .fields.info .field input[type="time"],
-.chunkOutput .ui.form .fields.info .field input[type="text"],
-.chunkOutput .ui.form .fields.info .field input[type="file"],
-.chunkOutput .ui.form .fields.info .field input[type="url"],
-.chunkOutput .ui.form .fields.info .field input[type="week"],
-.chunkOutput .ui.form .field.info textarea,
-.chunkOutput .ui.form .field.info select,
-.chunkOutput .ui.form .field.info input:not([type]),
-.chunkOutput .ui.form .field.info input[type="color"],
-.chunkOutput .ui.form .field.info input[type="date"],
-.chunkOutput .ui.form .field.info input[type="datetime-local"],
-.chunkOutput .ui.form .field.info input[type="email"],
-.chunkOutput .ui.form .field.info input[type="month"],
-.chunkOutput .ui.form .field.info input[type="number"],
-.chunkOutput .ui.form .field.info input[type="password"],
-.chunkOutput .ui.form .field.info input[type="search"],
-.chunkOutput .ui.form .field.info input[type="tel"],
-.chunkOutput .ui.form .field.info input[type="time"],
-.chunkOutput .ui.form .field.info input[type="text"],
-.chunkOutput .ui.form .field.info input[type="file"],
-.chunkOutput .ui.form .field.info input[type="url"],
-.chunkOutput .ui.form .field.info input[type="week"] {
+.chunkOutput .fields.info .field textarea,
+.chunkOutput .fields.info .field select,
+.chunkOutput .fields.info .field input:not([type]),
+.chunkOutput .fields.info .field input[type="color"],
+.chunkOutput .fields.info .field input[type="date"],
+.chunkOutput .fields.info .field input[type="datetime-local"],
+.chunkOutput .fields.info .field input[type="email"],
+.chunkOutput .fields.info .field input[type="month"],
+.chunkOutput .fields.info .field input[type="number"],
+.chunkOutput .fields.info .field input[type="password"],
+.chunkOutput .fields.info .field input[type="search"],
+.chunkOutput .fields.info .field input[type="tel"],
+.chunkOutput .fields.info .field input[type="time"],
+.chunkOutput .fields.info .field input[type="text"],
+.chunkOutput .fields.info .field input[type="file"],
+.chunkOutput .fields.info .field input[type="url"],
+.chunkOutput .fields.info .field input[type="week"],
+.chunkOutput .field.info textarea,
+.chunkOutput .field.info select,
+.chunkOutput .field.info input:not([type]),
+.chunkOutput .field.info input[type="color"],
+.chunkOutput .field.info input[type="date"],
+.chunkOutput .field.info input[type="datetime-local"],
+.chunkOutput .field.info input[type="email"],
+.chunkOutput .field.info input[type="month"],
+.chunkOutput .field.info input[type="number"],
+.chunkOutput .field.info input[type="password"],
+.chunkOutput .field.info input[type="search"],
+.chunkOutput .field.info input[type="tel"],
+.chunkOutput .field.info input[type="time"],
+.chunkOutput .field.info input[type="text"],
+.chunkOutput .field.info input[type="file"],
+.chunkOutput .field.info input[type="url"],
+.chunkOutput .field.info input[type="week"] {
   color: #276F86;
   background: #F8FFFF;
   border-color: #A9D5DE;
@@ -846,23 +846,23 @@
   box-shadow: none;
 }
 
-.chunkOutput .ui.form .field.info textarea:focus,
-.chunkOutput .ui.form .field.info select:focus,
-.chunkOutput .ui.form .field.info input:not([type]):focus,
-.chunkOutput .ui.form .field.info input[type="color"]:focus,
-.chunkOutput .ui.form .field.info input[type="date"]:focus,
-.chunkOutput .ui.form .field.info input[type="datetime-local"]:focus,
-.chunkOutput .ui.form .field.info input[type="email"]:focus,
-.chunkOutput .ui.form .field.info input[type="month"]:focus,
-.chunkOutput .ui.form .field.info input[type="number"]:focus,
-.chunkOutput .ui.form .field.info input[type="password"]:focus,
-.chunkOutput .ui.form .field.info input[type="search"]:focus,
-.chunkOutput .ui.form .field.info input[type="tel"]:focus,
-.chunkOutput .ui.form .field.info input[type="time"]:focus,
-.chunkOutput .ui.form .field.info input[type="text"]:focus,
-.chunkOutput .ui.form .field.info input[type="file"]:focus,
-.chunkOutput .ui.form .field.info input[type="url"]:focus,
-.chunkOutput .ui.form .field.info input[type="week"]:focus {
+.chunkOutput .field.info textarea:focus,
+.chunkOutput .field.info select:focus,
+.chunkOutput .field.info input:not([type]):focus,
+.chunkOutput .field.info input[type="color"]:focus,
+.chunkOutput .field.info input[type="date"]:focus,
+.chunkOutput .field.info input[type="datetime-local"]:focus,
+.chunkOutput .field.info input[type="email"]:focus,
+.chunkOutput .field.info input[type="month"]:focus,
+.chunkOutput .field.info input[type="number"]:focus,
+.chunkOutput .field.info input[type="password"]:focus,
+.chunkOutput .field.info input[type="search"]:focus,
+.chunkOutput .field.info input[type="tel"]:focus,
+.chunkOutput .field.info input[type="time"]:focus,
+.chunkOutput .field.info input[type="text"]:focus,
+.chunkOutput .field.info input[type="file"]:focus,
+.chunkOutput .field.info input[type="url"]:focus,
+.chunkOutput .field.info input[type="week"]:focus {
   background: #F8FFFF;
   border-color: #A9D5DE;
   color: #276F86;
@@ -871,7 +871,7 @@
 
 /* Preserve Native Select Stylings */
 
-.chunkOutput .ui.form .field.info select {
+.chunkOutput .field.info select {
   -webkit-appearance: menulist-button;
 }
 
@@ -881,46 +881,46 @@
 
 /* Transparent */
 
-.chunkOutput .ui.form .field.info .transparent.input input,
-.chunkOutput .ui.form .field.info .transparent.input textarea,
-.chunkOutput .ui.form .field.info input.transparent,
-.chunkOutput .ui.form .field.info textarea.transparent {
+.chunkOutput .field.info .transparent.input input,
+.chunkOutput .field.info .transparent.input textarea,
+.chunkOutput .field.info input.transparent,
+.chunkOutput .field.info textarea.transparent {
   background-color: #F8FFFF !important;
   color: #276F86 !important;
 }
 
 /* Autofilled */
 
-.chunkOutput .ui.form .info.info input:-webkit-autofill {
+.chunkOutput .info.info input:-webkit-autofill {
   box-shadow: 0 0 0 100px #f0faff inset !important;
   border-color: #b3e0e0 !important;
 }
 
 /* Placeholder */
 
-.chunkOutput .ui.form .info :-ms-input-placeholder {
+.chunkOutput .info :-ms-input-placeholder {
   color: #98cfe1;
 }
 
-.chunkOutput .ui.form .info ::-ms-input-placeholder {
+.chunkOutput .info ::-ms-input-placeholder {
   color: #98cfe1;
 }
 
-.chunkOutput .ui.form .info .ui.dropdown > .default.text,
-.chunkOutput .ui.form .info ::placeholder {
+.chunkOutput .info .ui.dropdown > .default.text,
+.chunkOutput .info ::placeholder {
   color: #98cfe1;
 }
 
-.chunkOutput .ui.form .info :focus:-ms-input-placeholder {
+.chunkOutput .info :focus:-ms-input-placeholder {
   color: #70bdd6;
 }
 
-.chunkOutput .ui.form .info :focus::-ms-input-placeholder {
+.chunkOutput .info :focus::-ms-input-placeholder {
   color: #70bdd6;
 }
 
-.chunkOutput .ui.form .info .ui.dropdown > input:focus ~ .default.text,
-.chunkOutput .ui.form .info :focus::placeholder {
+.chunkOutput .info .ui.dropdown > input:focus ~ .default.text,
+.chunkOutput .info :focus::placeholder {
   color: #70bdd6;
 }
 
@@ -928,54 +928,54 @@
             Dropdown State
         --------------------*/
 
-.chunkOutput .ui.form .fields.info .field .ui.dropdown,
-.chunkOutput .ui.form .fields.info .field .ui.dropdown .item,
-.chunkOutput .ui.form .field.info .ui.dropdown,
-.chunkOutput .ui.form .field.info .ui.dropdown > .text,
-.chunkOutput .ui.form .field.info .ui.dropdown .item {
+.chunkOutput .fields.info .field .ui.dropdown,
+.chunkOutput .fields.info .field .ui.dropdown .item,
+.chunkOutput .field.info .ui.dropdown,
+.chunkOutput .field.info .ui.dropdown > .text,
+.chunkOutput .field.info .ui.dropdown .item {
   background: #F8FFFF;
   color: #276F86;
 }
 
-.chunkOutput .ui.form .fields.info .field .ui.dropdown,
-.chunkOutput .ui.form .field.info .ui.dropdown {
+.chunkOutput .fields.info .field .ui.dropdown,
+.chunkOutput .field.info .ui.dropdown {
   border-color: #A9D5DE !important;
 }
 
-.chunkOutput .ui.form .fields.info .field .ui.dropdown:hover,
-.chunkOutput .ui.form .field.info .ui.dropdown:hover {
+.chunkOutput .fields.info .field .ui.dropdown:hover,
+.chunkOutput .field.info .ui.dropdown:hover {
   border-color: #A9D5DE !important;
 }
 
-.chunkOutput .ui.form .fields.info .field .ui.dropdown:hover .menu,
-.chunkOutput .ui.form .field.info .ui.dropdown:hover .menu {
+.chunkOutput .fields.info .field .ui.dropdown:hover .menu,
+.chunkOutput .field.info .ui.dropdown:hover .menu {
   border-color: #A9D5DE;
 }
 
-.chunkOutput .ui.form .fields.info .field .ui.multiple.selection.dropdown > .label,
-.chunkOutput .ui.form .field.info .ui.multiple.selection.dropdown > .label {
+.chunkOutput .fields.info .field .ui.multiple.selection.dropdown > .label,
+.chunkOutput .field.info .ui.multiple.selection.dropdown > .label {
   background-color: #cce3ea;
   color: #276F86;
 }
 
 /* Hover */
 
-.chunkOutput .ui.form .fields.info .field .ui.dropdown .menu .item:hover,
-.chunkOutput .ui.form .field.info .ui.dropdown .menu .item:hover {
+.chunkOutput .fields.info .field .ui.dropdown .menu .item:hover,
+.chunkOutput .field.info .ui.dropdown .menu .item:hover {
   background-color: #e9f2fb;
 }
 
 /* Selected */
 
-.chunkOutput .ui.form .fields.info .field .ui.dropdown .menu .selected.item,
-.chunkOutput .ui.form .field.info .ui.dropdown .menu .selected.item {
+.chunkOutput .fields.info .field .ui.dropdown .menu .selected.item,
+.chunkOutput .field.info .ui.dropdown .menu .selected.item {
   background-color: #e9f2fb;
 }
 
 /* Active */
 
-.chunkOutput .ui.form .fields.info .field .ui.dropdown .menu .active.item,
-.chunkOutput .ui.form .field.info .ui.dropdown .menu .active.item {
+.chunkOutput .fields.info .field .ui.dropdown .menu .active.item,
+.chunkOutput .field.info .ui.dropdown .menu .active.item {
   background-color: #cef1fd !important;
 }
 
@@ -983,19 +983,19 @@
             Checkbox State
         ---------------------*/
 
-.chunkOutput .ui.form .fields.info .field .checkbox:not(.toggle):not(.slider) label,
-.chunkOutput .ui.form .field.info .checkbox:not(.toggle):not(.slider) label {
+.chunkOutput .fields.info .field .checkbox:not(.toggle):not(.slider) label,
+.chunkOutput .field.info .checkbox:not(.toggle):not(.slider) label {
   color: #276F86;
 }
 
-.chunkOutput .ui.form .fields.info .field .checkbox:not(.toggle):not(.slider) label::before,
-.chunkOutput .ui.form .field.info .checkbox:not(.toggle):not(.slider) label::before {
+.chunkOutput .fields.info .field .checkbox:not(.toggle):not(.slider) label::before,
+.chunkOutput .field.info .checkbox:not(.toggle):not(.slider) label::before {
   background: #F8FFFF;
   border-color: #A9D5DE;
 }
 
-.chunkOutput .ui.form .fields.info .field .checkbox label::after,
-.chunkOutput .ui.form .field.info .checkbox label::after {
+.chunkOutput .fields.info .field .checkbox label::after,
+.chunkOutput .field.info .checkbox label::after {
   color: #276F86;
 }
 
@@ -1026,81 +1026,81 @@
 
 /* On Field(s) */
 
-.chunkOutput .ui.form .fields.success .success.message:not(:empty),
-.chunkOutput .ui.form .field.success .success.message:not(:empty) {
+.chunkOutput .fields.success .success.message:not(:empty),
+.chunkOutput .field.success .success.message:not(:empty) {
   display: block;
 }
 
-.chunkOutput .ui.form .fields.success .compact.success.message:not(:empty),
-.chunkOutput .ui.form .field.success .compact.success.message:not(:empty) {
+.chunkOutput .fields.success .compact.success.message:not(:empty),
+.chunkOutput .field.success .compact.success.message:not(:empty) {
   display: inline-block;
 }
 
-.chunkOutput .ui.form .fields.success .icon.success.message:not(:empty),
-.chunkOutput .ui.form .field.success .icon.success.message:not(:empty) {
+.chunkOutput .fields.success .icon.success.message:not(:empty),
+.chunkOutput .field.success .icon.success.message:not(:empty) {
   display: flex;
 }
 
-.chunkOutput .ui.ui.form .fields.success .field label,
-.chunkOutput .ui.ui.form .fields.success .field .ui.label,
-.chunkOutput .ui.ui.form .field.success label,
-.chunkOutput .ui.ui.form .field.success .ui.label,
-.chunkOutput .ui.ui.form .fields.success .field .input,
-.chunkOutput .ui.ui.form .field.success .input {
+.chunkOutput .ui.fields.success .field label,
+.chunkOutput .ui.fields.success .field .ui.label,
+.chunkOutput .ui.field.success label,
+.chunkOutput .ui.field.success .ui.label,
+.chunkOutput .ui.fields.success .field .input,
+.chunkOutput .ui.field.success .input {
   color: #2C662D;
 }
 
 @supports selector(:has(.f)) {
-  .ui.form .fields:has(.success) > label {
+  .fields:has(.success) > label {
     color: #2C662D;
   }
 }
 
-.chunkOutput .ui.form .fields.success .field .ui.label,
-.chunkOutput .ui.form .field.success .ui.label {
+.chunkOutput .fields.success .field .ui.label,
+.chunkOutput .field.success .ui.label {
   background-color: #b9d1ad;
 }
 
-.chunkOutput .ui.form .fields.success .field .corner.label,
-.chunkOutput .ui.form .field.success .corner.label {
+.chunkOutput .fields.success .field .corner.label,
+.chunkOutput .field.success .corner.label {
   border-color: #2C662D;
   color: #FFFFFF;
 }
 
-.chunkOutput .ui.form .fields.success .field textarea,
-.chunkOutput .ui.form .fields.success .field select,
-.chunkOutput .ui.form .fields.success .field input:not([type]),
-.chunkOutput .ui.form .fields.success .field input[type="color"],
-.chunkOutput .ui.form .fields.success .field input[type="date"],
-.chunkOutput .ui.form .fields.success .field input[type="datetime-local"],
-.chunkOutput .ui.form .fields.success .field input[type="email"],
-.chunkOutput .ui.form .fields.success .field input[type="month"],
-.chunkOutput .ui.form .fields.success .field input[type="number"],
-.chunkOutput .ui.form .fields.success .field input[type="password"],
-.chunkOutput .ui.form .fields.success .field input[type="search"],
-.chunkOutput .ui.form .fields.success .field input[type="tel"],
-.chunkOutput .ui.form .fields.success .field input[type="time"],
-.chunkOutput .ui.form .fields.success .field input[type="text"],
-.chunkOutput .ui.form .fields.success .field input[type="file"],
-.chunkOutput .ui.form .fields.success .field input[type="url"],
-.chunkOutput .ui.form .fields.success .field input[type="week"],
-.chunkOutput .ui.form .field.success textarea,
-.chunkOutput .ui.form .field.success select,
-.chunkOutput .ui.form .field.success input:not([type]),
-.chunkOutput .ui.form .field.success input[type="color"],
-.chunkOutput .ui.form .field.success input[type="date"],
-.chunkOutput .ui.form .field.success input[type="datetime-local"],
-.chunkOutput .ui.form .field.success input[type="email"],
-.chunkOutput .ui.form .field.success input[type="month"],
-.chunkOutput .ui.form .field.success input[type="number"],
-.chunkOutput .ui.form .field.success input[type="password"],
-.chunkOutput .ui.form .field.success input[type="search"],
-.chunkOutput .ui.form .field.success input[type="tel"],
-.chunkOutput .ui.form .field.success input[type="time"],
-.chunkOutput .ui.form .field.success input[type="text"],
-.chunkOutput .ui.form .field.success input[type="file"],
-.chunkOutput .ui.form .field.success input[type="url"],
-.chunkOutput .ui.form .field.success input[type="week"] {
+.chunkOutput .fields.success .field textarea,
+.chunkOutput .fields.success .field select,
+.chunkOutput .fields.success .field input:not([type]),
+.chunkOutput .fields.success .field input[type="color"],
+.chunkOutput .fields.success .field input[type="date"],
+.chunkOutput .fields.success .field input[type="datetime-local"],
+.chunkOutput .fields.success .field input[type="email"],
+.chunkOutput .fields.success .field input[type="month"],
+.chunkOutput .fields.success .field input[type="number"],
+.chunkOutput .fields.success .field input[type="password"],
+.chunkOutput .fields.success .field input[type="search"],
+.chunkOutput .fields.success .field input[type="tel"],
+.chunkOutput .fields.success .field input[type="time"],
+.chunkOutput .fields.success .field input[type="text"],
+.chunkOutput .fields.success .field input[type="file"],
+.chunkOutput .fields.success .field input[type="url"],
+.chunkOutput .fields.success .field input[type="week"],
+.chunkOutput .field.success textarea,
+.chunkOutput .field.success select,
+.chunkOutput .field.success input:not([type]),
+.chunkOutput .field.success input[type="color"],
+.chunkOutput .field.success input[type="date"],
+.chunkOutput .field.success input[type="datetime-local"],
+.chunkOutput .field.success input[type="email"],
+.chunkOutput .field.success input[type="month"],
+.chunkOutput .field.success input[type="number"],
+.chunkOutput .field.success input[type="password"],
+.chunkOutput .field.success input[type="search"],
+.chunkOutput .field.success input[type="tel"],
+.chunkOutput .field.success input[type="time"],
+.chunkOutput .field.success input[type="text"],
+.chunkOutput .field.success input[type="file"],
+.chunkOutput .field.success input[type="url"],
+.chunkOutput .field.success input[type="week"] {
   color: #2C662D;
   background: #FCFFF5;
   border-color: #A3C293;
@@ -1108,23 +1108,23 @@
   box-shadow: none;
 }
 
-.chunkOutput .ui.form .field.success textarea:focus,
-.chunkOutput .ui.form .field.success select:focus,
-.chunkOutput .ui.form .field.success input:not([type]):focus,
-.chunkOutput .ui.form .field.success input[type="color"]:focus,
-.chunkOutput .ui.form .field.success input[type="date"]:focus,
-.chunkOutput .ui.form .field.success input[type="datetime-local"]:focus,
-.chunkOutput .ui.form .field.success input[type="email"]:focus,
-.chunkOutput .ui.form .field.success input[type="month"]:focus,
-.chunkOutput .ui.form .field.success input[type="number"]:focus,
-.chunkOutput .ui.form .field.success input[type="password"]:focus,
-.chunkOutput .ui.form .field.success input[type="search"]:focus,
-.chunkOutput .ui.form .field.success input[type="tel"]:focus,
-.chunkOutput .ui.form .field.success input[type="time"]:focus,
-.chunkOutput .ui.form .field.success input[type="text"]:focus,
-.chunkOutput .ui.form .field.success input[type="file"]:focus,
-.chunkOutput .ui.form .field.success input[type="url"]:focus,
-.chunkOutput .ui.form .field.success input[type="week"]:focus {
+.chunkOutput .field.success textarea:focus,
+.chunkOutput .field.success select:focus,
+.chunkOutput .field.success input:not([type]):focus,
+.chunkOutput .field.success input[type="color"]:focus,
+.chunkOutput .field.success input[type="date"]:focus,
+.chunkOutput .field.success input[type="datetime-local"]:focus,
+.chunkOutput .field.success input[type="email"]:focus,
+.chunkOutput .field.success input[type="month"]:focus,
+.chunkOutput .field.success input[type="number"]:focus,
+.chunkOutput .field.success input[type="password"]:focus,
+.chunkOutput .field.success input[type="search"]:focus,
+.chunkOutput .field.success input[type="tel"]:focus,
+.chunkOutput .field.success input[type="time"]:focus,
+.chunkOutput .field.success input[type="text"]:focus,
+.chunkOutput .field.success input[type="file"]:focus,
+.chunkOutput .field.success input[type="url"]:focus,
+.chunkOutput .field.success input[type="week"]:focus {
   background: #FCFFF5;
   border-color: #A3C293;
   color: #2C662D;
@@ -1133,7 +1133,7 @@
 
 /* Preserve Native Select Stylings */
 
-.chunkOutput .ui.form .field.success select {
+.chunkOutput .field.success select {
   -webkit-appearance: menulist-button;
 }
 
@@ -1143,46 +1143,46 @@
 
 /* Transparent */
 
-.chunkOutput .ui.form .field.success .transparent.input input,
-.chunkOutput .ui.form .field.success .transparent.input textarea,
-.chunkOutput .ui.form .field.success input.transparent,
-.chunkOutput .ui.form .field.success textarea.transparent {
+.chunkOutput .field.success .transparent.input input,
+.chunkOutput .field.success .transparent.input textarea,
+.chunkOutput .field.success input.transparent,
+.chunkOutput .field.success textarea.transparent {
   background-color: #FCFFF5 !important;
   color: #2C662D !important;
 }
 
 /* Autofilled */
 
-.chunkOutput .ui.form .success.success input:-webkit-autofill {
+.chunkOutput .success.success input:-webkit-autofill {
   box-shadow: 0 0 0 100px #f0fff0 inset !important;
   border-color: #bee0b3 !important;
 }
 
 /* Placeholder */
 
-.chunkOutput .ui.form .success :-ms-input-placeholder {
+.chunkOutput .success :-ms-input-placeholder {
   color: #8fcf90;
 }
 
-.chunkOutput .ui.form .success ::-ms-input-placeholder {
+.chunkOutput .success ::-ms-input-placeholder {
   color: #8fcf90;
 }
 
-.chunkOutput .ui.form .success .ui.dropdown > .default.text,
-.chunkOutput .ui.form .success ::placeholder {
+.chunkOutput .success .ui.dropdown > .default.text,
+.chunkOutput .success ::placeholder {
   color: #8fcf90;
 }
 
-.chunkOutput .ui.form .success :focus:-ms-input-placeholder {
+.chunkOutput .success :focus:-ms-input-placeholder {
   color: #6cbf6d;
 }
 
-.chunkOutput .ui.form .success :focus::-ms-input-placeholder {
+.chunkOutput .success :focus::-ms-input-placeholder {
   color: #6cbf6d;
 }
 
-.chunkOutput .ui.form .success .ui.dropdown > input:focus ~ .default.text,
-.chunkOutput .ui.form .success :focus::placeholder {
+.chunkOutput .success .ui.dropdown > input:focus ~ .default.text,
+.chunkOutput .success :focus::placeholder {
   color: #6cbf6d;
 }
 
@@ -1190,54 +1190,54 @@
             Dropdown State
         --------------------*/
 
-.chunkOutput .ui.form .fields.success .field .ui.dropdown,
-.chunkOutput .ui.form .fields.success .field .ui.dropdown .item,
-.chunkOutput .ui.form .field.success .ui.dropdown,
-.chunkOutput .ui.form .field.success .ui.dropdown > .text,
-.chunkOutput .ui.form .field.success .ui.dropdown .item {
+.chunkOutput .fields.success .field .ui.dropdown,
+.chunkOutput .fields.success .field .ui.dropdown .item,
+.chunkOutput .field.success .ui.dropdown,
+.chunkOutput .field.success .ui.dropdown > .text,
+.chunkOutput .field.success .ui.dropdown .item {
   background: #FCFFF5;
   color: #2C662D;
 }
 
-.chunkOutput .ui.form .fields.success .field .ui.dropdown,
-.chunkOutput .ui.form .field.success .ui.dropdown {
+.chunkOutput .fields.success .field .ui.dropdown,
+.chunkOutput .field.success .ui.dropdown {
   border-color: #A3C293 !important;
 }
 
-.chunkOutput .ui.form .fields.success .field .ui.dropdown:hover,
-.chunkOutput .ui.form .field.success .ui.dropdown:hover {
+.chunkOutput .fields.success .field .ui.dropdown:hover,
+.chunkOutput .field.success .ui.dropdown:hover {
   border-color: #A3C293 !important;
 }
 
-.chunkOutput .ui.form .fields.success .field .ui.dropdown:hover .menu,
-.chunkOutput .ui.form .field.success .ui.dropdown:hover .menu {
+.chunkOutput .fields.success .field .ui.dropdown:hover .menu,
+.chunkOutput .field.success .ui.dropdown:hover .menu {
   border-color: #A3C293;
 }
 
-.chunkOutput .ui.form .fields.success .field .ui.multiple.selection.dropdown > .label,
-.chunkOutput .ui.form .field.success .ui.multiple.selection.dropdown > .label {
+.chunkOutput .fields.success .field .ui.multiple.selection.dropdown > .label,
+.chunkOutput .field.success .ui.multiple.selection.dropdown > .label {
   background-color: #cceacc;
   color: #2C662D;
 }
 
 /* Hover */
 
-.chunkOutput .ui.form .fields.success .field .ui.dropdown .menu .item:hover,
-.chunkOutput .ui.form .field.success .ui.dropdown .menu .item:hover {
+.chunkOutput .fields.success .field .ui.dropdown .menu .item:hover,
+.chunkOutput .field.success .ui.dropdown .menu .item:hover {
   background-color: #e9fbe9;
 }
 
 /* Selected */
 
-.chunkOutput .ui.form .fields.success .field .ui.dropdown .menu .selected.item,
-.chunkOutput .ui.form .field.success .ui.dropdown .menu .selected.item {
+.chunkOutput .fields.success .field .ui.dropdown .menu .selected.item,
+.chunkOutput .field.success .ui.dropdown .menu .selected.item {
   background-color: #e9fbe9;
 }
 
 /* Active */
 
-.chunkOutput .ui.form .fields.success .field .ui.dropdown .menu .active.item,
-.chunkOutput .ui.form .field.success .ui.dropdown .menu .active.item {
+.chunkOutput .fields.success .field .ui.dropdown .menu .active.item,
+.chunkOutput .field.success .ui.dropdown .menu .active.item {
   background-color: #dafdce !important;
 }
 
@@ -1245,19 +1245,19 @@
             Checkbox State
         ---------------------*/
 
-.chunkOutput .ui.form .fields.success .field .checkbox:not(.toggle):not(.slider) label,
-.chunkOutput .ui.form .field.success .checkbox:not(.toggle):not(.slider) label {
+.chunkOutput .fields.success .field .checkbox:not(.toggle):not(.slider) label,
+.chunkOutput .field.success .checkbox:not(.toggle):not(.slider) label {
   color: #2C662D;
 }
 
-.chunkOutput .ui.form .fields.success .field .checkbox:not(.toggle):not(.slider) label::before,
-.chunkOutput .ui.form .field.success .checkbox:not(.toggle):not(.slider) label::before {
+.chunkOutput .fields.success .field .checkbox:not(.toggle):not(.slider) label::before,
+.chunkOutput .field.success .checkbox:not(.toggle):not(.slider) label::before {
   background: #FCFFF5;
   border-color: #A3C293;
 }
 
-.chunkOutput .ui.form .fields.success .field .checkbox label::after,
-.chunkOutput .ui.form .field.success .checkbox label::after {
+.chunkOutput .fields.success .field .checkbox label::after,
+.chunkOutput .field.success .checkbox label::after {
   color: #2C662D;
 }
 
@@ -1288,81 +1288,81 @@
 
 /* On Field(s) */
 
-.chunkOutput .ui.form .fields.warning .warning.message:not(:empty),
-.chunkOutput .ui.form .field.warning .warning.message:not(:empty) {
+.chunkOutput .fields.warning .warning.message:not(:empty),
+.chunkOutput .field.warning .warning.message:not(:empty) {
   display: block;
 }
 
-.chunkOutput .ui.form .fields.warning .compact.warning.message:not(:empty),
-.chunkOutput .ui.form .field.warning .compact.warning.message:not(:empty) {
+.chunkOutput .fields.warning .compact.warning.message:not(:empty),
+.chunkOutput .field.warning .compact.warning.message:not(:empty) {
   display: inline-block;
 }
 
-.chunkOutput .ui.form .fields.warning .icon.warning.message:not(:empty),
-.chunkOutput .ui.form .field.warning .icon.warning.message:not(:empty) {
+.chunkOutput .fields.warning .icon.warning.message:not(:empty),
+.chunkOutput .field.warning .icon.warning.message:not(:empty) {
   display: flex;
 }
 
-.chunkOutput .ui.ui.form .fields.warning .field label,
-.chunkOutput .ui.ui.form .fields.warning .field .ui.label,
-.chunkOutput .ui.ui.form .field.warning label,
-.chunkOutput .ui.ui.form .field.warning .ui.label,
-.chunkOutput .ui.ui.form .fields.warning .field .input,
-.chunkOutput .ui.ui.form .field.warning .input {
+.chunkOutput .ui.fields.warning .field label,
+.chunkOutput .ui.fields.warning .field .ui.label,
+.chunkOutput .ui.field.warning label,
+.chunkOutput .ui.field.warning .ui.label,
+.chunkOutput .ui.fields.warning .field .input,
+.chunkOutput .ui.field.warning .input {
   color: #573A08;
 }
 
 @supports selector(:has(.f)) {
-  .ui.form .fields:has(.warning) > label {
+  .fields:has(.warning) > label {
     color: #573A08;
   }
 }
 
-.chunkOutput .ui.form .fields.warning .field .ui.label,
-.chunkOutput .ui.form .field.warning .ui.label {
+.chunkOutput .fields.warning .field .ui.label,
+.chunkOutput .field.warning .ui.label {
   background-color: #d7ccb5;
 }
 
-.chunkOutput .ui.form .fields.warning .field .corner.label,
-.chunkOutput .ui.form .field.warning .corner.label {
+.chunkOutput .fields.warning .field .corner.label,
+.chunkOutput .field.warning .corner.label {
   border-color: #573A08;
   color: #FFFFFF;
 }
 
-.chunkOutput .ui.form .fields.warning .field textarea,
-.chunkOutput .ui.form .fields.warning .field select,
-.chunkOutput .ui.form .fields.warning .field input:not([type]),
-.chunkOutput .ui.form .fields.warning .field input[type="color"],
-.chunkOutput .ui.form .fields.warning .field input[type="date"],
-.chunkOutput .ui.form .fields.warning .field input[type="datetime-local"],
-.chunkOutput .ui.form .fields.warning .field input[type="email"],
-.chunkOutput .ui.form .fields.warning .field input[type="month"],
-.chunkOutput .ui.form .fields.warning .field input[type="number"],
-.chunkOutput .ui.form .fields.warning .field input[type="password"],
-.chunkOutput .ui.form .fields.warning .field input[type="search"],
-.chunkOutput .ui.form .fields.warning .field input[type="tel"],
-.chunkOutput .ui.form .fields.warning .field input[type="time"],
-.chunkOutput .ui.form .fields.warning .field input[type="text"],
-.chunkOutput .ui.form .fields.warning .field input[type="file"],
-.chunkOutput .ui.form .fields.warning .field input[type="url"],
-.chunkOutput .ui.form .fields.warning .field input[type="week"],
-.chunkOutput .ui.form .field.warning textarea,
-.chunkOutput .ui.form .field.warning select,
-.chunkOutput .ui.form .field.warning input:not([type]),
-.chunkOutput .ui.form .field.warning input[type="color"],
-.chunkOutput .ui.form .field.warning input[type="date"],
-.chunkOutput .ui.form .field.warning input[type="datetime-local"],
-.chunkOutput .ui.form .field.warning input[type="email"],
-.chunkOutput .ui.form .field.warning input[type="month"],
-.chunkOutput .ui.form .field.warning input[type="number"],
-.chunkOutput .ui.form .field.warning input[type="password"],
-.chunkOutput .ui.form .field.warning input[type="search"],
-.chunkOutput .ui.form .field.warning input[type="tel"],
-.chunkOutput .ui.form .field.warning input[type="time"],
-.chunkOutput .ui.form .field.warning input[type="text"],
-.chunkOutput .ui.form .field.warning input[type="file"],
-.chunkOutput .ui.form .field.warning input[type="url"],
-.chunkOutput .ui.form .field.warning input[type="week"] {
+.chunkOutput .fields.warning .field textarea,
+.chunkOutput .fields.warning .field select,
+.chunkOutput .fields.warning .field input:not([type]),
+.chunkOutput .fields.warning .field input[type="color"],
+.chunkOutput .fields.warning .field input[type="date"],
+.chunkOutput .fields.warning .field input[type="datetime-local"],
+.chunkOutput .fields.warning .field input[type="email"],
+.chunkOutput .fields.warning .field input[type="month"],
+.chunkOutput .fields.warning .field input[type="number"],
+.chunkOutput .fields.warning .field input[type="password"],
+.chunkOutput .fields.warning .field input[type="search"],
+.chunkOutput .fields.warning .field input[type="tel"],
+.chunkOutput .fields.warning .field input[type="time"],
+.chunkOutput .fields.warning .field input[type="text"],
+.chunkOutput .fields.warning .field input[type="file"],
+.chunkOutput .fields.warning .field input[type="url"],
+.chunkOutput .fields.warning .field input[type="week"],
+.chunkOutput .field.warning textarea,
+.chunkOutput .field.warning select,
+.chunkOutput .field.warning input:not([type]),
+.chunkOutput .field.warning input[type="color"],
+.chunkOutput .field.warning input[type="date"],
+.chunkOutput .field.warning input[type="datetime-local"],
+.chunkOutput .field.warning input[type="email"],
+.chunkOutput .field.warning input[type="month"],
+.chunkOutput .field.warning input[type="number"],
+.chunkOutput .field.warning input[type="password"],
+.chunkOutput .field.warning input[type="search"],
+.chunkOutput .field.warning input[type="tel"],
+.chunkOutput .field.warning input[type="time"],
+.chunkOutput .field.warning input[type="text"],
+.chunkOutput .field.warning input[type="file"],
+.chunkOutput .field.warning input[type="url"],
+.chunkOutput .field.warning input[type="week"] {
   color: #573A08;
   background: #FFFAF3;
   border-color: #C9BA9B;
@@ -1370,23 +1370,23 @@
   box-shadow: none;
 }
 
-.chunkOutput .ui.form .field.warning textarea:focus,
-.chunkOutput .ui.form .field.warning select:focus,
-.chunkOutput .ui.form .field.warning input:not([type]):focus,
-.chunkOutput .ui.form .field.warning input[type="color"]:focus,
-.chunkOutput .ui.form .field.warning input[type="date"]:focus,
-.chunkOutput .ui.form .field.warning input[type="datetime-local"]:focus,
-.chunkOutput .ui.form .field.warning input[type="email"]:focus,
-.chunkOutput .ui.form .field.warning input[type="month"]:focus,
-.chunkOutput .ui.form .field.warning input[type="number"]:focus,
-.chunkOutput .ui.form .field.warning input[type="password"]:focus,
-.chunkOutput .ui.form .field.warning input[type="search"]:focus,
-.chunkOutput .ui.form .field.warning input[type="tel"]:focus,
-.chunkOutput .ui.form .field.warning input[type="time"]:focus,
-.chunkOutput .ui.form .field.warning input[type="text"]:focus,
-.chunkOutput .ui.form .field.warning input[type="file"]:focus,
-.chunkOutput .ui.form .field.warning input[type="url"]:focus,
-.chunkOutput .ui.form .field.warning input[type="week"]:focus {
+.chunkOutput .field.warning textarea:focus,
+.chunkOutput .field.warning select:focus,
+.chunkOutput .field.warning input:not([type]):focus,
+.chunkOutput .field.warning input[type="color"]:focus,
+.chunkOutput .field.warning input[type="date"]:focus,
+.chunkOutput .field.warning input[type="datetime-local"]:focus,
+.chunkOutput .field.warning input[type="email"]:focus,
+.chunkOutput .field.warning input[type="month"]:focus,
+.chunkOutput .field.warning input[type="number"]:focus,
+.chunkOutput .field.warning input[type="password"]:focus,
+.chunkOutput .field.warning input[type="search"]:focus,
+.chunkOutput .field.warning input[type="tel"]:focus,
+.chunkOutput .field.warning input[type="time"]:focus,
+.chunkOutput .field.warning input[type="text"]:focus,
+.chunkOutput .field.warning input[type="file"]:focus,
+.chunkOutput .field.warning input[type="url"]:focus,
+.chunkOutput .field.warning input[type="week"]:focus {
   background: #FFFAF3;
   border-color: #C9BA9B;
   color: #573A08;
@@ -1395,7 +1395,7 @@
 
 /* Preserve Native Select Stylings */
 
-.chunkOutput .ui.form .field.warning select {
+.chunkOutput .field.warning select {
   -webkit-appearance: menulist-button;
 }
 
@@ -1405,46 +1405,46 @@
 
 /* Transparent */
 
-.chunkOutput .ui.form .field.warning .transparent.input input,
-.chunkOutput .ui.form .field.warning .transparent.input textarea,
-.chunkOutput .ui.form .field.warning input.transparent,
-.chunkOutput .ui.form .field.warning textarea.transparent {
+.chunkOutput .field.warning .transparent.input input,
+.chunkOutput .field.warning .transparent.input textarea,
+.chunkOutput .field.warning input.transparent,
+.chunkOutput .field.warning textarea.transparent {
   background-color: #FFFAF3 !important;
   color: #573A08 !important;
 }
 
 /* Autofilled */
 
-.chunkOutput .ui.form .warning.warning input:-webkit-autofill {
+.chunkOutput .warning.warning input:-webkit-autofill {
   box-shadow: 0 0 0 100px #ffffe0 inset !important;
   border-color: #e0e0b3 !important;
 }
 
 /* Placeholder */
 
-.chunkOutput .ui.form .warning :-ms-input-placeholder {
+.chunkOutput .warning :-ms-input-placeholder {
   color: #edad3e;
 }
 
-.chunkOutput .ui.form .warning ::-ms-input-placeholder {
+.chunkOutput .warning ::-ms-input-placeholder {
   color: #edad3e;
 }
 
-.chunkOutput .ui.form .warning .ui.dropdown > .default.text,
-.chunkOutput .ui.form .warning ::placeholder {
+.chunkOutput .warning .ui.dropdown > .default.text,
+.chunkOutput .warning ::placeholder {
   color: #edad3e;
 }
 
-.chunkOutput .ui.form .warning :focus:-ms-input-placeholder {
+.chunkOutput .warning :focus:-ms-input-placeholder {
   color: #e39715;
 }
 
-.chunkOutput .ui.form .warning :focus::-ms-input-placeholder {
+.chunkOutput .warning :focus::-ms-input-placeholder {
   color: #e39715;
 }
 
-.chunkOutput .ui.form .warning .ui.dropdown > input:focus ~ .default.text,
-.chunkOutput .ui.form .warning :focus::placeholder {
+.chunkOutput .warning .ui.dropdown > input:focus ~ .default.text,
+.chunkOutput .warning :focus::placeholder {
   color: #e39715;
 }
 
@@ -1452,54 +1452,54 @@
             Dropdown State
         --------------------*/
 
-.chunkOutput .ui.form .fields.warning .field .ui.dropdown,
-.chunkOutput .ui.form .fields.warning .field .ui.dropdown .item,
-.chunkOutput .ui.form .field.warning .ui.dropdown,
-.chunkOutput .ui.form .field.warning .ui.dropdown > .text,
-.chunkOutput .ui.form .field.warning .ui.dropdown .item {
+.chunkOutput .fields.warning .field .ui.dropdown,
+.chunkOutput .fields.warning .field .ui.dropdown .item,
+.chunkOutput .field.warning .ui.dropdown,
+.chunkOutput .field.warning .ui.dropdown > .text,
+.chunkOutput .field.warning .ui.dropdown .item {
   background: #FFFAF3;
   color: #573A08;
 }
 
-.chunkOutput .ui.form .fields.warning .field .ui.dropdown,
-.chunkOutput .ui.form .field.warning .ui.dropdown {
+.chunkOutput .fields.warning .field .ui.dropdown,
+.chunkOutput .field.warning .ui.dropdown {
   border-color: #C9BA9B !important;
 }
 
-.chunkOutput .ui.form .fields.warning .field .ui.dropdown:hover,
-.chunkOutput .ui.form .field.warning .ui.dropdown:hover {
+.chunkOutput .fields.warning .field .ui.dropdown:hover,
+.chunkOutput .field.warning .ui.dropdown:hover {
   border-color: #C9BA9B !important;
 }
 
-.chunkOutput .ui.form .fields.warning .field .ui.dropdown:hover .menu,
-.chunkOutput .ui.form .field.warning .ui.dropdown:hover .menu {
+.chunkOutput .fields.warning .field .ui.dropdown:hover .menu,
+.chunkOutput .field.warning .ui.dropdown:hover .menu {
   border-color: #C9BA9B;
 }
 
-.chunkOutput .ui.form .fields.warning .field .ui.multiple.selection.dropdown > .label,
-.chunkOutput .ui.form .field.warning .ui.multiple.selection.dropdown > .label {
+.chunkOutput .fields.warning .field .ui.multiple.selection.dropdown > .label,
+.chunkOutput .field.warning .ui.multiple.selection.dropdown > .label {
   background-color: #eaeacc;
   color: #573A08;
 }
 
 /* Hover */
 
-.chunkOutput .ui.form .fields.warning .field .ui.dropdown .menu .item:hover,
-.chunkOutput .ui.form .field.warning .ui.dropdown .menu .item:hover {
+.chunkOutput .fields.warning .field .ui.dropdown .menu .item:hover,
+.chunkOutput .field.warning .ui.dropdown .menu .item:hover {
   background-color: #fbfbe9;
 }
 
 /* Selected */
 
-.chunkOutput .ui.form .fields.warning .field .ui.dropdown .menu .selected.item,
-.chunkOutput .ui.form .field.warning .ui.dropdown .menu .selected.item {
+.chunkOutput .fields.warning .field .ui.dropdown .menu .selected.item,
+.chunkOutput .field.warning .ui.dropdown .menu .selected.item {
   background-color: #fbfbe9;
 }
 
 /* Active */
 
-.chunkOutput .ui.form .fields.warning .field .ui.dropdown .menu .active.item,
-.chunkOutput .ui.form .field.warning .ui.dropdown .menu .active.item {
+.chunkOutput .fields.warning .field .ui.dropdown .menu .active.item,
+.chunkOutput .field.warning .ui.dropdown .menu .active.item {
   background-color: #fdfdce !important;
 }
 
@@ -1507,19 +1507,19 @@
             Checkbox State
         ---------------------*/
 
-.chunkOutput .ui.form .fields.warning .field .checkbox:not(.toggle):not(.slider) label,
-.chunkOutput .ui.form .field.warning .checkbox:not(.toggle):not(.slider) label {
+.chunkOutput .fields.warning .field .checkbox:not(.toggle):not(.slider) label,
+.chunkOutput .field.warning .checkbox:not(.toggle):not(.slider) label {
   color: #573A08;
 }
 
-.chunkOutput .ui.form .fields.warning .field .checkbox:not(.toggle):not(.slider) label::before,
-.chunkOutput .ui.form .field.warning .checkbox:not(.toggle):not(.slider) label::before {
+.chunkOutput .fields.warning .field .checkbox:not(.toggle):not(.slider) label::before,
+.chunkOutput .field.warning .checkbox:not(.toggle):not(.slider) label::before {
   background: #FFFAF3;
   border-color: #C9BA9B;
 }
 
-.chunkOutput .ui.form .fields.warning .field .checkbox label::after,
-.chunkOutput .ui.form .field.warning .checkbox label::after {
+.chunkOutput .fields.warning .field .checkbox label::after,
+.chunkOutput .field.warning .checkbox label::after {
   color: #573A08;
 }
 
@@ -1538,19 +1538,19 @@
            Disabled
     --------------------- */
 
-.chunkOutput .ui.form .disabled.fields .field,
-.chunkOutput .ui.form .disabled.field,
-.chunkOutput .ui.form .field :disabled {
+.chunkOutput .disabled.fields .field,
+.chunkOutput .disabled.field,
+.chunkOutput .field :disabled {
   pointer-events: none;
   opacity: 0.45;
 }
 
-.chunkOutput .ui.form .field.disabled > label,
-.chunkOutput .ui.form .fields.disabled > label {
+.chunkOutput .field.disabled > label,
+.chunkOutput .fields.disabled > label {
   opacity: 0.45;
 }
 
-.chunkOutput .ui.form .field.disabled :disabled {
+.chunkOutput .field.disabled :disabled {
   opacity: 1;
 }
 
@@ -1603,41 +1603,41 @@
          Required Field
     --------------------- */
 
-.chunkOutput .ui.form .required.fields:not(.grouped):not(.inline) > .field > label::after,
-.chunkOutput .ui.form .required.fields.inline > label::after,
-.chunkOutput .ui.form .required.fields.grouped > label::after,
-.chunkOutput .ui.form .required.field > label::after,
-.chunkOutput .ui.form .required.fields:not(.grouped):not(.inline) > .field > .checkbox::after,
-.chunkOutput .ui.form .required.field > .checkbox::after,
-.chunkOutput .ui.form label.required::after {
+.chunkOutput .required.fields:not(.grouped):not(.inline) > .field > label::after,
+.chunkOutput .required.fields.inline > label::after,
+.chunkOutput .required.fields.grouped > label::after,
+.chunkOutput .required.field > label::after,
+.chunkOutput .required.fields:not(.grouped):not(.inline) > .field > .checkbox::after,
+.chunkOutput .required.field > .checkbox::after,
+.chunkOutput label.required::after {
   margin: -0.2em 0 0 0.2em;
   content: "*";
   color: #DB2828;
 }
 
-.chunkOutput .ui.form .required.fields:not(.grouped):not(.inline) > .field > label::after,
-.chunkOutput .ui.form .required.fields.inline > label::after,
-.chunkOutput .ui.form .required.fields.grouped > label::after,
-.chunkOutput .ui.form .required.field > label::after,
-.chunkOutput .ui.form label.required::after {
+.chunkOutput .required.fields:not(.grouped):not(.inline) > .field > label::after,
+.chunkOutput .required.fields.inline > label::after,
+.chunkOutput .required.fields.grouped > label::after,
+.chunkOutput .required.field > label::after,
+.chunkOutput label.required::after {
   display: inline-block;
   vertical-align: top;
 }
 
-.chunkOutput .ui.form .required.fields:not(.grouped):not(.inline) > .field > .checkbox::after,
-.chunkOutput .ui.form .required.field > .checkbox::after {
+.chunkOutput .required.fields:not(.grouped):not(.inline) > .field > .checkbox::after,
+.chunkOutput .required.field > .checkbox::after {
   position: absolute;
   top: 0;
   left: 100%;
 }
 
-.chunkOutput .ui.ui.ui.ui.form .fields:not(.required) > label:empty::after,
-.chunkOutput .ui.ui.ui.ui.form .fields:not(.grouped):not(.inline) > .field:not(.required) > label:empty::after {
+.chunkOutput .ui.ui.ui.fields:not(.required) > label:empty::after,
+.chunkOutput .ui.ui.ui.fields:not(.grouped):not(.inline) > .field:not(.required) > label:empty::after {
   content: " ";
   display: inline-block;
 }
 
-.chunkOutput .ui.ui.ui.ui.form .inline.fields .field:not(.required) > label:empty {
+.chunkOutput .ui.ui.ui.inline.fields .field:not(.required) > label:empty {
   display: none;
 }
 
@@ -1650,8 +1650,8 @@
     --------------------- */
 
 .chunkOutput .ui.inverted.form label,
-.chunkOutput .ui.form .inverted.segment label,
-.chunkOutput .ui.form .inverted.segment .ui.checkbox label,
+.chunkOutput .inverted.segment label,
+.chunkOutput .inverted.segment .ui.checkbox label,
 .chunkOutput .ui.inverted.form .ui.checkbox label,
 .chunkOutput .ui.inverted.form .grouped.fields > label,
 .chunkOutput .ui.inverted.form .inline.fields > label,
@@ -1699,16 +1699,16 @@
 
 /* Grouped Vertically */
 
-.chunkOutput .ui.form .grouped.fields {
+.chunkOutput .grouped.fields {
   display: block;
   margin: 0 0 1em;
 }
 
-.chunkOutput .ui.form .grouped.fields:last-child {
+.chunkOutput .grouped.fields:last-child {
   margin-bottom: 0;
 }
 
-.chunkOutput .ui.form .grouped.fields > label {
+.chunkOutput .grouped.fields > label {
   margin: 0 0 0.28571429rem 0;
   color: rgba(0, 0, 0, 0.87);
   font-size: 1.28rem;
@@ -1716,14 +1716,14 @@
   text-transform: none;
 }
 
-.chunkOutput .ui.form .grouped.fields .field,
-.chunkOutput .ui.form .grouped.inline.fields .field {
+.chunkOutput .grouped.fields .field,
+.chunkOutput .grouped.inline.fields .field {
   display: block;
   margin: 0.5em 0;
   padding: 0;
 }
 
-.chunkOutput .ui.form .grouped.inline.fields .ui.checkbox {
+.chunkOutput .grouped.inline.fields .ui.checkbox {
   margin-bottom: 0.4em;
 }
 
@@ -1733,74 +1733,74 @@
 
 /* Split fields */
 
-.chunkOutput .ui.form .fields {
+.chunkOutput .fields {
   display: flex;
   flex-direction: row;
   margin: 0 -0.5em 1em;
 }
 
-.chunkOutput .ui.form .fields > .field {
+.chunkOutput .fields > .field {
   flex: 0 1 auto;
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
 
-.chunkOutput .ui.form .fields > .field:first-child {
+.chunkOutput .fields > .field:first-child {
   border-left: none;
   box-shadow: none;
 }
 
 /* Other Combinations */
 
-.chunkOutput .ui.form .two.fields > .fields,
-.chunkOutput .ui.form .two.fields > .field {
+.chunkOutput .two.fields > .fields,
+.chunkOutput .two.fields > .field {
   width: 50%;
 }
 
-.chunkOutput .ui.form .three.fields > .fields,
-.chunkOutput .ui.form .three.fields > .field {
+.chunkOutput .three.fields > .fields,
+.chunkOutput .three.fields > .field {
   width: 33.33333333%;
 }
 
-.chunkOutput .ui.form .four.fields > .fields,
-.chunkOutput .ui.form .four.fields > .field {
+.chunkOutput .four.fields > .fields,
+.chunkOutput .four.fields > .field {
   width: 25%;
 }
 
-.chunkOutput .ui.form .five.fields > .fields,
-.chunkOutput .ui.form .five.fields > .field {
+.chunkOutput .five.fields > .fields,
+.chunkOutput .five.fields > .field {
   width: 20%;
 }
 
-.chunkOutput .ui.form .six.fields > .fields,
-.chunkOutput .ui.form .six.fields > .field {
+.chunkOutput .six.fields > .fields,
+.chunkOutput .six.fields > .field {
   width: 16.66666667%;
 }
 
-.chunkOutput .ui.form .seven.fields > .fields,
-.chunkOutput .ui.form .seven.fields > .field {
+.chunkOutput .seven.fields > .fields,
+.chunkOutput .seven.fields > .field {
   width: 14.28571429%;
 }
 
-.chunkOutput .ui.form .eight.fields > .fields,
-.chunkOutput .ui.form .eight.fields > .field {
+.chunkOutput .eight.fields > .fields,
+.chunkOutput .eight.fields > .field {
   width: 12.5%;
 }
 
-.chunkOutput .ui.form .nine.fields > .fields,
-.chunkOutput .ui.form .nine.fields > .field {
+.chunkOutput .nine.fields > .fields,
+.chunkOutput .nine.fields > .field {
   width: 11.11111111%;
 }
 
-.chunkOutput .ui.form .ten.fields > .fields,
-.chunkOutput .ui.form .ten.fields > .field {
+.chunkOutput .ten.fields > .fields,
+.chunkOutput .ten.fields > .field {
   width: 10%;
 }
 
 /* Swap to full width on mobile */
 
 @media only screen and (max-width: 767.98px) {
-  .chunkOutput .ui.form .fields {
+  .chunkOutput .fields {
     flex-wrap: wrap;
     margin-bottom: 0;
   }
@@ -1814,73 +1814,73 @@
 
 /* Sizing Combinations */
 
-.chunkOutput .ui.form .fields .wide.field {
+.chunkOutput .fields .wide.field {
   width: 6.25%;
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
 
-.chunkOutput .ui.form .one.wide.field {
+.chunkOutput .one.wide.field {
   width: 6.25%;
 }
 
-.chunkOutput .ui.form .two.wide.field {
+.chunkOutput .two.wide.field {
   width: 12.5%;
 }
 
-.chunkOutput .ui.form .three.wide.field {
+.chunkOutput .three.wide.field {
   width: 18.75%;
 }
 
-.chunkOutput .ui.form .four.wide.field {
+.chunkOutput .four.wide.field {
   width: 25%;
 }
 
-.chunkOutput .ui.form .five.wide.field {
+.chunkOutput .five.wide.field {
   width: 31.25%;
 }
 
-.chunkOutput .ui.form .six.wide.field {
+.chunkOutput .six.wide.field {
   width: 37.5%;
 }
 
-.chunkOutput .ui.form .seven.wide.field {
+.chunkOutput .seven.wide.field {
   width: 43.75%;
 }
 
-.chunkOutput .ui.form .eight.wide.field {
+.chunkOutput .eight.wide.field {
   width: 50%;
 }
 
-.chunkOutput .ui.form .nine.wide.field {
+.chunkOutput .nine.wide.field {
   width: 56.25%;
 }
 
-.chunkOutput .ui.form .ten.wide.field {
+.chunkOutput .ten.wide.field {
   width: 62.5%;
 }
 
-.chunkOutput .ui.form .eleven.wide.field {
+.chunkOutput .eleven.wide.field {
   width: 68.75%;
 }
 
-.chunkOutput .ui.form .twelve.wide.field {
+.chunkOutput .twelve.wide.field {
   width: 75%;
 }
 
-.chunkOutput .ui.form .thirteen.wide.field {
+.chunkOutput .thirteen.wide.field {
   width: 81.25%;
 }
 
-.chunkOutput .ui.form .fourteen.wide.field {
+.chunkOutput .fourteen.wide.field {
   width: 87.5%;
 }
 
-.chunkOutput .ui.form .fifteen.wide.field {
+.chunkOutput .fifteen.wide.field {
   width: 93.75%;
 }
 
-.chunkOutput .ui.form .sixteen.wide.field {
+.chunkOutput .sixteen.wide.field {
   width: 100%;
 }
 
@@ -1889,7 +1889,7 @@
 --------------------- */
 
 .chunkOutput .ui[class*="equal width"].form .fields > .field,
-.chunkOutput .ui.form [class*="equal width"].fields > .field {
+.chunkOutput [class*="equal width"].fields > .field {
   width: 100%;
   flex: 1 1 auto;
 }
@@ -1898,23 +1898,23 @@
         Inline Fields
     --------------------- */
 
-.chunkOutput .ui.form .inline.fields {
+.chunkOutput .inline.fields {
   margin: 0 0 1em;
   align-items: center;
 }
 
-.chunkOutput .ui.form .inline.fields .field {
+.chunkOutput .inline.fields .field {
   margin: 0;
   padding: 0 1em 0 0;
 }
 
 /* Inline Label */
 
-.chunkOutput .ui.form .inline.fields > label,
-.chunkOutput .ui.form .inline.fields .field > label,
-.chunkOutput .ui.form .inline.fields .field > p,
-.chunkOutput .ui.form .inline.field > label,
-.chunkOutput .ui.form .inline.field > p {
+.chunkOutput .inline.fields > label,
+.chunkOutput .inline.fields .field > label,
+.chunkOutput .inline.fields .field > p,
+.chunkOutput .inline.field > label,
+.chunkOutput .inline.field > p {
   display: inline-block;
   width: auto;
   margin-top: 0;
@@ -1928,16 +1928,16 @@
 
 /* Grouped Inline Label */
 
-.chunkOutput .ui.form .inline.fields > label {
+.chunkOutput .inline.fields > label {
   margin: 0.03571em 1em 0 0;
 }
 
 /* Inline Input */
 
-.chunkOutput .ui.form .inline.fields .field > input,
-.chunkOutput .ui.form .inline.fields .field > select,
-.chunkOutput .ui.form .inline.field > input,
-.chunkOutput .ui.form .inline.field > select {
+.chunkOutput .inline.fields .field > input,
+.chunkOutput .inline.fields .field > select,
+.chunkOutput .inline.field > input,
+.chunkOutput .inline.field > select {
   display: inline-block;
   width: auto;
   margin-top: 0;
@@ -1946,37 +1946,37 @@
   font-size: 1em;
 }
 
-.chunkOutput .ui.form .inline.fields .field .calendar:not(.popup),
-.chunkOutput .ui.form .inline.field .calendar:not(.popup) {
+.chunkOutput .inline.fields .field .calendar:not(.popup),
+.chunkOutput .inline.field .calendar:not(.popup) {
   display: inline-block;
 }
 
-.chunkOutput .ui.form .inline.fields .field .calendar:not(.popup) > .input > input,
-.chunkOutput .ui.form .inline.field .calendar:not(.popup) > .input > input {
+.chunkOutput .inline.fields .field .calendar:not(.popup) > .input > input,
+.chunkOutput .inline.field .calendar:not(.popup) > .input > input {
   width: 13.11em;
 }
 
 /* Label */
 
-.chunkOutput .ui.form .inline.fields .field > :first-child,
-.chunkOutput .ui.form .inline.field > :first-child {
+.chunkOutput .inline.fields .field > :first-child,
+.chunkOutput .inline.field > :first-child {
   margin: 0 0.85714286em 0 0;
 }
 
-.chunkOutput .ui.form .inline.fields .field > :only-child,
-.chunkOutput .ui.form .inline.field > :only-child {
+.chunkOutput .inline.fields .field > :only-child,
+.chunkOutput .inline.field > :only-child {
   margin: 0;
 }
 
 /* Wide */
 
-.chunkOutput .ui.form .inline.fields .wide.field {
+.chunkOutput .inline.fields .wide.field {
   display: flex;
   align-items: center;
 }
 
-.chunkOutput .ui.form .inline.fields .wide.field > input,
-.chunkOutput .ui.form .inline.fields .wide.field > select {
+.chunkOutput .inline.fields .wide.field > input,
+.chunkOutput .inline.fields .wide.field > select {
   width: 100%;
 }
 
@@ -1985,8 +1985,8 @@
 --------------------- */
 
 .chunkOutput .ui.form,
-.chunkOutput .ui.form .field .dropdown,
-.chunkOutput .ui.form .field .dropdown .menu > .item {
+.chunkOutput .field .dropdown,
+.chunkOutput .field .dropdown .menu > .item {
   font-size: 1rem;
 }
 
@@ -2040,53 +2040,53 @@
          Theme Overrides
 *******************************/
 
-.chunkOutput .ui.form {
+.chunkOutput {
   margin-top: 0;
 }
 
-.chunkOutput .ui.form .ui.segments {
+.chunkOutput .ui.segments {
   margin-top: 0;
 }
 
-.chunkOutput .ui.form .vertical.field > .button,
-.chunkOutput .ui.form .field > .vertical > .button {
+.chunkOutput .vertical.field > .button,
+.chunkOutput .field > .vertical > .button {
   margin-top: 0 !important;
 }
 
-.chunkOutput .ui.form .compact.field {
+.chunkOutput .compact.field {
   flex: 0 !important;
 }
 
-.chunkOutput .ui.form .compact.field.submission {
+.chunkOutput .compact.field.submission {
   display: flex;
   flex-direction: column;
 }
 
-.chunkOutput .ui.form .compact.field.submission input.button {
+.chunkOutput .compact.field.submission input.button {
   margin-top: 0;
   flex: 1;
 }
 
-.chunkOutput .ui.form .grouped.fields.error > label,
-.chunkOutput .ui.form .inline.fields.error > label,
-.chunkOutput .ui.form .grouped.fields > label:has(~ .error),
-.chunkOutput .ui.form .inline.fields > label:has(~ .error) {
+.chunkOutput .grouped.fields.error > label,
+.chunkOutput .inline.fields.error > label,
+.chunkOutput .grouped.fields > label:has(~ .error),
+.chunkOutput .inline.fields > label:has(~ .error) {
   color: #9F3A38;
 }
 
-.chunkOutput .ui.form .grouped.fields > .field {
+.chunkOutput .grouped.fields > .field {
   margin: 0.5em 0 !important;
 }
 
-.chunkOutput .ui.form .grouped.fields.vertical > .help {
+.chunkOutput .grouped.fields.vertical > .help {
   display: block;
 }
 
-.chunkOutput .ui.form .inline.fields > .field:last-child {
+.chunkOutput .inline.fields > .field:last-child {
   padding-right: 0;
 }
 
-.chunkOutput .ui.form .inline.fields.required > label:after {
+.chunkOutput .inline.fields.required > label:after {
   margin: -0.2em 0 0 0.2em;
   content: "*";
   color: #DB2828;
@@ -2094,12 +2094,12 @@
   vertical-align: top;
 }
 
-.chunkOutput .ui.form .hidden:not(.divider),
-.chunkOutput .ui.form .sweetened.field {
+.chunkOutput .hidden:not(.divider),
+.chunkOutput .sweetened.field {
   display: none !important;
 }
 
-.chunkOutput .ui.form .help {
+.chunkOutput .help {
   font-size: 1.1rem;
 }
 
@@ -2107,243 +2107,243 @@
   color: #DB2828;
 }
 
-.chunkOutput .ui.form .submission.field > .button {
+.chunkOutput .submission.field > .button {
   margin-top: calc(var(--baseline) * 1rem);
 }
 
-.chunkOutput .ui.form .ui.error.message {
+.chunkOutput .ui.error.message {
   margin: 1em 0;
 }
 
-.chunkOutput .ui.form .ui.error.message a {
+.chunkOutput .ui.error.message a {
   color: #9F3A38;
 }
 
-.chunkOutput .ui.form .ui.error.message.black {
+.chunkOutput .ui.error.message.black {
   box-shadow: none;
 }
 
-.chunkOutput .ui.form .ui.dropdown.with.other + .other {
+.chunkOutput .ui.dropdown.with.other + .other {
   margin-top: 0.5em;
 }
 
-.chunkOutput .ui.form .ui.dropdown:not(.labeled) > .dropdown.icon {
+.chunkOutput .ui.dropdown:not(.labeled) > .dropdown.icon {
   font-size: 0.85714286em;
 }
 
-.chunkOutput .ui.form .ui.icon.input.submission > .button {
+.chunkOutput .ui.icon.input.submission > .button {
   padding-right: 3.6em !important;
 }
 
-.chunkOutput .ui.form .ui.icon.input.submission > .button:focus {
+.chunkOutput .ui.icon.input.submission > .button:focus {
   border-color: transparent;
 }
 
-.chunkOutput .ui.form .ui.icon.input.submission > .button.primary + .icon,
-.chunkOutput .ui.form .ui.icon.input.submission > .button.secondary + .icon {
+.chunkOutput .ui.icon.input.submission > .button.primary + .icon,
+.chunkOutput .ui.icon.input.submission > .button.secondary + .icon {
   background: rgba(0, 0, 0, 0.1);
   color: #FFFFFF;
 }
 
-.chunkOutput .ui.form .ui.icon.input.submission > .icon {
+.chunkOutput .ui.icon.input.submission > .icon {
   background: rgba(0, 0, 0, 0.05);
   opacity: 1;
   font-size: 80%;
 }
 
-.chunkOutput .ui.form .right.aligned > .button {
+.chunkOutput .right.aligned > .button {
   margin-right: 0;
 }
 
 @media screen and (max-width: 400px) {
-  .chunkOutput .ui.form .back.button > span {
+  .chunkOutput .back.button > span {
     display: none;
   }
 }
 
 .chunkOutput .ui.form.inverted .field label,
-.chunkOutput .ui.form fieldset.inverted .field label,
+.chunkOutput fieldset.inverted .field label,
 .chunkOutput .ui.form.inverted .fields > .field label,
-.chunkOutput .ui.form fieldset.inverted .fields > .field label {
+.chunkOutput fieldset.inverted .fields > .field label {
   color: #fff !important;
 }
 
 .chunkOutput .ui.form.inverted .field label:after,
-.chunkOutput .ui.form fieldset.inverted .field label:after,
+.chunkOutput fieldset.inverted .field label:after,
 .chunkOutput .ui.form.inverted .fields > .field label:after,
-.chunkOutput .ui.form fieldset.inverted .fields > .field label:after {
+.chunkOutput fieldset.inverted .fields > .field label:after {
   color: rgba(255, 255, 255, 0.6) !important;
 }
 
 .chunkOutput .ui.form.inverted .field input[type='field'],
-.chunkOutput .ui.form fieldset.inverted .field input[type='field'],
+.chunkOutput fieldset.inverted .field input[type='field'],
 .chunkOutput .ui.form.inverted .fields > .field input[type='field'],
-.chunkOutput .ui.form fieldset.inverted .fields > .field input[type='field'],
+.chunkOutput fieldset.inverted .fields > .field input[type='field'],
 .chunkOutput .ui.form.inverted .field textarea,
-.chunkOutput .ui.form fieldset.inverted .field textarea,
+.chunkOutput fieldset.inverted .field textarea,
 .chunkOutput .ui.form.inverted .fields > .field textarea,
-.chunkOutput .ui.form fieldset.inverted .fields > .field textarea,
+.chunkOutput fieldset.inverted .fields > .field textarea,
 .chunkOutput .ui.form.inverted .field .checkbox label:before,
-.chunkOutput .ui.form fieldset.inverted .field .checkbox label:before,
+.chunkOutput fieldset.inverted .field .checkbox label:before,
 .chunkOutput .ui.form.inverted .fields > .field .checkbox label:before,
-.chunkOutput .ui.form fieldset.inverted .fields > .field .checkbox label:before {
+.chunkOutput fieldset.inverted .fields > .field .checkbox label:before {
   border: 1px solid #fff !important;
 }
 
 .chunkOutput .ui.form.inverted .field.error input,
-.chunkOutput .ui.form fieldset.inverted .field.error input,
+.chunkOutput fieldset.inverted .field.error input,
 .chunkOutput .ui.form.inverted .fields > .field.error input,
-.chunkOutput .ui.form fieldset.inverted .fields > .field.error input,
+.chunkOutput fieldset.inverted .fields > .field.error input,
 .chunkOutput .ui.form.inverted .field.error textarea,
-.chunkOutput .ui.form fieldset.inverted .field.error textarea,
+.chunkOutput fieldset.inverted .field.error textarea,
 .chunkOutput .ui.form.inverted .fields > .field.error textarea,
-.chunkOutput .ui.form fieldset.inverted .fields > .field.error textarea {
+.chunkOutput fieldset.inverted .fields > .field.error textarea {
   border-color: transparent !important;
 }
 
-.chunkOutput .ui.form .segment legend {
+.chunkOutput .segment legend {
   margin-bottom: calc(var(--baseline) * 1rem);
   padding-bottom: 0.6em;
   border-bottom: 1px solid rgba(34, 36, 38, 0.15);
   display: block;
 }
 
-.chunkOutput .ui.form .segment legend + * {
+.chunkOutput .segment legend + * {
   clear: both;
 }
 
-.chunkOutput .ui.form .segment.submission {
+.chunkOutput .segment.submission {
   overflow: auto;
 }
 
-.chunkOutput .ui.form .fieldset + .fieldset {
+.chunkOutput .fieldset + .fieldset {
   margin-top: calc(var(--baseline) * 1rem);
 }
 
-.chunkOutput .ui.form .fieldset + .fieldset.submission {
+.chunkOutput .fieldset + .fieldset.submission {
   margin-top: calc(var(--baseline) * 3rem);
 }
 
-.chunkOutput .ui.form .fieldset + .segment {
+.chunkOutput .fieldset + .segment {
   margin-top: calc(var(--baseline) * 3rem);
 }
 
-.chunkOutput .ui.form fieldset.submission .button {
+.chunkOutput fieldset.submission .button {
   margin-top: 0;
 }
 
-.chunkOutput .ui.form fieldset.submission.fieldset .recaptcha.badge {
+.chunkOutput fieldset.submission.fieldset .recaptcha.badge {
   right: 0;
   bottom: 0;
 }
 
-.chunkOutput .ui.form [id*="accept-terms"].field > .checkbox > label {
+.chunkOutput [id*="accept-terms"].field > .checkbox > label {
   border-top: 0.5em solid transparent;
   border-bottom: 0.5em solid transparent;
   font-weight: normal;
 }
 
-.chunkOutput .ui.form [id*="accept-terms"].field.required > .checkbox:after {
+.chunkOutput [id*="accept-terms"].field.required > .checkbox:after {
   top: 0.5em;
 }
 
-.chunkOutput .ui.form .file-upload.field > label {
+.chunkOutput .file-upload.field > label {
   margin-bottom: calc(var(--baseline) * 1rem);
   vertical-align: baseline;
 }
 
-.chunkOutput .ui.form .file-upload.field .qq-upload-drop-area {
+.chunkOutput .file-upload.field .qq-upload-drop-area {
   border: 5px dashed rgba(34, 36, 38, 0.15);
 }
 
-.chunkOutput .ui.form .file-upload.field .qq-upload-drop-area-active {
+.chunkOutput .file-upload.field .qq-upload-drop-area-active {
   border-color: #96C8DA;
 }
 
-.chunkOutput .ui.form .file-upload.field .file-uploader-items {
+.chunkOutput .file-upload.field .file-uploader-items {
   margin: 0;
 }
 
-.chunkOutput .ui.form .file-upload.field .file-uploader-items .item:last-child {
+.chunkOutput .file-upload.field .file-uploader-items .item:last-child {
   margin-bottom: calc(var(--baseline) * 2rem) !important;
 }
 
-.chunkOutput .ui.form .g-recaptcha,
-.chunkOutput .ui.form .recaptcha.help {
+.chunkOutput .g-recaptcha,
+.chunkOutput .recaptcha.help {
   margin-bottom: calc(var(--baseline) * 1rem);
 }
 
-.chunkOutput .ui.form .recaptcha.badge {
+.chunkOutput .recaptcha.badge {
   position: absolute;
   right: 1em;
   bottom: 1em;
 }
 
-.chunkOutput .ui.form .recaptcha.badge > img {
+.chunkOutput .recaptcha.badge > img {
   width: 12vw;
   max-width: 3.6em;
   opacity: 0.6;
 }
 
-.chunkOutput .ui.form .recaptcha.badge > img:hover {
+.chunkOutput .recaptcha.badge > img:hover {
   opacity: 1;
   cursor: pointer;
 }
 
 @media screen and (max-width: 767.98px) {
-  .chunkOutput .ui.form .padded.segment {
+  .chunkOutput .padded.segment {
     padding: 5%;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .chunkOutput .ui.form .horizontal.field,
-  .chunkOutput .ui.form .horizontal.fields {
+  .chunkOutput .horizontal.field,
+  .chunkOutput .horizontal.fields {
     display: table;
     width: 100%;
   }
 
-  .chunkOutput .ui.form .horizontal.field > label,
-  .chunkOutput .ui.form .horizontal.fields > label {
+  .chunkOutput .horizontal.field > label,
+  .chunkOutput .horizontal.fields > label {
     display: table-cell;
     width: 30%;
   }
 
-  .chunkOutput .ui.form .horizontal.field > input,
-  .chunkOutput .ui.form .horizontal.fields > input,
-  .chunkOutput .ui.form .horizontal.field > textarea,
-  .chunkOutput .ui.form .horizontal.fields > textarea,
-  .chunkOutput .ui.form .horizontal.field > select,
-  .chunkOutput .ui.form .horizontal.fields > select,
-  .chunkOutput .ui.form .horizontal.field > .multiple.dropdown > input.search,
-  .chunkOutput .ui.form .horizontal.fields > .multiple.dropdown > input.search {
+  .chunkOutput .horizontal.field > input,
+  .chunkOutput .horizontal.fields > input,
+  .chunkOutput .horizontal.field > textarea,
+  .chunkOutput .horizontal.fields > textarea,
+  .chunkOutput .horizontal.field > select,
+  .chunkOutput .horizontal.fields > select,
+  .chunkOutput .horizontal.field > .multiple.dropdown > input.search,
+  .chunkOutput .horizontal.fields > .multiple.dropdown > input.search {
     display: table-cell;
     vertical-align: baseline;
   }
 
-  .chunkOutput .ui.form .inline.fields > label {
+  .chunkOutput .inline.fields > label {
     min-width: 30%;
     margin-right: 0;
   }
 
-  .chunkOutput .ui.form .stacked.fields {
+  .chunkOutput .stacked.fields {
     flex-direction: column;
   }
 
-  .chunkOutput .ui.form .stacked.fields .field:not(:last-child) {
+  .chunkOutput .stacked.fields .field:not(:last-child) {
     margin: 0 0 1em;
   }
 }
 
 @media screen and (max-width: 767.98px) {
-  .chunkOutput .ui.form .inline.fields.unstackable > label {
+  .chunkOutput .inline.fields.unstackable > label {
     width: 100%;
     margin: 0 0 0.28571429rem 0;
   }
 }
 
 .chunkOutput * + .ui.form,
-.chunkOutput .ui.form + * {
+.chunkOutput + * {
   margin-top: calc(var(--baseline) * 3rem);
 }
 
@@ -2356,15 +2356,15 @@
 *******************************/
 
 @media screen and (min-width: 768px) {
-  .chunkOutput .ui.form .vertical.field > label {
+  .chunkOutput .vertical.field > label {
     text-align: left;
   }
 
-  .chunkOutput .ui.form .compact.field {
+  .chunkOutput .compact.field {
     flex: 0 !important;
   }
 }
 
-.chunkOutput .ui.form .black.error.message {
+.chunkOutput .black.error.message {
   box-shadow: none !important;
 }
