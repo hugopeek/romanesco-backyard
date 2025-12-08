@@ -3,7 +3,7 @@
 ## Backyard 1.0.0-rc3
 Released on ...
 
-- Remove .ui.form classes from CB chunk preview CSS
+- Improve form styling in CB previews
 - Fix internal CSS validation
 
 ## Backyard 1.0.0-rc2
