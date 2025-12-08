@@ -1,7 +1,7 @@
 # Changelog for Romanesco Backyard
 
 ## Backyard 1.0.0-rc3
-Released on ...
+Released on December 8, 2025
 
 - Improve form styling in CB previews
 - Fix internal CSS validation
