@@ -289,7 +289,8 @@ class Romanesco
             '--cssPaths', rtrim($settings['distPath'],'/') . '/components/icon.css',
             '--cssPaths', rtrim($settings['distPath'],'/') . '/components/step.css',
             '--cssPaths', rtrim($settings['distPath'],'/') . '/components/flag.css',
-            '--cssPaths', rtrim($settings['cssPath'],'/') . '/site.css',
+            '--cssPaths', rtrim($settings['cssPathSemantic'],'/') . '/backgrounds.css',
+            '--cssPaths', rtrim($settings['cssPathCustom'],'/') . '/site.css',
             '--user', escapeshellcmd($this->modx->getOption('romanesco.htpasswd_user')) ?: 'undefined',
             '--pass', escapeshellcmd($this->modx->getOption('romanesco.htpasswd_pass')) ?: 'undefined',
             '--devMode', $this->modx->getOption('romanesco.dev_mode'),
@@ -525,12 +526,15 @@ class Romanesco
      */
     public function runCommand(array $cmd, string $logFile = null): void
     {
-        // Set working directory and environment PATH
-        $process = new Process($cmd, MODX_BASE_PATH, [
-            'PATH' => escapeshellcmd($this->modx->getOption('romanesco.env_path'))
-        ]);
+        // Set environment PATH (needs to be added as a system setting)
+        // Preserve symlinks for development installations (using GPM packages)
+        $env = [
+            'PATH' => (string)$this->modx->getOption('romanesco.env_path'),
+            'NODE_PRESERVE_SYMLINKS' => (int)$this->modx->getOption('romanesco.dev_mode'),
+        ];
 
-        // Start process
+        // Run, Forrest!
+        $process = new Process($cmd, MODX_BASE_PATH, $env);
         $process->run();
 
         // After command is finished
