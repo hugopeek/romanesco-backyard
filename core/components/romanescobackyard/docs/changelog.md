@@ -6,6 +6,10 @@ Released on ...
 - Update composer.phar to 2.9.2
 - Load eliashaeussler/cache-warmup library with Composer
 
+**WARNING:** the cache warmup library depends on relatively new versions of
+some widely used Symfony components. This could lead to compatibility issues
+with other extras (such as Gitify and GPM) when the autoloader mixes them up.
+
 ## Backyard 1.0.0-rc3
 Released on December 16, 2025
 
