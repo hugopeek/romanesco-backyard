@@ -3,6 +3,7 @@
 ## Backyard 1.0.0-rc4
 Released on ...
 
+- Update Symfony Process to v7.4
 - Update composer.phar to 2.9.2
 - Load eliashaeussler/cache-warmup library with Composer
 
