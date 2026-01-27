@@ -14955,11 +14955,6 @@
          Theme Overrides
 *******************************/
 
-.chunkOutput #content .ui.list:not(.overview):not(ul ul),
-.chunkOutput #content .ui.list:not(.overview):not(ol ol) {
-  margin-top: calc(var(--baseline) * 2rem);
-}
-
 .chunkOutput ul.ui.list li:before {
   margin-top: 1px;
   font-family: Arial, sans-serif;
@@ -14991,10 +14986,23 @@
   margin-left: 0;
 }
 
-.chunkOutput .ui.vertical.list > li:before {
+.chunkOutput .ui.vertical.list > li:before,
+.chunkOutput .ui.vertical.list > .item:before {
   display: block;
   position: relative;
   text-align: center;
+  margin-left: 0;
+}
+
+.chunkOutput .ui.vertical.list > .item > .icon {
+  display: block;
+  width: auto;
+  padding: 0 !important;
+}
+
+.chunkOutput .ui.vertical.list > .item > .icon + .content {
+  display: block;
+  padding: 0.5em 0 0;
 }
 
 /*******************************
