@@ -4,13 +4,6 @@ var imageRenderer = function(value, metaData, record, rowIndex, colIndex, store)
     }
 }
 var imageRendererTestimonialCompany = function(value, metaData, record, rowIndex, colIndex, store) {
-    //if (value != '' && value != null) {
-    //    var baseUrl = MODx.config.default_site_url + "testimonials/companies/";
-    //    if (value.indexOf('http://') === 0) {
-    //        baseUrl = '';
-    //    }
-    //    return '<div class="imageRendererTestimonialCompany"><img src="' + baseUrl + value + '" width="100"></div>';
-    //}
     if (value == null ) return '';
     if (!value.length) return '';
     var data = JSON.parse(value);
@@ -52,6 +45,11 @@ var tvRendererList = function(value, metaData, record, rowIndex, colIndex, store
         }
         return '<ul>' + output + '</ul>';
     }
+}
+
+// Retain HTML output in MODX 3
+var renderHTML = function(value, metaData, record, rowIndex, colIndex, store) {
+    return value;
 }
 
 // Default boolean renderer doesn't always process 0 values correctly
