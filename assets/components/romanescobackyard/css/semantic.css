@@ -5082,6 +5082,10 @@
   margin-right: 0;
 }
 
+.chunkOutput .ui.header.icon > .image + .content {
+  margin-top: calc(var(--baseline) * 1rem);
+}
+
 .chunkOutput .ui.header.icon > .svg {
   min-width: 1.5em;
   max-width: 2em;
@@ -5107,6 +5111,10 @@
 
 .chunkOutput .ui.header.icon + p > .button {
   margin-right: 0 !important;
+}
+
+.chunkOutput .ui.header.icon:last-child {
+  margin-bottom: 0;
 }
 
 .chunkOutput .ui.header.icon.horizontal {
@@ -23510,6 +23518,16 @@ Floated Menu / Item
 
 .chunkOutput #main * + .ui.nested.cards {
   margin-top: calc(var(--baseline) * 2rem);
+}
+
+.chunkOutput * + .ui.spaced.cards,
+.chunkOutput .ui.spaced.cards + * {
+  margin-top: calc(var(--baseline) * 3rem);
+}
+
+.chunkOutput * + .ui[class*="very spaced"].cards,
+.chunkOutput .ui[class*="very spaced"].cards + * {
+  margin-top: calc(var(--baseline) * 5rem);
 }
 
 .chunkOutput .ui.one.cards > .card {
