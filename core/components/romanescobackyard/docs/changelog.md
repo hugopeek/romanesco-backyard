@@ -1,8 +1,9 @@
 # Changelog for Romanesco Backyard
 
 ## Backyard 1.0.0-rc4
-Released on ...
+Released on March 10, 2026
 
+- Hide inline javascript in CB previews
 - Add Collections renderer that retains HTML output in MODX 3
 - Update Symfony Process to v7.4
 - Update composer.phar to 2.9.2
