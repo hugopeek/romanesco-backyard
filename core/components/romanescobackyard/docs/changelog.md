@@ -1,5 +1,10 @@
 # Changelog for Romanesco Backyard
 
+## Backyard 1.0.0-rc5
+Released on ...
+
+- Add Collections renderer for global background previews
+
 ## Backyard 1.0.0-rc4
 Released on March 10, 2026
 

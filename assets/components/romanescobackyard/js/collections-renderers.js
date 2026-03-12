@@ -36,6 +36,12 @@ var imageRendererTeam = function(value, metaData, record, rowIndex, colIndex, st
     }
 }
 
+var globalBackgroundPreview = function(value, metaData, record, rowIndex, colIndex, store) {
+    if (value != '' && value != null) {
+        return '<div class="' + value + ' background" style="height:100px;z-index:0;"></div>';
+    }
+}
+
 var tvRendererList = function(value, metaData, record, rowIndex, colIndex, store) {
     if (value != '' && value != null) {
         const array = value.split('||');
