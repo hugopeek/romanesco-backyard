@@ -3,6 +3,7 @@
 ## Backyard 1.0.0-rc5
 Released on ...
 
+- Lexicon updates
 - Add Collections renderer for global background previews
 
 ## Backyard 1.0.0-rc4

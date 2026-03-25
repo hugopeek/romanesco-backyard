@@ -58,6 +58,7 @@ $_lang['formblocks.validation.required_text_number'] = 'Oops, that\'s not a numb
 $_lang['formblocks.validation.required_text_password'] = 'Please provide a password of at least 8 characters long.';
 $_lang['formblocks.validation.required_text_date_start'] = 'Please select a <strong>start date</strong>.';
 $_lang['formblocks.validation.required_text_date_end'] = 'Please select an <strong>end date</strong>.';
+$_lang['formblocks.validation.required_text_files'] = 'You need to upload at least 1 file in the <strong>[[+field_name:lcase]]</strong> field.';
 $_lang['formblocks.validation.required_text_math'] = 'You need to beat the spam bots at math!';
 $_lang['formblocks.validation.required_text_terms'] = 'You need to accept the <strong>terms and conditions</strong> to continue.';
 
