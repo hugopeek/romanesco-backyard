@@ -33,8 +33,11 @@ class Romanesco
     /** @var array $config */
     public $config = [];
 
-    /** @var array $structuredData */
-    public $structuredData = [];
+    /** @var Graph $structuredData */
+    public Graph $structuredData;
+
+    /** @var array $schemaOptions */
+    private $schemaOptions = null;
 
     function __construct(modX &$modx, array $config = [])
     {
@@ -94,6 +97,79 @@ class Romanesco
             }
         }
         return $option;
+    }
+
+    /**
+     * Array with common properties for use in structured data.
+     *
+     * @param array $additionalOptions
+     * @return array
+     */
+    public function getSchemaOptions(array $additionalOptions = []): array
+    {
+        // Initialize once
+        if ($this->schemaOptions === null) {
+            $this->schemaOptions = [
+                // System / context
+                'siteName' => $this->modx->getOption('site_name'),
+                'siteURL' => $this->modx->getOption('site_url'),
+                'httpHost' => $this->modx->getOption('http_host'),
+                'context' => $this->modx->getOption('context_key'),
+
+                // ClientConfig
+                'clientType' => $this->getConfigSetting('client_type'),
+                'clientPhone' => $this->getConfigSetting('client_phone'),
+                'clientEmail' => $this->getConfigSetting('client_email'),
+                'clientAddressStreet' => $this->getConfigSetting('client_address_street'),
+                'clientAddressLocality' => $this->getConfigSetting('client_address_locality'),
+                'clientAddressRegion' => $this->getConfigSetting('client_address_region'),
+                'clientAddressCountry' => $this->getConfigSetting('client_address_country'),
+                'clientAddressPostcode' => $this->getConfigSetting('client_address_postcode'),
+                'clientAddressExtended' => $this->getConfigSetting('client_address_extended'),
+                'logoPath' => $this->getConfigSetting('logo_path'),
+
+                // Resource (if available)
+                'pagetitle' => $this->modx->resource?->get('pagetitle') ?? '',
+                'longtitle' => $this->modx->resource?->get('longtitle') ?? '',
+                'description' => $this->modx->resource?->get('description') ?? '',
+                'introtext' => $this->modx->resource?->get('introtext') ?? '',
+                'url' => $this->modx->resource?->get('id') ? $this->modx->makeUrl($this->modx->resource->id, null, null, 'full') : '',
+            ];
+        }
+
+        // Merge additional options
+        return array_merge($this->schemaOptions, $additionalOptions);
+    }
+
+    /**
+     * Get a specific schema option by key.
+     *
+     * @param string $key
+     * @param mixed|null $default
+     * @return mixed
+     */
+    public function getSchemaOption(string $key, mixed $default = null)
+    {
+        if ($this->schemaOptions === null) {
+            $this->getSchemaOptions();
+        }
+        return $this->schemaOptions[$key] ?? $default;
+    }
+
+    /**
+     * Add or update a schema option.
+     *
+     * @param string $key
+     * @param mixed $value
+     * @return void
+     */
+    public function setSchemaOption(string $key, mixed $value): void
+    {
+        // Initialize if needed
+        if ($this->schemaOptions === null) {
+            $this->getSchemaOptions();
+        }
+        $this->schemaOptions[$key] = $value;
     }
 
     /**
