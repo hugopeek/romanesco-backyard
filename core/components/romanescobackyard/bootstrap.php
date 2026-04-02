@@ -9,7 +9,7 @@ if (file_exists(__DIR__ . '/vendor/autoload.php')) {
     require_once __DIR__ . '/vendor/autoload.php';
 }
 
-// Add your classes to modx's autoloader
+// Add your classes to MODX's autoloader
 \MODX\Revolution\modX::getLoader()->addPsr4('FractalFarming\Romanesco\\', $namespace['path'] . 'src/');
 
 if (!$modx->services->has('romanesco')) {
@@ -21,3 +21,6 @@ if (!$modx->services->has('romanesco')) {
     // Load packages model
     $modx->addPackage('FractalFarming\Romanesco\Model', $namespace['path'] . 'src/', null, 'FractalFarming\Romanesco\\');
 }
+
+// Instantiate once and make it globally accessible
+$modx->romanesco = $modx->services->get('romanesco');

@@ -4,6 +4,8 @@
 Released on ...
 
 - Lexicon updates
+- Instantiate Romanesco in bootstrap file
+- Add html-pretty-min Composer package to prettify / minify HtmlPageDom output
 - Add Collections renderer for global background previews
 
 ## Backyard 1.0.0-rc4
