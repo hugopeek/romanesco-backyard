@@ -7,6 +7,7 @@
 namespace FractalFarming\Romanesco;
 
 use MODX\Revolution\modX;
+use MODX\Revolution\Sources\modMediaSource;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Symfony\Component\Process\Process;
 use Spatie\SchemaOrg\Schema;
@@ -38,6 +39,9 @@ class Romanesco
 
     /** @var array $schemaOptions */
     private $schemaOptions = null;
+
+    /** @var array $mediaSources */
+    private $mediaSources = [];
 
     function __construct(modX &$modx, array $config = [])
     {
@@ -100,6 +104,61 @@ class Romanesco
     }
 
     /**
+     * Look for a key in a multidimensional array.
+     *
+     * @param array $haystack
+     * @param string $needle
+     * @return array
+     */
+    public function recursiveArraySearch(array $haystack, string $needle): array
+    {
+        $result = [];
+        $iterator  = new \RecursiveArrayIterator($haystack);
+        $recursive = new \RecursiveIteratorIterator(
+            $iterator,
+            \RecursiveIteratorIterator::SELF_FIRST
+        );
+        foreach ($recursive as $key => $value) {
+            if ($key === $needle) {
+                $result[] = $value;
+            }
+        }
+        return $result;
+    }
+
+    /**
+     * Get path from media source object.
+     *
+     * Returns relative path (to site root) if optional $path parameter is set.
+     * Returns absolute path (from server root) by default.
+     *
+     * @param int $sourceId
+     * @param string $path
+     * @return string
+     */
+    public function getMediaSourcePath(int $sourceId = 1, string $path = ''): string
+    {
+        // Return cached instance if already initialized
+        if (isset($this->mediaSources[$sourceId])) {
+            $source = $this->mediaSources[$sourceId];
+            return $path ? $source->prepareOutputUrl($path) : $source->getBasePath();
+        }
+        $isMODX3 = $this->modx->getVersionData()['version'] >= 3;
+        $sourceClass = $isMODX3 ? modMediaSource::class : 'sources.modMediaSource';
+
+        /** @var modMediaSource|null $source */
+        $source = $this->modx->getObject($sourceClass, $sourceId);
+
+        if ($source) {
+            $source->initialize();
+            $this->mediaSources[$sourceId] = $source;
+            return $path ? $source->prepareOutputUrl($path) : $source->getBasePath();
+        }
+
+        return '';
+    }
+
+    /**
      * Array with common properties for use in structured data.
      *
      * @param array $additionalOptions
@@ -109,12 +168,17 @@ class Romanesco
     {
         // Initialize once
         if ($this->schemaOptions === null) {
+            // Get media source ID for logo path setting
+            $cgSetting = $this->modx->getObject('cgSetting', ['key' => 'logo_path']);
+            $logoPathMediaSourceID = (int)$cgSetting?->get('source');
+
             $this->schemaOptions = [
                 // System / context
+                'siteStart' => $this->modx->getOption('site_start'),
                 'siteName' => $this->modx->getOption('site_name'),
                 'siteURL' => $this->modx->getOption('site_url'),
                 'httpHost' => $this->modx->getOption('http_host'),
-                'context' => $this->modx->getOption('context_key'),
+                'cultureKey' => $this->getContextSetting('cultureKey', $this->modx->resource?->get('context_key') ?? 'web', 'en'),
 
                 // ClientConfig
                 'clientType' => $this->getConfigSetting('client_type'),
@@ -126,14 +190,18 @@ class Romanesco
                 'clientAddressCountry' => $this->getConfigSetting('client_address_country'),
                 'clientAddressPostcode' => $this->getConfigSetting('client_address_postcode'),
                 'clientAddressExtended' => $this->getConfigSetting('client_address_extended'),
-                'logoPath' => $this->getConfigSetting('logo_path'),
+                'logoPath' => $this->getMediaSourcePath($logoPathMediaSourceID, $this->getConfigSetting('logo_path')),
 
                 // Resource (if available)
                 'pagetitle' => $this->modx->resource?->get('pagetitle') ?? '',
                 'longtitle' => $this->modx->resource?->get('longtitle') ?? '',
+                'menutitle' => $this->modx->resource?->get('menutitle') ?? '',
                 'description' => $this->modx->resource?->get('description') ?? '',
-                'introtext' => $this->modx->resource?->get('introtext') ?? '',
+                'introtext' => strip_tags($this->modx->resource?->get('introtext')) ?? '',
                 'url' => $this->modx->resource?->get('id') ? $this->modx->makeUrl($this->modx->resource->id, null, null, 'full') : '',
+                'context' => $this->modx->resource?->get('context_key') ?? '',
+                'publishedon' => $this->modx->resource?->get('publishedon') ?? '',
+                'editedon' => $this->modx->resource?->get('editedon') ?? '',
             ];
         }
 
@@ -170,30 +238,6 @@ class Romanesco
             $this->getSchemaOptions();
         }
         $this->schemaOptions[$key] = $value;
-    }
-
-    /**
-     * Look for a key in a multidimensional array.
-     *
-     * @param array $haystack
-     * @param string $needle
-     * @return array
-     */
-    public function recursiveArraySearch(array $haystack, string $needle): array
-    {
-        $result = [];
-        $iterator  = new \RecursiveArrayIterator($haystack);
-        $recursive = new \RecursiveIteratorIterator(
-            $iterator,
-            \RecursiveIteratorIterator::SELF_FIRST
-        );
-        foreach ($recursive as $key => $value) {
-            if ($key === $needle) {
-                $result[] = $value;
-            }
-        }
-        return $result;
-        //yield $result;
     }
 
     /**
