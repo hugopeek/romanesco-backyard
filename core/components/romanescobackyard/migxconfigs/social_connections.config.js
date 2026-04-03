@@ -397,7 +397,7 @@
             "renderer": "this.renderChunk",
             "clickaction": "",
             "selectorconfig": "",
-            "renderchunktpl": "<div class=\"chunkOutput\"><i class=\"ui [[+icon:empty=`[[+name:lcase]]`]] icon\"></div>",
+            "renderchunktpl": "<div class=\"chunkOutput basic\"><i class=\"ui [[+icon:empty=`[[+name:lcase]]`]] icon\"><svg width=\"24\" height=\"18\" class=\"ui svg icon image\"><use href=\"/assets/img/icons.svg#[[+icon:empty=`[[+name:lcase]]`]]\"></use></svg></div>",
             "renderoptions": "",
             "editor": ""
         },

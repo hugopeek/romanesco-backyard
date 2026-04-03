@@ -4,6 +4,7 @@
 Released on ...
 
 - Lexicon updates
+- Show custom SVG icons in social grids
 - Instantiate Romanesco in bootstrap file
 - Add html-pretty-min Composer package to prettify / minify HtmlPageDom output
 - Add Collections renderer for global background previews
