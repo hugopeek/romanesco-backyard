@@ -1,7 +1,7 @@
 # Changelog for Romanesco Backyard
 
 ## Backyard 1.0.0-rc5
-Released on ...
+Released on April 4, 2026
 
 - Lexicon updates
 - Show custom SVG icons in social grids
