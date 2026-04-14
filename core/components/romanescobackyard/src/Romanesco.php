@@ -166,66 +166,29 @@ class Romanesco
      */
     public function getSchemaOptions(array $additionalOptions = []): array
     {
-        // Initialize once
         if ($this->schemaOptions === null) {
-            // Get media source ID for logo path setting
-            $cgSetting = $this->modx->getObject('cgSetting', ['key' => 'logo_path']);
-            $logoPathMediaSourceID = (int)$cgSetting?->get('source');
-
-            $this->schemaOptions = [
-                // System / context
-                'siteStart' => $this->modx->getOption('site_start'),
-                'siteName' => $this->modx->getOption('site_name'),
-                'siteURL' => $this->modx->getOption('site_url'),
-                'httpHost' => $this->modx->getOption('http_host'),
-                'cultureKey' => $this->getContextSetting('cultureKey', $this->modx->resource?->get('context_key') ?? 'web', 'en'),
-
-                // ClientConfig
-                'clientType' => $this->getConfigSetting('client_type'),
-                'clientPhone' => $this->getConfigSetting('client_phone'),
-                'clientEmail' => $this->getConfigSetting('client_email'),
-                'clientAddressStreet' => $this->getConfigSetting('client_address_street'),
-                'clientAddressLocality' => $this->getConfigSetting('client_address_locality'),
-                'clientAddressRegion' => $this->getConfigSetting('client_address_region'),
-                'clientAddressCountry' => $this->getConfigSetting('client_address_country'),
-                'clientAddressPostcode' => $this->getConfigSetting('client_address_postcode'),
-                'clientAddressExtended' => $this->getConfigSetting('client_address_extended'),
-                'logoPath' => $this->getMediaSourcePath($logoPathMediaSourceID, $this->getConfigSetting('logo_path')),
-
-                // Resource (if available)
-                'pagetitle' => $this->modx->resource?->get('pagetitle') ?? '',
-                'longtitle' => $this->modx->resource?->get('longtitle') ?? '',
-                'menutitle' => $this->modx->resource?->get('menutitle') ?? '',
-                'description' => $this->modx->resource?->get('description') ?? '',
-                'introtext' => strip_tags($this->modx->resource?->get('introtext')) ?? '',
-                'url' => $this->modx->resource?->get('id') ? $this->modx->makeUrl($this->modx->resource->id, null, null, 'full') : '',
-                'context' => $this->modx->resource?->get('context_key') ?? '',
-                'publishedon' => $this->modx->resource?->get('publishedon') ?? '',
-                'editedon' => $this->modx->resource?->get('editedon') ?? '',
-            ];
+            $this->schemaOptions = [];
         }
-
-        // Merge additional options
         return array_merge($this->schemaOptions, $additionalOptions);
     }
 
     /**
-     * Get a specific schema option by key.
+     * Update the entire array of schema options.
      *
-     * @param string $key
-     * @param mixed|null $default
-     * @return mixed
+     * @param array $options
+     * @return void
      */
-    public function getSchemaOption(string $key, mixed $default = null)
+    public function setSchemaOptions(array $options = []): void
     {
+        // Initialize if needed
         if ($this->schemaOptions === null) {
             $this->getSchemaOptions();
         }
-        return $this->schemaOptions[$key] ?? $default;
+        $this->schemaOptions = $options;
     }
 
     /**
-     * Add or update a schema option.
+     * Add or update a single schema option.
      *
      * @param string $key
      * @param mixed $value
