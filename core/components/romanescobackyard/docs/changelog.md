@@ -1,5 +1,11 @@
 # Changelog for Romanesco Backyard
 
+## Backyard 1.0.0-rc6
+Released on April 16, 2026
+
+- Move array with schema options to RenderStructuredData plugin
+- Update Composer packages and composer.phar
+
 ## Backyard 1.0.0-rc5
 Released on April 4, 2026
 
