@@ -522,178 +522,184 @@ class Romanesco
      */
     public function generateFavicons(array $settings = []): bool
     {
-        try {
-            // Get source image path
-            $sourcePath = $this->modx->getOption('base_path') . $settings['logo_badge_path'];
-            $sourcePath = str_replace('//', '/', $sourcePath);
+        // Get source image path
+        $sourcePath = $this->modx->getOption('base_path') . $settings['logo_badge_path'];
+        $sourcePath = str_replace('//', '/', $sourcePath);
 
-            if (!file_exists($sourcePath)) {
-                $this->modx->log(modX::LOG_LEVEL_ERROR, "Source image not found: $sourcePath");
-                return false;
-            }
-
-            // Determine output directory
-            $outputDir = $this->modx->getOption('base_path') . 'assets/favicons/';
-            if (!is_dir($outputDir)) {
-                mkdir($outputDir, 0755, true);
-            }
-
-            // Detect source format
-            $extension = strtolower(pathinfo($sourcePath, PATHINFO_EXTENSION));
-            $sourceFormat = in_array($extension, ['png', 'svg']) ? $extension : 'png';
-            
-            // Load image with Vips
-            try {
-                if ($sourceFormat === 'svg') {
-                    // For SVG, load with unlimited size to avoid scaling issues
-                    $image = Image::newFromFile($sourcePath, ['unlimited' => true]);
-                } else {
-                    $image = Image::newFromFile($sourcePath);
-                }
-            } catch (\Exception $e) {
-                $this->modx->log(modX::LOG_LEVEL_ERROR, "Failed to load image with Vips: " . $e->getMessage());
-                return false;
-            }
-
-            // Generate apple-touch-icon.png (180x180)
-            try {
-                $resized = $image->thumbnail_image(180, ['height' => 180]);
-                $resized->writeToFile($outputDir . 'apple-touch-icon.png');
-            } catch (\Exception $e) {
-                $this->modx->log(modX::LOG_LEVEL_ERROR, "Failed to generate apple-touch-icon.png: " . $e->getMessage());
-            }
-
-            // Generate icon-192.png (192x192)
-            try {
-                $resized = $image->thumbnail_image(192, ['height' => 192]);
-                $resized->writeToFile($outputDir . 'icon-192.png');
-            } catch (\Exception $e) {
-                $this->modx->log(modX::LOG_LEVEL_ERROR, "Failed to generate icon-192.png: " . $e->getMessage());
-            }
-
-            // Generate icon-512.png (512x512) with margins around 409x409 image
-            try {
-                // Resize source to 409x409
-                $resized = $image->thumbnail_image(409, ['height' => 409]);
-                
-                // Add alpha channel if needed
-                if ($resized->bands < 4) {
-                    $resized = $resized->addalpha();
-                }
-                
-                // Embed the 409x409 image in a 512x512 canvas with transparent margins
-                $result = $resized->embed(51, 51, 512, 512, ['extend' => 'background']);
-                
-                $result->writeToFile($outputDir . 'icon-512.png');
-            } catch (\Exception $e) {
-                $this->modx->log(modX::LOG_LEVEL_ERROR, "Failed to generate icon-512.png: " . $e->getMessage());
-            }
-
-            // Generate favicon.ico (32x32) using MODX pThumb
-            try {
-                // Create temporary PNG for pThumb processing
-                $tempPng = $outputDir . 'temp_favicon.png';
-                $resized = $image->thumbnail_image(32, ['height' => 32]);
-                $resized->writeToFile($tempPng);
-                
-                // Use pThumb to generate ICO
-                $icoPath = $outputDir . 'favicon.ico';
-                $relativeTempPath = str_replace($this->modx->getOption('base_path'), '', $tempPng);
-                $relativeIcoPath = str_replace($this->modx->getOption('base_path'), '', $icoPath);
-                
-                // Generate ICO using pThumb
-                $pthumbOptions = [
-                    'w' => 32,
-                    'h' => 32,
-                    'f' => 'ico',
-                    'far' => 'C', // force aspect ratio
-                    'bg' => 'transparent' // transparent background
-                ];
-                
-                $tempIco = $this->modx->runSnippet('pthumb', [
-                    'input' => $relativeTempPath,
-                    'options' => $pthumbOptions,
-                ]);
-
-                //$this->modx->log(modX::LOG_LEVEL_ERROR, $result);
-                
-                // If pThumb doesn't support ICO directly, create PNG and rename
-                if (!$tempIco || !file_exists($tempIco)) {
-                    // Fallback: create PNG and try to convert to ICO using PHP
-                    copy($tempPng, $icoPath);
-                } else {
-                    copy($tempIco, $icoPath);
-                }
-                
-                // Clean up temporary file
-                if (file_exists($tempPng)) {
-                    unlink($tempPng);
-                }
-            } catch (\Exception $e) {
-                $this->modx->log(modX::LOG_LEVEL_ERROR, "Failed to generate favicon.ico: " . $e->getMessage());
-            }
-            
-            // Generate or update manifest.webmanifest
-            try {
-                $manifestPath = $outputDir . 'manifest.webmanifest';
-                $siteName = $this->modx->getOption('site_name', null, 'Romanesco');
-                $themeColor = $settings['theme_color_primary'] ?? '#698f73';
-                
-                $manifest = [
-                    'name' => $siteName,
-                    'short_name' => $siteName,
-                    'start_url' => '/',
-                    'display' => 'standalone',
-                    'background_color' => '#ffffff',
-                    'theme_color' => $themeColor,
-                    'icons' => [
-                        [
-                            'src' => '/assets/favicons/icon-192.png',
-                            'sizes' => '192x192',
-                            'type' => 'image/png'
-                        ],
-                        [
-                            'src' => '/assets/favicons/icon-512.png',
-                            'sizes' => '512x512',
-                            'type' => 'image/png'
-                        ]
-                    ]
-                ];
-                
-                // Check if manifest exists and merge icons if it does
-                if (file_exists($manifestPath)) {
-                    $existingManifest = json_decode(file_get_contents($manifestPath), true);
-                    if ($existingManifest) {
-                        // Preserve existing non-icon properties
-                        foreach ($existingManifest as $key => $value) {
-                            if ($key !== 'icons') {
-                                $manifest[$key] = $value;
-                            }
-                        }
-                    }
-                }
-                
-                file_put_contents($manifestPath, json_encode($manifest, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
-            } catch (\Exception $e) {
-                $this->modx->log(modX::LOG_LEVEL_ERROR, "Failed to generate manifest.webmanifest: " . $e->getMessage());
-            }
-
-            // Bump favicon version number to force refresh
-            $version = $this->modx->getObject('modSystemSetting', ['key' => 'romanesco.favicon_version']);
-            if ($version) {
-                $version->set('value', $version->get('value') + 0.1);
-                $version->save();
-            } else {
-                $this->modx->log(modX::LOG_LEVEL_ERROR, 'Could not find favicon_version setting');
-            }
-
-            $this->modx->log(modX::LOG_LEVEL_ERROR, "Successfully generated favicons");
-
-            return true;
-        } catch (\Exception $e) {
-            $this->modx->log(modX::LOG_LEVEL_ERROR, "Error generating favicons: " . $e->getMessage());
+        if (!file_exists($sourcePath)) {
+            $this->modx->log(modX::LOG_LEVEL_ERROR, "Source image not found: $sourcePath");
             return false;
         }
+
+        // Determine output directory
+        $outputDir = MODX_BASE_PATH . $this->modx->getOption('romanesco.favicon_path', null, 'assets/favicons/');
+        $outputDir = rtrim($outputDir, '/') . '/';
+        if (!is_dir($outputDir)) {
+            mkdir($outputDir, 0750, true);
+        }
+
+        // Detect source format
+        $extension = strtolower(pathinfo($sourcePath, PATHINFO_EXTENSION));
+        $sourceFormat = in_array($extension, ['png', 'svg']) ? $extension : 'png';
+
+        // Set image options
+        $thumbOptions = [
+            'Q' => 95,  // High quality for PNG
+            'compression' => 6  // Balanced compression
+        ];
+
+        // Load image with Vips
+        try {
+            if ($sourceFormat === 'svg') {
+                // For SVG, load with high quality settings
+                $image = Image::newFromFile($sourcePath, [
+                    'unlimited' => true,
+                    'dpi' => 300,  // High DPI for better quality
+                    'scale' => 1   // Don't auto-scale
+                ]);
+            } else {
+                $image = Image::newFromFile($sourcePath);
+            }
+        } catch (\Exception $e) {
+            $this->modx->log(modX::LOG_LEVEL_ERROR, "Failed to load image with Vips: " . $e->getMessage());
+            return false;
+        }
+
+        // Generate apple-touch-icon.png (180x180)
+        try {
+            $resized = $image->thumbnail_image(180, [
+                'height' => 180,
+            ]);
+            $resized->writeToFile($outputDir . 'apple-touch-icon.png', $thumbOptions);
+        } catch (\Exception $e) {
+            $this->modx->log(modX::LOG_LEVEL_ERROR, "Failed to generate apple-touch-icon.png: " . $e->getMessage());
+        }
+
+        // Generate icon-192.png (192x192)
+        try {
+            $resized = $image->thumbnail_image(192, [
+                'height' => 192,
+            ]);
+            $resized->writeToFile($outputDir . 'icon-192.png', $thumbOptions);
+        } catch (\Exception $e) {
+            $this->modx->log(modX::LOG_LEVEL_ERROR, "Failed to generate icon-192.png: " . $e->getMessage());
+        }
+
+        // Generate icon-512.png (512x512) with margins around 409x409 image
+        try {
+            // Resize source to 409x409
+            $resized = $image->thumbnail_image(409, [
+                'height' => 409,
+            ]);
+
+            // Add alpha channel if needed
+            if ($resized->bands < 4) {
+                $resized = $resized->addalpha();
+            }
+
+            // Embed the 409x409 image in a 512x512 canvas with transparent margins
+            $result = $resized->embed(51, 51, 512, 512, ['extend' => 'background']);
+
+            $result->writeToFile($outputDir . 'icon-512.png', $thumbOptions);
+        } catch (\Exception $e) {
+            $this->modx->log(modX::LOG_LEVEL_ERROR, "Failed to generate icon-512.png: " . $e->getMessage());
+        }
+
+        // Generate favicon.ico using ImageMagick
+        try {
+            $tempPng16 = $outputDir . 'temp_ico_16.png';
+            $tempPng32 = $outputDir . 'temp_ico_32.png';
+            $tempPng48 = $outputDir . 'temp_ico_48.png';
+            $icoPath = $outputDir . 'favicon.ico';
+
+            // Create temporary PNGs
+            $resized16 = $image->thumbnail_image(16, ['height' => 16]);
+            $resized32 = $image->thumbnail_image(32, ['height' => 32]);
+            $resized48 = $image->thumbnail_image(48, ['height' => 48]);
+            $resized16->writeToFile($tempPng16, $thumbOptions);
+            $resized32->writeToFile($tempPng32, $thumbOptions);
+            $resized48->writeToFile($tempPng48, $thumbOptions);
+
+            // Generate ICO using ImageMagick
+            $cmd = [
+                'magick',
+                $tempPng48,
+                $tempPng32,
+                $tempPng16,
+                '-filter', 'Lanczos',
+                '-sharpen', '0x1',
+                '-colorspace', 'sRGB',
+                '-depth', '8',
+                $icoPath
+            ];
+            $this->runCommand($cmd);
+
+            // Clean up temporary file
+            $tempFiles = [$tempPng16, $tempPng32, $tempPng48];
+            foreach ($tempFiles as $tempFile) {
+                if (file_exists($tempFile)) {
+                    unlink($tempFile);
+                }
+            }
+        } catch (\Exception $e) {
+            $this->modx->log(modX::LOG_LEVEL_ERROR, "Failed to generate favicon.ico: " . $e->getMessage());
+        }
+
+        // Generate or update site.webmanifest
+        $manifestPath = $outputDir . 'site.webmanifest';
+        $siteName = $this->modx->getOption('site_name');
+        $themeColor = $this->getConfigSetting('theme_color_primary');
+        $bgColor = $this->getConfigSetting('theme_page_background_color');
+
+        $manifest = [
+            'name' => $siteName,
+            'short_name' => $siteName,
+            'start_url' => '/',
+            'display' => 'standalone',
+            'background_color' => $bgColor,
+            'theme_color' => $themeColor,
+            'icons' => [
+                [
+                    'src' => '/assets/favicons/icon-192.png',
+                    'sizes' => '192x192',
+                    'type' => 'image/png'
+                ],
+                [
+                    'src' => '/assets/favicons/icon-512.png',
+                    'sizes' => '512x512',
+                    'type' => 'image/png'
+                ]
+            ]
+        ];
+
+        // Check if manifest exists and merge icons if it does
+        if (file_exists($manifestPath)) {
+            $existingManifest = json_decode(file_get_contents($manifestPath), true);
+            if ($existingManifest) {
+                // Preserve existing non-icon properties
+                foreach ($existingManifest as $key => $value) {
+                    if ($key !== 'icons') {
+                        $manifest[$key] = $value;
+                    }
+                }
+            }
+        }
+
+        file_put_contents($manifestPath, json_encode($manifest, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
+
+        // Bump favicon version number to force refresh
+        $version = $this->modx->getObject('modSystemSetting', ['key' => 'romanesco.favicon_version']);
+        if ($version) {
+            $currentValue = (float) $version->get('value');
+            $version->set('value', $currentValue + 0.1);
+            $version->save();
+        } else {
+            $this->modx->log(modX::LOG_LEVEL_ERROR, 'Could not find favicon_version setting');
+        }
+
+        $this->modx->log(modX::LOG_LEVEL_ERROR, "Successfully generated favicons");
+
+        return true;
     }
 
     /**
