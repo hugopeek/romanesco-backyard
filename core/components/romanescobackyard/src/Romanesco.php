@@ -556,6 +556,10 @@ class Romanesco
                     'dpi' => 300,  // High DPI for better quality
                     'scale' => 1   // Don't auto-scale
                 ]);
+
+                // Copy SVG to favicons folder
+                // @todo: sanitize
+                copy($sourcePath, $outputDir . 'icon.svg');
             } else {
                 $image = Image::newFromFile($sourcePath);
             }
