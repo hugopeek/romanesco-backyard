@@ -14,7 +14,6 @@ use Spatie\SchemaOrg\Schema;
 use Spatie\SchemaOrg\Graph;
 use CssLint\Linter;
 use Jcupitt\Vips\Image;
-use Jcupitt\Vips\BlendMode;
 
 //use FractalFarming\Romanesco\Model\CrossLink;
 //use FractalFarming\Romanesco\Model\ExternalLink;
@@ -565,27 +564,21 @@ class Romanesco
             return false;
         }
 
-        // Generate apple-touch-icon.png (180x180)
+        // Generate PNG icons
         try {
-            $resized = $image->thumbnail_image(180, [
-                'height' => 180,
-            ]);
+            $resized = $image->thumbnail_image(180, ['height' => 180]);
             $resized->writeToFile($outputDir . 'apple-touch-icon.png', $thumbOptions);
-        } catch (\Exception $e) {
-            $this->modx->log(modX::LOG_LEVEL_ERROR, "Failed to generate apple-touch-icon.png: " . $e->getMessage());
-        }
-
-        // Generate icon-192.png (192x192)
-        try {
-            $resized = $image->thumbnail_image(192, [
-                'height' => 192,
-            ]);
+            $resized = $image->thumbnail_image(96, ['height' => 96]);
+            $resized->writeToFile($outputDir . 'icon-96.png', $thumbOptions);
+            $resized = $image->thumbnail_image(192, ['height' => 192]);
             $resized->writeToFile($outputDir . 'icon-192.png', $thumbOptions);
+            $resized = $image->thumbnail_image(512, ['height' => 512]);
+            $resized->writeToFile($outputDir . 'icon-512.png', $thumbOptions);
         } catch (\Exception $e) {
-            $this->modx->log(modX::LOG_LEVEL_ERROR, "Failed to generate icon-192.png: " . $e->getMessage());
+            $this->modx->log(modX::LOG_LEVEL_ERROR, "Failed to generate PNG icons: " . $e->getMessage());
         }
 
-        // Generate icon-512.png (512x512) with margins around 409x409 image
+        // Generate 512x512 mask image (with safe margins)
         try {
             // Resize source to 409x409
             $resized = $image->thumbnail_image(409, [
@@ -599,46 +592,44 @@ class Romanesco
 
             // Embed the 409x409 image in a 512x512 canvas with transparent margins
             $result = $resized->embed(51, 51, 512, 512, ['extend' => 'background']);
-
-            $result->writeToFile($outputDir . 'icon-512.png', $thumbOptions);
+            $result->writeToFile($outputDir . 'icon-mask-512.png', $thumbOptions);
         } catch (\Exception $e) {
-            $this->modx->log(modX::LOG_LEVEL_ERROR, "Failed to generate icon-512.png: " . $e->getMessage());
+            $this->modx->log(modX::LOG_LEVEL_ERROR, "Failed to generate icon-mask-512.png: " . $e->getMessage());
         }
 
-        // Generate favicon.ico using ImageMagick
+        // Generate favicon.ico (in root, for maximum compatibility)
         try {
-            $tempPng16 = $outputDir . 'temp_ico_16.png';
-            $tempPng32 = $outputDir . 'temp_ico_32.png';
-            $tempPng48 = $outputDir . 'temp_ico_48.png';
-            $icoPath = $outputDir . 'favicon.ico';
+            $icoPath = MODX_BASE_PATH . 'favicon.ico';
+            $tempPng = [
+                '16' => $outputDir . 'temp_ico_16.png',
+                '32' => $outputDir . 'temp_ico_32.png',
+                '48' => $outputDir . 'temp_ico_48.png'
+            ];
 
             // Create temporary PNGs
-            $resized16 = $image->thumbnail_image(16, ['height' => 16]);
-            $resized32 = $image->thumbnail_image(32, ['height' => 32]);
-            $resized48 = $image->thumbnail_image(48, ['height' => 48]);
-            $resized16->writeToFile($tempPng16, $thumbOptions);
-            $resized32->writeToFile($tempPng32, $thumbOptions);
-            $resized48->writeToFile($tempPng48, $thumbOptions);
+            $resized = $image->thumbnail_image(16, ['height' => 16]);
+            $resized->writeToFile($tempPng['16'], $thumbOptions);
+            $resized = $image->thumbnail_image(32, ['height' => 32]);
+            $resized->writeToFile($tempPng['32'], $thumbOptions);
+            $resized = $image->thumbnail_image(48, ['height' => 48]);
+            $resized->writeToFile($tempPng['48'], $thumbOptions);
 
-            // Generate ICO using ImageMagick
+            // Concatenate into ico using ImageMagick
             $cmd = [
                 'magick',
-                $tempPng48,
-                $tempPng32,
-                $tempPng16,
-                '-filter', 'Lanczos',
-                '-sharpen', '0x1',
+                $tempPng['48'],
+                $tempPng['32'],
+                $tempPng['16'],
                 '-colorspace', 'sRGB',
                 '-depth', '8',
                 $icoPath
             ];
             $this->runCommand($cmd);
 
-            // Clean up temporary file
-            $tempFiles = [$tempPng16, $tempPng32, $tempPng48];
-            foreach ($tempFiles as $tempFile) {
-                if (file_exists($tempFile)) {
-                    unlink($tempFile);
+            // Clean up temporary files
+            foreach ($tempPng as $file) {
+                if (file_exists($file)) {
+                    unlink($file);
                 }
             }
         } catch (\Exception $e) {
@@ -646,7 +637,7 @@ class Romanesco
         }
 
         // Generate or update site.webmanifest
-        $manifestPath = $outputDir . 'site.webmanifest';
+        $manifestPath = MODX_BASE_PATH . 'site.webmanifest';
         $siteName = $this->modx->getOption('site_name');
         $themeColor = $this->getConfigSetting('theme_color_primary');
         $bgColor = $this->getConfigSetting('theme_page_background_color');
@@ -663,6 +654,12 @@ class Romanesco
                     'src' => '/assets/favicons/icon-192.png',
                     'sizes' => '192x192',
                     'type' => 'image/png'
+                ],
+                [
+                    'src' => '/assets/favicons/icon-mask-512.png',
+                    'sizes' => '512x512',
+                    'type' => 'image/png',
+                    'purpose' => 'maskable'
                 ],
                 [
                     'src' => '/assets/favicons/icon-512.png',
@@ -697,6 +694,7 @@ class Romanesco
             $this->modx->log(modX::LOG_LEVEL_ERROR, 'Could not find favicon_version setting');
         }
 
+        // Log success as error (so we can celebrate more)
         $this->modx->log(modX::LOG_LEVEL_ERROR, "Successfully generated favicons");
 
         return true;
