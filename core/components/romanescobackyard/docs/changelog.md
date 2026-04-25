@@ -1,5 +1,12 @@
 # Changelog for Romanesco Backyard
 
+## Backyard 1.0.0-rc7
+Released on April 24, 2026
+
+- Retire RealFaviconGenerator
+- Generate favicons internally
+- Fix fatal installation errors when schema graph is not yet initialized
+
 ## Backyard 1.0.0-rc6
 Released on April 16, 2026
 
