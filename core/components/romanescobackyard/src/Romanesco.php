@@ -35,8 +35,8 @@ class Romanesco
     /** @var array $config */
     public $config = [];
 
-    /** @var Graph $structuredData */
-    public Graph $structuredData;
+    /** @var Graph|null $structuredData */
+    public ?Graph $structuredData;
 
     /** @var array $schemaOptions */
     private $schemaOptions = null;
@@ -73,10 +73,10 @@ class Romanesco
             'connectorUrl' => $assetsUrl . 'connector.php'
         ], $config);
 
-        //$this->modx->addPackage($this->namespace, $this->getOption('modelPath'));
-
         // Collect structured data in central graph object
-        $this->structuredData = new Graph();
+        if (class_exists('Spatie\SchemaOrg\Graph')) {
+            $this->structuredData = new Graph();
+        }
     }
 
     /**
