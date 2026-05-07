@@ -651,8 +651,8 @@ class Romanesco
             'short_name' => $siteName,
             'start_url' => '/',
             'display' => 'standalone',
-            'background_color' => $bgColor,
-            'theme_color' => $themeColor,
+            'background_color' => "#$bgColor",
+            'theme_color' => "#$themeColor",
             'icons' => [
                 [
                     'src' => '/assets/favicons/icon-192.png',
