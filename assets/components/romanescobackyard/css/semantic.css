@@ -2401,12 +2401,12 @@
 .chunkOutput .ui.ui.circular.buttons .button,
 .chunkOutput .ui.ui.ui.ui.circular.button {
   border-radius: 10em;
-  min-width: 2.5em;
+  min-width: 2.9em;
 }
 
 .chunkOutput .ui.circular.buttons .button > .icon,
 .chunkOutput .ui.circular.button > .icon {
-  width: 1em;
+  width: 1.1em;
   vertical-align: baseline;
 }
 
@@ -3551,6 +3551,17 @@
   margin-top: calc(var(--baseline) * 3rem);
 }
 
+.chunkOutput .ui.circular.icon.button {
+  min-height: 2.9em;
+}
+
+.chunkOutput .ui.circular.buttons .button > .icon,
+.chunkOutput .ui.circular.button > .icon {
+  width: 1.1em;
+  height: 1.1em;
+  vertical-align: middle;
+}
+
 .chunkOutput .social.buttons {
   display: inline-flex;
   flex-wrap: nowrap;
@@ -4076,6 +4087,21 @@
   .chunkOutput body.vertical .ui.tightened.container {
     width: 100% !important;
   }
+}
+
+.chunkOutput .ui.breakout.container {
+  margin-top: calc(var(--baseline) * 1.5rem);
+}
+
+.chunkOutput .ui.breakout.container + .ui.container {
+  margin-top: calc(var(--baseline) * 1.5rem);
+}
+
+.chunkOutput .ui.breakout.container.text,
+.chunkOutput .ui.breakout.container.text + .ui.container,
+.chunkOutput .ui.text.container:not(.conventional) + .ui.breakout.container,
+.chunkOutput .ui.breakout.container + .ui.text.container:not(.conventional) {
+  margin-top: calc(var(--baseline) * 3rem);
 }
 
 /*******************************
@@ -11384,7 +11410,7 @@
 .chunkOutput i.icon > svg {
   height: 1.1em;
   width: 1.1em;
-  margin: -0.2em 0;
+  max-width: 100%;
 }
 
 .chunkOutput .ui.list .small.modx.icon {
@@ -23532,6 +23558,11 @@ Floated Menu / Item
 .chunkOutput * + .ui[class*="very spaced"].cards,
 .chunkOutput .ui[class*="very spaced"].cards + * {
   margin-top: calc(var(--baseline) * 5rem);
+}
+
+.chunkOutput .ui.raised.card {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .chunkOutput .ui.one.cards > .card {
