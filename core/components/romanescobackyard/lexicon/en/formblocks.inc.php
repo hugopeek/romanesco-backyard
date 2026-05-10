@@ -32,13 +32,13 @@ $_lang['formblocks.cb.input_textarea_description'] = 'You can add an optional pl
 
 // Form template
 $_lang['formblocks.form.validation_error_heading'] = 'Uh oh, something went wrong!';
-$_lang['formblocks.form.validation_error_message'] = 'The form could not be sent, because not all required fields were filled. Please fill in the remaining fields (marked in red) and try again.';
+$_lang['formblocks.form.validation_error_message'] = 'The form could not be sent.';
 $_lang['formblocks.form.honeypot_field'] = 'If you\'re a human, keep this field blank!';
 $_lang['formblocks.form.recaptchav3_legal_notice'] = 'This form is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.';
 $_lang['formblocks.form.submit_button'] = 'Send';
-$_lang['formblocks.form.submit_loading'] = 'Sending';
-$_lang['formblocks.form.success_heading'] = 'The form has been sent.';
-$_lang['formblocks.form.success_message'] = 'Thank you for your message!';
+$_lang['formblocks.form.submit_loading'] = 'Sending...';
+$_lang['formblocks.form.success_heading'] = 'Message received.';
+$_lang['formblocks.form.success_message'] = 'Thank you for responding!';
 
 // Form fields
 $_lang['formblocks.field.other_namely'] = 'namely...';
@@ -50,6 +50,7 @@ $_lang['formblocks.email.footer'] = '--- End of message ---';
 $_lang['formblocks.email.other_namely'] = 'namely:';
 
 // Frontend validation
+$_lang['formblocks.validation.required_message'] = 'Please fill in the remaining fields and try again.';
 $_lang['formblocks.validation.required_text_empty'] = 'Please fill in the <strong>[[+field_name:lcase]]</strong> field.';
 $_lang['formblocks.validation.required_text_checked'] = 'This field needs to be checked.';
 $_lang['formblocks.validation.required_text_email'] = 'Please provide a valid <strong>email address</strong>.';
@@ -62,9 +63,10 @@ $_lang['formblocks.validation.required_text_files'] = 'You need to upload at lea
 $_lang['formblocks.validation.required_text_math'] = 'You need to beat the spam bots at math!';
 $_lang['formblocks.validation.required_text_terms'] = 'You need to accept the <strong>terms and conditions</strong> to continue.';
 
-// Backend validation
+// Backend validation (includes AJAX)
 $_lang['formblocks.validation.file_too_big'] = 'File is too big. The maximum allowed file size is [[+max_file_size]] MB.';
 $_lang['formblocks.validation.file_not_allowed'] = 'File type .[[+ext]] is not allowed.';
+$_lang['formblocks.validation.turnstile_error'] = 'Cloudflare could not validate this message. Please refresh the page and try again.';
 
 // Registration
 $_lang['formblocks.registration.email_subject'] = 'Confirm your registration';

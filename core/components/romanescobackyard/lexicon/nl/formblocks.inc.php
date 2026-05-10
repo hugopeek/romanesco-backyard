@@ -30,10 +30,13 @@ $_lang['formblocks.collections.children.back_to_collection_label'] = 'Alle Formu
 
 // Form template
 $_lang['formblocks.form.validation_error_heading'] = 'Ai, er is iets mis gegaan!';
-$_lang['formblocks.form.validation_error_message'] = 'Het formulier kon helaas niet worden verstuurd, omdat niet alle verplichte velden zijn ingevuld. Vul a.u.b. de ontbrekende velden in (in rood gemarkeerd) en probeer het opnieuw.';
+$_lang['formblocks.form.validation_error_message'] = 'Het formulier kon helaas niet worden verstuurd.';
 $_lang['formblocks.form.honeypot_field'] = 'Wezens van vlees en bloed: dit veld niet invullen aub!';
 $_lang['formblocks.form.recaptchav3_legal_notice'] = 'Dit formulier is beveiligd met reCAPTCHA en de Google <a href="https://policies.google.com/privacy">Privacy Policy</a> en <a href="https://policies.google.com/terms">Algemene Voorwaarden</a> zijn hierop van toepassing.';
 $_lang['formblocks.form.submit_button'] = 'Verzenden';
+$_lang['formblocks.form.submit_loading'] = 'Bezig met verzenden...';
+$_lang['formblocks.form.success_heading'] = 'Bericht ontvangen.';
+$_lang['formblocks.form.success_message'] = 'Bedankt voor je reactie!';
 
 // Email template
 $_lang['formblocks.email.subject'] = 'Reactie via de website';
@@ -42,6 +45,7 @@ $_lang['formblocks.email.footer'] = '--- Einde bericht ---';
 $_lang['formblocks.email.other_namely'] = 'namelijk:';
 
 // Frontend validation
+$_lang['formblocks.validation.required_message'] = 'Vul a.u.b. de ontbrekende velden in en probeer het opnieuw.';
 $_lang['formblocks.validation.required_text_empty'] = 'Vul het veld <strong>[[+field_name:lcase]]</strong> in.';
 $_lang['formblocks.validation.required_text_checked'] = 'Dit veld moet worden aangevinkt.';
 $_lang['formblocks.validation.required_text_email'] = 'Geef een geldig <strong>emailadres</strong> op.';
@@ -53,9 +57,10 @@ $_lang['formblocks.validation.required_text_date_end'] = 'Selecteer een <strong>
 $_lang['formblocks.validation.required_text_math'] = 'Maak je het rekensommetje nog even af?';
 $_lang['formblocks.validation.required_text_terms'] = 'Je dient akkoord te gaan met de <strong>voorwaarden</strong>.';
 
-// Backend validation
+// Backend validation (includes AJAX)
 $_lang['formblocks.validation.file_too_big'] = 'Bestand is te groot. De maximum toegestane grootte is [[+max_file_size]] MB.';
 $_lang['formblocks.validation.file_not_allowed'] = 'Bestanden met .[[+ext]] extensie zijn niet toegestaan.';
+$_lang['formblocks.validation.turnstile_error'] = 'De beveiligingsdienst Cloudflare kon het bericht niet verifieren. Ververs de pagina en probeer het a.u.b. nogmaals.';
 
 // Registration
 $_lang['formblocks.registration.email_subject'] = 'Bevestig je registratie';
