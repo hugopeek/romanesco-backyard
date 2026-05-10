@@ -1,8 +1,9 @@
 # Changelog for Romanesco Backyard
 
 ## Backyard 1.0.0-rc8
-Released on ...
+Released on May 10, 2026
 
+- Improve form validation messaging
 - Add styling and icon for breakout boxes in CB
 - Fix color values in webmanifest
 
