@@ -3467,8 +3467,9 @@
          Theme Overrides
 *******************************/
 
-.chunkOutput [class*="center aligned"] .ui.button:not(.attached):not(.center.aligned):not(:last-child) {
-  margin-left: 0.25em;
+.chunkOutput [class*="center aligned"] .ui.button:not(.attached):not(.center.aligned) {
+  margin-left: 0.125em;
+  margin-right: 0.125em;
 }
 
 .chunkOutput [class*="center aligned"] .left.aligned .ui.button {
@@ -3552,14 +3553,17 @@
 }
 
 .chunkOutput .ui.circular.icon.button {
-  min-height: 2.9em;
+  width: 2.9em;
+  height: 2.9em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .chunkOutput .ui.circular.buttons .button > .icon,
 .chunkOutput .ui.circular.button > .icon {
   width: 1.1em;
   height: 1.1em;
-  vertical-align: middle;
 }
 
 .chunkOutput .social.buttons {
@@ -4099,9 +4103,14 @@
 
 .chunkOutput .ui.breakout.container.text,
 .chunkOutput .ui.breakout.container.text + .ui.container,
+.chunkOutput .ui.breakout.container:has(.ui.image:last-child) + .ui.container,
 .chunkOutput .ui.text.container:not(.conventional) + .ui.breakout.container,
 .chunkOutput .ui.breakout.container + .ui.text.container:not(.conventional) {
   margin-top: calc(var(--baseline) * 3rem);
+}
+
+.chunkOutput .ui.breakout.container > .nested.grid:first-child {
+  margin-top: calc(var(--baseline) * 2rem);
 }
 
 /*******************************
@@ -11805,7 +11814,8 @@
   font-style: normal;
 }
 
-.chunkOutput .content .ui.image + * {
+.chunkOutput .content .ui.image + *,
+.chunkOutput #content .ui.image + p {
   margin-top: calc(var(--baseline) * 3rem);
 }
 
@@ -16201,6 +16211,11 @@
   margin-left: 0.5em;
 }
 
+.chunkOutput .ui.pattern.segment .toolbar.grid .ui.icon.button > .icon {
+  height: 1.1em;
+  vertical-align: bottom;
+}
+
 .chunkOutput .ui.backyard.segment.black {
   background-color: #000;
 }
@@ -18663,7 +18678,6 @@
 }
 
 .chunkOutput .ui.nested.grid.celled {
-  margin-top: 0;
   border-radius: 0.46228571rem;
 }
 
